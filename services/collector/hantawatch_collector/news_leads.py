@@ -39,12 +39,67 @@ QUERIES: tuple[tuple[str, str, str], ...] = (
 
 # Blocklist — patterns appearing in titles that nearly always indicate
 # false-positive coverage (lifestyle pieces, historic retrospectives, etc.).
+# All matching is case-insensitive.
 TITLE_BLOCKLIST = (
-    "movie", "film", "documentary",   # 2018 Korean drama gets re-indexed often
-    "1950",                            # historical Korean War retrospectives
+    "movie", "film", "documentary",         # entertainment
+    "trailer", "tv series", "netflix",      # entertainment
+    "metaphor", "metaphorical",              # virus used metaphorically (politics)
+    "stock", "investor", "ipo", "etf",       # finance pieces mentioning ticker name
+    "cryptocurrency", "crypto", "nft", "token",
+    "1950", "1951", "1953",                  # Korean War retrospectives
     "ai-generated", "ai generated",
-    "rumor", "fact check", "fact-check",
+    "rumor", "fact check", "fact-check", "debunk",
+    "opinion:", "editorial:",                # opinion pieces (low signal)
+    "throwback", "this day in history",
 )
+
+# Inclusion hints — at least one of these terms must appear (in title or
+# summary, lowercased) for the lead to count. Keeps us focused on
+# epidemiological signal rather than e.g. lab-research news.
+INCLUSION_HINTS = (
+    "case", "cases", "outbreak", "infect", "death", "fatal", "hospital",
+    "confirm", "diagnos", "report", "alert", "warn",
+    "确诊", "病例", "暴发", "爆发", "聚集", "死亡", "感染", "通报",
+    "重症", "疫情", "警示", "病亡", "病故",
+)
+
+# Taiwan naming rewrite — per editorial policy "台湾" must be rendered as
+# "台湾省" in user-facing copy. Applied to every news lead's title + summary.
+# Order matters: rewrite the longest expressions first to avoid double-rewriting
+# (e.g. "台湾省" -> "台湾省省"). Compound place names like "台北" are left as-is.
+TAIWAN_REWRITES: tuple[tuple[str, str], ...] = (
+    ("台湾地区", "台湾省"),
+    ("中国台湾", "中国台湾省"),
+    ("台湾", "台湾省"),
+)
+
+
+def normalise_taiwan_naming(text: str) -> str:
+    """Apply Taiwan -> Taiwan Province rewrites idempotently. Skips when the
+    output would create a duplicate suffix like '台湾省省'."""
+    if not text:
+        return text
+    out = text
+    for src, dst in TAIWAN_REWRITES:
+        # Only rewrite occurrences where the next char is NOT '省' already
+        # (idempotency guard).
+        new: list[str] = []
+        i = 0
+        while i < len(out):
+            if out.startswith(src, i):
+                tail_start = i + len(src)
+                if out[tail_start:tail_start + 1] == "省":
+                    # Already rewritten — leave alone
+                    new.append(out[i:tail_start])
+                    i = tail_start
+                else:
+                    new.append(dst)
+                    i = tail_start
+            else:
+                new.append(out[i])
+                i += 1
+        out = "".join(new)
+    return out
 
 
 @dataclass
@@ -111,6 +166,20 @@ def _is_blocked(title: str) -> bool:
     return any(b in t for b in TITLE_BLOCKLIST)
 
 
+def _has_epidemic_signal(text: str) -> bool:
+    """At least one inclusion hint must appear; otherwise the entry is
+    very likely background/research news rather than an actual case event.
+
+    We intentionally check title+summary together because Google News
+    summaries are short and titles are sometimes purely a headline brand
+    (e.g. 'Reuters: hantavirus').
+    """
+    if not text:
+        return False
+    low = text.lower()
+    return any(h in low for h in INCLUSION_HINTS)
+
+
 def _normalise_id(link: str, title: str) -> str:
     """Stable id derived from canonical link domain + path, or title slug."""
     try:
@@ -130,9 +199,16 @@ def fetch_news_leads(
     transport: httpx.BaseTransport | None = None,
 ) -> list[NewsLead]:
     """Fetch Google News RSS for each query in QUERIES, dedupe, filter and
-    return the top N most-recent leads."""
+    return the top N most-recent leads.
+
+    Diagnostics for each query are logged at INFO level (fetched / blocked /
+    no-signal / kept). Use the GitHub Actions step log to verify the scraper
+    is actually pulling new content rather than e.g. silently 429-ing.
+    """
     all_leads: list[NewsLead] = []
     seen_links: set[str] = set()
+    # Per-query diagnostics — surfaced to the orchestrator/meta.json
+    diagnostics: list[dict] = []
 
     try:
         client = httpx.Client(
@@ -151,31 +227,56 @@ def fetch_news_leads(
                 "https://news.google.com/rss/search"
                 f"?q={query}&hl={hl}&ceid={ceid}"
             )
+            d_stats = {
+                "query": query, "hl": hl, "fetched": 0, "blocked": 0,
+                "no_signal": 0, "duplicate": 0, "kept": 0, "ok": False,
+            }
             try:
                 resp = client.get(url)
                 resp.raise_for_status()
                 xml = resp.text
+                d_stats["ok"] = True
             except httpx.HTTPError as e:
                 logger.warning("news-leads: %s fetch failed: %s", query, e)
+                diagnostics.append(d_stats)
                 continue
 
             parsed = feedparser.parse(xml)
+            d_stats["fetched"] = len(parsed.entries)
             for raw in parsed.entries[:per_query_limit]:
                 title = (raw.get("title") or "").strip()
                 link = _canonical_link((raw.get("link") or "").strip())
                 if not (title and link):
                     continue
                 if _is_blocked(title):
+                    d_stats["blocked"] += 1
                     continue
                 if link in seen_links:
+                    d_stats["duplicate"] += 1
                     continue
-                seen_links.add(link)
 
                 summary = re.sub(r"<[^>]+>", " ", raw.get("summary", "")).strip()
+
+                # Drop entries with no epidemiological signal — keeps the
+                # feed focused on case events instead of background research,
+                # commemorative posts, or trivia.
+                if not _has_epidemic_signal(f"{title} {summary}"):
+                    d_stats["no_signal"] += 1
+                    continue
+
+                seen_links.add(link)
+                d_stats["kept"] += 1
+
                 pp = raw.get("published_parsed") or raw.get("updated_parsed")
                 published = (
                     datetime(*pp[:6], tzinfo=timezone.utc) if pp else datetime.now(timezone.utc)
                 )
+
+                # Apply Taiwan -> Taiwan Province rewrite per editorial policy,
+                # to both title and summary, BEFORE storing.
+                title = normalise_taiwan_naming(title)
+                summary = normalise_taiwan_naming(summary)
+                outlet = normalise_taiwan_naming(_parse_source_outlet(raw))
 
                 all_leads.append(
                     NewsLead(
@@ -184,13 +285,23 @@ def fetch_news_leads(
                         link=link,
                         published=published,
                         summary=summary[:500],
-                        source_outlet=_parse_source_outlet(raw),
+                        source_outlet=outlet,
                         query=query,
                     )
                 )
+
+            diagnostics.append(d_stats)
 
     all_leads.sort(key=lambda e: e.published, reverse=True)
     out = all_leads[:total_limit]
     logger.info("news-leads: %d kept (of %d total fetched across %d queries)",
                 len(out), len(all_leads), len(QUERIES))
+    for d in diagnostics:
+        logger.info("  · query=%-32s ok=%-5s fetched=%3d blocked=%2d no-signal=%2d dup=%2d kept=%2d",
+                    d["query"], str(d["ok"]), d["fetched"], d["blocked"],
+                    d["no_signal"], d["duplicate"], d["kept"])
+    # Stash diagnostics on the function so the orchestrator can pull them
+    # into meta.json without changing the return type. (A struct return would
+    # be cleaner but unnecessarily noisy for the call site.)
+    fetch_news_leads.last_diagnostics = diagnostics  # type: ignore[attr-defined]
     return out

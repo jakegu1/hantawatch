@@ -9,8 +9,11 @@
     "check": "pnpm --filter @hantawatch/web check",
     "clean": "pnpm -r exec rm -rf .next dist node_modules"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "turbo": "^2.7.4"
   }
 }

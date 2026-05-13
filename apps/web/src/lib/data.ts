@@ -101,11 +101,24 @@ export const recentCases: RecentCase[] = [...intlCases, ...chinaCases].sort((a, 
 
 // ---- Pipeline meta --------------------------------------------------------
 
+export interface NewsLeadsDiagnostic {
+  query: string;
+  hl?: string;
+  ok: boolean;
+  fetched: number;
+  blocked: number;
+  no_signal: number;
+  duplicate: number;
+  kept: number;
+}
+
 export interface DataMeta {
   lastCollectedAt: string;
+  lastCollectedAtCn?: string;
   sources: {
     who_don: { entries: number; ok: boolean };
     ecdc: { ok: boolean };
+    news_leads?: { entries: number; ok: boolean; perQuery?: NewsLeadsDiagnostic[] };
   };
   clusterCount: number;
   yesterdayNearestDistanceKm?: number;
@@ -113,7 +126,11 @@ export interface DataMeta {
 
 export const dataMeta: DataMeta = {
   lastCollectedAt: metaJson.lastCollectedAt,
-  sources: metaJson.sources,
+  // `lastCollectedAtCn` is added by newer collector runs; older meta.json may
+  // not have it, so guard with `as` cast (TS doesn't infer the optional field
+  // from a JSON import).
+  lastCollectedAtCn: (metaJson as { lastCollectedAtCn?: string }).lastCollectedAtCn,
+  sources: metaJson.sources as DataMeta['sources'],
   clusterCount: metaJson.clusterCount,
   yesterdayNearestDistanceKm: metaJson.yesterdayNearestDistanceKm,
 };

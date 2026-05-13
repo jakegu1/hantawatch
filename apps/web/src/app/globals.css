@@ -33,6 +33,12 @@
   a, button, [role="button"] {
     touch-action: manipulation;
   }
+
+  /* Map marker pulse — used by DistanceMap to draw attention to the cluster point */
+  @keyframes hwPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50%      { transform: scale(1.15); opacity: 0.85; }
+  }
 }
 
 @layer components {

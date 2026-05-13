@@ -143,11 +143,13 @@ def main(argv: list[str] | None = None) -> int:
     recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")
 
     # ---- 9. Meta ----
+    news_diagnostics = getattr(fetch_news_leads, "last_diagnostics", None)
     meta = build_meta(
         who_count=len(who_entries),
         ecdc_ok=ecdc is not None,
         cluster_count=len(clusters),
         news_count=len(news_leads),
+        news_diagnostics=news_diagnostics,
     )
     if clusters:
         nearest_km = min(c.get("distanceFromChinaKm", 999_999) for c in clusters)

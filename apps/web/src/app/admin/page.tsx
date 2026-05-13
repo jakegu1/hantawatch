@@ -1,8 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { currentHpi, activeClusters, recentCases } from '@/lib/mock-data';
-import { AlertTriangle, CheckCircle, BarChart3, MessageSquare, Settings } from 'lucide-react';
+import { dataMeta } from '@/lib/data';
+import { DataFreshness } from '@/components/data-freshness';
+import {
+  AlertTriangle, CheckCircle, BarChart3, MessageSquare, Settings,
+  Mail, Download, RefreshCw,
+} from 'lucide-react';
 
 interface AnalyticsStats {
   totalPV: number;
@@ -22,11 +27,51 @@ interface FeedbackEntry {
   honeypotTriggered: boolean;
 }
 
+interface Subscriber {
+  email: string;
+  regions: string[] | null;
+  serotypes: string[] | null;
+  threshold: number | null;
+  source: string | null;
+  confirmed: boolean;
+  created_at: string;
+}
+
+interface SubscribersResponse {
+  count?: number;
+  subscribers?: Subscriber[];
+  error?: string;
+}
+
+type TabId = 'review' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
+
+/**
+ * Read the admin key from URL `?key=` or sessionStorage. We do this on the
+ * client (admin page is private) so that operators can bookmark a deep link
+ * with their key once and skip re-entering it.
+ */
+function useAdminKey(): string {
+  // SSR-safe — return empty string on first render; the page below tolerates it.
+  if (typeof window === 'undefined') return '';
+  const urlKey = new URLSearchParams(window.location.search).get('key');
+  if (urlKey) {
+    sessionStorage.setItem('hw_admin_key', urlKey);
+    return urlKey;
+  }
+  return sessionStorage.getItem('hw_admin_key') || 'admin_key_2026';
+}
+
 export default function AdminPage() {
-  const [activeTab, setActiveTab] = useState<'review' | 'hpi' | 'analytics' | 'feedback'>('review');
+  const [activeTab, setActiveTab] = useState<TabId>('review');
   const [stats, setStats] = useState<AnalyticsStats | null>(null);
   const [feedback, setFeedback] = useState<FeedbackEntry[]>([]);
   const [fbLoading, setFbLoading] = useState(false);
+  const [subs, setSubs] = useState<Subscriber[]>([]);
+  const [subsLoading, setSubsLoading] = useState(false);
+  const [subsError, setSubsError] = useState<string | null>(null);
+  const [subsFilter, setSubsFilter] = useState<'all' | 'confirmed' | 'pending'>('all');
+
+  const adminKey = useMemo(useAdminKey, []);
 
   useEffect(() => {
     if (activeTab === 'analytics') {
@@ -37,19 +82,67 @@ export default function AdminPage() {
     }
     if (activeTab === 'feedback') {
       setFbLoading(true);
-      fetch('/api/feedback/list?key=admin_key_2026')
+      fetch(`/api/feedback/list?key=${encodeURIComponent(adminKey)}`)
         .then(r => r.json())
         .then(data => setFeedback(Array.isArray(data) ? data : []))
         .catch(() => {})
         .finally(() => setFbLoading(false));
     }
-  }, [activeTab]);
+    if (activeTab === 'subs') {
+      setSubsLoading(true);
+      setSubsError(null);
+      fetch(`/api/alert/list?key=${encodeURIComponent(adminKey)}`)
+        .then(async r => {
+          const j: SubscribersResponse = await r.json();
+          if (!r.ok) {
+            throw new Error(j.error || `HTTP ${r.status}`);
+          }
+          return j;
+        })
+        .then(j => setSubs(j.subscribers || []))
+        .catch(err => setSubsError(err.message))
+        .finally(() => setSubsLoading(false));
+    }
+  }, [activeTab, adminKey]);
+
+  const filteredSubs = subs.filter(s =>
+    subsFilter === 'all' ? true : subsFilter === 'confirmed' ? s.confirmed : !s.confirmed,
+  );
+
+  /** Download current subscriber list as CSV. */
+  function downloadSubsCsv() {
+    const rows = [
+      ['email', 'confirmed', 'regions', 'serotypes', 'threshold', 'source', 'created_at'],
+      ...filteredSubs.map(s => [
+        s.email,
+        s.confirmed ? 'yes' : 'no',
+        (s.regions ?? []).join('|'),
+        (s.serotypes ?? []).join('|'),
+        s.threshold?.toString() ?? '',
+        s.source ?? '',
+        s.created_at,
+      ]),
+    ];
+    const csv = rows.map(r => r.map(cell => {
+      const s = String(cell).replace(/"/g, '""');
+      return /[",\n]/.test(s) ? `"${s}"` : s;
+    }).join(',')).join('\n');
+    const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `hantawatch-subscribers-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 
   const tabs = [
     { id: 'review' as const, label: '审核队列', icon: CheckCircle },
     { id: 'hpi' as const, label: 'HPI因子', icon: Settings },
     { id: 'analytics' as const, label: '数据统计', icon: BarChart3 },
     { id: 'feedback' as const, label: '用户反馈', icon: MessageSquare },
+    { id: 'subs' as const, label: '订阅用户', icon: Mail },
+    { id: 'data' as const, label: '数据管道', icon: RefreshCw },
   ];
 
   return (
@@ -222,6 +315,164 @@ export default function AdminPage() {
               </div>
             </>
           )}
+        </div>
+      )}
+
+      {/* Subscriptions */}
+      {activeTab === 'subs' && (
+        <div className="space-y-4">
+          <div className="card">
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <h2 className="font-semibold">订阅用户</h2>
+              <span className="text-xs text-gray-400">共 {subs.length} 人</span>
+              <div className="ml-auto flex gap-1">
+                {(['all', 'confirmed', 'pending'] as const).map((f) => (
+                  <button
+                    key={f}
+                    onClick={() => setSubsFilter(f)}
+                    className={`text-[11px] px-2.5 py-1 rounded-full transition-colors ${
+                      subsFilter === f
+                        ? 'bg-brand-500 text-white'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    {f === 'all' ? '全部' : f === 'confirmed' ? '已确认' : '待确认'}
+                  </button>
+                ))}
+                <button
+                  onClick={downloadSubsCsv}
+                  disabled={filteredSubs.length === 0}
+                  className="inline-flex items-center gap-1 text-[11px] px-2.5 py-1 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  title="导出当前筛选结果为 CSV"
+                >
+                  <Download className="h-3 w-3" /> CSV
+                </button>
+              </div>
+            </div>
+
+            {subsLoading && <p className="text-sm text-gray-400 py-4">加载中...</p>}
+            {subsError && (
+              <div className="rounded-lg bg-red-50 border border-red-200 text-red-700 text-xs p-3 mb-3">
+                <strong>加载失败：</strong> {subsError}
+                <div className="mt-1 text-[10px] text-red-500">
+                  常见原因：1) Supabase 未配置（在 Vercel 环境变量加 SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY）
+                  2) ADMIN_KEY 不匹配（URL 加 <code className="bg-red-100 px-1 rounded">?key=你的Key</code>）
+                </div>
+              </div>
+            )}
+            {!subsLoading && !subsError && filteredSubs.length === 0 && (
+              <p className="text-sm text-gray-400 py-4">暂无订阅</p>
+            )}
+            {!subsLoading && !subsError && filteredSubs.length > 0 && (
+              <div className="overflow-x-auto -mx-4 sm:mx-0">
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b text-left text-gray-500">
+                      <th className="px-4 py-2 sm:px-2 font-medium">邮箱</th>
+                      <th className="px-2 py-2 font-medium">状态</th>
+                      <th className="px-2 py-2 font-medium hidden sm:table-cell">关注地区</th>
+                      <th className="px-2 py-2 font-medium hidden sm:table-cell">血清型</th>
+                      <th className="px-2 py-2 font-medium">阈值</th>
+                      <th className="px-2 py-2 font-medium hidden md:table-cell">来源</th>
+                      <th className="px-4 py-2 sm:px-2 font-medium">订阅时间</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {filteredSubs.map((s, idx) => (
+                      <tr key={`${s.email}-${idx}`} className="hover:bg-gray-50">
+                        <td className="px-4 py-2 sm:px-2 font-mono break-all">{s.email}</td>
+                        <td className="px-2 py-2">
+                          <span className={`badge text-[9px] ${s.confirmed ? 'badge-low' : 'badge-elevated'}`}>
+                            {s.confirmed ? '已确认' : '待确认'}
+                          </span>
+                        </td>
+                        <td className="px-2 py-2 hidden sm:table-cell text-gray-600">
+                          {(s.regions ?? []).join(', ') || '—'}
+                        </td>
+                        <td className="px-2 py-2 hidden sm:table-cell text-gray-600">
+                          {(s.serotypes ?? []).join(', ') || '—'}
+                        </td>
+                        <td className="px-2 py-2 font-mono">{s.threshold ?? '—'}</td>
+                        <td className="px-2 py-2 hidden md:table-cell text-gray-400">{s.source ?? '—'}</td>
+                        <td className="px-4 py-2 sm:px-2 text-gray-500 font-mono whitespace-nowrap">
+                          {new Date(s.created_at).toLocaleDateString('zh-CN')}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
+              数据来源：Supabase <code className="bg-gray-100 px-1 rounded">alert_subscriptions</code> 表（最多显示最近 500 条）。
+              CSV 导出可用 Excel / 飞书 / 邮件营销工具批量导入。
+              <strong>请勿将 CSV 公开发布</strong>，含个人邮箱属于隐私数据。
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Data pipeline status */}
+      {activeTab === 'data' && (
+        <div className="space-y-4">
+          <DataFreshness meta={dataMeta} variant="banner" />
+
+          {/* Per-query news leads diagnostics — answers "is Google News actually pulling fresh content?" */}
+          {dataMeta.sources.news_leads?.perQuery && dataMeta.sources.news_leads.perQuery.length > 0 ? (
+            <div className="card">
+              <h3 className="font-semibold text-sm mb-1">新闻线索抓取诊断</h3>
+              <p className="text-[11px] text-gray-400 mb-3">
+                每次 collector 跑 Google News RSS 时记录的逐查询统计。kept 列是最终保留的条目数。
+              </p>
+              <div className="overflow-x-auto -mx-4 sm:mx-0">
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr className="border-b text-left text-gray-500">
+                      <th className="px-4 py-2 sm:px-2 font-medium">查询</th>
+                      <th className="px-2 py-2 font-medium">语言</th>
+                      <th className="px-2 py-2 font-medium text-right">抓到</th>
+                      <th className="px-2 py-2 font-medium text-right">屏蔽</th>
+                      <th className="px-2 py-2 font-medium text-right">无信号</th>
+                      <th className="px-2 py-2 font-medium text-right">重复</th>
+                      <th className="px-2 py-2 font-medium text-right">保留</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {dataMeta.sources.news_leads.perQuery.map((d) => (
+                      <tr key={d.query} className="hover:bg-gray-50">
+                        <td className="px-4 py-1.5 sm:px-2 font-mono break-all max-w-[12rem]">{d.query}</td>
+                        <td className="px-2 py-1.5 text-gray-500">{d.hl ?? '—'}</td>
+                        <td className="px-2 py-1.5 text-right font-mono">{d.fetched}</td>
+                        <td className="px-2 py-1.5 text-right font-mono text-gray-400">{d.blocked}</td>
+                        <td className="px-2 py-1.5 text-right font-mono text-gray-400">{d.no_signal}</td>
+                        <td className="px-2 py-1.5 text-right font-mono text-gray-400">{d.duplicate}</td>
+                        <td className="px-2 py-1.5 text-right font-mono font-bold text-brand-700">{d.kept}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ) : (
+            <div className="card">
+              <h3 className="font-semibold text-sm mb-1">新闻线索抓取诊断</h3>
+              <p className="text-xs text-gray-500">
+                还未有诊断数据。等下一次 collector 跑完（最多 6 小时）或在 GitHub Actions 手动触发
+                <code className="bg-gray-100 px-1 rounded mx-1">Collect data</code> workflow。
+              </p>
+            </div>
+          )}
+
+          <div className="card">
+            <h3 className="font-semibold text-sm mb-2">如何强制刷新数据</h3>
+            <ol className="text-xs text-gray-600 space-y-1 list-decimal list-inside">
+              <li>访问 <a href="https://github.com/jakegu1/hantawatch/actions/workflows/collect-data.yml" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline">GitHub Actions → Collect data</a></li>
+              <li>右上角点击 <strong>Run workflow</strong> → 选 <code className="bg-gray-100 px-1 rounded">main</code> 分支 → <strong>Run workflow</strong></li>
+              <li>约 30 秒后完成，自动 commit 到 main</li>
+              <li>Vercel 检测到 commit 后约 90 秒重新部署完毕</li>
+            </ol>
+          </div>
         </div>
       )}
 

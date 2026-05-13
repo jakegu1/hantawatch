@@ -58,24 +58,28 @@ function greatCircleArc(
 }
 
 /**
- * Tile sources to try in order. We race them: whichever one paints first wins.
- * - CartoDB (basemaps.cartocdn.com) is generally reachable from mainland China
- *   mobile networks (Cloudfront CDN).
- * - openstreetmap.org as a fallback for non-CN users.
+ * Tile sources we try in order. MapLibre's raster source only natively
+ * understands {x}/{y}/{z} — it does NOT expand a {r} retina suffix the way
+ * Leaflet does. So we use plain non-retina URLs here; modern browsers
+ * upscale fine, and we avoid the previous 404 bug where '{r}.png' was
+ * being requested literally.
  *
- * Note: we don't actually "race" — instead we use a single style with a
- * server-side CDN that has both. CartoDB Voyager is light, neutral, and works.
+ * Primary: CartoDB Voyager — clean basemap on Cloudfront CDN, reachable
+ * from mainland China mobile networks in our manual tests.
+ * Fallback: OSM standard tile server (used if CartoDB fails).
  */
 const TILE_TEMPLATES = {
-  // CartoDB Voyager — clean, neutral basemap with subtle colours
   cartoVoyager: [
-    'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-    'https://d.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
+    'https://d.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',
   ],
-  // OSM standard (fallback)
-  osm: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+  osm: [
+    'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'https://c.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  ],
 } as const;
 
 export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMapProps) {
@@ -247,14 +251,7 @@ export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMa
         </span>
       </div>
 
-      {/* Pulse keyframes — scoped via global style tag to keep the component
-          self-contained. Tailwind doesn't expose ring-pulse easily. */}
-      <style jsx global>{`
-        @keyframes hwPulse {
-          0%, 100% { transform: scale(1); opacity: 1; }
-          50%      { transform: scale(1.15); opacity: 0.85; }
-        }
-      `}</style>
+      {/* Pulse keyframes are in `globals.css` as `@keyframes hwPulse` */}
     </div>
   );
 }

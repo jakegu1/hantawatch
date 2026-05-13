@@ -15,6 +15,19 @@ from .who_don import WhoDonEntry, select_serotype_id
 
 logger = logging.getLogger(__name__)
 
+# Our users are primarily in mainland China. The "今日" / "yesterday" semantics
+# in the UI MUST be relative to Beijing time, not the GitHub Actions UTC runner.
+# Otherwise: collector runs at 23:00 UTC -> writes date=yesterday-UTC, but in
+# Beijing it's already 07:00 next morning, so users see "今日 5-12" when
+# their phone clock says "5-13". This caused a real user-reported bug.
+CHINA_TZ = timezone(timedelta(hours=8))
+
+
+def _today_cn() -> date:
+    """Return the current date in China time. ALWAYS use this instead of
+    `date.today()` for anything written to user-facing JSON."""
+    return datetime.now(CHINA_TZ).date()
+
 
 # -- Cluster registry ------------------------------------------------------
 # WHO DON entries don't include lat/lng. The collector holds a small curated
@@ -210,7 +223,7 @@ def merge_manual_news_leads(rows: list[dict], manual_path: Path) -> list[dict]:
             "id": lead_id,
             "regionCode": lead.get("regionCode", "INT"),
             "serotypeId": lead.get("serotypeId") or select_serotype_id(title + " " + lead.get("summary", "")),
-            "date": lead.get("date") or date.today().isoformat(),
+            "date": lead.get("date") or _today_cn().isoformat(),
             "caseType": "suspected",
             "count": int(lead.get("count", 0)),
             "title": title,
@@ -238,7 +251,7 @@ def update_hpi_history(
 ) -> list[dict]:
     """Append today's HPI snapshot. Idempotent: re-running on the same day
     updates the day's value rather than duplicating."""
-    today = date.today().isoformat()
+    today = _today_cn().isoformat()
     existing = read_json(history_path, default=None) or {}
     series: list[dict] = list(existing.get("series", []))
 
@@ -262,7 +275,7 @@ def build_daily_brief(
 ) -> dict:
     """Compose today's brief. Distance Δ is computed as the change in the
     nearest cluster's distance vs. yesterday (kept in meta.json)."""
-    today = date.today().isoformat()
+    today = _today_cn().isoformat()
 
     if active_clusters:
         nearest = min(active_clusters, key=lambda c: c.get("distanceFromChinaKm", 1_000_000))
@@ -284,7 +297,7 @@ def build_daily_brief(
     if active_clusters:
         try:
             last_update = max(c["lastUpdate"] for c in active_clusters)
-            days_since = (date.today() - date.fromisoformat(last_update)).days
+            days_since = (_today_cn() - date.fromisoformat(last_update)).days
         except (ValueError, KeyError):
             days_since = 0
 
@@ -372,16 +385,22 @@ def build_meta(
     ecdc_ok: bool,
     cluster_count: int,
     news_count: int = 0,
+    news_diagnostics: list[dict] | None = None,
 ) -> dict:
     return {
         "lastCollectedAt": datetime.now(timezone.utc).isoformat(),
+        "lastCollectedAtCn": datetime.now(CHINA_TZ).isoformat(),
         "sources": {
             "who_don": {"entries": who_count, "ok": who_count > 0},
             "ecdc": {"ok": ecdc_ok},
-            "news_leads": {"entries": news_count, "ok": news_count > 0},
+            "news_leads": {
+                "entries": news_count,
+                "ok": news_count > 0,
+                "perQuery": news_diagnostics or [],
+            },
         },
         "clusterCount": cluster_count,
-        "manualFiles": ["china-baseline.json", "recent-cases-china.json"],
+        "manualFiles": ["china-baseline.json", "recent-cases-china.json", "news-leads-manual.json"],
     }
 
 

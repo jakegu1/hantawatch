@@ -1,9 +1,11 @@
 'use client';
 
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
+import { dataMeta } from '@/lib/data';
 import { calculateHpi } from '@/lib/hpi';
 import { SEROTYPES } from '@hantawatch/shared';
 import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
+import { DataFreshness } from '@/components/data-freshness';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
@@ -53,6 +55,13 @@ export default function HomePage() {
       {/* ================================================================ */}
       <section className="bg-gradient-to-b from-brand-900 via-brand-700 to-brand-500 text-white">
         <div className="container-page py-4 sm:py-8">
+          {/* Data freshness pill — visible affirmation that data is recent.
+              Built from meta.json so the user can spot stale dashboards
+              without needing to check admin. */}
+          <div className="mb-2 flex justify-end">
+            <DataFreshness meta={dataMeta} variant="pill" />
+          </div>
+
           {/* Daily brief banner */}
           <DailyBriefBanner brief={todayBrief} />
 
