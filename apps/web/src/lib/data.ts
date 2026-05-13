@@ -84,12 +84,46 @@ const chinaCases: RecentCase[] = (recentCasesChinaJson.cases as CaseRecord[]).ma
   scope: 'china' as const,
 }));
 
+/**
+ * Compliance filter for international cases (2026-05-13).
+ *
+ * Two failure modes we had to address:
+ *   (1) The Google-News scraper occasionally surfaced English /
+ *       traditional-Chinese headlines that mainland users couldn't read.
+ *   (2) Those headlines linked directly to overseas news sites, which
+ *       carries content-compliance risk when aggregated for a China
+ *       audience without operator review.
+ *
+ * Policy implemented here:
+ *   - `confidence: 'official'`         ALWAYS shown (WHO DON, ECDC, etc.
+ *     are authoritative and country-of-origin agnostic).
+ *   - `confidence: 'news'` with id     ALWAYS shown — these come from
+ *     starting with `manual-`            news-leads-manual.json which goes
+ *                                        through operator review before
+ *                                        landing in the repo.
+ *   - `confidence: 'news'` otherwise   FILTERED OUT — i.e. anything the
+ *                                        Google-News scraper auto-pulled
+ *                                        never reaches public visitors.
+ *
+ * The scraper still writes those entries to the JSON file so the operator
+ * can see them during /admin review; we simply refuse to render them on
+ * the public-facing pages.
+ */
+function isComplianceSafeIntlCase(c: CaseRecord): boolean {
+  const conf = c.source?.confidence;
+  if (conf === 'official') return true;
+  if (conf === 'news' && c.id.startsWith('manual-')) return true;
+  return false;
+}
+
 const intlCases: RecentCase[] = (
   recentCasesIntlJson.cases as Array<CaseRecord & { title?: string; summary?: string }>
-).map((c) => ({
-  ...c,
-  scope: 'international' as const,
-}));
+)
+  .filter(isComplianceSafeIntlCase)
+  .map((c) => ({
+    ...c,
+    scope: 'international' as const,
+  }));
 
 /**
  * Merged, sorted (newest first) timeline. Domestic + international.

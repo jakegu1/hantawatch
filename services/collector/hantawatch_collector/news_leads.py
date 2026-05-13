@@ -29,12 +29,31 @@ logger = logging.getLogger(__name__)
 
 # Queries chosen for high recall on hanta-related events. Avoid generic
 # "outbreak" terms — Google News will over-fetch unrelated diseases.
+#
+# COMPLIANCE NOTE (2026-05-13)
+# ----------------------------
+# Our audience is mainland China. Two prior queries were removed:
+#   - ("hantavirus", "en", "US:en")
+#   - ("漢他病毒", "zh-TW", "TW:zh-Hant")
+#   - ("HFRS+OR+...", "en", "US:en")
+#
+# Reasons:
+#   (1) English / Traditional-Chinese headlines are unreadable to most of
+#       our users; surfacing them as "新闻线索" added noise without
+#       informational value.
+#   (2) Aggregated overseas headlines link directly to overseas news sites
+#       (Reuters, BBC, Al Jazeera, etc.). Republishing/aggregating foreign
+#       press content for a mainland Chinese audience carries content-
+#       compliance risk we don't want to take on.
+#
+# We keep the zh-CN query because:
+#   - simplified-Chinese sources (Caixin, Sixth Tone CN, mainland news
+#     portals) are mostly compliant by definition.
+#   - The operator still reviews everything via /admin/审核队列 before it
+#     reaches the public homepage (see data.ts filtering below).
 QUERIES: tuple[tuple[str, str, str], ...] = (
     # (query, hl, ceid)
-    ("hantavirus", "en", "US:en"),
     ("汉坦病毒", "zh-CN", "CN:zh-Hans"),
-    ("漢他病毒", "zh-TW", "TW:zh-Hant"),  # Taiwan term (traditional)
-    ("HFRS+OR+\"hemorrhagic+fever+with+renal+syndrome\"", "en", "US:en"),
 )
 
 # Blocklist — patterns appearing in titles that nearly always indicate

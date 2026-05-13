@@ -30,45 +30,12 @@
 
 import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
 import type { ActiveCluster } from '@hantawatch/shared';
+import { SEROTYPES } from '@hantawatch/shared';
 import { type NearestAndesResult, flagForLocation, relativeDateZh } from '@/lib/nearest-cluster';
+import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
-}
-
-function distanceTone(km: number): {
-  text: string;
-  bgClass: string;
-  textClass: string;
-  emoji: string;
-} {
-  if (km > 10000)
-    return {
-      text: '距离极远，对中国大陆直接威胁有限',
-      bgClass: 'bg-green-50 border-green-200',
-      textClass: 'text-green-700',
-      emoji: '✅',
-    };
-  if (km > 3000)
-    return {
-      text: '距离较远，但需关注航空连接性',
-      bgClass: 'bg-yellow-50 border-yellow-200',
-      textClass: 'text-yellow-700',
-      emoji: '⚠️',
-    };
-  if (km > 500)
-    return {
-      text: '邻近区域，需密切监测输入风险',
-      bgClass: 'bg-orange-50 border-orange-200',
-      textClass: 'text-orange-700',
-      emoji: '🟠',
-    };
-  return {
-    text: '距离极近，立即提升警戒等级',
-    bgClass: 'bg-red-50 border-red-200',
-    textClass: 'text-red-700',
-    emoji: '🔴',
-  };
 }
 
 export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
@@ -91,9 +58,9 @@ export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
   }
 
   const km = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
-  const tone = km !== null ? distanceTone(km) : null;
   const flag = flagForLocation(nearest.location?.name);
   const ago = relativeDateZh(nearest.lastUpdate);
+  const markerColor = SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
 
   return (
     <div className="rounded-xl bg-white text-gray-900 shadow-md overflow-hidden">
@@ -149,15 +116,17 @@ export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
           </span>
         </p>
 
-        {/* Distance interpretation pill */}
-        {tone && (
-          <div
-            className={`rounded-lg px-3 py-2 text-[11px] sm:text-xs border ${tone.bgClass} ${tone.textClass} mb-3`}
-          >
-            <span aria-hidden className="mr-1">
-              {tone.emoji}
-            </span>
-            {tone.text}
+        {/* Distance bar — graphical alternative to the prior text pill.
+            Shows the cluster's position along a color-banded scale from
+            China (★) on the left to the antipode (~20,000 km) on the
+            right. Pure SVG/CSS, no map tiles. */}
+        {km !== null && (
+          <div className="mb-3">
+            <DistanceBar
+              distanceKm={km}
+              markerColor={markerColor}
+              clusterLabel={nearest.location?.name}
+            />
           </div>
         )}
 
