@@ -5,21 +5,24 @@ import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, rec
 import { dataMeta } from '@/lib/data';
 import { calculateHpi } from '@/lib/hpi';
 import { findNearestAndes } from '@/lib/nearest-cluster';
+import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
-import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Globe2 } from 'lucide-react';
+import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { SubscribeForm } from '@/components/subscribe-form';
-import dynamic from 'next/dynamic';
 
-// MapLibre is heavy and references `window` — load only on the client.
-const DistanceMap = dynamic(
-  () => import('@/components/distance-map').then((m) => m.DistanceMap),
-  { ssr: false, loading: () => <div className="h-[280px] rounded-xl bg-gray-100 animate-pulse" /> },
-);
+// NOTE (2026-05-13): the interactive MapLibre world map has been removed.
+// - Carto/OSM tile CDNs are unreliable behind the GFW, so mainland users
+//   (our primary audience) saw blank tiles.
+// - The <NearestAndesCard> + <DistanceBar> combo replaces it with a
+//   GFW-proof, inline-SVG visualisation that delivers the same core signal
+//   ("how far is the nearest outbreak from China").
+// If you ever need to reinstate the map, see git history before this commit;
+// the component lived at `apps/web/src/components/distance-map.tsx`.
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
@@ -91,12 +94,6 @@ export default function HomePage() {
     travelConnectivity: 'indirect',
     baselineDeviation: 'normal',
   });
-
-  // Whether the user has explicitly opted into the interactive map. We
-  // keep this OFF by default because tiles load from international CDNs
-  // (Carto / OSM) that are unreliable inside mainland China without a
-  // VPN — the card above already conveys the key info offline.
-  const [mapOpened, setMapOpened] = useState(false);
 
   return (
     <div className="pb-16">
@@ -234,59 +231,6 @@ export default function HomePage() {
                 See components/nearest-andes-card.tsx for the design notes. */}
           <div className="mb-3 sm:mb-4">
             <NearestAndesCard result={nearestAndes} />
-          </div>
-
-          {/* ─── Optional interactive world map.
-                Kept opt-in because Carto/OSM tile CDNs are unreliable from
-                mainland China. The button explains the trade-off so users
-                without VPN don't waste taps on a blank tile area. */}
-          <div className="mb-3 sm:mb-0">
-            {!mapOpened ? (
-              <button
-                type="button"
-                onClick={() => setMapOpened(true)}
-                className="w-full rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-2.5 text-left transition-colors group"
-              >
-                <div className="flex items-center gap-2">
-                  <Globe2 className="h-4 w-4 text-white/70 flex-shrink-0" />
-                  <div className="min-w-0 flex-1">
-                    <p className="text-xs sm:text-sm font-medium">查看互动世界地图</p>
-                    <p className="text-[10px] sm:text-[11px] text-white/60 mt-0.5 leading-snug">
-                      需访问国际地图 CDN（Carto/OSM）。国内用户若无代理可能加载缓慢。
-                    </p>
-                  </div>
-                  <span className="text-[10px] text-white/40 group-hover:translate-x-0.5 transition-transform">
-                    展开 ›
-                  </span>
-                </div>
-              </button>
-            ) : (
-              <div className="rounded-xl bg-white/5 backdrop-blur border border-white/10 overflow-hidden">
-                <div className="flex items-center justify-between px-3 py-2 text-[11px] text-white/70">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Globe2 className="h-3.5 w-3.5" />
-                    互动地图
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setMapOpened(false)}
-                    className="text-white/50 hover:text-white"
-                  >
-                    收起
-                  </button>
-                </div>
-                <DistanceMap
-                  cluster={{
-                    lat: cluster.location.lat,
-                    lng: cluster.location.lng,
-                    name: `${cluster.name} · ${cluster.location.name}`,
-                    serotypeColor: SEROTYPES[cluster.serotypeId]?.color ?? '#dc2626',
-                  }}
-                  distanceLabel={`${fmt(cluster.distanceFromChinaKm)} km`}
-                  height={260}
-                />
-              </div>
-            )}
           </div>
 
           {/* ─── 7-day HPI sparkline + explanation (desktop only — mobile users
@@ -466,15 +410,32 @@ export default function HomePage() {
                         {sero?.nameZh ?? c.serotypeId}
                         {sero?.nameEn && <span className="ml-1 opacity-60 text-[9px]">{sero.nameEn}</span>}
                       </span>
-                      <a
-                        href={c.source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[10px] text-gray-400 hover:text-brand-700 hover:underline truncate max-w-[200px]"
-                        title={c.source.name}
-                      >
-                        {c.source.name} ↗
-                      </a>
+                      {/* Link policy (see lib/link-policy.ts):
+                          Only mainland sources get a clickable anchor.
+                          Overseas sources (WHO, ECDC, Reuters, Taiwan CDC,
+                          Swiss BAG, news.google.com tracker URLs, …) are
+                          shown as plain text — the source-outlet name is
+                          still visible so readers know *who* reported it,
+                          but we don't aggregate outbound traffic to
+                          overseas properties. */}
+                      {isMainlandSource(c.source.url) ? (
+                        <a
+                          href={c.source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] text-gray-400 hover:text-brand-700 hover:underline truncate max-w-[200px]"
+                          title={c.source.name}
+                        >
+                          {c.source.name} ↗
+                        </a>
+                      ) : (
+                        <span
+                          className="text-[10px] text-gray-400 truncate max-w-[200px]"
+                          title={`来源：${c.source.name}（境外来源不提供外链）`}
+                        >
+                          {c.source.name}
+                        </span>
+                      )}
                     </div>
                     <p className="text-sm text-gray-800 font-medium leading-snug">{title}</p>
                     {subtitle && <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{subtitle}</p>}

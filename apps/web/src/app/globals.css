@@ -34,7 +34,8 @@
     touch-action: manipulation;
   }
 
-  /* Map marker pulse — used by DistanceMap to draw attention to the cluster point */
+  /* Pulse animation — formerly used by DistanceMap (now removed); kept
+     here in case other components want a subtle attention-grab. */
   @keyframes hwPulse {
     0%, 100% { transform: scale(1); opacity: 1; }
     50%      { transform: scale(1.15); opacity: 0.85; }

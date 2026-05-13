@@ -209,23 +209,41 @@ def build_active_clusters(
 
 
 # -- Recent cases ----------------------------------------------------------
+# How long we keep carrying over official entries from a previous run when
+# the current fetch returned empty. Dashboard context shouldn't vanish just
+# because WHO's RSS was flaky at 08:48 UTC on a Wednesday.
+_OFFICIAL_CARRYOVER_MAX_AGE_DAYS = 30
+
+
 def build_recent_cases_intl(
     who_entries: list[WhoDonEntry],
     news_leads: list[NewsLead] | None = None,
+    *,
+    ecdc: "EcdcAssessment | None" = None,
+    fallback_path: "Path | None" = None,
 ) -> list[dict]:
     """International recent cases — newest first.
 
-    Combines two sources:
-      1. WHO DON entries — `confidence: official`
-      2. Google News / ProMED leads — `confidence: news`
+    Combines three sources:
+      1. WHO DON entries                — `confidence: official`
+      2. ECDC threat assessment         — `confidence: official` (one entry
+         per successful fetch, dated by its `retrieved_at`)
+      3. Google News / ProMED leads     — `confidence: news`
+
+    Also **carries over previous official entries** (WHO / ECDC) from
+    `fallback_path` when the current fetch returned empty, so the public
+    feed doesn't go bare every time a single source flakes out for a few
+    hours. Carry-over entries are aged out after
+    `_OFFICIAL_CARRYOVER_MAX_AGE_DAYS` days.
 
     The UI uses `source.confidence` to render a different badge ("官方通报"
     vs. "新闻线索") so users can tell at a glance how authoritative each row is.
     """
     rows: list[dict] = []
     now_iso = datetime.now(timezone.utc).isoformat()
+    today = _today_cn()
 
-    # WHO DON — official
+    # --- 1. WHO DON ---------------------------------------------------------
     for e in who_entries[:20]:
         rows.append(
             {
@@ -246,7 +264,67 @@ def build_recent_cases_intl(
             }
         )
 
-    # News leads — auxiliary, less authoritative
+    # --- 2. ECDC threat assessment -----------------------------------------
+    # ECDC publishes a single "current situation" page per outbreak, not a
+    # feed. We synthesise ONE entry per successful fetch so readers can see
+    # ECDC's latest wording in the timeline. Dated by the retrieval date so
+    # it sorts naturally against WHO DON entries.
+    if ecdc is not None and ecdc.risk_wording:
+        ecdc_date = ecdc.retrieved_at.date().isoformat()
+        rows.append(
+            {
+                # Stable id per day so re-running the collector doesn't
+                # create multiple ECDC rows; the latest run wins.
+                "id": f"ecdc-{ecdc_date}",
+                "regionCode": "INT",
+                "serotypeId": "andes",  # ECDC assessment today concerns Andes; safe default
+                "date": ecdc_date,
+                "caseType": "confirmed",
+                "count": 0,
+                "title": "ECDC 风险评估更新",
+                "summary": ecdc.risk_wording,
+                "source": {
+                    "name": "ECDC 风险评估",
+                    "url": ecdc.source_url,
+                    "retrievedAt": now_iso,
+                    "confidence": "official",
+                },
+            }
+        )
+
+    # --- 3. Carry-over of previous official entries ------------------------
+    # Critical for UX: when WHO RSS or ECDC's HTTPS flakes (returns empty /
+    # error), we don't want the public feed to suddenly lose all WHO/ECDC
+    # context. Preserve prior official entries up to the carry-over age.
+    if fallback_path is not None and fallback_path.exists():
+        prev = read_json(fallback_path, default=None)
+        if isinstance(prev, dict) and isinstance(prev.get("cases"), list):
+            seen_ids = {r["id"] for r in rows}
+            carried = 0
+            for c in prev["cases"]:
+                if not isinstance(c, dict):
+                    continue
+                if c.get("id") in seen_ids:
+                    continue
+                conf = (c.get("source") or {}).get("confidence")
+                if conf != "official":
+                    continue
+                case_date_str = c.get("date") or ""
+                try:
+                    case_date = date.fromisoformat(case_date_str)
+                except ValueError:
+                    continue
+                if (today - case_date).days > _OFFICIAL_CARRYOVER_MAX_AGE_DAYS:
+                    continue
+                rows.append(c)
+                carried += 1
+            if carried:
+                logger.info(
+                    "recent-cases-intl: carried over %d official entr%s from previous run",
+                    carried, "y" if carried == 1 else "ies",
+                )
+
+    # --- 4. News leads — auxiliary, less authoritative ---------------------
     for n in (news_leads or [])[:25]:
         rows.append(
             {

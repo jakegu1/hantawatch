@@ -1,61 +1,52 @@
 'use client';
 
 /**
- * <DistanceBar> — replaces the world map's textual interpretation with a
- * graphical, offline-friendly distance indicator.
+ * <DistanceBar> — graphical, offline-friendly distance indicator.
  *
- * Design rationale
- * ----------------
- * The previous Nearest-Andes card showed a single text pill
- * ("✅ 距离极远，对中国大陆直接威胁有限") which is informative but flat.
- * Users wanted to *see* the distance, not just read about it.
+ * Why a redesign?
+ * ---------------
+ * The first pass (2026-05-13 a) placed a floating "📌 18,800 km" label
+ * *above* the bar and layered a China star icon *on top of* the bar's left
+ * edge, while absolutely-positioned scale ticks ran *below* at the same
+ * percentage anchors. On production data (MV Hondius at ≈ 94% across the
+ * bar) all three regions collided:
+ *   - the floating label bled out of the card's right padding,
+ *   - the star's decorative ring overlapped the '中国' scale tick,
+ *   - the marker dot sat on top of the '2万+ km' right-edge tick.
  *
- * Constraints:
- *   - Mainland China users may have no working map tile CDN (the reason we
- *     removed the live map). Component must be 100% inline SVG, zero
- *     network deps.
- *   - Must work on tiny phone widths (320 px). Therefore: a single horizontal
- *     scale, not a 2D map.
+ * This rewrite takes a "no-overlap by construction" approach:
  *
- * Visualisation:
+ *   [★]  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━●  [18,800 km]
+ *        ↑ gradient bar is the ONLY absolute-positioned surface
  *
- *   中国大陆                                                MV Hondius
- *      ★ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ●
- *      ┃   邻近    │  同洲   │       跨洲          │  跨洋安全  ┃
- *      0          500     3 000               10 000         20 000+
- *      [red zone] [orange] [yellow]                [    green    ]
+ * Layout (top to bottom):
+ *   1. Row: [China star | gradient bar with marker dot | km chip]
+ *      Star & chip are flex siblings, so they CAN'T overlap the bar.
+ *   2. Scale ticks below, aligned with the bar only (not the outer row),
+ *      via matching left/right padding.
+ *   3. Zone summary line ('当前位于 [跨洋安全] 区间 · 阿根廷乌斯怀亚海域').
  *
- * - Bands are drawn proportional to their km width (so the visual area
- *   of each zone matches its real-world km range, not equal-width buckets).
- * - The cluster marker sits at its true proportional position on the bar.
- * - China is anchored at the left edge with a star icon.
- * - A floating distance label hovers above the cluster marker, with the
- *   exact km figure.
- *
- * Failure modes:
- *   - distanceKm <= 0 or > MAX_KM is clamped; bar still renders gracefully.
- *   - serotype color override is optional; defaults to deep red.
+ * All inline SVG/CSS, no network deps — still works for GFW users.
  */
 
-import { Pin } from 'lucide-react';
-
 interface DistanceBarProps {
-  /** Distance from China in km. Negative or 0 = "unknown" — bar renders
-   *  in placeholder mode (no marker, just zones). */
+  /** Distance from China in km. <= 0 means "unknown" — bar renders in a
+   *  placeholder mode (no marker, no km chip). */
   distanceKm: number;
-  /** Marker color (cluster serotype color). Defaults to brand red. */
+  /** Marker color (usually serotype color). Defaults to brand red. */
   markerColor?: string;
-  /** Short label rendered above the marker (e.g. cluster name). */
+  /** Short label rendered in the zone summary line. */
   clusterLabel?: string;
 }
 
-// Scale ceiling: roughly diameter-of-earth, far enough that any real
-// outbreak fits. Markers beyond this clamp to the right edge.
+// Scale ceiling: roughly half the equatorial circumference. Clusters
+// farther than this clamp to the right edge. In practice the max plausible
+// distance from China is ~19,500 km (antipode of Beijing) so 20k is safe.
 const MAX_KM = 20000;
 
-// Zone thresholds (km). Order matters — these define the band boundaries
-// on the bar. Keep in sync with distanceRingBg in app/page.tsx; both
-// reflect the same risk gradient.
+// Zone thresholds (km). Order matters — these define band boundaries on
+// the bar. Keep in sync with distanceRingBg in app/page.tsx (same risk
+// gradient).
 const ZONES = [
   { upTo: 500, fill: '#fecaca', label: '邻近', hint: '邻近高风险' },
   { upTo: 3000, fill: '#fed7aa', label: '同洲', hint: '同洲监测圈' },
@@ -67,8 +58,6 @@ function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
 }
 
-/** Pick the zone for a given distance — used for hint text + the marker
- *  fallback color when no serotype color is passed in. */
 function zoneFor(km: number): (typeof ZONES)[number] {
   for (const z of ZONES) {
     if (km <= z.upTo) return z;
@@ -83,20 +72,17 @@ export function DistanceBar({
 }: DistanceBarProps) {
   const known = distanceKm > 0;
   const clamped = known ? Math.min(distanceKm, MAX_KM) : 0;
-  // Convert to percent (0..100) along the bar. We dedicate the first 1.5%
-  // and last 2% of the bar as gutters so the China star and the cluster
-  // marker never visually overlap the edge corners.
-  const GUTTER_LEFT = 1.5;
-  const GUTTER_RIGHT = 2;
-  const usable = 100 - GUTTER_LEFT - GUTTER_RIGHT;
-  const pct = known ? GUTTER_LEFT + (clamped / MAX_KM) * usable : 50;
+  // Percent along the bar — with slight insets so the marker dot never
+  // kisses either edge of the rounded bar.
+  const GUTTER = 2.5;
+  const usable = 100 - GUTTER * 2;
+  const pct = known ? GUTTER + (clamped / MAX_KM) * usable : 50;
 
   const zone = zoneFor(clamped);
   const dotColor = markerColor || '#dc2626';
 
-  // Pre-compute band stops so we can render them as one linear-gradient
-  // background. This is cheaper than 4 separate <div>s, and keeps the bar
-  // perfectly seamless on high-DPI screens.
+  // Single CSS gradient for all four zones. Stops at exact band boundaries
+  // so the color transitions are crisp.
   const stops: string[] = [];
   let prevPct = 0;
   for (const z of ZONES) {
@@ -108,112 +94,102 @@ export function DistanceBar({
   const gradient = `linear-gradient(to right, ${stops.join(', ')})`;
 
   return (
-    <div className="select-none">
-      {/* Hover/tap label above the marker — only when distance is known. */}
-      <div className="relative h-5 sm:h-6">
-        {known && (
-          <div
-            className="absolute -translate-x-1/2 top-0"
-            style={{ left: `${pct}%` }}
-          >
-            <div
-              className="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10px] font-bold text-white shadow-sm"
-              style={{ backgroundColor: dotColor }}
-            >
-              <Pin className="h-2.5 w-2.5" />
-              {fmt(distanceKm)} km
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* The bar itself. Pure CSS gradient — no SVG required for the
-          fill, which keeps DOM weight minimal. */}
-      <div className="relative">
+    <div
+      className="select-none"
+      role="img"
+      aria-label={
+        known
+          ? `距中国大陆 ${fmt(distanceKm)} 公里，处于「${zone.hint}」区间`
+          : '距离待评估'
+      }
+    >
+      {/* Row 1 — [star]  [bar with marker]  [km chip]
+          Using flex ensures none of the three surfaces overlap, regardless
+          of viewport width or km value. The bar gets flex-1 so it absorbs
+          slack, while the star and chip have fixed intrinsic widths. */}
+      <div className="flex items-center gap-2">
+        {/* China anchor */}
         <div
-          className="h-3 sm:h-3.5 rounded-full border border-gray-200"
-          style={{ background: gradient }}
-          role="img"
-          aria-label={
-            known
-              ? `距离中国大陆 ${fmt(distanceKm)} 公里，处于「${zone.hint}」区间`
-              : '距离待评估'
-          }
-        />
-
-        {/* China anchor star — left edge */}
-        <div
-          className="absolute top-1/2 -translate-y-1/2"
-          style={{ left: `${GUTTER_LEFT}%`, transform: 'translate(-50%, -50%)' }}
+          className="flex-shrink-0 h-5 w-5 sm:h-6 sm:w-6 rounded-full bg-brand-700 text-white text-[10px] sm:text-xs font-bold flex items-center justify-center shadow-sm"
           aria-hidden
         >
-          <div className="flex items-center justify-center h-5 w-5 sm:h-6 sm:w-6 rounded-full bg-brand-700 text-white text-[10px] sm:text-xs font-bold shadow ring-2 ring-white">
-            ★
-          </div>
+          ★
         </div>
 
-        {/* Cluster marker — drawn over the bar at its proportional spot */}
-        {known && (
+        {/* The bar itself — the ONLY surface with absolute-positioned
+            children. Everything else lives outside via flex. */}
+        <div className="relative flex-1 min-w-0">
           <div
-            className="absolute top-1/2 -translate-y-1/2"
-            style={{ left: `${pct}%`, transform: 'translate(-50%, -50%)' }}
+            className="h-3 sm:h-3.5 rounded-full border border-gray-200"
+            style={{ background: gradient }}
             aria-hidden
-          >
+          />
+          {known && (
             <div
-              className="h-3 w-3 sm:h-3.5 sm:w-3.5 rounded-full ring-2 ring-white shadow"
-              style={{ backgroundColor: dotColor }}
-            />
+              className="absolute top-1/2 -translate-y-1/2"
+              style={{ left: `${pct}%`, transform: 'translate(-50%, -50%)' }}
+              aria-hidden
+            >
+              <div
+                className="h-3.5 w-3.5 sm:h-4 sm:w-4 rounded-full ring-2 ring-white shadow"
+                style={{ backgroundColor: dotColor }}
+              />
+            </div>
+          )}
+        </div>
+
+        {/* km chip — always to the right of the bar, fixed width, never
+            collides with anything. Colored to match the marker so the two
+            are visually linked. */}
+        {known ? (
+          <div
+            className="flex-shrink-0 rounded-md px-1.5 py-0.5 text-[10px] sm:text-[11px] font-bold text-white tabular-nums whitespace-nowrap shadow-sm"
+            style={{ backgroundColor: dotColor }}
+          >
+            {fmt(distanceKm)} km
+          </div>
+        ) : (
+          <div className="flex-shrink-0 text-[10px] text-gray-400 italic whitespace-nowrap">
+            距离待估
           </div>
         )}
       </div>
 
-      {/* Scale labels below — only at zone boundaries to avoid clutter. */}
-      <div className="relative h-3 mt-1 text-[9px] sm:text-[10px] text-gray-500">
-        <ScaleTick pct={GUTTER_LEFT} label="中国" anchor="left" />
-        <ScaleTick pct={(500 / MAX_KM) * 100} label="500" />
-        <ScaleTick pct={(3000 / MAX_KM) * 100} label="3千" />
-        <ScaleTick pct={(10000 / MAX_KM) * 100} label="1万" />
-        <ScaleTick pct={100 - GUTTER_RIGHT} label="2万+ km" anchor="right" />
-      </div>
-
-      {/* One-line interpretation — replaces the old text-only pill. The bar
-          above carries the visual information; this is a brief verbal
-          summary for low-vision users and as a sanity check. */}
-      <p
-        className="mt-2 text-[10px] sm:text-[11px] text-gray-600 leading-snug"
+      {/* Row 2 — scale ticks, aligned to the bar only. We offset the
+          container by the star's width on the left (20-24px + 8px gap = 28-32px)
+          and the km chip's width on the right (~52-58px). Using flex
+          justify-between eliminates the absolute-positioning overlap the
+          previous implementation had. Tick count kept to 4 for legibility. */}
+      <div
+        className="flex justify-between mt-1 text-[9px] sm:text-[10px] text-gray-500 tabular-nums"
+        style={{
+          paddingLeft: 'calc(1.25rem + 0.5rem)', // star (h-5) + gap-2
+          paddingRight: 'calc(3.25rem + 0.5rem)', // km chip approx + gap-2
+        }}
         aria-hidden
       >
-        当前位于
+        <span>0</span>
+        <span>3千</span>
+        <span>1万</span>
+        <span>2万 km</span>
+      </div>
+
+      {/* Row 3 — plain-language zone summary. Now that the bar itself
+          conveys the visual information, this one-liner is purely textual
+          and serves as a screen-reader crutch + mobile-first quick scan. */}
+      <p className="mt-2 text-[11px] sm:text-xs text-gray-700 leading-snug flex items-center gap-1.5 flex-wrap">
+        <span>当前位于</span>
         <span
-          className="mx-1 px-1.5 py-0.5 rounded font-semibold"
+          className="inline-block px-1.5 py-0.5 rounded font-semibold text-[10px] sm:text-[11px]"
           style={{ backgroundColor: zone.fill, color: '#374151' }}
         >
           {zone.label}
         </span>
-        区间
-        {clusterLabel ? ` · ${clusterLabel}` : ''}
+        <span>区间</span>
+        {clusterLabel && (
+          <span className="text-gray-500 truncate max-w-[60%]">· {clusterLabel}</span>
+        )}
       </p>
     </div>
-  );
-}
-
-function ScaleTick({
-  pct,
-  label,
-  anchor = 'center',
-}: {
-  pct: number;
-  label: string;
-  anchor?: 'left' | 'right' | 'center';
-}) {
-  const transform =
-    anchor === 'left' ? 'translateX(0)' : anchor === 'right' ? 'translateX(-100%)' : 'translateX(-50%)';
-  return (
-    <span
-      className="absolute top-0 whitespace-nowrap tabular-nums"
-      style={{ left: `${pct}%`, transform }}
-    >
-      {label}
-    </span>
   );
 }

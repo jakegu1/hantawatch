@@ -1,6 +1,7 @@
 import { SEROTYPES } from '@hantawatch/shared';
 import { chinaProvinceCases, chinaHfrsHistory, recentCases } from '@/lib/mock-data';
 import { calculateHpi } from '@/lib/hpi';
+import { isMainlandSource } from '@/lib/link-policy';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -101,10 +102,28 @@ export default function DataPage() {
                   <span className="text-xs text-gray-400">{c.source.name} · {c.source.confidence === 'official' ? '官方通报' : '其他'}</span>
                 </div>
                 <p className="text-sm text-gray-700">{c.notes}</p>
-                {c.source.url && (
-                  <a href={c.source.url} className="text-xs text-brand-500 hover:underline mt-1 inline-block">
+                {/* Link policy (see lib/link-policy.ts): mainland sources
+                    render as anchor; overseas (incl. Taiwan/HK/WHO/ECDC/
+                    Reuters/news.google.com …) render as plain text so we
+                    don't funnel a mainland audience to overseas outbound
+                    links. */}
+                {c.source.url && isMainlandSource(c.source.url) && (
+                  <a
+                    href={c.source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-brand-500 hover:underline mt-1 inline-block"
+                  >
                     查看原始来源 →
                   </a>
+                )}
+                {c.source.url && !isMainlandSource(c.source.url) && (
+                  <span
+                    className="text-xs text-gray-400 mt-1 inline-block"
+                    title="境外来源不提供外链"
+                  >
+                    来源：{c.source.name}
+                  </span>
                 )}
               </div>
             </div>

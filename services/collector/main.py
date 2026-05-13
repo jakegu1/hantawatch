@@ -136,8 +136,18 @@ def main(argv: list[str] | None = None) -> int:
         domestic_baseline_status=domestic_baseline,
     )
 
-    # ---- 8. Recent international cases (WHO official + Google News + manual) ----
-    recent_intl = build_recent_cases_intl(who_entries, news_leads)
+    # ---- 8. Recent international cases (WHO + ECDC + Google News + manual) ----
+    # We pass `fallback_path` so build_recent_cases_intl can carry over
+    # official WHO/ECDC entries from the previous run when today's fetch
+    # returned empty. Without this, a single flaky WHO RSS request wiped
+    # all historical WHO entries from the public feed — see 2026-05-13
+    # incident in git history.
+    recent_intl = build_recent_cases_intl(
+        who_entries,
+        news_leads,
+        ecdc=ecdc,
+        fallback_path=out_dir / "recent-cases-intl.json",
+    )
     # Merge admin-curated leads (e.g. local Taiwan / Switzerland press the
     # auto-scraper missed). Manual entries win on id collision.
     recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")

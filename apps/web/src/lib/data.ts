@@ -85,45 +85,32 @@ const chinaCases: RecentCase[] = (recentCasesChinaJson.cases as CaseRecord[]).ma
 }));
 
 /**
- * Compliance filter for international cases (2026-05-13).
+ * Compliance strategy for international cases (2026-05-13 v2).
  *
- * Two failure modes we had to address:
- *   (1) The Google-News scraper occasionally surfaced English /
- *       traditional-Chinese headlines that mainland users couldn't read.
- *   (2) Those headlines linked directly to overseas news sites, which
- *       carries content-compliance risk when aggregated for a China
- *       audience without operator review.
+ * v1 of this filter dropped every `confidence: 'news'` entry that didn't
+ * start with `manual-`, i.e. the entire Google-News scrape. That was too
+ * blunt: the side-effect was that returning visitors saw WHO DON and ECDC
+ * reports disappear whenever the collector's WHO fetch flaked (partial
+ * failure → new JSON overwrote them with 0 official entries) and all the
+ * news leads were hidden anyway.
  *
- * Policy implemented here:
- *   - `confidence: 'official'`         ALWAYS shown (WHO DON, ECDC, etc.
- *     are authoritative and country-of-origin agnostic).
- *   - `confidence: 'news'` with id     ALWAYS shown — these come from
- *     starting with `manual-`            news-leads-manual.json which goes
- *                                        through operator review before
- *                                        landing in the repo.
- *   - `confidence: 'news'` otherwise   FILTERED OUT — i.e. anything the
- *                                        Google-News scraper auto-pulled
- *                                        never reaches public visitors.
+ * v2 drops the collection-time filter entirely. The compliance line has
+ * moved to *render time* via `link-policy.ts` — we still show the source
+ * name and headline for every entry, but only mainland sources get a
+ * clickable outbound link. That keeps the information flow intact
+ * (readers can at least see *that* e.g. Reuters reported on it) while
+ * avoiding the two failure modes of v1:
+ *   - aggregating overseas outbound links for a mainland audience, and
+ *   - pretending overseas official bodies (ECDC/WHO) don't exist.
  *
- * The scraper still writes those entries to the JSON file so the operator
- * can see them during /admin review; we simply refuse to render them on
- * the public-facing pages.
+ * See `link-policy.ts` for the mainland allowlist.
  */
-function isComplianceSafeIntlCase(c: CaseRecord): boolean {
-  const conf = c.source?.confidence;
-  if (conf === 'official') return true;
-  if (conf === 'news' && c.id.startsWith('manual-')) return true;
-  return false;
-}
-
 const intlCases: RecentCase[] = (
   recentCasesIntlJson.cases as Array<CaseRecord & { title?: string; summary?: string }>
-)
-  .filter(isComplianceSafeIntlCase)
-  .map((c) => ({
-    ...c,
-    scope: 'international' as const,
-  }));
+).map((c) => ({
+  ...c,
+  scope: 'international' as const,
+}));
 
 /**
  * Merged, sorted (newest first) timeline. Domestic + international.
