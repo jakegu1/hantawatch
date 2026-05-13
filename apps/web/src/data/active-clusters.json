@@ -1,29 +1,30 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-13T14:27:20.933408+00:00",
+  "__generated_at": "2026-05-13T15:12:28.781256+00:00",
   "clusters": [
     {
       "id": "mv-hondius-2026",
-      "name": "MV Hondius 邮轮聚集性疫情",
+      "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
       "serotypeId": "andes",
       "location": {
         "lat": -54.8,
         "lng": -68.3,
-        "name": "阿根廷乌斯怀亚海域"
+        "name": "南美洲海域（始发乌斯怀亚）"
       },
       "distanceFromChinaKm": 16500,
       "confirmedCases": 9,
       "suspectedCases": 2,
       "deaths": 3,
       "humanToHuman": true,
-      "whoRiskLevel": "低风险（对公众）",
-      "lastUpdate": "2026-05-13",
+      "whoRiskLevel": "对公众风险：低（WHO 2026-05）",
+      "lastUpdate": "2026-05-08",
       "source": {
         "name": "WHO Disease Outbreak News",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news",
-        "retrievedAt": "2026-05-13T00:00:00Z",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
+        "retrievedAt": "2026-05-13T15:12:28.780298+00:00",
         "confidence": "official"
-      }
+      },
+      "_summary": "On 2 May 2026, WHO received notification from the National IHR Focal Point of the United Kingdom of Great Britain and Northern Ireland (hereafter referred to as the United Kingdom) regarding a cluster of severe acute respiratory illness, including two deaths and one critically ill passenger, aboard a Dutch-flagged cruise ship. Since the last Disease Outbreak News was published on 4 May, three of the suspected cases were confirmed, and one additional confirmed case was reported. As of 8 May, a total of eight cases (six confirmed and two probable cases), including three deaths (two confirmed an…"
     }
   ],
   "currentHpi": {
@@ -58,6 +59,6 @@
         "weight": 0.1
       }
     },
-    "updatedAt": "2026-05-13T14:27:20.932559+00:00"
+    "updatedAt": "2026-05-13T15:12:28.780546+00:00"
   }
 }
