@@ -29,10 +29,12 @@ interface FeedbackEntry {
 }
 
 interface Subscriber {
-  email: string;
+  channel?: 'email' | 'phone';
+  contact: string;
+  email?: string;
   regions: string[] | null;
   serotypes: string[] | null;
-  threshold: number | null;
+  threshold: number | string | null;
   source: string | null;
   confirmed: boolean;
   created_at: string;
@@ -129,7 +131,7 @@ export default function AdminPage() {
     const rows = [
       ['email', 'confirmed', 'regions', 'serotypes', 'threshold', 'source', 'created_at'],
       ...filteredSubs.map(s => [
-        s.email,
+        s.contact || s.email || '',
         s.confirmed ? 'yes' : 'no',
         (s.regions ?? []).join('|'),
         (s.serotypes ?? []).join('|'),
@@ -369,7 +371,8 @@ export default function AdminPage() {
                 <table className="w-full text-xs">
                   <thead>
                     <tr className="border-b text-left text-gray-500">
-                      <th className="px-4 py-2 sm:px-2 font-medium">邮箱</th>
+                      <th className="px-4 py-2 sm:px-2 font-medium">联系方式</th>
+                      <th className="px-2 py-2 font-medium hidden sm:table-cell">渠道</th>
                       <th className="px-2 py-2 font-medium">状态</th>
                       <th className="px-2 py-2 font-medium hidden sm:table-cell">关注地区</th>
                       <th className="px-2 py-2 font-medium hidden sm:table-cell">血清型</th>
@@ -380,8 +383,11 @@ export default function AdminPage() {
                   </thead>
                   <tbody className="divide-y">
                     {filteredSubs.map((s, idx) => (
-                      <tr key={`${s.email}-${idx}`} className="hover:bg-gray-50">
-                        <td className="px-4 py-2 sm:px-2 font-mono break-all">{s.email}</td>
+                      <tr key={`${s.channel ?? 'email'}-${s.contact || s.email || idx}`} className="hover:bg-gray-50">
+                        <td className="px-4 py-2 sm:px-2 font-mono break-all">{s.contact || s.email || '—'}</td>
+                        <td className="px-2 py-2 hidden sm:table-cell text-gray-600">
+                          {s.channel === 'phone' ? '手机' : '邮箱'}
+                        </td>
                         <td className="px-2 py-2">
                           <span className={`badge text-[9px] ${s.confirmed ? 'badge-low' : 'badge-elevated'}`}>
                             {s.confirmed ? '已确认' : '待确认'}

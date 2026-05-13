@@ -55,6 +55,7 @@ def _today_cn() -> date:
 CLUSTER_REGISTRY: dict[str, dict] = {
     "2026-DON599": {
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
+        "summaryZh": "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报：一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。",
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -65,6 +66,7 @@ CLUSTER_REGISTRY: dict[str, dict] = {
     },
     "2026-DON600": {
         "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
+        "summaryZh": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -107,6 +109,7 @@ def _enrich_cluster_from_registry(
             # lets callers fall back to the auto-detected value.
             "stableClusterId": reg.get("stableClusterId"),
             "serotypeId": reg.get("serotypeId"),
+            "summaryZh": reg.get("summaryZh"),
             "_geocodeSource": "registry",
         }
 
@@ -128,6 +131,7 @@ def _enrich_cluster_from_registry(
             "whoRiskLevel": "待评估",
             "stableClusterId": None,
             "serotypeId": None,
+            "summaryZh": None,
             "_geocodeSource": f"gazetteer:{hit.keyword_matched}",
         }
 
@@ -142,6 +146,7 @@ def _enrich_cluster_from_registry(
         "whoRiskLevel": "未声明",
         "stableClusterId": None,
         "serotypeId": None,
+        "summaryZh": None,
         "_geocodeSource": "none",
     }
 
@@ -250,12 +255,12 @@ def build_active_clusters(
                 "whoRiskLevel": enriched["whoRiskLevel"],
                 "lastUpdate": e.published.date().isoformat(),
                 "source": {
-                    "name": "WHO Disease Outbreak News",
+                    "name": "WHO 疾病暴发新闻（DON）",
                     "url": e.link,
                     "retrievedAt": datetime.now(timezone.utc).isoformat(),
                     "confidence": "official",
                 },
-                "_summary": e.summary,
+                "_summary": enriched.get("summaryZh") or e.summary,
             }
         )
     return out
@@ -306,6 +311,7 @@ def build_recent_cases_intl(
     # cluster the public is most likely to care about.
     for e in who_entries[:20]:
         reg = CLUSTER_REGISTRY.get(e.id, {})
+        summary = reg.get("summaryZh") or e.summary
         rows.append(
             {
                 "id": f"who-{e.id}".lower(),
@@ -321,9 +327,9 @@ def build_recent_cases_intl(
                 # scan in the timeline. Falls back to the WHO English title
                 # for entries the registry hasn't covered yet (gazetteer hits).
                 "title": reg.get("name") or e.title,
-                "summary": e.summary,
+                "summary": summary,
                 "source": {
-                    "name": "WHO Disease Outbreak News",
+                    "name": "WHO 疾病暴发新闻（DON）",
                     "url": e.link,
                     "retrievedAt": now_iso,
                     "confidence": "official",

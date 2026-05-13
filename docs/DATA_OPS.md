@@ -168,9 +168,9 @@ pytest -q
 
 ---
 
-## 7. 订阅邮箱数据（Supabase）
+## 7. 订阅用户数据（Supabase）
 
-订阅 API `/api/alert/subscribe` 把邮箱写入 Supabase 表 `alert_subscriptions`。
+订阅 API `/api/alert/subscribe` 把邮箱或手机号写入 Supabase 表 `alert_subscriptions`。
 
 - 配置：`SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` 两个环境变量（在 Vercel 项目设置里）。未配置时会降级到只打印日志，**不会** 500，但订阅也不会落库——这是有意的，便于本地开发。
 - 查看订阅：`GET /api/alert/list`，需先登录 `/admin/login` 拿 cookie 或携带 `Authorization: Bearer <ADMIN_KEY>` 头。按 `created_at desc` 返回最近 500 条。
@@ -181,16 +181,19 @@ Supabase 表 schema：
 ```sql
 create table alert_subscriptions (
   id uuid primary key default gen_random_uuid(),
-  email text not null,
-  regions text[] not null default '{}',
-  serotypes text[] not null default '{}',
-  threshold int not null default 60,
+  channel text not null check (channel in ('email','phone')),
+  contact text not null,
+  regions text[] not null default '{*}',
+  serotypes text[] not null default '{*}',
+  threshold text not null default 'crossing',
   source text,
+  user_agent text,
+  ip_hash text,
   confirmed boolean not null default false,
   created_at timestamptz not null default now()
 );
 
-create unique index alert_subscriptions_email_idx on alert_subscriptions (lower(email));
+create unique index alert_subscriptions_channel_contact_idx on alert_subscriptions (channel, contact);
 ```
 
 ---

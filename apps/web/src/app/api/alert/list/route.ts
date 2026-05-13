@@ -29,18 +29,46 @@ export async function GET(request: NextRequest) {
   }
 
   const supabase = getSupabase()!;
-  const { data, error } = await supabase
+  const primary = await supabase
     .from('alert_subscriptions')
-    .select('email, regions, serotypes, threshold, source, confirmed, created_at')
+    .select('channel, contact, regions, serotypes, threshold, source, confirmed, created_at')
     .order('created_at', { ascending: false })
     .limit(500);
+  let data: any[] | null = primary.data;
+  let error = primary.error;
+
+  if (error && /column .*alert_subscriptions\.(channel|contact).* does not exist/i.test(error.message)) {
+    const fallback = await supabase
+      .from('alert_subscriptions')
+      .select('email, regions, serotypes, threshold, source, confirmed, created_at')
+      .order('created_at', { ascending: false })
+      .limit(500);
+    data = fallback.data;
+    error = fallback.error;
+  }
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
+  const subscribers = (data ?? []).map((row: any) => {
+    const channel = row.channel === 'phone' ? 'phone' : 'email';
+    const contact = String(row.contact ?? row.email ?? '');
+    return {
+      channel,
+      contact,
+      email: channel === 'email' ? contact : '',
+      regions: row.regions ?? [],
+      serotypes: row.serotypes ?? [],
+      threshold: row.threshold ?? null,
+      source: row.source ?? null,
+      confirmed: Boolean(row.confirmed),
+      created_at: row.created_at,
+    };
+  });
+
   return NextResponse.json({
-    count: data?.length ?? 0,
-    subscribers: data ?? [],
+    count: subscribers.length,
+    subscribers,
   });
 }

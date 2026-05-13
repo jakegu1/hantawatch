@@ -8,16 +8,19 @@
 
 -- ---------------------------------------------------------------------
 -- Table 1: alert_subscriptions
---   Source of truth for email alert opt-ins from the /subscribe form.
+--   Source of truth for email / phone alert opt-ins from the /subscribe form.
 --   Used by /api/alert/subscribe (write) and /api/alert/list (read).
 -- ---------------------------------------------------------------------
 create table if not exists alert_subscriptions (
   id uuid primary key default gen_random_uuid(),
-  email text not null,
-  regions text[] not null default '{}',
-  serotypes text[] not null default '{}',
-  threshold int,
+  channel text not null check (channel in ('email','phone')),
+  contact text not null,
+  regions text[] not null default '{*}',
+  serotypes text[] not null default '{*}',
+  threshold text not null default 'crossing',
   source text,
+  user_agent text,
+  ip_hash text,
   confirmed boolean not null default false,
   created_at timestamptz not null default now()
 );
@@ -25,8 +28,8 @@ create table if not exists alert_subscriptions (
 create index if not exists idx_alert_subscriptions_created_at
   on alert_subscriptions (created_at desc);
 
-create unique index if not exists idx_alert_subscriptions_email_unique
-  on alert_subscriptions (lower(email));
+create unique index if not exists idx_alert_subscriptions_channel_contact_unique
+  on alert_subscriptions (channel, contact);
 
 -- ---------------------------------------------------------------------
 -- Table 2: cluster_overrides

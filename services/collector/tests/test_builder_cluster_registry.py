@@ -107,6 +107,8 @@ def test_recent_cases_intl_uses_registry_overrides(tmp_path: Path):
     assert who_row["serotypeId"] == "andes"
     # And the curated Chinese title beats the generic English DON title.
     assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情（更新）"
+    assert "截至 5 月 8 日" in who_row["summary"]
+    assert "WHO 疾病暴发新闻" in who_row["source"]["name"]
 
 
 def test_unknown_don_falls_back_to_keyword_detection(tmp_path: Path):
