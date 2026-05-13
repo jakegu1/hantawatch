@@ -1,6 +1,6 @@
 {
-  "__generated_by": "hantawatch-collector@0.1.0 (seed)",
-  "__generated_at": "2026-05-12T00:00:00Z",
+  "__generated_by": "hantawatch-collector@0.1.0 (seed, manually synced 2026-05-13)",
+  "__generated_at": "2026-05-13T00:00:00Z",
   "clusters": [
     {
       "id": "mv-hondius-2026",
@@ -8,16 +8,16 @@
       "serotypeId": "andes",
       "location": { "lat": -54.8, "lng": -68.3, "name": "阿根廷乌斯怀亚海域" },
       "distanceFromChinaKm": 18800,
-      "confirmedCases": 7,
-      "suspectedCases": 0,
+      "confirmedCases": 9,
+      "suspectedCases": 2,
       "deaths": 3,
       "humanToHuman": true,
       "whoRiskLevel": "低风险（对公众）",
-      "lastUpdate": "2026-05-11",
+      "lastUpdate": "2026-05-13",
       "source": {
         "name": "WHO Disease Outbreak News",
         "url": "https://www.who.int/emergencies/disease-outbreak-news",
-        "retrievedAt": "2026-05-12T00:00:00Z",
+        "retrievedAt": "2026-05-13T00:00:00Z",
         "confidence": "official"
       }
     }
@@ -34,6 +34,6 @@
       "travelConnectivity": { "level": "无直飞，需2次转机", "score": 10, "weight": 0.15 },
       "historicalBaseline": { "deviation": "正常范围", "score": 20, "weight": 0.10 }
     },
-    "updatedAt": "2026-05-12T00:00:00Z"
+    "updatedAt": "2026-05-13T00:00:00Z"
   }
 }

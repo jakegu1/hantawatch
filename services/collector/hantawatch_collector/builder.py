@@ -78,14 +78,29 @@ def build_active_clusters(
     1. Group WHO DON entries by base outbreak (we treat all DON-NNN entries
        that point to the same cluster as a single record, using the newest).
     2. Augment with lat/lng from CLUSTER_REGISTRY.
-    3. If WHO returned nothing (network failure), fall back to the previous
-       run's output. We never want the dashboard to flicker to empty.
+    3. **Preserve case counts** (`confirmedCases` / `suspectedCases` /
+       `deaths`) from the previous file when present. WHO DON's RSS feed
+       does NOT expose structured case counts — only narrative summaries —
+       so case counts are sourced from manual edits / operator review and
+       MUST survive collector runs. (Pre-2026-05-13 bug: every run reset
+       them to 0, causing the hero number to silently regress.)
+    4. If WHO returned nothing (network failure), fall back wholesale to
+       the previous run's output. We never want the dashboard to flicker
+       to empty.
     """
+    # Load the previous run's clusters once — used for fallback AND for
+    # carrying over manually-curated case counts.
+    prev = read_json(fallback_path, default=None)
+    prev_by_id: dict[str, dict] = {}
+    if isinstance(prev, dict) and isinstance(prev.get("clusters"), list):
+        for c in prev["clusters"]:
+            if isinstance(c, dict) and "id" in c:
+                prev_by_id[c["id"]] = c
+
     if not who_entries:
-        prev = read_json(fallback_path, default=None)
-        if isinstance(prev, dict) and isinstance(prev.get("clusters"), list):
-            logger.warning("WHO DON empty — reusing %d cached clusters", len(prev["clusters"]))
-            return prev["clusters"]
+        if prev_by_id:
+            logger.warning("WHO DON empty — reusing %d cached clusters", len(prev_by_id))
+            return list(prev_by_id.values())
         logger.warning("WHO DON empty and no cache — clusters list will be empty")
         return []
 
@@ -101,18 +116,29 @@ def build_active_clusters(
         don_id = e.id  # already normalised like 2026-DON599
         enriched = _enrich_cluster_from_registry(don_id, e.title)
         serotype_id = select_serotype_id(f"{e.title} {e.summary}")
+        cluster_id = don_id.lower()
+
+        # Carry over case counts from previous file when WHO doesn't expose
+        # them (it never does — but if we ever wire ECDC numeric counts in,
+        # they would land here). This is the critical line for the issue
+        # where editors update counts manually in active-clusters.json and
+        # don't want them clobbered on the next scheduled run.
+        prev_cluster = prev_by_id.get(cluster_id, {})
+        confirmed = int(prev_cluster.get("confirmedCases", 0) or 0)
+        suspected = int(prev_cluster.get("suspectedCases", 0) or 0)
+        deaths = int(prev_cluster.get("deaths", 0) or 0)
 
         out.append(
             {
-                "id": don_id.lower(),
+                "id": cluster_id,
                 "name": enriched["name"],
                 "serotypeId": serotype_id,
                 "location": enriched["location"],
                 # distanceFromChinaKm filled in by orchestrator (it has the helper)
                 "distanceFromChinaKm": 0,
-                "confirmedCases": 0,
-                "suspectedCases": 0,
-                "deaths": 0,
+                "confirmedCases": confirmed,
+                "suspectedCases": suspected,
+                "deaths": deaths,
                 "humanToHuman": enriched["humanToHuman"],
                 "whoRiskLevel": enriched["whoRiskLevel"],
                 "lastUpdate": e.published.date().isoformat(),
