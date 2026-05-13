@@ -1,151 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-13T09:18:50.691296+00:00",
+  "__generated_at": "2026-05-13T14:27:20.933858+00:00",
   "cases": [
-    {
-      "id": "news-news.google.com-rss-articles-cbmidefvx3lxtfbnavi3wwi0dxhby2tiunrtvvflb0x6dfvzv3nkuwc5dxlyn3nbajhfm3c5dlb1qmtwx0",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-13",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "汉坦病毒爆发之后，什么离奇的故事都来了…… - 风闻",
-      "summary": "汉坦病毒爆发之后，什么离奇的故事都来了…… &nbsp;&nbsp; 风闻",
-      "source": {
-        "name": "风闻",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBnaVI3WWI0dXhBY2tIUnRtVVFlb0x6dFVZV3NKUWc5dXlyN3NBajhFM3c5dlB1QmtwX08tOEMyUWJRNXFBZ0xSalZWUTg5MVI0YmFfa0pMN3dkM1JZWW4wb1VrLV9LOXlRUUg3c0F0elFWd2h6?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiyefvx3lxte5fmw5lawpkys1rctj0b1lrqlm0nmtkel8wz3rrofdqczbnshr6aetjznnvnxvhr25rod",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-13",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫：汉坦病毒确诊病例增至九起 另有两起疑似病例 - 8world",
-      "summary": "世卫：汉坦病毒确诊病例增至九起 另有两起疑似病例 &nbsp;&nbsp; 8world",
-      "source": {
-        "name": "8world",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5fMW5LaWpKYS1RcTJ0b1lRQlM0Nmtkel8wZ3RrOFdQczBNSHR6aEtJZnNvNXVhR25RODVZaU8zWjRub3IwZWpGYjV4XzNHYncwSjR5djZwN0hvZlg0VTJuOQ?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiekfvx3lxte4yzwfqbndpq1fpmelgc3bmuxf2vfl1tmzvwi1sownuwwxjm3rzwmpzeehxohh0tdd6tm",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-13",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "应对汉坦病毒疫情工作“还未结束” - epaper.nfnews.com",
-      "summary": "应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; epaper.nfnews.com",
-      "source": {
-        "name": "epaper.nfnews.com",
-        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4yZWFQbndPQ1FpMElGc3BMUXF2VFl1TmZvWi1sOWNUWWxjM3RzWmpZeEhxOHh0TDd6Tm1qbHYyZnNKYUcxN2xBMGJVQk5KcHJseWtWWUJ2cGlVUDhLbzI0WVFlcWRISVRnQWoza29kSXpCdTh2WnRUQW5B?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiyefvx3lxte1mtephsnlswwroadzbyjzkwe5wbmtrv1nyauftqznwowxnt2hqzgfjdvrkq0fsu0xquk",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "乘客已全部撤离汉坦病毒暴发邮轮：他们去了哪里，状况如何？ - thepaper.cn",
-      "summary": "乘客已全部撤离汉坦病毒暴发邮轮：他们去了哪里，状况如何？ &nbsp;&nbsp; thepaper.cn",
-      "source": {
-        "name": "thepaper.cn",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mTEphSnlsWWRoaDZBYjZKWE5WbmtRV1NYaUFtQzNWOWxNT2hqZGFJdVRKQ0FSU0xqUkh5V0hVMEZKV3kwbnZvdC1EUUYxeTVzMllmbmRSb0hnaVBNSzRvYw?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiyefvx3lxte5gqutyowjtzxf4rvlfqktoujgwb1fftf83mneyzwe0d0stbvnzr2jjynh4vm94dwhmbv",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "明查｜上世纪已有多款汉坦疫苗上市，但尚无针对引发邮轮疫情的安第斯病毒疫苗 - thepaper.cn",
-      "summary": "明查｜上世纪已有多款汉坦疫苗上市，但尚无针对引发邮轮疫情的安第斯病毒疫苗 &nbsp;&nbsp; thepaper.cn",
-      "source": {
-        "name": "thepaper.cn",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5GQUtYOWJTZXF4RVlfQktoUjgwb1FfTF83MnEyZWE0d0stbVNzR2JJYnh4Vm94dWhMbVZvUUd1eDFJczFFWmJPRXhWRlEwd1dIS1U2VWh6RTVVekJwamYyYw?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiggfbvv95cuxnbjnwcmrqdvzwcxpur2dzcm1vsmxxrgpztllwtvh0q0txzhlpshqzwgptr3hxwjnqse",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 天津日报",
-      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 天津日报",
-      "source": {
-        "name": "天津日报",
-        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNbjNwcmRqdVZWcXpUR2dZcm1vSmxxRGpZTllwTVh0Q0tXZHlpSHQzWGptR3hXWjNqSEE3eUtPQmgyZVhqZ2w3N1Y4dEdvXzBMUy1vMHRsRklrR05KMmU5NjIzdV9Cc25RbGY1bDBoemNSUWZwS1pIT0R0LUlzLUN2ekF3?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmihgfbvv95cuxqdkrhqmneenqwadrxden5ss1usfhiek9jafjcoxzstjjpzvngcdfyuujlsmfqtfhslu",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 新华网",
-      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 新华网",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdkRHQmNEenQwaDRxdEN5SS1USFhiek9JaFJCOXZsTjJpZVNGcDFYUUJlSmFQTFhsLUZrWUpIbWY0dXh5dkxxQTZobzFSQlJ0b3d1YmlOaVM0bGFRSEd0QlIwdkE0WGtaOGhYSk1iRlpNTkVIZVQ2c0wxWFJVcGtqd19ScmFadw?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 新华网",
-      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 新华网",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmixkfvx3lxte1lnloynlfjcxk5dwr4u3fjrkxqcwu5wmpiujy4amhou3bwbuznbg1yrtnrcljmamjym0",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "汉坦病毒是什么？ - thepaper.cn",
-      "summary": "汉坦病毒是什么？ &nbsp;&nbsp; thepaper.cn    西班牙卫生部门称该国首位汉坦病毒感染者病情稳定 &nbsp;&nbsp; 新京报    谭德塞：没有迹象显示汉坦病毒大规模暴发，但可能出现更多病例 &nbsp;&nbsp; 观察者    汉他病毒：各国如何应对邮轮病毒？ &nbsp;&nbsp; BBC    涉汉坦病毒疫情邮轮驶抵西班牙乘客疏散回国隔离 &nbsp;&nbsp; 财新    世卫：汉坦病毒出现症状时最具传染性 &nbsp;&nbsp; 联合早报    法国女子感染汉坦病毒 正在重症监护室治疗 &nbsp;&nbsp; 联合早报    世卫组织就与游轮有关的汉坦病毒病例采取应对行动 &nbsp;&nbsp; World Health Organization (WHO)    要闻解说 - 法国出现首例感染病例：汉坦病毒疫情和新冠一样可怕吗？ &nbsp;&nbsp; RFI",
-      "source": {
-        "name": "thepaper.cn",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1lNloyNlFJcXk5dWR4U3FJRkxQcWU5WmpiUjY4amhOU3BWbUZNbG1YRTNrclJMamJyM0tTQ00tNGZlOUFXNlVnZDhlTms0cktaYmhGTHhzVnZOdGpLT3c?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
     {
       "id": "news-news.google.com-rss-articles-cbmif0fvx3lxte5pbkthr1fkefdtq0lkwg1qvk0ytxpdrus4mhityvhwqxvkvkpmmda1curoefhvcgd0eh",
       "regionCode": "INT",
@@ -153,60 +9,12 @@
       "date": "2026-05-10",
       "caseType": "suspected",
       "count": 0,
-      "title": "涉汉坦病毒疫情邮轮人员开始疏散转运 - 新华网",
-      "summary": "涉汉坦病毒疫情邮轮人员开始疏散转运 &nbsp;&nbsp; 新华网",
+      "title": "涉汉坦病毒疫情邮轮人员开始疏散转运",
+      "summary": "",
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmid0fvx3lxte83d01nvnllaedur2dqm25qnuvytnbqegx0a0e0nxvkeerfctdzwk5hbnrtmk9smxryr3",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-10",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "涉汉坦病毒疫情邮轮抵达西班牙特内里费岛水域 - 新华网",
-      "summary": "涉汉坦病毒疫情邮轮抵达西班牙特内里费岛水域 &nbsp;&nbsp; 新华网",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE83d01NVnllaEduR2dqM25QNUVyTnBQeGx0a0E0NXVkeERFcTdzWk5hbnRtMk9sMXRYR3hNeWxpU2tQWFBxMVBnaTNscW9FSUJyd1hRc2FuWnFTOXhGeE04bU9QRDBtLVlINzBxbnRGUTQ4RWg3YUFZ?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiv0fvx3lxte1pn2k4uu14tvvpuhpusi13vnfxn2fjwm5uzlkwnw5ny3durxbrsunjedniauxsdgdtdm",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-08",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：汉坦病毒疫情大规模暴发风险“绝对很低” - Welcome to the United Nations",
-      "summary": "世卫组织：汉坦病毒疫情大规模暴发风险“绝对很低” &nbsp;&nbsp; Welcome to the United Nations",
-      "source": {
-        "name": "Welcome to the United Nations",
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1PN2k4UU14TVVPUHpuSi13VnFXN2FJWm5uZlkwNW5NY3duRXBrSUNJeDNiaUxsdGdTdmZucTk1eFhvMGpRSlRpbUhqSVlhV1FPdXBlMlhKQQ?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmiaefvx3lxte5xs19zqmzxs2zubwk0mmljmne0my1wn29jbxnbtwpanwo3v2lcc1hjrgffmmhqrkhdwe",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-08",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫通报8人发病3人死亡！汉坦病毒是个啥？会引发大流行吗？我们需要怎么办？防护指南来了！ - chinanews.com.cn",
-      "summary": "世卫通报8人发病3人死亡！汉坦病毒是个啥？会引发大流行吗？我们需要怎么办？防护指南来了！ &nbsp;&nbsp; chinanews.com.cn",
-      "source": {
-        "name": "chinanews.com.cn",
-        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5XS19ZQmZXS2ZubWk0MmlJMnE0My1WN29jbXNBTWpaNWo3V2lCc1hjRGFfMmhQRkhDWEFLUFlfazgtazFJWUM5ZkpMbkstZ0JGaUdhTTM0RThTcV90NTNTek1EZmhQNUlm?oc=5",
-        "retrievedAt": "2026-05-13T09:18:50.690591+00:00",
+        "retrievedAt": "2026-05-13T14:27:20.932875+00:00",
         "confidence": "news"
       }
     },
@@ -222,7 +30,23 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-13T09:18:50.690735+00:00",
+        "retrievedAt": "2026-05-13T14:27:20.933262+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmipafbvv95cuxqretaaxhocdnrt0lzzs1mejlmtglqdgk0zhvhazzjcvlncfdqoxneuzq4tuxfsfzcat",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-07",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织就与游轮有关的汉坦病毒病例采取应对行动",
+      "summary": "",
+      "source": {
+        "name": "World Health Organization (WHO)",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
+        "retrievedAt": "2026-05-13T14:27:20.932875+00:00",
         "confidence": "news"
       }
     },
@@ -238,7 +62,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-13T09:18:50.690735+00:00",
+        "retrievedAt": "2026-05-13T14:27:20.933262+00:00",
         "confidence": "news"
       }
     }
