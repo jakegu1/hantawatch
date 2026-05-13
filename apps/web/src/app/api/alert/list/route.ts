@@ -1,17 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase, isSupabaseConfigured } from '@/lib/supabase';
+import { isAdminAuthed, isAdminConfigured } from '@/lib/admin-auth';
 
 /**
- * GET /api/alert/list?key=<ADMIN_KEY>
+ * GET /api/alert/list
  *
- * Lists subscribers (newest first, capped at 500). Only the owner of ADMIN_KEY
- * can read. Returns 503 when Supabase is not configured.
+ * Lists subscribers (newest first, capped at 500). Auth is checked by
+ * middleware AND by this handler — see `lib/admin-auth`. Returns 503 when
+ * either ADMIN_KEY env is missing OR Supabase is not configured.
  */
-const ADMIN_KEY = process.env.ADMIN_KEY || 'admin_key_2026';
 
 export async function GET(request: NextRequest) {
-  const key = request.nextUrl.searchParams.get('key');
-  if (key !== ADMIN_KEY) {
+  if (!isAdminConfigured()) {
+    return NextResponse.json(
+      { error: 'Admin not configured (ADMIN_KEY env missing)', subscribers: [] },
+      { status: 503 },
+    );
+  }
+  if (!isAdminAuthed(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 

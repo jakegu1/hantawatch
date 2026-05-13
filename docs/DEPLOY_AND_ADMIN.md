@@ -1,4 +1,4 @@
-# 部署 + 运维一站式指南
+﻿# 部署 + 运维一站式指南
 
 > 这一份文档涵盖：把代码推到 GitHub → 在 Vercel 部署 → 在 Supabase 建表 → 之后每天作为站长怎么干。
 > 已经动手的同学请按顺序读章节 1→2→3→4，已经部署完想做日常运维的同学直接跳第 5 章。
@@ -182,18 +182,18 @@ Vercel Hobby 计划没有项目数量上限，但有：
 
 | Name | Value | 说明 |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | `https://hantawatch.cn` 或 Vercel 给的临时域名 | 海报二维码 / 站点元数据用 |
+| `NEXT_PUBLIC_SITE_URL` | `https://bingduguancha.com` 或 Vercel 给的临时域名 | 海报二维码 / 站点元数据用 |
 | `ADMIN_KEY` | 自己起一个随机字符串（≥32 字符） | 访问 `/api/alert/list` 和 `/api/feedback/list` 用 |
 | `SUPABASE_URL` | 2.4 复制的 Project URL | 若不填，订阅 API 降级为只打印日志，不会 500 |
 | `SUPABASE_SERVICE_ROLE_KEY` | 2.4 复制的 service_role secret | 同上 |
 
 填完点 **Deploy**。约 2 分钟后第一次部署完成，会给你一个 `hantawatch-xxx.vercel.app` 临时域名。
 
-### 3.4 绑定自有域名（hantawatch.cn）
+### 3.4 绑定自有域名（bingduguancha.com）
 
-如果你买了 `hantawatch.cn`：
+如果你买了 `bingduguancha.com`：
 
-1. Vercel 项目 → Settings → Domains → Add → 输入 `hantawatch.cn`
+1. Vercel 项目 → Settings → Domains → Add → 输入 `bingduguancha.com`
 2. Vercel 会要你在域名 DNS 里加 2 条记录：
    - `A` 记录指向 `76.76.21.21`
    - 或者 `CNAME @ cname.vercel-dns.com`（部分注册商不支持根域名 CNAME）
@@ -204,7 +204,7 @@ Vercel Hobby 计划没有项目数量上限，但有：
 打开你的临时域名，依次检查：
 - 首页：HPI 数字 + 距离地图能看到
 - `/share`：海报能加载（首次约 1-2 秒）
-- `/admin` → 输入 ADMIN_KEY → 三个 tab 都能切换
+- `/admin` → 自动跳转到 `/admin/login` → 输入 ADMIN_KEY → 进入后台
 - POST 一次订阅 → 去 Supabase SQL Editor 跑 `select * from alert_subscriptions;` 应看到新行
 
 ---
@@ -289,7 +289,7 @@ Vercel Hobby 计划没有项目数量上限，但有：
 
 - `https://你的域名/api/hpi` 应返回当前 HPI JSON
 - `https://你的域名/sitemap.xml` 应列出所有页面
-- `https://你的域名/api/alert/list?key=你的ADMIN_KEY` 应返回近 500 条订阅 JSON
+- `/api/alert/list` 受 admin 认证保护：先登录 `/admin/login` 拿到 `hw_admin` cookie，再用浏览器同源访问；或带 `Authorization: Bearer <ADMIN_KEY>` 头从 curl 调用
 
 如果某个 API 500 了：
 1. Vercel Dashboard → 你的项目 → Deployments → 最近一次 → Functions → 看具体 lambda 的日志
@@ -297,18 +297,31 @@ Vercel Hobby 计划没有项目数量上限，但有：
 
 ### 5.4 Admin Dashboard 在哪里
 
-**`/admin` 路径**（http://你的域名/admin），首次访问会要 ADMIN_KEY。三个 tab：
+**`/admin` 路径**（http://你的域名/admin）。
+
+**认证流程（2026-05-13 安全更新后）**：
+1. 访问 `/admin` 自动跳转到 `/admin/login`
+2. 输入 `ADMIN_KEY`（你在 Vercel 环境变量里设置的那个）
+3. 验证成功后，浏览器拿到一个 HttpOnly 的 `hw_admin` cookie（7 天有效）
+4. 之后所有 `/admin/*` 页面 + `/api/feedback/list` + `/api/alert/list` 都用 cookie 自动认证
+
+**老的 `?key=...` URL 鉴权依然兼容**（用于 curl 脚本），但**不再有 hardcode fallback** —— `ADMIN_KEY` 没配的话所有 admin 接口直接 503，不会偷偷 fall back 到默认值。
+
+Tab：
 
 | Tab | 看什么 | 数据来自 |
 |---|---|---|
-| **Analytics** | 页面访问统计（最近 N 天 PV、热门路径、引荐来源） | `/api/analytics/stats`，读 `data/analytics/events.json` |
-| **Feedback** | 用户反馈列表（来自 `/feedback` 表单） | `/api/feedback/list` |
-| **Subscriptions** | （未来）订阅列表 | `/api/alert/list?key=...` |
+| **审核队列** | 待审核条目（占位）| 客户端 mock |
+| **HPI因子** | 因子权重可视化 + 当前 HPI 预览 | 客户端 mock |
+| **数据统计** | 页面 PV / UV / 来源 / 24h 流量 | `/api/analytics/stats`（读 `data/analytics/events.json`）|
+| **用户反馈** | 用户从 `/feedback` 提交的反馈 | `/api/feedback/list` |
+| **订阅用户** | Supabase `alert_subscriptions` 表，可筛选状态 + 导 CSV | `/api/alert/list` |
+| **数据管道** | collector 状态 + Google News 抓取诊断 | `meta.json` |
 
-> 现状：admin 页面只有 Analytics + Feedback 两个 tab 是绑了的，Subscriptions 表格我下一版补。**临时**你可以用 `curl` 直接看：
-> ```powershell
-> curl "https://你的域名/api/alert/list?key=你的ADMIN_KEY" | ConvertFrom-Json | Format-Table
-> ```
+curl 调用（如果想从命令行查订阅）：
+```powershell
+curl -H "Authorization: Bearer 你的ADMIN_KEY" https://bingduguancha.com/api/alert/list | ConvertFrom-Json | Format-Table
+```
 
 ### 5.5 紧急回滚（看到上线后页面出错）
 

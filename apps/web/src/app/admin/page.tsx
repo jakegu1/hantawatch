@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { currentHpi, activeClusters, recentCases } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
 import { DataFreshness } from '@/components/data-freshness';
 import {
   AlertTriangle, CheckCircle, BarChart3, MessageSquare, Settings,
-  Mail, Download, RefreshCw,
+  Mail, Download, RefreshCw, LogOut,
 } from 'lucide-react';
 
 interface AnalyticsStats {
@@ -46,19 +46,23 @@ interface SubscribersResponse {
 type TabId = 'review' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
 
 /**
- * Read the admin key from URL `?key=` or sessionStorage. We do this on the
- * client (admin page is private) so that operators can bookmark a deep link
- * with their key once and skip re-entering it.
+ * NOTE on auth (changed 2026-05-13):
+ *   - Page access is now gated by `middleware.ts` reading the HttpOnly
+ *     `hw_admin` cookie. Anonymous requests are redirected to /admin/login
+ *     before this component ever renders.
+ *   - The client therefore no longer needs to know the admin key. Admin
+ *     API calls authenticate automatically via the cookie that the browser
+ *     attaches.
+ *   - The previous `useAdminKey` helper (with a hard-coded fallback) was a
+ *     bypass vector and has been removed.
  */
-function useAdminKey(): string {
-  // SSR-safe — return empty string on first render; the page below tolerates it.
-  if (typeof window === 'undefined') return '';
-  const urlKey = new URLSearchParams(window.location.search).get('key');
-  if (urlKey) {
-    sessionStorage.setItem('hw_admin_key', urlKey);
-    return urlKey;
+
+async function adminLogout() {
+  try {
+    await fetch('/api/admin/logout', { method: 'POST', credentials: 'same-origin' });
+  } finally {
+    window.location.replace('/admin/login');
   }
-  return sessionStorage.getItem('hw_admin_key') || 'admin_key_2026';
 }
 
 export default function AdminPage() {
@@ -71,19 +75,25 @@ export default function AdminPage() {
   const [subsError, setSubsError] = useState<string | null>(null);
   const [subsFilter, setSubsFilter] = useState<'all' | 'confirmed' | 'pending'>('all');
 
-  const adminKey = useMemo(useAdminKey, []);
-
   useEffect(() => {
     if (activeTab === 'analytics') {
-      fetch('/api/analytics/stats')
+      fetch('/api/analytics/stats', { credentials: 'same-origin' })
         .then(r => r.json())
         .then(setStats)
         .catch(() => {});
     }
     if (activeTab === 'feedback') {
       setFbLoading(true);
-      fetch(`/api/feedback/list?key=${encodeURIComponent(adminKey)}`)
-        .then(r => r.json())
+      // Cookie-based auth — the browser attaches `hw_admin` automatically.
+      fetch('/api/feedback/list', { credentials: 'same-origin' })
+        .then(async r => {
+          if (r.status === 401) {
+            // Session expired — back to login
+            window.location.replace('/admin/login?next=/admin');
+            return [];
+          }
+          return r.ok ? r.json() : [];
+        })
         .then(data => setFeedback(Array.isArray(data) ? data : []))
         .catch(() => {})
         .finally(() => setFbLoading(false));
@@ -91,8 +101,12 @@ export default function AdminPage() {
     if (activeTab === 'subs') {
       setSubsLoading(true);
       setSubsError(null);
-      fetch(`/api/alert/list?key=${encodeURIComponent(adminKey)}`)
+      fetch('/api/alert/list', { credentials: 'same-origin' })
         .then(async r => {
+          if (r.status === 401) {
+            window.location.replace('/admin/login?next=/admin');
+            return { subscribers: [] };
+          }
           const j: SubscribersResponse = await r.json();
           if (!r.ok) {
             throw new Error(j.error || `HTTP ${r.status}`);
@@ -103,7 +117,7 @@ export default function AdminPage() {
         .catch(err => setSubsError(err.message))
         .finally(() => setSubsLoading(false));
     }
-  }, [activeTab, adminKey]);
+  }, [activeTab]);
 
   const filteredSubs = subs.filter(s =>
     subsFilter === 'all' ? true : subsFilter === 'confirmed' ? s.confirmed : !s.confirmed,
@@ -147,8 +161,19 @@ export default function AdminPage() {
 
   return (
     <div className="container-page py-8">
-      <h1 className="text-2xl font-bold mb-2">后台管理</h1>
-      <p className="text-gray-500 text-sm mb-6">数据审核 · HPI管理 · 数据统计 · 用户反馈</p>
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <h1 className="text-2xl font-bold">后台管理</h1>
+        <button
+          type="button"
+          onClick={adminLogout}
+          className="inline-flex items-center gap-1 rounded-lg bg-gray-100 px-2.5 py-1.5 text-xs text-gray-600 hover:bg-gray-200 transition-colors"
+          title="清除会话 Cookie 并返回登录页"
+        >
+          <LogOut className="h-3.5 w-3.5" />
+          退出登录
+        </button>
+      </div>
+      <p className="text-gray-500 text-sm mb-6">数据审核 · HPI管理 · 数据统计 · 用户反馈 · 订阅与数据管道</p>
 
       {/* Tabs */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -356,7 +381,7 @@ export default function AdminPage() {
                 <strong>加载失败：</strong> {subsError}
                 <div className="mt-1 text-[10px] text-red-500">
                   常见原因：1) Supabase 未配置（在 Vercel 环境变量加 SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY）
-                  2) ADMIN_KEY 不匹配（URL 加 <code className="bg-red-100 px-1 rounded">?key=你的Key</code>）
+                  2) 会话过期 — 点击右上角「退出登录」并重新登录
                 </div>
               </div>
             )}

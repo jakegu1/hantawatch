@@ -1,6 +1,6 @@
-# 汉坦观察 · 上线部署一步步指南
+﻿# 汉坦观察 · 上线部署一步步指南
 
-> 受众：项目所有者（你）。本指南给出从"代码可运行"到"用户能在 hantawatch.cn 看到"的完整路径，并明确每一步是否需要付费 / 是否需要人工接入。
+> 受众：项目所有者（你）。本指南给出从"代码可运行"到"用户能在 bingduguancha.com 看到"的完整路径，并明确每一步是否需要付费 / 是否需要人工接入。
 >
 > 三种推荐路径，按工作量从小到大：
 > - 路径 A — **Vercel + GitHub**（最快，约 30 分钟，全球 CDN，但中国大陆访问偏慢，无 ICP）
@@ -24,7 +24,7 @@
 
 #### 0.1 域名与 ICP 备案（如走国内服务器）
 
-- 注册 `hantawatch.cn` 域名（阿里云 / 腾讯云，约 ¥30/年）
+- 注册 `bingduguancha.com` 域名（阿里云 / 腾讯云，约 ¥30/年）
 - **如果用国内云**：必须先做 ICP 备案，约 7–20 个工作日；个人备案要求名称不带"预警""疾控"等敏感词，**站点名建议改备案为"汉坦观察科普网"或"汉坦观察信息平台"**
 - **如果先发到 Vercel/Cloudflare 走海外**：不需要 ICP，但中国大陆部分网络可能慢/抽风
 - **公共卫生类站点的特别提醒**：宣传时不能自称"官方""疾控""权威"。footer 已经有"数据来源：中国疾控中心、WHO、ECDC"这是引用，不是冒充，OK；但如果遇到约谈，必须立即改文案
@@ -103,14 +103,14 @@ git push -u origin main
    - **Install Command**：`pnpm install`（在 `Settings → General → Build & Development Settings`）
    - **Node.js Version**：20.x
 4. **Environment Variables**（来自 `.env.example`）：
-   - `NEXT_PUBLIC_SITE_URL=https://hantawatch.cn`
+   - `NEXT_PUBLIC_SITE_URL=https://bingduguancha.com`
    - `ADMIN_KEY=<生成一个强随机字符串>`
    - 其他可暂留空
 5. 点 Deploy。等约 3 分钟。
 
 ### A.3 绑定域名
 
-1. Vercel 项目里 `Settings → Domains` → 添加 `hantawatch.cn` 和 `www.hantawatch.cn`
+1. Vercel 项目里 `Settings → Domains` → 添加 `bingduguancha.com` 和 `www.bingduguancha.com`
 2. 域名 DNS（在阿里云/Cloudflare 后台）添加：
    - `A` 记录：`@` → `76.76.21.21`
    - `CNAME` 记录：`www` → `cname.vercel-dns.com`
@@ -185,7 +185,7 @@ sudo docker run -d \
   --name hantawatch \
   --restart unless-stopped \
   -p 127.0.0.1:3000:3000 \
-  -e NEXT_PUBLIC_SITE_URL=https://hantawatch.cn \
+  -e NEXT_PUBLIC_SITE_URL=https://bingduguancha.com \
   -e ADMIN_KEY=<强随机字符串> \
   hantawatch:latest
 
@@ -201,7 +201,7 @@ sudo docker logs -f hantawatch
 ```nginx
 server {
     listen 80;
-    server_name hantawatch.cn www.hantawatch.cn;
+    server_name bingduguancha.com www.bingduguancha.com;
 
     # Certbot ACME challenge
     location /.well-known/acme-challenge/ { root /var/www/html; }
@@ -222,7 +222,7 @@ server {
 ```bash
 sudo ln -s /etc/nginx/sites-available/hantawatch /etc/nginx/sites-enabled/
 sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d hantawatch.cn -d www.hantawatch.cn
+sudo certbot --nginx -d bingduguancha.com -d www.bingduguancha.com
 # certbot 会自动改 nginx 配置加上 443 + 自动续期
 ```
 
@@ -246,7 +246,7 @@ sudo docker stop hantawatch || true
 sudo docker rm hantawatch || true
 sudo docker run -d --name hantawatch --restart unless-stopped \
   -p 127.0.0.1:3000:3000 \
-  -e NEXT_PUBLIC_SITE_URL=https://hantawatch.cn \
+  -e NEXT_PUBLIC_SITE_URL=https://bingduguancha.com \
   -e ADMIN_KEY=<同前> \
   hantawatch:latest
 echo "✓ Deployed"
@@ -264,7 +264,7 @@ sudo /opt/hantawatch/deploy.sh
 
 **第 1 天**走路径 A（Vercel），立刻拿到可访问的 URL，开始小规模内测、收集反馈、跑 SEO。
 
-**等备案下来**（7–20 个工作日）走路径 B，把生产域名 `hantawatch.cn` 切到 ECS，Vercel 改成预览/staging 用的二级域名（如 `staging.hantawatch.cn`）。
+**等备案下来**（7–20 个工作日）走路径 B，把生产域名 `bingduguancha.com` 切到 ECS，Vercel 改成预览/staging 用的二级域名（如 `staging.bingduguancha.com`）。
 
 这样可以：
 - 不浪费等备案的时间
@@ -275,7 +275,7 @@ sudo /opt/hantawatch/deploy.sh
 
 ## 1 · 上线后第 1 天必做
 
-1. 在 [百度站长平台](https://ziyuan.baidu.com) 提交 `https://hantawatch.cn/sitemap.xml`（如果还没生成 sitemap，需要补一个 `apps/web/src/app/sitemap.ts`）
+1. 在 [百度站长平台](https://ziyuan.baidu.com) 提交 `https://bingduguancha.com/sitemap.xml`（如果还没生成 sitemap，需要补一个 `apps/web/src/app/sitemap.ts`）
 2. 在 [Google Search Console](https://search.google.com/search-console) 提交相同的 sitemap
 3. 同步 `/llms.txt` 给至少一个 LLM 抓取通道（或就放在站点根，等被发现）
 4. 用真机（iPhone / 安卓）打开站点，**逐个页面**走查
@@ -301,7 +301,7 @@ sudo /opt/hantawatch/deploy.sh
 
 | 决策点 | 我的建议 |
 |---|---|
-| **域名** | `hantawatch.cn` 优先，`hantawatch.com` 备用 |
+| **域名** | `bingduguancha.com` 优先，`hantawatch.com` 备用 |
 | **路径选择** | 推荐 C（混合），先 A 立即上线 |
 | **ICP 备案主体** | 个人最快但限制多；公司主体（即使是个体户）后续扩展性更好 |
 | **备案站点名称** | 推荐"汉坦观察信息平台"，避开"预警""疾控"等敏感词 |

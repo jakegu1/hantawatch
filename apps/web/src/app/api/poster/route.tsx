@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 import QRCode from 'qrcode';
@@ -29,7 +29,7 @@ const H = 1920;
 
 export async function GET(req: NextRequest) {
   const url = new URL(req.url);
-  const siteUrl = url.searchParams.get('url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://hantawatch.cn';
+  const siteUrl = url.searchParams.get('url') || process.env.NEXT_PUBLIC_SITE_URL || 'https://bingduguancha.com';
   const variant = (url.searchParams.get('variant') || 'dark') === 'light' ? 'light' : 'dark';
 
   const qrDataUrl = await QRCode.toDataURL(siteUrl, {

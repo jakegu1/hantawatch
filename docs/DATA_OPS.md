@@ -1,4 +1,4 @@
-# 数据运维指南（DATA_OPS）
+﻿# 数据运维指南（DATA_OPS）
 
 > 给"运营这站的人"看的文档。所有手工录入字段、定时任务、出现故障时的回滚方法，都在这里。
 
@@ -34,7 +34,7 @@
                                        ▼
                                 Vercel 自动重新部署
                                        ▼
-                                  hantawatch.cn
+                                  bingduguancha.com
 ```
 
 **关键不变量**：
@@ -173,7 +173,7 @@ pytest -q
 订阅 API `/api/alert/subscribe` 把邮箱写入 Supabase 表 `alert_subscriptions`。
 
 - 配置：`SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` 两个环境变量（在 Vercel 项目设置里）。未配置时会降级到只打印日志，**不会** 500，但订阅也不会落库——这是有意的，便于本地开发。
-- 查看订阅：`GET /api/alert/list?key=<ADMIN_KEY>`，按 `created_at desc` 返回最近 500 条。
+- 查看订阅：`GET /api/alert/list`，需先登录 `/admin/login` 拿 cookie 或携带 `Authorization: Bearer <ADMIN_KEY>` 头。按 `created_at desc` 返回最近 500 条。
 - 删除：直接去 Supabase 控制台。
 
 Supabase 表 schema：

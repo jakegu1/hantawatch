@@ -1,10 +1,10 @@
-import type { Metadata, Viewport } from 'next';
+﻿import type { Metadata, Viewport } from 'next';
 import Link from 'next/link';
 import './globals.css';
 import { AnalyticsScript } from '@/components/analytics-script';
 import { HeaderBrand, MobileTabBar } from '@/components/app-nav';
 
-const BASE_URL = 'https://hantawatch.cn';
+const BASE_URL = 'https://bingduguancha.com';
 
 export const metadata: Metadata = {
   title: {
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'WebApplication',
               name: '汉坦观察 HantaWatch',
               description: '面向中文用户的汉坦病毒预警与信息平台。提供病毒距离监测、HPI汉坦逼近指数、官方风险等级。',
-              url: 'https://hantawatch.cn',
+              url: 'https://bingduguancha.com',
               applicationCategory: 'HealthApplication',
               operatingSystem: 'Web, iOS, Android',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },

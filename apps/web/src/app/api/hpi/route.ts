@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+﻿import { NextResponse } from 'next/server';
 import { calculateHpi } from '@/lib/hpi';
 
 /**
@@ -21,6 +21,6 @@ export async function GET() {
     color: hpi.color,
     breakdown: hpi.breakdown,
     updatedAt: new Date().toISOString(),
-    methodology: 'https://hantawatch.cn/about#hpi',
+    methodology: 'https://bingduguancha.com/about#hpi',
   });
 }

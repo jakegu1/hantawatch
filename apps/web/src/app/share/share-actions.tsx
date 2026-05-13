@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { Download, Copy, Check } from 'lucide-react';
@@ -12,7 +12,7 @@ export function ShareActions() {
   const [copied, setCopied] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://hantawatch.cn';
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://bingduguancha.com';
   const posterUrl = '/api/poster?variant=dark';
 
   async function handleDownload() {

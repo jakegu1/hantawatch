@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '服务条款',
@@ -20,7 +20,7 @@ export default function TermsPage() {
         <section>
           <h2 className="font-semibold text-base text-gray-900">一、本站性质</h2>
           <p>
-            汉坦观察（hantawatch.cn，以下简称"本站"）是一个<strong>公益性、非营利</strong>的汉坦病毒科普与预警信息聚合平台。
+            汉坦观察（bingduguancha.com，以下简称"本站"）是一个<strong>公益性、非营利</strong>的汉坦病毒科普与预警信息聚合平台。
             本站<strong>不是官方机构</strong>，与中国疾控中心、WHO、ECDC 等任何官方机构<strong>无隶属关系</strong>。
             本站引用的所有官方数据均标注来源与抓取时间，便于读者自行核查。
           </p>

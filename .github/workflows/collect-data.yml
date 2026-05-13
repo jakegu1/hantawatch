@@ -1,4 +1,4 @@
-name: Collect data (WHO DON + ECDC)
+﻿name: Collect data (WHO DON + ECDC)
 
 # Runs four times a day, plus on-demand. Times are in UTC.
 # 04:00 UTC = 12:00 China time, 16:00 UTC = 00:00 next day China time.
@@ -70,7 +70,7 @@ jobs:
         if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "hantawatch-bot"
-          git config user.email "bot@hantawatch.cn"
+          git config user.email "bot@bingduguancha.com"
           git add apps/web/src/data
           git commit -m "chore(data): auto-update from WHO/ECDC $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git push
