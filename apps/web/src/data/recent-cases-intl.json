@@ -1,20 +1,420 @@
 {
-  "__generated_by": "hantawatch-collector@0.1.0 (seed, MV Hondius detail)",
-  "__generated_at": "2026-05-12T00:00:00Z",
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-05-13T08:48:51.192838+00:00",
   "cases": [
+    {
+      "id": "news-news.google.com-rss-articles-cbmizefvx3lxte5bt21dtfh6lxa3sw96ykizd0llrg9onw0yswjqrezstzboek1fejzru21lz2pidthzqm",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "荷蘭郵輪爆漢他病毒感染　藥師三點分析籲：暫不須恐慌 - 鏡週刊Mirror Media",
+      "summary": "荷蘭郵輪爆漢他病毒感染　藥師三點分析籲：暫不須恐慌 &nbsp;&nbsp; 鏡週刊Mirror Media",
+      "source": {
+        "name": "鏡週刊Mirror Media",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BT21DTFh6LXA3SW96YkIzd0llRG9ONW0ySWJqREZSTzBoek1FejZrU21lZ2pIdThZQmtoQUx3R05iTTY5VHM5WmpORGNxODRPMVIxUFd1QlpSckIzVVMxbjd1S1jSAWpBVV95cUxPWkViQkctZ0VmcEdpVWVxN0xHZFZfTTJVeXA3VnptSExYeFFoVDNtOVNMM2xFR1dXUHN5NzJlSTVEal84NmdIblBKbnRkeURCbTVnTVFBRmNEUm5QcWJXR2RPcHVmQnd2UTB3?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmijgfbvv95cuxowvrgee5zae5vvxjdt0xhsdh0ajk5tu1sa3i2bupvzkvvyuxqy3zhvjdtavhsdmvtrj",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "French hantavirus patient is critically ill as outbreak grows to 11 - NPR",
+      "summary": "French hantavirus patient is critically ill as outbreak grows to 11 &nbsp;&nbsp; NPR",
+      "source": {
+        "name": "NPR",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOWVRGeE5ZaE5vVXJDT0xhSDh0ajk5TU1Sa3I2bUpVZkVVYUxQY3ZhVjdTaVhsdmVTRjA1YTdRMzM1SGFjVFNZYlhzVG4weEhnY0VjMnUydnoxOWxFa25ick5fUGdFRXdac1NuTm5MLTBJMFBFMm8yMmFGREx1RThLRmhrdFlMbUR0ZDBQd2t3?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmia0fvx3lxte9ruthmc0piyuvmdmh0vdhld1j6njk3t0mzenppak14owe4ewhryja5mezgddn6dnn3uz",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
+      "summary": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus &nbsp;&nbsp; Centers for Disease Control and Prevention | CDC (.gov)",
+      "source": {
+        "name": "Centers for Disease Control and Prevention | CDC (.gov)",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9RUThMc0pIYUVmdmh0VDhLd1J6Njk3T0Mzenppak14OWE4eWhrYjA5MEZGdDN6dnN3UzQ3aFVlNWNyeTJmQ18wU05XN2tQZjlQT09wdFRZc3VDTG4xamx2YWgyODVQaWVTUmw4?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmioafbvv95cuxoluo5q2fjves0r29kemvxbu9mb2e0mng5nfjfznhechdks3jnvk1cyxbzn0lucxu2zv",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "French hantavirus patient is critically ill and on an artificial lung as outbreak grows to 11 - AP News",
+      "summary": "French hantavirus patient is critically ill and on an artificial lung as outbreak grows to 11 &nbsp;&nbsp; AP News",
+      "source": {
+        "name": "AP News",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOLUo5Q2FJVEs0R29kemVxbU9mb2E0Mng5NFJFZnhEcHdKS3JNVk1CYXBZN0lucXU2ZVB2MlhqYkdoVFB5eFEwNXJoTmdnMEstOHRLUTFDb3FOR3RWUGtudmNpU1drTkpiM1lkUEtOeDRDM0pVNEpfS0ljaW1pUFRod3F3OVp4a19uTWpNOE1iWWw1cnE2LXE3QVRKWTNTb21p?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmikafbvv95cuxqawfvskkyvv9iv2r0neg3ugtkn1rlx1hjrurmaxzfa29uaeoxsdngqzatog5ay1m5ed",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Hantavirus Cruise Ship Outbreak: What We Know So Far - the-scientist.com",
+      "summary": "Hantavirus Cruise Ship Outbreak: What We Know So Far &nbsp;&nbsp; the-scientist.com",
+      "source": {
+        "name": "the-scientist.com",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaWFvSkkyVV9IV2R0NEg3UGtkN1RlX1hJRURmaXZFa29UaEoxSDNGQzAtOG5aY1M5eDNfVGpOdDhWclRXZ296MjJJMFJITlFWTXk3NU9EZlNoMUdoNVd4MHg3WTRNNHkySXNiWVF2OXREa3hLUTdmZlNkdnVDVTNiR3p2ZGhZVGItalpmVW9zRHg?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmilgfbvv95cuxnsfhrefcwadzrovb2qvp5adfzt2hlcnjdntyzbkxxchz4xzm2zdhty1vfwtqtzs1dal",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "18 Americans quarantining after hantavirus outbreak: What we know - NewsNation",
+      "summary": "18 Americans quarantining after hantavirus outbreak: What we know &nbsp;&nbsp; NewsNation",
+      "source": {
+        "name": "NewsNation",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSFhReFcwaDZrOVB2QVp5aDFzT2hLcnJDNTYzbkxXcHZ4XzM2ZDhtY1VFWTQtZS1DalM5cWp6QkJyRG1fNXhSMmZwVlhGN2I3RWQzMlNKVFl2dnB6eEs4UkI2MklZYkFrVG1ETXpYNDBkRTRmX2JrVzBFbEtpXzBxSGJlX2hhMnpTakVVYUZhXzFiTWxPSUHSAZsBQVVfeXFMTWcxQTdrbmxZbTJyTjE5eENjN2NjeWFhSEpPOW5OTk9URWExX0VPWEMxMlZtUDNVRzFSY2F6dW1qVG8zSGRBemd2dU96by1oVGNybmVVR2duM05MbGZKRlpzY190c0NjLUZ1TUt1dGFuN2FsbWltNktCcGR4ZWg5U1JYSEZkY2JzdWhMSGpuNFlUV2Eyc3V1YlBFaTQ?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiv0fvx3lxtfbsmedry1jmchjsodhjrvvnegttstuxblronxjltnztrzb1qlvkbnvqnjkzadv5wjbytg",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "【錯誤】漢他病毒去台灣了？世衛組織啓動疫情應對行動？台北市大清消？不實影射說法 - MyGoPen",
+      "summary": "【錯誤】漢他病毒去台灣了？世衛組織啓動疫情應對行動？台北市大清消？不實影射說法 &nbsp;&nbsp; MyGoPen",
+      "source": {
+        "name": "MyGoPen",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBSMEdrY1JMcHJSODhJRVVNeGttSTUxblRoNXJLTnZTRzB1QlVkbnVqNjkzaDV5WjBYTGlzQ0NIeUhMTC1sdmxHUmNKN1BWVVJqNVFFcWFKRQ?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiakfvx3lxtfbfmdu1oghly0lyz0hbxzzpdkfar05kb1lxwwpjshdauuvhx0u1etzrzdhcavjsbzb1bw",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "谭德塞：没有迹象显示汉坦病毒大规模暴发，但可能出现更多病例 - 观察者网",
+      "summary": "谭德塞：没有迹象显示汉坦病毒大规模暴发，但可能出现更多病例 &nbsp;&nbsp; 观察者网    阿根廷近日发现的汉坦病毒感染者确认感染安第斯病毒 &nbsp;&nbsp; 中国网    汉坦病毒的下一道前沿：研发疫苗与治疗药物 &nbsp;&nbsp; 新浪财经    汉坦病毒是什么？ &nbsp;&nbsp; thepaper.cn    西班牙卫生部门称该国首位汉坦病毒感染者病情稳定 &nbsp;&nbsp; 新京报    涉汉坦病毒疫情邮轮驶抵西班牙乘客疏散回国隔离 &nbsp;&nbsp; 财新    法国女子感染汉坦病毒 正在重症监护室治疗 &nbsp;&nbsp; 联合早报    世卫：汉坦病毒出现症状时最具传染性 &nbsp;&nbsp; 联合早报    世卫组织就与游轮有关的汉坦病毒病例采取应对行动 &nbsp;&nbsp; World Health Organization (WHO)",
+      "source": {
+        "name": "观察者网",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfMDU1OGhlY0lyZ0hBXzZPdkFaR05kb1lXWWpjSHdaUUVHX0U1eTZrZDhCaVJsbzB1bW10MU1DTldXZlVhdEpuY0k4c2ZhcWpna05Bd081ZWxCZ0JfZXlEUVEzSG1WNnN4Q1E?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiekfvx3lxte4yzwfqbndpq1fpmelgc3bmuxf2vfl1tmzvwi1sownuwwxjm3rzwmpzeehxohh0tdd6tm",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "应对汉坦病毒疫情工作“还未结束” - epaper.nfnews.com",
+      "summary": "应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; epaper.nfnews.com",
+      "source": {
+        "name": "epaper.nfnews.com",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE4yZWFQbndPQ1FpMElGc3BMUXF2VFl1TmZvWi1sOWNUWWxjM3RzWmpZeEhxOHh0TDd6Tm1qbHYyZnNKYUcxN2xBMGJVQk5KcHJseWtWWUJ2cGlVUDhLbzI0WVFlcWRISVRnQWoza29kSXpCdTh2WnRUQW5B?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmimgfbvv95cuxpa0tzmwrasmhqdjlwqkz3d01xbjc2mxe5tmrsve9wbuxonlrhtu0wctn1q19eywp1bg",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "解讀｜ 漢他病毒﹑一艘染疫郵輪，與後疫情時代國際協作的壓力測試 - 端傳媒Initium Media",
+      "summary": "解讀｜ 漢他病毒﹑一艘染疫郵輪，與後疫情時代國際協作的壓力測試 &nbsp;&nbsp; 端傳媒Initium Media",
+      "source": {
+        "name": "端傳媒Initium Media",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPa0tZMWRaSmhqdjlwQkZ3d01Xbjc2MXE5TmRsVE9wbUxoNlRhTU0wcTN1Q19EYWp1bGd0S014dHFDQnNESERXaE1ZMGlKWU01OXJVUzhQTE5yalo2enJIWmhNX2NrWnFuZXV0a0dxaXBjVExsbnh2Slk5eS1VNHlrWlRmQl80YkJUZkhXR19RS1dWV0xFUmpRckJR?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiyefvx3lxte1mtephsnlswwroadzbyjzkwe5wbmtrv1nyauftqznwowxnt2hqzgfjdvrkq0fsu0xquk",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "乘客已全部撤离汉坦病毒暴发邮轮：他们去了哪里，状况如何？ - thepaper.cn",
+      "summary": "乘客已全部撤离汉坦病毒暴发邮轮：他们去了哪里，状况如何？ &nbsp;&nbsp; thepaper.cn",
+      "source": {
+        "name": "thepaper.cn",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mTEphSnlsWWRoaDZBYjZKWE5WbmtRV1NYaUFtQzNWOWxNT2hqZGFJdVRKQ0FSU0xqUkh5V0hVMEZKV3kwbnZvdC1EUUYxeTVzMllmbmRSb0hnaVBNSzRvYw?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmivgfbvv95cuxpwel1ahjuvujsshz5dkfwsg56qli3aujfwejhatvoadfncufrmjfnemlyz2ryse5suh",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Hantavirus outbreak tests Trump officials who criticized covid response - The Washington Post",
+      "summary": "Hantavirus outbreak tests Trump officials who criticized covid response &nbsp;&nbsp; The Washington Post",
+      "source": {
+        "name": "The Washington Post",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWEl1aHJUVUJSSHZ5dkFwSG56QlI3aUJFWEJhaTVOaDFNcUFrMjFnemlYZ2RYSE5sUHdOa3RBZEY5d3c4dW1CakZtT2VHc3NGdWlmVjBRajM2bHJIclVtVDI0RFhSUW9zYkVyb0g1RmF4Vm5TcmJELVZsT1VBeC14eUFNNEZUV2d1MTM5RXhDeW5qeXJJWmJCSEh2UHM4RC1TOWZsU3BwTzNTcU9oRVlhZkVrV3o5c3RENS1fYjNB?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiyefvx3lxte5gqutyowjtzxf4rvlfqktoujgwb1fftf83mneyzwe0d0stbvnzr2jjynh4vm94dwhmbv",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "明查｜上世纪已有多款汉坦疫苗上市，但尚无针对引发邮轮疫情的安第斯病毒疫苗 - thepaper.cn",
+      "summary": "明查｜上世纪已有多款汉坦疫苗上市，但尚无针对引发邮轮疫情的安第斯病毒疫苗 &nbsp;&nbsp; thepaper.cn",
+      "source": {
+        "name": "thepaper.cn",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5GQUtYOWJTZXF4RVlfQktoUjgwb1FfTF83MnEyZWE0d0stbVNzR2JJYnh4Vm94dWhMbVZvUUd1eDFJczFFWmJPRXhWRlEwd1dIS1U2VWh6RTVVekJwamYyYw?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmizwfbvv95cuxocexrvkpleu8wvlvjc2k3wlposejfwkdnzkq2bjb2avdjd1fqttixlwnhmzfpbfhts1",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Three Kansans being monitored for hantavirus after contact with infected cruise ship passenger - Kansas Reflector",
+      "summary": "Three Kansans being monitored for hantavirus after contact with infected cruise ship passenger &nbsp;&nbsp; Kansas Reflector",
+      "source": {
+        "name": "Kansas Reflector",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOcExRVkpLeU8wVlVjc2k3WlpoSEJFWkdnZkQ2bjB2aVdjd1FQTTIxLWNhMzFpbFhtS1R0S2pBTlFPX0JmMkhTdWVXOEtMV0hfNEllZG1pbGwtNmJqc3VxTHpmRGdsa1lMQXZiWV9leEVac3Z2d0xrZEM3b21NbnZrNnpHbDQ5YmFDSGxnS3VrUkg5cHp0cng1aFdHeFFycDUxci1pUkU2XzhXZ2ZFZUhsUWt5Q0NJZHB1d21YcDc3VENrTVdxbHEwQ3FBSll3S1E?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmirgfbvv95cuxqvmrvcnpvzvpcnkcznevoy1jsvexbs1zirwxtlxezu0veztmzn2habe5wotzqowptyt",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Hantavirus treatments are coming but not fast enough for this outbreak, experts say - Scientific American",
+      "summary": "Hantavirus treatments are coming but not fast enough for this outbreak, experts say &nbsp;&nbsp; Scientific American",
+      "source": {
+        "name": "Scientific American",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVmRvcnpvZVpCNkczNEVoY1JSVExBS1ZiRWxTLXEzU0VEZTMzN2habE5WOTZQOWptYTdZZlNlbDM0YTk4WWpxRXI2bGFRam1NYlFsUjFhZWx2blJrQ2NmQjZBcFpYam1CR3Rwc1czX3AyWnVsVXhyZjUwUDAwMWxwVTl3Z0w3RGROb2NZd0t1VWZmM0RDaU1JQ3NKWEVDUkRybWxMM3AxdFl0eUxwUnc?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmi4wfbvv95cuxprfdnm2rtnm9imnzymtb5yzhqam5ttw5cbwztbuxxvtruqtdeuxi0mletovbmof9wrg",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Is hantavirus in Illinois in 2026? IDPH investigating potential case in Winnebago County, IL not linked to cruise ship outbreak - ABC7 Chicago",
+      "summary": "Is hantavirus in Illinois in 2026? IDPH investigating potential case in Winnebago County, IL not linked to cruise ship outbreak &nbsp;&nbsp; ABC7 Chicago",
+      "source": {
+        "name": "ABC7 Chicago",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPRFdnM2RTNm9iMnZYMTB5YzhQam5TTW5CbWZtbUxXVTRUQTdEUXI0MlEtOVBMOF9wRGdENXRWeFd5Tkx3X3VwY2piZUEtTFYwRUdFRF8xYkRzenNicmhtZmhNVE1Gc3k2ODVhLV9rY082Z0xZWHVqY3RscEgyOG1LUHNzVXlhQmFlbEc5MWlPeWUxdHNvNWx4X1pPUThUU190aDRTazB5WEpIMWlXalRYdWlJSVZNV3Z2RnBLa3h2dkNIdmdQcFNmV0RWV2pXdVd4V3M2S3N1UlI5NGRzeWZyMmloc9IB6AFBVV95cUxORHdYTTdWejkzaWJaZnl0cTM4Tng0Tlpldjh5ZFpZb1VZR0xQN244R2RoTmxVaHRTVnFHQnQzNnk3TERSUkRycUpvM2pqNDFpRGprU3dtTml6YmJ0MUNSMG9OTEhoWTVOaFNpWnZENzR0TGlYcm5yX2xZY3QydW4wT3J1c0xSSl9qcDVQTXNZYXhMb1lXTldtXzZ5RHFfYkdTNWhIWkN1SmcwbEhYdFFYU3lWR2tOUmJxVmptLUNLeU9wT1BRZHhTRWdneUlkUVYyNUViYUFJeWhtY0FxU055Q2h6TlEyRlRF?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiggfbvv95cuxnbjnwcmrqdvzwcxpur2dzcm1vsmxxrgpztllwtvh0q0txzhlpshqzwgptr3hxwjnqse",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 天津日报",
+      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 天津日报",
+      "source": {
+        "name": "天津日报",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNbjNwcmRqdVZWcXpUR2dZcm1vSmxxRGpZTllwTVh0Q0tXZHlpSHQzWGptR3hXWjNqSEE3eUtPQmgyZVhqZ2w3N1Y4dEdvXzBMUy1vMHRsRklrR05KMmU5NjIzdV9Cc25RbGY1bDBoemNSUWZwS1pIT0R0LUlzLUN2ekF3?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmimgfbvv95cuxqs0jnsktqouqxqxhovnvxve9zteldelv5q0tlwg9uoehwswxtugjjskhjdxlxz211vg",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Hantavirus outbreak grows to 11 cases, 9 confirmed - CIDRAP",
+      "summary": "Hantavirus outbreak grows to 11 cases, 9 confirmed &nbsp;&nbsp; CIDRAP",
+      "source": {
+        "name": "CIDRAP",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQS0JNSktqOUQxQXhoVnVXVE9ZTElDelV5Q0tLWG9UOEhWSWxTUGJJSkhjdXlXZ211VGRBU2JHUVA5NHlWY0dqWG5KY1J0R3hsaHlxTW9CamJjd09sdkJTakU0WFZxS0tHNndZVklHWk5aaW1GMmp0Zy01R05qd2tSTWl0TmFWdEd1dW10bXV2YkJzQkFLTmhOOW5R?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmisgfbvv95cuxnvedydvfbv1rxwlc3x0nwwwnlcm5ft01fzdryvdbuagj5x0hzqlaywfjly3dwdvfgel",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Hantavirus cases rise to 11 as cruise ship passengers quarantine - NBC News",
+      "summary": "Hantavirus cases rise to 11 as cruise ship passengers quarantine &nbsp;&nbsp; NBC News",
+      "source": {
+        "name": "NBC News",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVEdYdVFBV1RXWlc3X0NwWWNLcm5FT01FZDRyVDBUaGJ5X0hzQlAyWFJlY3dwdVFGelhOdzEzcV9vUmxrckJiR1Itd1FEaVlnWHRrLWhfb3RZbFc4bFRuUjdFcm5Jc0xITDFveXEwSzR0MzQ2dHl3UmJKTGlQdHVlVU14eXNJTHlpbTYxSUxHSXlMQnJicUVDU1JQQ2FOemhVZXJQMTFWdFptZE42Uk9Jb2J3?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiowfbvv95cuxov2tboejxy1vpvk9pt1pzlwu3dmdjyvlianbqa1rvtg4zodrmrho1zljtb2tuelvnnx",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Could the Hantavirus Cruise Ship Outbreak Lead to a Pandemic? Experts Explain the Risk Level - TODAY.com",
+      "summary": "Could the Hantavirus Cruise Ship Outbreak Lead to a Pandemic? Experts Explain the Risk Level &nbsp;&nbsp; TODAY.com",
+      "source": {
+        "name": "TODAY.com",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOV2tBOEJxY1VpVk9pT1pZLWU3dmdjYVlianBQa1RvTG4zODRMRHo1ZlJTb2tUelVnNXpDa2h1SERBSmNHVzdIZVFkY3Q0WlpGWDVvaV9yUFZfSU56cUxfWkhrV2ZyeExMdjkwWnBINmp0c29seWIyMUNXbjBqRHk5RVdJa2NwbTlPMGVheEZCT3dZSWVsZEZaYzEyXzFSa0pHR1RB?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiwkfvx3lxte1fddhmujr3mhn3bgx1tfrfdxpgltlxmeqxc095amy5wl9wzfo1rmryvg5cr1fnvnh1at",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "No sign of larger hantavirus outbreak, says UN health agency - BBC",
+      "summary": "No sign of larger hantavirus outbreak, says UN health agency &nbsp;&nbsp; BBC",
+      "source": {
+        "name": "BBC",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FdDhmUjR3MHN3bGx1TFRfdXpGLTlXMEQxc095amY5Wl9wZFo1RmRyVG5CR1FnVnh1aThUbHdkRU9HU0FoU3lkY3Y2andCNFBQVTlSb01jZnRtQQ?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiqafbvv95cuxptjjfmw4tylm4cnnhdnbldwj6njvmymv4sm41zmr2n2vuy2lodvbhbgszsmwwwi02sk",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "The Hantavirus Outbreak Is a Test Case for the U.S. Public Health Response - KFF",
+      "summary": "The Hantavirus Outbreak Is a Test Case for the U.S. Public Health Response &nbsp;&nbsp; KFF",
+      "source": {
+        "name": "KFF",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTjJFMW4tYlM4cnNHdnBLdWJ6NjVMYmV4Sm41ZmR2N2VUY2lOdVBHbGszSmwwWi02SkFhM2tINVRYdkFJcVd0QWgwSWt1MzRvQWE2amxYVEVjVVhSUUR2LUd4NVFvOW1xT0x1S3VBSU53OW43UDFIOFFldUtfRW5JTXdVMDJuV2JJREEteV9PZTEzajdhLWFkdFBXbGo3V3BaLUl4aUhnQng?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmihgfbvv95cuxqdkrhqmneenqwadrxden5ss1usfhiek9jafjcoxzstjjpzvngcdfyuujlsmfqtfhslu",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 新华网",
+      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 新华网",
+      "source": {
+        "name": "新华网",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdkRHQmNEenQwaDRxdEN5SS1USFhiek9JaFJCOXZsTjJpZVNGcDFYUUJlSmFQTFhsLUZrWUpIbWY0dXh5dkxxQTZobzFSQlJ0b3d1YmlOaVM0bGFRSEd0QlIwdkE0WGtaOGhYSk1iRlpNTkVIZVQ2c0wxWFJVcGtqd19ScmFadw?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束” - 新华网",
+      "summary": "世卫组织：应对汉坦病毒疫情工作“还未结束” &nbsp;&nbsp; 新华网",
+      "source": {
+        "name": "新华网",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmiekfvx3lxtfbgd3pjr2zhb0i3n053qzbgte9svghqudhwawzrqnzvzlo4agl0awxlevl4evj5wgnszm",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "All passengers evacuated from hantavirus-hit cruise ship - CNN",
+      "summary": "All passengers evacuated from hantavirus-hit cruise ship &nbsp;&nbsp; CNN    18 US passengers sent to Nebraska, Atlanta amid hantavirus outbreak &nbsp;&nbsp; USA Today    Twenty-two people set to leave hospital after hantavirus isolation &nbsp;&nbsp; BBC",
+      "source": {
+        "name": "CNN",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBGd3pjR2Zhb0I3N053QzBGTE9sVGhQUDhwaWZrQnZVZlo4aGl0aWxleVl4eVJ5WGNSZmpMYVVWOU1WenZ1VnNQdHVJSWFHNURXRTdaZWxSRndCX1U1cDdueWltclNTWkJnOEt3bGMzUDJJcnd5N3hnTXZn?oc=5",
+        "retrievedAt": "2026-05-13T08:48:51.192103+00:00",
+        "confidence": "news"
+      }
+    },
     {
       "id": "manual-2026-05-08-taiwan",
       "regionCode": "INT",
       "serotypeId": "hantaan",
       "date": "2026-05-08",
       "caseType": "suspected",
-      "count": 1,
+      "count": 0,
       "title": "台湾省 CDC 周报：北部地区出现 1 例汉坦病毒重症病例",
       "summary": "病患为中年男性，疑似职业暴露相关。台湾省 CDC 提醒农林从业者注意防鼠卫生。台湾省每年报告汉坦相关病例约 0-3 例，属于偶发型。",
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-13T00:00:00Z",
+        "retrievedAt": "2026-05-13T08:48:51.192268+00:00",
         "confidence": "news"
       }
     },
@@ -24,94 +424,14 @@
       "serotypeId": "puumala",
       "date": "2026-05-07",
       "caseType": "suspected",
-      "count": 1,
+      "count": 0,
       "title": "瑞士 BAG 通报：阿尔卑斯山地区 1 例 Puumala 型死亡病例",
       "summary": "瑞士联邦公共卫生办公室（BAG）通报，伯尔尼州一名 60 岁男性因 Puumala 型汉坦病毒感染并发肺综合征死亡。当地森林啮齿动物种群密度近期偏高。",
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-13T00:00:00Z",
+        "retrievedAt": "2026-05-13T08:48:51.192268+00:00",
         "confidence": "news"
-      }
-    },
-    {
-      "id": "ecdc-2026-05-12",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-12",
-      "caseType": "confirmed",
-      "count": 11,
-      "title": "ECDC 监测更新：9 例确诊 + 2 例疑似，对 EU/EEA 公众风险维持极低",
-      "summary": "ECDC 专项更新将本次集群实验室确诊数提升至 9 例（较 5 月 11 日 +2），疑似 2 例，死亡 3 例，病死率约 27%。法国 22 名密切接触者 PCR 仍全部阴性。",
-      "source": {
-        "name": "ECDC 监测更新",
-        "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak",
-        "retrievedAt": "2026-05-12T00:00:00Z",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "ecdc-2026-05-11-disembark",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-11",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮下船完成 — 最后 28 人撤离",
-      "summary": "西班牙海岸警卫队监督下，邮轮全部 147 人在加纳利特内里费港下船完毕。剩余船员将驶往鹿特丹消毒。22 个国家分别接收本国侨民进入隔离观察。",
-      "source": {
-        "name": "France 24",
-        "url": "https://www.france24.com/fr/europe/20260511-en-direct-un-americain-passager-du-mv-hondius-teste-positif-hantavirus-canaries-debarquement",
-        "retrievedAt": "2026-05-12T00:00:00Z",
-        "confidence": "media"
-      }
-    },
-    {
-      "id": "cdc-han-528",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-11",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "CDC HAN-528：3 级应急响应，美方将被运至内布拉斯加生物防护单元",
-      "summary": "美国 CDC 发布健康警报网络通告 528 号，将事件分级为 Level 3 应急（最低级），强调对美国公众风险极低。美方乘客在奥马哈国家隔离中心接受 42 天观察。",
-      "source": {
-        "name": "US CDC",
-        "url": "https://www.cdc.gov/han/php/notices/han00528.html",
-        "retrievedAt": "2026-05-12T00:00:00Z",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "virological-genome",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-08",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "完整基因组序列公开发布",
-      "summary": "Andes 毒株（命名 ANDV/Switzerland/Hu-3337/2026）全基因组序列在 Virological.org 公开。系统发育分析提示为单一动物→人溢出事件起源，各患者间序列高度相似。",
-      "source": {
-        "name": "Virological.org",
-        "url": "https://virological.org",
-        "retrievedAt": "2026-05-12T00:00:00Z",
-        "confidence": "academic"
-      }
-    },
-    {
-      "id": "who-2026-don599",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-04",
-      "caseType": "confirmed",
-      "count": 7,
-      "title": "WHO DON-599：基因测序确认安第斯型汉坦病毒",
-      "summary": "WHO 发布疾病暴发新闻 599 号，确认病原体为安第斯（Andes）型汉坦病毒。对全球公众风险评估为低。",
-      "source": {
-        "name": "WHO Disease Outbreak News",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-12T00:00:00Z",
-        "confidence": "official"
       }
     }
   ]

@@ -1,14 +1,68 @@
 {
-  "__generated_by": "hantawatch-collector@0.1.0 (seed, refreshed 5-13)",
-  "__generated_at": "2026-05-13T00:00:00Z",
-  "lastCollectedAt": "2026-05-13T00:00:00Z",
-  "lastCollectedAtCn": "2026-05-13T08:00:00+08:00",
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-05-13T08:48:51.194095+00:00",
+  "lastCollectedAt": "2026-05-13T08:48:51.192344+00:00",
+  "lastCollectedAtCn": "2026-05-13T16:48:51.192347+08:00",
   "sources": {
-    "who_don": { "entries": 2, "ok": true },
-    "ecdc": { "ok": true },
-    "news_leads": { "entries": 0, "ok": false, "perQuery": [] }
+    "who_don": {
+      "entries": 0,
+      "ok": false
+    },
+    "ecdc": {
+      "ok": false
+    },
+    "news_leads": {
+      "entries": 30,
+      "ok": true,
+      "perQuery": [
+        {
+          "query": "hantavirus",
+          "hl": "en",
+          "fetched": 100,
+          "blocked": 0,
+          "no_signal": 9,
+          "duplicate": 0,
+          "kept": 16,
+          "ok": true
+        },
+        {
+          "query": "汉坦病毒",
+          "hl": "zh-CN",
+          "fetched": 92,
+          "blocked": 0,
+          "no_signal": 12,
+          "duplicate": 0,
+          "kept": 13,
+          "ok": true
+        },
+        {
+          "query": "漢他病毒",
+          "hl": "zh-TW",
+          "fetched": 104,
+          "blocked": 0,
+          "no_signal": 20,
+          "duplicate": 0,
+          "kept": 5,
+          "ok": true
+        },
+        {
+          "query": "HFRS+OR+\"hemorrhagic+fever+with+renal+syndrome\"",
+          "hl": "en",
+          "fetched": 64,
+          "blocked": 0,
+          "no_signal": 20,
+          "duplicate": 0,
+          "kept": 5,
+          "ok": true
+        }
+      ]
+    }
   },
   "clusterCount": 1,
-  "manualFiles": ["china-baseline.json", "recent-cases-china.json", "news-leads-manual.json"],
-  "yesterdayNearestDistanceKm": 18800
+  "manualFiles": [
+    "china-baseline.json",
+    "recent-cases-china.json",
+    "news-leads-manual.json"
+  ],
+  "yesterdayNearestDistanceKm": 16500
 }
