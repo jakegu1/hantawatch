@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .ecdc import EcdcAssessment
+from .gazetteer import geocode_from_text
 from .hpi import HpiInputs, calculate_hpi
 from .io_utils import read_json, write_generated_json
 from .news_leads import NewsLead
@@ -53,17 +54,65 @@ CLUSTER_REGISTRY: dict[str, dict] = {
 }
 
 
-def _enrich_cluster_from_registry(don_id: str, fallback_name: str) -> dict:
+def _enrich_cluster_from_registry(
+    don_id: str, fallback_name: str, *, gazetteer_text: str = ""
+) -> dict:
+    """Resolve a cluster's geo + descriptive metadata.
+
+    Resolution order:
+      1. Hand-curated CLUSTER_REGISTRY entry (highest fidelity — city-level
+         coords, human-to-human flag, WHO risk wording).
+      2. Gazetteer fallback: scan the WHO DON title+summary for a country
+         keyword and use that country's centroid. Coarser (~country-level)
+         but lets brand-new outbreaks auto-resolve to a sensible distance
+         on day 1, before an operator has had a chance to add them to the
+         registry.
+      3. Last resort: lat=0, lng=0, name="未定位". The orchestrator skips
+         distance computation in this case so we don't show 0 km.
+    """
     reg = CLUSTER_REGISTRY.get(don_id, {})
+    if reg:
+        return {
+            "name": reg.get("name", fallback_name),
+            "location": {
+                "lat": reg.get("lat", 0.0),
+                "lng": reg.get("lng", 0.0),
+                "name": reg.get("locationName", "未定位"),
+            },
+            "humanToHuman": reg.get("humanToHuman", False),
+            "whoRiskLevel": reg.get("whoRiskLevel", "未声明"),
+            "_geocodeSource": "registry",
+        }
+
+    # Registry miss — try the gazetteer.
+    hit = geocode_from_text(gazetteer_text or fallback_name)
+    if hit is not None:
+        logger.info(
+            "Gazetteer matched '%s' → %s (%.1f, %.1f) for cluster %s",
+            hit.keyword_matched, hit.location_name_zh, hit.lat, hit.lng, don_id,
+        )
+        return {
+            "name": fallback_name,
+            "location": {
+                "lat": hit.lat,
+                "lng": hit.lng,
+                "name": hit.location_name_zh,
+            },
+            "humanToHuman": False,  # conservative; operator can override
+            "whoRiskLevel": "待评估",
+            "_geocodeSource": f"gazetteer:{hit.keyword_matched}",
+        }
+
+    logger.warning(
+        "No registry/gazetteer hit for %s ('%s') — distance will be unknown",
+        don_id, fallback_name,
+    )
     return {
-        "name": reg.get("name", fallback_name),
-        "location": {
-            "lat": reg.get("lat", 0.0),
-            "lng": reg.get("lng", 0.0),
-            "name": reg.get("locationName", "未定位"),
-        },
-        "humanToHuman": reg.get("humanToHuman", False),
-        "whoRiskLevel": reg.get("whoRiskLevel", "未声明"),
+        "name": fallback_name,
+        "location": {"lat": 0.0, "lng": 0.0, "name": "未定位"},
+        "humanToHuman": False,
+        "whoRiskLevel": "未声明",
+        "_geocodeSource": "none",
     }
 
 
@@ -114,7 +163,12 @@ def build_active_clusters(
     out: list[dict] = []
     for e in seen.values():
         don_id = e.id  # already normalised like 2026-DON599
-        enriched = _enrich_cluster_from_registry(don_id, e.title)
+        # Pass title + summary so the gazetteer fallback has the full text
+        # (e.g. summary often spells out "in southern Argentina" while the
+        # title might just say "Andes virus disease").
+        enriched = _enrich_cluster_from_registry(
+            don_id, e.title, gazetteer_text=f"{e.title} {e.summary}"
+        )
         serotype_id = select_serotype_id(f"{e.title} {e.summary}")
         cluster_id = don_id.lower()
 

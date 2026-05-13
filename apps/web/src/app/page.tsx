@@ -1,12 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
 import { calculateHpi } from '@/lib/hpi';
+import { findNearestAndes } from '@/lib/nearest-cluster';
 import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
-import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
+import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Globe2 } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
+import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
@@ -70,7 +72,17 @@ export default function HomePage() {
   }, []);
 
   const hpi = currentHpi;
-  const cluster = liveClusters[0];
+
+  // The hero now centres on the *nearest active Andes cluster*, not
+  // "liveClusters[0]" (which is just whatever the collector happened to
+  // sort first). See lib/nearest-cluster.ts for the rationale. Memoised so
+  // the heavy filter+sort doesn't run on every state tick.
+  const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
+
+  // The hero still needs a *single* cluster object for the distance card +
+  // map. Fall back to liveClusters[0] when no Andes cluster exists at all
+  // (e.g. test fixtures with non-Andes data), so the page never crashes.
+  const cluster = nearestAndes.nearest ?? liveClusters[0];
 
   const liveHpi = calculateHpi({
     distanceKm: cluster.distanceFromChinaKm,
@@ -79,6 +91,12 @@ export default function HomePage() {
     travelConnectivity: 'indirect',
     baselineDeviation: 'normal',
   });
+
+  // Whether the user has explicitly opted into the interactive map. We
+  // keep this OFF by default because tiles load from international CDNs
+  // (Carto / OSM) that are unreliable inside mainland China without a
+  // VPN — the card above already conveys the key info offline.
+  const [mapOpened, setMapOpened] = useState(false);
 
   return (
     <div className="pb-16">
@@ -123,10 +141,12 @@ export default function HomePage() {
 
           {/* ─── Above-the-fold metrics: Distance + HPI on one row ─── */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
-            {/* Distance card */}
+            {/* Distance card — now ALWAYS the nearest Andes outbreak (not
+                "first cluster in the array"). Auto-updates as new outbreaks
+                appear via WHO DON; see lib/nearest-cluster.ts. */}
             <div className={`rounded-xl border-2 p-3 sm:p-4 ${distanceRingBg(cluster.distanceFromChinaKm)}`}>
               <p className="text-[10px] sm:text-xs font-medium text-gray-500 leading-tight">
-                聚集地距中国大陆
+                最近 Andes 疫情距中国大陆
               </p>
               <div className="flex items-baseline gap-1 mt-1">
                 <span className={`text-3xl sm:text-5xl font-extrabold leading-none ${distanceRingColor(cluster.distanceFromChinaKm)}`}>
@@ -167,9 +187,14 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
               <div className="text-base sm:text-xl font-bold leading-none">
-                {liveClusters.reduce((s, c) => s + (c.confirmedCases ?? 0), 0)}
+                {nearestAndes.totalConfirmed}
               </div>
-              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">全球活跃确诊</div>
+              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">
+                {/* "Andes 全球确诊" is more honest than "全球活跃确诊" — we
+                    don't aggregate Hantaan/Seoul endemic counts here. */}
+                Andes 全球确诊
+                {nearestAndes.count > 1 && ` · ${nearestAndes.count} 起`}
+              </div>
             </div>
             <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
               <div className="text-base sm:text-xl font-bold leading-none text-green-300">0</div>
@@ -203,31 +228,66 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* ─── Map (below the fold on mobile — secondary affordance) ─── */}
-          <details className="group rounded-xl bg-white/5 backdrop-blur border border-white/10 mb-3 sm:mb-0" open>
-            <summary className="cursor-pointer list-none sm:hidden flex items-center justify-between px-3 py-2 text-xs">
-              <span className="inline-flex items-center gap-1.5">
-                <MapPin className="h-3.5 w-3.5" />
-                查看距离地图
-              </span>
-              <span className="text-[10px] opacity-70 group-open:rotate-180 transition-transform">▼</span>
-            </summary>
-            <div className="p-2 sm:p-0">
-              <DistanceMap
-                cluster={{
-                  lat: cluster.location.lat,
-                  lng: cluster.location.lng,
-                  name: `${cluster.name} · ${cluster.location.name}`,
-                  serotypeColor: SEROTYPES[cluster.serotypeId]?.color ?? '#dc2626',
-                }}
-                distanceLabel={`${fmt(cluster.distanceFromChinaKm)} km`}
-                height={260}
-              />
-            </div>
-            <p className="px-3 py-2 text-[10px] sm:text-xs text-green-300 font-medium">
-              ✅ 距离极远（绿色安全区域），对中国大陆直接威胁有限
-            </p>
-          </details>
+          {/* ─── Nearest-Andes card — replaces the world map as the
+                primary geo-context widget. Works offline / behind GFW (no
+                tile CDN), which our mainland audience can't reach reliably.
+                See components/nearest-andes-card.tsx for the design notes. */}
+          <div className="mb-3 sm:mb-4">
+            <NearestAndesCard result={nearestAndes} />
+          </div>
+
+          {/* ─── Optional interactive world map.
+                Kept opt-in because Carto/OSM tile CDNs are unreliable from
+                mainland China. The button explains the trade-off so users
+                without VPN don't waste taps on a blank tile area. */}
+          <div className="mb-3 sm:mb-0">
+            {!mapOpened ? (
+              <button
+                type="button"
+                onClick={() => setMapOpened(true)}
+                className="w-full rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-2.5 text-left transition-colors group"
+              >
+                <div className="flex items-center gap-2">
+                  <Globe2 className="h-4 w-4 text-white/70 flex-shrink-0" />
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs sm:text-sm font-medium">查看互动世界地图</p>
+                    <p className="text-[10px] sm:text-[11px] text-white/60 mt-0.5 leading-snug">
+                      需访问国际地图 CDN（Carto/OSM）。国内用户若无代理可能加载缓慢。
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-white/40 group-hover:translate-x-0.5 transition-transform">
+                    展开 ›
+                  </span>
+                </div>
+              </button>
+            ) : (
+              <div className="rounded-xl bg-white/5 backdrop-blur border border-white/10 overflow-hidden">
+                <div className="flex items-center justify-between px-3 py-2 text-[11px] text-white/70">
+                  <span className="inline-flex items-center gap-1.5">
+                    <Globe2 className="h-3.5 w-3.5" />
+                    互动地图
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setMapOpened(false)}
+                    className="text-white/50 hover:text-white"
+                  >
+                    收起
+                  </button>
+                </div>
+                <DistanceMap
+                  cluster={{
+                    lat: cluster.location.lat,
+                    lng: cluster.location.lng,
+                    name: `${cluster.name} · ${cluster.location.name}`,
+                    serotypeColor: SEROTYPES[cluster.serotypeId]?.color ?? '#dc2626',
+                  }}
+                  distanceLabel={`${fmt(cluster.distanceFromChinaKm)} km`}
+                  height={260}
+                />
+              </div>
+            )}
+          </div>
 
           {/* ─── 7-day HPI sparkline + explanation (desktop only — mobile users
                 can scroll for this) ─── */}

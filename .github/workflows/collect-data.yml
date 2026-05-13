@@ -49,11 +49,35 @@ jobs:
 
       - name: Run collector
         working-directory: services/collector
+        # main.py exit codes (see main.py docstring):
+        #   0 = all sources OK
+        #   1 = fatal — could not even start
+        #   2 = partial — one or more sources failed, but valid output was
+        #       still written (e.g. ECDC TLS handshake flaked, WHO DON OK)
+        #
+        # Treat code 2 as success-with-warning: the JSON files on disk are
+        # internally consistent (builder.py preserves prior values when a
+        # source is empty) and we want the commit & push step to still run
+        # so the user sees the data update. Without this special-case, a
+        # single ECDC blip every few weeks blocked all auto-updates.
         run: |
+          set +e
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             python main.py --dry-run
           else
             python main.py
+          fi
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ]; then
+            echo "Collector ok."
+            exit 0
+          elif [ "$rc" -eq 2 ]; then
+            echo "::warning title=Collector partial failure::main.py returned 2 — one or more sources failed but partial output was written. Continuing to commit & push."
+            exit 0
+          else
+            echo "::error title=Collector fatal failure::main.py returned $rc"
+            exit "$rc"
           fi
 
       - name: Detect changes
