@@ -2,7 +2,24 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'analytics', 'events.json');
+// Same fail-safe two-tier path resolution as `/api/analytics/track`. The
+// stats endpoint is read-only so we don't need write probes, just locate
+// whichever sink the tracker chose this process.
+const CANDIDATE_FILES = [
+  path.join(process.cwd(), 'data', 'analytics', 'events.json'),
+  path.join('/tmp', 'hantawatch-analytics', 'events.json'),
+];
+
+function resolveDataFile(): string | null {
+  for (const f of CANDIDATE_FILES) {
+    try {
+      if (fs.existsSync(f)) return f;
+    } catch {
+      // EACCES on /tmp probing — skip silently.
+    }
+  }
+  return null;
+}
 
 interface PageViewEvent {
   page: string;
@@ -13,7 +30,8 @@ interface PageViewEvent {
 }
 
 export async function GET() {
-  if (!fs.existsSync(DATA_FILE)) {
+  const dataFile = resolveDataFile();
+  if (!dataFile) {
     return NextResponse.json({
       totalPV: 0,
       totalUV: 0,
@@ -23,7 +41,21 @@ export async function GET() {
     });
   }
 
-  const events: PageViewEvent[] = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
+  let events: PageViewEvent[];
+  try {
+    events = JSON.parse(fs.readFileSync(dataFile, 'utf-8'));
+  } catch (e) {
+    // Corrupt / unreadable sink — degrade to empty stats instead of 500.
+    // eslint-disable-next-line no-console
+    console.warn('[analytics] stats read failed:', (e as Error).message);
+    return NextResponse.json({
+      totalPV: 0,
+      totalUV: 0,
+      topPages: [],
+      referrers: [],
+      hourlyTraffic: [],
+    });
+  }
 
   // Total PV
   const totalPV = events.length;

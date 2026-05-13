@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { RefreshCw, AlertCircle, CheckCircle2 } from 'lucide-react';
 import type { DataMeta } from '@/lib/data';
 
@@ -9,13 +10,24 @@ interface DataFreshnessProps {
   variant?: 'banner' | 'pill';
 }
 
-/** Best-effort "X hours ago" formatter using Beijing timezone offsets. */
-function relativeFromNow(iso: string): { text: string; staleHours: number } {
+/**
+ * Best-effort "X hours ago" formatter.
+ *
+ * Takes an explicit `now` so callers can pin it to a stable moment —
+ * critical for hydration safety. If we read `Date.now()` here directly,
+ * the server-rendered HTML (computed at request time T1) would disagree
+ * with the client-rendered HTML (computed at hydration time T2), and
+ * React surfaces this as the dreaded #425 "text content does not match
+ * server-rendered HTML" error. The fix: do the formatting only after
+ * mount, when the SSR markup has already been hydrated as-is (we hold
+ * the placeholder until then). See the `useEffect` below.
+ */
+function relativeFromNow(iso: string, now: number): { text: string; staleHours: number } {
   const collected = new Date(iso);
   if (Number.isNaN(collected.getTime())) {
     return { text: '未知', staleHours: Infinity };
   }
-  const diffMs = Date.now() - collected.getTime();
+  const diffMs = now - collected.getTime();
   const diffMin = Math.floor(diffMs / 60_000);
   const diffH = Math.floor(diffMin / 60);
   const diffD = Math.floor(diffH / 24);
@@ -36,7 +48,25 @@ function relativeFromNow(iso: string): { text: string; staleHours: number } {
  * see whether the dashboard reflects current reality or stale snapshots.
  */
 export function DataFreshness({ meta, variant = 'pill' }: DataFreshnessProps) {
-  const { text, staleHours } = relativeFromNow(meta.lastCollectedAt);
+  // Defer the relative-time calculation until after mount, otherwise the
+  // server-rendered "X分钟前" almost certainly disagrees with what the
+  // client renders seconds (or for PWA-cached visits, minutes) later.
+  // Until mount, we show a stable placeholder ("—") that the server can
+  // emit and the client can hydrate without complaining. After the first
+  // tick, we swap in the real relative time. See the comment on
+  // `relativeFromNow` for the chapter and verse on React error #425.
+  const [now, setNow] = useState<number | null>(null);
+  useEffect(() => {
+    setNow(Date.now());
+    // Refresh every minute so a long-lived tab doesn't show "刚刚" forever.
+    const t = setInterval(() => setNow(Date.now()), 60_000);
+    return () => clearInterval(t);
+  }, []);
+
+  const { text, staleHours } =
+    now === null
+      ? { text: '—', staleHours: 0 }
+      : relativeFromNow(meta.lastCollectedAt, now);
   const sources = meta.sources;
   const whoOk = sources.who_don?.ok ?? false;
   const ecdcOk = sources.ecdc?.ok ?? false;

@@ -2,6 +2,23 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
+  // 2026-05-13: We had reports that a freshly deployed build was still
+  // showing yesterday's "最新通报" feed for an hour or more. Root cause:
+  // next-pwa's default Workbox install waits for ALL tabs of the site to
+  // close before activating the new service worker. Most users have the
+  // site as a pinned tab and never do that.
+  //
+  // `skipWaiting` makes the new SW activate immediately (post-`waiting`),
+  // and `clientsClaim` makes it take over any open tabs without a hard
+  // reload. The trade-off — a brief flash of "old assets fetched against
+  // new SW" — is acceptable because:
+  //   1. our JSON data files are cache-busted at build time (Next.js
+  //      hashes them into the build chunks), so an old client never
+  //      mixes new-server JSON with old-client React,
+  //   2. the alternative (silently serving yesterday's outbreak data) is
+  //      a worse UX than a single soft-refresh.
+  skipWaiting: true,
+  clientsClaim: true,
 });
 
 const isProd = process.env.NODE_ENV === 'production';

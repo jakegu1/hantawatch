@@ -140,8 +140,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
             </div>
+            {/*
+              `new Date().getFullYear()` is fine here at request time, but
+              `suppressHydrationWarning` keeps React from yelling when a
+              user crosses midnight UTC while the page sits in their tab,
+              or when the build was made in a different year than the
+              current request (e.g. cached / poster CDN edge). The diff
+              would be a single digit and React error #425 would surface
+              in the console — not worth the noise.
+            */}
             <div className="mt-8 border-t border-gray-200 pt-4 text-center text-xs">
-              &copy; {new Date().getFullYear()} 汉坦观察 HantaWatch. 数据来源见各页面标注。
+              <span suppressHydrationWarning>
+                &copy; {new Date().getFullYear()} 汉坦观察 HantaWatch. 数据来源见各页面标注。
+              </span>
             </div>
           </div>
         </footer>
