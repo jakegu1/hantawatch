@@ -94,14 +94,25 @@ export default function DataPage() {
       <div className="card">
         <h2 className="font-semibold text-lg mb-4">最新通报</h2>
         <div className="space-y-4">
-          {recentCases.map((c) => (
+          {recentCases.map((c) => {
+            // International records carry `title` (+ optional `summary`);
+            // domestic records carry `notes`. Fall through both so the row
+            // is never empty. For news-confidence entries we skip the
+            // summary block entirely — see lib/news-format.ts for why.
+            const isNewsLead = c.source?.confidence === 'news';
+            const bodyText = c.title ?? c.notes ?? '';
+            const summaryText = !isNewsLead && c.summary ? c.summary : '';
+            return (
             <div key={c.id} className="flex gap-3 border-l-2 border-brand-200 pl-4">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-xs font-medium text-brand-700">{c.date}</span>
-                  <span className="text-xs text-gray-400">{c.source.name} · {c.source.confidence === 'official' ? '官方通报' : '其他'}</span>
+                  <span className="text-xs text-gray-400">{c.source.name} · {c.source.confidence === 'official' ? '官方通报' : '新闻线索'}</span>
                 </div>
-                <p className="text-sm text-gray-700">{c.notes}</p>
+                <p className="text-sm text-gray-700">{bodyText}</p>
+                {summaryText && (
+                  <p className="text-xs text-gray-500 mt-1 leading-relaxed">{summaryText}</p>
+                )}
                 {/* Link policy (see lib/link-policy.ts): mainland sources
                     render as anchor; overseas (incl. Taiwan/HK/WHO/ECDC/
                     Reuters/news.google.com …) render as plain text so we
@@ -127,7 +138,8 @@ export default function DataPage() {
                 )}
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

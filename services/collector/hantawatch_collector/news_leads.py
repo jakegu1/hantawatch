@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import logging
 import re
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from urllib.parse import parse_qs, urlparse
@@ -57,11 +58,11 @@ QUERIES: tuple[tuple[str, str, str], ...] = (
 )
 
 # Blocklist — patterns appearing in titles that nearly always indicate
-# false-positive coverage (lifestyle pieces, historic retrospectives, etc.).
-# All matching is case-insensitive.
+# false-positive coverage (lifestyle pieces, historic retrospectives,
+# generic explainers, etc.). All matching is case-insensitive.
 TITLE_BLOCKLIST = (
-    "movie", "film", "documentary",         # entertainment
-    "trailer", "tv series", "netflix",      # entertainment
+    "movie", "film", "documentary",          # entertainment
+    "trailer", "tv series", "netflix",       # entertainment
     "metaphor", "metaphorical",              # virus used metaphorically (politics)
     "stock", "investor", "ipo", "etf",       # finance pieces mentioning ticker name
     "cryptocurrency", "crypto", "nft", "token",
@@ -70,6 +71,15 @@ TITLE_BLOCKLIST = (
     "rumor", "fact check", "fact-check", "debunk",
     "opinion:", "editorial:",                # opinion pieces (low signal)
     "throwback", "this day in history",
+    # Generic Chinese explainer / advice pieces — high recall on
+    # "汉坦病毒是什么？" or "怎么预防汉坦病毒" type SEO articles that crowd
+    # out actual case-event news. We do NOT block "科普" outright because
+    # legitimate state-media briefings sometimes carry it; instead we
+    # block only the most blatantly evergreen patterns.
+    "是什么", "什么是",                      # 'what is X' explainer
+    "怎么办", "怎么预防",                    # 'what to do / how to prevent'
+    "完全指南", "全攻略",                    # 'complete guide / strategy'
+    "百问百答", "十问十答",                  # FAQ collections
 )
 
 # Inclusion hints — at least one of these terms must appear (in title or
@@ -180,6 +190,62 @@ def _parse_source_outlet(entry: dict) -> str:
     return m.group(1).strip()[:80] if m else ""
 
 
+# Match a trailing " - outlet name" / " | outlet name" / " — outlet name"
+# tail at the end of a Google News headline. Constrained so we don't chop
+# off legitimate hyphenated content (e.g. "PCR-confirmed cases").
+#
+# Rules: separator surrounded by optional whitespace, then 1–40 chars that
+# don't themselves contain a separator. 40 is an empirical cap — outlet
+# names like "World Health Organization (WHO)" are ~30 chars, which fits.
+_TRAILING_SOURCE_RE = re.compile(
+    r"\s*[\-\u2013\u2014|]\s*[^\-\u2013\u2014|]{1,40}$"
+)
+
+
+def strip_trailing_source(title: str) -> str:
+    """Remove the trailing ` - outlet` tag Google News appends to every
+    headline. We display the outlet separately via `source_outlet`, so the
+    title alone reads cleaner ('汉坦病毒是什么？ - thepaper.cn' →
+    '汉坦病毒是什么？').
+    """
+    if not title:
+        return title
+    cleaned = _TRAILING_SOURCE_RE.sub("", title).strip()
+    # Defensive: never return an empty string — if the regex would chew the
+    # whole title (rare, but possible for one-word foreign-language items),
+    # keep the original.
+    return cleaned or title
+
+
+def title_dedup_key(title: str) -> str:
+    """Normalize a title so two headlines reporting the same story under
+    different outlets collapse to the same key.
+
+    Pipeline:
+      1. strip trailing ' - outlet' tag,
+      2. NFKC unicode normalize (full-width digits, ligatures, etc.),
+      3. lowercase,
+      4. drop all non-letter / non-digit characters (whitespace,
+         punctuation including CJK ones, emoji).
+
+    Examples:
+      '世卫组织：应对汉坦病毒疫情工作"还未结束" - 天津日报'
+      '世卫组织：应对汉坦病毒疫情工作"还未结束" - 新华网'
+        → both → '世卫组织应对汉坦病毒疫情工作还未结束'
+
+    Note: Python 3's `re` with default UNICODE flag treats CJK as word
+    characters, so `\\W` correctly strips punctuation/spaces while keeping
+    Chinese/Japanese/Korean characters. Tested against the headlines that
+    motivated this helper.
+    """
+    if not title:
+        return ""
+    s = strip_trailing_source(title)
+    s = unicodedata.normalize("NFKC", s).lower()
+    s = re.sub(r"\W+", "", s, flags=re.UNICODE)
+    return s
+
+
 def _is_blocked(title: str) -> bool:
     t = title.lower()
     return any(b in t for b in TITLE_BLOCKLIST)
@@ -226,6 +292,10 @@ def fetch_news_leads(
     """
     all_leads: list[NewsLead] = []
     seen_links: set[str] = set()
+    # Cross-outlet title dedup. Two outlets reporting the same Tedros
+    # statement under headlines that differ only in their ' - outlet' tag
+    # will hash to the same key and only one will be kept.
+    seen_title_keys: set[str] = set()
     # Per-query diagnostics — surfaced to the orchestrator/meta.json
     diagnostics: list[dict] = []
 
@@ -274,16 +344,37 @@ def fetch_news_leads(
                     d_stats["duplicate"] += 1
                     continue
 
-                summary = re.sub(r"<[^>]+>", " ", raw.get("summary", "")).strip()
+                # Cross-outlet dedup — strips the ' - outlet' suffix and
+                # punctuation, so the same Tedros statement carried by
+                # 天津日报 and 新华网 collapses to a single entry.
+                tkey = title_dedup_key(title)
+                if tkey and tkey in seen_title_keys:
+                    d_stats["duplicate"] += 1
+                    continue
+
+                # Google News stuffs the <description> with a concatenation
+                # of every related headline ("[title] &nbsp;&nbsp; [outlet]
+                # [title2] &nbsp;&nbsp; [outlet2] …"), which renders as a
+                # wall of confusing text in the UI. We deliberately discard
+                # it — the title alone carries the signal, and the outlet
+                # name is already shown separately. WHO DON / ECDC entries
+                # still keep their summaries (they go through a different
+                # build path in builder.py).
+                #
+                # We still parse the raw summary briefly to evaluate the
+                # epi-signal hint, but never store it on the NewsLead.
+                raw_summary = re.sub(r"<[^>]+>", " ", raw.get("summary", "")).strip()
 
                 # Drop entries with no epidemiological signal — keeps the
                 # feed focused on case events instead of background research,
                 # commemorative posts, or trivia.
-                if not _has_epidemic_signal(f"{title} {summary}"):
+                if not _has_epidemic_signal(f"{title} {raw_summary}"):
                     d_stats["no_signal"] += 1
                     continue
 
                 seen_links.add(link)
+                if tkey:
+                    seen_title_keys.add(tkey)
                 d_stats["kept"] += 1
 
                 pp = raw.get("published_parsed") or raw.get("updated_parsed")
@@ -292,18 +383,20 @@ def fetch_news_leads(
                 )
 
                 # Apply Taiwan -> Taiwan Province rewrite per editorial policy,
-                # to both title and summary, BEFORE storing.
-                title = normalise_taiwan_naming(title)
-                summary = normalise_taiwan_naming(summary)
+                # to title BEFORE storing. Strip the trailing ' - outlet' tag
+                # too; we display the outlet separately so it's redundant in
+                # the title. (Summary is intentionally cleared above.)
+                clean_title = normalise_taiwan_naming(strip_trailing_source(title))
                 outlet = normalise_taiwan_naming(_parse_source_outlet(raw))
 
                 all_leads.append(
                     NewsLead(
-                        id=_normalise_id(link, title),
-                        title=title,
+                        id=_normalise_id(link, clean_title),
+                        title=clean_title,
                         link=link,
                         published=published,
-                        summary=summary[:500],
+                        # Empty by design — see comment above.
+                        summary="",
                         source_outlet=outlet,
                         query=query,
                     )

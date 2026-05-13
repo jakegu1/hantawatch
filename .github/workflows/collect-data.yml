@@ -92,12 +92,50 @@ jobs:
 
       - name: Commit & push
         if: steps.changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        # The job's checkout happened ~3-7 minutes ago. If a human pushed in
+        # that window (e.g. me committing a code fix), `git push` will fail
+        # with a non-fast-forward error and the whole job is marked failed
+        # — even though the data update itself is fine and merely needs to
+        # be rebased on top of the human commit.
+        #
+        # We handle that race by retrying up to 3 times: each retry does
+        # `git fetch + git rebase origin/main` (the bot's commit is a data-
+        # only diff under apps/web/src/data, so it virtually never has
+        # textual conflicts with code commits). 3 attempts is plenty —
+        # if it still fails, something more serious is wrong and we should
+        # surface the error.
         run: |
           git config user.name "hantawatch-bot"
           git config user.email "bot@bingduguancha.com"
           git add apps/web/src/data
+          # Belt-and-braces against the rare case where `git status` saw
+          # changes but `git add` ended up with an empty index (file mode
+          # changes etc.). Better to skip than to create empty commits.
+          if git diff --cached --quiet; then
+            echo "Nothing staged after add; skipping commit."
+            exit 0
+          fi
           git commit -m "chore(data): auto-update from WHO/ECDC $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push
+
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "::warning title=Push race::Attempt $attempt failed (non-fast-forward). Rebasing and retrying."
+            # Drop and re-fetch in case the local main ref drifted.
+            git fetch origin main
+            # The bot's commit only touches apps/web/src/data — code commits
+            # touch other paths. `rebase` here is essentially equivalent to
+            # a fast-forward + replay of one commit, no conflicts expected.
+            if ! git rebase origin/main; then
+              echo "::error title=Rebase failed::Unexpected conflict during rebase. Aborting."
+              git rebase --abort || true
+              exit 1
+            fi
+          done
+          echo "::error title=Push failed::Could not push after 3 attempts."
+          exit 1
 
       - name: Job summary
         if: always()

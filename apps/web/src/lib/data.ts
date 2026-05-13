@@ -19,6 +19,7 @@
  */
 
 import type { ActiveCluster, CaseRecord, HpiResult, SerotypeId } from '@hantawatch/shared';
+import { cleanNewsTitle, dedupByTitle } from './news-format';
 
 import activeClustersJson from '@/data/active-clusters.json';
 import recentCasesIntlJson from '@/data/recent-cases-intl.json';
@@ -107,17 +108,42 @@ const chinaCases: RecentCase[] = (recentCasesChinaJson.cases as CaseRecord[]).ma
  */
 const intlCases: RecentCase[] = (
   recentCasesIntlJson.cases as Array<CaseRecord & { title?: string; summary?: string }>
-).map((c) => ({
-  ...c,
-  scope: 'international' as const,
-}));
+).map((c) => {
+  // Render-time normalisation for news-confidence entries
+  // (see lib/news-format.ts for rationale):
+  //
+  //   - strip the trailing ' - outlet' tag from titles (Google News
+  //     appends it to every headline; we already show the outlet
+  //     separately so the suffix in the title is redundant + ugly),
+  //
+  //   - clear the summary: Google News stuffs the <description> with a
+  //     concatenation of every related-story headline + outlet name,
+  //     which renders as a confusing wall of text. The title alone
+  //     carries the signal for news entries.
+  //
+  // Official entries (WHO DON, ECDC) get their summary left intact —
+  // those are well-formed by the publisher.
+  const isNews = c.source?.confidence === 'news';
+  return {
+    ...c,
+    title: isNews && c.title ? cleanNewsTitle(c.title) : c.title,
+    summary: isNews ? '' : c.summary,
+    scope: 'international' as const,
+  };
+});
 
 /**
  * Merged, sorted (newest first) timeline. Domestic + international.
+ *
+ * After sorting we run a title-key dedup pass so the same wire story
+ * republished by multiple outlets (e.g. a Tedros statement appearing
+ * under both 天津日报 and 新华网) collapses to a single row, keeping
+ * the newest occurrence. See `news-format.ts#dedupByTitle`.
+ *
  * Page rendering decides how to label and emphasise serotype/distance.
  */
-export const recentCases: RecentCase[] = [...intlCases, ...chinaCases].sort((a, b) =>
-  b.date.localeCompare(a.date),
+export const recentCases: RecentCase[] = dedupByTitle(
+  [...intlCases, ...chinaCases].sort((a, b) => b.date.localeCompare(a.date)),
 );
 
 // ---- Pipeline meta --------------------------------------------------------

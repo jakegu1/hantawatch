@@ -398,7 +398,22 @@ export default function HomePage() {
                   : { label: '国内通报', cls: 'badge-low' };
 
               const title = c.title ?? c.notes ?? '';
-              const subtitle = c.summary ?? (isAndes ? '安第斯型为唯一确认可人传人的汉坦病毒，需持续关注' : '该血清型不具备人际传播能力');
+              // Subtitle rules:
+              //   - News leads: never show a summary line. Google News's
+              //     <description> is structurally noisy (story-bundle
+              //     concat of multiple headlines); the title alone is
+              //     enough. See lib/news-format.ts.
+              //   - Official entries (WHO DON / ECDC): show their summary
+              //     if present; it's hand-written by the publisher.
+              //   - Domestic / fallback: show the canned serotype hint so
+              //     the row never reads as a bare title.
+              const subtitle = isNewsLead
+                ? null
+                : c.summary
+                  ? c.summary
+                  : isAndes
+                    ? '安第斯型为唯一确认可人传人的汉坦病毒，需持续关注'
+                    : '该血清型不具备人际传播能力';
 
               return (
                 <li key={c.id} className={`flex gap-3 border-l-2 pl-4 -mx-2 px-4 py-2 rounded-r-lg ${accentClass}`}>
