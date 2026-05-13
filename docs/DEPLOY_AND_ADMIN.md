@@ -41,23 +41,23 @@ GitHub │ jakegu1/hantawatch    │  代码 + JSON 数据的唯一真相源
 
 ---
 
-## 1. 上传到 GitHub
+## 1. 上传到 GitHub ✅ 已完成
 
-你已经登录 `gh` CLI（账号 `jakegu1`）。我会代跑一条龙，但你可以自己读一遍确认每条命令的意图。
+仓库已建好：**https://github.com/jakegu1/hantawatch**（public，main 分支）。
 
-> **重要**：本仓库选择 **public**。在跑命令前，请最后确认 `apps/web/src/data/*.json` 里没有任何不想公开的内容（目前都是 WHO 公开数据 + 公开统计，无问题）。
-
-我会替你跑的命令（你看到下面这一条对话时它们就会执行）：
+如果你想了解我跑了什么（重做或迁移时备用）：
 
 ```powershell
 cd d:\Work\Hanta
 git init -b main
 git add .
-git commit -m "feat: initial HantaWatch v1.2 (collector + map + poster + supabase)"
-gh repo create jakegu1/hantawatch --public --source=. --description "汉坦病毒预警与信息平台 · 了解，而非恐慌" --homepage "https://hantawatch.cn" --push
-```
+git commit -m "feat: initial HantaWatch v1.2"
+gh repo create jakegu1/hantawatch --public --source=. --push
 
-跑完后访问：`https://github.com/jakegu1/hantawatch`
+# 给 GitHub Action 写权限（让它能自动 commit 数据更新）
+gh api repos/jakegu1/hantawatch/actions/permissions/workflow `
+  --method PUT -f default_workflow_permissions=write
+```
 
 ### 1.1 后续日常 git 操作
 
@@ -211,11 +211,11 @@ Vercel Hobby 计划没有项目数量上限，但有：
 
 ## 4. GitHub Actions（自动采集 WHO / ECDC）
 
-无需配置。仓库一旦 push 到 GitHub，Action 自动生效。第一次需要给它写权限：
+**写权限我已经替你打开了**（通过 `gh api`，见 §1）。剩下只需要：
 
-1. github.com/jakegu1/hantawatch → Settings → Actions → General
-2. 滚到底 **Workflow permissions** → 改成 **Read and write permissions** → Save
-3. 回到 Actions 页 → 点 "Collect data (WHO DON + ECDC)" → "Run workflow" → Run（首次手动跑一次确认能跑通）
+1. github.com/jakegu1/hantawatch → Actions → 点 "Collect data (WHO DON + ECDC)" → "Run workflow" → Run（首次手动跑一次确认能跑通）
+
+之后每 6 小时自动跑（北京时间 04:00 / 10:00 / 16:00 / 22:00）。
 
 跑完后看：
 - Actions 那次 run 的右上角 Summary，会贴 `meta.json` 摘要
