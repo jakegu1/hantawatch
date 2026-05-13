@@ -1,0 +1,16 @@
+{
+  "name": "hantawatch",
+  "private": true,
+  "description": "汉坦观察 (HantaWatch) — 面向中文用户的汉坦病毒预警与信息平台",
+  "scripts": {
+    "dev": "pnpm --filter @hantawatch/web dev",
+    "build": "pnpm --filter @hantawatch/web build",
+    "lint": "pnpm --filter @hantawatch/web lint",
+    "check": "pnpm --filter @hantawatch/web check",
+    "clean": "pnpm -r exec rm -rf .next dist node_modules"
+  },
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20"
+  }
+}

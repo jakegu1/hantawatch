@@ -1,0 +1,14 @@
+# Normalize line endings inside the repo to LF.
+# Windows checkouts can still see CRLF locally; CI sees LF; diff stays clean.
+* text=auto eol=lf
+
+# Binary / generated files we never want diffed
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+pnpm-lock.yaml -diff

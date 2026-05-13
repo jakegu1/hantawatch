@@ -1,0 +1,83 @@
+import type { Serotype } from '../types';
+
+export const SEROTYPES: Record<string, Serotype> = {
+  hantaan: {
+    id: 'hantaan',
+    nameZh: '汉滩型',
+    nameEn: 'Hantaan',
+    primaryHost: '黑线姬鼠 (Apodemus agrarius)',
+    transmission: ['气溶胶（吸入含病毒鼠排泄物粉尘）', '接触带毒鼠类或其排泄物', '破损皮肤/黏膜接触'],
+    humanToHuman: false,
+    fatalityRate: '5-15%',
+    mainRegions: ['中国（东北、华北、华中）', '韩国', '俄罗斯远东'],
+    description: '汉滩病毒是肾综合征出血热（HFRS）的主要病原体之一，1976年首次在韩国汉滩河流域分离。中国是受汉滩型影响最严重的国家，每年报告大量HFRS病例。主要由黑线姬鼠传播，农村和农业地区为高风险区域。',
+    color: '#dc2626',
+  },
+  seoul: {
+    id: 'seoul',
+    nameZh: '汉城型',
+    nameEn: 'Seoul',
+    primaryHost: '褐家鼠 (Rattus norvegicus)',
+    transmission: ['气溶胶', '接触带毒鼠类或其排泄物', '鼠咬伤'],
+    humanToHuman: false,
+    fatalityRate: '1-2%',
+    mainRegions: ['全球城市区域', '中国（城市为主）', '韩国', '日本', '欧美港口城市'],
+    description: '汉城病毒由褐家鼠（城市常见鼠种）携带，是全球分布最广的汉坦病毒。与汉滩型相比，汉城型引起的疾病通常较轻，病死率较低。城市居民、码头工人、宠物鼠饲养者为高风险人群。',
+    color: '#ea580c',
+  },
+  puumala: {
+    id: 'puumala',
+    nameZh: '普马拉型',
+    nameEn: 'Puumala',
+    primaryHost: '堤岸田鼠/岸䶄 (Myodes glareolus)',
+    transmission: ['气溶胶（吸入含病毒鼠排泄物粉尘）'],
+    humanToHuman: false,
+    fatalityRate: '<1%',
+    mainRegions: ['北欧（芬兰、瑞典）', '中欧', '俄罗斯西部', '中国（东北局部）'],
+    description: '普马拉病毒引起的疾病称为流行性肾病（Nephropathia Epidemica），是欧洲最常见的汉坦病毒类型，症状较HFRS轻。主要由岸䶄传播，多见于森林和农村地区。',
+    color: '#2563eb',
+  },
+  sin_nombre: {
+    id: 'sin_nombre',
+    nameZh: '辛诺柏型',
+    nameEn: 'Sin Nombre',
+    primaryHost: '鹿鼠 (Peromyscus maniculatus)',
+    transmission: ['气溶胶（吸入含病毒鼠排泄物粉尘）'],
+    humanToHuman: false,
+    fatalityRate: '30-40%',
+    mainRegions: ['美国（西部、西南部）', '加拿大', '墨西哥'],
+    description: '辛诺柏病毒引起汉坦病毒肺综合征（HPS），1993年在美国四角地区首次发现。虽然病例数远少于HFRS，但病死率极高（30-40%）。HPS的初期症状类似流感，但迅速发展为严重的呼吸衰竭。',
+    color: '#7c3aed',
+  },
+  andes: {
+    id: 'andes',
+    nameZh: '安第斯型',
+    nameEn: 'Andes',
+    primaryHost: '长尾矮鼠 (Oligoryzomys longicaudatus)',
+    transmission: ['气溶胶', '接触带毒鼠类', '★ 人际传播（密切接触）'],
+    humanToHuman: true,
+    fatalityRate: '30-40%',
+    mainRegions: ['阿根廷', '智利', '南美洲安第斯地区'],
+    description: '安第斯病毒是已知唯一确认具备人际传播能力的汉坦病毒，可引起HPS。1995年在阿根廷首次发现。人际传播主要通过密切接触（家庭成员、医护人员）。2026年5月在南美洲海域MV Hondius邮轮上出现聚集性疫情，引发全球关注。它是目前对全球公共卫生威胁最大的汉坦病毒血清型。',
+    color: '#be185d',
+  },
+} as const;
+
+/** Display order for serotypes — ranked by concern level (most dangerous first) */
+export const SEROTYPE_RANK_ORDER: Array<keyof typeof SEROTYPES> = [
+  'andes',       // 🔴 高危 — 人际传播 + 高病死率 + 当前有活跃疫情
+  'sin_nombre',  // 🟠 警惕 — 高病死率(30-40%)，HPS，无人际传播
+  'hantaan',     // 🟡 地方性流行 — 中国主要HFRS病原体，无人际传播
+  'seoul',       // 🟢 常规监测 — 全球城市分布，低病死率
+  'puumala',     // ⚪ 低风险 — 欧洲为主，极低病死率，中国极少
+];
+
+/** Risk weights for HPI calculation — serotype intrinsic danger */
+export const SEROTYPE_RISK_WEIGHTS: Record<string, number> = {
+  andes: 100,
+  sin_nombre: 85,
+  hantaan: 30,
+  seoul: 20,
+  puumala: 5,
+  other: 15,
+};

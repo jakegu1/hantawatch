@@ -1,0 +1,18 @@
+{
+  "name": "汉坦观察 HantaWatch",
+  "short_name": "汉坦观察",
+  "description": "了解，而非恐慌 — 汉坦病毒预警与信息平台",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

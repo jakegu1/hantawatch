@@ -1,0 +1,86 @@
+{
+  "__generated_by": "hantawatch-collector@0.1.0 (seed, MV Hondius detail)",
+  "__generated_at": "2026-05-12T00:00:00Z",
+  "cases": [
+    {
+      "id": "ecdc-2026-05-12",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-12",
+      "caseType": "confirmed",
+      "count": 11,
+      "title": "ECDC 监测更新：9 例确诊 + 2 例疑似，对 EU/EEA 公众风险维持极低",
+      "summary": "ECDC 专项更新将本次集群实验室确诊数提升至 9 例（较 5 月 11 日 +2），疑似 2 例，死亡 3 例，病死率约 27%。法国 22 名密切接触者 PCR 仍全部阴性。",
+      "source": {
+        "name": "ECDC 监测更新",
+        "url": "https://www.ecdc.europa.eu/en/infectious-disease-topics/hantavirus-infection/surveillance-and-updates/andes-hantavirus-outbreak",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "ecdc-2026-05-11-disembark",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-11",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮下船完成 — 最后 28 人撤离",
+      "summary": "西班牙海岸警卫队监督下，邮轮全部 147 人在加纳利特内里费港下船完毕。剩余船员将驶往鹿特丹消毒。22 个国家分别接收本国侨民进入隔离观察。",
+      "source": {
+        "name": "France 24",
+        "url": "https://www.france24.com/fr/europe/20260511-en-direct-un-americain-passager-du-mv-hondius-teste-positif-hantavirus-canaries-debarquement",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "media"
+      }
+    },
+    {
+      "id": "cdc-han-528",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-11",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "CDC HAN-528：3 级应急响应，美方将被运至内布拉斯加生物防护单元",
+      "summary": "美国 CDC 发布健康警报网络通告 528 号，将事件分级为 Level 3 应急（最低级），强调对美国公众风险极低。美方乘客在奥马哈国家隔离中心接受 42 天观察。",
+      "source": {
+        "name": "US CDC",
+        "url": "https://www.cdc.gov/han/php/notices/han00528.html",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "virological-genome",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-08",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "完整基因组序列公开发布",
+      "summary": "Andes 毒株（命名 ANDV/Switzerland/Hu-3337/2026）全基因组序列在 Virological.org 公开。系统发育分析提示为单一动物→人溢出事件起源，各患者间序列高度相似。",
+      "source": {
+        "name": "Virological.org",
+        "url": "https://virological.org",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "academic"
+      }
+    },
+    {
+      "id": "who-2026-don599",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-04",
+      "caseType": "confirmed",
+      "count": 7,
+      "title": "WHO DON-599：基因测序确认安第斯型汉坦病毒",
+      "summary": "WHO 发布疾病暴发新闻 599 号，确认病原体为安第斯（Andes）型汉坦病毒。对全球公众风险评估为低。",
+      "source": {
+        "name": "WHO Disease Outbreak News",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "official"
+      }
+    }
+  ]
+}

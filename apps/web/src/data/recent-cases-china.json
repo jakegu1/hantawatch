@@ -1,0 +1,38 @@
+{
+  "__manualFile": true,
+  "__editedBy": "human",
+  "__updateGuide": "见 docs/DATA_OPS.md 第 3 节。中国国内通报由人工从省卫健委网站/微信公众号摘录。最新通报放最上面。",
+  "lastEditedAt": "2026-05-12",
+  "cases": [
+    {
+      "id": "case-2026-05-11-01",
+      "regionCode": "610000",
+      "serotypeId": "hantaan",
+      "date": "2026-05-11",
+      "caseType": "confirmed",
+      "count": 1,
+      "source": {
+        "name": "陕西省卫健委",
+        "url": "https://sxwjw.shaanxi.gov.cn",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "official"
+      },
+      "notes": "患者为农业从业人员，已隔离治疗"
+    },
+    {
+      "id": "case-2026-05-08-01",
+      "regionCode": "230000",
+      "serotypeId": "seoul",
+      "date": "2026-05-08",
+      "caseType": "confirmed",
+      "count": 1,
+      "source": {
+        "name": "黑龙江省卫健委",
+        "url": "https://wsjkw.hlj.gov.cn",
+        "retrievedAt": "2026-05-12T00:00:00Z",
+        "confidence": "official"
+      },
+      "notes": "城市居民，疑因接触褐家鼠感染"
+    }
+  ]
+}

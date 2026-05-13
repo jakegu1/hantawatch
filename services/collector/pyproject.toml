@@ -1,0 +1,31 @@
+[project]
+name = "hantawatch-collector"
+version = "0.1.0"
+description = "数据采集管道 — 定时采集官方汉坦病毒数据"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.0",
+    "pydantic>=2.10.0",
+    "python-dotenv>=1.1.0",
+    "feedparser>=6.0.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.3.0",
+]
+
+[project.optional-dependencies]
+heavy = [
+    # Reserved for future expansion that needs browser automation / scrapy.
+    "scrapy>=2.12.0",
+    "playwright>=1.50.0",
+]
+dev = [
+    "ruff>=0.9.0",
+    "mypy>=1.14.0",
+    "pytest>=8.3.0",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N"]

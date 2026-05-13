@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /data
+Allow: /wiki
+Allow: /guide
+Allow: /about
+Disallow: /api/
+Disallow: /admin
+
+Sitemap: https://hantawatch.cn/sitemap.xml

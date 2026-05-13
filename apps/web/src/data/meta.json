@@ -1,0 +1,12 @@
+{
+  "__generated_by": "hantawatch-collector@0.1.0 (seed)",
+  "__generated_at": "2026-05-12T00:00:00Z",
+  "lastCollectedAt": "2026-05-12T00:00:00Z",
+  "sources": {
+    "who_don": { "entries": 2, "ok": true },
+    "ecdc": { "ok": true }
+  },
+  "clusterCount": 1,
+  "manualFiles": ["china-baseline.json", "recent-cases-china.json"],
+  "yesterdayNearestDistanceKm": 18800
+}

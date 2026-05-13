@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # PostgreSQL with PostGIS
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: hantawatch
+      POSTGRES_PASSWORD: hantawatch_dev
+      POSTGRES_DB: hantawatch
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # Redis for caching
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
+
+  # MeiliSearch for full-text search
+  meilisearch:
+    image: getmeili/meilisearch:v1.10
+    environment:
+      MEILI_MASTER_KEY: dev_master_key
+      MEILI_NO_ANALYTICS: 'true'
+    ports:
+      - '7700:7700'
+    volumes:
+      - meili_data:/meili_data
+
+volumes:
+  pgdata:
+  meili_data:
