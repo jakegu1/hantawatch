@@ -1,9 +1,10 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
 import { calculateHpi } from '@/lib/hpi';
-import { SEROTYPES } from '@hantawatch/shared';
+import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
 import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { TrendChart } from '@/components/trend-chart';
@@ -37,8 +38,39 @@ function distanceRingBg(km: number): string {
 }
 
 export default function HomePage() {
+  // ────────────────────────────────────────────────────────────────────
+  //  Live cluster data — see lib/cluster-overrides.ts for the story.
+  //
+  //  Initial state: the static JSON baked at build time (instant paint,
+  //  works even with JS disabled / Supabase unreachable).
+  //  After mount: fetch /api/clusters which merges in any editorial
+  //  overrides saved from /admin/审核队列. Re-render on success.
+  //
+  //  We deliberately don't show a loading spinner — the baseline JSON is
+  //  good enough as a first paint, and the override fetch typically
+  //  finishes in <200 ms so the swap is imperceptible.
+  // ────────────────────────────────────────────────────────────────────
+  const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(activeClusters);
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/clusters', { cache: 'no-store', credentials: 'same-origin' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (cancelled) return;
+        if (data && Array.isArray(data.clusters) && data.clusters.length > 0) {
+          setLiveClusters(data.clusters as ActiveCluster[]);
+        }
+      })
+      .catch(() => {
+        /* baseline JSON stays — that's the desired fallback */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const hpi = currentHpi;
-  const cluster = activeClusters[0];
+  const cluster = liveClusters[0];
 
   const liveHpi = calculateHpi({
     distanceKm: cluster.distanceFromChinaKm,
@@ -81,7 +113,9 @@ export default function HomePage() {
                 <div className="hidden sm:flex flex-wrap gap-2 mt-3 text-xs">
                   <span className="rounded-full bg-red-400/25 px-3 py-1 font-medium text-red-100">⚠ 可人际传播</span>
                   <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">病死率 30-40%</span>
-                  <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">7例确诊 · 3例死亡</span>
+                  <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">
+                    {cluster.confirmedCases}例确诊 · {cluster.deaths}例死亡
+                  </span>
                 </div>
               </div>
             </div>
@@ -133,7 +167,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
               <div className="text-base sm:text-xl font-bold leading-none">
-                {activeClusters.reduce((s, c) => s + c.confirmedCases, 0)}
+                {liveClusters.reduce((s, c) => s + (c.confirmedCases ?? 0), 0)}
               </div>
               <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">全球活跃确诊</div>
             </div>

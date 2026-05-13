@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { currentHpi, activeClusters, recentCases } from '@/lib/mock-data';
+import { currentHpi } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
 import { DataFreshness } from '@/components/data-freshness';
+import { ClusterReviewQueue } from '@/components/cluster-review-queue';
 import {
-  AlertTriangle, CheckCircle, BarChart3, MessageSquare, Settings,
+  CheckCircle, BarChart3, MessageSquare, Settings,
   Mail, Download, RefreshCw, LogOut,
 } from 'lucide-react';
 
@@ -191,35 +192,10 @@ export default function AdminPage() {
         ))}
       </div>
 
-      {/* Review Queue */}
-      {activeTab === 'review' && (
-        <div className="space-y-4">
-          <div className="card">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="font-semibold">待审核条目</h2>
-              <span className="badge bg-yellow-100 text-yellow-800">2 条待审</span>
-            </div>
-            {recentCases.map((c) => (
-              <div key={c.id} className="flex items-start gap-4 p-3 border-b border-gray-100 last:border-0">
-                <AlertTriangle className="h-5 w-5 text-yellow-500 mt-0.5 flex-shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-medium text-gray-500">{c.date}</span>
-                    <span className="text-xs text-gray-400">{c.source.name}</span>
-                    <span className="badge bg-yellow-100 text-yellow-700 text-[10px]">待审核</span>
-                  </div>
-                  <p className="text-sm text-gray-700">{c.notes}</p>
-                  <div className="flex gap-2 mt-2">
-                    <button className="text-xs px-3 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors">通过</button>
-                    <button className="text-xs px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors">驳回</button>
-                    <button className="text-xs px-3 py-1 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition-colors">编辑</button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Review Queue — real editor for cluster case counts.
+          Backed by Supabase (cluster_overrides table); homepage live-fetches
+          via /api/clusters and re-renders within a second of save. */}
+      {activeTab === 'review' && <ClusterReviewQueue />}
 
       {/* HPI Factor Management */}
       {activeTab === 'hpi' && (
