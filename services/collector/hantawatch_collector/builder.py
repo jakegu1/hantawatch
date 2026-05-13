@@ -31,9 +31,27 @@ def _today_cn() -> date:
 
 
 # -- Cluster registry ------------------------------------------------------
-# WHO DON entries don't include lat/lng. The collector holds a small curated
-# registry mapping DON IDs to geographic facts. Add a new entry here when
-# WHO publishes a fresh outbreak.
+# WHO DON entries don't include lat/lng (or, often, an interpretable
+# serotype — the 2026-05 hanta cruise DONs are titled generically
+# "Hantavirus cluster linked to cruise ship travel" with no mention of
+# "Andes" in title or summary). The collector holds a small curated
+# registry mapping DON IDs to geographic facts + serotype overrides.
+# Add a new entry here when WHO publishes a fresh outbreak.
+#
+# Optional per-entry keys:
+#   stableClusterId — overrides the auto-generated `cluster_id = don_id.lower()`.
+#                     Use this when MULTIPLE DON entries describe the same
+#                     real-world outbreak (e.g. DON599 and DON600 are both
+#                     the MV Hondius cluster) and you want a single stable
+#                     cluster id so manually-curated case counts and
+#                     Supabase admin overrides survive successive WHO
+#                     updates. Without this, each new DON publishes
+#                     `cluster_id = 2026-don601`, `2026-don602`, … and
+#                     editor work keyed against the previous id is lost.
+#   serotypeId      — explicit serotype override. The auto-detector only
+#                     fires on literal keywords ("andes", "puumala", …);
+#                     WHO DON titles often omit those. Set this for any
+#                     outbreak whose serotype we know operator-side.
 CLUSTER_REGISTRY: dict[str, dict] = {
     "2026-DON599": {
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
@@ -42,6 +60,8 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "locationName": "南美洲海域（始发乌斯怀亚）",
         "humanToHuman": True,
         "whoRiskLevel": "对公众风险：低（WHO 2026-05）",
+        "stableClusterId": "mv-hondius-2026",
+        "serotypeId": "andes",
     },
     "2026-DON600": {
         "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
@@ -50,6 +70,8 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "locationName": "南美洲海域（始发乌斯怀亚）",
         "humanToHuman": True,
         "whoRiskLevel": "对公众风险：低（WHO 2026-05）",
+        "stableClusterId": "mv-hondius-2026",
+        "serotypeId": "andes",
     },
 }
 
@@ -81,6 +103,10 @@ def _enrich_cluster_from_registry(
             },
             "humanToHuman": reg.get("humanToHuman", False),
             "whoRiskLevel": reg.get("whoRiskLevel", "未声明"),
+            # Optional registry overrides — `None` if not configured, which
+            # lets callers fall back to the auto-detected value.
+            "stableClusterId": reg.get("stableClusterId"),
+            "serotypeId": reg.get("serotypeId"),
             "_geocodeSource": "registry",
         }
 
@@ -100,6 +126,8 @@ def _enrich_cluster_from_registry(
             },
             "humanToHuman": False,  # conservative; operator can override
             "whoRiskLevel": "待评估",
+            "stableClusterId": None,
+            "serotypeId": None,
             "_geocodeSource": f"gazetteer:{hit.keyword_matched}",
         }
 
@@ -112,6 +140,8 @@ def _enrich_cluster_from_registry(
         "location": {"lat": 0.0, "lng": 0.0, "name": "未定位"},
         "humanToHuman": False,
         "whoRiskLevel": "未声明",
+        "stableClusterId": None,
+        "serotypeId": None,
         "_geocodeSource": "none",
     }
 
@@ -153,10 +183,22 @@ def build_active_clusters(
         logger.warning("WHO DON empty and no cache — clusters list will be empty")
         return []
 
-    # De-duplicate by outbreak name (keep newest).
+    # De-duplicate by "outbreak group". We first try the curated
+    # `stableClusterId` from CLUSTER_REGISTRY (e.g. DON599 and DON600 both
+    # map to "mv-hondius-2026" — same real-world outbreak). Falling back
+    # to the crude "split before -DON" prefix when an entry isn't in the
+    # registry. Either way we keep the newest DON per group.
+    def _group_key(e: WhoDonEntry) -> str:
+        reg = CLUSTER_REGISTRY.get(e.id, {})
+        if reg.get("stableClusterId"):
+            return f"stable:{reg['stableClusterId']}"
+        if "-DON" in e.id:
+            return f"don-prefix:{e.id.split('-DON')[0]}"
+        return f"id:{e.id}"
+
     seen: dict[str, WhoDonEntry] = {}
     for e in who_entries:
-        key = e.id.split("-DON")[0] if "-DON" in e.id else e.id  # crude grouping
+        key = _group_key(e)
         if key not in seen or e.published > seen[key].published:
             seen[key] = e
 
@@ -169,8 +211,19 @@ def build_active_clusters(
         enriched = _enrich_cluster_from_registry(
             don_id, e.title, gazetteer_text=f"{e.title} {e.summary}"
         )
-        serotype_id = select_serotype_id(f"{e.title} {e.summary}")
-        cluster_id = don_id.lower()
+        # Serotype resolution order:
+        #   1. CLUSTER_REGISTRY explicit override (we know the cluster is
+        #      Andes even when WHO's DON title says "Hantavirus cluster"),
+        #   2. auto-detection from title + summary text.
+        serotype_id = (
+            enriched.get("serotypeId")
+            or select_serotype_id(f"{e.title} {e.summary}")
+        )
+        # Stable cluster id: prefer the curated override so manually-
+        # edited case counts and Supabase admin overrides survive
+        # successive WHO DON publishes. Falls back to the lower-cased DON
+        # id (e.g. `2026-don600`) for outbreaks not in the registry yet.
+        cluster_id = enriched.get("stableClusterId") or don_id.lower()
 
         # Carry over case counts from previous file when WHO doesn't expose
         # them (it never does — but if we ever wire ECDC numeric counts in,
@@ -244,16 +297,30 @@ def build_recent_cases_intl(
     today = _today_cn()
 
     # --- 1. WHO DON ---------------------------------------------------------
+    # We look up CLUSTER_REGISTRY here for the same reason `build_active_clusters`
+    # does: WHO's DON titles often omit the serotype ("Hantavirus cluster
+    # linked to cruise ship travel" → no "Andes" keyword for the auto-detector
+    # to latch onto), but we know operator-side that DON599/DON600 are Andes.
+    # Surfacing the right serotype matters because the homepage colours the
+    # Andes chip red — getting it wrong understates the threat for the
+    # cluster the public is most likely to care about.
     for e in who_entries[:20]:
+        reg = CLUSTER_REGISTRY.get(e.id, {})
         rows.append(
             {
                 "id": f"who-{e.id}".lower(),
                 "regionCode": "INT",
-                "serotypeId": select_serotype_id(f"{e.title} {e.summary}"),
+                "serotypeId": (
+                    reg.get("serotypeId")
+                    or select_serotype_id(f"{e.title} {e.summary}")
+                ),
                 "date": e.published.date().isoformat(),
                 "caseType": "confirmed",
                 "count": 0,  # WHO DON doesn't expose case counts in a structured way
-                "title": e.title,
+                # Prefer the Chinese registry name when present — easier to
+                # scan in the timeline. Falls back to the WHO English title
+                # for entries the registry hasn't covered yet (gazetteer hits).
+                "title": reg.get("name") or e.title,
                 "summary": e.summary,
                 "source": {
                     "name": "WHO Disease Outbreak News",
