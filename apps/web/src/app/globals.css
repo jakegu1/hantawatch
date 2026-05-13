@@ -16,11 +16,22 @@
   html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    /* iOS: stop the rubber-band overscroll causing visible blank below tab bar */
+    overscroll-behavior-y: none;
+    /* Prevent the address-bar resize jank on mobile Safari */
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply bg-white text-gray-900 antialiased;
     font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    /* Make sure long ASCII strings (URLs in feed cards etc.) don't push layouts wider than viewport */
+    word-wrap: break-word;
+  }
+
+  /* Tap-friendly: links + buttons get faster feedback than the default 300ms tap delay */
+  a, button, [role="button"] {
+    touch-action: manipulation;
   }
 }
 

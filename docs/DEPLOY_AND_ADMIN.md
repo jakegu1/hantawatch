@@ -239,6 +239,8 @@ Vercel Hobby 计划没有项目数量上限，但有：
 | **中国 baseline 状态判断** | 同上 `baselineStatus` | **手工** | 每月评估 | 你自己看月度数据对比近 5 年同期均值 |
 | **国内省份通报** | `apps/web/src/data/recent-cases-china.json` | **手工** | 看到通报即录入 | 各省卫健委公众号、官网 |
 | **省级年度分布** | `china-baseline.json` 的 `byProvince[]` | **手工** | 每年 1 次 | CDC 年报 + 各省年度统计 |
+| **新闻线索（台湾 / 瑞士 / 智利等地方性事件）** | `apps/web/src/data/news-leads-manual.json` | **半自动** | 看到 Google News 没覆盖到的就加 | 台湾 CDC、瑞士 BAG、各国 NHS 等 |
+| **国际新闻线索（自动）** | 输出到 `recent-cases-intl.json` 的 `confidence: news` 行 | **自动** (collector) | 6 小时 | Google News RSS 聚合（含 ProMED、Reuters、BBC、新华社等） |
 
 ### 5.2 怎么手工改
 
@@ -261,6 +263,25 @@ Vercel Hobby 计划没有项目数量上限，但有：
 3. `lastEditedAt` 改成今天 → git push
 
 **老通报建议保留 8 周再删**，便于做趋势核对。
+
+**录入一条新闻线索**（台湾 / 瑞士 / 智利等海外地方性事件，Google News 还没收录时）：
+
+1. 打开 `apps/web/src/data/news-leads-manual.json`
+2. 在 `leads[]` 末尾加一条：
+   ```json
+   {
+     "id": "manual-2026-06-15-japan",
+     "title": "日本国立感染症研究所通报北海道 1 例汉坦病例",
+     "summary": "60 岁男性，林业工作者。北海道地区汉坦病毒地方性流行已知。",
+     "date": "2026-06-15",
+     "serotypeId": "seoul",
+     "sourceOutlet": "NIID Japan",
+     "url": "https://www.niid.go.jp/..."
+   }
+   ```
+3. git push → 下次 collector 跑（最多 6 小时）会自动并入首页"最新通报"，显示为黄色"新闻线索"徽章
+
+> 新闻线索与官方通报视觉上**严格分开**（蓝色 vs 黄色徽章），用户能一眼看出"这条还没被 WHO 确认"。无需担心降低权威性。
 
 ### 5.3 监控站点是否正常
 

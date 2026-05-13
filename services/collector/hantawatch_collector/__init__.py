@@ -13,6 +13,10 @@ __version__ = "0.1.0"
 MANUAL_FILES = frozenset({
     "china-baseline.json",
     "recent-cases-china.json",
+    # Admin-curated news leads the auto-scraper missed (Taiwan CDC, Swiss BAG, etc.).
+    # The collector READS this and merges it into recent-cases-intl.json — but
+    # never overwrites it.
+    "news-leads-manual.json",
 })
 
 # Files written by the collector. Anything not in this set + not in

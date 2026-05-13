@@ -10,6 +10,7 @@ from typing import Any
 from .ecdc import EcdcAssessment
 from .hpi import HpiInputs, calculate_hpi
 from .io_utils import read_json, write_generated_json
+from .news_leads import NewsLead
 from .who_don import WhoDonEntry, select_serotype_id
 
 logger = logging.getLogger(__name__)
@@ -115,9 +116,23 @@ def build_active_clusters(
 
 
 # -- Recent cases ----------------------------------------------------------
-def build_recent_cases_intl(who_entries: list[WhoDonEntry]) -> list[dict]:
-    """International recent cases — one row per WHO DON entry, newest first."""
+def build_recent_cases_intl(
+    who_entries: list[WhoDonEntry],
+    news_leads: list[NewsLead] | None = None,
+) -> list[dict]:
+    """International recent cases — newest first.
+
+    Combines two sources:
+      1. WHO DON entries — `confidence: official`
+      2. Google News / ProMED leads — `confidence: news`
+
+    The UI uses `source.confidence` to render a different badge ("官方通报"
+    vs. "新闻线索") so users can tell at a glance how authoritative each row is.
+    """
     rows: list[dict] = []
+    now_iso = datetime.now(timezone.utc).isoformat()
+
+    # WHO DON — official
     for e in who_entries[:20]:
         rows.append(
             {
@@ -132,12 +147,86 @@ def build_recent_cases_intl(who_entries: list[WhoDonEntry]) -> list[dict]:
                 "source": {
                     "name": "WHO Disease Outbreak News",
                     "url": e.link,
-                    "retrievedAt": datetime.now(timezone.utc).isoformat(),
+                    "retrievedAt": now_iso,
                     "confidence": "official",
                 },
             }
         )
+
+    # News leads — auxiliary, less authoritative
+    for n in (news_leads or [])[:25]:
+        rows.append(
+            {
+                "id": n.id,
+                "regionCode": "INT",
+                "serotypeId": select_serotype_id(f"{n.title} {n.summary}"),
+                "date": n.published.date().isoformat(),
+                # News leads aren't confirmed counts. Tag as 'suspected' (the
+                # nearest existing CaseType variant) so the JSON schema stays
+                # backwards-compatible with the existing TS union.
+                "caseType": "suspected",
+                "count": 0,
+                "title": n.title,
+                "summary": n.summary,
+                "source": {
+                    "name": n.source_outlet or "Google News",
+                    "url": n.link,
+                    "retrievedAt": now_iso,
+                    "confidence": "news",
+                },
+            }
+        )
+
+    # Newest first regardless of source
+    rows.sort(key=lambda r: r["date"], reverse=True)
     return rows
+
+
+def merge_manual_news_leads(rows: list[dict], manual_path: Path) -> list[dict]:
+    """Read admin-curated `news-leads-manual.json` and merge entries into the
+    recent-cases list. Manual leads always get `confidence: 'news'`.
+
+    Dedupe by `id` — manual entries take precedence if the id collides with
+    an auto-scraped one.
+    """
+    manual = read_json(manual_path, default=None) or {}
+    leads = manual.get("leads") or []
+    if not leads:
+        return rows
+
+    now_iso = datetime.now(timezone.utc).isoformat()
+    by_id: dict[str, dict] = {r["id"]: r for r in rows}
+
+    for lead in leads:
+        if not isinstance(lead, dict):
+            continue
+        lead_id = lead.get("id")
+        if not lead_id:
+            continue
+        title = lead.get("title", "").strip()
+        if not title:
+            continue
+        by_id[lead_id] = {
+            "id": lead_id,
+            "regionCode": lead.get("regionCode", "INT"),
+            "serotypeId": lead.get("serotypeId") or select_serotype_id(title + " " + lead.get("summary", "")),
+            "date": lead.get("date") or date.today().isoformat(),
+            "caseType": "suspected",
+            "count": int(lead.get("count", 0)),
+            "title": title,
+            "summary": lead.get("summary", ""),
+            "source": {
+                "name": lead.get("sourceOutlet") or "Manual curation",
+                "url": lead.get("url", ""),
+                "retrievedAt": now_iso,
+                "confidence": "news",
+            },
+        }
+
+    merged = list(by_id.values())
+    merged.sort(key=lambda r: r["date"], reverse=True)
+    logger.info("manual news leads: %d merged", len(leads))
+    return merged
 
 
 # -- HPI history -----------------------------------------------------------
@@ -282,12 +371,14 @@ def build_meta(
     who_count: int,
     ecdc_ok: bool,
     cluster_count: int,
+    news_count: int = 0,
 ) -> dict:
     return {
         "lastCollectedAt": datetime.now(timezone.utc).isoformat(),
         "sources": {
             "who_don": {"entries": who_count, "ok": who_count > 0},
             "ecdc": {"ok": ecdc_ok},
+            "news_leads": {"entries": news_count, "ok": news_count > 0},
         },
         "clusterCount": cluster_count,
         "manualFiles": ["china-baseline.json", "recent-cases-china.json"],
@@ -328,6 +419,7 @@ def stamp_nearest_distance(meta: dict, *, distance_km: int) -> None:
 __all__ = [
     "build_active_clusters",
     "build_recent_cases_intl",
+    "merge_manual_news_leads",
     "update_hpi_history",
     "build_daily_brief",
     "derive_current_hpi",

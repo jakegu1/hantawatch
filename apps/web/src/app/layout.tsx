@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import { AnalyticsScript } from '@/components/analytics-script';
+import { HeaderBrand, MobileTabBar } from '@/components/app-nav';
 
 const BASE_URL = 'https://hantawatch.cn';
 
@@ -97,48 +99,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Header (desktop & tablet) */}
         <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
           <div className="container-page flex h-14 items-center justify-between gap-2">
-            <a href="/" className="flex items-center gap-2 font-bold text-brand-700 text-base sm:text-lg whitespace-nowrap shrink-0">
-              <span className="text-xl sm:text-2xl">🦠</span>
-              <span>汉坦观察</span>
-              <span className="hidden sm:inline text-xs font-normal text-gray-400">HantaWatch</span>
-            </a>
-            {/* Desktop nav — visible on sm+ */}
-            <nav className="hidden sm:flex items-center gap-1 text-sm">
-              <a href="/data" className="whitespace-nowrap rounded-lg px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-700 transition-colors">疫情数据</a>
-              <a href="/wiki" className="whitespace-nowrap rounded-lg px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-700 transition-colors">病毒百科</a>
-              <a href="/guide" className="whitespace-nowrap rounded-lg px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-700 transition-colors">防护指南</a>
-              <a href="/about" className="whitespace-nowrap rounded-lg px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-brand-700 transition-colors">关于</a>
-              <a href="/feedback" className="whitespace-nowrap rounded-lg px-3 py-2 text-gray-500 hover:bg-gray-50 hover:text-brand-700 transition-colors text-xs">反馈</a>
-            </nav>
-            {/* Mobile-only quick action — feedback link as compact icon */}
-            <a href="/feedback" className="sm:hidden whitespace-nowrap rounded-lg px-2 py-1.5 text-xs text-gray-500 hover:text-brand-700 hover:bg-gray-50">反馈</a>
+            <HeaderBrand />
           </div>
         </header>
 
-        {/* Main content (extra bottom padding on mobile to clear bottom tab bar) */}
-        <main className="flex-1 pb-16 sm:pb-0">{children}</main>
+        {/* Main content (extra bottom padding on mobile to clear bottom tab bar
+            + safe-area inset for iPhone home indicator) */}
+        <main className="flex-1 pb-[calc(4rem+env(safe-area-inset-bottom))] sm:pb-0">{children}</main>
 
-        {/* Mobile bottom tab bar — only visible <sm */}
-        <nav className="sm:hidden fixed bottom-0 inset-x-0 z-50 border-t border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
-          <div className="grid grid-cols-4 text-[11px]">
-            <a href="/" className="flex flex-col items-center justify-center py-2 text-gray-600 hover:text-brand-700 active:bg-gray-50">
-              <span className="text-base leading-none">🏠</span>
-              <span className="mt-0.5 whitespace-nowrap">首页</span>
-            </a>
-            <a href="/data" className="flex flex-col items-center justify-center py-2 text-gray-600 hover:text-brand-700 active:bg-gray-50">
-              <span className="text-base leading-none">📊</span>
-              <span className="mt-0.5 whitespace-nowrap">数据</span>
-            </a>
-            <a href="/wiki" className="flex flex-col items-center justify-center py-2 text-gray-600 hover:text-brand-700 active:bg-gray-50">
-              <span className="text-base leading-none">📖</span>
-              <span className="mt-0.5 whitespace-nowrap">百科</span>
-            </a>
-            <a href="/guide" className="flex flex-col items-center justify-center py-2 text-gray-600 hover:text-brand-700 active:bg-gray-50">
-              <span className="text-base leading-none">🛡️</span>
-              <span className="mt-0.5 whitespace-nowrap">防护</span>
-            </a>
-          </div>
-        </nav>
+        <MobileTabBar />
 
         {/* Analytics — tracks page views */}
         <AnalyticsScript />
@@ -154,20 +123,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h3 className="font-semibold text-gray-700 mb-2">快速链接</h3>
                 <ul className="space-y-1 text-xs">
-                  <li><a href="/data" className="hover:text-brand-500">疫情数据</a></li>
-                  <li><a href="/wiki" className="hover:text-brand-500">病毒百科</a></li>
-                  <li><a href="/guide" className="hover:text-brand-500">防护指南</a></li>
-                  <li><a href="/share" className="hover:text-brand-500">分享海报</a></li>
-                  <li><a href="/about" className="hover:text-brand-500">关于我们</a></li>
+                  <li><Link href="/data" className="hover:text-brand-500">疫情数据</Link></li>
+                  <li><Link href="/wiki" className="hover:text-brand-500">病毒百科</Link></li>
+                  <li><Link href="/guide" className="hover:text-brand-500">防护指南</Link></li>
+                  <li><Link href="/share" className="hover:text-brand-500">分享海报</Link></li>
+                  <li><Link href="/about" className="hover:text-brand-500">关于我们</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-700 mb-2">合规与免责</h3>
                 <p className="text-xs leading-relaxed mb-2">本工具不提供医疗建议。如有症状请前往正规医疗机构就诊。</p>
                 <ul className="space-y-1 text-xs">
-                  <li><a href="/privacy" className="hover:text-brand-500">隐私政策</a></li>
-                  <li><a href="/terms" className="hover:text-brand-500">服务条款</a></li>
-                  <li><a href="/feedback" className="hover:text-brand-500">反馈建议</a></li>
+                  <li><Link href="/privacy" className="hover:text-brand-500">隐私政策</Link></li>
+                  <li><Link href="/terms" className="hover:text-brand-500">服务条款</Link></li>
+                  <li><Link href="/feedback" className="hover:text-brand-500">反馈建议</Link></li>
                 </ul>
               </div>
             </div>

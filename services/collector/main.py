@@ -28,6 +28,7 @@ from hantawatch_collector.builder import (
     build_recent_cases_intl,
     derive_current_hpi,
     get_prev_nearest_distance,
+    merge_manual_news_leads,
     stamp_nearest_distance,
     update_hpi_history,
     write_all_outputs,
@@ -35,6 +36,7 @@ from hantawatch_collector.builder import (
 from hantawatch_collector.distance import distance_to_china_km
 from hantawatch_collector.ecdc import fetch_ecdc_assessment
 from hantawatch_collector.io_utils import read_json
+from hantawatch_collector.news_leads import fetch_news_leads
 from hantawatch_collector.who_don import fetch_who_don_entries
 
 logging.basicConfig(
@@ -81,6 +83,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.no_network:
         who_entries = []
         ecdc = None
+        news_leads = []
         logger.info("--no-network: skipping all fetches")
     else:
         who_entries = fetch_who_don_entries()
@@ -89,6 +92,11 @@ def main(argv: list[str] | None = None) -> int:
         ecdc = fetch_ecdc_assessment()
         if ecdc is None:
             partial_failure = True
+        # News leads are auxiliary — failure here is not fatal and doesn't
+        # affect HPI computation. We still flag it in meta for visibility.
+        news_leads = fetch_news_leads()
+        if not news_leads:
+            logger.info("news-leads: no entries (this is unusual but not fatal)")
 
     # ---- 2. Compose active clusters (with fallback to cached) ----
     clusters_path = out_dir / "active-clusters.json"
@@ -128,14 +136,18 @@ def main(argv: list[str] | None = None) -> int:
         domestic_baseline_status=domestic_baseline,
     )
 
-    # ---- 8. Recent international cases ----
-    recent_intl = build_recent_cases_intl(who_entries)
+    # ---- 8. Recent international cases (WHO official + Google News + manual) ----
+    recent_intl = build_recent_cases_intl(who_entries, news_leads)
+    # Merge admin-curated leads (e.g. local Taiwan / Switzerland press the
+    # auto-scraper missed). Manual entries win on id collision.
+    recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")
 
     # ---- 9. Meta ----
     meta = build_meta(
         who_count=len(who_entries),
         ecdc_ok=ecdc is not None,
         cluster_count=len(clusters),
+        news_count=len(news_leads),
     )
     if clusters:
         nearest_km = min(c.get("distanceFromChinaKm", 999_999) for c in clusters)

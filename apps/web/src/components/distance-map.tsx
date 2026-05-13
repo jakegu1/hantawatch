@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import maplibregl, { type Map as MlMap } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 // Beijing as the China reference point. We don't claim "border distance"
 // here — the headline number is computed separately by the collector and
 // shown next to the map. The map is for *direction & scale intuition*.
-const CHINA_REF = { lat: 39.9042, lng: 116.4074, name: '中国（北京参考点）' };
+const CHINA_REF = { lat: 39.9042, lng: 116.4074, name: '中国大陆（北京参考点）' };
 
 interface DistanceMapProps {
   /** Outbreak point to plot. */
@@ -19,16 +19,12 @@ interface DistanceMapProps {
   height?: number;
 }
 
-/**
- * Convert degrees ↔ radians.
- */
 const deg = (rad: number) => (rad * 180) / Math.PI;
 const rad = (d: number) => (d * Math.PI) / 180;
 
 /**
- * Sample a great-circle arc between two coordinates into `n` waypoints,
- * suitable for rendering as a GeoJSON LineString on a Web Mercator map.
- * Uses spherical linear interpolation (slerp on a unit sphere).
+ * Sample a great-circle arc between two coordinates into `n` waypoints.
+ * Uses spherical linear interpolation on a unit sphere.
  */
 function greatCircleArc(
   from: { lat: number; lng: number },
@@ -40,7 +36,6 @@ function greatCircleArc(
   const φ2 = rad(to.lat);
   const λ2 = rad(to.lng);
 
-  // Central angle (haversine)
   const Δφ = φ2 - φ1;
   const Δλ = λ2 - λ1;
   const a = Math.sin(Δφ / 2) ** 2 + Math.cos(φ1) * Math.cos(φ2) * Math.sin(Δλ / 2) ** 2;
@@ -62,9 +57,32 @@ function greatCircleArc(
   return out;
 }
 
+/**
+ * Tile sources to try in order. We race them: whichever one paints first wins.
+ * - CartoDB (basemaps.cartocdn.com) is generally reachable from mainland China
+ *   mobile networks (Cloudfront CDN).
+ * - openstreetmap.org as a fallback for non-CN users.
+ *
+ * Note: we don't actually "race" — instead we use a single style with a
+ * server-side CDN that has both. CartoDB Voyager is light, neutral, and works.
+ */
+const TILE_TEMPLATES = {
+  // CartoDB Voyager — clean, neutral basemap with subtle colours
+  cartoVoyager: [
+    'https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    'https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    'https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+    'https://d.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
+  ],
+  // OSM standard (fallback)
+  osm: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+} as const;
+
 export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMapProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MlMap | null>(null);
+  const [tilesLoaded, setTilesLoaded] = useState(false);
+  const [tileError, setTileError] = useState(false);
 
   useEffect(() => {
     if (!ref.current || mapRef.current) return;
@@ -74,26 +92,52 @@ export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMa
       style: {
         version: 8,
         sources: {
-          osm: {
+          base: {
             type: 'raster',
-            tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+            // MapLibre expands the {r} retina suffix to '@2x' on hi-DPI screens
+            tiles: [...TILE_TEMPLATES.cartoVoyager],
             tileSize: 256,
-            attribution: '© OpenStreetMap',
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · © <a href="https://carto.com/attributions">CARTO</a>',
+            maxzoom: 18,
           },
         },
-        layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
+        layers: [{ id: 'base', type: 'raster', source: 'base' }],
       },
+      // Pick a center that shows both China and the cluster in view
       center: [(CHINA_REF.lng + cluster.lng) / 2, (CHINA_REF.lat + cluster.lat) / 2],
       zoom: 1,
       attributionControl: { compact: true },
-      // Allow zoom & pan but disable rotation — keep things calm.
       dragRotate: false,
       pitchWithRotate: false,
+      // Better mobile touch behaviour: respond to single-finger pan, two-finger zoom
+      cooperativeGestures: false,
     });
     mapRef.current = map;
 
+    // Track tile load state — show loading shimmer until first paint
+    map.on('idle', () => setTilesLoaded(true));
+
+    // If we get tile fetch errors, swap to OSM and try again
+    let osmFallbackTried = false;
+    map.on('error', (e: { error?: Error }) => {
+      const msg = e?.error?.message || '';
+      if (msg.includes('Failed to fetch') || msg.includes('NetworkError')) {
+        if (!osmFallbackTried) {
+          osmFallbackTried = true;
+          const src = map.getSource('base') as maplibregl.RasterTileSource | undefined;
+          if (src) {
+            // Mutate tiles in place (MapLibre supports this)
+            (src as unknown as { tiles: string[] }).tiles = [...TILE_TEMPLATES.osm];
+            src.load();
+          }
+        } else {
+          setTileError(true);
+        }
+      }
+    });
+
     map.on('load', () => {
-      // Arc layer
+      // Arc layer (drawn before markers so markers float above)
       const arc = greatCircleArc(CHINA_REF, cluster, 96);
       map.addSource('arc', {
         type: 'geojson',
@@ -114,30 +158,48 @@ export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMa
       // China marker (green safe-zone indicator)
       const chinaEl = document.createElement('div');
       chinaEl.style.cssText =
-        'width:14px;height:14px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.25),0 0 0 2px #fff;';
+        'width:14px;height:14px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 4px rgba(22,163,74,.25),0 0 0 2px #fff;cursor:pointer;';
       new maplibregl.Marker({ element: chinaEl })
         .setLngLat([CHINA_REF.lng, CHINA_REF.lat])
-        .setPopup(new maplibregl.Popup({ offset: 12 }).setText(CHINA_REF.name))
+        .setPopup(new maplibregl.Popup({ offset: 12, closeButton: false }).setText(CHINA_REF.name))
         .addTo(map);
 
-      // Cluster marker (serotype-coloured)
+      // Cluster marker (serotype-coloured, pulsing)
       const clusterEl = document.createElement('div');
-      clusterEl.style.cssText = `width:14px;height:14px;border-radius:50%;background:${cluster.serotypeColor};box-shadow:0 0 0 4px ${cluster.serotypeColor}40,0 0 0 2px #fff;animation:pulse 2s infinite;`;
+      clusterEl.style.cssText =
+        `width:14px;height:14px;border-radius:50%;background:${cluster.serotypeColor};` +
+        `box-shadow:0 0 0 4px ${cluster.serotypeColor}40,0 0 0 2px #fff;cursor:pointer;` +
+        `animation:hwPulse 2s ease-in-out infinite;`;
       new maplibregl.Marker({ element: clusterEl })
         .setLngLat([cluster.lng, cluster.lat])
-        .setPopup(new maplibregl.Popup({ offset: 12 }).setText(cluster.name))
+        .setPopup(new maplibregl.Popup({ offset: 12, closeButton: false }).setText(cluster.name))
         .addTo(map);
 
-      // Fit to bounds with padding
+      // Fit bounds with padding sized for the actual container
       const bounds = new maplibregl.LngLatBounds(
         [CHINA_REF.lng, CHINA_REF.lat],
         [CHINA_REF.lng, CHINA_REF.lat],
       );
       arc.forEach((p) => bounds.extend(p as [number, number]));
-      map.fitBounds(bounds, { padding: 50, duration: 0, maxZoom: 4 });
+      // Smaller padding on mobile so markers don't squash to centre
+      const isMobile = window.innerWidth < 640;
+      map.fitBounds(bounds, {
+        padding: isMobile ? 30 : 50,
+        duration: 0,
+        maxZoom: 4,
+      });
     });
 
+    // Re-fit on resize so rotating phone or address-bar collapse doesn't break framing
+    const handleResize = () => {
+      const m = mapRef.current;
+      if (!m) return;
+      m.resize();
+    };
+    window.addEventListener('resize', handleResize);
+
     return () => {
+      window.removeEventListener('resize', handleResize);
       map.remove();
       mapRef.current = null;
     };
@@ -145,15 +207,35 @@ export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMa
 
   return (
     <div className="relative">
-      <div ref={ref} style={{ height, width: '100%' }} className="rounded-xl overflow-hidden" />
+      <div ref={ref} style={{ height, width: '100%' }} className="rounded-xl overflow-hidden bg-gray-100" />
+
+      {/* Loading shimmer until first idle */}
+      {!tilesLoaded && !tileError && (
+        <div
+          className="absolute inset-0 flex items-center justify-center rounded-xl bg-gray-100 animate-pulse pointer-events-none"
+          aria-hidden
+        >
+          <span className="text-xs text-gray-500">地图加载中…</span>
+        </div>
+      )}
+
+      {/* Hard tile error — give the user info instead of an empty map */}
+      {tileError && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-center px-4">
+          <span className="text-xs text-gray-600 mb-1">地图底图加载失败</span>
+          <span className="text-[10px] text-gray-400">距离仍以上方数字为准</span>
+        </div>
+      )}
+
       {/* Distance pill */}
       <div className="absolute top-2 left-2 rounded-lg bg-white/95 backdrop-blur shadow-sm px-2.5 py-1 text-xs font-medium text-gray-700 border border-gray-200">
-        距中国 <span className="font-bold text-gray-900">{distanceLabel}</span>
+        距中国大陆 <span className="font-bold text-gray-900">{distanceLabel}</span>
       </div>
+
       {/* Legend */}
       <div className="absolute bottom-2 left-2 rounded-lg bg-white/95 backdrop-blur shadow-sm px-2.5 py-1 text-[10px] text-gray-600 border border-gray-200 flex items-center gap-2">
         <span className="flex items-center gap-1">
-          <span className="inline-block h-2 w-2 rounded-full bg-green-600" /> 中国
+          <span className="inline-block h-2 w-2 rounded-full bg-green-600" /> 中国大陆
         </span>
         <span className="text-gray-300">·</span>
         <span className="flex items-center gap-1">
@@ -164,6 +246,15 @@ export function DistanceMap({ cluster, distanceLabel, height = 280 }: DistanceMa
           聚集地
         </span>
       </div>
+
+      {/* Pulse keyframes — scoped via global style tag to keep the component
+          self-contained. Tailwind doesn't expose ring-pulse easily. */}
+      <style jsx global>{`
+        @keyframes hwPulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50%      { transform: scale(1.15); opacity: 0.85; }
+        }
+      `}</style>
     </div>
   );
 }

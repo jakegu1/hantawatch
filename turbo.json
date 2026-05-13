@@ -4,7 +4,15 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "dist/**"]
+      "outputs": [".next/**", "dist/**"],
+      "env": [
+        "NEXT_PUBLIC_SITE_URL",
+        "ADMIN_KEY",
+        "SUPABASE_URL",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "NODE_ENV",
+        "VERCEL_URL"
+      ]
     },
     "dev": {
       "cache": false,

@@ -49,54 +49,127 @@ export default function HomePage() {
   return (
     <div className="pb-16">
       {/* ================================================================ */}
-      {/* SECTION 1: Focus Alert — "Which virus should I care about?"       */}
+      {/* SECTION 1: Hero — mobile-first "everything important above fold"  */}
       {/* ================================================================ */}
       <section className="bg-gradient-to-b from-brand-900 via-brand-700 to-brand-500 text-white">
-        <div className="container-page py-6 sm:py-8">
-          {/* Daily brief banner — gives returning users a 2-second status check */}
+        <div className="container-page py-4 sm:py-8">
+          {/* Daily brief banner */}
           <DailyBriefBanner brief={todayBrief} />
 
-          {/* ⚠ FOCUS: The virus you need to know about */}
-          <div className="rounded-2xl bg-red-500/15 backdrop-blur border border-red-300/30 p-5 sm:p-6 mb-5">
-            <div className="flex items-start gap-3 mb-3">
-              <span className="text-3xl">⚠️</span>
-              <div>
-                <p className="text-xs font-medium text-red-300 uppercase tracking-wider mb-1">当前最受关注</p>
-                <h1 className="text-2xl sm:text-3xl font-extrabold leading-tight">
+          {/* ⚠ Andes warning — compact 1–2 line strip on mobile, expanded on sm+ */}
+          <div className="rounded-xl bg-red-500/15 backdrop-blur border border-red-300/30 px-3 py-2.5 sm:p-5 mb-3 sm:mb-4">
+            <div className="flex items-start gap-2 sm:gap-3">
+              <span className="text-xl sm:text-3xl flex-shrink-0 leading-none mt-0.5">⚠️</span>
+              <div className="min-w-0 flex-1">
+                <p className="text-[10px] sm:text-xs font-medium text-red-300 uppercase tracking-wider">当前最受关注</p>
+                <h1 className="text-base sm:text-2xl font-extrabold leading-tight truncate sm:whitespace-normal">
                   安第斯型汉坦病毒（Andes）
                 </h1>
-                <p className="text-sm text-red-200 mt-1 leading-relaxed">
-                  唯一已确认可人际传播的汉坦病毒 · 病死率 30-40% · 2026年5月在南美洲邮轮上出现聚集性疫情
+                <p className="text-[11px] sm:text-sm text-red-200 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed line-clamp-2 sm:line-clamp-none">
+                  唯一已确认可人际传播的汉坦病毒 · 病死率 30-40% · 2026年5月南美洲邮轮聚集疫情
                 </p>
+                {/* Tag pills — desktop only (saves vertical space on mobile) */}
+                <div className="hidden sm:flex flex-wrap gap-2 mt-3 text-xs">
+                  <span className="rounded-full bg-red-400/25 px-3 py-1 font-medium text-red-100">⚠ 可人际传播</span>
+                  <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">病死率 30-40%</span>
+                  <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">7例确诊 · 3例死亡</span>
+                </div>
               </div>
-            </div>
-            <div className="flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full bg-red-400/25 px-3 py-1 font-medium text-red-100">⚠ 可人际传播</span>
-              <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">病死率 30-40%</span>
-              <span className="rounded-full bg-red-400/25 px-3 py-1 text-red-100">7例确诊 · 3例死亡</span>
             </div>
           </div>
 
-          {/* Distance dashboard — contextualized */}
-          <div className={`rounded-2xl border-2 p-5 sm:p-6 mb-5 ${distanceRingBg(cluster.distanceFromChinaKm)}`}>
-            <p className="text-sm font-medium text-gray-500 mb-1">
-              该病毒聚集地距中国边境
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span className={`text-5xl sm:text-6xl font-extrabold ${distanceRingColor(cluster.distanceFromChinaKm)}`}>
-                {fmt(cluster.distanceFromChinaKm)}
-              </span>
-              <span className="text-xl font-bold text-gray-400">km</span>
-            </div>
-            <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
-              <span className="inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-gray-700 shadow-sm">
-                <MapPin className="h-3.5 w-3.5" />
+          {/* ─── Above-the-fold metrics: Distance + HPI on one row ─── */}
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
+            {/* Distance card */}
+            <div className={`rounded-xl border-2 p-3 sm:p-4 ${distanceRingBg(cluster.distanceFromChinaKm)}`}>
+              <p className="text-[10px] sm:text-xs font-medium text-gray-500 leading-tight">
+                聚集地距中国大陆
+              </p>
+              <div className="flex items-baseline gap-1 mt-1">
+                <span className={`text-3xl sm:text-5xl font-extrabold leading-none ${distanceRingColor(cluster.distanceFromChinaKm)}`}>
+                  {fmt(cluster.distanceFromChinaKm)}
+                </span>
+                <span className="text-sm sm:text-xl font-bold text-gray-400">km</span>
+              </div>
+              <p className="mt-1 text-[10px] sm:text-xs text-gray-600 truncate">
                 {cluster.location.name}
-              </span>
-              <span className="text-gray-500 text-xs">{cluster.name}</span>
+              </p>
+              {/* Distance ring — compact on mobile */}
+              <div className="mt-2 flex gap-0.5" aria-label="距离圈层">
+                <div className="flex-1 h-1 rounded-full bg-green-500" title=">10,000 km" />
+                <div className="flex-1 h-1 rounded-full bg-yellow-400 opacity-60" />
+                <div className="flex-1 h-1 rounded-full bg-orange-400 opacity-40" />
+                <div className="w-2 h-1 rounded-full bg-red-400 opacity-30" />
+              </div>
             </div>
-            {/* Geographic context — real map showing where the cluster is relative to China */}
-            <div className="mt-4">
+
+            {/* HPI card */}
+            <div className="rounded-xl bg-white text-gray-900 shadow-md p-3 sm:p-4">
+              <div className="flex items-center gap-1.5">
+                <TrendingUp className="h-3 w-3 sm:h-4 sm:w-4 text-brand-700 flex-shrink-0" />
+                <span className="font-semibold text-[10px] sm:text-xs leading-tight">HPI 逼近指数</span>
+              </div>
+              <div className="flex items-baseline gap-1.5 mt-1">
+                <span className="text-3xl sm:text-5xl font-extrabold leading-none" style={{ color: hpi.color }}>{hpi.total}</span>
+                <span className="text-xs sm:text-base font-semibold" style={{ color: hpi.color }}>{hpi.gradeZh}</span>
+              </div>
+              <div className="mt-2 h-1 sm:h-1.5 w-full rounded-full bg-gray-100 overflow-hidden">
+                <div className="h-full rounded-full transition-all" style={{ width: `${hpi.total}%`, backgroundColor: hpi.color }} />
+              </div>
+              <p className="mt-1 text-[10px] text-gray-500 leading-tight">中国大陆视角 · 满分 100</p>
+            </div>
+          </div>
+
+          {/* ─── Number cards row — 3 atomic numbers always visible ─── */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
+              <div className="text-base sm:text-xl font-bold leading-none">
+                {activeClusters.reduce((s, c) => s + c.confirmedCases, 0)}
+              </div>
+              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">全球活跃确诊</div>
+            </div>
+            <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
+              <div className="text-base sm:text-xl font-bold leading-none text-green-300">0</div>
+              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">中国大陆社区传播</div>
+            </div>
+            <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
+              <div className="text-base sm:text-xl font-bold leading-none">{fmt(cluster.distanceFromChinaKm)}</div>
+              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">距中国大陆 (km)</div>
+            </div>
+          </div>
+
+          {/* ─── Official risk — compact 4-row table ─── */}
+          <div className="rounded-xl bg-white text-gray-900 shadow-md p-3 sm:p-5 mb-3 sm:mb-4">
+            <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+              <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-brand-700" />
+              <span className="font-semibold text-xs sm:text-sm">官方风险评估</span>
+              <span className="ml-auto text-[10px] text-gray-500">WHO / CDC</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-1 gap-x-3 gap-y-1.5 sm:gap-y-2.5">
+              {([
+                ['WHO 全球', '低风险', 'badge-low'],
+                ['US CDC', 'L3 最低', 'badge-low'],
+                ['ECDC', '低风险', 'badge-low'],
+                ['中国 CDC', '未升级', 'badge-low'],
+              ] as const).map(([label, value, cls]) => (
+                <div key={label} className="flex justify-between items-center text-xs sm:text-sm">
+                  <span className="text-gray-600">{label}</span>
+                  <span className={`badge text-[10px] sm:text-[11px] ${cls}`}>{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ─── Map (below the fold on mobile — secondary affordance) ─── */}
+          <details className="group rounded-xl bg-white/5 backdrop-blur border border-white/10 mb-3 sm:mb-0" open>
+            <summary className="cursor-pointer list-none sm:hidden flex items-center justify-between px-3 py-2 text-xs">
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                查看距离地图
+              </span>
+              <span className="text-[10px] opacity-70 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <div className="p-2 sm:p-0">
               <DistanceMap
                 cluster={{
                   lat: cluster.location.lat,
@@ -108,95 +181,29 @@ export default function HomePage() {
                 height={260}
               />
             </div>
-
-            {/* Compact distance ring (kept as secondary scan-friendly indicator) */}
-            <div className="mt-3 flex gap-1" aria-label="距离圈层指示器">
-              <div className="flex-1 h-1.5 rounded-full bg-green-500" title=">10,000 km 安全区" />
-              <div className="flex-1 h-1.5 rounded-full bg-yellow-400 opacity-60" title="3,000-10,000 km 关注区" />
-              <div className="flex-1 h-1.5 rounded-full bg-orange-400 opacity-40" title="500-3,000 km 警戒区" />
-              <div className="w-3 h-1.5 rounded-full bg-red-400 opacity-30" title="<500 km 危险区" />
-            </div>
-            <p className="mt-2 text-xs text-green-700 font-medium">
-              ✅ 当前处于绿色安全区域 — 距离极远，对中国直接威胁有限
+            <p className="px-3 py-2 text-[10px] sm:text-xs text-green-300 font-medium">
+              ✅ 距离极远（绿色安全区域），对中国大陆直接威胁有限
             </p>
-          </div>
+          </details>
 
-          {/* HPI + Official side by side — solid white cards for clear contrast on dark Hero */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl bg-white text-gray-900 shadow-md p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <TrendingUp className="h-4 w-4 text-brand-700" />
-                <span className="font-semibold text-sm">HPI 汉坦逼近指数</span>
-                <span className="ml-auto text-[10px] text-gray-500 bg-gray-100 rounded px-1.5 py-0.5">中国视角</span>
-              </div>
-              <div className="flex items-end gap-3">
-                <span className="text-5xl font-extrabold" style={{ color: hpi.color }}>{hpi.total}</span>
-                <span className="text-lg font-semibold pb-1" style={{ color: hpi.color }}>{hpi.gradeZh}</span>
-              </div>
-              <div className="mt-3 h-2 w-full rounded-full bg-gray-100 overflow-hidden">
-                <div className="h-full rounded-full transition-all" style={{ width: `${hpi.total}%`, backgroundColor: hpi.color }} />
-              </div>
-              <div className="mt-1.5 flex justify-between text-[10px] text-gray-400">
-                <span>低</span><span>一般</span><span>中等</span><span>高</span><span>严重</span>
-              </div>
-              {/* 7-day sparkline — gives users a "is it changing?" signal */}
-              <div className="mt-3 -mb-1">
-                <div className="flex items-center justify-between text-[10px] text-gray-500 mb-0.5">
-                  <span>近 7 天趋势</span>
-                  <span className="font-mono">
-                    {hpi7DayHistory[0].value} → <b style={{ color: hpi.color }}>{hpi7DayHistory[hpi7DayHistory.length - 1].value}</b>
-                  </span>
-                </div>
-                <Sparkline
-                  values={hpi7DayHistory.map((d) => d.value)}
-                  labels={hpi7DayHistory.map((d) => d.date.slice(5))}
-                  color={hpi.color}
-                  height={36}
-                />
-              </div>
-              <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
-                分数主要来自病毒本身的高危属性（人传人+高病死率），因距离极远被大幅降权。
-              </p>
+          {/* ─── 7-day HPI sparkline + explanation (desktop only — mobile users
+                can scroll for this) ─── */}
+          <div className="hidden sm:block rounded-xl bg-white text-gray-900 shadow-md p-5 mt-4">
+            <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
+              <span className="font-medium">HPI 近 7 天趋势</span>
+              <span className="font-mono">
+                {hpi7DayHistory[0].value} → <b style={{ color: hpi.color }}>{hpi7DayHistory[hpi7DayHistory.length - 1].value}</b>
+              </span>
             </div>
-
-            <div className="rounded-2xl bg-white text-gray-900 shadow-md p-5">
-              <div className="flex items-center gap-2 mb-3">
-                <Shield className="h-4 w-4 text-brand-700" />
-                <span className="font-semibold text-sm">官方风险评估</span>
-                <span className="ml-auto text-[10px] text-gray-500">WHO / CDC</span>
-              </div>
-              <div className="space-y-2.5">
-                {[
-                  ['WHO 全球风险', '低风险', 'badge-low'],
-                  ['CDC 响应级别', 'Level 3（最低）', 'badge-low'],
-                  ['ECDC', '低风险', 'badge-low'],
-                  ['中国疾控中心', '未发布升级预警', 'badge-low'],
-                ].map(([label, value, cls]) => (
-                  <div key={label} className="flex justify-between items-center text-sm">
-                    <span className="text-gray-600">{label}</span>
-                    <span className={`badge text-[11px] ${cls}`}>{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Key metrics — sourced from data pipeline */}
-          <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-            <div className="rounded-xl bg-white/10 p-3">
-              <div className="text-xl font-bold">
-                {activeClusters.reduce((s, c) => s + c.confirmedCases, 0)}
-              </div>
-              <div className="text-[11px] opacity-70">全球活跃确诊</div>
-            </div>
-            <div className="rounded-xl bg-white/10 p-3">
-              <div className="text-xl font-bold">0</div>
-              <div className="text-[11px] opacity-70">中国社区传播</div>
-            </div>
-            <div className="rounded-xl bg-white/10 p-3">
-              <div className="text-xl font-bold">{fmt(cluster.distanceFromChinaKm)}</div>
-              <div className="text-[11px] opacity-70">距中国(km)</div>
-            </div>
+            <Sparkline
+              values={hpi7DayHistory.map((d) => d.value)}
+              labels={hpi7DayHistory.map((d) => d.date.slice(5))}
+              color={hpi.color}
+              height={48}
+            />
+            <p className="mt-2 text-[11px] text-gray-500 leading-relaxed">
+              分数主要来自病毒本身的高危属性（人传人 + 高病死率），因距离中国大陆极远被大幅降权。
+            </p>
           </div>
         </div>
       </section>
@@ -243,10 +250,10 @@ export default function HomePage() {
         <div className="card border-gray-200 bg-gray-50/50">
           <h2 className="font-semibold text-base mb-1 flex items-center gap-2 text-gray-600">
             <Info className="h-4 w-4" />
-            中国 HFRS（肾综合征出血热）地方性流行概况
+            中国大陆 HFRS（肾综合征出血热）地方性流行概况
           </h2>
           <p className="text-xs text-gray-400 mb-4">
-            以下为中国每年常规报告的 HFRS 病例（地方性流行基线），<strong className="text-gray-600">并非新兴疫情</strong>。
+            以下为中国大陆每年常规报告的 HFRS 病例（地方性流行基线），<strong className="text-gray-600">并非新兴疫情</strong>。
           </p>
 
           {/* Yearly trend — ECharts bar with 5y mean baseline */}
@@ -281,7 +288,7 @@ export default function HomePage() {
           </div>
 
           <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
-            数据来源：中国疾控中心传染病月报。HFRS 在中国属于地方性流行（endemic），每年报告约 1-2 万例，
+            数据来源：中国疾控中心传染病月报。HFRS 在中国大陆属于地方性流行（endemic），每年报告约 1-2 万例，
             主要由汉滩型和汉城型引起，均<strong>不具备人际传播能力</strong>。
             当前发病数处于历史基线正常范围，无异常暴发。
           </p>
@@ -301,14 +308,17 @@ export default function HomePage() {
             <span className="text-[11px] text-gray-400">国际 + 国内 · 按日期倒序</span>
           </div>
 
-          {/* Legend — explain serotype labels at a glance */}
-          <div className="flex flex-wrap items-center gap-2 mb-3 text-[10px] text-gray-500">
+          {/* Legend — explain serotype labels + confidence levels at a glance */}
+          <div className="flex flex-wrap items-center gap-1.5 mb-3 text-[10px] text-gray-500">
             <span className="inline-flex items-center gap-1 rounded-full bg-red-50 text-red-700 px-2 py-0.5 font-medium ring-1 ring-red-200">
               ⚠ 安第斯型（人传人）
             </span>
             <span className="inline-flex items-center gap-1 rounded-full bg-gray-50 text-gray-600 px-2 py-0.5 ring-1 ring-gray-200">
-              其他血清型（不人传人）
+              其他血清型
             </span>
+            <span className="mx-1 text-gray-300">·</span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 text-blue-800 px-2 py-0.5 font-medium">官方通报</span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 px-2 py-0.5 font-medium">新闻线索</span>
           </div>
 
           <ol className="space-y-3">
@@ -329,9 +339,16 @@ export default function HomePage() {
                   ? 'border-l-brand-400 bg-brand-50/30'
                   : 'border-l-gray-300';
 
-              const scopeBadge = isIntl
-                ? { label: '国际通报', cls: isAndes ? 'badge-severe' : 'badge-elevated' }
-                : { label: '国内通报', cls: 'badge-low' };
+              // News leads (confidence === 'news') are surfaced separately
+              // from WHO/ECDC official reports so users can tell them apart at
+              // a glance. They still go through the same record shape so old
+              // consumers continue to work.
+              const isNewsLead = c.source?.confidence === 'news';
+              const scopeBadge = isNewsLead
+                ? { label: '新闻线索', cls: 'bg-amber-100 text-amber-800' }
+                : isIntl
+                  ? { label: '官方通报', cls: isAndes ? 'badge-severe' : 'badge-elevated' }
+                  : { label: '国内通报', cls: 'badge-low' };
 
               const title = c.title ?? c.notes ?? '';
               const subtitle = c.summary ?? (isAndes ? '安第斯型为唯一确认可人传人的汉坦病毒，需持续关注' : '该血清型不具备人际传播能力');
@@ -368,7 +385,10 @@ export default function HomePage() {
           </ol>
 
           <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
-            数据由自动管道每日抓取 WHO/ECDC 官方通报，国内通报由人工核验后录入。
+            数据每 6 小时自动抓取 WHO / ECDC 官方通报 +
+            <strong className="text-amber-700">新闻线索</strong>（Google News 聚合，含 ProMED 与中英文主流媒体）；国内通报由人工核验后录入。
+            <br />
+            <span className="text-amber-700">新闻线索仅作早期信号</span>，与官方通报置信度不同，请以蓝色"官方通报"为准。
             血清型标签的红色仅用于安第斯型（唯一确认人传人的汉坦病毒），不代表事件严重程度。
           </p>
         </div>
@@ -400,7 +420,7 @@ export default function HomePage() {
                   ['官方评估', '25%', '低风险（WHO）', liveHpi.breakdown.official.score, liveHpi.breakdown.official.weighted],
                   ['血清型风险', '20%', 'Andes（人传人+高病死率）', liveHpi.breakdown.serotype.score, liveHpi.breakdown.serotype.weighted],
                   ['旅行联通度', '15%', '需2次转机', liveHpi.breakdown.travel.score, liveHpi.breakdown.travel.weighted],
-                  ['历史基线', '10%', '中国HFRS正常范围', liveHpi.breakdown.baseline.score, liveHpi.breakdown.baseline.weighted],
+                  ['历史基线', '10%', '中国大陆 HFRS 正常范围', liveHpi.breakdown.baseline.score, liveHpi.breakdown.baseline.weighted],
                 ].map(([factor, weight, raw, score, weighted]) => (
                   <tr key={factor}>
                     <td className="py-1.5 font-medium">{factor}</td>
