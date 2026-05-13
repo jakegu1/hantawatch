@@ -1,7 +1,31 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-13T15:25:51.955520+00:00",
+  "__generated_at": "2026-05-13T19:51:11.745879+00:00",
   "clusters": [
+    {
+      "id": "2026-don601",
+      "name": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "serotypeId": "other",
+      "location": {
+        "lat": 55.4,
+        "lng": -3.4,
+        "name": "英国"
+      },
+      "distanceFromChinaKm": 6200,
+      "confirmedCases": 0,
+      "suspectedCases": 0,
+      "deaths": 0,
+      "humanToHuman": false,
+      "whoRiskLevel": "待评估",
+      "lastUpdate": "2026-05-13",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+        "retrievedAt": "2026-05-13T19:51:11.744884+00:00",
+        "confidence": "official"
+      },
+      "_summary": "On 2 May 2026, WHO received notification from the IHR NFP of the United Kingdom of Great Britain and Northern Ireland (hereafter referred to as the United Kingdom) regarding a cluster of severe acute respiratory illness, including two deaths and one critically ill passenger, aboard the Dutch-flagged cruise ship MV Hondius. As of 13 May, a total of 11 cases (eight confirmed, one inconclusive and two probable cases), including three deaths (two confirmed and one probable), have been reported. Since the last Disease Outbreak News was published on 8 May, two additional confirmed cases and one inc…"
+    },
     {
       "id": "mv-hondius-2026",
       "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
@@ -21,21 +45,21 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-13T15:25:51.952763+00:00",
+        "retrievedAt": "2026-05-13T19:51:11.744907+00:00",
         "confidence": "official"
       },
       "_summary": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。"
     }
   ],
   "currentHpi": {
-    "total": 24,
-    "grade": "moderate",
-    "gradeZh": "一般关注",
-    "color": "#0891b2",
+    "total": 13,
+    "grade": "low",
+    "gradeZh": "低关注",
+    "color": "#16a34a",
     "factors": {
       "distance": {
-        "km": 16500,
-        "score": 0.0,
+        "km": 6200,
+        "score": 20.0,
         "weight": 0.3
       },
       "officialAssessment": {
@@ -44,8 +68,8 @@
         "weight": 0.25
       },
       "serotypeRisk": {
-        "serotypeId": "andes",
-        "score": 100,
+        "serotypeId": "other",
+        "score": 15,
         "weight": 0.2
       },
       "travelConnectivity": {
@@ -59,6 +83,6 @@
         "weight": 0.1
       }
     },
-    "updatedAt": "2026-05-13T15:25:51.953522+00:00"
+    "updatedAt": "2026-05-13T19:51:11.745197+00:00"
   }
 }

@@ -1,39 +1,39 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-13T15:25:51.958698+00:00",
-  "lastCollectedAt": "2026-05-13T15:25:51.955360+00:00",
-  "lastCollectedAtCn": "2026-05-13T23:25:51.955362+08:00",
+  "__generated_at": "2026-05-13T19:51:11.747200+00:00",
+  "lastCollectedAt": "2026-05-13T19:51:11.745808+00:00",
+  "lastCollectedAtCn": "2026-05-14T03:51:11.745813+08:00",
   "sources": {
     "who_don": {
-      "entries": 2,
+      "entries": 3,
       "ok": true
     },
     "ecdc": {
       "ok": true
     },
     "news_leads": {
-      "entries": 3,
+      "entries": 2,
       "ok": true,
       "perQuery": [
         {
           "query": "汉坦病毒",
           "hl": "zh-CN",
-          "fetched": 92,
-          "blocked": 2,
-          "no_signal": 11,
+          "fetched": 100,
+          "blocked": 3,
+          "no_signal": 12,
           "duplicate": 0,
-          "non_authoritative": 9,
-          "kept": 3,
+          "non_authoritative": 8,
+          "kept": 2,
           "ok": true
         }
       ]
     }
   },
-  "clusterCount": 1,
+  "clusterCount": 2,
   "manualFiles": [
     "china-baseline.json",
     "recent-cases-china.json",
     "news-leads-manual.json"
   ],
-  "yesterdayNearestDistanceKm": 16500
+  "yesterdayNearestDistanceKm": 6200
 }
