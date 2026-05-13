@@ -11,14 +11,14 @@ jobs:
     name: Type Check + Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # `pnpm/action-setup@v4` reads the version from `package.json#packageManager`
       # automatically when no `version` input is provided. Specifying a version
       # here in addition causes ERR_PNPM_BAD_PM_VERSION when the two differ.
       - uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: 'pnpm'
@@ -33,12 +33,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: check
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # See `check` job above — version is read from package.json#packageManager
       - uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: 'pnpm'

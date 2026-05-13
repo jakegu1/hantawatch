@@ -92,6 +92,122 @@ INCLUSION_HINTS = (
     "重症", "疫情", "警示", "病亡", "病故",
 )
 
+
+# ============================================================================
+# AUTHORITATIVE-SOURCE ALLOWLIST (2026-05-13)
+# ============================================================================
+#
+# Editorial policy from product owner:
+#   Keep only entries from authoritative publishers — official health
+#   agencies (WHO, ECDC, Swiss BAG, Taiwan CDC, mainland NHC / China CDC,
+#   foreign ministries of health, etc.) and Xinhua News Agency. Drop
+#   everything else (chinanews.com.cn, thepaper.cn, 天津日报, 新京报,
+#   Reuters, BBC, NPR …) — those create noise without adding
+#   epidemiological signal beyond what authoritative sources already
+#   convey.
+#
+# Scope: applies ONLY to the Google News scrape (`fetch_news_leads`).
+#   - WHO DON RSS entries arrive via `fetch_who_don()` in `who.py` — they
+#     are already authoritative by definition and use a different path.
+#   - ECDC threat-assessment entries arrive via `fetch_ecdc_assessment`
+#     in `ecdc.py` — same.
+#   - Manually-curated entries arrive via `merge_manual_news_leads()` in
+#     `builder.py` — admin-reviewed, exempted from this filter.
+#
+# Matching: an entry passes if ANY of the following match:
+#   1. Outlet name contains one of NEWS_LEADS_AUTHORITATIVE_OUTLETS
+#      (case-insensitive substring),
+#   2. Outlet name contains one of NEWS_LEADS_AUTHORITATIVE_OUTLET_PATTERNS
+#      (case-insensitive substring — broader "ministry of health" etc.),
+#   3. URL host equals or is a subdomain of one of
+#      NEWS_LEADS_AUTHORITATIVE_HOSTS.
+# Both outlet name AND host are checked because Google News normalises
+# them independently (e.g. some entries report only a host, others only
+# a friendly name).
+NEWS_LEADS_AUTHORITATIVE_OUTLETS: tuple[str, ...] = (
+    # Xinhua family — the only mainland *commercial-format* outlet kept
+    # at user's explicit request. People's Daily / CCTV / 中新网 etc. are
+    # deliberately NOT here.
+    "xinhua",
+    "新华",
+)
+
+NEWS_LEADS_AUTHORITATIVE_OUTLET_PATTERNS: tuple[str, ...] = (
+    # Generic patterns matching official health bodies across languages.
+    # Tuned for high precision — these phrases rarely appear in commercial
+    # media bylines.
+    "world health organization",
+    "ministry of health",
+    "department of health",
+    "centers for disease control",
+    "centre for disease control",
+    "european centre for disease",
+    "ministerio de salud",                # ES — most Latin American countries
+    "ministère de la santé",              # FR
+    "bundesamt für gesundheit",           # DE — Swiss BAG long form
+    "国家卫生健康委",                       # NHC mainland
+    "卫生健康委员会",
+    "疾病预防控制中心",                     # 中国疾控中心
+    "疾病管制",                            # 台湾省疾病管制署 (Taiwan CDC)
+)
+
+NEWS_LEADS_AUTHORITATIVE_HOSTS: tuple[str, ...] = (
+    # ---- Mainland authoritative ----
+    "news.cn",          # Xinhua
+    "xinhuanet.com",    # Xinhua
+    "gov.cn",           # all *.gov.cn — NHC, provincial health bureaux, etc.
+    "chinacdc.cn",      # China CDC
+    # ---- Foreign official health bodies ----
+    "who.int",
+    "ecdc.europa.eu",
+    "bag.admin.ch",     # Swiss Federal Office of Public Health
+    "cdc.gov.tw",       # Taiwan省 CDC
+    "cdc.gov",          # US CDC
+    "rki.de",           # Robert Koch Institute, Germany
+    "santepubliquefrance.fr",
+    "canada.ca",        # Public Health Agency of Canada
+    "gov.uk",           # UK Health Security Agency, NHS, etc.
+    # Latin American health ministries (Andes serotype hot zone)
+    "minsal.cl",        # Chile
+    "msal.gob.ar",      # Argentina (current)
+    "argentina.gob.ar", # Argentina (legacy)
+    "salud.gob.mx",     # Mexico
+    "minsa.gob.pe",     # Peru
+    "sanidad.gob.es",   # Spain (some routes)
+)
+
+
+def _host_matches(host: str, allowlist: tuple[str, ...]) -> bool:
+    """Return True iff `host` exactly matches an allowlist entry or is a
+    subdomain of one. e.g. 'wjw.gd.gov.cn' matches 'gov.cn'."""
+    h = host.lower().strip()
+    if not h:
+        return False
+    return any(h == allowed or h.endswith("." + allowed) for allowed in allowlist)
+
+
+def _is_authoritative_news_source(outlet: str, link: str) -> bool:
+    """Decide whether a Google News lead should be published.
+
+    See the NEWS_LEADS_AUTHORITATIVE_* tuples above for the policy. This
+    helper is what every entry must pass before we save it.
+    """
+    outlet_lc = (outlet or "").lower()
+    # Rule 1: short outlet matches (Xinhua family)
+    if any(needle in outlet_lc for needle in NEWS_LEADS_AUTHORITATIVE_OUTLETS):
+        return True
+    # Rule 2: long-form patterns (ministries / CDC variants)
+    if any(pat in outlet_lc for pat in NEWS_LEADS_AUTHORITATIVE_OUTLET_PATTERNS):
+        return True
+    # Rule 3: URL host on allowlist
+    try:
+        host = urlparse(link).hostname or ""
+    except ValueError:
+        host = ""
+    if _host_matches(host, NEWS_LEADS_AUTHORITATIVE_HOSTS):
+        return True
+    return False
+
 # Taiwan naming rewrite — per editorial policy "台湾" must be rendered as
 # "台湾省" in user-facing copy. Applied to every news lead's title + summary.
 # Order matters: rewrite the longest expressions first to avoid double-rewriting
@@ -318,7 +434,15 @@ def fetch_news_leads(
             )
             d_stats = {
                 "query": query, "hl": hl, "fetched": 0, "blocked": 0,
-                "no_signal": 0, "duplicate": 0, "kept": 0, "ok": False,
+                "no_signal": 0, "duplicate": 0,
+                # Number of entries dropped because the outlet wasn't on
+                # the authoritative allowlist (see top of this file).
+                # Useful when the public feed looks sparse — if this is
+                # high, Google News is mostly serving non-authoritative
+                # noise that day. If you ever want to inspect what's
+                # being dropped, run main.py with `LOGLEVEL=DEBUG`.
+                "non_authoritative": 0,
+                "kept": 0, "ok": False,
             }
             try:
                 resp = client.get(url)
@@ -372,6 +496,22 @@ def fetch_news_leads(
                     d_stats["no_signal"] += 1
                     continue
 
+                # Parse outlet name now so the authoritative-allowlist gate
+                # below can use both the friendly outlet AND the URL host.
+                raw_outlet = _parse_source_outlet(raw)
+
+                # AUTHORITATIVE-SOURCE GATE (2026-05-13)
+                # Editorial policy: only WHO/ECDC/Swiss BAG/Taiwan CDC/
+                # mainland NHC + China CDC + Xinhua are allowed through
+                # the auto-scrape. Everything else (thepaper.cn,
+                # chinanews.com.cn, 天津日报, Reuters, BBC, …) gets dropped
+                # at collection time. See the NEWS_LEADS_AUTHORITATIVE_*
+                # tuples at the top of this file. WHO DON / ECDC / manual
+                # entries arrive via other paths and bypass this check.
+                if not _is_authoritative_news_source(raw_outlet, link):
+                    d_stats["non_authoritative"] += 1
+                    continue
+
                 seen_links.add(link)
                 if tkey:
                     seen_title_keys.add(tkey)
@@ -387,7 +527,7 @@ def fetch_news_leads(
                 # too; we display the outlet separately so it's redundant in
                 # the title. (Summary is intentionally cleared above.)
                 clean_title = normalise_taiwan_naming(strip_trailing_source(title))
-                outlet = normalise_taiwan_naming(_parse_source_outlet(raw))
+                outlet = normalise_taiwan_naming(raw_outlet)
 
                 all_leads.append(
                     NewsLead(
@@ -409,9 +549,11 @@ def fetch_news_leads(
     logger.info("news-leads: %d kept (of %d total fetched across %d queries)",
                 len(out), len(all_leads), len(QUERIES))
     for d in diagnostics:
-        logger.info("  · query=%-32s ok=%-5s fetched=%3d blocked=%2d no-signal=%2d dup=%2d kept=%2d",
-                    d["query"], str(d["ok"]), d["fetched"], d["blocked"],
-                    d["no_signal"], d["duplicate"], d["kept"])
+        logger.info(
+            "  · query=%-16s ok=%-5s fetched=%3d blocked=%2d no-sig=%2d dup=%2d non-auth=%2d kept=%2d",
+            d["query"], str(d["ok"]), d["fetched"], d["blocked"],
+            d["no_signal"], d["duplicate"], d.get("non_authoritative", 0), d["kept"],
+        )
     # Stash diagnostics on the function so the orchestrator can pull them
     # into meta.json without changing the return type. (A struct return would
     # be cleaner but unnecessarily noisy for the call site.)
