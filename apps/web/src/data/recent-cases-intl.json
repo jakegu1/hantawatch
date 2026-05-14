@@ -1,7 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-14T14:04:11.464332+00:00",
+  "__generated_at": "2026-05-14T19:42:44.188329+00:00",
   "cases": [
+    {
+      "id": "news-news.google.com-rss-articles-cbmia0fvx3lxte5ttlnonklbsex0qvzcegrvslbrwkhrsu1mvdfzvnfszudfsfjsemgyvzhivfjwvhv5du",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-14",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "极地邮轮暴发汉坦病毒已致3死，早期症状像感冒！这个“老对手”到底怎么防？",
+      "summary": "",
+      "source": {
+        "name": "新华报业网",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5TTlNoNklBSEx0QVZCeGRVSlBRWkhRSU1MVDFZVnFSZUdfSFJSemgyVzhiVFJwVHV5dUZjMGxHS2FTM0dmam9TNDFueElLYzJkZEE1N3o3cjZDdXF6NE5lbzBrd3RxRVEwQnZz?oc=5",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
+        "confidence": "news"
+      }
+    },
     {
       "id": "who-2026-don601",
       "regionCode": "INT",
@@ -14,24 +30,8 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-05-14T14:04:11.463711+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
         "confidence": "official"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束”",
-      "summary": "",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-05-14T14:04:11.463711+00:00",
-        "confidence": "news"
       }
     },
     {
@@ -46,7 +46,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-05-14T14:04:11.463711+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
         "confidence": "news"
       }
     },
@@ -62,7 +62,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-14T14:04:11.463711+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
         "confidence": "official"
       }
     },
@@ -78,7 +78,23 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-14T14:04:11.463873+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187718+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmipafbvv95cuxqretaaxhocdnrt0lzzs1mejlmtglqdgk0zhvhazzjcvlncfdqoxneuzq4tuxfsfzcat",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-07",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织就与游轮有关的汉坦病毒病例采取应对行动",
+      "summary": "",
+      "source": {
+        "name": "World Health Organization (WHO)",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
         "confidence": "news"
       }
     },
@@ -94,7 +110,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-14T14:04:11.463873+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187718+00:00",
         "confidence": "news"
       }
     },
@@ -110,7 +126,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-14T14:04:11.463711+00:00",
+        "retrievedAt": "2026-05-14T19:42:44.187484+00:00",
         "confidence": "official"
       }
     }
