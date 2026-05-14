@@ -1,6 +1,5 @@
 import { SEROTYPES } from '@hantawatch/shared';
-import { chinaProvinceCases, chinaHfrsHistory, recentCases } from '@/lib/mock-data';
-import { calculateHpi } from '@/lib/hpi';
+import { chinaHfrsHistory, recentCases, currentHpi, dataMeta } from '@/lib/data';
 import { isMainlandSource } from '@/lib/link-policy';
 import type { Metadata } from 'next';
 
@@ -10,18 +9,15 @@ export const metadata: Metadata = {
 };
 
 export default function DataPage() {
-  const hpi = calculateHpi({
-    distanceKm: 18800,
-    officialRiskLevel: 'low',
-    serotypeId: 'andes',
-    travelConnectivity: 'indirect',
-    baselineDeviation: 'normal',
-  });
+  const hpi = currentHpi;
+  const updatedAt = dataMeta.lastCollectedAtCn
+    ? dataMeta.lastCollectedAtCn.replace('T', ' ').slice(0, 19)
+    : new Date(dataMeta.lastCollectedAt).toLocaleString('zh-CN', { hour12: false });
 
   return (
     <div className="container-page py-8">
       <h1 className="text-2xl font-bold mb-2">疫情数据</h1>
-      <p className="text-gray-500 text-sm mb-8">汉坦病毒疫情数据总览。数据来源均标注出处，更新时间：2026-05-12。</p>
+      <p className="text-gray-500 text-sm mb-8">汉坦病毒疫情数据总览。数据来源均标注出处，更新时间：{updatedAt}。</p>
 
       {/* HPI Summary */}
       <div className="card mb-6">

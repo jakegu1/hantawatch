@@ -28,6 +28,7 @@ from hantawatch_collector.builder import (
     build_recent_cases_intl,
     derive_current_hpi,
     get_prev_nearest_distance,
+    get_prev_reference_cluster_id,
     merge_manual_news_leads,
     stamp_nearest_distance,
     update_hpi_history,
@@ -128,11 +129,13 @@ def main(argv: list[str] | None = None) -> int:
 
     # ---- 7. Compute daily brief (Δ vs yesterday) ----
     prev_distance = get_prev_nearest_distance(out_dir / "meta.json")
+    prev_reference_cluster_id = get_prev_reference_cluster_id(out_dir / "meta.json")
     daily_brief = build_daily_brief(
         current_hpi=current_hpi,
         hpi_history=hpi_history,
         active_clusters=clusters,
         prev_distance_km=prev_distance,
+        prev_reference_cluster_id=prev_reference_cluster_id,
         domestic_baseline_status=domestic_baseline,
     )
 
@@ -161,9 +164,15 @@ def main(argv: list[str] | None = None) -> int:
         news_count=len(news_leads),
         news_diagnostics=news_diagnostics,
     )
-    if clusters:
-        nearest_km = min(c.get("distanceFromChinaKm", 999_999) for c in clusters)
-        stamp_nearest_distance(meta, distance_km=nearest_km)
+    reference = current_hpi.get("referenceCluster") or {}
+    reference_km = int(reference.get("distanceFromChinaKm", 0) or 0)
+    if reference_km > 0:
+        stamp_nearest_distance(
+            meta,
+            distance_km=reference_km,
+            reference_cluster_id=reference.get("id"),
+            reference_cluster_name=reference.get("name"),
+        )
 
     # ---- 10. Write everything ----
     if args.dry_run:

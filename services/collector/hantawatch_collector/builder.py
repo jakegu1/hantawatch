@@ -75,7 +75,85 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "stableClusterId": "mv-hondius-2026",
         "serotypeId": "andes",
     },
+    "2026-DON601": {
+        "name": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）",
+        "summaryZh": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+        "lat": -54.8,
+        "lng": -68.3,
+        "locationName": "南美洲海域（始发乌斯怀亚）",
+        "humanToHuman": True,
+        "whoRiskLevel": "对公众风险：低（WHO 2026-05-13）",
+        "stableClusterId": "mv-hondius-2026",
+        "serotypeId": "andes",
+        "confirmedCases": 8,
+        "suspectedCases": 3,
+        "deaths": 3,
+    },
 }
+
+
+def _has_cjk(text: str) -> bool:
+    return any("\u4e00" <= ch <= "\u9fff" for ch in text)
+
+
+def _is_mv_hondius_outbreak(title: str, summary: str) -> bool:
+    text = f"{title} {summary}".lower()
+    return "mv hondius" in text or ("hantavirus" in text and "cruise ship" in text)
+
+
+def _mv_hondius_summary_zh(summary: str) -> str:
+    lower = summary.lower()
+    if "11 cases" in lower or "13 may" in lower:
+        return CLUSTER_REGISTRY["2026-DON601"]["summaryZh"]
+    return "WHO 更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。该事件与南美洲航程和邮轮暴露相关，需重点关注乘客、船员及密切接触者的健康随访；普通公众风险仍按官方通报评估为较低。"
+
+
+def _inferred_registry(
+    don_id: str,
+    title: str,
+    summary: str,
+) -> dict:
+    if _is_mv_hondius_outbreak(title, summary):
+        return {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
+            "summaryZh": _mv_hondius_summary_zh(summary),
+            "lat": -54.8,
+            "lng": -68.3,
+            "locationName": "南美洲海域（始发乌斯怀亚）",
+            "humanToHuman": True,
+            "whoRiskLevel": "对公众风险：低（WHO 2026-05）",
+            "stableClusterId": "mv-hondius-2026",
+            "serotypeId": "andes",
+            "confirmedCases": 8,
+            "suspectedCases": 3,
+            "deaths": 3,
+        }
+    return {}
+
+
+def _registry_for_entry(don_id: str, title: str, summary: str) -> dict:
+    return CLUSTER_REGISTRY.get(don_id) or _inferred_registry(don_id, title, summary)
+
+
+def _localized_who_title(title: str, summary: str) -> str:
+    if _has_cjk(title):
+        return title
+    text = f"{title} {summary}".lower()
+    if "cruise ship" in text:
+        return "邮轮旅行相关汉坦病毒聚集疫情"
+    if "andes" in text:
+        return "安第斯病毒病疫情通报"
+    return "WHO 汉坦病毒疫情通报"
+
+
+def _localized_who_summary(title: str, summary: str) -> str:
+    if not summary:
+        return "WHO 发布新的汉坦病毒相关疾病暴发新闻。该条目已进入待人工复核队列，中文摘要将随下一次策展更新完善。"
+    if _has_cjk(summary):
+        return summary
+    if _is_mv_hondius_outbreak(title, summary):
+        return _mv_hondius_summary_zh(summary)
+    return "WHO 发布新的汉坦病毒相关疾病暴发新闻。原始通报为英文，系统已先隐藏英文长摘要并标记为待人工中文复核；请以 WHO 原文链接为准。"
 
 
 def _enrich_cluster_from_registry(
@@ -94,7 +172,7 @@ def _enrich_cluster_from_registry(
       3. Last resort: lat=0, lng=0, name="未定位". The orchestrator skips
          distance computation in this case so we don't show 0 km.
     """
-    reg = CLUSTER_REGISTRY.get(don_id, {})
+    reg = _registry_for_entry(don_id, fallback_name, gazetteer_text)
     if reg:
         return {
             "name": reg.get("name", fallback_name),
@@ -110,6 +188,9 @@ def _enrich_cluster_from_registry(
             "stableClusterId": reg.get("stableClusterId"),
             "serotypeId": reg.get("serotypeId"),
             "summaryZh": reg.get("summaryZh"),
+            "confirmedCases": reg.get("confirmedCases"),
+            "suspectedCases": reg.get("suspectedCases"),
+            "deaths": reg.get("deaths"),
             "_geocodeSource": "registry",
         }
 
@@ -132,6 +213,9 @@ def _enrich_cluster_from_registry(
             "stableClusterId": None,
             "serotypeId": None,
             "summaryZh": None,
+            "confirmedCases": None,
+            "suspectedCases": None,
+            "deaths": None,
             "_geocodeSource": f"gazetteer:{hit.keyword_matched}",
         }
 
@@ -147,6 +231,9 @@ def _enrich_cluster_from_registry(
         "stableClusterId": None,
         "serotypeId": None,
         "summaryZh": None,
+        "confirmedCases": None,
+        "suspectedCases": None,
+        "deaths": None,
         "_geocodeSource": "none",
     }
 
@@ -194,11 +281,9 @@ def build_active_clusters(
     # to the crude "split before -DON" prefix when an entry isn't in the
     # registry. Either way we keep the newest DON per group.
     def _group_key(e: WhoDonEntry) -> str:
-        reg = CLUSTER_REGISTRY.get(e.id, {})
+        reg = _registry_for_entry(e.id, e.title, e.summary)
         if reg.get("stableClusterId"):
             return f"stable:{reg['stableClusterId']}"
-        if "-DON" in e.id:
-            return f"don-prefix:{e.id.split('-DON')[0]}"
         return f"id:{e.id}"
 
     seen: dict[str, WhoDonEntry] = {}
@@ -236,9 +321,9 @@ def build_active_clusters(
         # where editors update counts manually in active-clusters.json and
         # don't want them clobbered on the next scheduled run.
         prev_cluster = prev_by_id.get(cluster_id, {})
-        confirmed = int(prev_cluster.get("confirmedCases", 0) or 0)
-        suspected = int(prev_cluster.get("suspectedCases", 0) or 0)
-        deaths = int(prev_cluster.get("deaths", 0) or 0)
+        confirmed = int(enriched.get("confirmedCases") if enriched.get("confirmedCases") is not None else (prev_cluster.get("confirmedCases", 0) or 0))
+        suspected = int(enriched.get("suspectedCases") if enriched.get("suspectedCases") is not None else (prev_cluster.get("suspectedCases", 0) or 0))
+        deaths = int(enriched.get("deaths") if enriched.get("deaths") is not None else (prev_cluster.get("deaths", 0) or 0))
 
         out.append(
             {
@@ -310,8 +395,8 @@ def build_recent_cases_intl(
     # Andes chip red — getting it wrong understates the threat for the
     # cluster the public is most likely to care about.
     for e in who_entries[:20]:
-        reg = CLUSTER_REGISTRY.get(e.id, {})
-        summary = reg.get("summaryZh") or e.summary
+        reg = _registry_for_entry(e.id, e.title, e.summary)
+        summary = reg.get("summaryZh") or _localized_who_summary(e.title, e.summary)
         rows.append(
             {
                 "id": f"who-{e.id}".lower(),
@@ -326,7 +411,7 @@ def build_recent_cases_intl(
                 # Prefer the Chinese registry name when present — easier to
                 # scan in the timeline. Falls back to the WHO English title
                 # for entries the registry hasn't covered yet (gazetteer hits).
-                "title": reg.get("name") or e.title,
+                "title": reg.get("name") or _localized_who_title(e.title, e.summary),
                 "summary": summary,
                 "source": {
                     "name": "WHO 疾病暴发新闻（DON）",
@@ -502,21 +587,26 @@ def build_daily_brief(
     hpi_history: list[dict],
     active_clusters: list[dict],
     prev_distance_km: int | None,
+    prev_reference_cluster_id: str | None = None,
     domestic_baseline_status: str,
 ) -> dict:
     """Compose today's brief. Distance Δ is computed as the change in the
     nearest cluster's distance vs. yesterday (kept in meta.json)."""
     today = _today_cn().isoformat()
 
-    if active_clusters:
-        nearest = min(active_clusters, key=lambda c: c.get("distanceFromChinaKm", 1_000_000))
-        nearest_km = int(nearest.get("distanceFromChinaKm", 0))
-    else:
-        nearest_km = 0
+    reference = current_hpi.get("referenceCluster") or {}
+    reference_km = int(reference.get("distanceFromChinaKm", 0) or 0)
+    reference_id = reference.get("id")
+    reference_name = reference.get("name") or "当前重点疫情聚集"
 
     distance_delta_km = 0
-    if prev_distance_km is not None:
-        distance_delta_km = nearest_km - prev_distance_km
+    comparable_distance = (
+        prev_distance_km is not None
+        and reference_id is not None
+        and prev_reference_cluster_id == reference_id
+    )
+    if comparable_distance:
+        distance_delta_km = reference_km - prev_distance_km
 
     # HPI delta over last 2 points
     hpi_delta = 0
@@ -534,10 +624,10 @@ def build_daily_brief(
 
     grade_zh = current_hpi.get("gradeZh", "未知")
     if hpi_delta == 0:
-        hpi_phrase = f"HPI 持平 {current_hpi['total']}"
+        hpi_phrase = f"HPI 指数持平（当前 {current_hpi['total']}，{grade_zh}）"
     else:
-        sign = "+" if hpi_delta > 0 else ""
-        hpi_phrase = f"HPI {sign}{hpi_delta}（当前 {current_hpi['total']}, {grade_zh}）"
+        hpi_direction = "增加" if hpi_delta > 0 else "减少"
+        hpi_phrase = f"HPI 指数{hpi_direction} {abs(hpi_delta)}（当前 {current_hpi['total']}，{grade_zh}）"
 
     baseline_phrase = {
         "normal": "国内 HFRS 处于基线正常范围",
@@ -545,10 +635,16 @@ def build_daily_brief(
         "below": "国内 HFRS 低于基线",
     }.get(domestic_baseline_status, "国内 HFRS 基线状态未知")
 
-    if distance_delta_km == 0:
-        dist_phrase = "今日全球无新增确诊"
+    if not comparable_distance:
+        if reference_km > 0:
+            dist_phrase = f"重点疫情聚集为{reference_name}，距中国大陆约 {reference_km:,} km"
+        else:
+            dist_phrase = "重点疫情聚集距离暂无法评估"
+    elif distance_delta_km == 0:
+        dist_phrase = "重点疫情聚集距中国大陆基本持平"
     else:
-        dist_phrase = f"最近聚集地距中国变化 {distance_delta_km:+d} km"
+        distance_direction = "远了" if distance_delta_km > 0 else "近了"
+        dist_phrase = f"重点疫情聚集离中国大陆{distance_direction} {abs(distance_delta_km):,} km"
 
     one_line = f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。"
 
@@ -571,15 +667,6 @@ def derive_current_hpi(
     domestic_baseline_status: str,
 ) -> dict:
     """Compose HPI inputs from clusters + ECDC assessment, then compute."""
-    if active_clusters:
-        # Use the highest-risk cluster (typically the closest hostile serotype).
-        nearest = min(active_clusters, key=lambda c: c.get("distanceFromChinaKm", 1_000_000))
-        distance_km = float(nearest.get("distanceFromChinaKm", 18_000))
-        serotype_id = nearest.get("serotypeId", "other")
-    else:
-        distance_km = 18_000.0
-        serotype_id = "other"
-
     # Official risk level: very crude inference from ECDC wording.
     official_risk_level = "low"
     if ecdc and ecdc.risk_wording:
@@ -596,15 +683,39 @@ def derive_current_hpi(
     # flight-routing dataset.
     travel_connectivity = "indirect"
 
-    result = calculate_hpi(
-        HpiInputs(
-            distance_km=distance_km,
-            official_risk_level=official_risk_level,
-            serotype_id=serotype_id,
-            travel_connectivity=travel_connectivity,
-            baseline_deviation=domestic_baseline_status,
+    def _score_cluster(cluster: dict | None) -> dict:
+        distance_km = float((cluster or {}).get("distanceFromChinaKm", 18_000))
+        serotype_id = (cluster or {}).get("serotypeId", "other")
+        result = calculate_hpi(
+            HpiInputs(
+                distance_km=distance_km,
+                official_risk_level=official_risk_level,
+                serotype_id=serotype_id,
+                travel_connectivity=travel_connectivity,
+                baseline_deviation=domestic_baseline_status,
+            )
         )
-    )
+        if cluster is not None:
+            result["referenceCluster"] = {
+                "id": cluster.get("id"),
+                "name": cluster.get("name"),
+                "distanceFromChinaKm": int(cluster.get("distanceFromChinaKm", 0) or 0),
+                "serotypeId": cluster.get("serotypeId", "other"),
+            }
+        return result
+
+    if active_clusters:
+        result = max(
+            (_score_cluster(c) for c in active_clusters),
+            key=lambda r: (
+                r["total"],
+                r["factors"]["serotypeRisk"]["score"],
+                -r["factors"]["distance"]["km"],
+            ),
+        )
+    else:
+        result = _score_cluster(None)
+
     result["updatedAt"] = datetime.now(timezone.utc).isoformat()
     return result
 
@@ -662,8 +773,26 @@ def get_prev_nearest_distance(meta_path: Path) -> int | None:
     return meta.get("yesterdayNearestDistanceKm")
 
 
-def stamp_nearest_distance(meta: dict, *, distance_km: int) -> None:
+def get_prev_reference_cluster_id(meta_path: Path) -> str | None:
+    meta = read_json(meta_path, default=None)
+    if not meta:
+        return None
+    value = meta.get("yesterdayReferenceClusterId")
+    return value if isinstance(value, str) and value else None
+
+
+def stamp_nearest_distance(
+    meta: dict,
+    *,
+    distance_km: int,
+    reference_cluster_id: str | None = None,
+    reference_cluster_name: str | None = None,
+) -> None:
     meta["yesterdayNearestDistanceKm"] = distance_km
+    if reference_cluster_id:
+        meta["yesterdayReferenceClusterId"] = reference_cluster_id
+    if reference_cluster_name:
+        meta["yesterdayReferenceClusterName"] = reference_cluster_name
 
 
 __all__ = [
@@ -676,6 +805,7 @@ __all__ = [
     "build_meta",
     "write_all_outputs",
     "get_prev_nearest_distance",
+    "get_prev_reference_cluster_id",
     "stamp_nearest_distance",
     "CLUSTER_REGISTRY",
 ]

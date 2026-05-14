@@ -24,7 +24,7 @@ function formatDelta(n: number, unit = ''): {
   sign: 'flat' | 'up' | 'down';
   abs: string;
 } {
-  if (n === 0) return { sign: 'flat', abs: `持平${unit ? ' ' + unit : ''}` };
+  if (n === 0) return { sign: 'flat', abs: '持平' };
   const magnitude = Math.abs(n).toLocaleString('zh-CN');
   return { sign: n > 0 ? 'up' : 'down', abs: `${magnitude}${unit}` };
 }

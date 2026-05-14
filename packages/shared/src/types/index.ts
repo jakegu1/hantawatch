@@ -65,6 +65,12 @@ export interface HpiResult {
   color: string; // hex
   factors: HpiFactors;
   updatedAt: string;
+  referenceCluster?: {
+    id?: string;
+    name?: string;
+    distanceFromChinaKm: number;
+    serotypeId: SerotypeId;
+  };
 }
 
 // Alert subscription

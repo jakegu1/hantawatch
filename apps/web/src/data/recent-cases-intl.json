@@ -1,37 +1,21 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-13T19:51:11.746326+00:00",
+  "__generated_at": "2026-05-14T00:43:13.971651+00:00",
   "cases": [
     {
       "id": "who-2026-don601",
       "regionCode": "INT",
-      "serotypeId": "other",
+      "serotypeId": "andes",
       "date": "2026-05-13",
       "caseType": "confirmed",
       "count": 0,
-      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
-      "summary": "On 2 May 2026, WHO received notification from the IHR NFP of the United Kingdom of Great Britain and Northern Ireland (hereafter referred to as the United Kingdom) regarding a cluster of severe acute respiratory illness, including two deaths and one critically ill passenger, aboard the Dutch-flagged cruise ship MV Hondius. As of 13 May, a total of 11 cases (eight confirmed, one inconclusive and two probable cases), including three deaths (two confirmed and one probable), have been reported. Since the last Disease Outbreak News was published on 8 May, two additional confirmed cases and one inc…",
+      "title": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）",
+      "summary": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-05-13T19:51:11.745473+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970255+00:00",
         "confidence": "official"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxte5pbkthr1fkefdtq0lkwg1qvk0ytxpdrus4mhityvhwqxvkvkpmmda1curoefhvcgd0eh",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-10",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "涉汉坦病毒疫情邮轮人员开始疏散转运",
-      "summary": "",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-05-13T19:51:11.745473+00:00",
-        "confidence": "news"
       }
     },
     {
@@ -46,7 +30,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-13T19:51:11.745473+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970255+00:00",
         "confidence": "official"
       }
     },
@@ -62,7 +46,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-13T19:51:11.745689+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970704+00:00",
         "confidence": "news"
       }
     },
@@ -78,7 +62,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-05-13T19:51:11.745473+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970255+00:00",
         "confidence": "news"
       }
     },
@@ -94,7 +78,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-13T19:51:11.745689+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970704+00:00",
         "confidence": "news"
       }
     },
@@ -110,7 +94,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-13T19:51:11.745473+00:00",
+        "retrievedAt": "2026-05-14T00:43:13.970255+00:00",
         "confidence": "official"
       }
     }

@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
-import { calculateHpi } from '@/lib/hpi';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
@@ -87,13 +86,7 @@ export default function HomePage() {
   // (e.g. test fixtures with non-Andes data), so the page never crashes.
   const cluster = nearestAndes.nearest ?? liveClusters[0];
 
-  const liveHpi = calculateHpi({
-    distanceKm: cluster.distanceFromChinaKm,
-    officialRiskLevel: 'low',
-    serotypeId: 'andes',
-    travelConnectivity: 'indirect',
-    baselineDeviation: 'normal',
-  });
+  const hpiFactors = hpi.factors;
 
   return (
     <div className="pb-16">
@@ -495,11 +488,11 @@ export default function HomePage() {
               </thead>
               <tbody className="divide-y text-xs">
                 {[
-                  ['距离因子', '30%', `${fmt(liveHpi.breakdown.distance.raw)} km`, liveHpi.breakdown.distance.score, liveHpi.breakdown.distance.weighted],
-                  ['官方评估', '25%', '低风险（WHO）', liveHpi.breakdown.official.score, liveHpi.breakdown.official.weighted],
-                  ['血清型风险', '20%', 'Andes（人传人+高病死率）', liveHpi.breakdown.serotype.score, liveHpi.breakdown.serotype.weighted],
-                  ['旅行联通度', '15%', '需2次转机', liveHpi.breakdown.travel.score, liveHpi.breakdown.travel.weighted],
-                  ['历史基线', '10%', '中国大陆 HFRS 正常范围', liveHpi.breakdown.baseline.score, liveHpi.breakdown.baseline.weighted],
+                  ['距离因子', '30%', `${fmt(hpiFactors.distance.km)} km`, hpiFactors.distance.score, hpiFactors.distance.score * hpiFactors.distance.weight],
+                  ['官方评估', '25%', `${hpiFactors.officialAssessment.level}`, hpiFactors.officialAssessment.score, hpiFactors.officialAssessment.score * hpiFactors.officialAssessment.weight],
+                  ['血清型风险', '20%', SEROTYPES[hpiFactors.serotypeRisk.serotypeId]?.nameZh ?? hpiFactors.serotypeRisk.serotypeId, hpiFactors.serotypeRisk.score, hpiFactors.serotypeRisk.score * hpiFactors.serotypeRisk.weight],
+                  ['旅行联通度', '15%', hpiFactors.travelConnectivity.level, hpiFactors.travelConnectivity.score, hpiFactors.travelConnectivity.score * hpiFactors.travelConnectivity.weight],
+                  ['历史基线', '10%', hpiFactors.historicalBaseline.deviation, hpiFactors.historicalBaseline.score, hpiFactors.historicalBaseline.score * hpiFactors.historicalBaseline.weight],
                 ].map(([factor, weight, raw, score, weighted]) => (
                   <tr key={factor}>
                     <td className="py-1.5 font-medium">{factor}</td>
@@ -514,7 +507,7 @@ export default function HomePage() {
                   <td className="py-2">100%</td>
                   <td className="py-2" />
                   <td className="py-2" />
-                  <td className="py-2 text-brand-700 font-mono">{liveHpi.total}</td>
+                  <td className="py-2 text-brand-700 font-mono">{hpi.total}</td>
                 </tr>
               </tbody>
             </table>

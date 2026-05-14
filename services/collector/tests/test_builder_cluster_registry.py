@@ -26,7 +26,9 @@ from pathlib import Path
 from hantawatch_collector.builder import (
     CLUSTER_REGISTRY,
     build_active_clusters,
+    build_daily_brief,
     build_recent_cases_intl,
+    derive_current_hpi,
 )
 from hantawatch_collector.who_don import WhoDonEntry
 
@@ -50,6 +52,7 @@ def test_stable_cluster_id_preserves_case_counts(tmp_path: Path):
     and counts would regress to 0. With the override the id is stable
     and the carry-over keeps the curated values."""
     assert CLUSTER_REGISTRY["2026-DON600"]["stableClusterId"] == "mv-hondius-2026"
+    assert CLUSTER_REGISTRY["2026-DON601"]["stableClusterId"] == "mv-hondius-2026"
 
     fallback = tmp_path / "active-clusters.json"
     import json
@@ -74,19 +77,20 @@ def test_stable_cluster_id_preserves_case_counts(tmp_path: Path):
 
 
 def test_stable_cluster_id_groups_multiple_dons(tmp_path: Path):
-    """When the WHO feed returns BOTH DON599 and DON600 in the same
+    """When the WHO feed returns multiple MV Hondius DONs in the same
     fetch (the typical mid-outbreak state), they should collapse to a
     single active cluster — the newer one wins on title/summary, the
     stable id keeps editorial state."""
     entries = [
         _make_who_entry("2026-DON599", published="2026-05-04T18:00:00+00:00"),
         _make_who_entry("2026-DON600", published="2026-05-08T18:00:00+00:00"),
+        _make_who_entry("2026-DON601", published="2026-05-13T18:00:00+00:00"),
     ]
     clusters = build_active_clusters(entries, fallback_path=tmp_path / "missing.json")
     assert len(clusters) == 1
     assert clusters[0]["id"] == "mv-hondius-2026"
     # Newer DON wins on lastUpdate.
-    assert clusters[0]["lastUpdate"] == "2026-05-08"
+    assert clusters[0]["lastUpdate"] == "2026-05-13"
 
 
 def test_registry_serotype_override_wins_over_keyword_match(tmp_path: Path):
@@ -109,6 +113,85 @@ def test_recent_cases_intl_uses_registry_overrides(tmp_path: Path):
     assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情（更新）"
     assert "截至 5 月 8 日" in who_row["summary"]
     assert "WHO 疾病暴发新闻" in who_row["source"]["name"]
+
+
+def test_don601_is_localized_and_grouped(tmp_path: Path):
+    entries = [_make_who_entry(
+        "2026-DON601",
+        published="2026-05-13T18:00:00+00:00",
+        summary="On 2 May 2026, WHO received notification regarding a cluster aboard MV Hondius. As of 13 May, a total of 11 cases have been reported.",
+    )]
+    clusters = build_active_clusters(entries, fallback_path=tmp_path / "missing.json")
+    assert clusters[0]["id"] == "mv-hondius-2026"
+    assert clusters[0]["location"]["name"] == "南美洲海域（始发乌斯怀亚）"
+    assert clusters[0]["serotypeId"] == "andes"
+    assert "5 月 13 日" in clusters[0]["_summary"]
+
+    rows = build_recent_cases_intl(entries, [], ecdc=None, fallback_path=tmp_path / "missing.json")
+    who_row = next(r for r in rows if r["id"] == "who-2026-don601")
+    assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）"
+    assert "11 例" in who_row["summary"]
+    assert "On 2 May" not in who_row["summary"]
+
+
+def test_future_mv_hondius_don_uses_inferred_localization(tmp_path: Path):
+    entries = [_make_who_entry(
+        "2026-DON602",
+        published="2026-05-20T18:00:00+00:00",
+        summary="WHO published a further update on the hantavirus cluster aboard MV Hondius.",
+    )]
+    clusters = build_active_clusters(entries, fallback_path=tmp_path / "missing.json")
+    assert clusters[0]["id"] == "mv-hondius-2026"
+    assert clusters[0]["serotypeId"] == "andes"
+
+    rows = build_recent_cases_intl(entries, [], ecdc=None, fallback_path=tmp_path / "missing.json")
+    who_row = next(r for r in rows if r["id"] == "who-2026-don602")
+    assert who_row["title"].startswith("MV Hondius 邮轮安第斯型")
+    assert "WHO 更新 MV Hondius" in who_row["summary"]
+    assert "further update" not in who_row["summary"]
+
+
+def test_hpi_uses_highest_risk_reference_not_nearest_low_serotype():
+    clusters = [
+        {
+            "id": "near-other",
+            "name": "近距离低风险聚集",
+            "distanceFromChinaKm": 6200,
+            "serotypeId": "other",
+        },
+        {
+            "id": "mv-hondius-2026",
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "distanceFromChinaKm": 16500,
+            "serotypeId": "andes",
+        },
+    ]
+    hpi = derive_current_hpi(active_clusters=clusters, ecdc=None, domestic_baseline_status="normal")
+    assert hpi["total"] == 24
+    assert hpi["referenceCluster"]["id"] == "mv-hondius-2026"
+
+
+def test_daily_brief_wording_uses_direction_words():
+    current_hpi = {
+        "total": 24,
+        "gradeZh": "一般关注",
+        "referenceCluster": {
+            "id": "mv-hondius-2026",
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "distanceFromChinaKm": 14500,
+        },
+    }
+    brief = build_daily_brief(
+        current_hpi=current_hpi,
+        hpi_history=[{"date": "2026-05-13", "value": 13}, {"date": "2026-05-14", "value": 24}],
+        active_clusters=[{"lastUpdate": "2026-05-13"}],
+        prev_distance_km=16500,
+        prev_reference_cluster_id="mv-hondius-2026",
+        domestic_baseline_status="normal",
+    )
+    assert "近了 2,000 km" in brief["oneLine"]
+    assert "HPI 指数增加 11" in brief["oneLine"]
+    assert "-2000" not in brief["oneLine"]
 
 
 def test_unknown_don_falls_back_to_keyword_detection(tmp_path: Path):
