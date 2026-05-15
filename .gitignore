@@ -53,6 +53,9 @@ apps/web/public/workbox-*.js.map
 .pytest_cache/
 *.pyc
 
+# Collector debug artifacts (raw HTML dumps when realtime parser misses)
+services/collector/.cache/
+
 # Local env files (only .env.example is committed)
 .env.local
 .env.development.local

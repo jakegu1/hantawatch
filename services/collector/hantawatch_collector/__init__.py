@@ -17,6 +17,13 @@ MANUAL_FILES = frozenset({
     # The collector READS this and merges it into recent-cases-intl.json — but
     # never overwrites it.
     "news-leads-manual.json",
+    # Hand-curated epidemiological baseline per country (Layer 1 of the
+    # /countries page). Reviewed every 6 months against national surveillance
+    # reports — collector must never touch this.
+    "country-status.json",
+    # Hand-maintained outbreak-import tracking (Layer 2 of /countries). Edited
+    # only when WHO or national authorities publish new monitoring numbers.
+    "mv-hondius-imports.json",
 })
 
 # Files written by the collector. Anything not in this set + not in
@@ -27,4 +34,7 @@ GENERATED_FILES = frozenset({
     "hpi-history.json",
     "daily-brief.json",
     "meta.json",
+    "realtime-feed.json",
+    # Auto-aggregated per-country signal heat (Layer 3 of the /countries page).
+    "country-signals.json",
 })

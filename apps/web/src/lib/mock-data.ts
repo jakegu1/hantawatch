@@ -19,6 +19,7 @@ export {
   chinaProvinceCases,
   recentCases,
   dataMeta,
+  realtimeFeed,
 } from './data';
 
-export type { DailyBrief, RecentCase, DataMeta } from './data';
+export type { DailyBrief, RecentCase, DataMeta, RealtimeFeed, RealtimeUpdate } from './data';

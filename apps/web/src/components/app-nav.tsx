@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BarChart3, BookOpen, ShieldCheck, MessageSquare } from 'lucide-react';
+import { Home, BarChart3, BookOpen, ShieldCheck, MessageSquare, Globe2 } from 'lucide-react';
 
 /**
  * App navigation — renders both the desktop top bar and the mobile bottom tab
@@ -28,10 +28,11 @@ interface NavItem {
 }
 
 const ITEMS: NavItem[] = [
-  { href: '/',         label: '首页',     Icon: Home,         inTabBar: true, shortLabel: '首页' },
-  { href: '/data',     label: '疫情数据', Icon: BarChart3,    inTabBar: true, shortLabel: '数据' },
-  { href: '/wiki',     label: '病毒百科', Icon: BookOpen,     inTabBar: true, shortLabel: '百科' },
-  { href: '/guide',    label: '防护指南', Icon: ShieldCheck,  inTabBar: true, shortLabel: '防护' },
+  { href: '/',         label: '首页',     Icon: Home,         inTabBar: true,  shortLabel: '首页' },
+  { href: '/countries',label: '各国情况', Icon: Globe2,       inTabBar: false },
+  { href: '/data',     label: '疫情数据', Icon: BarChart3,    inTabBar: true,  shortLabel: '数据' },
+  { href: '/wiki',     label: '病毒百科', Icon: BookOpen,     inTabBar: true,  shortLabel: '百科' },
+  { href: '/guide',    label: '防护指南', Icon: ShieldCheck,  inTabBar: true,  shortLabel: '防护' },
   { href: '/about',    label: '关于',     Icon: MessageSquare },
   { href: '/feedback', label: '反馈',     Icon: MessageSquare },
 ];
@@ -86,7 +87,7 @@ export function MobileTabBar() {
       className="sm:hidden fixed bottom-0 inset-x-0 z-50 border-t border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85 pb-[env(safe-area-inset-bottom)]"
       aria-label="主导航"
     >
-      <div className="grid grid-cols-4 text-[11px]">
+      <div className="grid grid-cols-5 text-[11px]">
         {tabs.map(({ href, shortLabel, label, Icon }) => {
           const active = isActivePath(path, href);
           return (

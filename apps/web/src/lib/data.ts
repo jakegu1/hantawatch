@@ -18,7 +18,17 @@
  *   - recent-cases-china.json   (MANUAL — domestic case bulletins)
  */
 
-import type { ActiveCluster, CaseRecord, HpiResult, SerotypeId } from '@hantawatch/shared';
+import type {
+  ActiveCluster,
+  CaseRecord,
+  ContinentCode,
+  CountrySignal,
+  CountryStatus,
+  CountryView,
+  HpiResult,
+  MvHondiusImport,
+  SerotypeId,
+} from '@hantawatch/shared/types';
 import { cleanNewsTitle, dedupByTitle } from './news-format';
 import { isAuthoritativeNewsSource } from './news-allowlist';
 
@@ -29,6 +39,10 @@ import chinaBaselineJson from '@/data/china-baseline.json';
 import hpiHistoryJson from '@/data/hpi-history.json';
 import dailyBriefJson from '@/data/daily-brief.json';
 import metaJson from '@/data/meta.json';
+import realtimeFeedJson from '@/data/realtime-feed.json';
+import countryStatusJson from '@/data/country-status.json';
+import mvHondiusImportsJson from '@/data/mv-hondius-imports.json';
+import countrySignalsJson from '@/data/country-signals.json';
 
 // ---- Active clusters & current HPI ---------------------------------------
 
@@ -209,6 +223,164 @@ export const dataMeta: DataMeta = {
   clusterCount: metaJson.clusterCount,
   yesterdayNearestDistanceKm: metaJson.yesterdayNearestDistanceKm,
 };
+
+// ---- Realtime feed (Tier-3 overseas media, machine-translated) -----------
+//
+// This is an ADDITIONAL feed deliberately kept separate from
+// recent-cases-intl.json so the official+allow-listed news pipeline stays
+// uncontaminated. Each entry comes from a non-authoritative source
+// (currently Yahoo News live updates) and has been AI-translated at
+// collection time. Compliance wording is locked: the disclaimer banner
+// says "AI 翻译" (never "机翻" / "机器翻译") and the section header MUST
+// NOT carry a "境外媒体" tag — see realtime-feed-section.tsx.
+
+export interface RealtimeUpdate {
+  id: string;
+  time: string;            // ISO 8601, original outlet timestamp
+  title_en: string;
+  body_en?: string;        // optional longer paragraph
+  summary_zh: string;      // ≤40 Chinese chars
+  key_facts_zh: string[];  // 1-3 short tags
+  source_url?: string;     // direct URL to the original update if available
+}
+
+export interface RealtimeFeed {
+  source_name: string;
+  source_url: string;
+  last_fetched: string | null;
+  machine_translated: boolean;
+  translator_model: string | null;
+  disclaimer_zh: string;
+  updates: RealtimeUpdate[];
+}
+
+export const realtimeFeed: RealtimeFeed = {
+  source_name: (realtimeFeedJson as RealtimeFeed).source_name,
+  source_url: (realtimeFeedJson as RealtimeFeed).source_url,
+  last_fetched: (realtimeFeedJson as RealtimeFeed).last_fetched ?? null,
+  machine_translated: (realtimeFeedJson as RealtimeFeed).machine_translated ?? true,
+  translator_model: (realtimeFeedJson as RealtimeFeed).translator_model ?? null,
+  disclaimer_zh: (realtimeFeedJson as RealtimeFeed).disclaimer_zh,
+  updates: (realtimeFeedJson as RealtimeFeed).updates ?? [],
+};
+
+// ---- Country status (epidemiology baseline + imports + signals) ---------
+//
+// Three layers joined here at module-load time, exposed as a single
+// `countryViews` array sorted for display + helpers for grouping and search.
+//
+// Layer 1: hand-curated baseline           (country-status.json)
+// Layer 2: hand-curated import tracking    (mv-hondius-imports.json)
+// Layer 3: auto-aggregated signal heat     (country-signals.json)
+
+export const hondiusImports: MvHondiusImport[] =
+  (mvHondiusImportsJson.imports as MvHondiusImport[]) ?? [];
+
+export const hondiusOutbreakName: string =
+  (mvHondiusImportsJson as { outbreakName?: string }).outbreakName ??
+  'MV Hondius 邮轮安第斯型聚集疫情';
+
+const _importsByIso2 = new Map<string, MvHondiusImport>(
+  hondiusImports.map((imp) => [imp.iso2.toUpperCase(), imp]),
+);
+
+const _signalsByIso2: Record<string, CountrySignal> =
+  (countrySignalsJson as { countries?: Record<string, CountrySignal> }).countries ?? {};
+
+/** Continent display order — matches the page section order. */
+export const CONTINENT_ORDER: ContinentCode[] = [
+  'americas',  // Andes + Sin Nombre — highest interest right now
+  'europe',    // big Puumala block + import-receiving countries
+  'asia',      // CN/KR HFRS plus regional monitoring
+  'oceania',
+  'africa',
+];
+
+export const CONTINENT_LABEL_ZH: Record<ContinentCode, string> = {
+  americas: '美洲',
+  europe: '欧洲',
+  asia: '亚洲',
+  oceania: '大洋洲',
+  africa: '非洲',
+};
+
+/**
+ * All 35 baseline countries, enriched with Layer 2 (imports) + Layer 3
+ * (signal heat) when available. The base list comes from the hand-curated
+ * `country-status.json`; the auto-aggregated signal layer never *adds*
+ * countries here (we deliberately avoid showing countries with zero
+ * epidemiological context, since a single news mention without
+ * background is misleading for a Chinese audience).
+ */
+export const countryViews: CountryView[] = (countryStatusJson.countries as CountryStatus[])
+  .map((c) => ({
+    ...c,
+    iso2: c.iso2.toUpperCase(),
+    signals: _signalsByIso2[c.iso2.toUpperCase()],
+    imports: _importsByIso2.get(c.iso2.toUpperCase()),
+  }));
+
+/** Country sort within a continent, designed for the UI's scan-from-top use case:
+ *  1. Active import event (red/orange badge) first — these are TIME-CRITICAL,
+ *  2. Local Andes transmission (red, highest fatality serotype) next,
+ *  3. Higher 30-day signal heat first (active news clusters),
+ *  4. Alphabetical (Chinese name) as deterministic tiebreaker.
+ */
+function _countrySortKey(c: CountryView): [number, number, number, string] {
+  return [
+    c.imports ? 0 : 1,                          // imports first
+    c.hasLocalAndes ? 0 : 1,                    // andes second
+    -(c.signals?.signalCount30d ?? 0),          // higher signal count first
+    c.nameZh,                                   // stable alpha order
+  ];
+}
+
+function _compareSortKeys(
+  a: [number, number, number, string],
+  b: [number, number, number, string],
+): number {
+  for (let i = 0; i < 3; i++) {
+    if (a[i] !== b[i]) return (a[i] as number) - (b[i] as number);
+  }
+  return a[3].localeCompare(b[3]);
+}
+
+/** Pre-grouped + pre-sorted for the page's continent accordion sections. */
+export const countryViewsByContinent: Record<ContinentCode, CountryView[]> =
+  CONTINENT_ORDER.reduce(
+    (acc, cont) => {
+      acc[cont] = countryViews
+        .filter((c) => c.continent === cont)
+        .sort((a, b) => _compareSortKeys(_countrySortKey(a), _countrySortKey(b)));
+      return acc;
+    },
+    {} as Record<ContinentCode, CountryView[]>,
+  );
+
+/**
+ * Fuzzy search across ISO2 + Chinese name + English name. Case-insensitive,
+ * substring match. Returns up to `limit` matches sorted by the same logic
+ * as the continent groups so the most actionable matches surface first.
+ *
+ * Examples:
+ *   searchCountries('德')     → [Germany]
+ *   searchCountries('ger')    → [Germany]
+ *   searchCountries('AR')     → [Argentina]
+ *   searchCountries('西')     → [Spain]      (西班牙)
+ *   searchCountries('south')  → [South Korea]
+ */
+export function searchCountries(query: string, limit = 12): CountryView[] {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  return countryViews
+    .filter((c) =>
+      c.iso2.toLowerCase().includes(q) ||
+      c.nameZh.toLowerCase().includes(q) ||
+      c.nameEn.toLowerCase().includes(q),
+    )
+    .sort((a, b) => _compareSortKeys(_countrySortKey(a), _countrySortKey(b)))
+    .slice(0, limit);
+}
 
 // ---- Re-export SerotypeId type for callers --------------------------------
 export type { SerotypeId };

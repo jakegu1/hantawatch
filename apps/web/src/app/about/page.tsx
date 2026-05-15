@@ -19,7 +19,7 @@ export default function AboutPage() {
             <p>
               病毒观察 (BingDuGuanCha) 是一个面向中文用户的病毒疫情预警与信息平台，当前重点监测汉坦病毒。
               2026年5月，南美洲海域MV Hondius邮轮上出现安第斯型（Andes）汉坦病毒聚集性疫情，
-              引发全球关注。然而，现有英文追踪工具存在数据混淆、恐慌渲染等问题。
+              引发全球关注。然而，现有追踪工具存在数据混淆、恐慌渲染等问题。
             </p>
             <p>
               病毒观察旨在弥补这一空白：提供<strong>准确、透明、科学克制</strong>的中文信息服务。
@@ -134,6 +134,7 @@ export default function AboutPage() {
           </p>
           <ul className="space-y-1 mt-2 text-sm text-gray-600">
             <li>· 项目地址：<a href="https://github.com/hantawatch" className="text-brand-500 hover:underline">github.com/hantawatch</a></li>
+            <li>· 邮箱：<a href="mailto:jake.gu@foxmail.com" className="text-brand-500 hover:underline">jake.gu@foxmail.com</a></li>
           </ul>
         </section>
       </div>

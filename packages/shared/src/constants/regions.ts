@@ -1,7 +1,5 @@
-import type { Region } from '../types';
-
 /** China provinces with GB/T 2260 codes (first 2 digits) */
-export const CHINA_PROVINCES: Region[] = [
+export const CHINA_PROVINCES = [
   { code: '110000', name: '北京市', level: 'province' },
   { code: '120000', name: '天津市', level: 'province' },
   { code: '130000', name: '河北省', level: 'province' },

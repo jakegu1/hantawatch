@@ -1,6 +1,4 @@
-import type { Serotype } from '../types';
-
-export const SEROTYPES: Record<string, Serotype> = {
+export const SEROTYPES = {
   hantaan: {
     id: 'hantaan',
     nameZh: '汉滩型',
@@ -61,19 +59,11 @@ export const SEROTYPES: Record<string, Serotype> = {
     description: '安第斯病毒是已知唯一确认具备人际传播能力的汉坦病毒，可引起HPS。1995年在阿根廷首次发现。人际传播主要通过密切接触（家庭成员、医护人员）。2026年5月在南美洲海域MV Hondius邮轮上出现聚集性疫情，引发全球关注。它是目前对全球公共卫生威胁最大的汉坦病毒血清型。',
     color: '#be185d',
   },
-} as const;
+};
 
-/** Display order for serotypes — ranked by concern level (most dangerous first) */
-export const SEROTYPE_RANK_ORDER: Array<keyof typeof SEROTYPES> = [
-  'andes',       // 🔴 高危 — 人际传播 + 高病死率 + 当前有活跃疫情
-  'sin_nombre',  // 🟠 警惕 — 高病死率(30-40%)，HPS，无人际传播
-  'hantaan',     // 🟡 地方性流行 — 中国主要HFRS病原体，无人际传播
-  'seoul',       // 🟢 常规监测 — 全球城市分布，低病死率
-  'puumala',     // ⚪ 低风险 — 欧洲为主，极低病死率，中国极少
-];
+export const SEROTYPE_RANK_ORDER = ['andes', 'sin_nombre', 'hantaan', 'seoul', 'puumala'];
 
-/** Risk weights for HPI calculation — serotype intrinsic danger */
-export const SEROTYPE_RISK_WEIGHTS: Record<string, number> = {
+export const SEROTYPE_RISK_WEIGHTS = {
   andes: 100,
   sin_nombre: 85,
   hantaan: 30,

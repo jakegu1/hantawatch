@@ -1,0 +1,67 @@
+{
+  "__generated_by": "hand-curated by editors",
+  "__generated_at": "2026-05-15",
+  "__notes": "MV Hondius 邮轮事件相关的跨国监测/输入清单，由编辑人工依据 WHO DON、各国卫生机构公告维护。每当各国发布新进展时更新此文件。",
+  "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
+  "outbreakClusterId": "mv-hondius-2026",
+  "imports": [
+    {
+      "iso2": "US",
+      "date": "2026-05-15",
+      "monitoringCount": 41,
+      "confirmedImports": 0,
+      "deaths": 0,
+      "status": "monitoring",
+      "summary_zh": "CDC 称 41 名可能接触者正在监测中，美国目前无已知病例。涉及 10 个州。",
+      "source": {
+        "name": "US CDC",
+        "url": "https://www.cdc.gov/hantavirus",
+        "retrievedAt": "2026-05-15T14:00:00+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "iso2": "AU",
+      "date": "2026-05-15",
+      "quarantineCount": 6,
+      "confirmedImports": 0,
+      "deaths": 0,
+      "status": "quarantine_active",
+      "summary_zh": "6 名邮轮乘客抵达澳大利亚，开始为期 3 周的隔离观察。",
+      "source": {
+        "name": "Australian Department of Health",
+        "url": "https://www.health.gov.au",
+        "retrievedAt": "2026-05-15T14:00:00+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "iso2": "ES",
+      "date": "2026-05-15",
+      "confirmedImports": 1,
+      "deaths": 0,
+      "status": "imports_confirmed",
+      "summary_zh": "WHO 5 月 15 日更新通报中包含西班牙 1 例新确诊输入。",
+      "source": {
+        "name": "WHO Disease Outbreak News",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+        "retrievedAt": "2026-05-15T14:00:00+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "iso2": "FR",
+      "date": "2026-05-15",
+      "confirmedImports": 1,
+      "deaths": 0,
+      "status": "imports_confirmed",
+      "summary_zh": "WHO 5 月 15 日更新通报中包含法国 1 例新确诊输入；初步接触者监测中未发症状。",
+      "source": {
+        "name": "WHO Disease Outbreak News / Santé publique France",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+        "retrievedAt": "2026-05-15T14:00:00+00:00",
+        "confidence": "official"
+      }
+    }
+  ]
+}

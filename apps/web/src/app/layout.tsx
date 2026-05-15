@@ -123,6 +123,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h3 className="font-semibold text-gray-700 mb-2">快速链接</h3>
                 <ul className="space-y-1 text-xs">
+                  <li><Link href="/countries" className="hover:text-brand-500">各国情况</Link></li>
                   <li><Link href="/data" className="hover:text-brand-500">疫情数据</Link></li>
                   <li><Link href="/wiki" className="hover:text-brand-500">病毒百科</Link></li>
                   <li><Link href="/guide" className="hover:text-brand-500">防护指南</Link></li>

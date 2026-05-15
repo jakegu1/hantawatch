@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta } from '@/lib/data';
+import { dataMeta, realtimeFeed } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
@@ -13,6 +13,7 @@ import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { SubscribeForm } from '@/components/subscribe-form';
+import { RealtimeFeedSection } from '@/components/realtime-feed-section';
 
 // NOTE (2026-05-13): the interactive MapLibre world map has been removed.
 // - Carto/OSM tile CDNs are unreliable behind the GFW, so mainland users
@@ -336,7 +337,11 @@ export default function HomePage() {
       </section>
 
       {/* ================================================================ */}
-      {/* SECTION 4: Recent timeline                                        */}
+      {/* SECTION 4: Recent timeline (authoritative — WHO / ECDC / 中疾控)   */}
+      {/* Moved ABOVE the realtime feed (was Section 5) so the highest-trust */}
+      {/* source surfaces first. The realtime feed is machine-translated     */}
+      {/* and now lives below in a collapsed state (2026-05-15 trust-order   */}
+      {/* fix).                                                              */}
       {/* ================================================================ */}
       <section className="container-page mt-6">
         <div className="card">
@@ -467,7 +472,27 @@ export default function HomePage() {
       </section>
 
       {/* ================================================================ */}
-      {/* SECTION 5: HPI Transparency Panel                                */}
+      {/* SECTION 5: Realtime feed (Tier-3, machine-translated, collapsed)  */}
+      {/* Demoted below 最新通报 because it's lower-trust + previewCount=2   */}
+      {/* keeps it from eating the screen. Click "展开剩余" to see all.      */}
+      {/* ================================================================ */}
+      <section className="container-page mt-6">
+        <div className="card">
+          {/* Compliance: no right-side "境外媒体" / outlet-name tag in the
+              header. The disclaimer banner rendered inside the component
+              already covers the AI-translation caveat. */}
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-semibold text-base flex items-center gap-2">
+              <span className="text-gray-500">🕐</span>
+              实时动态
+            </h2>
+          </div>
+          <RealtimeFeedSection feed={realtimeFeed} previewCount={2} />
+        </div>
+      </section>
+
+      {/* ================================================================ */}
+      {/* SECTION 6: HPI Transparency Panel                                */}
       {/* ================================================================ */}
       <section className="container-page mt-6">
         <div className="card">

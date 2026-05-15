@@ -1,0 +1,44 @@
+{
+  "name": "@hantawatch/miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "病毒观察 BingDuGuanCha - 微信小程序版",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "build:swan": "taro build --type swan",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:qq": "taro build --type qq"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.0",
+    "@tarojs/components": "^4.0.0",
+    "@tarojs/helper": "^4.0.0",
+    "@tarojs/plugin-platform-weapp": "^4.0.0",
+    "@tarojs/react": "^4.0.0",
+    "@tarojs/runtime": "^4.0.0",
+    "@tarojs/shared": "^4.0.0",
+    "@tarojs/taro": "^4.0.0",
+    "@hantawatch/shared": "workspace:*",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-react": "^7.24.0",
+    "@tarojs/cli": "^4.0.0",
+    "@tarojs/plugin-framework-react": "^4.0.0",
+    "@tarojs/webpack5-runner": "^4.0.0",
+    "@types/react": "^18.3.0",
+    "babel-preset-taro": "^4.0.0",
+    "typescript": "^5.7.0",
+    "sass": "^1.77.0",
+    "webpack": "5.91.0"
+  }
+}

@@ -1,10 +1,12 @@
 {
-  "name": "hantawatch",
+  "name": "bingduguancha",
   "private": true,
-  "description": "汉坦观察 (HantaWatch) — 面向中文用户的汉坦病毒预警与信息平台",
+  "description": "病毒观察 (BingDuGuanCha) — 面向中文用户的病毒疫情预警与信息平台（当前重点：汉坦病毒）",
   "scripts": {
     "dev": "pnpm --filter @hantawatch/web dev",
     "build": "pnpm --filter @hantawatch/web build",
+    "build:miniapp": "pnpm --filter @hantawatch/miniapp build:weapp",
+    "dev:miniapp": "pnpm --filter @hantawatch/miniapp dev:weapp",
     "lint": "pnpm --filter @hantawatch/web lint",
     "check": "pnpm --filter @hantawatch/web check",
     "clean": "pnpm -r exec rm -rf .next dist node_modules"

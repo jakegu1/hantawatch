@@ -91,7 +91,7 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 space-y-1">
             <li>退订邮件预警（通过任意一封通知邮件底部的退订链接）</li>
             <li>要求删除你的邮箱与反馈记录：发送邮件至{' '}
-              <a href="mailto:privacy@bingduguancha.com" className="text-brand-500 underline">privacy@bingduguancha.com</a>
+              <a href="mailto:jake.gu@foxmail.com" className="text-brand-500 underline">jake.gu@foxmail.com</a>
               ，注明你希望删除的邮箱地址</li>
             <li>查询我们存储的与你相关的数据：同上邮箱联系</li>
           </ul>
@@ -128,8 +128,8 @@ export default function PrivacyPage() {
             如对本政策有任何疑问，请通过{' '}
             <a href="/feedback" className="text-brand-500 underline">反馈页</a>{' '}
             或邮件{' '}
-            <a href="mailto:privacy@bingduguancha.com" className="text-brand-500 underline">
-              privacy@bingduguancha.com
+            <a href="mailto:jake.gu@foxmail.com" className="text-brand-500 underline">
+              jake.gu@foxmail.com
             </a>{' '}
             与我们联系。
           </p>

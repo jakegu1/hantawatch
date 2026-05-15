@@ -1,0 +1,543 @@
+{
+  "__generated_by": "hand-curated by editors",
+  "__generated_at": "2026-05-15",
+  "__notes": "近 5-10 年文献综合基线。Hantavirus 年度波动主要由鼠类种群周期驱动（2-4 年振荡），单年精确数字意义有限。半年到期触发人工 review。",
+  "countries": [
+    {
+      "iso2": "DE",
+      "nameZh": "德国",
+      "nameEn": "Germany",
+      "flag": "🇩🇪",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "200-2000 例/年（强年份与弱年份相差数倍，2024 年约 230 例）",
+      "advice_zh": "南部巴登-符腾堡州为高发区；森林徒步、地下室清扫、堆木处理需戴口罩与手套，避开有鼠粪场所。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Robert Koch-Institut (RKI) - SurvStat", "url": "https://survstat.rki.de" },
+        { "name": "RKI Epidemiologisches Bulletin", "url": "https://www.rki.de/DE/Content/Infekt/EpidBull/Archiv/Archiv_node.html" }
+      ],
+      "dataNote": "RKI 2025 年报预计 2026 年中发布；当前数字基于 2024 SurvStat 数据。"
+    },
+    {
+      "iso2": "FI",
+      "nameZh": "芬兰",
+      "nameEn": "Finland",
+      "flag": "🇫🇮",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "1000-3500 例/年（人均发病率欧洲最高）",
+      "advice_zh": "全国普查均有 Puumala 流行；冬季野外别墅清扫、农场作业为主要暴露场景，需通风后清洁。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Finnish Institute for Health and Welfare (THL)", "url": "https://thl.fi" }
+      ],
+      "dataNote": "THL 年度报告基于近 10 年滚动数据。"
+    },
+    {
+      "iso2": "SE",
+      "nameZh": "瑞典",
+      "nameEn": "Sweden",
+      "flag": "🇸🇪",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "200-800 例/年（北部 Norrland 地区为主）",
+      "advice_zh": "北部省份高发；夏秋季林区作业、伐木、清洁度假木屋时注意防鼠。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Folkhälsomyndigheten", "url": "https://www.folkhalsomyndigheten.se" }
+      ]
+    },
+    {
+      "iso2": "NO",
+      "nameZh": "挪威",
+      "nameEn": "Norway",
+      "flag": "🇳🇴",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "30-150 例/年（中北部内陆林区为主）",
+      "advice_zh": "Trøndelag 与 Innlandet 等地有散发；户外露营前清理场地。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Folkehelseinstituttet (FHI)", "url": "https://www.fhi.no" }
+      ]
+    },
+    {
+      "iso2": "FR",
+      "nameZh": "法国",
+      "nameEn": "France",
+      "flag": "🇫🇷",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "50-200 例/年（东北 Ardennes、Franche-Comté 为主）",
+      "advice_zh": "东北部林区为主要暴露区；巴黎及南部沿海风险低，林区作业者注意。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Santé publique France", "url": "https://www.santepubliquefrance.fr" }
+      ],
+      "dataNote": "MV Hondius 邮轮事件已有输入病例监测（见 mv-hondius-imports）。"
+    },
+    {
+      "iso2": "BE",
+      "nameZh": "比利时",
+      "nameEn": "Belgium",
+      "flag": "🇧🇪",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "50-300 例/年（南部 Ardennes 高发）",
+      "advice_zh": "瓦隆区南部森林为高发区；与法国 Ardennes 相邻区域同等风险。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Sciensano", "url": "https://www.sciensano.be" }
+      ]
+    },
+    {
+      "iso2": "NL",
+      "nameZh": "荷兰",
+      "nameEn": "Netherlands",
+      "flag": "🇳🇱",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "10-30 例/年（罕见，零星输入与本地）",
+      "advice_zh": "本土病例少；近年有宠物鼠相关 Seoul 病例，购买宠物鼠注意来源。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "RIVM", "url": "https://www.rivm.nl" }
+      ]
+    },
+    {
+      "iso2": "CH",
+      "nameZh": "瑞士",
+      "nameEn": "Switzerland",
+      "flag": "🇨🇭",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "<20 例/年（侏罗山区零星）",
+      "advice_zh": "整体风险低；西北侏罗山地区林业从业者注意防护。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Bundesamt für Gesundheit (BAG)", "url": "https://www.bag.admin.ch" }
+      ]
+    },
+    {
+      "iso2": "AT",
+      "nameZh": "奥地利",
+      "nameEn": "Austria",
+      "flag": "🇦🇹",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "30-150 例/年（南部 Styria、Carinthia 高发）",
+      "advice_zh": "南部州为主要暴露区；Dobrava 型在巴尔干边境带流行，重症率较 Puumala 高。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "AGES", "url": "https://www.ages.at" }
+      ]
+    },
+    {
+      "iso2": "CZ",
+      "nameZh": "捷克",
+      "nameEn": "Czechia",
+      "flag": "🇨🇿",
+      "continent": "europe",
+      "endemicSerotypes": ["dobrava", "puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "20-80 例/年（南摩拉维亚、波西米亚南部）",
+      "advice_zh": "Dobrava 型与 Puumala 型并存；乡村林业作业者高风险。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Státní zdravotní ústav (SZÚ)", "url": "https://www.szu.cz" }
+      ]
+    },
+    {
+      "iso2": "PL",
+      "nameZh": "波兰",
+      "nameEn": "Poland",
+      "flag": "🇵🇱",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "10-100 例/年（东南部喀尔巴阡山林区）",
+      "advice_zh": "东南部 Podkarpackie 省最为活跃；近期媒体讨论较多，实际本土传播水平偏低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "NIZP PZH", "url": "https://www.pzh.gov.pl" }
+      ]
+    },
+    {
+      "iso2": "RU",
+      "nameZh": "俄罗斯",
+      "nameEn": "Russia",
+      "flag": "🇷🇺",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "hantaan", "seoul", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "5000-7000 例/年（欧洲部分 Puumala，远东 Hantaan）",
+      "advice_zh": "欧洲俄罗斯部分以 Puumala 为主；远东（哈巴罗夫斯克、滨海边疆区）以 Hantaan 为主重症率高。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Rospotrebnadzor", "url": "https://www.rospotrebnadzor.ru" }
+      ]
+    },
+    {
+      "iso2": "EE",
+      "nameZh": "爱沙尼亚",
+      "nameEn": "Estonia",
+      "flag": "🇪🇪",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "30-100 例/年",
+      "advice_zh": "森林覆盖率高，全境零散；林业作业、夏季别墅需注意防鼠。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Terviseamet", "url": "https://www.terviseamet.ee" }
+      ]
+    },
+    {
+      "iso2": "LV",
+      "nameZh": "拉脱维亚",
+      "nameEn": "Latvia",
+      "flag": "🇱🇻",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "20-80 例/年",
+      "advice_zh": "与爱沙尼亚类似，森林与农村地区为暴露场景。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "SPKC", "url": "https://www.spkc.gov.lv" }
+      ]
+    },
+    {
+      "iso2": "LT",
+      "nameZh": "立陶宛",
+      "nameEn": "Lithuania",
+      "flag": "🇱🇹",
+      "continent": "europe",
+      "endemicSerotypes": ["puumala", "dobrava"],
+      "hasLocalAndes": false,
+      "annualCasesText": "10-50 例/年",
+      "advice_zh": "波罗的海三国中报告数最少；总体风险低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Užkrečiamųjų ligų centras (ULAC)", "url": "https://www.ulac.lt" }
+      ]
+    },
+    {
+      "iso2": "UK",
+      "nameZh": "英国",
+      "nameEn": "United Kingdom",
+      "flag": "🇬🇧",
+      "continent": "europe",
+      "endemicSerotypes": ["seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "<10 例/年（近年偶发 Seoul 病例与宠物鼠相关）",
+      "advice_zh": "本土风险低；威尔士、英格兰北部有过宠物鼠相关 Seoul 病例聚集，购买与饲养宠物鼠注意来源与卫生。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "UK Health Security Agency (UKHSA)", "url": "https://www.gov.uk/government/organisations/uk-health-security-agency" }
+      ],
+      "dataNote": "近期媒体关注威尔士病例聚集，详见实时动态。"
+    },
+    {
+      "iso2": "IE",
+      "nameZh": "爱尔兰",
+      "nameEn": "Ireland",
+      "flag": "🇮🇪",
+      "continent": "europe",
+      "endemicSerotypes": [],
+      "hasLocalAndes": false,
+      "annualCasesText": "无本土传播证据，偶发输入个案",
+      "advice_zh": "目前无本土汉坦病毒证据；总体风险极低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "HSE", "url": "https://www.hse.ie" }
+      ]
+    },
+    {
+      "iso2": "IT",
+      "nameZh": "意大利",
+      "nameEn": "Italy",
+      "flag": "🇮🇹",
+      "continent": "europe",
+      "endemicSerotypes": ["dobrava", "puumala"],
+      "hasLocalAndes": false,
+      "annualCasesText": "<50 例/年（东北 Friuli、Veneto 偶发）",
+      "advice_zh": "整体风险低；东北边境地区林业作业者注意。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Istituto Superiore di Sanità (ISS)", "url": "https://www.iss.it" }
+      ]
+    },
+    {
+      "iso2": "ES",
+      "nameZh": "西班牙",
+      "nameEn": "Spain",
+      "flag": "🇪🇸",
+      "continent": "europe",
+      "endemicSerotypes": [],
+      "hasLocalAndes": false,
+      "annualCasesText": "无本土传播证据，历史散发血清学阳性",
+      "advice_zh": "本土无确证流行；当前重点为 MV Hondius 邮轮相关输入监测。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Ministerio de Sanidad", "url": "https://www.sanidad.gob.es" }
+      ],
+      "dataNote": "MV Hondius 邮轮事件已有 1 例输入确诊（详见 mv-hondius-imports）。"
+    },
+    {
+      "iso2": "PT",
+      "nameZh": "葡萄牙",
+      "nameEn": "Portugal",
+      "flag": "🇵🇹",
+      "continent": "europe",
+      "endemicSerotypes": [],
+      "hasLocalAndes": false,
+      "annualCasesText": "无本土传播证据",
+      "advice_zh": "本土无流行；总体风险极低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Direção-Geral da Saúde", "url": "https://www.dgs.pt" }
+      ]
+    },
+    {
+      "iso2": "AR",
+      "nameZh": "阿根廷",
+      "nameEn": "Argentina",
+      "flag": "🇦🇷",
+      "continent": "americas",
+      "endemicSerotypes": ["andes"],
+      "hasLocalAndes": true,
+      "annualCasesText": "50-150 例/年（巴塔哥尼亚南部高发），病死率约 30-40%",
+      "advice_zh": "Andes 型本土流行高致命且人传人；避免巴塔哥尼亚荒野独行、不进入弃用木屋。MV Hondius 邮轮始发地。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Ministerio de Salud Argentina", "url": "https://www.argentina.gob.ar/salud" }
+      ],
+      "dataNote": "全球最重要的 Andes 型流行国，MV Hondius 邮轮事件起源地。"
+    },
+    {
+      "iso2": "CL",
+      "nameZh": "智利",
+      "nameEn": "Chile",
+      "flag": "🇨🇱",
+      "continent": "americas",
+      "endemicSerotypes": ["andes"],
+      "hasLocalAndes": true,
+      "annualCasesText": "30-80 例/年（南部 Los Lagos、Aysén 高发），病死率约 30%",
+      "advice_zh": "Andes 型本土流行；南部国家公园、露营、自助木屋为高风险场景。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "MINSAL Chile", "url": "https://www.minsal.cl" }
+      ]
+    },
+    {
+      "iso2": "BR",
+      "nameZh": "巴西",
+      "nameEn": "Brazil",
+      "flag": "🇧🇷",
+      "continent": "americas",
+      "endemicSerotypes": ["andes"],
+      "hasLocalAndes": true,
+      "annualCasesText": "50-200 例/年（南部、中西部农业带）",
+      "advice_zh": "南部 Santa Catarina、Paraná 等州农业活动相关；甘蔗收获、谷仓清洁高风险。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Ministério da Saúde", "url": "https://www.gov.br/saude" }
+      ]
+    },
+    {
+      "iso2": "UY",
+      "nameZh": "乌拉圭",
+      "nameEn": "Uruguay",
+      "flag": "🇺🇾",
+      "continent": "americas",
+      "endemicSerotypes": ["andes"],
+      "hasLocalAndes": true,
+      "annualCasesText": "<50 例/年",
+      "advice_zh": "本土 Andes 型相关毒株流行；牧场作业为主要暴露场景。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "MSP Uruguay", "url": "https://www.gub.uy/ministerio-salud-publica" }
+      ]
+    },
+    {
+      "iso2": "US",
+      "nameZh": "美国",
+      "nameEn": "United States",
+      "flag": "🇺🇸",
+      "continent": "americas",
+      "endemicSerotypes": ["sin_nombre"],
+      "hasLocalAndes": false,
+      "annualCasesText": "20-50 例/年 Sin Nombre HPS（1993 年首次识别以来累计 850+ 例）",
+      "advice_zh": "西南四角地区（NM/AZ/CO/UT）为高发；通风后再进入久未使用的小屋、清扫鼠粪戴 N95。MV Hondius 监测中。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "CDC", "url": "https://www.cdc.gov/hantavirus" }
+      ],
+      "dataNote": "Sin Nombre 病死率约 35-40%；MV Hondius 邮轮相关 41 人监测中（2026-05）。"
+    },
+    {
+      "iso2": "CA",
+      "nameZh": "加拿大",
+      "nameEn": "Canada",
+      "flag": "🇨🇦",
+      "continent": "americas",
+      "endemicSerotypes": ["sin_nombre"],
+      "hasLocalAndes": false,
+      "annualCasesText": "3-10 例/年（西部 Alberta、Saskatchewan、BC 为主）",
+      "advice_zh": "西部农村地区为主；夏季清扫旧木屋、谷仓需通风后再进入。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Public Health Agency of Canada", "url": "https://www.canada.ca/en/public-health.html" }
+      ]
+    },
+    {
+      "iso2": "CN",
+      "nameZh": "中国",
+      "nameEn": "China",
+      "flag": "🇨🇳",
+      "continent": "asia",
+      "endemicSerotypes": ["hantaan", "seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "5000-15000 例/年 HFRS（疫苗接种与灭鼠后较 1980-90 年代下降明显）",
+      "advice_zh": "陕西、黑龙江、辽宁、山东、湖北等省为传统疫区；秋冬季为主要发病季；高风险人群已有国产 HFRS 疫苗。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "国家疾控局法定传染病月报", "url": "https://www.ndcpa.gov.cn" }
+      ],
+      "dataNote": "Hantaan 病死率 5-15%（疫苗与早期透析改善后）；详细疫区情况见首页中国基线区块。"
+    },
+    {
+      "iso2": "KR",
+      "nameZh": "韩国",
+      "nameEn": "South Korea",
+      "flag": "🇰🇷",
+      "continent": "asia",
+      "endemicSerotypes": ["hantaan", "seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "300-500 例/年（秋季高发，京畿道、江原道为主）",
+      "advice_zh": "韩国为 Hantaan 病毒最早分离地（1976 汉滩江）；秋季野外训练、农作业为典型暴露场景。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "KDCA", "url": "https://www.kdca.go.kr" }
+      ]
+    },
+    {
+      "iso2": "JP",
+      "nameZh": "日本",
+      "nameEn": "Japan",
+      "flag": "🇯🇵",
+      "continent": "asia",
+      "endemicSerotypes": ["seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "<10 例/年（罕见，主要为港口城市 Seoul 型）",
+      "advice_zh": "整体风险极低；历史上港口大鼠相关，普通旅游与生活几乎不接触。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "国立感染症研究所", "url": "https://www.niid.go.jp" }
+      ]
+    },
+    {
+      "iso2": "TH",
+      "nameZh": "泰国",
+      "nameEn": "Thailand",
+      "flag": "🇹🇭",
+      "continent": "asia",
+      "endemicSerotypes": ["seoul", "other"],
+      "hasLocalAndes": false,
+      "annualCasesText": "数据有限，散发血清学阳性；2026 年 5 月列为危险传染病并启动升级行动计划",
+      "advice_zh": "近期被列为危险传染病后监测加强；常规旅游风险低，避免接触野生啮齿动物。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Department of Disease Control, Thailand", "url": "https://ddc.moph.go.th" }
+      ],
+      "dataNote": "2026-05 列为 dangerous communicable disease，详见实时动态。"
+    },
+    {
+      "iso2": "SG",
+      "nameZh": "新加坡",
+      "nameEn": "Singapore",
+      "flag": "🇸🇬",
+      "continent": "asia",
+      "endemicSerotypes": ["seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "<5 例/年（与港口/城市鼠相关，极少）",
+      "advice_zh": "城市卫生水平高，整体风险极低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Ministry of Health Singapore", "url": "https://www.moh.gov.sg" }
+      ]
+    },
+    {
+      "iso2": "MY",
+      "nameZh": "马来西亚",
+      "nameEn": "Malaysia",
+      "flag": "🇲🇾",
+      "continent": "asia",
+      "endemicSerotypes": ["seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "数据有限，零星血清学阳性",
+      "advice_zh": "整体风险低；雨林徒步注意一般啮齿动物防护。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "MOH Malaysia", "url": "https://www.moh.gov.my" }
+      ]
+    },
+    {
+      "iso2": "ID",
+      "nameZh": "印度尼西亚",
+      "nameEn": "Indonesia",
+      "flag": "🇮🇩",
+      "continent": "asia",
+      "endemicSerotypes": ["seoul"],
+      "hasLocalAndes": false,
+      "annualCasesText": "数据有限，区域监测加强中",
+      "advice_zh": "近期多地卫生局开展监测，整体风险低；避免接触城市鼠类。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Kementerian Kesehatan RI", "url": "https://www.kemkes.go.id" }
+      ]
+    },
+    {
+      "iso2": "AU",
+      "nameZh": "澳大利亚",
+      "nameEn": "Australia",
+      "flag": "🇦🇺",
+      "continent": "oceania",
+      "endemicSerotypes": [],
+      "hasLocalAndes": false,
+      "annualCasesText": "无本土汉坦病毒传播证据",
+      "advice_zh": "本土无流行；当前重点为 MV Hondius 邮轮乘客 3 周隔离监测。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Australian Department of Health", "url": "https://www.health.gov.au" }
+      ],
+      "dataNote": "MV Hondius 6 名乘客抵澳后接受 3 周隔离（2026-05），详见 mv-hondius-imports。"
+    },
+    {
+      "iso2": "NZ",
+      "nameZh": "新西兰",
+      "nameEn": "New Zealand",
+      "flag": "🇳🇿",
+      "continent": "oceania",
+      "endemicSerotypes": [],
+      "hasLocalAndes": false,
+      "annualCasesText": "无本土汉坦病毒传播证据",
+      "advice_zh": "本土无流行；总体风险极低。",
+      "lastReviewed": "2026-05-15",
+      "sources": [
+        { "name": "Ministry of Health NZ", "url": "https://www.health.govt.nz" }
+      ]
+    }
+  ]
+}

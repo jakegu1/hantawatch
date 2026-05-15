@@ -1,11 +1,16 @@
 """HantaWatch data collector — orchestration entry point.
 
 Usage:
-    python main.py                    # full run, writes JSON to default out dir
+    python main.py                    # full run (WHO/ECDC + realtime feed)
     python main.py --dry-run          # fetch everything but don't write files
+    python main.py --realtime-only    # skip WHO/ECDC, only refresh realtime
+                                       feed (fast iteration on the LLM path)
     python main.py --out /custom/path # override output directory
 
 Default output directory: ../../apps/web/src/data (relative to this file).
+
+Env vars are auto-loaded from (in priority order):
+    services/collector/.env, <repo-root>/.env.local, <repo-root>/.env
 
 Exit codes:
     0 — all sources fetched successfully
@@ -19,6 +24,26 @@ import argparse
 import logging
 import sys
 from pathlib import Path
+
+# Load .env files BEFORE importing collector modules so any env-driven
+# defaults baked at import time pick up the right values.
+try:
+    from dotenv import load_dotenv
+
+    _here = Path(__file__).resolve().parent
+    _repo_root = _here.parent.parent
+    for _env_path in (
+        _here / ".env",
+        _repo_root / ".env.local",
+        _repo_root / ".env",
+    ):
+        if _env_path.exists():
+            load_dotenv(_env_path, override=False)
+except ImportError:
+    # python-dotenv is in pyproject.toml — if it's missing the user
+    # forgot to `pip install -e .`. Continue; env vars set in the shell
+    # still work.
+    pass
 
 from hantawatch_collector import MANUAL_FILES
 from hantawatch_collector.builder import (
@@ -34,10 +59,12 @@ from hantawatch_collector.builder import (
     update_hpi_history,
     write_all_outputs,
 )
+from hantawatch_collector.country_signals import aggregate_country_signals
 from hantawatch_collector.distance import distance_to_china_km
 from hantawatch_collector.ecdc import fetch_ecdc_assessment
-from hantawatch_collector.io_utils import read_json
+from hantawatch_collector.io_utils import read_json, write_generated_json
 from hantawatch_collector.news_leads import fetch_news_leads
+from hantawatch_collector.realtime_feed import build_realtime_feed
 from hantawatch_collector.who_don import fetch_who_don_entries
 
 logging.basicConfig(
@@ -58,6 +85,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                    help="Fetch everything but skip writing files")
     p.add_argument("--no-network", action="store_true",
                    help="Skip all network fetches; use previously cached JSON only")
+    p.add_argument("--realtime-only", action="store_true",
+                   help="Skip WHO/ECDC/news pipeline; only fetch + translate "
+                        "the realtime feed. Useful when iterating on the LLM "
+                        "path without re-running the full collector.")
     return p.parse_args(argv)
 
 
@@ -68,6 +99,57 @@ def _read_domestic_baseline_status(out_dir: Path) -> str:
     return baseline.get("baselineStatus", "normal")
 
 
+def _run_realtime_only(out_dir: Path, dry_run: bool) -> int:
+    """Realtime-feed pipeline in isolation (no WHO/ECDC/news).
+
+    Also refreshes `country-signals.json` since it shares the same upstream
+    (Hantaflow) and benefits from the same fast iteration loop.
+
+    Returns the exit code: 0 on success (including 'no items extracted'
+    which preserves the existing JSON), 2 if an unexpected error fired."""
+    logger.info("realtime-only mode: skipping WHO/ECDC/news pipeline")
+    try:
+        feed = build_realtime_feed()
+    except Exception as e:
+        logger.error("realtime feed: build failed (%s)", e)
+        return 2
+
+    # Country signal aggregation (multilingual Hantaflow feed). This is
+    # cheap (one HTTP fetch, no LLM) so we always run it in realtime-only
+    # mode.
+    try:
+        country_signals = aggregate_country_signals()
+    except Exception as e:
+        logger.warning(
+            "country signals: build failed (%s) — keeping existing JSON", e
+        )
+        country_signals = None
+
+    if feed is None:
+        logger.warning(
+            "realtime feed: no items extracted — existing JSON preserved. "
+            "If you expected updates, paste the collector log into the issue "
+            "tracker so the parser selectors can be retuned."
+        )
+    else:
+        logger.info(
+            "realtime feed: %d updates (translated=%s, model=%s)",
+            len(feed.updates),
+            feed.machine_translated,
+            feed.translator_model,
+        )
+
+    if dry_run:
+        logger.info("--dry-run: skipping write")
+        return 0
+
+    if feed is not None:
+        write_generated_json(out_dir / "realtime-feed.json", feed.to_payload())
+    if country_signals is not None:
+        write_generated_json(out_dir / "country-signals.json", country_signals)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     out_dir: Path = args.out.resolve()
@@ -76,7 +158,13 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("HantaWatch collector starting")
     logger.info("  out dir: %s", out_dir)
     logger.info("  dry run: %s", args.dry_run)
+    if args.realtime_only:
+        logger.info("  mode: realtime-only")
     logger.info("  manual files (untouched): %s", ", ".join(sorted(MANUAL_FILES)))
+
+    # Fast path: skip the WHO/ECDC pipeline entirely.
+    if args.realtime_only:
+        return _run_realtime_only(out_dir, args.dry_run)
 
     partial_failure = False
 
@@ -174,12 +262,59 @@ def main(argv: list[str] | None = None) -> int:
             reference_cluster_name=reference.get("name"),
         )
 
-    # ---- 10. Write everything ----
+    # ---- 10. Realtime feed (Tier-3, Hantaflow + LLM translation) ----
+    # This is independent of the WHO/ECDC pipeline above. We do it last so
+    # a partial failure here can't break the Tier-1 outputs. The whole
+    # block is skipped under --no-network because Hantaflow + the LLM both
+    # require network.
+    realtime_feed = None
+    country_signals = None
+    if not args.no_network:
+        try:
+            realtime_feed = build_realtime_feed()
+            if realtime_feed:
+                logger.info(
+                    "Realtime feed: %d updates (translated=%s)",
+                    len(realtime_feed.updates),
+                    realtime_feed.machine_translated,
+                )
+            else:
+                logger.info("Realtime feed: no updates (keeping existing JSON)")
+        except Exception as e:
+            # Never let realtime feed take down the core pipeline.
+            logger.warning("Realtime feed: build failed (%s) — keeping existing JSON", e)
+            realtime_feed = None
+
+        # Country signal aggregation (Layer 2 of the country status page).
+        # Independent of the LLM path — cheap, no key required.
+        try:
+            country_signals = aggregate_country_signals()
+            if country_signals:
+                logger.info(
+                    "Country signals: %d countries covered (last %dd window)",
+                    len(country_signals["countries"]),
+                    country_signals["windowDays"],
+                )
+            else:
+                logger.info(
+                    "Country signals: no aggregate (keeping existing JSON)"
+                )
+        except Exception as e:
+            logger.warning(
+                "Country signals: build failed (%s) — keeping existing JSON", e
+            )
+            country_signals = None
+
+    # ---- 11. Write everything ----
     if args.dry_run:
         logger.info("--dry-run: skipping writes")
         logger.info("Would write to %s:", out_dir)
         logger.info("  %d clusters, %d intl cases, %d HPI points",
                     len(clusters), len(recent_intl), len(hpi_history))
+        if realtime_feed:
+            logger.info("  %d realtime updates", len(realtime_feed.updates))
+        if country_signals:
+            logger.info("  %d country signals", len(country_signals["countries"]))
     else:
         write_all_outputs(
             out_dir,
@@ -190,6 +325,16 @@ def main(argv: list[str] | None = None) -> int:
             daily_brief=daily_brief,
             meta=meta,
         )
+        if realtime_feed:
+            write_generated_json(
+                out_dir / "realtime-feed.json",
+                realtime_feed.to_payload(),
+            )
+        if country_signals:
+            write_generated_json(
+                out_dir / "country-signals.json",
+                country_signals,
+            )
 
     logger.info("Done.")
     return 2 if partial_failure else 0
