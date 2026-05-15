@@ -4,6 +4,8 @@
  * citation in the description field.
  */
 
+import type { SerotypeId } from '../types';
+
 export interface HantaHistoryEvent {
   /** ISO date string. Use YYYY for year-only events. */
   date: string;
@@ -12,7 +14,7 @@ export interface HantaHistoryEvent {
   type: 'discovery' | 'outbreak' | 'policy' | 'science';
   titleZh: string;
   descriptionZh: string;
-  serotypeId?: string;
+  serotypeId?: SerotypeId;
   /** Optional source citation. */
   source?: string;
 }
