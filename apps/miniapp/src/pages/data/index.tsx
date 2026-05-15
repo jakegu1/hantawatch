@@ -73,7 +73,7 @@ export default function DataPage() {
       {/* Serotype overview */}
       <View className="card">
         <Text className="section-title">按血清型分类</Text>
-        {Object.values(SEROTYPES).map((s) => (
+        {Object.values(SEROTYPES).filter((s) => s.id !== 'other').map((s) => (
           <View
             key={s.id}
             className="flex items-start gap-3"

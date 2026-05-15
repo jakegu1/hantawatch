@@ -1,4 +1,10 @@
-import { HANTA_HISTORY, HANTA_HISTORY_TYPE_META, SEROTYPES } from '@hantawatch/shared';
+// HANTA_HISTORY* live in a constants module that the main barrel
+// deliberately doesn't re-export (it co-locates an interface, which
+// historically broke Taro/webpack barrel resolution). Import the
+// constants from the `/constants` subpath defined in
+// packages/shared/package.json#exports.
+import { HANTA_HISTORY, HANTA_HISTORY_TYPE_META } from '@hantawatch/shared/constants';
+import { SEROTYPES } from '@hantawatch/shared';
 
 /**
  * Hantavirus historical timeline — vertical, mobile-first.

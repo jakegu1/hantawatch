@@ -5,9 +5,9 @@ import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, rec
 import { dataMeta, realtimeFeed } from '@/lib/data';
 import type { RecentCase } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
-import type { SerotypeId } from '@hantawatch/shared/types';
+import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
-import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
+import { SEROTYPES } from '@hantawatch/shared';
 import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';

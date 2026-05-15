@@ -8,7 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function WikiPage() {
-  const serotypes = Object.values(SEROTYPES);
+  // Filter out the 'other' fallback entry — it exists only so that
+  // `SEROTYPES[c.serotypeId]` is total over the SerotypeId union; it has
+  // no editorial content worth showing in the "汉坦病毒家族" overview.
+  const serotypes = Object.values(SEROTYPES).filter((s) => s.id !== 'other');
 
   return (
     <div className="container-page py-8">

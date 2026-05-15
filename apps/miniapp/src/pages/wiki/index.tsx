@@ -33,7 +33,8 @@ export default function WikiPage() {
     trackPageView('pages/wiki/index');
   });
 
-  const serotypes = Object.values(SEROTYPES);
+  // Skip the synthetic 'other' fallback entry — see web wiki page for why.
+  const serotypes = Object.values(SEROTYPES).filter((s) => s.id !== 'other');
 
   return (
     <View className="page">

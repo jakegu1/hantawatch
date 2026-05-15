@@ -68,7 +68,7 @@ export default function DataPage() {
       <div className="card mb-6">
         <h2 className="font-semibold text-lg mb-4">按血清型分类</h2>
         <div className="space-y-4">
-          {Object.values(SEROTYPES).map((s) => (
+          {Object.values(SEROTYPES).filter((s) => s.id !== 'other').map((s) => (
             <div key={s.id} className="flex items-start gap-4 p-3 rounded-lg border border-gray-100">
               <div className="h-4 w-4 mt-1 rounded-full flex-shrink-0" style={{ backgroundColor: s.color }} />
               <div className="flex-1 min-w-0">

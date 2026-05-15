@@ -15,7 +15,10 @@
  * relevant" cluster.
  */
 
-import type { ActiveCluster, SerotypeId } from '@hantawatch/shared';
+// NOTE: the main `@hantawatch/shared` barrel deliberately exports only
+// runtime values (for Taro/webpack compatibility in the miniapp build).
+// Types must come from the `/types` subpath. See packages/shared/src/index.ts.
+import type { ActiveCluster, SerotypeId } from '@hantawatch/shared/types';
 
 export interface NearestAndesResult {
   /** Closest Andes cluster, or null if none active. */

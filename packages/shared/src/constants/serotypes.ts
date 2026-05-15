@@ -59,6 +59,22 @@ export const SEROTYPES = {
     description: '安第斯病毒是已知唯一确认具备人际传播能力的汉坦病毒，可引起HPS。1995年在阿根廷首次发现。人际传播主要通过密切接触（家庭成员、医护人员）。2026年5月在南美洲海域MV Hondius邮轮上出现聚集性疫情，引发全球关注。它是目前对全球公共卫生威胁最大的汉坦病毒血清型。',
     color: '#be185d',
   },
+  // Fallback entry — `serotypeId: 'other'` is part of the SerotypeId union
+  // (e.g. when a news lead can't be classified yet). Without this entry,
+  // `SEROTYPES[c.serotypeId]` triggers TS "implicit any" indexing errors.
+  // Keep this minimal — UIs should treat 'other' as the "unknown" bucket.
+  other: {
+    id: 'other',
+    nameZh: '其他/未分型',
+    nameEn: 'Other',
+    primaryHost: '未指定',
+    transmission: [],
+    humanToHuman: false,
+    fatalityRate: '—',
+    mainRegions: [],
+    description: '尚未明确归类的汉坦病毒血清型，或新闻线索阶段尚未确认具体型别的病例。',
+    color: '#64748b',
+  },
 };
 
 export const SEROTYPE_RANK_ORDER = ['andes', 'sin_nombre', 'hantaan', 'seoul', 'puumala'];

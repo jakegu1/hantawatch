@@ -338,9 +338,12 @@ export function NewsCmsPanel() {
             <label className="block text-[11px] font-medium text-gray-700 mb-1.5">通报类型</label>
             <div className="flex flex-wrap gap-2">
               {([
-                { val: 'china', label: '🇨🇳 国内通报', confidence: 'official' as const },
-                { val: 'international', label: '🌐 官方通报（境外）', confidence: 'official' as const },
-                { val: 'international', label: '📰 新闻线索（境外）', confidence: 'news' as const },
+                // `as const` on val so the inferred type is the narrow
+                // 'china' | 'international' union (not widened to string),
+                // matching FormDraft.scope.
+                { val: 'china' as const, label: '🇨🇳 国内通报', confidence: 'official' as const },
+                { val: 'international' as const, label: '🌐 官方通报（境外）', confidence: 'official' as const },
+                { val: 'international' as const, label: '📰 新闻线索（境外）', confidence: 'news' as const },
               ]).map((opt, i) => {
                 const active = draft.scope === opt.val && draft.confidence === opt.confidence;
                 return (

@@ -29,7 +29,7 @@
  */
 
 import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
-import type { ActiveCluster } from '@hantawatch/shared';
+import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
 import { type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
