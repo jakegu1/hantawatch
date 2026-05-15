@@ -29,6 +29,23 @@ const AUTHORITATIVE_OUTLETS: readonly string[] = [
   '新华',
 ];
 
+/** Outlets that LOOK like they should match the allowlist (e.g. contain
+ *  "新华") but are in fact provincial commercial press, not the central
+ *  Xinhua News Agency. Checked BEFORE the allowlist so they win.
+ *
+ *  e.g. 新华报业网 = 江苏新华报业传媒集团 (provincial press group whose
+ *  flagship is 新华日报). Editorial policy: only the central 新华社 /
+ *  新华网 / Xinhua News Agency passes; provincial 新华-branded papers do
+ *  not. */
+const OUTLET_DENYLIST: readonly string[] = [
+  '新华报业',          // 江苏新华报业传媒集团 / 新华报业网
+  '新华日报',          // 江苏《新华日报》—— 省级党报
+];
+
+const HOST_DENYLIST: readonly string[] = [
+  'xhby.net',          // 新华报业网 host
+];
+
 /** Longer-form patterns matching official health bodies across languages.
  *  Tuned for high precision — these phrases rarely appear in commercial
  *  media bylines, so substring matching is safe. */
@@ -94,18 +111,25 @@ export function isAuthoritativeNewsSource(
   sourceUrl: string | undefined | null,
 ): boolean {
   const lc = (outletName || '').toLowerCase();
+  let host = '';
+  if (sourceUrl) {
+    try {
+      host = new URL(sourceUrl).hostname;
+    } catch {
+      // Malformed URL — host stays empty.
+    }
+  }
+
+  // Denylist runs first — catches "新华XX" subsidiaries (e.g. 新华报业网)
+  // that would otherwise sneak past the substring allowlist.
+  if (OUTLET_DENYLIST.some((bad) => lc.includes(bad))) return false;
+  if (host && hostMatches(host, HOST_DENYLIST)) return false;
+
   // Rule 1: short outlet matches (Xinhua family).
   if (AUTHORITATIVE_OUTLETS.some((needle) => lc.includes(needle))) return true;
   // Rule 2: long-form ministry / CDC patterns.
   if (AUTHORITATIVE_OUTLET_PATTERNS.some((pat) => lc.includes(pat))) return true;
   // Rule 3: URL host on allowlist.
-  if (sourceUrl) {
-    try {
-      const host = new URL(sourceUrl).hostname;
-      if (hostMatches(host, AUTHORITATIVE_HOSTS)) return true;
-    } catch {
-      // Malformed URL — fall through to false.
-    }
-  }
+  if (host && hostMatches(host, AUTHORITATIVE_HOSTS)) return true;
   return false;
 }

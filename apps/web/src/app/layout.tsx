@@ -8,26 +8,26 @@ const BASE_URL = 'https://bingduguancha.com';
 
 export const metadata: Metadata = {
   title: {
-    default: '汉坦观察 HantaWatch — 了解，而非恐慌',
-    template: '%s | 汉坦观察',
+    default: '病毒观察 BingDuGuanCha — 了解，而非恐慌',
+    template: '%s | 病毒观察',
   },
-  description: '面向中文用户的汉坦病毒预警与信息平台。提供病毒距离监测、HPI汉坦逼近指数、官方风险等级、防护指南。数据来源包括中国疾控中心、WHO、ECDC。',
-  keywords: ['汉坦病毒', '汉滩病毒', '流行性出血热', 'HFRS', 'HPS', '汉坦观察', 'HantaWatch', '出血热预警'],
-  authors: [{ name: 'HantaWatch' }],
-  creator: 'HantaWatch',
-  publisher: 'HantaWatch',
+  description: '面向中文用户的病毒疫情预警与信息平台，当前重点监测汉坦病毒。提供距离监测、HPI（汉坦逼近指数）、官方风险等级、防护指南。数据来源包括中国疾控中心、WHO、ECDC。',
+  keywords: ['病毒观察', 'BingDuGuanCha', '汉坦病毒', '汉滩病毒', '流行性出血热', 'HFRS', 'HPS', '出血热预警', '疫情预警', '病毒监测'],
+  authors: [{ name: '病毒观察 BingDuGuanCha' }],
+  creator: '病毒观察 BingDuGuanCha',
+  publisher: '病毒观察 BingDuGuanCha',
   metadataBase: new URL(BASE_URL),
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    siteName: '汉坦观察 HantaWatch',
-    title: '汉坦观察 — 了解，而非恐慌',
-    description: '汉坦病毒预警与信息平台。距离监测、HPI指数、官方风险等级。',
+    siteName: '病毒观察 BingDuGuanCha',
+    title: '病毒观察 — 了解，而非恐慌',
+    description: '病毒疫情预警与信息平台。距离监测、HPI指数、官方风险等级。',
     url: BASE_URL,
   },
   twitter: {
     card: 'summary_large_image',
-    title: '汉坦观察 HantaWatch',
+    title: '病毒观察 BingDuGuanCha',
     description: '了解，而非恐慌',
   },
   robots: {
@@ -63,13 +63,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
-              name: '汉坦观察 HantaWatch',
-              description: '面向中文用户的汉坦病毒预警与信息平台。提供病毒距离监测、HPI汉坦逼近指数、官方风险等级。',
+              name: '病毒观察 BingDuGuanCha',
+              description: '面向中文用户的病毒疫情预警与信息平台，当前重点监测汉坦病毒。提供距离监测、HPI 汉坦逼近指数、官方风险等级。',
               url: 'https://bingduguancha.com',
               applicationCategory: 'HealthApplication',
               operatingSystem: 'Web, iOS, Android',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'CNY' },
-              author: { '@type': 'Organization', name: 'HantaWatch' },
+              author: { '@type': 'Organization', name: '病毒观察 BingDuGuanCha' },
               about: {
                 '@type': 'MedicalCondition',
                 name: '汉坦病毒感染（HFRS/HPS）',
@@ -117,8 +117,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container-page py-8">
             <div className="grid gap-6 sm:grid-cols-3">
               <div>
-                <h3 className="font-semibold text-gray-700 mb-2">汉坦观察</h3>
-                <p className="text-xs leading-relaxed">面向中文用户的汉坦病毒预警与信息平台。数据来源：中国疾控中心、WHO、ECDC。</p>
+                <h3 className="font-semibold text-gray-700 mb-2">病毒观察</h3>
+                <p className="text-xs leading-relaxed">面向中文用户的病毒疫情预警与信息平台，当前重点监测汉坦病毒。数据来源：中国疾控中心、WHO、ECDC。</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-700 mb-2">快速链接</h3>
@@ -151,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             */}
             <div className="mt-8 border-t border-gray-200 pt-4 text-center text-xs">
               <span suppressHydrationWarning>
-                &copy; {new Date().getFullYear()} 汉坦观察 HantaWatch. 数据来源见各页面标注。
+                &copy; {new Date().getFullYear()} 病毒观察 BingDuGuanCha. 数据来源见各页面标注。
               </span>
             </div>
           </div>

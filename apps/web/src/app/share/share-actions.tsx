@@ -23,12 +23,12 @@ export function ShareActions() {
       const blob = await res.blob();
 
       // Prefer Web Share API on mobile (lets user share to RED book / WeChat directly).
-      if (navigator.canShare && navigator.canShare({ files: [new File([blob], 'hantawatch.png', { type: 'image/png' })] })) {
-        const file = new File([blob], `hantawatch-${new Date().toISOString().slice(0, 10)}.png`, { type: 'image/png' });
+      if (navigator.canShare && navigator.canShare({ files: [new File([blob], 'bingduguancha.png', { type: 'image/png' })] })) {
+        const file = new File([blob], `bingduguancha-${new Date().toISOString().slice(0, 10)}.png`, { type: 'image/png' });
         try {
           await navigator.share({
             files: [file],
-            title: '汉坦观察 · 每日态势卡',
+            title: '病毒观察 · 每日态势卡',
             text: '了解，而非恐慌。',
           });
           return;
@@ -42,7 +42,7 @@ export function ShareActions() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `hantawatch-${new Date().toISOString().slice(0, 10)}.png`;
+      a.download = `bingduguancha-${new Date().toISOString().slice(0, 10)}.png`;
       document.body.appendChild(a);
       a.click();
       a.remove();

@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '关于我们',
-  description: '汉坦观察 (HantaWatch) 项目背景、HPI方法论说明、数据来源声明。',
+  description: '病毒观察 (BingDuGuanCha) 项目背景、HPI 方法论说明、数据来源声明。',
 };
 
 export default function AboutPage() {
   return (
     <div className="container-page py-8">
-      <h1 className="text-2xl font-bold mb-2">关于汉坦观察</h1>
+      <h1 className="text-2xl font-bold mb-2">关于病毒观察</h1>
       <p className="text-gray-500 text-sm mb-8">了解，而非恐慌 — Know, Not Fear</p>
 
       <div className="space-y-8">
@@ -17,12 +17,12 @@ export default function AboutPage() {
           <h2 className="font-semibold text-lg mb-3">项目背景</h2>
           <div className="text-sm text-gray-700 space-y-3 leading-relaxed">
             <p>
-              汉坦观察 (HantaWatch) 是一个面向中文用户的汉坦病毒预警与信息平台。
+              病毒观察 (BingDuGuanCha) 是一个面向中文用户的病毒疫情预警与信息平台，当前重点监测汉坦病毒。
               2026年5月，南美洲海域MV Hondius邮轮上出现安第斯型（Andes）汉坦病毒聚集性疫情，
               引发全球关注。然而，现有英文追踪工具存在数据混淆、恐慌渲染等问题。
             </p>
             <p>
-              汉坦观察旨在弥补这一空白：提供<strong>准确、透明、科学克制</strong>的中文信息服务。
+              病毒观察旨在弥补这一空白：提供<strong>准确、透明、科学克制</strong>的中文信息服务。
               我们坚持以下原则：
             </p>
             <ul className="space-y-1 ml-4">
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <h2 className="font-semibold text-lg mb-3">HPI 汉坦逼近指数 · 方法论</h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              <strong>HPI (Hanta Proximity Index)</strong> 是汉坦观察自有的中国专属风险评分，
+              <strong>HPI (Hanta Proximity Index)</strong> 是病毒观察自有的中国专属风险评分，
               采用五因子加权模型，满分100分。每个因子的映射函数和权重均公开透明。
             </p>
             <div className="overflow-x-auto">
@@ -114,7 +114,7 @@ export default function AboutPage() {
           <h2 className="font-semibold text-lg mb-3 text-red-800">免责声明</h2>
           <div className="text-sm text-gray-700 leading-relaxed">
             <p>
-              汉坦观察 (HantaWatch) 是一个信息聚合平台，旨在提供汉坦病毒相关的公共卫生信息。
+              病毒观察 (BingDuGuanCha) 是一个信息聚合平台，旨在提供病毒疫情相关的公共卫生信息。
               本工具<strong>不提供医疗诊断、治疗建议或个性化的健康指导</strong>。
               所有数据均来自公开的官方来源，但我们不保证数据的完整性、准确性和及时性。
             </p>

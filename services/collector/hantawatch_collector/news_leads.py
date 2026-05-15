@@ -132,6 +132,24 @@ NEWS_LEADS_AUTHORITATIVE_OUTLETS: tuple[str, ...] = (
     "新华",
 )
 
+# Outlets that *look* like they should match the allowlist (e.g. contain
+# "新华") but are in fact regional commercial press, not the central state
+# news agency. Checked BEFORE the allowlist so they win.
+#
+# Why this matters: substring matching against ``"新华"`` accidentally
+# accepts 新华报业网 (江苏新华报业传媒集团 — a Jiangsu provincial
+# commercial press group whose flagship is 新华日报). Editorial policy:
+# only the central 新华社 / 新华网 / Xinhua News Agency passes; provincial
+# 新华-branded papers do not.
+NEWS_LEADS_OUTLET_DENYLIST: tuple[str, ...] = (
+    "新华报业",        # 江苏新华报业传媒集团 / 新华报业网
+    "新华日报",        # 江苏《新华日报》—— 省级党报，非中央
+)
+
+NEWS_LEADS_HOST_DENYLIST: tuple[str, ...] = (
+    "xhby.net",        # 新华报业网 host
+)
+
 NEWS_LEADS_AUTHORITATIVE_OUTLET_PATTERNS: tuple[str, ...] = (
     # Generic patterns matching official health bodies across languages.
     # Tuned for high precision — these phrases rarely appear in commercial
@@ -193,6 +211,18 @@ def _is_authoritative_news_source(outlet: str, link: str) -> bool:
     helper is what every entry must pass before we save it.
     """
     outlet_lc = (outlet or "").lower()
+    try:
+        host = urlparse(link).hostname or ""
+    except ValueError:
+        host = ""
+
+    # Denylist runs first — catches "新华XX" subsidiaries (e.g. 新华报业网)
+    # that would otherwise sneak past the substring allowlist.
+    if any(bad in outlet_lc for bad in NEWS_LEADS_OUTLET_DENYLIST):
+        return False
+    if _host_matches(host, NEWS_LEADS_HOST_DENYLIST):
+        return False
+
     # Rule 1: short outlet matches (Xinhua family)
     if any(needle in outlet_lc for needle in NEWS_LEADS_AUTHORITATIVE_OUTLETS):
         return True
@@ -200,10 +230,6 @@ def _is_authoritative_news_source(outlet: str, link: str) -> bool:
     if any(pat in outlet_lc for pat in NEWS_LEADS_AUTHORITATIVE_OUTLET_PATTERNS):
         return True
     # Rule 3: URL host on allowlist
-    try:
-        host = urlparse(link).hostname or ""
-    except ValueError:
-        host = ""
     if _host_matches(host, NEWS_LEADS_AUTHORITATIVE_HOSTS):
         return True
     return False

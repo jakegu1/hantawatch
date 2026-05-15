@@ -3,11 +3,11 @@ import { todayBrief, currentHpi } from '@/lib/data';
 import { ShareActions } from './share-actions';
 
 export const metadata: Metadata = {
-  title: '生成分享海报 · 汉坦观察',
+  title: '生成分享海报 · 病毒观察',
   description: '一键生成 9:16 的每日态势卡，可保存到相册分享到小红书/微博/微信。',
   alternates: { canonical: '/share' },
   openGraph: {
-    title: '汉坦观察 · 每日态势卡',
+    title: '病毒观察 · 每日态势卡',
     description: todayBrief.oneLine,
     images: ['/api/poster?variant=dark'],
   },

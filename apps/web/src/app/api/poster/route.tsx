@@ -71,8 +71,8 @@ export async function GET(req: NextRequest) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
           <div style={{ fontSize: 64 }}>🦠</div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.02em' }}>汉坦观察</div>
-            <div style={{ fontSize: 22, color: muted, marginTop: 4 }}>HantaWatch · 每日态势卡</div>
+            <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: '-0.02em' }}>病毒观察</div>
+            <div style={{ fontSize: 22, color: muted, marginTop: 4 }}>BingDuGuanCha · 每日态势卡</div>
           </div>
           <div style={{ marginLeft: 'auto', fontSize: 22, color: muted }}>{todayBrief.date}</div>
         </div>

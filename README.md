@@ -1,8 +1,10 @@
-# 汉坦观察 (HantaWatch)
+# 病毒观察 (BingDuGuanCha)
 
 > 了解，而非恐慌 — Know, Not Fear
 
-面向中文用户的移动优先型汉坦病毒预警与信息平台。
+面向中文用户的移动优先型病毒疫情预警与信息平台，当前重点监测汉坦病毒。
+
+> 仓库 / 包内部仍沿用历史代号 `hantawatch`（GitHub 仓库 `jakegu1/hantawatch`、npm scope `@hantawatch/*`、Python 模块 `hantawatch_collector`）。这些是稳定的内部标识，未来会单独迁移；用户可见的品牌一律为「病毒观察 BingDuGuanCha」。
 
 ## 技术栈
 

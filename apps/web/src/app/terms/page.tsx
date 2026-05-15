@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: '服务条款',
-  description: '汉坦观察服务条款。本站提供公益性汉坦病毒科普与预警信息，不构成医学建议。',
+  description: '病毒观察服务条款。本站提供公益性病毒疫情预警与科普信息，不构成医学建议。',
 };
 
 const VERSION = '1.0';
@@ -20,7 +20,7 @@ export default function TermsPage() {
         <section>
           <h2 className="font-semibold text-base text-gray-900">一、本站性质</h2>
           <p>
-            汉坦观察（bingduguancha.com，以下简称"本站"）是一个<strong>公益性、非营利</strong>的汉坦病毒科普与预警信息聚合平台。
+            病毒观察（bingduguancha.com，以下简称“本站”）是一个<strong>公益性、非营利</strong>的病毒疫情预警与信息聚合平台，当前重点监测汉坦病毒。
             本站<strong>不是官方机构</strong>，与中国疾控中心、WHO、ECDC 等任何官方机构<strong>无隶属关系</strong>。
             本站引用的所有官方数据均标注来源与抓取时间，便于读者自行核查。
           </p>

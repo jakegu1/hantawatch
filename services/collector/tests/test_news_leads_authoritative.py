@@ -80,6 +80,14 @@ def test_authoritative_passes(outlet: str, link: str) -> None:
         ("央视", "https://www.cctv.com/abc"),
         ("环球时报", "https://www.huanqiu.com/abc"),
 
+        # ---- "新华XX" provincial subsidiaries — must NOT pass even though
+        #      substring-matching against "新华" would otherwise accept them. ----
+        ("新华报业网", "https://www.xhby.net/abc"),
+        ("新华报业网", "https://news.google.com/articles/abc"),  # via Google News
+        ("江苏新华报业传媒集团", "https://www.xhby.net/abc"),
+        ("新华日报", "https://www.xhby.net/abc"),
+        ("", "https://www.xhby.net/article/abc"),  # host alone
+
         # ---- Overseas commercial press ----
         ("Reuters", "https://www.reuters.com/abc"),
         ("BBC", "https://www.bbc.com/news/abc"),

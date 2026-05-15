@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: '隐私政策',
-  description: '汉坦观察隐私政策。我们不追踪个人身份，仅在你主动订阅时收集邮箱用于发送预警通知。',
+  description: '病毒观察隐私政策。我们不追踪个人身份，仅在你主动订阅时收集邮箱用于发送预警通知。',
 };
 
 // Single source of truth: bump on every material change.
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="font-semibold text-base text-gray-900">一、我们的承诺</h2>
           <p>
-            汉坦观察（以下简称"本站"）是一个面向中文用户的汉坦病毒科普与预警信息平台。
+            病毒观察（以下简称“本站”）是一个面向中文用户的病毒疫情预警与信息聚合平台，当前重点监测汉坦病毒。
             我们坚信良好的公共健康信息服务<strong>不需要以牺牲用户隐私为代价</strong>。
             本站默认不收集任何个人身份信息（PII），不使用追踪 cookie，不向第三方出售或共享数据。
           </p>

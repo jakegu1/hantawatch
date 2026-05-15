@@ -55,7 +55,7 @@ export default function FeedbackPage() {
 
       <div className="max-w-lg mx-auto">
         <h1 className="text-2xl font-bold mb-2">反馈建议</h1>
-        <p className="text-sm text-gray-500 mb-6">匿名提交，帮助我们改进汉坦观察。你的反馈不会被关联到任何个人信息。</p>
+        <p className="text-sm text-gray-500 mb-6">匿名提交，帮助我们改进病毒观察。你的反馈不会被关联到任何个人信息。</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Type */}

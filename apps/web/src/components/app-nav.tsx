@@ -128,8 +128,8 @@ export function HeaderBrand() {
         className="flex items-center gap-2 font-bold text-brand-700 text-base sm:text-lg whitespace-nowrap shrink-0"
       >
         <span className="text-xl sm:text-2xl">🦠</span>
-        <span>汉坦观察</span>
-        <span className="hidden sm:inline text-xs font-normal text-gray-400">HantaWatch</span>
+        <span>病毒观察</span>
+        <span className="hidden sm:inline text-xs font-normal text-gray-400">BingDuGuanCha</span>
       </Link>
       <DesktopNav />
       <Link
