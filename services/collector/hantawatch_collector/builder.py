@@ -65,7 +65,12 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "serotypeId": "andes",
     },
     "2026-DON600": {
-        "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
+        # `name` is the human-facing title shown in the hero card. Keep it
+        # date-free — the source date lives in structured fields
+        # (`lastUpdate`, `whoRiskLevel`) and the UI renders it dynamically
+        # ("3 天前" / "今天"). Embedding a fixed date here makes the tool
+        # look stale on day N+3 even when WHO genuinely hasn't updated.
+        "name": "MV Hondius 邮轮安第斯型聚集疫情",
         "summaryZh": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
         "lat": -54.8,
         "lng": -68.3,
@@ -76,7 +81,8 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "serotypeId": "andes",
     },
     "2026-DON601": {
-        "name": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）",
+        # Date suffix removed — see comment in DON600 block above.
+        "name": "MV Hondius 邮轮安第斯型聚集疫情",
         "summaryZh": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
         "lat": -54.8,
         "lng": -68.3,
@@ -115,7 +121,8 @@ def _inferred_registry(
 ) -> dict:
     if _is_mv_hondius_outbreak(title, summary):
         return {
-            "name": "MV Hondius 邮轮安第斯型聚集疫情（更新）",
+            # Date-free title — see CLUSTER_REGISTRY["2026-DON600"]["name"].
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
             "summaryZh": _mv_hondius_summary_zh(summary),
             "lat": -54.8,
             "lng": -68.3,
@@ -742,7 +749,10 @@ def build_meta(
             },
         },
         "clusterCount": cluster_count,
-        "manualFiles": ["china-baseline.json", "recent-cases-china.json", "news-leads-manual.json"],
+        # Sourced from the canonical MANUAL_FILES set so adding a new
+        # hand-maintained artifact (e.g. country-status.json) is a one-line
+        # change in __init__.py instead of two.
+        "manualFiles": sorted(MANUAL_FILES),
     }
 
 

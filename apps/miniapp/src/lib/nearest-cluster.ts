@@ -99,3 +99,23 @@ export function relativeDateZh(isoDate: string | undefined, today: Date = new Da
   if (diffDays < 30) return `${diffDays}天前`;
   return isoDate;
 }
+
+/** Minute-granularity relative-time helper. Mirrors the web app's version
+ *  in apps/web/src/lib/nearest-cluster.ts. Used to render the "系统核查
+ *  N 分钟前" chip on the NearestAndesCard so the user can see we're
+ *  actively checking even when WHO hasn't published anything new. */
+export function relativeTimeZh(iso: string | undefined, now: Date = new Date()): string {
+  if (!iso) return '—';
+  const t = new Date(iso).getTime();
+  if (Number.isNaN(t)) return iso.slice(0, 10);
+  const diffMs = now.getTime() - t;
+  if (diffMs < 0) return '刚刚';
+  const diffMin = Math.floor(diffMs / 60000);
+  if (diffMin < 1) return '刚刚';
+  if (diffMin < 60) return `${diffMin} 分钟前`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr} 小时前`;
+  const diffDay = Math.floor(diffHr / 24);
+  if (diffDay < 7) return `${diffDay} 天前`;
+  return iso.slice(0, 10);
+}

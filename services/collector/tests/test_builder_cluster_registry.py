@@ -110,7 +110,7 @@ def test_recent_cases_intl_uses_registry_overrides(tmp_path: Path):
     who_row = next(r for r in rows if r["id"] == "who-2026-don600")
     assert who_row["serotypeId"] == "andes"
     # And the curated Chinese title beats the generic English DON title.
-    assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情（更新）"
+    assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情"
     assert "截至 5 月 8 日" in who_row["summary"]
     assert "WHO 疾病暴发新闻" in who_row["source"]["name"]
 
@@ -129,7 +129,7 @@ def test_don601_is_localized_and_grouped(tmp_path: Path):
 
     rows = build_recent_cases_intl(entries, [], ecdc=None, fallback_path=tmp_path / "missing.json")
     who_row = next(r for r in rows if r["id"] == "who-2026-don601")
-    assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）"
+    assert who_row["title"] == "MV Hondius 邮轮安第斯型聚集疫情"
     assert "11 例" in who_row["summary"]
     assert "On 2 May" not in who_row["summary"]
 

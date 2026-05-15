@@ -5,9 +5,11 @@ import { currentHpi } from '@/lib/mock-data';
 import { dataMeta } from '@/lib/data';
 import { DataFreshness } from '@/components/data-freshness';
 import { ClusterReviewQueue } from '@/components/cluster-review-queue';
+import { ManualDataPanel } from '@/components/manual-data-panel';
+import { NewsCmsPanel } from '@/components/news-cms-panel';
 import {
   CheckCircle, BarChart3, MessageSquare, Settings,
-  Mail, Download, RefreshCw, LogOut,
+  Mail, Download, RefreshCw, LogOut, FileEdit, Newspaper,
 } from 'lucide-react';
 
 interface AnalyticsStats {
@@ -46,7 +48,7 @@ interface SubscribersResponse {
   error?: string;
 }
 
-type TabId = 'review' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
+type TabId = 'review' | 'news' | 'manual' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
 
 /**
  * NOTE on auth (changed 2026-05-13):
@@ -155,6 +157,8 @@ export default function AdminPage() {
 
   const tabs = [
     { id: 'review' as const, label: '审核队列', icon: CheckCircle },
+    { id: 'news' as const, label: '通报管理', icon: Newspaper },
+    { id: 'manual' as const, label: '手工数据', icon: FileEdit },
     { id: 'hpi' as const, label: 'HPI因子', icon: Settings },
     { id: 'analytics' as const, label: '数据统计', icon: BarChart3 },
     { id: 'feedback' as const, label: '用户反馈', icon: MessageSquare },
@@ -198,6 +202,16 @@ export default function AdminPage() {
           Backed by Supabase (cluster_overrides table); homepage live-fetches
           via /api/clusters and re-renders within a second of save. */}
       {activeTab === 'review' && <ClusterReviewQueue />}
+
+      {/* News CMS — add/delete "最新通报" timeline entries. Backed by
+          Supabase (manual_news_entries table); homepage merges these on top
+          of recent-cases-intl.json + recent-cases-china.json at runtime. */}
+      {activeTab === 'news' && <NewsCmsPanel />}
+
+      {/* Manual data registry — read-only listing of every file in
+          MANUAL_FILES with its update cadence and a deep-link to the
+          GitHub web editor. Edits flow through git, not Supabase. */}
+      {activeTab === 'manual' && <ManualDataPanel />}
 
       {/* HPI Factor Management */}
       {activeTab === 'hpi' && (

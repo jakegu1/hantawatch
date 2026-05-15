@@ -32,10 +32,12 @@
   "clusterCount": 1,
   "manualFiles": [
     "china-baseline.json",
-    "recent-cases-china.json",
-    "news-leads-manual.json"
+    "country-status.json",
+    "mv-hondius-imports.json",
+    "news-leads-manual.json",
+    "recent-cases-china.json"
   ],
   "yesterdayNearestDistanceKm": 16500,
   "yesterdayReferenceClusterId": "mv-hondius-2026",
-  "yesterdayReferenceClusterName": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）"
+  "yesterdayReferenceClusterName": "MV Hondius 邮轮安第斯型聚集疫情"
 }

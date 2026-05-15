@@ -4,7 +4,7 @@
   "clusters": [
     {
       "id": "mv-hondius-2026",
-      "name": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）",
+      "name": "MV Hondius 邮轮安第斯型聚集疫情",
       "serotypeId": "andes",
       "location": {
         "lat": -54.8,
@@ -61,7 +61,7 @@
     },
     "referenceCluster": {
       "id": "mv-hondius-2026",
-      "name": "MV Hondius 邮轮安第斯型聚集疫情（5月13日更新）",
+      "name": "MV Hondius 邮轮安第斯型聚集疫情",
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },

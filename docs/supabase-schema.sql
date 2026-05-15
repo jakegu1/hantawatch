@@ -56,20 +56,67 @@ create table if not exists cluster_overrides (
 );
 
 -- ---------------------------------------------------------------------
+-- Table 3: manual_news_entries
+--   Editor-managed timeline entries for the "最新通报" homepage block.
+--   Two row kinds:
+--     * 'insert' — adds a new entry (title/summary/source/etc.)
+--     * 'hide'   — soft-deletes a baseline entry from
+--                  recent-cases-intl.json / recent-cases-china.json by
+--                  setting hide_target_id to that row's id
+--   Read by /api/news-entries (public) and /api/admin/news-entries.
+--
+--   See apps/web/src/lib/news-entries.ts for the full rationale.
+-- ---------------------------------------------------------------------
+create table if not exists manual_news_entries (
+  id              text primary key,
+  kind            text not null check (kind in ('insert', 'hide')),
+  -- Columns used when kind='insert' (nullable so 'hide' rows can omit them).
+  title           text,
+  summary         text,
+  scope           text check (scope in ('china', 'international')),
+  confidence      text check (confidence in ('official', 'news')),
+  serotype_id     text,
+  date            date,
+  case_type       text default 'confirmed',
+  count           int not null default 0,
+  source_name     text,
+  source_url      text,
+  region_code     text,
+  notes           text,
+  -- Column used when kind='hide'.
+  hide_target_id  text,
+  -- Audit fields.
+  created_at      timestamptz not null default now(),
+  created_by      text,
+  -- Soft delete (instead of DELETE) so we keep an audit trail.
+  deleted_at      timestamptz
+);
+
+create index if not exists idx_manual_news_entries_kind_active
+  on manual_news_entries (kind)
+  where deleted_at is null;
+
+create index if not exists idx_manual_news_entries_date_desc
+  on manual_news_entries (date desc nulls last)
+  where deleted_at is null and kind = 'insert';
+
+-- ---------------------------------------------------------------------
 -- Row-Level Security:
 --   We access these tables ONLY from the Next.js server side, using the
 --   service_role key. RLS therefore doesn't matter for our app, but
 --   leaving RLS *enabled* protects against accidental anon-key exposure
 --   in client bundles.
 -- ---------------------------------------------------------------------
-alter table alert_subscriptions enable row level security;
-alter table cluster_overrides   enable row level security;
+alter table alert_subscriptions   enable row level security;
+alter table cluster_overrides     enable row level security;
+alter table manual_news_entries   enable row level security;
 
 -- No policies created → all anon/auth requests blocked. Service-role
 -- bypasses RLS automatically.
 
 -- ---------------------------------------------------------------------
 -- Verification (paste into SQL editor after running the above):
---   select count(*) from alert_subscriptions;   -- should work
---   select * from cluster_overrides limit 5;    -- empty initially
+--   select count(*) from alert_subscriptions;     -- should work
+--   select * from cluster_overrides limit 5;      -- empty initially
+--   select * from manual_news_entries limit 5;    -- empty initially
 -- ---------------------------------------------------------------------

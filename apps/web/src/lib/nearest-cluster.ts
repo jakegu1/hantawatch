@@ -132,3 +132,26 @@ export function relativeDateZh(isoDate: string | undefined, today: Date = new Da
   if (diffDays < 30) return `${diffDays}天前`;
   return isoDate;
 }
+
+/** Render an "ago" string for a full ISO timestamp, in Chinese, with
+ *  minute granularity. Used for collector-run timestamps where day-level
+ *  ("今天") is too coarse — we want users to see "5 分钟前" so the tool
+ *  feels live.
+ *
+ *  "2026-05-15T02:51:26Z" → "刚刚" / "5 分钟前" / "3 小时前" / "2 天前".
+ *  Falls back to a YYYY-MM-DD slice for anything older than a week. */
+export function relativeTimeZh(iso: string | undefined, now: Date = new Date()): string {
+  if (!iso) return '—';
+  const t = new Date(iso).getTime();
+  if (Number.isNaN(t)) return iso.slice(0, 10);
+  const diffMs = now.getTime() - t;
+  if (diffMs < 0) return '刚刚';
+  const diffMin = Math.floor(diffMs / 60000);
+  if (diffMin < 1) return '刚刚';
+  if (diffMin < 60) return `${diffMin} 分钟前`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr} 小时前`;
+  const diffDay = Math.floor(diffHr / 24);
+  if (diffDay < 7) return `${diffDay} 天前`;
+  return iso.slice(0, 10);
+}

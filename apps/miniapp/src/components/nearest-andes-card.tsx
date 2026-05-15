@@ -12,7 +12,7 @@ import { View, Text } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
-import { type NearestAndesResult, flagForLocation, relativeDateZh } from '@/lib/nearest-cluster';
+import { type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
@@ -23,7 +23,16 @@ function copyUrl(url: string) {
   Taro.setClipboardData({ data: url }).catch(() => {});
 }
 
-export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
+interface Props {
+  result: NearestAndesResult;
+  /** ISO timestamp of the last collector run (from `meta.json#lastCollectedAt`).
+   *  Shown as "系统核查 X 分钟前" so the user can tell the difference between
+   *  "WHO hasn't published anything since 5/13" and "our collector is broken".
+   *  Without this, those two states look identical from the UI alone. */
+  lastCheckedAt?: string;
+}
+
+export function NearestAndesCard({ result, lastCheckedAt }: Props) {
   const { nearest, count, all } = result;
 
   if (!nearest) {
@@ -115,12 +124,31 @@ export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
         </View>
 
         {/* Location row */}
-        <View className="flex items-center gap-1 mb-3">
+        <View className="flex items-center gap-1" style={{ marginBottom: '6rpx' }}>
           <Text style={{ color: '#9ca3af', fontSize: '22rpx' }}>📌</Text>
           <Text className="text-xs text-gray-600 truncate flex-1">
             {nearest.location?.name || '位置待定位'}
           </Text>
-          <Text className="text-xs text-gray-400">📅 {ago}</Text>
+        </View>
+
+        {/* Dual-timestamp row — see apps/web/src/components/nearest-andes-card.tsx
+            for the rationale. Splitting source-date from check-time prevents
+            "WHO hasn't updated in 3 days" from being misread as "tool broken". */}
+        <View
+          className="flex items-center flex-wrap"
+          style={{ gap: '8rpx', marginBottom: '18rpx' }}
+        >
+          <Text style={{ color: '#6b7280', fontSize: '20rpx' }}>
+            🗓 WHO 通报 <Text style={{ color: '#374151', fontWeight: 600 }}>{ago}</Text>
+          </Text>
+          {lastCheckedAt && (
+            <>
+              <Text style={{ color: '#d1d5db', fontSize: '20rpx' }}>·</Text>
+              <Text style={{ color: '#6b7280', fontSize: '20rpx' }}>
+                � 系统核查 <Text style={{ color: '#374151', fontWeight: 600 }}>{relativeTimeZh(lastCheckedAt)}</Text>
+              </Text>
+            </>
+          )}
         </View>
 
         {/* Distance bar */}

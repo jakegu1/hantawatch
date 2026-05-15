@@ -31,14 +31,23 @@
 import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
 import type { ActiveCluster } from '@hantawatch/shared';
 import { SEROTYPES } from '@hantawatch/shared';
-import { type NearestAndesResult, flagForLocation, relativeDateZh } from '@/lib/nearest-cluster';
+import { type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
 }
 
-export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
+interface Props {
+  result: NearestAndesResult;
+  /** ISO timestamp of when the collector last ran (from `meta.json#lastCollectedAt`).
+   *  Surfaces as "系统核查 X 分钟前" so the user can distinguish "WHO hasn't
+   *  updated since 5/13" from "our tool stopped fetching" — these look
+   *  identical if only the source date is shown. */
+  lastCheckedAt?: string;
+}
+
+export function NearestAndesCard({ result, lastCheckedAt }: Props) {
   const { nearest, count, all } = result;
 
   // Defensive: if there are zero Andes clusters worldwide, show a calm
@@ -107,14 +116,32 @@ export function NearestAndesCard({ result }: { result: NearestAndesResult }) {
         </div>
 
         {/* Location detail line */}
-        <p className="text-[11px] sm:text-xs text-gray-600 flex items-center gap-1 mb-3">
+        <p className="text-[11px] sm:text-xs text-gray-600 flex items-center gap-1 mb-1.5">
           <MapPin className="h-3 w-3 text-gray-400 flex-shrink-0" />
           <span className="truncate">{nearest.location?.name || '位置待定位'}</span>
-          <span className="ml-auto text-gray-400 inline-flex items-center gap-0.5 flex-shrink-0">
-            <Calendar className="h-3 w-3" />
-            {ago}
-          </span>
         </p>
+
+        {/* Dual-timestamp row — addresses a real user-reported confusion
+            where the embedded "（5月13日更新）" suffix in the cluster name
+            made the tool look stale 3 days later even though our collector
+            was still actively re-checking every 6h. Splitting source-date
+            (when WHO published) from check-time (when we last fetched)
+            removes that ambiguity. */}
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-gray-500 mb-3">
+          <span className="inline-flex items-center gap-0.5">
+            <Calendar className="h-3 w-3 text-gray-400" />
+            WHO 通报 <span className="text-gray-700 font-medium">{ago}</span>
+          </span>
+          {lastCheckedAt && (
+            <>
+              <span className="text-gray-300">·</span>
+              <span className="inline-flex items-center gap-0.5">
+                <span className="text-gray-400" aria-hidden>🔄</span>
+                系统核查 <span className="text-gray-700 font-medium">{relativeTimeZh(lastCheckedAt)}</span>
+              </span>
+            </>
+          )}
+        </div>
 
         {/* Distance bar — graphical alternative to the prior text pill.
             Shows the cluster's position along a color-banded scale from

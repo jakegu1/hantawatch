@@ -3,7 +3,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta, realtimeFeed } from '@/lib/data';
+import type { RecentCase } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
+import type { SerotypeId } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES, type ActiveCluster } from '@hantawatch/shared';
 import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
@@ -72,6 +74,59 @@ export default function HomePage() {
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  // ────────────────────────────────────────────────────────────────────
+  //  Live "最新通报" entries — admin can add/hide rows from /admin →
+  //  「通报管理」 tab. Same fetch-then-merge pattern as liveClusters.
+  //  Initial state is the static `recentCases` built from JSON; the
+  //  useEffect overlays additions + hides without waiting for a redeploy.
+  // ────────────────────────────────────────────────────────────────────
+  const [liveRecentCases, setLiveRecentCases] = useState<RecentCase[]>(recentCases);
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/news-entries', { cache: 'no-store', credentials: 'same-origin' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (cancelled || !data) return;
+        const hiddenIds: string[] = Array.isArray(data.hiddenIds) ? data.hiddenIds : [];
+        const rawAdditions: Array<Record<string, unknown>> = Array.isArray(data.additions) ? data.additions : [];
+
+        if (hiddenIds.length === 0 && rawAdditions.length === 0) return; // no-op fast path
+
+        // Narrow `caseType` to the CaseRecord union — anything unexpected
+        // from the API falls back to 'confirmed' (the only case-type the
+        // admin form currently emits, but we defend against schema drift).
+        const normalizeCaseType = (v: unknown): 'confirmed' | 'clinical' | 'suspected' =>
+          v === 'clinical' || v === 'suspected' ? v : 'confirmed';
+
+        const additions: RecentCase[] = rawAdditions.map((a) => ({
+          id: (a.id as string) ?? `admin-${Date.now()}`,
+          regionCode: (a.regionCode as string) ?? (a.scope === 'china' ? '000000' : 'INT'),
+          serotypeId: ((a.serotypeId as SerotypeId) ?? 'other'),
+          date: (a.date as string) ?? '',
+          caseType: normalizeCaseType(a.caseType),
+          count: Number(a.count ?? 0),
+          title: (a.title as string) ?? undefined,
+          summary: (a.summary as string) ?? undefined,
+          source: {
+            name: (a.sourceName as string) ?? '',
+            url: (a.sourceUrl as string) ?? '',
+            retrievedAt: (a.createdAt as string) ?? new Date().toISOString(),
+            confidence: ((a.confidence as 'official' | 'news') ?? 'official'),
+          },
+          notes: (a.notes as string) ?? undefined,
+          scope: ((a.scope as 'china' | 'international') ?? 'international'),
+        }));
+
+        const hideSet = new Set(hiddenIds);
+        const merged = [...recentCases.filter((c) => !hideSet.has(c.id)), ...additions].sort((a, b) =>
+          b.date.localeCompare(a.date),
+        );
+        setLiveRecentCases(merged);
+      })
+      .catch(() => { /* keep static baseline */ });
+    return () => { cancelled = true; };
   }, []);
 
   const hpi = currentHpi;
@@ -224,7 +279,10 @@ export default function HomePage() {
                 tile CDN), which our mainland audience can't reach reliably.
                 See components/nearest-andes-card.tsx for the design notes. */}
           <div className="mb-3 sm:mb-4">
-            <NearestAndesCard result={nearestAndes} />
+            <NearestAndesCard
+              result={nearestAndes}
+              lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
+            />
           </div>
 
           {/* ─── 7-day HPI sparkline + explanation (desktop only — mobile users
@@ -367,7 +425,7 @@ export default function HomePage() {
           </div>
 
           <ol className="space-y-3">
-            {recentCases.map((c) => {
+            {liveRecentCases.map((c) => {
               const sero = SEROTYPES[c.serotypeId];
               const isAndes = c.serotypeId === 'andes';
               const isIntl = c.scope === 'international';

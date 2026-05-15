@@ -293,7 +293,10 @@ export default function HomePage() {
 
         {/* Nearest Andes card */}
         <View style={{ marginBottom: '16rpx' }}>
-          <NearestAndesCard result={nearestAndes} />
+          <NearestAndesCard
+            result={nearestAndes}
+            lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
+          />
         </View>
 
         {/* 7-day HPI sparkline */}
