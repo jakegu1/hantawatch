@@ -189,9 +189,13 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
           />
           <RiskPill
             icon={<Plane className="h-3 w-3" />}
-            label="无直飞中国"
+            label={hasCloserImport ? nearestImport!.travelConnectivityZh : '无直飞中国'}
             active
-            activeClass="bg-yellow-50 text-yellow-700 border-yellow-100"
+            activeClass={
+              hasCloserImport && nearestImport!.travelConnectivity === 'direct'
+                ? 'bg-orange-100 text-orange-700 border-orange-200'
+                : 'bg-yellow-50 text-yellow-700 border-yellow-100'
+            }
           />
         </div>
 

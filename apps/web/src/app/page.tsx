@@ -149,10 +149,17 @@ export default function HomePage() {
   const hpi = useMemo(() => {
     const base = currentHpi;
     if (!nearestImport || nearestImport.effectiveHpiScore <= 0) return base;
-    // Current distance contribution = factors.distance.score × factors.distance.weight
-    // Import adds: effectiveHpiScore × distance.weight
-    const importBump = Math.round(nearestImport.effectiveHpiScore * (base.factors?.distance?.weight ?? 0.3));
-    const newTotal = Math.min(100, base.total + importBump);
+    const distanceWeight = base.factors?.distance?.weight ?? 0.3;
+    const travelWeight = base.factors?.travelConnectivity?.weight ?? 0.15;
+    const travelScore = nearestImport.travelConnectivity === 'direct'
+      ? 40
+      : nearestImport.travelConnectivity === 'indirect'
+        ? 15
+        : 5;
+    const baseTravelScore = base.factors?.travelConnectivity?.score ?? 15;
+    const importDistanceBump = nearestImport.effectiveHpiScore * distanceWeight;
+    const importTravelBump = Math.max(0, travelScore - baseTravelScore) * travelWeight;
+    const newTotal = Math.min(100, Math.round(base.total + importDistanceBump + importTravelBump));
     // Re-grade
     const grades = [
       { id: 'low' as const, zh: '低关注', color: '#16a34a', max: 20 },
@@ -168,6 +175,19 @@ export default function HomePage() {
       grade: grade.id,
       gradeZh: grade.zh,
       color: grade.color,
+      factors: {
+        ...base.factors,
+        distance: {
+          ...base.factors.distance,
+          km: nearestImport.distanceKm,
+          score: Math.max(base.factors.distance.score, nearestImport.effectiveHpiScore),
+        },
+        travelConnectivity: {
+          ...base.factors.travelConnectivity,
+          level: nearestImport.travelConnectivityZh,
+          score: Math.max(baseTravelScore, travelScore),
+        },
+      },
     };
   }, [nearestImport]);
 

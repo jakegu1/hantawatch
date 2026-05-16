@@ -138,6 +138,9 @@ export interface ImportProximity {
   weight: number;
   /** distanceScore(km) × weight — ready to compare with source score */
   effectiveHpiScore: number;
+  /** Best-effort travel connectivity from the import country to China. */
+  travelConnectivity: 'none' | 'indirect' | 'direct';
+  travelConnectivityZh: string;
   summary?: string;
 }
 
@@ -161,6 +164,20 @@ function distScore(km: number): number {
   return 100;
 }
 
+const DIRECT_FLIGHT_TO_CHINA = new Set([
+  'FR', 'ES', 'US', 'AU', 'DE', 'IT', 'GB', 'UK', 'NL', 'CH', 'JP', 'KR', 'TH',
+]);
+
+function importTravelConnectivity(iso2: string): ImportProximity['travelConnectivity'] {
+  return DIRECT_FLIGHT_TO_CHINA.has(iso2) ? 'direct' : 'indirect';
+}
+
+function travelConnectivityZh(level: ImportProximity['travelConnectivity']): string {
+  if (level === 'direct') return '有直飞中国';
+  if (level === 'indirect') return '需中转';
+  return '无直飞中国';
+}
+
 /** Find the nearest import with the highest effective HPI contribution.
  *  Returns null when there are no active imports, or all have status=closed. */
 export function findNearestImport(imports: ImportRecord[]): ImportProximity | null {
@@ -175,6 +192,7 @@ export function findNearestImport(imports: ImportRecord[]): ImportProximity | nu
     if (w === 0) continue; // closed — not relevant
 
     const eff = distScore(km) * w;
+    const travel = importTravelConnectivity(iso);
     const entry: ImportProximity = {
       iso2: iso,
       flag: ISO2_FLAG[iso] ?? '🌐',
@@ -184,6 +202,8 @@ export function findNearestImport(imports: ImportRecord[]): ImportProximity | nu
       statusZh: STATUS_LABEL_ZH[status] ?? status,
       weight: w,
       effectiveHpiScore: eff,
+      travelConnectivity: travel,
+      travelConnectivityZh: travelConnectivityZh(travel),
       summary: imp.summary_zh,
     };
 
