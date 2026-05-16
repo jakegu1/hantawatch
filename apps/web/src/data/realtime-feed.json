@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T06:05:18.394609+00:00",
+  "__generated_at": "2026-05-16T08:00:44.804136+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-16T06:05:16.802068+00:00",
+  "last_fetched": "2026-05-16T08:00:42.987800+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -17,20 +17,19 @@
       "key_facts_zh": [
         "CDC",
         "居家监测",
-        "高风险接触者"
+        "高风险接触"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-3bf020d76a6212bc",
-      "time": "2026-05-16T04:17:00.000Z",
-      "title_en": "Latest Headlines | Douglas County resident dies of hantavirus - KUSA.com",
-      "body_en": "Latest Headlines | Douglas County resident dies of hantavirus KUSA.com",
-      "summary_zh": "道格拉斯县一名居民死于汉坦病毒。",
+      "id": "rt-fbc5e23a58bfd796",
+      "time": "2026-05-16T03:01:00.000Z",
+      "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "WHO 搜寻汉坦病毒源头，实时更新。",
       "key_facts_zh": [
-        "美国",
-        "道格拉斯县",
-        "死亡 1 例"
+        "WHO",
+        "搜寻源头"
       ],
       "signal_strength": "high"
     },
@@ -39,11 +38,11 @@
       "time": "2026-05-16T01:46:00.000Z",
       "title_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch - The Times of India",
       "body_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch The Times of India",
-      "summary_zh": "威尔士居民因与MV Hondius接触而接受监测。",
+      "summary_zh": "威尔士居民因邮轮暴露被监测。",
       "key_facts_zh": [
         "威尔士",
-        "MV Hondius",
-        "监测中"
+        "邮轮",
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +51,7 @@
       "time": "2026-05-16T01:26:54.000Z",
       "title_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients - FOX 5 Atlanta",
       "body_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients FOX 5 Atlanta",
-      "summary_zh": "亚特兰大汉坦病毒监测结束，患者出院。",
+      "summary_zh": "亚特兰大监测结束，医院释放患者。",
       "key_facts_zh": [
         "亚特兰大",
         "监测结束",
@@ -68,8 +67,7 @@
       "summary_zh": "WHO称汉坦病毒未变异为更易传播。",
       "key_facts_zh": [
         "WHO",
-        "未变异",
-        "传播性"
+        "未变异"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +76,7 @@
       "time": "2026-05-16T01:07:54.000Z",
       "title_en": "Thailand declares Hantavirus “dangerous communicable disease; approves strict measures for compliance - News On AIR",
       "body_en": "Thailand declares Hantavirus “dangerous communicable disease; approves strict measures for compliance News On AIR",
-      "summary_zh": "泰国将汉坦病毒列为危险传染病，批准严格防控措施。",
+      "summary_zh": "泰国将汉坦病毒列为危险传染病，批准严格措施。",
       "key_facts_zh": [
         "泰国",
         "列为危险传染病",
@@ -87,24 +85,11 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-879b851b9bfb48c0",
-      "time": "2026-05-16T00:40:00.000Z",
-      "title_en": "Colorado health officials confirm deadly hantavirus case - KUSA.com",
-      "body_en": "Colorado health officials confirm deadly hantavirus case KUSA.com",
-      "summary_zh": "科罗拉多州卫生官员确认一例致命汉坦病毒病例。",
-      "key_facts_zh": [
-        "美国",
-        "科罗拉多",
-        "死亡1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-4e8800c038befb9a",
       "time": "2026-05-16T00:37:50.000Z",
       "title_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak - Fox News",
       "body_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak Fox News",
-      "summary_zh": "纽约州北部调查一例疑似汉坦病毒病例，与邮轮爆发无关。",
+      "summary_zh": "纽约州北部调查一例疑似汉坦病毒病例，与邮轮疫情无关。",
       "key_facts_zh": [
         "美国",
         "纽约",
@@ -117,7 +102,7 @@
       "time": "2026-05-16T00:24:44.000Z",
       "title_en": "Fourth King County resident linked to cruise ship hantavirus outbreak - The Seattle Times",
       "body_en": "Fourth King County resident linked to cruise ship hantavirus outbreak The Seattle Times",
-      "summary_zh": "金县第四名居民与邮轮汉坦病毒爆发有关联。",
+      "summary_zh": "金县第四名居民与邮轮汉坦病毒疫情相关。",
       "key_facts_zh": [
         "美国",
         "金县",
@@ -126,27 +111,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-3c47fb210da17015",
-      "time": "2026-05-15T23:58:44.000Z",
-      "title_en": "WHO providing update on hantavirus outbreak - CTV News",
-      "body_en": "WHO providing update on hantavirus outbreak CTV News",
-      "summary_zh": "WHO 就汉坦病毒爆发提供最新情况。",
-      "key_facts_zh": [
-        "WHO",
-        "疫情更新"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0b21da1d4ebeb21e",
-      "time": "2026-05-15T23:43:36.000Z",
-      "title_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County - KOMO",
-      "body_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO",
-      "summary_zh": "谢兰县一例辛诺柏汉坦病毒病例与家中老鼠接触有关。",
+      "id": "rt-5a98c488c15c0750",
+      "time": "2026-05-16T00:07:00.000Z",
+      "title_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says - KING5.com",
+      "body_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says KING5.com",
+      "summary_zh": "金县第四名居民因可能接触汉坦病毒被监测。",
       "key_facts_zh": [
         "美国",
-        "谢兰县",
-        "确诊"
+        "金县",
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -155,7 +128,7 @@
       "time": "2026-05-15T22:41:37.000Z",
       "title_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative - NanaimoNewsNOW",
       "body_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative NanaimoNewsNOW",
-      "summary_zh": "安大略省开始对无症状者进行汉坦病毒检测，低风险者阴性可解除隔离。",
+      "summary_zh": "安大略省开始对无症状者检测汉坦病毒，低风险者阴性可解除隔离。",
       "key_facts_zh": [
         "加拿大",
         "安大略",
@@ -168,11 +141,24 @@
       "time": "2026-05-15T22:36:27.000Z",
       "title_en": "Hantavirus Updates - County of San Luis Obispo (.gov)",
       "body_en": "Hantavirus Updates County of San Luis Obispo (.gov)",
-      "summary_zh": "圣路易斯奥比斯波县政府发布汉坦病毒更新。",
+      "summary_zh": "圣路易斯奥比斯波县发布汉坦病毒更新。",
       "key_facts_zh": [
         "美国",
         "圣路易斯奥比斯波",
-        "官方通报"
+        "官方更新"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d163fc3a0c0cbf16",
+      "time": "2026-05-15T22:17:06.000Z",
+      "title_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak - FOX 13 Seattle",
+      "body_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak FOX 13 Seattle",
+      "summary_zh": "华盛顿州奇兰县报告汉坦病毒病例，与邮轮疫情无关。",
+      "key_facts_zh": [
+        "美国",
+        "奇兰县",
+        "新增病例"
       ],
       "signal_strength": "high"
     },
@@ -180,8 +166,8 @@
       "id": "rt-e9e8a2c3a2647efd",
       "time": "2026-05-15T21:43:34.000Z",
       "title_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says - 13wham.com",
-      "body_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says 13wham.com",
-      "summary_zh": "安大略县一名高中学生疑似感染汉坦病毒。",
+      "body_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says 13wham.com Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO Colorado health officials confirm deadly hantavirus case KUSA.com",
+      "summary_zh": "安大略县一名高中生疑似感染汉坦病毒，另有科罗拉多州死亡病例。",
       "key_facts_zh": [
         "美国",
         "安大略县",
@@ -194,7 +180,7 @@
       "time": "2026-05-15T21:37:17.000Z",
       "title_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure - NBC News",
       "body_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure NBC News",
-      "summary_zh": "美国无确诊病例，41人因可能接触被监测。",
+      "summary_zh": "美国无已知汉坦病毒病例，但监测41名可能接触者。",
       "key_facts_zh": [
         "美国",
         "监测中",
@@ -203,27 +189,40 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-fbc5e23a58bfd796",
+      "id": "rt-318ee8a42deb3bc5",
       "time": "2026-05-15T20:54:00.000Z",
       "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO正在追查汉坦病毒源头。",
+      "summary_zh": "WHO正在调查汉坦病毒来源。",
       "key_facts_zh": [
         "WHO",
-        "追查源头"
+        "调查来源"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a35ebfe33a48dcdf",
+      "time": "2026-05-15T20:45:00.000Z",
+      "title_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries - cidrap.umn.edu",
+      "body_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries cidrap.umn.edu",
+      "summary_zh": "汉坦病毒疫情降至10例，乘客返回本国。",
+      "key_facts_zh": [
+        "邮轮",
+        "10例",
+        "乘客返回"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-292020aa9aad58df",
-      "time": "2026-05-15T20:48:00.000Z",
-      "title_en": "Two more people exposed to hantavirus on ship come to quarantine unit at UNMC-Nebraska Medicine - WOWT",
-      "body_en": "Two more people exposed to hantavirus on ship come to quarantine unit at UNMC-Nebraska Medicine WOWT",
-      "summary_zh": "两名接触汉坦病毒者进入内布拉斯加医学中心隔离。",
+      "id": "rt-3a5d94d4ba72aeb8",
+      "time": "2026-05-15T20:41:08.000Z",
+      "title_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise - The Intercept",
+      "body_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise The Intercept",
+      "summary_zh": "CDC未通知纽约州关于汉坦病毒邮轮上居民的情况。",
       "key_facts_zh": [
-        "美国",
-        "内布拉斯加",
-        "新增 2 例"
+        "CDC",
+        "邮轮",
+        "未通知"
       ],
       "signal_strength": "high"
     }
