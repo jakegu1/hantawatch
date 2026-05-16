@@ -1,32 +1,58 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T08:00:44.804136+00:00",
+  "__generated_at": "2026-05-16T13:16:37.148796+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-16T08:00:42.987800+00:00",
+  "last_fetched": "2026-05-16T13:16:36.030941+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-c25ed4121a72acce",
+      "time": "2026-05-16T10:19:00.000Z",
+      "title_en": "How climate change may be fuelling the spread of deadly Hantavirus that killed three on the MV Hondius - The Times of India",
+      "body_en": "How climate change may be fuelling the spread of deadly Hantavirus that killed three on the MV Hondius The Times of India Understanding and preventing hantavirus: Expert insights news.cgtn.com How to arm yourself against hantavirus misinformation Scientific American",
+      "summary_zh": "气候变化可能助长汉坦病毒传播，MV Hondius 邮轮三人死亡。",
+      "key_facts_zh": [
+        "印度",
+        "MV Hondius",
+        "死亡3例"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5d556bc3ed950da4",
+      "time": "2026-05-16T08:00:00.000Z",
+      "title_en": "Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines - CBC",
+      "body_en": "Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines CBC",
+      "summary_zh": "汉坦病毒无治愈方法，研究人员在治疗和疫苗方面进展。",
+      "key_facts_zh": [
+        "加拿大",
+        "研究",
+        "疫苗"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-a9829df494232c46",
       "time": "2026-05-16T04:56:33.000Z",
       "title_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts - The Washington Post",
       "body_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts The Washington Post",
-      "summary_zh": "CDC 收紧高风险接触者居家监测指南。",
+      "summary_zh": "CDC收紧高风险汉坦病毒接触者居家监测指南。",
       "key_facts_zh": [
         "CDC",
-        "居家监测",
-        "高风险接触"
+        "监测",
+        "接触者"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-fbc5e23a58bfd796",
+      "id": "rt-318ee8a42deb3bc5",
       "time": "2026-05-16T03:01:00.000Z",
       "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO 搜寻汉坦病毒源头，实时更新。",
+      "summary_zh": "WHO搜寻汉坦病毒源头，实时更新。",
       "key_facts_zh": [
         "WHO",
         "搜寻源头"
@@ -38,11 +64,11 @@
       "time": "2026-05-16T01:46:00.000Z",
       "title_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch - The Times of India",
       "body_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch The Times of India",
-      "summary_zh": "威尔士居民因邮轮暴露被监测。",
+      "summary_zh": "威尔士居民因与MV Hondius接触而受监测。",
       "key_facts_zh": [
         "威尔士",
-        "邮轮",
-        "监测"
+        "监测",
+        "MV Hondius"
       ],
       "signal_strength": "high"
     },
@@ -51,7 +77,7 @@
       "time": "2026-05-16T01:26:54.000Z",
       "title_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients - FOX 5 Atlanta",
       "body_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients FOX 5 Atlanta",
-      "summary_zh": "亚特兰大监测结束，医院释放患者。",
+      "summary_zh": "亚特兰大埃默里大学医院解除汉坦病毒监测，患者出院。",
       "key_facts_zh": [
         "亚特兰大",
         "监测结束",
@@ -72,41 +98,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-642947715f329ee8",
-      "time": "2026-05-16T01:07:54.000Z",
-      "title_en": "Thailand declares Hantavirus “dangerous communicable disease; approves strict measures for compliance - News On AIR",
-      "body_en": "Thailand declares Hantavirus “dangerous communicable disease; approves strict measures for compliance News On AIR",
-      "summary_zh": "泰国将汉坦病毒列为危险传染病，批准严格措施。",
-      "key_facts_zh": [
-        "泰国",
-        "列为危险传染病",
-        "严格措施"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4e8800c038befb9a",
-      "time": "2026-05-16T00:37:50.000Z",
-      "title_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak - Fox News",
-      "body_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak Fox News",
-      "summary_zh": "纽约州北部调查一例疑似汉坦病毒病例，与邮轮疫情无关。",
-      "key_facts_zh": [
-        "美国",
-        "纽约",
-        "疑似病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-f0bf7ea77848ebd4",
       "time": "2026-05-16T00:24:44.000Z",
       "title_en": "Fourth King County resident linked to cruise ship hantavirus outbreak - The Seattle Times",
       "body_en": "Fourth King County resident linked to cruise ship hantavirus outbreak The Seattle Times",
-      "summary_zh": "金县第四名居民与邮轮汉坦病毒疫情相关。",
+      "summary_zh": "第四名金县居民与邮轮汉坦病毒爆发有关。",
       "key_facts_zh": [
-        "美国",
         "金县",
-        "邮轮"
+        "邮轮",
+        "第四例"
       ],
       "signal_strength": "high"
     },
@@ -115,24 +115,24 @@
       "time": "2026-05-16T00:07:00.000Z",
       "title_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says - KING5.com",
       "body_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says KING5.com",
-      "summary_zh": "金县第四名居民因可能接触汉坦病毒被监测。",
+      "summary_zh": "第四名金县居民因可能接触汉坦病毒接受监测。",
       "key_facts_zh": [
-        "美国",
         "金县",
-        "监测"
+        "监测中",
+        "第四例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-a61cb1d391e4d512",
-      "time": "2026-05-15T22:41:37.000Z",
-      "title_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative - NanaimoNewsNOW",
-      "body_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative NanaimoNewsNOW",
-      "summary_zh": "安大略省开始对无症状者检测汉坦病毒，低风险者阴性可解除隔离。",
+      "id": "rt-0b21da1d4ebeb21e",
+      "time": "2026-05-15T23:43:36.000Z",
+      "title_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County - KOMO",
+      "body_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO",
+      "summary_zh": "Chelan县一例Sin Nombre汉坦病毒病例与家中老鼠接触有关。",
       "key_facts_zh": [
-        "加拿大",
-        "安大略",
-        "无症状检测"
+        "Chelan县",
+        "Sin Nombre",
+        "鼠类接触"
       ],
       "signal_strength": "high"
     },
@@ -143,88 +143,10 @@
       "body_en": "Hantavirus Updates County of San Luis Obispo (.gov)",
       "summary_zh": "圣路易斯奥比斯波县发布汉坦病毒更新。",
       "key_facts_zh": [
-        "美国",
         "圣路易斯奥比斯波",
         "官方更新"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-d163fc3a0c0cbf16",
-      "time": "2026-05-15T22:17:06.000Z",
-      "title_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak - FOX 13 Seattle",
-      "body_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak FOX 13 Seattle",
-      "summary_zh": "华盛顿州奇兰县报告汉坦病毒病例，与邮轮疫情无关。",
-      "key_facts_zh": [
-        "美国",
-        "奇兰县",
-        "新增病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-e9e8a2c3a2647efd",
-      "time": "2026-05-15T21:43:34.000Z",
-      "title_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says - 13wham.com",
-      "body_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says 13wham.com Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO Colorado health officials confirm deadly hantavirus case KUSA.com",
-      "summary_zh": "安大略县一名高中生疑似感染汉坦病毒，另有科罗拉多州死亡病例。",
-      "key_facts_zh": [
-        "美国",
-        "安大略县",
-        "疑似病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-49ab9b728e852131",
-      "time": "2026-05-15T21:37:17.000Z",
-      "title_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure - NBC News",
-      "body_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure NBC News",
-      "summary_zh": "美国无已知汉坦病毒病例，但监测41名可能接触者。",
-      "key_facts_zh": [
-        "美国",
-        "监测中",
-        "41人"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-318ee8a42deb3bc5",
-      "time": "2026-05-15T20:54:00.000Z",
-      "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO正在调查汉坦病毒来源。",
-      "key_facts_zh": [
-        "WHO",
-        "调查来源"
-      ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a35ebfe33a48dcdf",
-      "time": "2026-05-15T20:45:00.000Z",
-      "title_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries - cidrap.umn.edu",
-      "body_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries cidrap.umn.edu",
-      "summary_zh": "汉坦病毒疫情降至10例，乘客返回本国。",
-      "key_facts_zh": [
-        "邮轮",
-        "10例",
-        "乘客返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-3a5d94d4ba72aeb8",
-      "time": "2026-05-15T20:41:08.000Z",
-      "title_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise - The Intercept",
-      "body_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise The Intercept",
-      "summary_zh": "CDC未通知纽约州关于汉坦病毒邮轮上居民的情况。",
-      "key_facts_zh": [
-        "CDC",
-        "邮轮",
-        "未通知"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
