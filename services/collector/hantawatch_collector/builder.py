@@ -7,6 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from . import MANUAL_FILES
 from .ecdc import EcdcAssessment
 from .gazetteer import geocode_from_text
 from .hpi import HpiInputs, calculate_hpi

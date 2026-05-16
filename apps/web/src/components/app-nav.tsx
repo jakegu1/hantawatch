@@ -28,8 +28,12 @@ interface NavItem {
 }
 
 const ITEMS: NavItem[] = [
+  // The mobile tab bar uses `grid-cols-5`, so exactly 5 entries should have
+  // inTabBar=true. /countries was previously desktop-only; adding it gives
+  // mobile users a direct entry point to the country-status overview without
+  // hunting through the homepage.
   { href: '/',         label: '首页',     Icon: Home,         inTabBar: true,  shortLabel: '首页' },
-  { href: '/countries',label: '各国情况', Icon: Globe2,       inTabBar: false },
+  { href: '/countries',label: '各国情况', Icon: Globe2,       inTabBar: true,  shortLabel: '各国' },
   { href: '/data',     label: '疫情数据', Icon: BarChart3,    inTabBar: true,  shortLabel: '数据' },
   { href: '/wiki',     label: '病毒百科', Icon: BookOpen,     inTabBar: true,  shortLabel: '百科' },
   { href: '/guide',    label: '防护指南', Icon: ShieldCheck,  inTabBar: true,  shortLabel: '防护' },
