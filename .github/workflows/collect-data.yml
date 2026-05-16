@@ -52,6 +52,17 @@ jobs:
 
       - name: Run collector
         working-directory: services/collector
+        # Wire repo secrets into the collector process. Without LLM_API_KEY
+        # the realtime-feed translation step short-circuits and stamps every
+        # update with "[未配置 LLM · 等待翻译]". Add the secret in
+        #   GitHub → repo → Settings → Secrets and variables → Actions
+        # The other three are optional overrides — DeepSeek defaults are
+        # baked into hantawatch_collector/realtime_feed.py.
+        env:
+          LLM_API_KEY:      ${{ secrets.LLM_API_KEY }}
+          LLM_API_BASE_URL: ${{ secrets.LLM_API_BASE_URL }}
+          LLM_MODEL:        ${{ secrets.LLM_MODEL }}
+          LLM_THINKING:     ${{ secrets.LLM_THINKING }}
         # main.py exit codes (see main.py docstring):
         #   0 = all sources OK
         #   1 = fatal — could not even start
