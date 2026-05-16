@@ -1,137 +1,166 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T03:55:07.030328+00:00",
+  "__generated_at": "2026-05-16T04:31:51.955032+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-16T03:55:05.191347+00:00",
-  "machine_translated": false,
-  "translator_model": null,
+  "last_fetched": "2026-05-16T04:31:50.756851+00:00",
+  "machine_translated": true,
+  "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-a9829df494232c46",
-      "time": "2026-05-16T02:27:25.000Z",
+      "time": "2026-05-16T04:24:29.000Z",
       "title_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts - The Washington Post",
       "body_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts The Washington Post",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-9867ca3a0a6f3457",
-      "time": "2026-05-16T01:56:31.000Z",
-      "title_en": "Scientists warn hantavirus risks may be more complicated than officials are publicly saying - Moneycontrol.com",
-      "body_en": "Scientists warn hantavirus risks may be more complicated than officials are publicly saying Moneycontrol.com",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "CDC 收紧高风险汉坦病毒接触者居家监测指南。",
+      "key_facts_zh": [
+        "CDC",
+        "居家监测",
+        "高风险接触者"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-24bfeb139627719f",
       "time": "2026-05-16T01:46:00.000Z",
       "title_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch - The Times of India",
       "body_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch The Times of India",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
+      "summary_zh": "威尔士汉坦病毒爆发，居民因与MV Hondius关联受监测。",
+      "key_facts_zh": [
+        "威尔士",
+        "MV Hondius",
+        "监测中"
+      ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-b57d21f8cb0a008e",
+      "time": "2026-05-16T01:26:54.000Z",
+      "title_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients - FOX 5 Atlanta",
+      "body_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients FOX 5 Atlanta",
+      "summary_zh": "亚特兰大汉坦病毒监测结束，埃默里大学医院患者出院。",
+      "key_facts_zh": [
+        "亚特兰大",
+        "监测结束",
+        "患者出院"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-c6bb24660be87186",
       "time": "2026-05-16T01:15:00.000Z",
       "title_en": "Hantavirus has not mutated to be more transmissible: WHO - The Hill",
       "body_en": "Hantavirus has not mutated to be more transmissible: WHO The Hill",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "WHO 表示汉坦病毒未发生变异以增强传播性。",
+      "key_facts_zh": [
+        "WHO",
+        "未变异",
+        "传播性不变"
+      ],
+      "signal_strength": "high"
     },
     {
-      "id": "rt-ebb7b4f9eaf4f4df",
-      "time": "2026-05-16T00:51:29.000Z",
-      "title_en": "Spring cleaning season brings renewed hantavirus warning across the interior - CFJC Today Kamloops",
-      "body_en": "Spring cleaning season brings renewed hantavirus warning across the interior CFJC Today Kamloops",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-4e8800c038befb9a",
-      "time": "2026-05-16T00:37:50.000Z",
-      "title_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak - Fox News",
-      "body_en": "Possible hantavirus case under investigation in upstate New York; no connection to deadly cruise ship outbreak Fox News",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "id": "rt-879b851b9bfb48c0",
+      "time": "2026-05-16T00:40:00.000Z",
+      "title_en": "Colorado health officials confirm deadly hantavirus case - KUSA.com",
+      "body_en": "Colorado health officials confirm deadly hantavirus case KUSA.com",
+      "summary_zh": "科罗拉多州卫生官员确认一例致命汉坦病毒病例。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "确诊"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-f0bf7ea77848ebd4",
       "time": "2026-05-16T00:24:44.000Z",
       "title_en": "Fourth King County resident linked to cruise ship hantavirus outbreak - The Seattle Times",
       "body_en": "Fourth King County resident linked to cruise ship hantavirus outbreak The Seattle Times",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "金县第四名居民与邮轮汉坦病毒暴发有关。",
+      "key_facts_zh": [
+        "美国",
+        "金县",
+        "邮轮"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-3c47fb210da17015",
       "time": "2026-05-15T23:58:44.000Z",
       "title_en": "WHO providing update on hantavirus outbreak - CTV News",
       "body_en": "WHO providing update on hantavirus outbreak CTV News",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "WHO 就汉坦病毒暴发提供最新情况。",
+      "key_facts_zh": [
+        "WHO",
+        "疫情更新"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-0b21da1d4ebeb21e",
       "time": "2026-05-15T23:43:36.000Z",
       "title_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County - KOMO",
       "body_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "谢兰县一例辛诺柏汉坦病毒病例与家中老鼠接触有关。",
+      "key_facts_zh": [
+        "美国",
+        "谢兰县",
+        "确诊"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-a61cb1d391e4d512",
       "time": "2026-05-15T22:41:37.000Z",
       "title_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative - NanaimoNewsNOW",
       "body_en": "Ontario now testing asymptomatic people for hantavirus; low-risk cases to stop isolating if negative NanaimoNewsNOW",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "安大略省开始对无症状者进行汉坦病毒检测，低风险者阴性可解除隔离。",
+      "key_facts_zh": [
+        "加拿大",
+        "安大略",
+        "检测"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-4f50cb18d40d346e",
       "time": "2026-05-15T22:36:27.000Z",
       "title_en": "Hantavirus Updates - County of San Luis Obispo (.gov)",
       "body_en": "Hantavirus Updates County of San Luis Obispo (.gov)",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "圣路易斯奥比斯波县发布汉坦病毒最新信息。",
+      "key_facts_zh": [
+        "美国",
+        "圣路易斯奥比斯波",
+        "疫情更新"
+      ],
+      "signal_strength": "high"
     },
     {
-      "id": "rt-74abc270fbf6b70e",
-      "time": "2026-05-15T22:25:00.000Z",
-      "title_en": "Top health official leading response to hantavirus is a penile implant specialist - The Independent",
-      "body_en": "Top health official leading response to hantavirus is a penile implant specialist The Independent",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-f42738c624468cee",
-      "time": "2026-05-15T21:50:20.000Z",
-      "title_en": "Andes Hantavirus Strain Could Linger in Human Semen for Nearly 6 Years, and Change Little Over Time - Discover Magazine",
-      "body_en": "Andes Hantavirus Strain Could Linger in Human Semen for Nearly 6 Years, and Change Little Over Time Discover Magazine",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "id": "rt-d163fc3a0c0cbf16",
+      "time": "2026-05-15T22:17:06.000Z",
+      "title_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak - FOX 13 Seattle",
+      "body_en": "Hantavirus reported in Chelan County, WA, unrelated to cruise ship outbreak FOX 13 Seattle",
+      "summary_zh": "华盛顿州谢兰县报告汉坦病毒病例，与邮轮暴发无关。",
+      "key_facts_zh": [
+        "美国",
+        "谢兰县",
+        "确诊"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-e9e8a2c3a2647efd",
       "time": "2026-05-15T21:43:34.000Z",
       "title_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says - 13wham.com",
       "body_en": "Suspected hantavirus case in Ontario County involves Geneva HS student, district says 13wham.com",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
+      "summary_zh": "纽约州安大略县一名高中生疑似感染汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "疑似病例",
+        "高中生"
+      ],
       "signal_strength": "medium"
     },
     {
@@ -139,98 +168,49 @@
       "time": "2026-05-15T21:37:17.000Z",
       "title_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure - NBC News",
       "body_en": "No known cases of hantavirus in U.S. as officials monitor 41 with possible exposure NBC News",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "美国无确诊病例，监测41名可能接触者。",
+      "key_facts_zh": [
+        "美国",
+        "监测中",
+        "41人"
+      ],
+      "signal_strength": "high"
     },
     {
-      "id": "rt-a7815bcd7d2fa1c7",
-      "time": "2026-05-15T21:24:25.000Z",
-      "title_en": "Trump Administration Health Official Tapped to Lead Hantavirus Response Is a Penile Implant Specialist - People.com",
-      "body_en": "Trump Administration Health Official Tapped to Lead Hantavirus Response Is a Penile Implant Specialist People.com",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-318ee8a42deb3bc5",
+      "id": "rt-fbc5e23a58bfd796",
       "time": "2026-05-15T20:54:00.000Z",
       "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-22ab5260a95ebbf9",
-      "time": "2026-05-15T20:50:49.000Z",
-      "title_en": "What we know about hantavirus cases tied to deadly cruise ship outbreak - CBS News",
-      "body_en": "What we know about hantavirus cases tied to deadly cruise ship outbreak CBS News",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-292020aa9aad58df",
-      "time": "2026-05-15T20:48:00.000Z",
-      "title_en": "Two more people exposed to hantavirus on ship come to quarantine unit at UNMC-Nebraska Medicine - WOWT",
-      "body_en": "Two more people exposed to hantavirus on ship come to quarantine unit at UNMC-Nebraska Medicine WOWT",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "summary_zh": "WHO追查汉坦病毒来源，疫情持续更新。",
+      "key_facts_zh": [
+        "WHO",
+        "追查来源"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-a35ebfe33a48dcdf",
       "time": "2026-05-15T20:45:00.000Z",
-      "title_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries - CIDRAP",
-      "body_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries CIDRAP",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-3a5d94d4ba72aeb8",
-      "time": "2026-05-15T20:41:08.000Z",
-      "title_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise - The Intercept",
-      "body_en": "CDC Didn’t Tell New York About Resident on Hantavirus-Plagued Cruise The Intercept",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-3b0d06b4ff3ee402",
-      "time": "2026-05-15T20:37:41.000Z",
-      "title_en": "Is the Hantavirus in the US? Map Shows States Where Passengers Have Returned Home - TODAY.com",
-      "body_en": "Is the Hantavirus in the US? Map Shows States Where Passengers Have Returned Home TODAY.com",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
+      "title_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries - cidrap.umn.edu",
+      "body_en": "Hantavirus outbreak reduced to 10 cases as ship passengers return to home countries cidrap.umn.edu",
+      "summary_zh": "邮轮疫情降至10例，乘客返回各自国家。",
+      "key_facts_zh": [
+        "邮轮",
+        "10例",
+        "乘客返回"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-a65c416af158dd9b",
       "time": "2026-05-15T20:29:23.000Z",
       "title_en": "WHO To Coordinate Research On 'Natural History' Of Hantavirus Transmission - Health Policy Watch",
       "body_en": "WHO To Coordinate Research On 'Natural History' Of Hantavirus Transmission Health Policy Watch",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-51ddeca900382151",
-      "time": "2026-05-15T20:15:15.000Z",
-      "title_en": "Will the Hantavirus Outbreak Cause a Lockdown? What Experts Want You to Know - TODAY.com",
-      "body_en": "Will the Hantavirus Outbreak Cause a Lockdown? What Experts Want You to Know TODAY.com",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-60fea34181dd0a8a",
-      "time": "2026-05-15T19:45:00.000Z",
-      "title_en": "Hantavirus can persist in semen for years, but that doesn’t mean it remains contagious - Scientific American",
-      "body_en": "Hantavirus can persist in semen for years, but that doesn’t mean it remains contagious Scientific American",
-      "summary_zh": "[未配置 LLM · 等待翻译]",
-      "key_facts_zh": [],
+      "summary_zh": "WHO将协调汉坦病毒传播自然史研究。",
+      "key_facts_zh": [
+        "WHO",
+        "研究协调"
+      ],
       "signal_strength": "medium"
     }
   ]
