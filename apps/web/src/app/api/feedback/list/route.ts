@@ -1,14 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import { isAdminAuthed, isAdminConfigured } from '@/lib/admin-auth';
+import { getSupabase, isSupabaseConfigured } from '@/lib/supabase';
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'feedback', 'feedback.json');
+/**
+ * GET /api/feedback/list
+ *
+ * Admin-only. Returns recent feedback from the Supabase `feedback` table.
+ * Previous version read from an ephemeral JSON file — always returned []
+ * on Vercel. Rewritten 2026-05-16 to use the same Supabase table as the
+ * submit route.
+ */
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
-  // Defense in depth: middleware also gates this route, but never trust a
-  // single layer. If `ADMIN_KEY` is missing, fail closed (NOT fall through
-  // to a default — see incident 2026-05-13).
   if (!isAdminConfigured()) {
     return NextResponse.json(
       { error: 'Admin not configured (ADMIN_KEY env missing)' },
@@ -19,15 +23,25 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  if (!fs.existsSync(DATA_FILE)) {
+  if (!isSupabaseConfigured()) {
     return NextResponse.json([]);
   }
 
-  const entries = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-  // Sort newest first
-  entries.sort((a: { timestamp: string }, b: { timestamp: string }) =>
-    new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
-  );
+  const supabase = getSupabase()!;
+  const { data, error } = await supabase
+    .from('feedback')
+    .select('*')
+    .order('created_at', { ascending: false })
+    .limit(200);
 
-  return NextResponse.json(entries);
+  if (error) {
+    // eslint-disable-next-line no-console
+    console.error('[feedback/list] supabase error:', error.message);
+    return NextResponse.json(
+      { error: '读取反馈失败' },
+      { status: 500 },
+    );
+  }
+
+  return NextResponse.json(data ?? []);
 }

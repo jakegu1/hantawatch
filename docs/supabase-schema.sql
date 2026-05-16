@@ -101,6 +101,26 @@ create index if not exists idx_manual_news_entries_date_desc
   where deleted_at is null and kind = 'insert';
 
 -- ---------------------------------------------------------------------
+-- Table 4: feedback
+--   Replaces the old filesystem-based feedback.json which was silently
+--   lost on every Vercel cold start. Simple append-only table.
+-- ---------------------------------------------------------------------
+create table if not exists feedback (
+  id              text primary key,
+  category        text not null default 'general',
+  content         text not null,
+  contact         text,
+  page            text,
+  ip_hash         text,
+  user_agent      text,
+  honeypot        boolean not null default false,
+  created_at      timestamptz not null default now()
+);
+
+create index if not exists idx_feedback_created_at
+  on feedback (created_at desc);
+
+-- ---------------------------------------------------------------------
 -- Row-Level Security:
 --   We access these tables ONLY from the Next.js server side, using the
 --   service_role key. RLS therefore doesn't matter for our app, but
@@ -110,6 +130,7 @@ create index if not exists idx_manual_news_entries_date_desc
 alter table alert_subscriptions   enable row level security;
 alter table cluster_overrides     enable row level security;
 alter table manual_news_entries   enable row level security;
+alter table feedback              enable row level security;
 
 -- No policies created → all anon/auth requests blocked. Service-role
 -- bypasses RLS automatically.

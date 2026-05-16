@@ -487,12 +487,11 @@ export default function HomePage() {
                       <span className="inline-flex items-center gap-1">
                         <span className="font-medium text-gray-700 font-mono">{c.date}</span>
                         <span className="text-gray-300">·</span>
-                        <span aria-hidden>�</span>
                         {/* suppressHydrationWarning: relativeTimeZh calls new Date()
                             which differs between SSR (build-time) and client (view-time).
                             Without this, React throws Error #425 and kills ALL useEffects
                             — including the /api/news-entries fetch that merges admin entries. */}
-                        <span suppressHydrationWarning>系统核查 {relativeTimeZh(c.source.retrievedAt)}</span>
+                        <span suppressHydrationWarning>🔄 系统核查 {relativeTimeZh(c.source.retrievedAt)}</span>
                       </span>
                     </div>
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">

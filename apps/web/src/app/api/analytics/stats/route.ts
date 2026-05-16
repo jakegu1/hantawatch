@@ -97,8 +97,10 @@ export async function GET() {
     }
   }
   const hourlyTraffic = hourlyBuckets.map((count, i) => {
-    const d = new Date(now - (23 - i) * 3600000);
-    return { hour: `${d.getHours().toString().padStart(2, '0')}:00`, count };
+    // Force UTC+8 (China Standard Time) so the admin dashboard shows
+    // Beijing hours, not Vercel-server UTC hours.
+    const d = new Date(now - (23 - i) * 3600000 + 8 * 3600000);
+    return { hour: `${d.getUTCHours().toString().padStart(2, '0')}:00`, count };
   });
 
   return NextResponse.json({

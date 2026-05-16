@@ -12,7 +12,12 @@ export function ShareActions() {
   const [copied, setCopied] = useState(false);
   const [downloading, setDownloading] = useState(false);
 
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://bingduguancha.com';
+  // siteUrl is only used in click handlers (not rendered into DOM text),
+  // so we defer reading window.location to avoid an SSR/client mismatch
+  // that triggers React Error #425. The getter is safe because handlers
+  // only fire after mount.
+  const getSiteUrl = () =>
+    typeof window !== 'undefined' ? window.location.origin : 'https://bingduguancha.com';
   const posterUrl = '/api/poster?variant=dark';
 
   async function handleDownload() {
@@ -57,7 +62,7 @@ export function ShareActions() {
 
   async function handleCopyLink() {
     try {
-      await navigator.clipboard.writeText(siteUrl);
+      await navigator.clipboard.writeText(getSiteUrl());
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {

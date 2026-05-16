@@ -12,7 +12,55 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Clock, Inbox } from 'lucide-react';
-import type { RealtimeFeed } from '@/lib/data';
+import type { RealtimeFeed, RealtimeUpdate } from '@/lib/data';
+
+// ---------------------------------------------------------------------------
+// Keyword-based serotype classifier for realtime feed entries.
+// Only tags entries where keywords give high confidence. Entries that just
+// say "hantavirus" without a serotype-specific keyword stay untagged.
+// ---------------------------------------------------------------------------
+interface SeroTag {
+  id: string;
+  label: string;
+  cls: string; // Tailwind chip classes
+}
+
+const SERO_RULES: Array<{ keywords: RegExp; tag: SeroTag }> = [
+  {
+    keywords: /andes|安第斯|hondius|邮轮|cruise|乌斯怀亚|ushuaia/i,
+    tag: { id: 'andes', label: '安第斯型', cls: 'bg-red-100 text-red-700 ring-red-200' },
+  },
+  {
+    keywords: /sin\s*nombre|辛诺柏|deer\s*mouse|鹿鼠|hps|hantavirus pulmonary|douglas county|four corners|新墨西哥|亚利桑那|犹他/i,
+    tag: { id: 'sin_nombre', label: '辛诺柏型', cls: 'bg-purple-100 text-purple-700 ring-purple-200' },
+  },
+  {
+    keywords: /hantaan|汉滩|hfrs|肾综合征出血热|hemorrhagic fever with renal/i,
+    tag: { id: 'hantaan', label: '汉滩型', cls: 'bg-orange-100 text-orange-700 ring-orange-200' },
+  },
+  {
+    keywords: /seoul\s*virus|汉城型|pet\s*rat|宠物鼠|brown\s*rat|褐家鼠|wales.*hanta|hanta.*wales/i,
+    tag: { id: 'seoul', label: '汉城型', cls: 'bg-yellow-100 text-yellow-700 ring-yellow-200' },
+  },
+  {
+    keywords: /puumala|普马拉|nephropathia epidemica|bank\s*vole|岸田鼠|finland.*hanta|hanta.*finland|sweden.*hanta/i,
+    tag: { id: 'puumala', label: '普马拉型', cls: 'bg-blue-100 text-blue-700 ring-blue-200' },
+  },
+];
+
+function inferSerotype(u: RealtimeUpdate): SeroTag | null {
+  // Build a combined haystack from all text fields
+  const haystack = [
+    u.title_en,
+    u.body_en,
+    u.summary_zh,
+    ...(u.key_facts_zh ?? []),
+  ].join(' ');
+  for (const rule of SERO_RULES) {
+    if (rule.keywords.test(haystack)) return rule.tag;
+  }
+  return null;
+}
 
 interface Props {
   feed: RealtimeFeed;
@@ -101,6 +149,15 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
                   <Clock className="h-3 w-3" />
                   <span suppressHydrationWarning>{fmtTime(u.time)}</span>
                 </span>
+                {(() => {
+                  const sero = inferSerotype(u);
+                  return sero ? (
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full ring-1 font-medium ${sero.cls}`}>
+                      {sero.id === 'andes' && <span className="mr-0.5">⚠</span>}
+                      {sero.label}
+                    </span>
+                  ) : null;
+                })()}
                 {u.key_facts_zh.slice(0, 3).map((tag, i) => (
                   <span
                     key={i}

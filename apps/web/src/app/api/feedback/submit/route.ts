@@ -1,48 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getSupabase, isSupabaseConfigured } from '@/lib/supabase';
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'feedback');
-const DATA_FILE = path.join(DATA_DIR, 'feedback.json');
+/**
+ * POST /api/feedback/submit
+ *
+ * Persists anonymous user feedback to the `feedback` table in Supabase.
+ *
+ * Previous implementation wrote to `data/feedback/feedback.json` on disk,
+ * which silently lost every entry on Vercel serverless (ephemeral FS).
+ * The in-memory Map rate-limiter was equally useless (fresh Map per cold
+ * start). Both issues are documented in the 2026-05-16 audit.
+ *
+ * When Supabase is not configured, falls back to console.log so dev-mode
+ * feedback is at least visible in `pnpm dev` terminal output.
+ */
 
-interface FeedbackEntry {
-  id: string;
-  type: string;
-  message: string;
-  contact?: string;
-  ip: string;
-  userAgent: string;
-  timestamp: string;
-  honeypotTriggered: boolean;
-}
-
-// Rate limiter: max 3 per IP per hour
-const rateMap = new Map<string, number[]>();
-
-function ensureDir() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+function hashIp(ip: string | null): string | null {
+  if (!ip) return null;
+  let h = 0;
+  for (let i = 0; i < ip.length; i++) {
+    h = (Math.imul(31, h) + ip.charCodeAt(i)) | 0;
   }
-  if (!fs.existsSync(DATA_FILE)) {
-    fs.writeFileSync(DATA_FILE, '[]');
-  }
+  return `ip_${(h >>> 0).toString(36)}`;
 }
 
 export async function POST(request: NextRequest) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-    ?? request.headers.get('x-real-ip')
-    ?? 'unknown';
-
-  // Rate limit check
-  const now = Date.now();
-  const timestamps = rateMap.get(ip) ?? [];
-  const recent = timestamps.filter(t => now - t < 3600000); // last hour
-  if (recent.length >= 3) {
-    return NextResponse.json({ error: '提交过于频繁，请稍后再试' }, { status: 429 });
-  }
-  recent.push(now);
-  rateMap.set(ip, recent);
-
   let body: { type?: string; message?: string; contact?: string; website?: string };
   try {
     body = await request.json();
@@ -50,8 +32,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: '无效的请求数据' }, { status: 400 });
   }
 
-  // Honeypot check
-  const honeypotTriggered = !!body.website && body.website.length > 0;
+  // Honeypot check — hidden field filled by bots
+  const honeypot = !!body.website && body.website.length > 0;
 
   // Validation
   if (!body.message || typeof body.message !== 'string' || body.message.trim().length === 0) {
@@ -61,22 +43,37 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: '反馈内容不能超过2000字' }, { status: 400 });
   }
 
-  ensureDir();
+  const fwdFor = request.headers.get('x-forwarded-for');
+  const ip = fwdFor ? fwdFor.split(',')[0].trim() : null;
 
-  const entry: FeedbackEntry = {
+  const entry = {
     id: `fb-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
-    type: body.type ?? 'other',
-    message: body.message.trim(),
-    contact: body.contact?.trim() || undefined,
-    ip,
-    userAgent: request.headers.get('user-agent') ?? '',
-    timestamp: new Date().toISOString(),
-    honeypotTriggered,
+    category: body.type ?? 'other',
+    content: body.message.trim(),
+    contact: body.contact?.trim() || null,
+    page: '/',
+    ip_hash: hashIp(ip),
+    user_agent: (request.headers.get('user-agent') ?? '').slice(0, 256),
+    honeypot,
   };
 
-  const entries: FeedbackEntry[] = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'));
-  entries.push(entry);
-  fs.writeFileSync(DATA_FILE, JSON.stringify(entries, null, 2));
+  // ---- Path A: Supabase configured — persist ----
+  if (isSupabaseConfigured()) {
+    const supabase = getSupabase()!;
+    const { error } = await supabase.from('feedback').insert(entry);
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error('[feedback] supabase insert error:', error.message);
+      return NextResponse.json({ error: '存储错误，请稍后重试' }, { status: 500 });
+    }
+    return NextResponse.json({ success: true }, { status: 201 });
+  }
 
-  return NextResponse.json({ success: true }, { status: 201 });
+  // ---- Path B: dev fallback — log only ----
+  // eslint-disable-next-line no-console
+  console.log('[feedback:dev]', entry);
+  return NextResponse.json(
+    { success: true, message: '反馈已记录（开发模式：仅输出日志）' },
+    { status: 201 },
+  );
 }
