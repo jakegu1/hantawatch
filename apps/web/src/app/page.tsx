@@ -221,30 +221,38 @@ export default function HomePage() {
 
           {/* ─── Above-the-fold metrics: Distance + HPI on one row ─── */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
-            {/* Distance card — now ALWAYS the nearest Andes outbreak (not
-                "first cluster in the array"). Auto-updates as new outbreaks
-                appear via WHO DON; see lib/nearest-cluster.ts. */}
-            <div className={`rounded-xl border-2 p-3 sm:p-4 ${distanceRingBg(cluster.distanceFromChinaKm)}`}>
-              <p className="text-[10px] sm:text-xs font-medium text-gray-500 leading-tight">
-                最近 Andes 疫情距中国大陆
-              </p>
-              <div className="flex items-baseline gap-1 mt-1">
-                <span className={`text-3xl sm:text-5xl font-extrabold leading-none ${distanceRingColor(cluster.distanceFromChinaKm)}`}>
-                  {fmt(cluster.distanceFromChinaKm)}
-                </span>
-                <span className="text-sm sm:text-xl font-bold text-gray-400">km</span>
-              </div>
-              <p className="mt-1 text-[10px] sm:text-xs text-gray-600 truncate">
-                {cluster.location.name}
-              </p>
-              {/* Distance ring — compact on mobile */}
-              <div className="mt-2 flex gap-0.5" aria-label="距离圈层">
-                <div className="flex-1 h-1 rounded-full bg-green-500" title=">10,000 km" />
-                <div className="flex-1 h-1 rounded-full bg-yellow-400 opacity-60" />
-                <div className="flex-1 h-1 rounded-full bg-orange-400 opacity-40" />
-                <div className="w-2 h-1 rounded-full bg-red-400 opacity-30" />
-              </div>
-            </div>
+            {/* Distance card — uses nearest import distance when a confirmed/
+                quarantined import is closer than the outbreak source. */}
+            {(() => {
+              const hasImport = nearestImport != null && nearestImport.distanceKm < cluster.distanceFromChinaKm;
+              const dKm = hasImport ? nearestImport!.distanceKm : cluster.distanceFromChinaKm;
+              const dLabel = hasImport
+                ? `${nearestImport!.flag} ${nearestImport!.nameZh}（${nearestImport!.statusZh}）`
+                : cluster.location.name;
+              return (
+                <div className={`rounded-xl border-2 p-3 sm:p-4 ${distanceRingBg(dKm)}`}>
+                  <p className="text-[10px] sm:text-xs font-medium text-gray-500 leading-tight">
+                    {hasImport ? '最近 Andes 型活动距中国' : '最近 Andes 疫情距中国大陆'}
+                  </p>
+                  <div className="flex items-baseline gap-1 mt-1">
+                    <span className={`text-3xl sm:text-5xl font-extrabold leading-none ${distanceRingColor(dKm)}`}>
+                      {hasImport ? '~' : ''}{fmt(dKm)}
+                    </span>
+                    <span className="text-sm sm:text-xl font-bold text-gray-400">km</span>
+                  </div>
+                  <p className="mt-1 text-[10px] sm:text-xs text-gray-600 truncate">
+                    {dLabel}
+                  </p>
+                  {/* Distance ring — compact on mobile */}
+                  <div className="mt-2 flex gap-0.5" aria-label="距离圈层">
+                    <div className={`flex-1 h-1 rounded-full ${dKm > 10000 ? 'bg-green-500' : 'bg-green-500 opacity-40'}`} title=">10,000 km" />
+                    <div className={`flex-1 h-1 rounded-full ${dKm > 3000 && dKm <= 10000 ? 'bg-yellow-400' : 'bg-yellow-400 opacity-40'}`} />
+                    <div className={`flex-1 h-1 rounded-full ${dKm > 500 && dKm <= 3000 ? 'bg-orange-400' : 'bg-orange-400 opacity-40'}`} />
+                    <div className={`w-2 h-1 rounded-full ${dKm <= 500 ? 'bg-red-400' : 'bg-red-400 opacity-30'}`} />
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* HPI card */}
             <div className="rounded-xl bg-white text-gray-900 shadow-md p-3 sm:p-4">
