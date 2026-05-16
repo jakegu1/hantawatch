@@ -129,22 +129,47 @@ export default function HomePage() {
     return () => { cancelled = true; };
   }, []);
 
-  const hpi = currentHpi;
-
   // The hero now centres on the *nearest active Andes cluster*, not
   // "liveClusters[0]" (which is just whatever the collector happened to
   // sort first). See lib/nearest-cluster.ts for the rationale. Memoised so
   // the heavy filter+sort doesn't run on every state tick.
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
 
-  // Nearest confirmed import — e.g. Australia (quarantine, ~7,500 km) is
-  // closer than the outbreak source (Ushuaia, 16,500 km). Displayed as a
-  // supplementary line on the NearestAndesCard to fulfil the "预警" mandate
-  // without inflating HPI to panic levels.
+  // Nearest confirmed import — e.g. France (confirmed import, ~8,400 km) is
+  // closer than the outbreak source (Ushuaia, 16,500 km).
   const nearestImport = useMemo(
     () => findNearestImport(hondiusImports as Array<{ iso2: string; status: string; summary_zh?: string }>),
     [],
   );
+
+  // Client-side HPI adjustment: if a confirmed/quarantined import is closer
+  // than the source, the distance factor gets a weighted bump.
+  // effectiveHpiScore is pre-computed in findNearestImport (distScore × status_weight).
+  // We add it to the base HPI's distance component, capped at 100.
+  const hpi = useMemo(() => {
+    const base = currentHpi;
+    if (!nearestImport || nearestImport.effectiveHpiScore <= 0) return base;
+    // Current distance contribution = factors.distance.score × factors.distance.weight
+    // Import adds: effectiveHpiScore × distance.weight
+    const importBump = Math.round(nearestImport.effectiveHpiScore * (base.factors?.distance?.weight ?? 0.3));
+    const newTotal = Math.min(100, base.total + importBump);
+    // Re-grade
+    const grades = [
+      { id: 'low' as const, zh: '低关注', color: '#16a34a', max: 20 },
+      { id: 'moderate' as const, zh: '一般关注', color: '#0891b2', max: 40 },
+      { id: 'elevated' as const, zh: '中等关注', color: '#ca8a04', max: 60 },
+      { id: 'high' as const, zh: '高度关注', color: '#ea580c', max: 80 },
+      { id: 'severe' as const, zh: '严重关注', color: '#dc2626', max: 100 },
+    ];
+    const grade = grades.find((g) => newTotal <= g.max) ?? grades[grades.length - 1];
+    return {
+      ...base,
+      total: newTotal,
+      grade: grade.id,
+      gradeZh: grade.zh,
+      color: grade.color,
+    };
+  }, [nearestImport]);
 
   // The hero still needs a *single* cluster object for the distance card +
   // map. Fall back to liveClusters[0] when no Andes cluster exists at all

@@ -71,14 +71,22 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
     );
   }
 
-  const km = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
-  const flag = flagForLocation(nearest.location?.name);
-  // Use the raw date string (e.g. "2026-05-13") — NOT relativeDateZh —
-  // because relativeDateZh calls `new Date()` which produces different
-  // values at SSR (build-time) vs client hydrate-time, causing React
-  // Error #425 (hydration text mismatch). The raw date is stable.
+  const sourceKm = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
+  const sourceFlag = flagForLocation(nearest.location?.name);
   const rawDate = (nearest.lastUpdate ?? '').slice(0, 10) || '—';
   const markerColor = SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
+
+  // When a confirmed/quarantined import is closer than the outbreak source,
+  // the card's PRIMARY distance switches to the import. The source becomes
+  // a secondary "疫情源头" footnote. This makes the headline number, the
+  // distance bar, and HPI all consistent — no more "says 16,500 km but
+  // France has a confirmed case at 8,400 km".
+  const hasCloserImport = nearestImport != null && nearestImport.distanceKm < (sourceKm ?? Infinity);
+  const displayKm = hasCloserImport ? nearestImport!.distanceKm : sourceKm;
+  const displayFlag = hasCloserImport ? nearestImport!.flag : sourceFlag;
+  const displayLocation = hasCloserImport
+    ? `${nearestImport!.flag} ${nearestImport!.nameZh}（${nearestImport!.statusZh}）`
+    : nearest.location?.name || '位置待定位';
 
   return (
     <div className="rounded-xl bg-white text-gray-900 shadow-md overflow-hidden">
@@ -87,11 +95,11 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-base sm:text-lg" aria-hidden>
-              {flag}
+              {displayFlag}
             </span>
             <div className="min-w-0">
               <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-wider text-orange-700">
-                最近 Andes 型疫情
+                {hasCloserImport ? '最近 Andes 型活动' : '最近 Andes 型疫情'}
               </p>
               <h3 className="font-semibold text-xs sm:text-sm text-gray-900 truncate">
                 {nearest.name}
@@ -107,12 +115,12 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
       </div>
 
       <div className="p-4 sm:p-5">
-        {/* Distance — the headline number */}
+        {/* Distance — the headline number (uses import distance when closer) */}
         <div className="flex items-end gap-2 mb-2">
-          {km !== null ? (
+          {displayKm !== null ? (
             <>
               <span className="text-4xl sm:text-5xl font-extrabold leading-none text-gray-900">
-                {fmt(km)}
+                {hasCloserImport ? '~' : ''}{fmt(displayKm)}
               </span>
               <span className="text-base sm:text-lg font-bold text-gray-400 mb-1">km</span>
               <span className="ml-auto text-[10px] sm:text-[11px] text-gray-500 mb-1">
@@ -127,15 +135,17 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
         {/* Location detail line */}
         <p className="text-[11px] sm:text-xs text-gray-600 flex items-center gap-1 mb-1.5">
           <MapPin className="h-3 w-3 text-gray-400 flex-shrink-0" />
-          <span className="truncate">{nearest.location?.name || '位置待定位'}</span>
+          <span className="truncate">{displayLocation}</span>
         </p>
 
-        {/* Dual-timestamp row — addresses a real user-reported confusion
-            where the embedded "（5月13日更新）" suffix in the cluster name
-            made the tool look stale 3 days later even though our collector
-            was still actively re-checking every 6h. Splitting source-date
-            (when WHO published) from check-time (when we last fetched)
-            removes that ambiguity. */}
+        {/* When showing import as primary, add a smaller "疫情源头" footnote */}
+        {hasCloserImport && sourceKm && (
+          <p className="text-[10px] text-gray-400 flex items-center gap-1 mb-1.5">
+            <span>疫情源头：{sourceFlag} {nearest.location?.name} {fmt(sourceKm)} km</span>
+          </p>
+        )}
+
+        {/* Dual-timestamp row */}
         <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-gray-500 mb-3">
           <span className="inline-flex items-center gap-0.5">
             <Calendar className="h-3 w-3 text-gray-400" />
@@ -152,31 +162,13 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
           )}
         </div>
 
-        {/* Nearest import alert — shows when a confirmed/quarantined import
-            is closer to China than the outbreak source. This is the "预警"
-            half; the main 16,500 km number is the "不恐慌" half. */}
-        {nearestImport && nearestImport.distanceKm < (km ?? Infinity) && (
-          <div className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 mb-3">
-            <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-amber-800">
-              <span className="font-medium">⚠ 最近输入：</span>
-              <span>{nearestImport.flag}</span>
-              <span className="font-medium">{nearestImport.nameZh}</span>
-              <span className="font-mono">~{fmt(nearestImport.distanceKm)} km</span>
-              <span className="text-amber-600">（{nearestImport.statusZh}）</span>
-            </div>
-          </div>
-        )}
-
-        {/* Distance bar — graphical alternative to the prior text pill.
-            Shows the cluster's position along a color-banded scale from
-            China (★) on the left to the antipode (~20,000 km) on the
-            right. Pure SVG/CSS, no map tiles. */}
-        {km !== null && (
+        {/* Distance bar — uses import distance when closer */}
+        {displayKm !== null && (
           <div className="mb-3">
             <DistanceBar
-              distanceKm={km}
-              markerColor={markerColor}
-              clusterLabel={nearest.location?.name}
+              distanceKm={displayKm}
+              markerColor={hasCloserImport ? '#d97706' : markerColor}
+              clusterLabel={hasCloserImport ? nearestImport!.nameZh : nearest.location?.name}
             />
           </div>
         )}
