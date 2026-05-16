@@ -26,14 +26,23 @@ interface Props {
   previewCount?: number;
 }
 
+/** Format ISO timestamp as "MM-DD HH:mm" in China Standard Time (UTC+8).
+ *
+ *  Uses explicit UTC+8 offset so the output is identical on the Vercel
+ *  server (runs at UTC) and the client (usually UTC+8). Using the
+ *  local-tz `.getHours()` here was the OTHER source of React Error #425
+ *  — Vercel rendered "13:41" but the browser expected "21:41".
+ */
 function fmtTime(iso: string): string {
   try {
     const d = new Date(iso);
     if (Number.isNaN(d.getTime())) return iso;
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    const hh = String(d.getHours()).padStart(2, '0');
-    const mm = String(d.getMinutes()).padStart(2, '0');
+    // Shift to UTC+8 then use getUTC* so the result is timezone-invariant.
+    const cn = new Date(d.getTime() + 8 * 3600_000);
+    const m = String(cn.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(cn.getUTCDate()).padStart(2, '0');
+    const hh = String(cn.getUTCHours()).padStart(2, '0');
+    const mm = String(cn.getUTCMinutes()).padStart(2, '0');
     return `${m}-${day} ${hh}:${mm}`;
   } catch {
     return iso;
@@ -62,7 +71,7 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
         </p>
         {feed.last_fetched && (
           <p className="text-[10px] text-gray-400 mt-1">
-            上次更新：{fmtTime(feed.last_fetched)}
+            上次更新：<span suppressHydrationWarning>{fmtTime(feed.last_fetched)}</span>
           </p>
         )}
       </div>
@@ -90,7 +99,7 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <span className="text-xs font-mono font-medium text-gray-700 inline-flex items-center gap-1">
                   <Clock className="h-3 w-3" />
-                  {fmtTime(u.time)}
+                  <span suppressHydrationWarning>{fmtTime(u.time)}</span>
                 </span>
                 {u.key_facts_zh.slice(0, 3).map((tag, i) => (
                   <span
