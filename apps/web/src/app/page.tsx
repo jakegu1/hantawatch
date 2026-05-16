@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta, realtimeFeed, hondiusImports } from '@/lib/data';
-import type { RecentCase } from '@/lib/data';
+import type { DailyBrief, RecentCase } from '@/lib/data';
 import { findNearestAndes, findNearestImport, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
@@ -197,6 +197,37 @@ export default function HomePage() {
   const cluster = nearestAndes.nearest ?? liveClusters[0];
 
   const hpiFactors = hpi.factors;
+  const hasImportDistance = nearestImport != null && nearestImport.distanceKm < cluster.distanceFromChinaKm;
+  const displayedDistanceKm = hasImportDistance ? nearestImport!.distanceKm : cluster.distanceFromChinaKm;
+  const dynamicHpi7DayHistory = useMemo(() => {
+    if (hpi7DayHistory.length === 0) return hpi7DayHistory;
+    return hpi7DayHistory.map((point, index) =>
+      index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
+    );
+  }, [hpi.total]);
+  const dynamicTodayBrief = useMemo<DailyBrief>(() => {
+    const previousHpi = hpi7DayHistory.length >= 2
+      ? hpi7DayHistory[hpi7DayHistory.length - 2].value
+      : currentHpi.total;
+    const hpiDelta = hpi.total - previousHpi;
+    const hpiPhrase = hpiDelta === 0
+      ? `HPI 指数持平（当前 ${hpi.total}，${hpi.gradeZh}）`
+      : `HPI 指数${hpiDelta > 0 ? '增加' : '减少'} ${Math.abs(hpiDelta)}（当前 ${hpi.total}，${hpi.gradeZh}）`;
+    const baselinePhrase = {
+      normal: '国内 HFRS 处于基线正常范围',
+      elevated: '国内 HFRS 高于基线，需关注',
+      below: '国内 HFRS 低于基线',
+    }[todayBrief.domesticBaselineStatus];
+    const importPhrase = hasImportDistance
+      ? `最近已确认输入为${nearestImport!.nameZh}，距中国大陆约 ${displayedDistanceKm.toLocaleString('zh-CN')} km；疫情源头${cluster.location.name}约 ${cluster.distanceFromChinaKm.toLocaleString('zh-CN')} km`
+      : todayBrief.oneLine.split('，HPI 指数')[0];
+    return {
+      ...todayBrief,
+      distanceDeltaKm: hasImportDistance ? displayedDistanceKm - cluster.distanceFromChinaKm : todayBrief.distanceDeltaKm,
+      hpiDelta,
+      oneLine: `${importPhrase}，${hpiPhrase}，${baselinePhrase}。`,
+    };
+  }, [cluster.distanceFromChinaKm, cluster.location.name, displayedDistanceKm, hasImportDistance, hpi.gradeZh, hpi.total, nearestImport]);
 
   return (
     <div className="pb-16">
@@ -213,7 +244,7 @@ export default function HomePage() {
           </div>
 
           {/* Daily brief banner */}
-          <DailyBriefBanner brief={todayBrief} />
+          <DailyBriefBanner brief={dynamicTodayBrief} />
 
           {/* ⚠ Andes warning — compact 1–2 line strip on mobile, expanded on sm+ */}
           <div className="rounded-xl bg-red-500/15 backdrop-blur border border-red-300/30 px-3 py-2.5 sm:p-5 mb-3 sm:mb-4">
@@ -354,12 +385,12 @@ export default function HomePage() {
             <div className="flex items-center justify-between text-xs text-gray-500 mb-1">
               <span className="font-medium">HPI 近 7 天趋势</span>
               <span className="font-mono">
-                {hpi7DayHistory[0].value} → <b style={{ color: hpi.color }}>{hpi7DayHistory[hpi7DayHistory.length - 1].value}</b>
+                {dynamicHpi7DayHistory[0].value} → <b style={{ color: hpi.color }}>{dynamicHpi7DayHistory[dynamicHpi7DayHistory.length - 1].value}</b>
               </span>
             </div>
             <Sparkline
-              values={hpi7DayHistory.map((d) => d.value)}
-              labels={hpi7DayHistory.map((d) => d.date.slice(5))}
+              values={dynamicHpi7DayHistory.map((d) => d.value)}
+              labels={dynamicHpi7DayHistory.map((d) => d.date.slice(5))}
               color={hpi.color}
               height={48}
             />
