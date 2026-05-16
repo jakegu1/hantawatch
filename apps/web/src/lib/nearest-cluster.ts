@@ -70,6 +70,132 @@ export function findNearestAndes(clusters: ActiveCluster[]): NearestAndesResult 
   return findNearestBySerotype(clusters, 'andes');
 }
 
+// ---------------------------------------------------------------------------
+// Import proximity — surfaces confirmed imports on the NearestAndesCard
+// so users see "⚠ 最近输入：🇦🇺 澳大利亚 ~7,500 km（隔离中）" alongside the
+// outbreak-source distance. HPI weights are discounted by import status.
+// ---------------------------------------------------------------------------
+
+/** Approximate great-circle distance from Beijing to major country capitals.
+ *  Only countries that plausibly receive hantavirus imports need entries;
+ *  extend this table when new countries appear in mv-hondius-imports.json. */
+const ISO2_DISTANCE_KM: Record<string, number> = {
+  AR: 19_400, CL: 19_200, BR: 17_400,       // South America (source region)
+  US: 11_000, CA: 10_500, MX: 12_600,        // North America
+  ES:  9_200, FR:  8_400, DE:  7_800,        // Europe
+  IT:  8_100, UK:  8_200, GB:  8_200,
+  NL:  8_100, PT:  9_800, CH:  8_000,
+  AU:  7_500, NZ:  9_700, JP:  2_100,        // Asia-Pacific
+  KR:   950, TH:  3_300, IN:  3_800,
+  ZA: 11_800,                                  // Africa
+};
+
+export type ImportStatus = 'monitoring' | 'quarantine_active' | 'imports_confirmed' | 'closed';
+
+/** Discount factor applied to the distance-score when computing HPI.
+ *  A quarantined import 7,500 km away is NOT the same risk as an active
+ *  outbreak 7,500 km away.  The raw distance is still displayed in full;
+ *  only the HPI contribution is discounted.
+ *
+ *  Formula:  effective_distance_score = distanceScore(km) × STATUS_WEIGHT */
+const STATUS_WEIGHT: Record<ImportStatus, number> = {
+  imports_confirmed: 0.5,
+  quarantine_active: 0.3,
+  monitoring: 0.1,
+  closed: 0,
+};
+
+const STATUS_LABEL_ZH: Record<ImportStatus, string> = {
+  imports_confirmed: '确诊输入',
+  quarantine_active: '隔离中',
+  monitoring: '监测中',
+  closed: '已关闭',
+};
+
+const ISO2_FLAG: Record<string, string> = {
+  AR: '🇦🇷', CL: '🇨🇱', BR: '🇧🇷', US: '🇺🇸', CA: '🇨🇦',
+  ES: '🇪🇸', FR: '🇫🇷', DE: '🇩🇪', IT: '🇮🇹', GB: '🇬🇧', UK: '🇬🇧',
+  NL: '🇳🇱', PT: '🇵🇹', CH: '🇨🇭', AU: '🇦🇺', NZ: '🇳🇿',
+  JP: '🇯🇵', KR: '🇰🇷', TH: '🇹🇭', IN: '🇮🇳', ZA: '🇿🇦', MX: '🇲🇽',
+};
+
+const ISO2_NAME_ZH: Record<string, string> = {
+  AR: '阿根廷', CL: '智利', BR: '巴西', US: '美国', CA: '加拿大',
+  ES: '西班牙', FR: '法国', DE: '德国', IT: '意大利', GB: '英国', UK: '英国',
+  NL: '荷兰', PT: '葡萄牙', CH: '瑞士', AU: '澳大利亚', NZ: '新西兰',
+  JP: '日本', KR: '韩国', TH: '泰国', IN: '印度', ZA: '南非', MX: '墨西哥',
+};
+
+export interface ImportProximity {
+  /** ISO-2 country code */
+  iso2: string;
+  flag: string;
+  nameZh: string;
+  distanceKm: number;
+  status: ImportStatus;
+  statusZh: string;
+  /** HPI discount weight for this status */
+  weight: number;
+  /** distanceScore(km) × weight — ready to compare with source score */
+  effectiveHpiScore: number;
+  summary?: string;
+}
+
+/** Lightweight import record — matches the shape in mv-hondius-imports.json.
+ *  We don't import the full MvHondiusImport type here to keep the module
+ *  leaf-level (no Supabase / heavy type deps). */
+export interface ImportRecord {
+  iso2: string;
+  status: string;
+  summary_zh?: string;
+  confirmedImports?: number;
+  quarantineCount?: number;
+  monitoringCount?: number;
+}
+
+/** Simple distance-ring scoring matching lib/hpi.ts#distanceScore. */
+function distScore(km: number): number {
+  if (km > 10_000) return 0;
+  if (km > 3_000) return 20;
+  if (km > 500) return 50;
+  return 100;
+}
+
+/** Find the nearest import with the highest effective HPI contribution.
+ *  Returns null when there are no active imports, or all have status=closed. */
+export function findNearestImport(imports: ImportRecord[]): ImportProximity | null {
+  let best: ImportProximity | null = null;
+
+  for (const imp of imports) {
+    const iso = imp.iso2.toUpperCase();
+    const km = ISO2_DISTANCE_KM[iso];
+    if (!km) continue; // country not in distance table — skip
+    const status = (imp.status as ImportStatus) ?? 'monitoring';
+    const w = STATUS_WEIGHT[status] ?? 0;
+    if (w === 0) continue; // closed — not relevant
+
+    const eff = distScore(km) * w;
+    const entry: ImportProximity = {
+      iso2: iso,
+      flag: ISO2_FLAG[iso] ?? '🌐',
+      nameZh: ISO2_NAME_ZH[iso] ?? iso,
+      distanceKm: km,
+      status,
+      statusZh: STATUS_LABEL_ZH[status] ?? status,
+      weight: w,
+      effectiveHpiScore: eff,
+      summary: imp.summary_zh,
+    };
+
+    // Pick the one with the highest effective score (most impactful on HPI);
+    // break ties by raw distance (closer wins).
+    if (!best || eff > best.effectiveHpiScore || (eff === best.effectiveHpiScore && km < best.distanceKm)) {
+      best = entry;
+    }
+  }
+  return best;
+}
+
 /** Map ISO country / location name to a flag emoji. Best-effort; falls
  *  back to a globe when unknown. Keeps the homepage offline-friendly. */
 const FLAG_MAP: Record<string, string> = {

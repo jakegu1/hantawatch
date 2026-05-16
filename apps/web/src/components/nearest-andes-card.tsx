@@ -31,7 +31,7 @@
 import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
-import { type NearestAndesResult, flagForLocation, relativeTimeZh } from '@/lib/nearest-cluster';
+import { type NearestAndesResult, type ImportProximity, flagForLocation, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
@@ -40,6 +40,11 @@ function fmt(n: number): string {
 
 interface Props {
   result: NearestAndesResult;
+  /** Nearest confirmed import from mv-hondius-imports.json. Rendered as a
+   *  supplementary alert line below the main distance — "⚠ 最近输入：
+   *  🇦🇺 澳大利亚 ~7,500 km（隔离中）". See lib/nearest-cluster.ts for the
+   *  status-weight discount applied to HPI. */
+  nearestImport?: ImportProximity | null;
   /** ISO timestamp of when the collector last ran (from `meta.json#lastCollectedAt`).
    *  Surfaces as "系统核查 X 分钟前" so the user can distinguish "WHO hasn't
    *  updated since 5/13" from "our tool stopped fetching" — these look
@@ -47,7 +52,7 @@ interface Props {
   lastCheckedAt?: string;
 }
 
-export function NearestAndesCard({ result, lastCheckedAt }: Props) {
+export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props) {
   const { nearest, count, all } = result;
 
   // Defensive: if there are zero Andes clusters worldwide, show a calm
@@ -146,6 +151,21 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
             </>
           )}
         </div>
+
+        {/* Nearest import alert — shows when a confirmed/quarantined import
+            is closer to China than the outbreak source. This is the "预警"
+            half; the main 16,500 km number is the "不恐慌" half. */}
+        {nearestImport && nearestImport.distanceKm < (km ?? Infinity) && (
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 mb-3">
+            <div className="flex items-center gap-1.5 text-[11px] sm:text-xs text-amber-800">
+              <span className="font-medium">⚠ 最近输入：</span>
+              <span>{nearestImport.flag}</span>
+              <span className="font-medium">{nearestImport.nameZh}</span>
+              <span className="font-mono">~{fmt(nearestImport.distanceKm)} km</span>
+              <span className="text-amber-600">（{nearestImport.statusZh}）</span>
+            </div>
+          </div>
+        )}
 
         {/* Distance bar — graphical alternative to the prior text pill.
             Shows the cluster's position along a color-banded scale from

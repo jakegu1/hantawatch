@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, realtimeFeed } from '@/lib/data';
+import { dataMeta, realtimeFeed, hondiusImports } from '@/lib/data';
 import type { RecentCase } from '@/lib/data';
-import { findNearestAndes, relativeTimeZh } from '@/lib/nearest-cluster';
+import { findNearestAndes, findNearestImport, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
@@ -136,6 +136,15 @@ export default function HomePage() {
   // sort first). See lib/nearest-cluster.ts for the rationale. Memoised so
   // the heavy filter+sort doesn't run on every state tick.
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
+
+  // Nearest confirmed import — e.g. Australia (quarantine, ~7,500 km) is
+  // closer than the outbreak source (Ushuaia, 16,500 km). Displayed as a
+  // supplementary line on the NearestAndesCard to fulfil the "预警" mandate
+  // without inflating HPI to panic levels.
+  const nearestImport = useMemo(
+    () => findNearestImport(hondiusImports as Array<{ iso2: string; status: string; summary_zh?: string }>),
+    [],
+  );
 
   // The hero still needs a *single* cluster object for the distance card +
   // map. Fall back to liveClusters[0] when no Andes cluster exists at all
@@ -281,6 +290,7 @@ export default function HomePage() {
           <div className="mb-3 sm:mb-4">
             <NearestAndesCard
               result={nearestAndes}
+              nearestImport={nearestImport}
               lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
             />
           </div>
