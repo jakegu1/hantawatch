@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import { dataMeta, realtimeFeed } from '@/lib/data';
 import type { RecentCase } from '@/lib/data';
-import { findNearestAndes, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
+import { findNearestAndes, relativeTimeZh } from '@/lib/nearest-cluster';
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
@@ -484,15 +484,15 @@ export default function HomePage() {
                         "WHO hasn't issued a new bulletin in 3 days, and
                         we re-checked 5 minutes ago". */}
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-1 text-[11px] text-gray-500">
-                      <span
-                        title={`通报日期：${c.date}\n系统核查：${new Date(c.source.retrievedAt).toLocaleString('zh-CN')}`}
-                        className="inline-flex items-center gap-1"
-                      >
-                        <span aria-hidden>🗓</span>
-                        <span className="font-medium text-gray-700">通报 {relativeDateZh(c.date)}</span>
+                      <span className="inline-flex items-center gap-1">
+                        <span className="font-medium text-gray-700 font-mono">{c.date}</span>
                         <span className="text-gray-300">·</span>
-                        <span aria-hidden>🔄</span>
-                        <span>系统核查 {relativeTimeZh(c.source.retrievedAt)}</span>
+                        <span aria-hidden>�</span>
+                        {/* suppressHydrationWarning: relativeTimeZh calls new Date()
+                            which differs between SSR (build-time) and client (view-time).
+                            Without this, React throws Error #425 and kills ALL useEffects
+                            — including the /api/news-entries fetch that merges admin entries. */}
+                        <span suppressHydrationWarning>系统核查 {relativeTimeZh(c.source.retrievedAt)}</span>
                       </span>
                     </div>
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">

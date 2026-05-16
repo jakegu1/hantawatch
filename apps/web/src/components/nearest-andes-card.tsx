@@ -31,7 +31,7 @@
 import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
-import { type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
+import { type NearestAndesResult, flagForLocation, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
@@ -68,7 +68,11 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
 
   const km = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
   const flag = flagForLocation(nearest.location?.name);
-  const ago = relativeDateZh(nearest.lastUpdate);
+  // Use the raw date string (e.g. "2026-05-13") — NOT relativeDateZh —
+  // because relativeDateZh calls `new Date()` which produces different
+  // values at SSR (build-time) vs client hydrate-time, causing React
+  // Error #425 (hydration text mismatch). The raw date is stable.
+  const rawDate = (nearest.lastUpdate ?? '').slice(0, 10) || '—';
   const markerColor = SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
 
   return (
@@ -130,14 +134,14 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-gray-500 mb-3">
           <span className="inline-flex items-center gap-0.5">
             <Calendar className="h-3 w-3 text-gray-400" />
-            WHO 通报 <span className="text-gray-700 font-medium">{ago}</span>
+            WHO 通报 <span className="text-gray-700 font-medium">{rawDate}</span>
           </span>
           {lastCheckedAt && (
             <>
               <span className="text-gray-300">·</span>
               <span className="inline-flex items-center gap-0.5">
                 <span className="text-gray-400" aria-hidden>🔄</span>
-                系统核查 <span className="text-gray-700 font-medium">{relativeTimeZh(lastCheckedAt)}</span>
+                系统核查 <span className="text-gray-700 font-medium" suppressHydrationWarning>{relativeTimeZh(lastCheckedAt)}</span>
               </span>
             </>
           )}
