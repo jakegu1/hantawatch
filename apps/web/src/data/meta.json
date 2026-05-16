@@ -1,8 +1,8 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T13:16:37.148274+00:00",
-  "lastCollectedAt": "2026-05-16T13:16:18.797350+00:00",
-  "lastCollectedAtCn": "2026-05-16T21:16:18.797354+08:00",
+  "__generated_at": "2026-05-16T19:01:09.504595+00:00",
+  "lastCollectedAt": "2026-05-16T19:00:51.821067+00:00",
+  "lastCollectedAtCn": "2026-05-17T03:00:51.821070+08:00",
   "sources": {
     "who_don": {
       "entries": 3,
@@ -12,18 +12,18 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 2,
+      "entries": 1,
       "ok": true,
       "perQuery": [
         {
           "query": "汉坦病毒",
           "hl": "zh-CN",
-          "fetched": 102,
-          "blocked": 1,
-          "no_signal": 12,
+          "fetched": 100,
+          "blocked": 0,
+          "no_signal": 13,
           "duplicate": 0,
-          "non_authoritative": 10,
-          "kept": 2,
+          "non_authoritative": 11,
+          "kept": 1,
           "ok": true
         }
       ]

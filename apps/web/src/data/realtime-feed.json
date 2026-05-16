@@ -1,150 +1,211 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T13:16:37.148796+00:00",
+  "__generated_at": "2026-05-16T19:01:09.505050+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-16T13:16:36.030941+00:00",
+  "last_fetched": "2026-05-16T19:01:08.392698+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-c25ed4121a72acce",
-      "time": "2026-05-16T10:19:00.000Z",
-      "title_en": "How climate change may be fuelling the spread of deadly Hantavirus that killed three on the MV Hondius - The Times of India",
-      "body_en": "How climate change may be fuelling the spread of deadly Hantavirus that killed three on the MV Hondius The Times of India Understanding and preventing hantavirus: Expert insights news.cgtn.com How to arm yourself against hantavirus misinformation Scientific American",
-      "summary_zh": "气候变化可能助长汉坦病毒传播，MV Hondius 邮轮三人死亡。",
-      "key_facts_zh": [
-        "印度",
-        "MV Hondius",
-        "死亡3例"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-5d556bc3ed950da4",
-      "time": "2026-05-16T08:00:00.000Z",
-      "title_en": "Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines - CBC",
-      "body_en": "Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines CBC",
-      "summary_zh": "汉坦病毒无治愈方法，研究人员在治疗和疫苗方面进展。",
+      "id": "rt-438ac425673de8ca",
+      "time": "2026-05-16T18:36:43.000Z",
+      "title_en": "Canadian isolating in B.C. tests \"presumptive positive\" for hantavirus - SooToday.com",
+      "body_en": "Canadian isolating in B.C. tests \"presumptive positive\" for hantavirus SooToday.com",
+      "summary_zh": "加拿大不列颠哥伦比亚省一隔离者汉坦病毒检测呈假定阳性。",
       "key_facts_zh": [
         "加拿大",
-        "研究",
-        "疫苗"
+        "假定阳性",
+        "隔离中"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-079ccc366602fb28",
+      "time": "2026-05-16T18:36:24.000Z",
+      "title_en": "One Canadian tests positive for hantavirus, BC officials say - Yahoo News Canada",
+      "body_en": "One Canadian tests positive for hantavirus, BC officials say Yahoo News Canada",
+      "summary_zh": "BC省官员称一名加拿大人汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "BC省",
+        "确诊1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e87de3745189d72c",
+      "time": "2026-05-16T18:35:20.000Z",
+      "title_en": "Hantavirus Scare on Luxury Cruise - Devdiscourse",
+      "body_en": "Hantavirus Scare on Luxury Cruise Devdiscourse",
+      "summary_zh": "豪华邮轮出现汉坦病毒恐慌。",
+      "key_facts_zh": [
+        "邮轮",
+        "恐慌"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-a9829df494232c46",
-      "time": "2026-05-16T04:56:33.000Z",
-      "title_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts - The Washington Post",
-      "body_en": "CDC tightens home monitoring guidance for high-risk hantavirus contacts The Washington Post",
-      "summary_zh": "CDC收紧高风险汉坦病毒接触者居家监测指南。",
+      "id": "rt-0eb4f726ebcdc0f2",
+      "time": "2026-05-16T18:30:00Z",
+      "title_en": "Version of hantavirus behind deadly cruise ship outbreak matches known strain , France says",
+      "summary_zh": "法国称致命邮轮疫情汉坦病毒毒株与已知毒株匹配。",
       "key_facts_zh": [
-        "CDC",
-        "监测",
-        "接触者"
+        "法国",
+        "邮轮疫情",
+        "毒株匹配"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-318ee8a42deb3bc5",
-      "time": "2026-05-16T03:01:00.000Z",
-      "title_en": "Hantavirus live updates: WHO hunts for source of virus - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Hantavirus live updates: WHO hunts for source of virus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO搜寻汉坦病毒源头，实时更新。",
+      "id": "rt-596edb739ea717af",
+      "time": "2026-05-16T18:20:27.000Z",
+      "title_en": "Hantavirus-stricken cruise passenger in B.C. has tested positive, top doctor says - CTV News",
+      "body_en": "Hantavirus-stricken cruise passenger in B.C. has tested positive, top doctor says CTV News",
+      "summary_zh": "BC省首席医生称邮轮乘客汉坦病毒检测阳性。",
       "key_facts_zh": [
-        "WHO",
-        "搜寻源头"
+        "加拿大",
+        "BC省",
+        "邮轮乘客确诊"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-24bfeb139627719f",
-      "time": "2026-05-16T01:46:00.000Z",
-      "title_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch - The Times of India",
-      "body_en": "Hantavirus outbreak in Wales: Welsh residents under watch after MV Hondius exposure links; signs to watch The Times of India",
-      "summary_zh": "威尔士居民因与MV Hondius接触而受监测。",
+      "id": "rt-7bef4bdcadd554f8",
+      "time": "2026-05-16T18:20:00.000Z",
+      "title_en": "One Canadian exposed to hantavirus outbreak has tested positive - Castanet",
+      "body_en": "One Canadian exposed to hantavirus outbreak has tested positive Castanet",
+      "summary_zh": "一名接触汉坦病毒疫情的加拿大人检测阳性。",
       "key_facts_zh": [
-        "威尔士",
-        "监测",
-        "MV Hondius"
+        "加拿大",
+        "接触者确诊"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-b57d21f8cb0a008e",
-      "time": "2026-05-16T01:26:54.000Z",
-      "title_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients - FOX 5 Atlanta",
-      "body_en": "Hantavirus monitoring ends in Atlanta as Emory University Hospital releases patients FOX 5 Atlanta",
-      "summary_zh": "亚特兰大埃默里大学医院解除汉坦病毒监测，患者出院。",
+      "id": "rt-482b33dfe47336f9",
+      "time": "2026-05-16T18:13:10.000Z",
+      "title_en": "CP NewsAlert: Canadian tests \"presumptive positive\" for hantavirus - Coast Reporter",
+      "body_en": "CP NewsAlert: Canadian tests \"presumptive positive\" for hantavirus Coast Reporter",
+      "summary_zh": "CP新闻快讯：加拿大人汉坦病毒检测呈假定阳性。",
       "key_facts_zh": [
-        "亚特兰大",
-        "监测结束",
-        "患者出院"
+        "加拿大",
+        "假定阳性"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-c6bb24660be87186",
-      "time": "2026-05-16T01:15:00.000Z",
-      "title_en": "Hantavirus has not mutated to be more transmissible: WHO - The Hill",
-      "body_en": "Hantavirus has not mutated to be more transmissible: WHO The Hill",
-      "summary_zh": "WHO称汉坦病毒未变异为更易传播。",
+      "id": "rt-9c15f810ae5e7d3f",
+      "time": "2026-05-16T18:13:00.000Z",
+      "title_en": "Canadian in B.C. tests \"presumptive positive\" for hantavirus - CityNews Toronto",
+      "body_en": "Canadian in B.C. tests \"presumptive positive\" for hantavirus CityNews Toronto",
+      "summary_zh": "BC省一名加拿大人汉坦病毒检测呈假定阳性。",
       "key_facts_zh": [
-        "WHO",
-        "未变异"
+        "加拿大",
+        "BC省",
+        "假定阳性"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-f0bf7ea77848ebd4",
-      "time": "2026-05-16T00:24:44.000Z",
-      "title_en": "Fourth King County resident linked to cruise ship hantavirus outbreak - The Seattle Times",
-      "body_en": "Fourth King County resident linked to cruise ship hantavirus outbreak The Seattle Times",
-      "summary_zh": "第四名金县居民与邮轮汉坦病毒爆发有关。",
+      "id": "rt-791c89c725294958",
+      "time": "2026-05-16T18:00:00.000Z",
+      "title_en": "B.C. officials provide update on Canadians isolating after hantavirus exposure - CBC",
+      "body_en": "B.C. officials provide update on Canadians isolating after hantavirus exposure CBC",
+      "summary_zh": "BC省官员更新加拿大隔离者情况。",
       "key_facts_zh": [
-        "金县",
+        "加拿大",
+        "BC省",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b73da35d7047b544",
+      "time": "2026-05-16T17:45:00Z",
+      "title_en": "2 passengers from hantavirus - hit cruise ship moved from Emory to Nebraska quarantine facility",
+      "summary_zh": "两名汉坦病毒邮轮乘客转至内布拉斯加隔离。",
+      "key_facts_zh": [
         "邮轮",
-        "第四例"
+        "内布拉斯加",
+        "隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-5a98c488c15c0750",
-      "time": "2026-05-16T00:07:00.000Z",
-      "title_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says - KING5.com",
-      "body_en": "4th King County resident monitored for possible hantavirus exposure, Public Health says KING5.com",
-      "summary_zh": "第四名金县居民因可能接触汉坦病毒接受监测。",
+      "id": "rt-eb7c55fde3b79ca7",
+      "time": "2026-05-16T17:22:22.000Z",
+      "title_en": "B.C. health officials update public on rare hantavirus exposure cases - Global News",
+      "body_en": "B.C. health officials update public on rare hantavirus exposure cases Global News",
+      "summary_zh": "BC省卫生官员更新罕见汉坦病毒暴露病例。",
       "key_facts_zh": [
-        "金县",
-        "监测中",
-        "第四例"
+        "加拿大",
+        "BC省",
+        "暴露病例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-0b21da1d4ebeb21e",
-      "time": "2026-05-15T23:43:36.000Z",
-      "title_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County - KOMO",
-      "body_en": "Sin Nombre hantavirus case tied to home mouse exposure in Chelan County KOMO",
-      "summary_zh": "Chelan县一例Sin Nombre汉坦病毒病例与家中老鼠接触有关。",
+      "id": "rt-9016b190ed0f5b9f",
+      "time": "2026-05-16T17:00:00Z",
+      "title_en": "France says cruise ship Andes virus matches known South American viruses – Winnipeg Free Press",
+      "summary_zh": "法国称邮轮病毒与南美已知病毒匹配。",
       "key_facts_zh": [
-        "Chelan县",
-        "Sin Nombre",
-        "鼠类接触"
+        "法国",
+        "邮轮",
+        "南美病毒"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-4f50cb18d40d346e",
-      "time": "2026-05-15T22:36:27.000Z",
-      "title_en": "Hantavirus Updates - County of San Luis Obispo (.gov)",
-      "body_en": "Hantavirus Updates County of San Luis Obispo (.gov)",
-      "summary_zh": "圣路易斯奥比斯波县发布汉坦病毒更新。",
+      "id": "rt-793ff65458e764c5",
+      "time": "2026-05-16T16:30:00Z",
+      "title_en": "Frequent burials and at least 80 dead as Congo grapples with Ebola outbreak",
+      "summary_zh": "刚果埃博拉疫情已致至少80人死亡，频繁举行葬礼。",
       "key_facts_zh": [
-        "圣路易斯奥比斯波",
-        "官方更新"
+        "刚果",
+        "埃博拉",
+        "死亡80例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6259d90a26f7c3a7",
+      "time": "2026-05-16T16:08:53.000Z",
+      "title_en": "These are the 10 U.S. states monitoring for hantavirus cases linked to cruise ship at center of outbreak - Yahoo",
+      "body_en": "These are the 10 U.S. states monitoring for hantavirus cases linked to cruise ship at center of outbreak Yahoo",
+      "summary_zh": "美国10个州监测与邮轮疫情相关的汉坦病毒病例。",
+      "key_facts_zh": [
+        "美国",
+        "10州",
+        "监测"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b359d2de302b1b6a",
+      "time": "2026-05-16T16:07:00.000Z",
+      "title_en": "Latest headlines | Deadly hantavirus case confirmed in Douglas County - KUSA.com",
+      "body_en": "Latest headlines | Deadly hantavirus case confirmed in Douglas County KUSA.com",
+      "summary_zh": "道格拉斯县确诊一例致命汉坦病毒病例。",
+      "key_facts_zh": [
+        "道格拉斯县",
+        "确诊",
+        "死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-74d69a7b7e7648a4",
+      "time": "2026-05-16T15:41:29.000Z",
+      "title_en": "Hantavirus latest updates: Suspected case at New York high school not linked to cruise ship - Yahoo",
+      "body_en": "Hantavirus latest updates: Suspected case at New York high school not linked to cruise ship Yahoo Hantavirus: Current Situation Centers for Disease Control and Prevention | CDC (.gov) Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines CBC",
+      "summary_zh": "纽约高中出现汉坦病毒疑似病例，与邮轮无关。",
+      "key_facts_zh": [
+        "美国",
+        "纽约",
+        "疑似病例"
       ],
       "signal_strength": "medium"
     }
