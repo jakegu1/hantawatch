@@ -33,7 +33,7 @@ interface ManualRow {
     title: string;
     summary: string | null;
     scope: 'china' | 'international';
-    confidence: 'official' | 'news';
+    confidence: 'official' | 'surveillance' | 'news';
     serotypeId: string;
     date: string;
     caseType: string;
@@ -70,7 +70,7 @@ const SEROTYPE_OPTIONS = [
 
 interface FormDraft {
   scope: 'china' | 'international';
-  confidence: 'official' | 'news';
+  confidence: 'official' | 'surveillance' | 'news';
   title: string;
   summary: string;
   serotypeId: string;
@@ -104,12 +104,15 @@ function emptyDraft(): FormDraft {
 }
 
 /** Pretty pill for the source-confidence tag, matching the homepage style. */
-function ConfidencePill({ scope, confidence }: { scope: 'china' | 'international'; confidence: 'official' | 'news' }) {
+function ConfidencePill({ scope, confidence }: { scope: 'china' | 'international'; confidence: 'official' | 'surveillance' | 'news' }) {
   if (scope === 'china') {
     return <span className="badge text-[10px] bg-emerald-100 text-emerald-700 border border-emerald-200">国内通报</span>;
   }
   if (confidence === 'official') {
     return <span className="badge text-[10px] bg-blue-100 text-blue-700 border border-blue-200">官方通报</span>;
+  }
+  if (confidence === 'surveillance') {
+    return <span className="badge text-[10px] bg-purple-100 text-purple-700 border border-purple-200">专业监测</span>;
   }
   return <span className="badge text-[10px] bg-amber-100 text-amber-700 border border-amber-200">新闻线索</span>;
 }
@@ -343,6 +346,7 @@ export function NewsCmsPanel() {
                 // matching FormDraft.scope.
                 { val: 'china' as const, label: '🇨🇳 国内通报', confidence: 'official' as const },
                 { val: 'international' as const, label: '🌐 官方通报（境外）', confidence: 'official' as const },
+                { val: 'international' as const, label: '🔎 专业监测（境外）', confidence: 'surveillance' as const },
                 { val: 'international' as const, label: '📰 新闻线索（境外）', confidence: 'news' as const },
               ]).map((opt, i) => {
                 const active = draft.scope === opt.val && draft.confidence === opt.confidence;

@@ -39,7 +39,7 @@ import type { SerotypeId } from '@hantawatch/shared/types';
 
 export type EntryKind = 'insert' | 'hide';
 export type EntryScope = 'china' | 'international';
-export type EntryConfidence = 'official' | 'news';
+export type EntryConfidence = 'official' | 'surveillance' | 'news';
 
 /** A row from `manual_news_entries` after light normalization. */
 export interface ManualNewsRow {

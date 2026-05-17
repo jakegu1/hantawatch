@@ -407,11 +407,33 @@ def build_active_clusters(
 _OFFICIAL_CARRYOVER_MAX_AGE_DAYS = 30
 
 
+def _recent_case_sort_key(row: dict) -> tuple[int, int]:
+    source = row.get("source") or {}
+    name = str(source.get("name") or "")
+    confidence = source.get("confidence")
+    if confidence == "official" and ("WHO 疾病暴发新闻" in name or "DON" in name):
+        tier = 0
+    elif confidence == "official":
+        tier = 1
+    elif confidence == "surveillance":
+        tier = 2
+    elif confidence == "news":
+        tier = 3
+    else:
+        tier = 4
+    try:
+        day = date.fromisoformat(str(row.get("date") or "")).toordinal()
+    except ValueError:
+        day = 0
+    return (tier, -day)
+
+
 def build_recent_cases_intl(
     who_entries: list[WhoDonEntry],
     news_leads: list[NewsLead] | None = None,
     *,
     ecdc: "EcdcAssessment | None" = None,
+    surveillance_leads: list[NewsLead] | None = None,
     fallback_path: "Path | None" = None,
 ) -> list[dict]:
     """International recent cases — newest first.
@@ -514,7 +536,7 @@ def build_recent_cases_intl(
                 if c.get("id") in seen_ids:
                     continue
                 conf = (c.get("source") or {}).get("confidence")
-                if conf != "official":
+                if conf not in {"official", "surveillance"}:
                     continue
                 case_date_str = c.get("date") or ""
                 try:
@@ -527,9 +549,29 @@ def build_recent_cases_intl(
                 carried += 1
             if carried:
                 logger.info(
-                    "recent-cases-intl: carried over %d official entr%s from previous run",
+                    "recent-cases-intl: carried over %d trusted entr%s from previous run",
                     carried, "y" if carried == 1 else "ies",
                 )
+
+    for n in (surveillance_leads or [])[:15]:
+        rows.append(
+            {
+                "id": n.id,
+                "regionCode": "INT",
+                "serotypeId": select_serotype_id(f"{n.title} {n.summary}"),
+                "date": n.published.date().isoformat(),
+                "caseType": "suspected",
+                "count": 0,
+                "title": n.title,
+                "summary": n.summary,
+                "source": {
+                    "name": n.source_outlet or "专业监测源",
+                    "url": n.link,
+                    "retrievedAt": now_iso,
+                    "confidence": "surveillance",
+                },
+            }
+        )
 
     # --- 4. News leads — auxiliary, less authoritative ---------------------
     for n in (news_leads or [])[:25]:
@@ -555,8 +597,7 @@ def build_recent_cases_intl(
             }
         )
 
-    # Newest first regardless of source
-    rows.sort(key=lambda r: r["date"], reverse=True)
+    rows.sort(key=_recent_case_sort_key)
     return rows
 
 
@@ -602,7 +643,7 @@ def merge_manual_news_leads(rows: list[dict], manual_path: Path) -> list[dict]:
         }
 
     merged = list(by_id.values())
-    merged.sort(key=lambda r: r["date"], reverse=True)
+    merged.sort(key=_recent_case_sort_key)
     logger.info("manual news leads: %d merged", len(leads))
     return merged
 

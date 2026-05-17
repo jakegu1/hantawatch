@@ -108,7 +108,7 @@ export async function GET(req: NextRequest) {
 // ---- Helpers -----------------------------------------------------------
 
 const VALID_SCOPE = new Set(['china', 'international']);
-const VALID_CONFIDENCE = new Set(['official', 'news']);
+const VALID_CONFIDENCE = new Set(['official', 'surveillance', 'news']);
 // Mirrors packages/shared/src/types/index.ts → SerotypeId. Keep in sync.
 const VALID_SEROTYPE = new Set([
   'hantaan', 'seoul', 'puumala', 'andes', 'sin_nombre', 'other',
@@ -136,7 +136,7 @@ function sanitizeInsertPayload(raw: unknown): InsertEntryInput | { error: string
   if (!scope || !VALID_SCOPE.has(scope)) return { error: "scope must be 'china' or 'international'" };
 
   const confidence = clampStr(p.confidence, 32) as EntryConfidence | null;
-  if (!confidence || !VALID_CONFIDENCE.has(confidence)) return { error: "confidence must be 'official' or 'news'" };
+  if (!confidence || !VALID_CONFIDENCE.has(confidence)) return { error: "confidence must be 'official', 'surveillance', or 'news'" };
 
   const date = clampStr(p.date, 10);
   if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return { error: 'date must be YYYY-MM-DD' };

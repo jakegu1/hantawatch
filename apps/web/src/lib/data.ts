@@ -189,18 +189,28 @@ const intlCases: RecentCase[] = (recentCasesIntlJson.cases as RawIntlCase[])
   });
 
 /**
- * Merged, sorted (newest first) timeline. Domestic + international.
- *
- * After sorting we run a title-key dedup pass so the same wire story
- * republished by multiple outlets (e.g. a Tedros statement appearing
- * under both 天津日报 and 新华网) collapses to a single row, keeping
- * the newest occurrence. See `news-format.ts#dedupByTitle`.
- *
- * Page rendering decides how to label and emphasise serotype/distance.
+ * Merged, sorted timeline. Domestic + international.
  */
-export const recentCases: RecentCase[] = dedupByTitle(
-  [...intlCases, ...chinaCases].sort((a, b) => b.date.localeCompare(a.date)),
-);
+
+function recentCaseTier(c: RecentCase): number {
+  const name = c.source?.name ?? '';
+  const conf = c.source?.confidence;
+  if (name.includes('WHO') || name.includes('DON')) return 0;
+  if (conf === 'official') return 1;
+  if (conf === 'surveillance') return 2;
+  if (conf === 'news') return 3;
+  return 4;
+}
+
+export function sortRecentCases(rows: RecentCase[]): RecentCase[] {
+  return [...rows].sort((a, b) => {
+    const tierDiff = recentCaseTier(a) - recentCaseTier(b);
+    if (tierDiff !== 0) return tierDiff;
+    return b.date.localeCompare(a.date);
+  });
+}
+
+export const recentCases: RecentCase[] = dedupByTitle(sortRecentCases([...intlCases, ...chinaCases]));
 
 // ---- Pipeline meta --------------------------------------------------------
 

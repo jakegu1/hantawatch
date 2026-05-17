@@ -68,6 +68,7 @@ from hantawatch_collector.io_utils import read_json, write_generated_json
 from hantawatch_collector.news_leads import fetch_news_leads
 from hantawatch_collector.official_sources import check_official_sources
 from hantawatch_collector.realtime_feed import build_realtime_feed
+from hantawatch_collector.surveillance_leads import fetch_surveillance_leads
 from hantawatch_collector.who_don import fetch_who_don_entries
 
 logging.basicConfig(
@@ -176,6 +177,7 @@ def main(argv: list[str] | None = None) -> int:
         who_entries = []
         ecdc = None
         news_leads = []
+        surveillance_leads = []
         official_sources_status = read_json(out_dir / "official-sources.json", default=None)
         logger.info("--no-network: skipping all fetches")
     else:
@@ -190,6 +192,9 @@ def main(argv: list[str] | None = None) -> int:
         news_leads = fetch_news_leads()
         if not news_leads:
             logger.info("news-leads: no entries (this is unusual but not fatal)")
+        surveillance_leads = fetch_surveillance_leads()
+        if not surveillance_leads:
+            logger.info("surveillance-leads: no entries")
         try:
             official_sources_status = check_official_sources()
         except Exception as e:
@@ -256,6 +261,7 @@ def main(argv: list[str] | None = None) -> int:
         who_entries,
         news_leads,
         ecdc=ecdc,
+        surveillance_leads=surveillance_leads,
         fallback_path=out_dir / "recent-cases-intl.json",
     )
     # Merge admin-curated leads (e.g. local Taiwan / Switzerland press the

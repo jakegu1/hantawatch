@@ -2,13 +2,13 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, realtimeFeed, riskSnapshot } from '@/lib/data';
+import { dataMeta, realtimeFeed, riskSnapshot, sortRecentCases } from '@/lib/data';
 import type { DailyBrief, RecentCase } from '@/lib/data';
 import { findNearestAndes, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
-import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
+import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Activity } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
@@ -113,16 +113,14 @@ export default function HomePage() {
             name: (a.sourceName as string) ?? '',
             url: (a.sourceUrl as string) ?? '',
             retrievedAt: (a.createdAt as string) ?? new Date().toISOString(),
-            confidence: ((a.confidence as 'official' | 'news') ?? 'official'),
+            confidence: ((a.confidence as RecentCase['source']['confidence']) ?? 'official'),
           },
           notes: (a.notes as string) ?? undefined,
           scope: ((a.scope as 'china' | 'international') ?? 'international'),
         }));
 
         const hideSet = new Set(hiddenIds);
-        const merged = [...recentCases.filter((c) => !hideSet.has(c.id)), ...additions].sort((a, b) =>
-          b.date.localeCompare(a.date),
-        );
+        const merged = sortRecentCases([...recentCases.filter((c) => !hideSet.has(c.id)), ...additions]);
         setLiveRecentCases(merged);
       })
       .catch(() => { /* keep static baseline */ });
@@ -153,6 +151,21 @@ export default function HomePage() {
     );
   }, [hpi.total]);
   const dynamicTodayBrief: DailyBrief = todayBrief;
+  const chronologicalRecentCases = useMemo(
+    () => [...liveRecentCases].sort((a, b) => b.date.localeCompare(a.date)),
+    [liveRecentCases],
+  );
+  const briefDate = new Date(`${dynamicTodayBrief.date}T00:00:00+08:00`);
+  const yesterdayDate = new Date(briefDate.getTime() - 86_400_000).toISOString().slice(0, 10);
+  const yesterdayItems = chronologicalRecentCases
+    .filter((c) => c.date >= yesterdayDate && c.date <= dynamicTodayBrief.date)
+    .slice(0, 3);
+  const briefItems = yesterdayItems.length > 0 ? yesterdayItems : chronologicalRecentCases.slice(0, 3);
+  const surveillanceCount = chronologicalRecentCases.filter((c) => c.source?.confidence === 'surveillance').length;
+  const latestWho = liveRecentCases.find((c) => {
+    const name = c.source?.name ?? '';
+    return name.includes('WHO') || name.includes('DON');
+  });
 
   return (
     <div className="pb-16">
@@ -328,6 +341,67 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="container-page mt-6">
+        <div className="card border-brand-100 bg-gradient-to-br from-white to-brand-50/40">
+          <div className="flex items-start justify-between gap-3 mb-4">
+            <div>
+              <p className="text-[11px] font-medium text-brand-600 uppercase tracking-wider">每日简报</p>
+              <h2 className="text-lg font-bold text-gray-900 mt-0.5">昨天发生了什么，现在总体是什么情况</h2>
+            </div>
+            <span className="rounded-full bg-white px-2.5 py-1 text-[11px] text-gray-500 ring-1 ring-gray-200">
+              {dynamicTodayBrief.date}
+            </span>
+          </div>
+
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
+              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
+                <Bell className="h-4 w-4 text-brand-500" />
+                昨日/最新动态
+              </div>
+              <div className="mt-2 space-y-2">
+                {briefItems.slice(0, 3).map((c) => (
+                  <div key={c.id} className="text-xs leading-relaxed">
+                    <span className="font-mono text-gray-500">{c.date}</span>
+                    <span className="mx-1 text-gray-300">·</span>
+                    <span className="text-gray-800">{c.title ?? c.notes ?? c.source.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
+              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
+                <Activity className="h-4 w-4 text-orange-500" />
+                当前总览
+              </div>
+              <p className="mt-2 text-xs leading-relaxed text-gray-600">{dynamicTodayBrief.oneLine}</p>
+            </div>
+
+            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
+              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
+                <Shield className="h-4 w-4 text-green-600" />
+                风险判断
+              </div>
+              <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
+                <div className="rounded-lg bg-gray-50 p-2">
+                  <div className="text-gray-400">HPI</div>
+                  <div className="font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-2">
+                  <div className="text-gray-400">专业监测</div>
+                  <div className="font-bold text-gray-800">{surveillanceCount} 条</div>
+                </div>
+                <div className="rounded-lg bg-gray-50 p-2 col-span-2">
+                  <div className="text-gray-400">WHO 置顶</div>
+                  <div className="font-medium text-gray-800 truncate">{latestWho?.title ?? '暂无更新'}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ================================================================ */}
       {/* SECTION 2: Serotype status — ranked by concern level             */}
       {/* ================================================================ */}
@@ -442,6 +516,7 @@ export default function HomePage() {
             </span>
             <span className="mx-1 text-gray-300">·</span>
             <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 text-blue-800 px-2 py-0.5 font-medium">官方通报</span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 text-purple-800 px-2 py-0.5 font-medium">专业监测</span>
             <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 px-2 py-0.5 font-medium">新闻线索</span>
           </div>
 
@@ -468,11 +543,14 @@ export default function HomePage() {
               // a glance. They still go through the same record shape so old
               // consumers continue to work.
               const isNewsLead = c.source?.confidence === 'news';
+              const isSurveillanceLead = c.source?.confidence === 'surveillance';
               const scopeBadge = isNewsLead
                 ? { label: '新闻线索', cls: 'bg-amber-100 text-amber-800' }
-                : isIntl
-                  ? { label: '官方通报', cls: isAndes ? 'badge-severe' : 'badge-elevated' }
-                  : { label: '国内通报', cls: 'badge-low' };
+                : isSurveillanceLead
+                  ? { label: '专业监测', cls: 'bg-purple-100 text-purple-800' }
+                  : isIntl
+                    ? { label: '官方通报', cls: isAndes ? 'badge-severe' : 'badge-elevated' }
+                    : { label: '国内通报', cls: 'badge-low' };
 
               const title = c.title ?? c.notes ?? '';
               // Subtitle rules:
@@ -558,9 +636,11 @@ export default function HomePage() {
 
           <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
             数据每 6 小时自动抓取 WHO / ECDC 官方通报 +
-            <strong className="text-amber-700">新闻线索</strong>（Google News 聚合，含 ProMED 与中英文主流媒体）；国内通报由人工核验后录入。
+            <strong className="text-purple-700">专业监测</strong> +
+            <strong className="text-amber-700">新闻线索</strong>；国内通报由人工核验后录入。
             <br />
-            <span className="text-amber-700">新闻线索仅作早期信号</span>，与官方通报置信度不同，请以蓝色"官方通报"为准。
+            <span className="text-purple-700">专业监测</span>介于官方通报与新闻线索之间；
+            <span className="text-amber-700">新闻线索仅作早期信号</span>，请优先参考蓝色"官方通报"。
             血清型标签的红色仅用于安第斯型（唯一确认人传人的汉坦病毒），不代表事件严重程度。
           </p>
         </div>

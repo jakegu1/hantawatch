@@ -37,10 +37,11 @@ export interface CaseRecord {
 // Data source with confidence.
 // - official: WHO / CDC / national health authority press release
 // - academic: peer-reviewed publication
-// - news:     aggregated mainstream news (Google News, ProMED), early signal
+// - surveillance: professional monitoring / official-health index, faster than WHO DON
+// - news:     aggregated mainstream news, early signal
 // - media:    legacy alias for `news` (kept for backwards compatibility)
 // - unverified: rumour / social media
-export type ConfidenceLevel = 'official' | 'academic' | 'news' | 'media' | 'unverified';
+export type ConfidenceLevel = 'official' | 'surveillance' | 'academic' | 'news' | 'media' | 'unverified';
 
 export interface DataSource {
   name: string;

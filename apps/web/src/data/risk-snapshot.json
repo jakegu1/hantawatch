@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-17T15:30:37.301019+00:00",
-  "date": "2026-05-17",
+  "__generated_at": "2026-05-17T16:41:59.682009+00:00",
+  "date": "2026-05-18",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-17T15:30:20.075260+00:00"
+    "updatedAt": "2026-05-17T16:41:37.728260+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-17T15:30:20.075260+00:00"
+    "updatedAt": "2026-05-17T16:41:37.728260+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,12 +101,12 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-05-17",
+    "date": "2026-05-18",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近已确认输入为法国，距中国大陆约 8,400 km；疫情源头MV Hondius 邮轮安第斯型聚集疫情约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 4
+    "daysSinceLastIntlAlert": 5
   }
 }

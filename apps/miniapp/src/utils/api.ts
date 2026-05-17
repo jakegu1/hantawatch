@@ -17,7 +17,7 @@ export interface ManualNewsEntryPayload extends Partial<CaseRecord> {
   summary?: string;
   sourceName?: string;
   sourceUrl?: string;
-  confidence?: 'official' | 'academic' | 'news' | 'media' | 'unverified';
+  confidence?: 'official' | 'surveillance' | 'academic' | 'news' | 'media' | 'unverified';
   createdAt?: string;
   serotypeId?: SerotypeId;
 }
