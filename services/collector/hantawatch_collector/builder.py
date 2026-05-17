@@ -17,6 +17,47 @@ from .who_don import WhoDonEntry, select_serotype_id
 
 logger = logging.getLogger(__name__)
 
+IMPORT_DISTANCE_KM = {
+    "AR": 19400, "CL": 19200, "BR": 17400, "US": 11000, "CA": 10500, "MX": 12600,
+    "ES": 9200, "FR": 8400, "DE": 7800, "IT": 8100, "UK": 8200, "GB": 8200,
+    "NL": 8100, "PT": 9800, "CH": 8000, "AU": 7500, "NZ": 9700, "JP": 2100,
+    "KR": 950, "TH": 3300, "IN": 3800, "ZA": 11800,
+}
+
+IMPORT_STATUS_WEIGHT = {
+    "imports_confirmed": 0.5,
+    "presumptive_positive": 0.4,
+    "quarantine_active": 0.3,
+    "monitoring": 0.1,
+    "closed": 0,
+}
+
+IMPORT_STATUS_LABEL_ZH = {
+    "imports_confirmed": "确诊输入",
+    "presumptive_positive": "初筛阳性",
+    "quarantine_active": "隔离中",
+    "monitoring": "监测中",
+    "closed": "已关闭",
+}
+
+IMPORT_FLAG = {
+    "AR": "🇦🇷", "CL": "🇨🇱", "BR": "🇧🇷", "US": "🇺🇸", "CA": "🇨🇦",
+    "ES": "🇪🇸", "FR": "🇫🇷", "DE": "🇩🇪", "IT": "🇮🇹", "GB": "🇬🇧", "UK": "🇬🇧",
+    "NL": "🇳🇱", "PT": "🇵🇹", "CH": "🇨🇭", "AU": "🇦🇺", "NZ": "🇳🇿",
+    "JP": "🇯🇵", "KR": "🇰🇷", "TH": "🇹🇭", "IN": "🇮🇳", "ZA": "🇿🇦", "MX": "🇲🇽",
+}
+
+IMPORT_NAME_ZH = {
+    "AR": "阿根廷", "CL": "智利", "BR": "巴西", "US": "美国", "CA": "加拿大",
+    "ES": "西班牙", "FR": "法国", "DE": "德国", "IT": "意大利", "GB": "英国", "UK": "英国",
+    "NL": "荷兰", "PT": "葡萄牙", "CH": "瑞士", "AU": "澳大利亚", "NZ": "新西兰",
+    "JP": "日本", "KR": "韩国", "TH": "泰国", "IN": "印度", "ZA": "南非", "MX": "墨西哥",
+}
+
+DIRECT_FLIGHT_TO_CHINA = {
+    "FR", "ES", "US", "AU", "DE", "IT", "GB", "UK", "NL", "CH", "JP", "KR", "TH",
+}
+
 # Our users are primarily in mainland China. The "今日" / "yesterday" semantics
 # in the UI MUST be relative to Beijing time, not the GitHub Actions UTC runner.
 # Otherwise: collector runs at 23:00 UTC -> writes date=yesterday-UTC, but in
@@ -667,6 +708,171 @@ def build_daily_brief(
     }
 
 
+# -- Risk snapshot ----------------------------------------------------------
+def _risk_distance_score(km: int) -> float:
+    if km > 10000:
+        return 0.0
+    if km > 3000:
+        return 20.0
+    if km > 500:
+        return 50.0
+    return 100.0
+
+
+def _risk_travel_score(level: str) -> float:
+    return {"none": 5.0, "indirect": 15.0, "direct": 40.0}.get(level, 5.0)
+
+
+def _risk_travel_connectivity_for_import(iso2: str) -> str:
+    return "direct" if iso2 in DIRECT_FLIGHT_TO_CHINA else "indirect"
+
+
+def _risk_travel_connectivity_zh(level: str) -> str:
+    if level == "direct":
+        return "有直飞中国"
+    if level == "indirect":
+        return "需中转"
+    return "无直飞中国"
+
+
+def _risk_grade_hpi(total: int) -> tuple[str, str, str]:
+    if total <= 20:
+        return "low", "低关注", "#16a34a"
+    if total <= 40:
+        return "moderate", "一般关注", "#0891b2"
+    if total <= 60:
+        return "elevated", "中等关注", "#ca8a04"
+    if total <= 80:
+        return "high", "高度关注", "#ea580c"
+    return "severe", "严重关注", "#dc2626"
+
+
+def _find_nearest_import(imports: list[dict]) -> dict | None:
+    best: dict | None = None
+    for imp in imports:
+        iso = str(imp.get("iso2", "")).upper()
+        km = IMPORT_DISTANCE_KM.get(iso)
+        if not km:
+            continue
+        status = str(imp.get("status", "monitoring"))
+        weight = IMPORT_STATUS_WEIGHT.get(status, 0)
+        if weight == 0:
+            continue
+        effective = _risk_distance_score(km) * weight
+        travel = _risk_travel_connectivity_for_import(iso)
+        entry = {
+            "iso2": iso,
+            "flag": IMPORT_FLAG.get(iso, "🌐"),
+            "nameZh": IMPORT_NAME_ZH.get(iso, iso),
+            "distanceKm": km,
+            "status": status,
+            "statusZh": IMPORT_STATUS_LABEL_ZH.get(status, status),
+            "weight": weight,
+            "effectiveHpiScore": effective,
+            "travelConnectivity": travel,
+            "travelConnectivityZh": _risk_travel_connectivity_zh(travel),
+            "summary": imp.get("summary_zh"),
+        }
+        if (
+            best is None
+            or effective > best["effectiveHpiScore"]
+            or (effective == best["effectiveHpiScore"] and km < best["distanceKm"])
+        ):
+            best = entry
+    return best
+
+
+def build_risk_snapshot(
+    *,
+    base_hpi: dict,
+    imports_payload: dict | None,
+    previous_snapshot: dict | None,
+    daily_brief: dict,
+) -> dict:
+    imports = imports_payload.get("imports", []) if isinstance(imports_payload, dict) else []
+    nearest_import = _find_nearest_import(imports if isinstance(imports, list) else [])
+    factors = base_hpi.get("factors", {})
+    reference = base_hpi.get("referenceCluster") or {}
+    source_distance_km = int(reference.get("distanceFromChinaKm") or factors.get("distance", {}).get("km", 0) or 0)
+    has_import_distance = bool(nearest_import and nearest_import["distanceKm"] < source_distance_km)
+    displayed_distance_km = nearest_import["distanceKm"] if has_import_distance and nearest_import else source_distance_km
+
+    hpi = dict(base_hpi)
+    hpi["factors"] = {k: dict(v) for k, v in factors.items()}
+
+    if has_import_distance and nearest_import and nearest_import["effectiveHpiScore"] > 0:
+        distance_factor = hpi["factors"]["distance"]
+        travel_factor = hpi["factors"]["travelConnectivity"]
+        distance_weight = float(distance_factor.get("weight", 0.3))
+        travel_weight = float(travel_factor.get("weight", 0.15))
+        travel_score = _risk_travel_score(nearest_import["travelConnectivity"])
+        base_travel_score = float(travel_factor.get("score", 15))
+        total = min(
+            100,
+            round(
+                int(base_hpi.get("total", 0))
+                + nearest_import["effectiveHpiScore"] * distance_weight
+                + max(0, travel_score - base_travel_score) * travel_weight
+            ),
+        )
+        grade, grade_zh, color = _risk_grade_hpi(total)
+        hpi.update({"total": total, "grade": grade, "gradeZh": grade_zh, "color": color})
+        distance_factor["km"] = nearest_import["distanceKm"]
+        distance_factor["score"] = max(float(distance_factor.get("score", 0)), nearest_import["effectiveHpiScore"])
+        travel_factor["level"] = nearest_import["travelConnectivityZh"]
+        travel_factor["score"] = max(base_travel_score, travel_score)
+
+    previous_displayed = None
+    previous_hpi = None
+    if isinstance(previous_snapshot, dict):
+        previous_displayed = previous_snapshot.get("displayedDistanceKm")
+        previous_hpi_obj = previous_snapshot.get("currentHpi")
+        if isinstance(previous_hpi_obj, dict):
+            previous_hpi = previous_hpi_obj.get("total")
+
+    distance_delta_km = displayed_distance_km - int(previous_displayed) if isinstance(previous_displayed, int) else 0
+    hpi_delta = int(hpi["total"]) - int(previous_hpi) if isinstance(previous_hpi, int) else 0
+    grade_zh = hpi.get("gradeZh", "未知")
+    hpi_phrase = (
+        f"HPI 指数持平（当前 {hpi['total']}，{grade_zh}）"
+        if hpi_delta == 0
+        else f"HPI 指数{'增加' if hpi_delta > 0 else '减少'} {abs(hpi_delta)}（当前 {hpi['total']}，{grade_zh}）"
+    )
+    baseline_phrase = {
+        "normal": "国内 HFRS 处于基线正常范围",
+        "elevated": "国内 HFRS 高于基线，需关注",
+        "below": "国内 HFRS 低于基线",
+    }.get(daily_brief.get("domesticBaselineStatus"), "国内 HFRS 基线状态未知")
+    if has_import_distance and nearest_import:
+        dist_phrase = (
+            f"最近已确认输入为{nearest_import['nameZh']}，距中国大陆约 {displayed_distance_km:,} km；"
+            f"疫情源头{reference.get('name') or '当前重点疫情聚集'}约 {source_distance_km:,} km"
+        )
+    elif distance_delta_km == 0:
+        dist_phrase = "重点疫情聚集距中国大陆基本持平"
+    else:
+        dist_phrase = f"重点疫情聚集离中国大陆{'远了' if distance_delta_km > 0 else '近了'} {abs(distance_delta_km):,} km"
+
+    snapshot_daily_brief = {
+        **daily_brief,
+        "distanceDeltaKm": distance_delta_km,
+        "hpiDelta": hpi_delta,
+        "oneLine": f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。",
+    }
+    return {
+        "date": _today_cn().isoformat(),
+        "currentHpi": hpi,
+        "baseHpi": base_hpi,
+        "nearestImport": nearest_import,
+        "displayedDistanceKm": displayed_distance_km,
+        "sourceDistanceKm": source_distance_km,
+        "hasImportDistance": has_import_distance,
+        "distanceDeltaKm": distance_delta_km,
+        "hpiDelta": hpi_delta,
+        "dailyBrief": snapshot_daily_brief,
+    }
+
+
 # -- Current HPI -----------------------------------------------------------
 def derive_current_hpi(
     *,
@@ -767,12 +973,15 @@ def write_all_outputs(
     hpi_history: list[dict],
     daily_brief: dict,
     meta: dict,
+    risk_snapshot: dict | None = None,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     write_generated_json(out_dir / "active-clusters.json", {"clusters": active_clusters, "currentHpi": current_hpi})
     write_generated_json(out_dir / "recent-cases-intl.json", {"cases": recent_cases_intl})
     write_generated_json(out_dir / "hpi-history.json", {"series": hpi_history})
     write_generated_json(out_dir / "daily-brief.json", daily_brief)
+    if risk_snapshot is not None:
+        write_generated_json(out_dir / "risk-snapshot.json", risk_snapshot)
     write_generated_json(out_dir / "meta.json", meta)
 
 
@@ -812,6 +1021,7 @@ __all__ = [
     "merge_manual_news_leads",
     "update_hpi_history",
     "build_daily_brief",
+    "build_risk_snapshot",
     "derive_current_hpi",
     "build_meta",
     "write_all_outputs",

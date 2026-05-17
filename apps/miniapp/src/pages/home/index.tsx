@@ -14,9 +14,13 @@ import {
   chinaHfrsMonthly2026,
   dataMeta,
   realtimeFeed,
+  riskSnapshot,
 } from '@/lib/data';
+import type { RecentCase } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
-import { fetchClusters, trackPageView } from '@/utils/api';
+import type { ImportProximity } from '@/lib/nearest-cluster';
+import { fetchClusters, fetchNewsEntries, trackPageView } from '@/utils/api';
+import type { ManualNewsEntryPayload } from '@/utils/api';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
@@ -43,6 +47,7 @@ export default function HomePage() {
   // dependency). After mount, optionally refresh from /api/clusters so
   // editorial overrides (saved via the web /admin queue) take effect.
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(baselineClusters);
+  const [liveRecentCases, setLiveRecentCases] = useState<RecentCase[]>(recentCases);
 
   useLoad(() => {
     trackPageView('pages/home/index');
@@ -55,8 +60,45 @@ export default function HomePage() {
         if (cancelled) return;
         if (Array.isArray(data) && data.length > 0) setLiveClusters(data);
       })
-      .catch(() => {
-        /* keep bundled baseline */
+      .catch((err) => {
+        console.error('[HantaWatch] fetchClusters failed, keeping bundled baseline:', err);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchNewsEntries()
+      .then((data) => {
+        if (cancelled) return;
+        const hiddenIds = Array.isArray(data.hiddenIds) ? data.hiddenIds : [];
+        const rawAdditions = Array.isArray(data.additions) ? data.additions : [];
+        if (hiddenIds.length === 0 && rawAdditions.length === 0) return;
+        const additions: RecentCase[] = rawAdditions.map((a: ManualNewsEntryPayload) => ({
+          id: a.id,
+          regionCode: a.regionCode ?? (a.scope === 'china' ? '000000' : 'INT'),
+          serotypeId: a.serotypeId ?? 'other',
+          date: a.date ?? '',
+          caseType: a.caseType === 'clinical' || a.caseType === 'suspected' ? a.caseType : 'confirmed',
+          count: Number(a.count ?? 0),
+          title: a.title,
+          summary: a.summary,
+          source: {
+            name: a.sourceName ?? '',
+            url: a.sourceUrl ?? '',
+            retrievedAt: a.createdAt ?? new Date().toISOString(),
+            confidence: a.confidence ?? 'official',
+          },
+          notes: a.notes,
+          scope: a.scope ?? 'international',
+        }));
+        const hideSet = new Set(hiddenIds);
+        setLiveRecentCases([...recentCases.filter((c) => !hideSet.has(c.id)), ...additions].sort((a, b) => b.date.localeCompare(a.date)));
+      })
+      .catch((err) => {
+        console.error('[HantaWatch] fetchNewsEntries failed, keeping bundled baseline:', err);
       });
     return () => {
       cancelled = true;
@@ -64,18 +106,35 @@ export default function HomePage() {
   }, []);
 
   // WeChat native share — replaces the web app's /share poster page.
-  useShareAppMessage(() => ({
-    title: `汉坦距中国大陆 ${fmt(findNearestAndes(liveClusters).km > 0 ? findNearestAndes(liveClusters).km : 0)} km · 病毒观察`,
-    path: '/pages/home/index',
-  }));
+  useShareAppMessage(() => {
+    if (hasImportDistance) {
+      return {
+        title: `汉坦距中国大陆 ${fmt(displayedDistanceKm)} km（${nearestImport!.nameZh}输入）· 病毒观察`,
+        path: '/pages/home/index',
+      };
+    }
+    const nearest = findNearestAndes(liveClusters);
+    return {
+      title: `汉坦距中国大陆 ${fmt(nearest.km > 0 ? nearest.km : 0)} km · 病毒观察`,
+      path: '/pages/home/index',
+    };
+  });
   useShareTimeline(() => ({
     title: '病毒观察 BingDuGuanCha · 第一时间看清风险',
   }));
 
+  const nearestImport = riskSnapshot.nearestImport as ImportProximity | null | undefined;
   const hpi = currentHpi;
+
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
   const cluster = nearestAndes.nearest ?? liveClusters[0];
-  const distTone = cluster ? distanceRingBg(cluster.distanceFromChinaKm) : distanceRingBg(99999);
+
+  // When a confirmed/quarantined import is closer than the outbreak source,
+  // we show the import distance (e.g. France ~8,400 km) instead of the source
+  // distance (Ushuaia ~16,500 km). Mirrors web page.tsx L200-201.
+  const hasImportDistance = riskSnapshot.hasImportDistance === true;
+  const displayedDistanceKm = riskSnapshot.displayedDistanceKm ?? cluster?.distanceFromChinaKm ?? 0;
+  const distTone = distanceRingBg(displayedDistanceKm);
 
   const ranking: Array<{ id: keyof typeof SEROTYPES; label: string; color: string; bg: string; border: string }> = [
     { id: 'andes', label: '🔴 高危关注', color: '#dc2626', bg: '#fef2f2', border: '#fca5a5' },
@@ -162,17 +221,22 @@ export default function HomePage() {
               }}
             >
               <Text style={{ color: '#6b7280', fontSize: '22rpx', fontWeight: 500, display: 'block' }}>
-                最近 Andes 疫情距中国大陆
+                {hasImportDistance ? '最近已确认输入距中国大陆' : '最近 Andes 疫情距中国大陆'}
               </Text>
               <View className="flex items-baseline gap-1 mt-1">
                 <Text style={{ fontSize: '72rpx', fontWeight: 800, color: distTone.color, lineHeight: 1 }}>
-                  {fmt(cluster.distanceFromChinaKm)}
+                  {fmt(displayedDistanceKm)}
                 </Text>
                 <Text style={{ fontSize: '32rpx', fontWeight: 700, color: '#9ca3af' }}>km</Text>
               </View>
               <Text style={{ fontSize: '22rpx', color: '#6b7280', marginTop: '6rpx', display: 'block' }} className="truncate">
-                {cluster.location.name}
+                {hasImportDistance ? `${nearestImport!.flag} ${nearestImport!.nameZh} · ${nearestImport!.statusZh}` : cluster?.location?.name ?? ''}
               </Text>
+              {hasImportDistance && (
+                <Text style={{ fontSize: '18rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
+                  疫情源头: {cluster?.location?.name ?? ''}（{fmt(cluster?.distanceFromChinaKm ?? 0)} km）
+                </Text>
+              )}
               {/* Distance ring */}
               <View className="flex gap-1 mt-2">
                 <View style={{ flex: 1, height: '6rpx', background: '#22c55e', borderRadius: '3rpx' }} />
@@ -227,7 +291,7 @@ export default function HomePage() {
               color: '#fff',
             },
             { v: 0, label: '中国大陆社区传播', color: '#86efac' },
-            { v: cluster ? fmt(cluster.distanceFromChinaKm) : '—', label: '距中国大陆 (km)', color: '#fff' },
+            { v: fmt(displayedDistanceKm), label: hasImportDistance ? `距最近输入 ${nearestImport!.nameZh} (km)` : '距中国大陆 (km)', color: '#fff' },
           ].map((m, i) => (
             <View
               key={i}
@@ -296,6 +360,7 @@ export default function HomePage() {
           <NearestAndesCard
             result={nearestAndes}
             lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
+            importProximity={hasImportDistance ? nearestImport : null}
           />
         </View>
 
@@ -446,7 +511,7 @@ export default function HomePage() {
             </View>
             <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>国际 + 国内 · 按日期倒序</Text>
           </View>
-          <RecentCasesList cases={recentCases.slice(0, 12)} />
+          <RecentCasesList cases={liveRecentCases.slice(0, 12)} />
         </View>
       </View>
 

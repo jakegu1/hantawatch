@@ -43,6 +43,7 @@ const STATUS_STYLES: Record<
   { bg: string; fg: string; label: string }
 > = {
   imports_confirmed: { bg: '#fef2f2', fg: '#b91c1c', label: '确诊输入' },
+  presumptive_positive: { bg: '#fff7ed', fg: '#c2410c', label: '初筛阳性' },
   quarantine_active: { bg: '#fffbeb', fg: '#b45309', label: '隔离中' },
   monitoring: { bg: '#eff6ff', fg: '#1d4ed8', label: '监测中' },
   closed: { bg: '#f3f4f6', fg: '#4b5563', label: '已结束' },
@@ -201,9 +202,10 @@ function ImportsBanner() {
   if (hondiusImports.length === 0) return null;
   const order: Record<MvHondiusImport['status'], number> = {
     imports_confirmed: 0,
-    quarantine_active: 1,
-    monitoring: 2,
-    closed: 3,
+    presumptive_positive: 1,
+    quarantine_active: 2,
+    monitoring: 3,
+    closed: 4,
   };
   const sorted = [...hondiusImports].sort((a, b) => order[a.status] - order[b.status]);
   const byIso2 = new Map(countryViews.map((c) => [c.iso2, c]));

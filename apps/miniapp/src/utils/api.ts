@@ -1,7 +1,32 @@
 import Taro from '@tarojs/taro';
-import type { HpiResult, ActiveCluster } from '@hantawatch/shared/types';
+import type { HpiResult, ActiveCluster, CaseRecord, SerotypeId } from '@hantawatch/shared/types';
 
 const API_BASE = 'https://bingduguancha.com/api';
+
+interface ClustersPayload {
+  clusters: ActiveCluster[];
+  currentHpi?: HpiResult;
+  overrideCount?: number;
+  generatedAt?: string;
+}
+
+export interface ManualNewsEntryPayload extends Partial<CaseRecord> {
+  id: string;
+  scope?: 'china' | 'international';
+  title?: string;
+  summary?: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  confidence?: 'official' | 'academic' | 'news' | 'media' | 'unverified';
+  createdAt?: string;
+  serotypeId?: SerotypeId;
+}
+
+export interface NewsEntriesPayload {
+  additions: ManualNewsEntryPayload[];
+  hiddenIds: string[];
+  generatedAt: string;
+}
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await Taro.request({
@@ -25,7 +50,13 @@ export function fetchHpi(): Promise<HpiResult> {
 
 /** Fetch active clusters */
 export function fetchClusters(): Promise<ActiveCluster[]> {
-  return request<ActiveCluster[]>('/clusters');
+  return request<ActiveCluster[] | ClustersPayload>('/clusters').then((data) => (
+    Array.isArray(data) ? data : data.clusters
+  ));
+}
+
+export function fetchNewsEntries(): Promise<NewsEntriesPayload> {
+  return request<NewsEntriesPayload>('/news-entries');
 }
 
 /** Submit feedback */
@@ -51,5 +82,5 @@ export function trackPageView(page: string): void {
       timestamp: new Date().toISOString(),
     },
     header: { 'Content-Type': 'application/json' },
-  }).catch(() => {});
+  }).catch((e) => console.error('[HantaWatch] trackPageView failed:', e));
 }

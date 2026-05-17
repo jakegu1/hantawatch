@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, realtimeFeed, hondiusImports } from '@/lib/data';
+import { dataMeta, realtimeFeed, riskSnapshot } from '@/lib/data';
 import type { DailyBrief, RecentCase } from '@/lib/data';
-import { findNearestAndes, findNearestImport, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
+import { findNearestAndes, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
@@ -135,61 +135,8 @@ export default function HomePage() {
   // the heavy filter+sort doesn't run on every state tick.
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
 
-  // Nearest confirmed import — e.g. France (confirmed import, ~8,400 km) is
-  // closer than the outbreak source (Ushuaia, 16,500 km).
-  const nearestImport = useMemo(
-    () => findNearestImport(hondiusImports as Array<{ iso2: string; status: string; summary_zh?: string }>),
-    [],
-  );
-
-  // Client-side HPI adjustment: if a confirmed/quarantined import is closer
-  // than the source, the distance factor gets a weighted bump.
-  // effectiveHpiScore is pre-computed in findNearestImport (distScore × status_weight).
-  // We add it to the base HPI's distance component, capped at 100.
-  const hpi = useMemo(() => {
-    const base = currentHpi;
-    if (!nearestImport || nearestImport.effectiveHpiScore <= 0) return base;
-    const distanceWeight = base.factors?.distance?.weight ?? 0.3;
-    const travelWeight = base.factors?.travelConnectivity?.weight ?? 0.15;
-    const travelScore = nearestImport.travelConnectivity === 'direct'
-      ? 40
-      : nearestImport.travelConnectivity === 'indirect'
-        ? 15
-        : 5;
-    const baseTravelScore = base.factors?.travelConnectivity?.score ?? 15;
-    const importDistanceBump = nearestImport.effectiveHpiScore * distanceWeight;
-    const importTravelBump = Math.max(0, travelScore - baseTravelScore) * travelWeight;
-    const newTotal = Math.min(100, Math.round(base.total + importDistanceBump + importTravelBump));
-    // Re-grade
-    const grades = [
-      { id: 'low' as const, zh: '低关注', color: '#16a34a', max: 20 },
-      { id: 'moderate' as const, zh: '一般关注', color: '#0891b2', max: 40 },
-      { id: 'elevated' as const, zh: '中等关注', color: '#ca8a04', max: 60 },
-      { id: 'high' as const, zh: '高度关注', color: '#ea580c', max: 80 },
-      { id: 'severe' as const, zh: '严重关注', color: '#dc2626', max: 100 },
-    ];
-    const grade = grades.find((g) => newTotal <= g.max) ?? grades[grades.length - 1];
-    return {
-      ...base,
-      total: newTotal,
-      grade: grade.id,
-      gradeZh: grade.zh,
-      color: grade.color,
-      factors: {
-        ...base.factors,
-        distance: {
-          ...base.factors.distance,
-          km: nearestImport.distanceKm,
-          score: Math.max(base.factors.distance.score, nearestImport.effectiveHpiScore),
-        },
-        travelConnectivity: {
-          ...base.factors.travelConnectivity,
-          level: nearestImport.travelConnectivityZh,
-          score: Math.max(baseTravelScore, travelScore),
-        },
-      },
-    };
-  }, [nearestImport]);
+  const nearestImport = riskSnapshot.nearestImport as ImportProximity | null | undefined;
+  const hpi = currentHpi;
 
   // The hero still needs a *single* cluster object for the distance card +
   // map. Fall back to liveClusters[0] when no Andes cluster exists at all
@@ -197,37 +144,15 @@ export default function HomePage() {
   const cluster = nearestAndes.nearest ?? liveClusters[0];
 
   const hpiFactors = hpi.factors;
-  const hasImportDistance = nearestImport != null && nearestImport.distanceKm < cluster.distanceFromChinaKm;
-  const displayedDistanceKm = hasImportDistance ? nearestImport!.distanceKm : cluster.distanceFromChinaKm;
+  const hasImportDistance = riskSnapshot.hasImportDistance === true;
+  const displayedDistanceKm = riskSnapshot.displayedDistanceKm ?? cluster.distanceFromChinaKm;
   const dynamicHpi7DayHistory = useMemo(() => {
     if (hpi7DayHistory.length === 0) return hpi7DayHistory;
     return hpi7DayHistory.map((point, index) =>
       index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
     );
   }, [hpi.total]);
-  const dynamicTodayBrief = useMemo<DailyBrief>(() => {
-    const previousHpi = hpi7DayHistory.length >= 2
-      ? hpi7DayHistory[hpi7DayHistory.length - 2].value
-      : currentHpi.total;
-    const hpiDelta = hpi.total - previousHpi;
-    const hpiPhrase = hpiDelta === 0
-      ? `HPI 指数持平（当前 ${hpi.total}，${hpi.gradeZh}）`
-      : `HPI 指数${hpiDelta > 0 ? '增加' : '减少'} ${Math.abs(hpiDelta)}（当前 ${hpi.total}，${hpi.gradeZh}）`;
-    const baselinePhrase = {
-      normal: '国内 HFRS 处于基线正常范围',
-      elevated: '国内 HFRS 高于基线，需关注',
-      below: '国内 HFRS 低于基线',
-    }[todayBrief.domesticBaselineStatus];
-    const importPhrase = hasImportDistance
-      ? `最近已确认输入为${nearestImport!.nameZh}，距中国大陆约 ${displayedDistanceKm.toLocaleString('zh-CN')} km；疫情源头${cluster.location.name}约 ${cluster.distanceFromChinaKm.toLocaleString('zh-CN')} km`
-      : todayBrief.oneLine.split('，HPI 指数')[0];
-    return {
-      ...todayBrief,
-      distanceDeltaKm: hasImportDistance ? displayedDistanceKm - cluster.distanceFromChinaKm : todayBrief.distanceDeltaKm,
-      hpiDelta,
-      oneLine: `${importPhrase}，${hpiPhrase}，${baselinePhrase}。`,
-    };
-  }, [cluster.distanceFromChinaKm, cluster.location.name, displayedDistanceKm, hasImportDistance, hpi.gradeZh, hpi.total, nearestImport]);
+  const dynamicTodayBrief: DailyBrief = todayBrief;
 
   return (
     <div className="pb-16">
@@ -340,8 +265,10 @@ export default function HomePage() {
               <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">中国大陆社区传播</div>
             </div>
             <div className="rounded-lg sm:rounded-xl bg-white/10 backdrop-blur px-2 py-2 sm:p-3 text-center">
-              <div className="text-base sm:text-xl font-bold leading-none">{fmt(cluster.distanceFromChinaKm)}</div>
-              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">距中国大陆 (km)</div>
+              <div className="text-base sm:text-xl font-bold leading-none">{fmt(displayedDistanceKm)}</div>
+              <div className="mt-1 text-[10px] sm:text-[11px] opacity-70 leading-tight">
+                {hasImportDistance ? `距最近输入 (km)` : '距中国大陆 (km)'}
+              </div>
             </div>
           </div>
 
@@ -613,10 +540,7 @@ export default function HomePage() {
                           {c.source.name} ↗
                         </a>
                       ) : (
-                        <span
-                          className="text-[10px] text-gray-400 truncate max-w-[200px]"
-                          title={`来源：${c.source.name}（境外来源不提供外链）`}
-                        >
+                        <span className="text-[10px] text-gray-400 truncate max-w-[200px]">
                           {c.source.name}
                         </span>
                       )}

@@ -38,6 +38,7 @@ import recentCasesChinaJson from '@/data/recent-cases-china.json';
 import chinaBaselineJson from '@/data/china-baseline.json';
 import hpiHistoryJson from '@/data/hpi-history.json';
 import dailyBriefJson from '@/data/daily-brief.json';
+import riskSnapshotJson from '@/data/risk-snapshot.json';
 import metaJson from '@/data/meta.json';
 import realtimeFeedJson from '@/data/realtime-feed.json';
 import countryStatusJson from '@/data/country-status.json';
@@ -47,7 +48,17 @@ import countrySignalsJson from '@/data/country-signals.json';
 // ---- Active clusters & current HPI ---------------------------------------
 
 export const activeClusters: ActiveCluster[] = activeClustersJson.clusters as ActiveCluster[];
-export const currentHpi: HpiResult = activeClustersJson.currentHpi as HpiResult;
+export const riskSnapshot = riskSnapshotJson as {
+  currentHpi?: HpiResult;
+  nearestImport?: unknown;
+  displayedDistanceKm?: number;
+  sourceDistanceKm?: number;
+  hasImportDistance?: boolean;
+  distanceDeltaKm?: number;
+  hpiDelta?: number;
+  dailyBrief?: Partial<DailyBrief>;
+};
+export const currentHpi: HpiResult = (riskSnapshot.currentHpi ?? activeClustersJson.currentHpi) as HpiResult;
 
 // ---- HPI history (7-day sparkline) ---------------------------------------
 
@@ -66,13 +77,13 @@ export interface DailyBrief {
 }
 
 export const todayBrief: DailyBrief = {
-  date: dailyBriefJson.date,
-  distanceDeltaKm: dailyBriefJson.distanceDeltaKm,
-  hpiDelta: dailyBriefJson.hpiDelta,
-  globalNewCases: dailyBriefJson.globalNewCases,
-  domesticBaselineStatus: dailyBriefJson.domesticBaselineStatus as DailyBrief['domesticBaselineStatus'],
-  oneLine: dailyBriefJson.oneLine,
-  daysSinceLastIntlAlert: dailyBriefJson.daysSinceLastIntlAlert,
+  date: riskSnapshot.dailyBrief?.date ?? dailyBriefJson.date,
+  distanceDeltaKm: riskSnapshot.dailyBrief?.distanceDeltaKm ?? dailyBriefJson.distanceDeltaKm,
+  hpiDelta: riskSnapshot.dailyBrief?.hpiDelta ?? dailyBriefJson.hpiDelta,
+  globalNewCases: riskSnapshot.dailyBrief?.globalNewCases ?? dailyBriefJson.globalNewCases,
+  domesticBaselineStatus: (riskSnapshot.dailyBrief?.domesticBaselineStatus ?? dailyBriefJson.domesticBaselineStatus) as DailyBrief['domesticBaselineStatus'],
+  oneLine: riskSnapshot.dailyBrief?.oneLine ?? dailyBriefJson.oneLine,
+  daysSinceLastIntlAlert: riskSnapshot.dailyBrief?.daysSinceLastIntlAlert ?? dailyBriefJson.daysSinceLastIntlAlert,
 };
 
 // ---- China baseline (yearly, monthly, by province) -----------------------

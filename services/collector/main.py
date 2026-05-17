@@ -51,6 +51,7 @@ from hantawatch_collector.builder import (
     build_daily_brief,
     build_meta,
     build_recent_cases_intl,
+    build_risk_snapshot,
     derive_current_hpi,
     get_prev_nearest_distance,
     get_prev_reference_cluster_id,
@@ -227,6 +228,16 @@ def main(argv: list[str] | None = None) -> int:
         domestic_baseline_status=domestic_baseline,
     )
 
+    imports_payload = read_json(out_dir / "mv-hondius-imports.json", default=None)
+    previous_snapshot = read_json(out_dir / "risk-snapshot.json", default=None)
+    risk_snapshot = build_risk_snapshot(
+        base_hpi=current_hpi,
+        imports_payload=imports_payload,
+        previous_snapshot=previous_snapshot,
+        daily_brief=daily_brief,
+    )
+    daily_brief = risk_snapshot["dailyBrief"]
+
     # ---- 8. Recent international cases (WHO + ECDC + Google News + manual) ----
     # We pass `fallback_path` so build_recent_cases_intl can carry over
     # official WHO/ECDC entries from the previous run when today's fetch
@@ -323,6 +334,7 @@ def main(argv: list[str] | None = None) -> int:
             current_hpi=current_hpi,
             hpi_history=hpi_history,
             daily_brief=daily_brief,
+            risk_snapshot=risk_snapshot,
             meta=meta,
         )
         if realtime_feed:

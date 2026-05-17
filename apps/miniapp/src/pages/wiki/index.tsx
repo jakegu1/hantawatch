@@ -1,7 +1,8 @@
 import './index.scss';
 import { View, Text } from '@tarojs/components';
 import { useLoad } from '@tarojs/taro';
-import { SEROTYPES } from '@hantawatch/shared';
+import { SEROTYPES, SEROTYPE_RANK_ORDER } from '@hantawatch/shared';
+import type { SerotypeId } from '@hantawatch/shared/types';
 import { trackPageView } from '@/utils/api';
 import { HantaTimeline } from '@/components/hanta-timeline';
 
@@ -34,7 +35,7 @@ export default function WikiPage() {
   });
 
   // Skip the synthetic 'other' fallback entry — see web wiki page for why.
-  const serotypes = Object.values(SEROTYPES).filter((s) => s.id !== 'other');
+  const serotypes = SEROTYPE_RANK_ORDER.map((id) => SEROTYPES[id as SerotypeId]).filter((s) => s.id !== 'other');
 
   return (
     <View className="page">

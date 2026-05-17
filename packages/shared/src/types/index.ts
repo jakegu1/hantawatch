@@ -170,6 +170,7 @@ export interface CountryStatusFile {
 // WHO / national authorities publish new monitoring numbers.
 export type MvHondiusStatus =
   | 'monitoring'         // contacts under surveillance, no confirmed cases
+  | 'presumptive_positive'
   | 'quarantine_active'  // active quarantine ongoing
   | 'imports_confirmed'  // confirmed imported Andes virus case(s)
   | 'closed';            // event closed without sustained transmission

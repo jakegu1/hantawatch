@@ -104,7 +104,7 @@ export function linkSuppressedReason(url: string | undefined | null): string {
   if (!url) return '暂无来源链接';
   try {
     const host = new URL(url).hostname;
-    return `来源位于境外（${host}），本站仅展示文字不提供外链`;
+    return `来源暂不提供外链（${host}），本站仅展示文字`;
   } catch {
     return '来源链接无效，仅展示文字';
   }

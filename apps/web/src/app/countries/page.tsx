@@ -47,6 +47,7 @@ function StatusBadge({ imp }: { imp: MvHondiusImport }) {
   // semantic palette (red = high, amber = elevated, blue = info).
   const palette: Record<MvHondiusImport['status'], { bg: string; fg: string; label: string }> = {
     imports_confirmed: { bg: 'bg-red-50', fg: 'text-red-700', label: '确诊输入' },
+    presumptive_positive: { bg: 'bg-orange-50', fg: 'text-orange-700', label: '初筛阳性' },
     quarantine_active: { bg: 'bg-amber-50', fg: 'text-amber-700', label: '隔离中' },
     monitoring: { bg: 'bg-blue-50', fg: 'text-blue-700', label: '监测中' },
     closed: { bg: 'bg-gray-100', fg: 'text-gray-600', label: '已结束' },
@@ -144,9 +145,10 @@ function ImportsBanner() {
   // Sort imports: confirmed > quarantine > monitoring > closed.
   const order: Record<MvHondiusImport['status'], number> = {
     imports_confirmed: 0,
-    quarantine_active: 1,
-    monitoring: 2,
-    closed: 3,
+    presumptive_positive: 1,
+    quarantine_active: 2,
+    monitoring: 3,
+    closed: 4,
   };
   const sorted = [...hondiusImports].sort((a, b) => order[a.status] - order[b.status]);
   const byIso2 = new Map(countryViews.map((c) => [c.iso2, c]));

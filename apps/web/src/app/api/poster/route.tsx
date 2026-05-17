@@ -3,7 +3,8 @@ import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 import QRCode from 'qrcode';
 
-import { todayBrief, currentHpi, activeClusters, dataMeta } from '@/lib/data';
+import { todayBrief, currentHpi, activeClusters, dataMeta, riskSnapshot } from '@/lib/data';
+import type { ImportProximity } from '@/lib/nearest-cluster';
 
 /**
  * GET /api/poster
@@ -41,14 +42,20 @@ export async function GET(req: NextRequest) {
 
   const cluster = activeClusters[0];
   const sero = cluster?.serotypeId ?? 'andes';
-  const distanceKm = cluster?.distanceFromChinaKm ?? 0;
+  const nearestImport = riskSnapshot.nearestImport as ImportProximity | null | undefined;
+  const hpi = currentHpi;
+  const hasImport = riskSnapshot.hasImportDistance === true;
+  const distanceKm = riskSnapshot.displayedDistanceKm ?? (cluster?.distanceFromChinaKm ?? 0);
+  const distanceLabel = hasImport
+    ? `距最近输入 ${nearestImport!.nameZh}`
+    : '最近聚集地距中国';
 
   // Theme colors
   const bg = variant === 'dark' ? '#0c1c3a' : '#f8fafc';
   const fg = variant === 'dark' ? '#ffffff' : '#0f172a';
   const muted = variant === 'dark' ? '#94a3b8' : '#475569';
   const cardBg = variant === 'dark' ? 'rgba(255,255,255,0.08)' : '#ffffff';
-  const hpiColor = currentHpi.color;
+  const hpiColor = hpi.color;
 
   return new ImageResponse(
     (
@@ -91,10 +98,10 @@ export async function GET(req: NextRequest) {
           <div style={{ fontSize: 28, color: muted, marginBottom: 16 }}>HPI 汉坦逼近指数</div>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 24 }}>
             <div style={{ fontSize: 220, fontWeight: 900, color: hpiColor, lineHeight: 1, letterSpacing: '-0.05em' }}>
-              {currentHpi.total}
+              {hpi.total}
             </div>
             <div style={{ fontSize: 56, fontWeight: 700, color: hpiColor, paddingBottom: 16 }}>
-              {currentHpi.gradeZh}
+              {hpi.gradeZh}
             </div>
           </div>
           {/* Progress bar */}
@@ -110,7 +117,7 @@ export async function GET(req: NextRequest) {
           >
             <div
               style={{
-                width: `${currentHpi.total}%`,
+                width: `${hpi.total}%`,
                 background: hpiColor,
                 borderRadius: 999,
               }}
@@ -145,7 +152,7 @@ export async function GET(req: NextRequest) {
               flexDirection: 'column',
             }}
           >
-            <div style={{ fontSize: 22, color: muted, marginBottom: 8 }}>最近聚集地距中国</div>
+            <div style={{ fontSize: 22, color: muted, marginBottom: 8 }}>{distanceLabel}</div>
             <div style={{ fontSize: 64, fontWeight: 800, lineHeight: 1.1 }}>
               {distanceKm.toLocaleString('zh-CN')}
               <span style={{ fontSize: 28, color: muted, marginLeft: 8 }}>km</span>

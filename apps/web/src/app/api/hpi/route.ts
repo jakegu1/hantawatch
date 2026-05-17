@@ -1,25 +1,27 @@
 ﻿import { NextResponse } from 'next/server';
-import { calculateHpi } from '@/lib/hpi';
+import { currentHpi, riskSnapshot } from '@/lib/data';
+import { hpiFactorsToBreakdown } from '@/lib/risk-snapshot';
 
 /**
  * GET /api/hpi
- * Returns the current HPI calculation.
+ * Returns the current HPI snapshot using the same import-distance adjustment
+ * that the homepage applies.
  */
 export async function GET() {
-  const hpi = calculateHpi({
-    distanceKm: 18800,
-    officialRiskLevel: 'low',
-    serotypeId: 'andes',
-    travelConnectivity: 'indirect',
-    baselineDeviation: 'normal',
-  });
+  const hpi = currentHpi;
 
   return NextResponse.json({
     total: hpi.total,
     grade: hpi.grade,
     gradeZh: hpi.gradeZh,
     color: hpi.color,
-    breakdown: hpi.breakdown,
+    factors: hpi.factors,
+    breakdown: hpiFactorsToBreakdown(hpi),
+    referenceCluster: hpi.referenceCluster,
+    nearestImport: riskSnapshot.nearestImport,
+    displayedDistanceKm: riskSnapshot.displayedDistanceKm,
+    sourceDistanceKm: riskSnapshot.sourceDistanceKm,
+    hasImportDistance: riskSnapshot.hasImportDistance,
     updatedAt: new Date().toISOString(),
     methodology: 'https://bingduguancha.com/about#hpi',
   });
