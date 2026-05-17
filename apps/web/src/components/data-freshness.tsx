@@ -71,7 +71,9 @@ export function DataFreshness({ meta, variant = 'pill' }: DataFreshnessProps) {
   const whoOk = sources.who_don?.ok ?? false;
   const ecdcOk = sources.ecdc?.ok ?? false;
   const newsOk = sources.news_leads?.ok ?? false;
-  const allOk = whoOk && ecdcOk;
+  const officialChecked = Boolean(sources.official_sources?.checkedAt);
+  const officialDisplayOk = sources.official_sources?.ok ?? false;
+  const allOk = whoOk && ecdcOk && (!officialChecked || officialDisplayOk);
 
   const tone: 'ok' | 'warn' | 'err' =
     staleHours > 48 || !allOk ? 'err' : staleHours > 12 ? 'warn' : 'ok';
@@ -93,12 +95,12 @@ export function DataFreshness({ meta, variant = 'pill' }: DataFreshnessProps) {
         <span className="opacity-80">数据更新</span>
         <b className="font-semibold">{text}</b>
         <span className="opacity-50">·</span>
-        <span title={`WHO: ${whoOk ? 'OK' : '失败'} · ECDC: ${ecdcOk ? 'OK' : '失败'} · 新闻: ${newsOk ? 'OK' : '空'}`}>
+        <span title={`WHO: ${whoOk ? 'OK' : '失败'} · ECDC: ${ecdcOk ? 'OK' : '失败'} · 新闻: ${newsOk ? 'OK' : '空'} · 官方源: ${sources.official_sources?.okCount ?? 0}/${sources.official_sources?.entries ?? 0}`}>
           {whoOk ? '✓' : '✗'} WHO
           <span className="opacity-50 mx-0.5">·</span>
           {ecdcOk ? '✓' : '✗'} ECDC
           <span className="opacity-50 mx-0.5">·</span>
-          {newsOk ? '✓' : '○'} News
+          {officialDisplayOk ? '✓' : '○'} 官方源
         </span>
       </div>
     );
@@ -111,10 +113,11 @@ export function DataFreshness({ meta, variant = 'pill' }: DataFreshnessProps) {
         <span className="font-medium">数据管道状态</span>
         <span className="ml-auto text-xs text-gray-500">最近更新 {text}</span>
       </div>
-      <div className="grid grid-cols-3 gap-2 text-xs">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
         <SourceTile name="WHO DON" ok={whoOk} extra={`${sources.who_don?.entries ?? 0} 条`} />
         <SourceTile name="ECDC" ok={ecdcOk} extra="风险评估" />
         <SourceTile name="新闻线索" ok={newsOk} extra={`${sources.news_leads?.entries ?? 0} 条`} />
+        <SourceTile name="官方源" ok={!officialChecked || officialDisplayOk} extra={`${sources.official_sources?.okCount ?? 0}/${sources.official_sources?.entries ?? 0} 可达`} />
       </div>
     </div>
   );

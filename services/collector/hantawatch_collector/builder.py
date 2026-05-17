@@ -1124,7 +1124,10 @@ def build_meta(
     cluster_count: int,
     news_count: int = 0,
     news_diagnostics: list[dict] | None = None,
+    official_sources_status: dict | None = None,
 ) -> dict:
+    official_total = official_sources_status.get("total", 0) if isinstance(official_sources_status, dict) else 0
+    official_ok = official_sources_status.get("okCount", 0) if isinstance(official_sources_status, dict) else 0
     return {
         "lastCollectedAt": datetime.now(timezone.utc).isoformat(),
         "lastCollectedAtCn": datetime.now(CHINA_TZ).isoformat(),
@@ -1135,6 +1138,12 @@ def build_meta(
                 "entries": news_count,
                 "ok": news_count > 0,
                 "perQuery": news_diagnostics or [],
+            },
+            "official_sources": {
+                "entries": official_total,
+                "ok": official_total > 0 and official_ok > 0,
+                "okCount": official_ok,
+                "checkedAt": official_sources_status.get("checkedAt") if isinstance(official_sources_status, dict) else None,
             },
         },
         "clusterCount": cluster_count,
@@ -1157,6 +1166,7 @@ def write_all_outputs(
     meta: dict,
     risk_snapshot: dict | None = None,
     country_risk_snapshot: dict | None = None,
+    official_sources_status: dict | None = None,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     write_generated_json(out_dir / "active-clusters.json", {"clusters": active_clusters, "currentHpi": current_hpi})
@@ -1167,6 +1177,8 @@ def write_all_outputs(
         write_generated_json(out_dir / "risk-snapshot.json", risk_snapshot)
     if country_risk_snapshot is not None:
         write_generated_json(out_dir / "country-risk-snapshot.json", country_risk_snapshot)
+    if official_sources_status is not None:
+        write_generated_json(out_dir / "official-sources.json", official_sources_status)
     write_generated_json(out_dir / "meta.json", meta)
 
 

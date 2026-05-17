@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { currentHpi } from '@/lib/mock-data';
-import { dataMeta } from '@/lib/data';
+import { dataMeta, officialSourcesStatus } from '@/lib/data';
 import { DataFreshness } from '@/components/data-freshness';
 import { ClusterReviewQueue } from '@/components/cluster-review-queue';
 import { ManualDataPanel } from '@/components/manual-data-panel';
@@ -438,6 +438,42 @@ export default function AdminPage() {
       {activeTab === 'data' && (
         <div className="space-y-4">
           <DataFreshness meta={dataMeta} variant="banner" />
+
+          <div className="card">
+            <h3 className="font-semibold text-sm mb-1">官方信息源监测</h3>
+            <p className="text-[11px] text-gray-400 mb-3">
+              国家风险页的官方源底座。当前监测可达性和汉坦关键词命中；具体事件仍需通过 watcher 或手工线索入链。
+            </p>
+            <div className="overflow-x-auto -mx-4 sm:mx-0">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="border-b text-left text-gray-500">
+                    <th className="px-4 py-2 sm:px-2 font-medium">来源</th>
+                    <th className="px-2 py-2 font-medium">国家</th>
+                    <th className="px-2 py-2 font-medium">状态</th>
+                    <th className="px-2 py-2 font-medium">关键词</th>
+                    <th className="px-2 py-2 font-medium">检查时间</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  {officialSourcesStatus.sources.map((source) => (
+                    <tr key={source.id} className="hover:bg-gray-50">
+                      <td className="px-4 py-1.5 sm:px-2">
+                        <div className="font-medium">{source.nameZh}</div>
+                        <div className="text-[10px] text-gray-400 break-all">{source.url}</div>
+                      </td>
+                      <td className="px-2 py-1.5 text-gray-500">{source.countryIso2 ?? source.scope}</td>
+                      <td className={`px-2 py-1.5 font-medium ${source.ok ? 'text-green-700' : 'text-red-600'}`}>
+                        {source.ok ? `可达 ${source.statusCode ?? ''}` : '未检查/失败'}
+                      </td>
+                      <td className="px-2 py-1.5 text-gray-500">{source.hantaKeywordHit ? '命中' : '—'}</td>
+                      <td className="px-2 py-1.5 text-gray-400">{source.checkedAt ?? officialSourcesStatus.checkedAt ?? '待联网检查'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
 
           {/* Per-query news leads diagnostics — answers "is Google News actually pulling fresh content?" */}
           {dataMeta.sources.news_leads?.perQuery && dataMeta.sources.news_leads.perQuery.length > 0 ? (

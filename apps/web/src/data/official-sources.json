@@ -1,0 +1,22 @@
+{
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-05-17T15:08:00+00:00",
+  "checkedAt": null,
+  "okCount": 0,
+  "total": 12,
+  "hantaKeywordHitCount": 0,
+  "sources": [
+    { "id": "who-don", "nameZh": "WHO 疾病暴发新闻", "scope": "global", "url": "https://www.who.int/emergencies/disease-outbreak-news", "ok": false, "hantaKeywordHit": false },
+    { "id": "ecdc-threats", "nameZh": "ECDC 传染病威胁", "scope": "europe", "url": "https://www.ecdc.europa.eu/en/threats-and-outbreaks", "ok": false, "hantaKeywordHit": false },
+    { "id": "us-cdc-hantavirus", "nameZh": "美国 CDC 汉坦病毒", "scope": "country", "countryIso2": "US", "url": "https://www.cdc.gov/hantavirus/", "ok": false, "hantaKeywordHit": false },
+    { "id": "phac-hantavirus", "nameZh": "加拿大公共卫生署汉坦病毒", "scope": "country", "countryIso2": "CA", "url": "https://www.canada.ca/en/public-health/services/diseases/hantaviruses.html", "ok": false, "hantaKeywordHit": false },
+    { "id": "rki-hantavirus", "nameZh": "德国 RKI 汉坦病毒", "scope": "country", "countryIso2": "DE", "url": "https://www.rki.de/EN/Content/infections/epidemiology/inf_dis_Germany/hantavirus/hantavirus_node.html", "ok": false, "hantaKeywordHit": false },
+    { "id": "spf-hantavirus", "nameZh": "法国公共卫生署", "scope": "country", "countryIso2": "FR", "url": "https://www.santepubliquefrance.fr/", "ok": false, "hantaKeywordHit": false },
+    { "id": "uk-hsa", "nameZh": "英国 UKHSA", "scope": "country", "countryIso2": "GB", "url": "https://www.gov.uk/government/organisations/uk-health-security-agency", "ok": false, "hantaKeywordHit": false },
+    { "id": "kdca", "nameZh": "韩国 KDCA", "scope": "country", "countryIso2": "KR", "url": "https://www.kdca.go.kr/", "ok": false, "hantaKeywordHit": false },
+    { "id": "niid-jp", "nameZh": "日本 NIID", "scope": "country", "countryIso2": "JP", "url": "https://www.niid.go.jp/niid/en/", "ok": false, "hantaKeywordHit": false },
+    { "id": "taiwan-cdc", "nameZh": "台湾省疾病管制署", "scope": "country", "countryIso2": "TW", "url": "https://www.cdc.gov.tw/", "ok": false, "hantaKeywordHit": false },
+    { "id": "chile-minsal", "nameZh": "智利卫生部", "scope": "country", "countryIso2": "CL", "url": "https://www.minsal.cl/", "ok": false, "hantaKeywordHit": false },
+    { "id": "argentina-salud", "nameZh": "阿根廷卫生部", "scope": "country", "countryIso2": "AR", "url": "https://www.argentina.gob.ar/salud", "ok": false, "hantaKeywordHit": false }
+  ]
+}

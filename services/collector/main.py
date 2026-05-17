@@ -66,6 +66,7 @@ from hantawatch_collector.distance import distance_to_china_km
 from hantawatch_collector.ecdc import fetch_ecdc_assessment
 from hantawatch_collector.io_utils import read_json, write_generated_json
 from hantawatch_collector.news_leads import fetch_news_leads
+from hantawatch_collector.official_sources import check_official_sources
 from hantawatch_collector.realtime_feed import build_realtime_feed
 from hantawatch_collector.who_don import fetch_who_don_entries
 
@@ -175,6 +176,7 @@ def main(argv: list[str] | None = None) -> int:
         who_entries = []
         ecdc = None
         news_leads = []
+        official_sources_status = read_json(out_dir / "official-sources.json", default=None)
         logger.info("--no-network: skipping all fetches")
     else:
         who_entries = fetch_who_don_entries()
@@ -188,6 +190,11 @@ def main(argv: list[str] | None = None) -> int:
         news_leads = fetch_news_leads()
         if not news_leads:
             logger.info("news-leads: no entries (this is unusual but not fatal)")
+        try:
+            official_sources_status = check_official_sources()
+        except Exception as e:
+            official_sources_status = read_json(out_dir / "official-sources.json", default=None)
+            logger.warning("official sources: check failed (%s) — keeping existing JSON", e)
 
     # ---- 2. Compose active clusters (with fallback to cached) ----
     clusters_path = out_dir / "active-clusters.json"
@@ -301,6 +308,7 @@ def main(argv: list[str] | None = None) -> int:
         cluster_count=len(clusters),
         news_count=len(news_leads),
         news_diagnostics=news_diagnostics,
+        official_sources_status=official_sources_status,
     )
     reference = current_hpi.get("referenceCluster") or {}
     reference_km = int(reference.get("distanceFromChinaKm", 0) or 0)
@@ -332,6 +340,7 @@ def main(argv: list[str] | None = None) -> int:
             daily_brief=daily_brief,
             risk_snapshot=risk_snapshot,
             country_risk_snapshot=country_risk_snapshot,
+            official_sources_status=official_sources_status,
             meta=meta,
         )
         if realtime_feed:

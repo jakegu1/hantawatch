@@ -46,6 +46,7 @@ import countryStatusJson from '@/data/country-status.json';
 import mvHondiusImportsJson from '@/data/mv-hondius-imports.json';
 import countrySignalsJson from '@/data/country-signals.json';
 import countryRiskSnapshotJson from '@/data/country-risk-snapshot.json';
+import officialSourcesJson from '@/data/official-sources.json';
 
 // ---- Active clusters & current HPI ---------------------------------------
 
@@ -221,6 +222,7 @@ export interface DataMeta {
     who_don: { entries: number; ok: boolean };
     ecdc: { ok: boolean };
     news_leads?: { entries: number; ok: boolean; perQuery?: NewsLeadsDiagnostic[] };
+    official_sources?: { entries: number; ok: boolean; okCount?: number; checkedAt?: string | null };
   };
   clusterCount: number;
   yesterdayNearestDistanceKm?: number;
@@ -235,6 +237,28 @@ export const dataMeta: DataMeta = {
   sources: metaJson.sources as DataMeta['sources'],
   clusterCount: metaJson.clusterCount,
   yesterdayNearestDistanceKm: metaJson.yesterdayNearestDistanceKm,
+};
+
+export interface OfficialSourceStatus {
+  id: string;
+  nameZh: string;
+  scope: string;
+  countryIso2?: string;
+  url: string;
+  checkedAt?: string | null;
+  ok: boolean;
+  statusCode?: number;
+  finalUrl?: string;
+  hantaKeywordHit: boolean;
+  error?: string;
+}
+
+export const officialSourcesStatus = officialSourcesJson as {
+  checkedAt?: string | null;
+  okCount: number;
+  total: number;
+  hantaKeywordHitCount: number;
+  sources: OfficialSourceStatus[];
 };
 
 // ---- Realtime feed (Tier-3 overseas media, machine-translated) -----------
