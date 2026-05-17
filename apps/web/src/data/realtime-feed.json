@@ -1,213 +1,271 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-16T19:01:09.505050+00:00",
+  "__generated_at": "2026-05-17T02:48:36.788989+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-16T19:01:08.392698+00:00",
+  "last_fetched": "2026-05-17T02:48:35.479228+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-438ac425673de8ca",
-      "time": "2026-05-16T18:36:43.000Z",
-      "title_en": "Canadian isolating in B.C. tests \"presumptive positive\" for hantavirus - SooToday.com",
-      "body_en": "Canadian isolating in B.C. tests \"presumptive positive\" for hantavirus SooToday.com",
-      "summary_zh": "加拿大不列颠哥伦比亚省一隔离者汉坦病毒检测呈假定阳性。",
+      "id": "rt-0691022daccfeeb7",
+      "time": "2026-05-17T02:22:00.000Z",
+      "title_en": "Canada confirms first hantavirus case linked to MV Hondius cruise ship outbreak: Passenger in British Col - The Times of India",
+      "body_en": "Canada confirms first hantavirus case linked to MV Hondius cruise ship outbreak: Passenger in British Col The Times of India",
+      "summary_zh": "加拿大确认首例汉坦病毒病例，与MV Hondius邮轮疫情相关。",
       "key_facts_zh": [
         "加拿大",
-        "假定阳性",
-        "隔离中"
+        "首例确诊",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-079ccc366602fb28",
-      "time": "2026-05-16T18:36:24.000Z",
-      "title_en": "One Canadian tests positive for hantavirus, BC officials say - Yahoo News Canada",
-      "body_en": "One Canadian tests positive for hantavirus, BC officials say Yahoo News Canada",
-      "summary_zh": "BC省官员称一名加拿大人汉坦病毒检测阳性。",
+      "id": "rt-32dc54964b8a4e3c",
+      "time": "2026-05-17T01:33:00.000Z",
+      "title_en": "Fourth King County resident monitored for exposure to hantavirus - KING5.com",
+      "body_en": "Fourth King County resident monitored for exposure to hantavirus KING5.com",
+      "summary_zh": "金县第四名居民因接触汉坦病毒接受监测。",
       "key_facts_zh": [
-        "加拿大",
-        "BC省",
-        "确诊1例"
+        "美国",
+        "金县",
+        "监测中"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-e87de3745189d72c",
-      "time": "2026-05-16T18:35:20.000Z",
-      "title_en": "Hantavirus Scare on Luxury Cruise - Devdiscourse",
-      "body_en": "Hantavirus Scare on Luxury Cruise Devdiscourse",
-      "summary_zh": "豪华邮轮出现汉坦病毒恐慌。",
-      "key_facts_zh": [
-        "邮轮",
-        "恐慌"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0eb4f726ebcdc0f2",
-      "time": "2026-05-16T18:30:00Z",
-      "title_en": "Version of hantavirus behind deadly cruise ship outbreak matches known strain , France says",
-      "summary_zh": "法国称致命邮轮疫情汉坦病毒毒株与已知毒株匹配。",
-      "key_facts_zh": [
-        "法国",
-        "邮轮疫情",
-        "毒株匹配"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-596edb739ea717af",
-      "time": "2026-05-16T18:20:27.000Z",
-      "title_en": "Hantavirus-stricken cruise passenger in B.C. has tested positive, top doctor says - CTV News",
-      "body_en": "Hantavirus-stricken cruise passenger in B.C. has tested positive, top doctor says CTV News",
-      "summary_zh": "BC省首席医生称邮轮乘客汉坦病毒检测阳性。",
+      "id": "rt-3b5ce1798b9b1ab7",
+      "time": "2026-05-17T01:30:00.000Z",
+      "title_en": "Canada confirms first hantavirus case in isolation in British Columbia - The Guardian",
+      "body_en": "Canada confirms first hantavirus case in isolation in British Columbia The Guardian",
+      "summary_zh": "加拿大确认首例汉坦病毒病例，在不列颠哥伦比亚省隔离。",
       "key_facts_zh": [
         "加拿大",
-        "BC省",
-        "邮轮乘客确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7bef4bdcadd554f8",
-      "time": "2026-05-16T18:20:00.000Z",
-      "title_en": "One Canadian exposed to hantavirus outbreak has tested positive - Castanet",
-      "body_en": "One Canadian exposed to hantavirus outbreak has tested positive Castanet",
-      "summary_zh": "一名接触汉坦病毒疫情的加拿大人检测阳性。",
-      "key_facts_zh": [
-        "加拿大",
-        "接触者确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-482b33dfe47336f9",
-      "time": "2026-05-16T18:13:10.000Z",
-      "title_en": "CP NewsAlert: Canadian tests \"presumptive positive\" for hantavirus - Coast Reporter",
-      "body_en": "CP NewsAlert: Canadian tests \"presumptive positive\" for hantavirus Coast Reporter",
-      "summary_zh": "CP新闻快讯：加拿大人汉坦病毒检测呈假定阳性。",
-      "key_facts_zh": [
-        "加拿大",
-        "假定阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-9c15f810ae5e7d3f",
-      "time": "2026-05-16T18:13:00.000Z",
-      "title_en": "Canadian in B.C. tests \"presumptive positive\" for hantavirus - CityNews Toronto",
-      "body_en": "Canadian in B.C. tests \"presumptive positive\" for hantavirus CityNews Toronto",
-      "summary_zh": "BC省一名加拿大人汉坦病毒检测呈假定阳性。",
-      "key_facts_zh": [
-        "加拿大",
-        "BC省",
-        "假定阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-791c89c725294958",
-      "time": "2026-05-16T18:00:00.000Z",
-      "title_en": "B.C. officials provide update on Canadians isolating after hantavirus exposure - CBC",
-      "body_en": "B.C. officials provide update on Canadians isolating after hantavirus exposure CBC",
-      "summary_zh": "BC省官员更新加拿大隔离者情况。",
-      "key_facts_zh": [
-        "加拿大",
-        "BC省",
+        "首例确诊",
         "隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-b73da35d7047b544",
-      "time": "2026-05-16T17:45:00Z",
-      "title_en": "2 passengers from hantavirus - hit cruise ship moved from Emory to Nebraska quarantine facility",
-      "summary_zh": "两名汉坦病毒邮轮乘客转至内布拉斯加隔离。",
+      "id": "rt-24aadecec8dbe77c",
+      "time": "2026-05-17T01:23:26.000Z",
+      "title_en": "Canadian in B.C. hospital after testing ‘presumptive positive’ to hantavirus - Global News",
+      "body_en": "Canadian in B.C. hospital after testing ‘presumptive positive’ to hantavirus Global News",
+      "summary_zh": "加拿大一人在不列颠哥伦比亚省医院检测呈汉坦病毒推定阳性。",
       "key_facts_zh": [
-        "邮轮",
-        "内布拉斯加",
-        "隔离"
+        "加拿大",
+        "推定阳性",
+        "住院"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-eb7c55fde3b79ca7",
-      "time": "2026-05-16T17:22:22.000Z",
-      "title_en": "B.C. health officials update public on rare hantavirus exposure cases - Global News",
-      "body_en": "B.C. health officials update public on rare hantavirus exposure cases Global News",
-      "summary_zh": "BC省卫生官员更新罕见汉坦病毒暴露病例。",
+      "id": "rt-0baf07dd4f751b7c",
+      "time": "2026-05-17T01:21:59.000Z",
+      "title_en": "Canadian with hantavirus was isolating with partner - Global News",
+      "body_en": "Canadian with hantavirus was isolating with partner Global News",
+      "summary_zh": "加拿大汉坦病毒患者曾与伴侣一起隔离。",
+      "key_facts_zh": [
+        "加拿大",
+        "隔离",
+        "伴侣"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-13a30350a073673a",
+      "time": "2026-05-17T01:12:00.000Z",
+      "title_en": "Canada reports suspected hantavirus case linked to deadly cruise ship outbreak - The Times of India",
+      "body_en": "Canada reports suspected hantavirus case linked to deadly cruise ship outbreak The Times of India",
+      "summary_zh": "加拿大报告一例疑似汉坦病毒病例，与致命邮轮疫情相关。",
+      "key_facts_zh": [
+        "加拿大",
+        "疑似病例",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-83e669d8e27c513f",
+      "time": "2026-05-17T00:48:01.000Z",
+      "title_en": "Hantavirus outbreak: One of the four Canadians isolating after cruise ship journey tests positive - Firstpost",
+      "body_en": "Hantavirus outbreak: One of the four Canadians isolating after cruise ship journey tests positive Firstpost",
+      "summary_zh": "四名邮轮返加隔离者中一人汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "确诊1例",
+        "邮轮隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-df903d76d220b777",
+      "time": "2026-05-16T23:32:00.000Z",
+      "title_en": "Colorado Department of Public Health and Environment confirms hantavirus case - CBS News",
+      "body_en": "Colorado Department of Public Health and Environment confirms hantavirus case CBS News",
+      "summary_zh": "科罗拉多州公共卫生与环境部确认汉坦病毒病例。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-13b5013a056d8c79",
+      "time": "2026-05-16T23:03:00.000Z",
+      "title_en": "Canada cruise passenger 'presumptive positive' for hantavirus - France 24",
+      "body_en": "Canada cruise passenger 'presumptive positive' for hantavirus France 24",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒推定阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "推定阳性"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c2ec7a4728511328",
+      "time": "2026-05-16T22:22:15.000Z",
+      "title_en": "Canadian cruise passenger gets a presumptive positive hantavirus test result - South China Morning Post",
+      "body_en": "Canadian cruise passenger gets a presumptive positive hantavirus test result South China Morning Post",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒检测推定阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "推定阳性"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-1888af1a1ca6a4d4",
+      "time": "2026-05-16T21:56:13.000Z",
+      "title_en": "B.C. couple in hospital isolation after testing positive for hantavirus - National Post",
+      "body_en": "B.C. couple in hospital isolation after testing positive for hantavirus National Post",
+      "summary_zh": "不列颠哥伦比亚省一对夫妇汉坦病毒阳性，在医院隔离。",
       "key_facts_zh": [
         "加拿大",
         "BC省",
-        "暴露病例"
+        "确诊"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-9016b190ed0f5b9f",
-      "time": "2026-05-16T17:00:00Z",
-      "title_en": "France says cruise ship Andes virus matches known South American viruses – Winnipeg Free Press",
-      "summary_zh": "法国称邮轮病毒与南美已知病毒匹配。",
+      "id": "rt-3601ebbb6256260c",
+      "time": "2026-05-16T21:46:11.000Z",
+      "title_en": "Canadian cruise passenger gets presumptive positive hantavirus test result after ship outbreak - The Hindu",
+      "body_en": "Canadian cruise passenger gets presumptive positive hantavirus test result after ship outbreak The Hindu Canadian from hantavirus-hit cruise ship tests positive BBC Canada confirms first hantavirus case linked to MV Hondius cruise ship outbreak: Passenger in British Col The Times of India",
+      "summary_zh": "加拿大邮轮乘客在邮轮爆发后汉坦病毒推定阳性。",
       "key_facts_zh": [
-        "法国",
+        "加拿大",
         "邮轮",
-        "南美病毒"
+        "推定阳性"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-793ff65458e764c5",
-      "time": "2026-05-16T16:30:00Z",
-      "title_en": "Frequent burials and at least 80 dead as Congo grapples with Ebola outbreak",
-      "summary_zh": "刚果埃博拉疫情已致至少80人死亡，频繁举行葬礼。",
+      "id": "rt-2ef4d75675d88bf4",
+      "time": "2026-05-16T21:45:10.000Z",
+      "title_en": "Canadian in isolation tests presumptive positive for hantavirus - CBC",
+      "body_en": "Canadian in isolation tests presumptive positive for hantavirus CBC",
+      "summary_zh": "加拿大隔离者汉坦病毒推定阳性。",
       "key_facts_zh": [
-        "刚果",
-        "埃博拉",
-        "死亡80例"
+        "加拿大",
+        "隔离",
+        "推定阳性"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-6259d90a26f7c3a7",
-      "time": "2026-05-16T16:08:53.000Z",
-      "title_en": "These are the 10 U.S. states monitoring for hantavirus cases linked to cruise ship at center of outbreak - Yahoo",
-      "body_en": "These are the 10 U.S. states monitoring for hantavirus cases linked to cruise ship at center of outbreak Yahoo",
-      "summary_zh": "美国10个州监测与邮轮疫情相关的汉坦病毒病例。",
+      "id": "rt-778e64b3defa7ec1",
+      "time": "2026-05-16T21:33:02.000Z",
+      "title_en": "Hantavirus case in Canada investigated after MV Hondius cruise ship outbreak - Goodreturns",
+      "body_en": "Hantavirus case in Canada investigated after MV Hondius cruise ship outbreak Goodreturns",
+      "summary_zh": "加拿大调查与MV Hondius邮轮爆发相关的汉坦病毒病例。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "调查"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e1f66e29b8ef4f82",
+      "time": "2026-05-16T21:11:50.000Z",
+      "title_en": "Canadian MV Hondius cruise passenger tests positive for hantavirus - NBC News",
+      "body_en": "Canadian MV Hondius cruise passenger tests positive for hantavirus NBC News",
+      "summary_zh": "加拿大MV Hondius邮轮乘客汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9648e1cf164fb25c",
+      "time": "2026-05-16T21:08:08.000Z",
+      "title_en": "Canadian cruise passenger isolating in B.C. tests 'presumptive positive' for hantavirus - CBC",
+      "body_en": "Canadian cruise passenger isolating in B.C. tests 'presumptive positive' for hantavirus CBC",
+      "summary_zh": "加拿大邮轮乘客在不列颠哥伦比亚省隔离，初检阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "监测中"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e12aad491a6cd769",
+      "time": "2026-05-16T21:06:16.000Z",
+      "title_en": "Canada confirms first hantavirus case after passenger from MV Hondius cruise ship tests positive | World News - Hindustan Times",
+      "body_en": "Canada confirms first hantavirus case after passenger from MV Hondius cruise ship tests positive | World News Hindustan Times",
+      "summary_zh": "加拿大确认首例汉坦病毒病例，来自MV Hondius邮轮。",
+      "key_facts_zh": [
+        "加拿大",
+        "首例",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d192f8edf8744919",
+      "time": "2026-05-16T21:00:00.000Z",
+      "title_en": "Trump’s health cuts complicate federal messaging on hantavirus - The Hill",
+      "body_en": "Trump’s health cuts complicate federal messaging on hantavirus The Hill",
+      "summary_zh": "特朗普削减卫生预算影响汉坦病毒联邦信息传递。",
       "key_facts_zh": [
         "美国",
-        "10州",
-        "监测"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b359d2de302b1b6a",
-      "time": "2026-05-16T16:07:00.000Z",
-      "title_en": "Latest headlines | Deadly hantavirus case confirmed in Douglas County - KUSA.com",
-      "body_en": "Latest headlines | Deadly hantavirus case confirmed in Douglas County KUSA.com",
-      "summary_zh": "道格拉斯县确诊一例致命汉坦病毒病例。",
-      "key_facts_zh": [
-        "道格拉斯县",
-        "确诊",
-        "死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-74d69a7b7e7648a4",
-      "time": "2026-05-16T15:41:29.000Z",
-      "title_en": "Hantavirus latest updates: Suspected case at New York high school not linked to cruise ship - Yahoo",
-      "body_en": "Hantavirus latest updates: Suspected case at New York high school not linked to cruise ship Yahoo Hantavirus: Current Situation Centers for Disease Control and Prevention | CDC (.gov) Hantavirus has no cure. Here’s where researchers are at with treatments and vaccines CBC",
-      "summary_zh": "纽约高中出现汉坦病毒疑似病例，与邮轮无关。",
-      "key_facts_zh": [
-        "美国",
-        "纽约",
-        "疑似病例"
+        "预算削减"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-93b3bc2ef7a70ef1",
+      "time": "2026-05-16T20:53:26.000Z",
+      "title_en": "Hantavirus death in Colorado, state says not linked to cruise ship outbreak - KDVR",
+      "body_en": "Hantavirus death in Colorado, state says not linked to cruise ship outbreak KDVR",
+      "summary_zh": "科罗拉多州汉坦病毒死亡病例，与邮轮疫情无关。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-cc9e7419977bcc9b",
+      "time": "2026-05-16T20:36:53.000Z",
+      "title_en": "Canadian from hantavirus-hit cruise ship tests positive - BBC",
+      "body_en": "Canadian from hantavirus-hit cruise ship tests positive BBC",
+      "summary_zh": "来自汉坦病毒疫情邮轮的加拿大人检测阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
     }
   ]
 }
