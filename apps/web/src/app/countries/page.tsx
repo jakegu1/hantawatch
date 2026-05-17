@@ -60,6 +60,22 @@ function StatusBadge({ imp }: { imp: MvHondiusImport }) {
   );
 }
 
+function RiskBadge({ c }: { c: CountryView }) {
+  const risk = c.risk;
+  if (!risk) return null;
+  const palette = {
+    active: 'bg-red-50 text-red-700',
+    elevated: 'bg-orange-50 text-orange-700',
+    watch: 'bg-blue-50 text-blue-700',
+    baseline: 'bg-gray-100 text-gray-600',
+  }[risk.riskLevel];
+  return (
+    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${palette}`}>
+      {risk.riskLevelZh} · {risk.evidenceLevelZh}
+    </span>
+  );
+}
+
 function CountryCard({ c }: { c: CountryView }) {
   // Red left-bar for local Andes (most lethal serotype, person-to-person).
   // Amber for non-Andes endemic but with active imports.
@@ -78,17 +94,39 @@ function CountryCard({ c }: { c: CountryView }) {
           <h3 className="font-semibold text-base truncate">{c.nameZh}</h3>
           <span className="text-xs text-gray-400 hidden sm:inline truncate">{c.nameEn}</span>
         </div>
-        {c.signals && (
+        <div className="shrink-0 flex flex-col items-end gap-1">
+          <RiskBadge c={c} />
+          {c.signals && (
           <span className="shrink-0 text-[11px] text-gray-500">
             近 30 天 {c.signals.signalCount30d} 条
             {c.signals.signalCount7d > 0 && (
               <span className="ml-1 text-orange-600">· 7 天 {c.signals.signalCount7d}</span>
             )}
           </span>
-        )}
+          )}
+        </div>
       </div>
 
       <div className="text-xs text-gray-600 space-y-1">
+        {c.risk && (
+          <div className="rounded bg-slate-50 px-2 py-1.5 text-[11px] leading-relaxed">
+            <div className="font-medium text-slate-700">{c.risk.statusZh}</div>
+            <div className="mt-0.5 text-slate-600">{c.risk.riskSummaryZh}</div>
+            {c.risk.latestEvent && (
+              <div className="mt-1 text-slate-500">
+                最新事件：{c.risk.latestEvent.date} · {c.risk.latestEvent.title}
+              </div>
+            )}
+            <div className="mt-1 text-slate-400">
+              {c.risk.latestSourceRetrievedAt
+                ? `来源抓取：约 ${c.risk.sourceFreshnessHours ?? 0} 小时前${c.risk.stale ? ' · 需复核' : ''}`
+                : c.risk.lastSignalAt
+                  ? `最近信号：${c.risk.lastSignalAt.slice(0, 10)}`
+                  : '近期未见自动事件，显示长期流行基线'}
+            </div>
+          </div>
+        )}
+
         {c.endemicSerotypes.length > 0 ? (
           <div>
             <span className="text-gray-400">本土流行：</span>
@@ -130,7 +168,7 @@ function CountryCard({ c }: { c: CountryView }) {
         )}
 
         <div className="text-[11px] text-gray-400 pt-1">
-          数据更新于 {c.lastReviewed}
+          基线 review 于 {c.lastReviewed}
           {c.sources && c.sources.length > 0 && (
             <span> · 来源：{c.sources.map((s) => s.name).join('、')}</span>
           )}

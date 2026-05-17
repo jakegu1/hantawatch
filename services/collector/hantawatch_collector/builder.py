@@ -873,6 +873,188 @@ def build_risk_snapshot(
     }
 
 
+# -- Country risk snapshot --------------------------------------------------
+COUNTRY_RISK_LEVEL_ZH = {
+    "baseline": "基线",
+    "watch": "关注",
+    "elevated": "升高",
+    "active": "活跃",
+}
+
+COUNTRY_EVIDENCE_LEVEL_ZH = {
+    "official": "官方通报",
+    "manual": "人工核验",
+    "news": "新闻线索",
+    "signal": "信号热度",
+    "baseline": "流行基线",
+}
+
+
+def _parse_date(value: str | None) -> date | None:
+    if not value or not isinstance(value, str):
+        return None
+    try:
+        return date.fromisoformat(value[:10])
+    except ValueError:
+        return None
+
+
+def _parse_dt(value: str | None) -> datetime | None:
+    if not value or not isinstance(value, str):
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def _hours_since(value: str | None, now: datetime) -> int | None:
+    parsed = _parse_dt(value)
+    if parsed is None:
+        return None
+    return max(0, round((now - parsed).total_seconds() / 3600))
+
+
+def _case_country_iso(row: dict) -> str | None:
+    iso = row.get("countryIso2") or row.get("countryISO2") or row.get("iso2")
+    if isinstance(iso, str) and len(iso.strip()) == 2:
+        return iso.strip().upper()
+    region = row.get("regionCode")
+    if isinstance(region, str) and len(region.strip()) == 2 and region.upper() != "CN":
+        return region.strip().upper()
+    return None
+
+
+def build_country_risk_snapshot(
+    *,
+    country_status_payload: dict | None,
+    imports_payload: dict | None,
+    country_signals_payload: dict | None,
+    recent_cases_intl: list[dict],
+    window_days: int = 90,
+    freshness_warning_hours: int = 72,
+) -> dict:
+    today = _today_cn()
+    now = datetime.now(timezone.utc)
+    countries = country_status_payload.get("countries", []) if isinstance(country_status_payload, dict) else []
+    imports = imports_payload.get("imports", []) if isinstance(imports_payload, dict) else []
+    signals = country_signals_payload.get("countries", {}) if isinstance(country_signals_payload, dict) else {}
+
+    events_by_iso: dict[str, list[dict]] = {}
+    cutoff = today - timedelta(days=window_days)
+    for row in recent_cases_intl:
+        iso = _case_country_iso(row)
+        event_date = _parse_date(row.get("date"))
+        if not iso or not event_date or event_date < cutoff:
+            continue
+        events_by_iso.setdefault(iso, []).append(row)
+    for rows in events_by_iso.values():
+        rows.sort(key=lambda r: (r.get("date", ""), r.get("id", "")), reverse=True)
+
+    imports_by_iso = {
+        str(imp.get("iso2", "")).upper(): imp
+        for imp in imports
+        if isinstance(imp, dict) and imp.get("iso2")
+    }
+
+    out: dict[str, dict] = {}
+    for country in countries:
+        if not isinstance(country, dict):
+            continue
+        iso = str(country.get("iso2", "")).upper()
+        if not iso:
+            continue
+        signal = signals.get(iso, {}) if isinstance(signals, dict) else {}
+        imp = imports_by_iso.get(iso)
+        latest_event = events_by_iso.get(iso, [None])[0]
+        source = latest_event.get("source", {}) if isinstance(latest_event, dict) else {}
+        source_conf = source.get("confidence")
+        source_retrieved = source.get("retrievedAt")
+        freshness_hours = _hours_since(source_retrieved, now)
+        stale = freshness_hours is not None and freshness_hours > freshness_warning_hours
+        signal_30d = int(signal.get("signalCount30d", 0) or 0) if isinstance(signal, dict) else 0
+        signal_7d = int(signal.get("signalCount7d", 0) or 0) if isinstance(signal, dict) else 0
+
+        risk_level = "baseline"
+        evidence = "baseline"
+        status = "仅有流行病学基线"
+
+        if signal_30d > 0:
+            risk_level = "watch"
+            evidence = "signal"
+            status = f"近 30 天有 {signal_30d} 条公开信号"
+        if isinstance(latest_event, dict):
+            evidence = "official" if source_conf == "official" else "news"
+            case_type = latest_event.get("caseType")
+            if source_conf == "official" and case_type == "confirmed":
+                risk_level = "active"
+                status = "近 90 天有官方确认事件"
+            elif source_conf == "official":
+                risk_level = "elevated"
+                status = "近 90 天有官方待确认/临床事件"
+            else:
+                risk_level = "watch" if risk_level == "baseline" else risk_level
+                status = "近 90 天有新闻或人工线索"
+        if isinstance(imp, dict) and imp.get("status") != "closed":
+            evidence = "manual"
+            status = IMPORT_STATUS_LABEL_ZH.get(str(imp.get("status")), "输入监测")
+            if imp.get("status") == "imports_confirmed":
+                risk_level = "active"
+            elif imp.get("status") in {"presumptive_positive", "quarantine_active"}:
+                risk_level = "elevated"
+            elif risk_level == "baseline":
+                risk_level = "watch"
+
+        if latest_event:
+            summary = latest_event.get("summary") or latest_event.get("title") or "有新近公开信息，需继续关注来源更新"
+        elif isinstance(imp, dict):
+            summary = imp.get("summary_zh") or "有输入/监测事件，需继续关注"
+        elif signal_30d > 0:
+            summary = f"近 30 天公开信号 {signal_30d} 条，建议结合官方通报判断"
+        else:
+            summary = country.get("advice_zh") or "暂无近期公开事件，仍需遵循目的地卫生建议"
+
+        entry = {
+            "iso2": iso,
+            "riskLevel": risk_level,
+            "riskLevelZh": COUNTRY_RISK_LEVEL_ZH[risk_level],
+            "evidenceLevel": evidence,
+            "evidenceLevelZh": COUNTRY_EVIDENCE_LEVEL_ZH[evidence],
+            "statusZh": status,
+            "riskSummaryZh": summary,
+            "latestEventDate": latest_event.get("date") if isinstance(latest_event, dict) else None,
+            "latestSourceRetrievedAt": source_retrieved,
+            "sourceFreshnessHours": freshness_hours,
+            "stale": stale,
+            "signalCount30d": signal_30d,
+            "signalCount7d": signal_7d,
+            "lastSignalAt": signal.get("lastSignalAt") if isinstance(signal, dict) else None,
+            "importStatus": imp.get("status") if isinstance(imp, dict) else None,
+            "importDate": imp.get("date") if isinstance(imp, dict) else None,
+        }
+        if isinstance(latest_event, dict):
+            entry["latestEvent"] = {
+                "id": latest_event.get("id"),
+                "date": latest_event.get("date"),
+                "title": latest_event.get("title"),
+                "summary": latest_event.get("summary"),
+                "serotypeId": latest_event.get("serotypeId", "other"),
+                "caseType": latest_event.get("caseType", "suspected"),
+                "source": source,
+            }
+        out[iso] = {k: v for k, v in entry.items() if v is not None}
+
+    return {
+        "date": today.isoformat(),
+        "windowDays": window_days,
+        "freshnessWarningHours": freshness_warning_hours,
+        "countries": out,
+    }
+
+
 # -- Current HPI -----------------------------------------------------------
 def derive_current_hpi(
     *,
@@ -974,6 +1156,7 @@ def write_all_outputs(
     daily_brief: dict,
     meta: dict,
     risk_snapshot: dict | None = None,
+    country_risk_snapshot: dict | None = None,
 ) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     write_generated_json(out_dir / "active-clusters.json", {"clusters": active_clusters, "currentHpi": current_hpi})
@@ -982,6 +1165,8 @@ def write_all_outputs(
     write_generated_json(out_dir / "daily-brief.json", daily_brief)
     if risk_snapshot is not None:
         write_generated_json(out_dir / "risk-snapshot.json", risk_snapshot)
+    if country_risk_snapshot is not None:
+        write_generated_json(out_dir / "country-risk-snapshot.json", country_risk_snapshot)
     write_generated_json(out_dir / "meta.json", meta)
 
 
@@ -1022,6 +1207,7 @@ __all__ = [
     "update_hpi_history",
     "build_daily_brief",
     "build_risk_snapshot",
+    "build_country_risk_snapshot",
     "derive_current_hpi",
     "build_meta",
     "write_all_outputs",

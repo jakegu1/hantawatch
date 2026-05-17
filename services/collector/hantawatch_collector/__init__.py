@@ -34,6 +34,7 @@ GENERATED_FILES = frozenset({
     "hpi-history.json",
     "daily-brief.json",
     "risk-snapshot.json",
+    "country-risk-snapshot.json",
     "meta.json",
     "realtime-feed.json",
     # Auto-aggregated per-country signal heat (Layer 3 of the /countries page).

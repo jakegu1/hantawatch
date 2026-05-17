@@ -68,6 +68,32 @@ function StatusPill({ imp }: { imp: MvHondiusImport }) {
   );
 }
 
+function RiskPill({ c }: { c: CountryView }) {
+  const risk = c.risk;
+  if (!risk) return null;
+  const color = {
+    active: ['#fef2f2', '#b91c1c'],
+    elevated: ['#fff7ed', '#c2410c'],
+    watch: ['#eff6ff', '#1d4ed8'],
+    baseline: ['#f3f4f6', '#4b5563'],
+  }[risk.riskLevel];
+  return (
+    <Text
+      style={{
+        display: 'inline-block',
+        fontSize: '20rpx',
+        fontWeight: 600,
+        color: color[1],
+        background: color[0],
+        padding: '4rpx 12rpx',
+        borderRadius: '999rpx',
+      }}
+    >
+      {risk.riskLevelZh} · {risk.evidenceLevelZh}
+    </Text>
+  );
+}
+
 function leftBorderColor(c: CountryView): string {
   if (c.hasLocalAndes) return '#ef4444';                  // red — local Andes
   if (c.imports?.status === 'imports_confirmed') return '#f97316';  // orange
@@ -95,13 +121,46 @@ function CountryCard({ c }: { c: CountryView }) {
           </Text>
           <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>{c.nameEn}</Text>
         </View>
-        {c.signals && (
-          <Text style={{ fontSize: '20rpx', color: '#6b7280', flexShrink: 0 }}>
-            近 30 天 {c.signals.signalCount30d} 条
-            {c.signals.signalCount7d > 0 ? `  · 7 天 ${c.signals.signalCount7d}` : ''}
-          </Text>
-        )}
+        <View style={{ alignItems: 'flex-end' }}>
+          <RiskPill c={c} />
+          {c.signals && (
+            <Text style={{ fontSize: '20rpx', color: '#6b7280', flexShrink: 0, marginTop: '4rpx' }}>
+              近 30 天 {c.signals.signalCount30d} 条
+              {c.signals.signalCount7d > 0 ? `  · 7 天 ${c.signals.signalCount7d}` : ''}
+            </Text>
+          )}
+        </View>
       </View>
+
+      {c.risk && (
+        <View
+          style={{
+            background: '#f8fafc',
+            padding: '10rpx 14rpx',
+            borderRadius: '8rpx',
+            marginBottom: '10rpx',
+          }}
+        >
+          <Text style={{ display: 'block', fontSize: '22rpx', color: '#334155', fontWeight: 600 }}>
+            {c.risk.statusZh}
+          </Text>
+          <Text style={{ display: 'block', fontSize: '22rpx', color: '#475569', lineHeight: 1.6 }}>
+            {c.risk.riskSummaryZh}
+          </Text>
+          {c.risk.latestEvent && (
+            <Text style={{ display: 'block', fontSize: '20rpx', color: '#64748b', marginTop: '4rpx' }}>
+              最新事件：{c.risk.latestEvent.date} · {c.risk.latestEvent.title}
+            </Text>
+          )}
+          <Text style={{ display: 'block', fontSize: '20rpx', color: '#94a3b8', marginTop: '4rpx' }}>
+            {c.risk.latestSourceRetrievedAt
+              ? `来源抓取：约 ${c.risk.sourceFreshnessHours ?? 0} 小时前${c.risk.stale ? ' · 需复核' : ''}`
+              : c.risk.lastSignalAt
+                ? `最近信号：${c.risk.lastSignalAt.slice(0, 10)}`
+                : '近期未见自动事件，显示长期流行基线'}
+          </Text>
+        </View>
+      )}
 
       {/* Endemic serotypes */}
       <View style={{ marginBottom: '6rpx' }}>
@@ -192,7 +251,7 @@ function CountryCard({ c }: { c: CountryView }) {
       <Text
         style={{ display: 'block', fontSize: '20rpx', color: '#9ca3af', marginTop: '8rpx' }}
       >
-        数据更新于 {c.lastReviewed}
+        基线 review 于 {c.lastReviewed}
       </Text>
     </View>
   );

@@ -6,7 +6,8 @@
     "summary": "1-2 句摘要",
     "date": "ISO 日期 YYYY-MM-DD",
     "serotypeId": "andes | sin_nombre | hantaan | seoul | puumala | other",
-    "sourceOutlet": "新闻媒体名称",
+    "countryIso2": "可选：事件所属国家 ISO2，例如 CA / US / DE；填写后国家页会自动入链",
+    "sourceOutlet": "新闻媒体或卫生机构名称",
     "url": "新闻原文链接"
   },
   "leads": [

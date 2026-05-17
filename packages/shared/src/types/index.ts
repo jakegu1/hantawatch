@@ -212,6 +212,47 @@ export interface CountrySignalsFile {
   countries: Record<string, CountrySignal>;  // keyed by uppercase ISO2
 }
 
+export type CountryRiskLevel = 'baseline' | 'watch' | 'elevated' | 'active';
+
+export type CountryEvidenceLevel = 'official' | 'manual' | 'news' | 'signal' | 'baseline';
+
+export interface CountryRiskSnapshotEntry {
+  iso2: string;
+  riskLevel: CountryRiskLevel;
+  riskLevelZh: string;
+  evidenceLevel: CountryEvidenceLevel;
+  evidenceLevelZh: string;
+  statusZh: string;
+  riskSummaryZh: string;
+  latestEvent?: {
+    id: string;
+    date: string;
+    title: string;
+    summary?: string;
+    serotypeId: SerotypeId;
+    caseType: 'confirmed' | 'clinical' | 'suspected';
+    source: DataSource;
+  };
+  latestEventDate?: string;
+  latestSourceRetrievedAt?: string;
+  sourceFreshnessHours?: number;
+  stale: boolean;
+  signalCount30d: number;
+  signalCount7d: number;
+  lastSignalAt?: string;
+  importStatus?: MvHondiusStatus;
+  importDate?: string;
+}
+
+export interface CountryRiskSnapshotFile {
+  __generated_by?: string;
+  __generated_at?: string;
+  date: string;
+  windowDays: number;
+  freshnessWarningHours: number;
+  countries: Record<string, CountryRiskSnapshotEntry>;
+}
+
 // Render-time synthesis of all three layers, computed in `lib/data.ts`.
 // This is the shape every UI component should consume; it hides the
 // complexity of merging layers and lets us swap data-layer
@@ -219,4 +260,5 @@ export interface CountrySignalsFile {
 export interface CountryView extends CountryStatus {
   signals?: CountrySignal;          // undefined if no signals in window
   imports?: MvHondiusImport;        // undefined if no import event recorded
+  risk?: CountryRiskSnapshotEntry;
 }

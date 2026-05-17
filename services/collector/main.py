@@ -50,6 +50,7 @@ from hantawatch_collector.builder import (
     build_active_clusters,
     build_daily_brief,
     build_meta,
+    build_country_risk_snapshot,
     build_recent_cases_intl,
     build_risk_snapshot,
     derive_current_hpi,
@@ -253,8 +254,46 @@ def main(argv: list[str] | None = None) -> int:
     # Merge admin-curated leads (e.g. local Taiwan / Switzerland press the
     # auto-scraper missed). Manual entries win on id collision.
     recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")
+    # ---- 9. Realtime feed + country signals ----
+    realtime_feed = None
+    country_signals = None
+    if not args.no_network:
+        try:
+            realtime_feed = build_realtime_feed()
+            if realtime_feed:
+                logger.info(
+                    "Realtime feed: %d updates (translated=%s)",
+                    len(realtime_feed.updates),
+                    realtime_feed.machine_translated,
+                )
+            else:
+                logger.info("Realtime feed: no updates (keeping existing JSON)")
+        except Exception as e:
+            realtime_feed = None
+            logger.warning("Realtime feed: build failed (%s) — keeping existing JSON", e)
 
-    # ---- 9. Meta ----
+        try:
+            country_signals = aggregate_country_signals()
+            if country_signals:
+                logger.info(
+                    "Country signals: %d countries covered (last %dd window)",
+                    len(country_signals["countries"]),
+                    country_signals["windowDays"],
+                )
+            else:
+                logger.info("Country signals: no aggregate (keeping existing JSON)")
+        except Exception as e:
+            country_signals = None
+            logger.warning("Country signals: build failed (%s) — keeping existing JSON", e)
+
+    country_risk_snapshot = build_country_risk_snapshot(
+        country_status_payload=read_json(out_dir / "country-status.json", default=None),
+        imports_payload=imports_payload,
+        country_signals_payload=country_signals or read_json(out_dir / "country-signals.json", default=None),
+        recent_cases_intl=recent_intl,
+    )
+
+    # ---- 10. Meta ----
     news_diagnostics = getattr(fetch_news_leads, "last_diagnostics", None)
     meta = build_meta(
         who_count=len(who_entries),
@@ -272,49 +311,6 @@ def main(argv: list[str] | None = None) -> int:
             reference_cluster_id=reference.get("id"),
             reference_cluster_name=reference.get("name"),
         )
-
-    # ---- 10. Realtime feed (Tier-3, Hantaflow + LLM translation) ----
-    # This is independent of the WHO/ECDC pipeline above. We do it last so
-    # a partial failure here can't break the Tier-1 outputs. The whole
-    # block is skipped under --no-network because Hantaflow + the LLM both
-    # require network.
-    realtime_feed = None
-    country_signals = None
-    if not args.no_network:
-        try:
-            realtime_feed = build_realtime_feed()
-            if realtime_feed:
-                logger.info(
-                    "Realtime feed: %d updates (translated=%s)",
-                    len(realtime_feed.updates),
-                    realtime_feed.machine_translated,
-                )
-            else:
-                logger.info("Realtime feed: no updates (keeping existing JSON)")
-        except Exception as e:
-            # Never let realtime feed take down the core pipeline.
-            logger.warning("Realtime feed: build failed (%s) — keeping existing JSON", e)
-            realtime_feed = None
-
-        # Country signal aggregation (Layer 2 of the country status page).
-        # Independent of the LLM path — cheap, no key required.
-        try:
-            country_signals = aggregate_country_signals()
-            if country_signals:
-                logger.info(
-                    "Country signals: %d countries covered (last %dd window)",
-                    len(country_signals["countries"]),
-                    country_signals["windowDays"],
-                )
-            else:
-                logger.info(
-                    "Country signals: no aggregate (keeping existing JSON)"
-                )
-        except Exception as e:
-            logger.warning(
-                "Country signals: build failed (%s) — keeping existing JSON", e
-            )
-            country_signals = None
 
     # ---- 11. Write everything ----
     if args.dry_run:
@@ -335,6 +331,7 @@ def main(argv: list[str] | None = None) -> int:
             hpi_history=hpi_history,
             daily_brief=daily_brief,
             risk_snapshot=risk_snapshot,
+            country_risk_snapshot=country_risk_snapshot,
             meta=meta,
         )
         if realtime_feed:

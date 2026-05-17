@@ -13,6 +13,7 @@ import type {
   ActiveCluster,
   CaseRecord,
   ContinentCode,
+  CountryRiskSnapshotEntry,
   CountrySignal,
   CountryStatus,
   CountryView,
@@ -35,6 +36,7 @@ import realtimeFeedJson from '@web-data/realtime-feed.json';
 import countryStatusJson from '@web-data/country-status.json';
 import mvHondiusImportsJson from '@web-data/mv-hondius-imports.json';
 import countrySignalsJson from '@web-data/country-signals.json';
+import countryRiskSnapshotJson from '@web-data/country-risk-snapshot.json';
 
 // ---- Active clusters & current HPI ---------------------------------------
 
@@ -208,6 +210,16 @@ const _importsByIso2 = new Map<string, MvHondiusImport>(
 const _signalsByIso2: Record<string, CountrySignal> =
   (countrySignalsJson as { countries?: Record<string, CountrySignal> }).countries ?? {};
 
+export const countryRiskSnapshot = countryRiskSnapshotJson as {
+  date?: string;
+  windowDays?: number;
+  freshnessWarningHours?: number;
+  countries?: Record<string, CountryRiskSnapshotEntry>;
+};
+
+const _riskByIso2: Record<string, CountryRiskSnapshotEntry> =
+  countryRiskSnapshot.countries ?? {};
+
 export const CONTINENT_ORDER: ContinentCode[] = [
   'americas',
   'europe',
@@ -230,13 +242,14 @@ export const countryViews: CountryView[] = (countryStatusJson.countries as Count
     iso2: c.iso2.toUpperCase(),
     signals: _signalsByIso2[c.iso2.toUpperCase()],
     imports: _importsByIso2.get(c.iso2.toUpperCase()),
+    risk: _riskByIso2[c.iso2.toUpperCase()],
   }));
 
 function _countrySortKey(c: CountryView): [number, number, number, string] {
   return [
-    c.imports ? 0 : 1,
+    c.risk?.riskLevel === 'active' ? 0 : c.risk?.riskLevel === 'elevated' ? 1 : c.imports ? 2 : 3,
     c.hasLocalAndes ? 0 : 1,
-    -(c.signals?.signalCount30d ?? 0),
+    -(c.risk?.signalCount30d ?? c.signals?.signalCount30d ?? 0),
     c.nameZh,
   ];
 }
