@@ -12,7 +12,7 @@ import { View, Text } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
-import { type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
+import { type ImportProximity, type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
 import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
@@ -30,6 +30,7 @@ interface Props {
    *  "WHO hasn't published anything since 5/13" and "our collector is broken".
    *  Without this, those two states look identical from the UI alone. */
   lastCheckedAt?: string;
+  importProximity?: ImportProximity | null;
 }
 
 export function NearestAndesCard({ result, lastCheckedAt }: Props) {

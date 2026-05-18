@@ -25,6 +25,10 @@ USER_TEMPLATE = (
     "{{\"latestChange\":\"≤55字，昨天/最新真正发生了什么\","
     "\"situation\":\"≤75字，当前总体情况\","
     "\"riskJudgment\":\"≤65字，中国用户该如何理解当前风险\","
+    "\"newCases\":\"≤32字，直接回答昨日/最新有没有新增病例或初筛阳性\","
+    "\"sourceSummary\":\"≤32字，说明主要依据来自 WHO/官方/专业监测/新闻线索\","
+    "\"watchFocus\":[\"关注点1≤12字\",\"关注点2≤12字\",\"关注点3≤12字\"],"
+    "\"shareLine\":\"≤80字，可直接复制或截图传播的一句话\","
     "\"evidence\":[\"依据1≤18字\",\"依据2≤18字\",\"依据3≤18字\"]}}。\n\n"
     "数据：\n{payload}"
 )
@@ -50,6 +54,7 @@ def _postprocess_brief_text(value: str) -> str:
         "加拿大确诊": "加拿大报告",
         "结束航程": "完成航程",
         "尤其是直飞航线": "以及后续官方通报",
+        "无需担忧": "无需恐慌",
     }
     out = value
     for old, new in replacements.items():
@@ -120,10 +125,13 @@ def enhance_daily_brief(
         return daily_brief
 
     enhanced = dict(daily_brief)
-    for key in ("latestChange", "situation", "riskJudgment"):
+    for key in ("latestChange", "situation", "riskJudgment", "newCases", "sourceSummary", "shareLine"):
         value = result.get(key)
         if isinstance(value, str) and value.strip():
             enhanced[key] = _postprocess_brief_text(value.strip())
+    watch_focus = result.get("watchFocus")
+    if isinstance(watch_focus, list):
+        enhanced["watchFocus"] = [_postprocess_brief_text(str(item).strip()) for item in watch_focus if str(item).strip()][:3]
     evidence = result.get("evidence")
     if isinstance(evidence, list):
         enhanced["evidence"] = [_postprocess_brief_text(str(item).strip()) for item in evidence if str(item).strip()][:3]

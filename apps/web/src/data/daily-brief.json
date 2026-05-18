@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-18T05:30:17.394188+00:00",
+  "__generated_at": "2026-05-18T05:46:07.713932+00:00",
   "date": "2026-05-18",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -8,12 +8,20 @@
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "daysSinceLastIntlAlert": 5,
-  "latestChange": "加拿大报告首例与MV Hondius邮轮相关的汉坦病毒疑似病例，全球累计11例。",
-  "situation": "法国确诊输入病例，距中国约8400公里；源头仍为南美邮轮聚集疫情，HPI指数31，一般关注。国内HFRS处于基线正常范围。",
-  "riskJudgment": "当前输入风险低，但需关注邮轮相关接触者随访。国内无异常，无需过度担忧。",
+  "latestChange": "加拿大报告首例与MV Hondius邮轮相关的推定病例，全球共11例；英国收治有症状医护人员。",
+  "situation": "MV Hondius邮轮安第斯型聚集疫情持续，全球共11例（8确诊、1未定、2可能），3例死亡；法国有确诊输入，中国无相关病例。",
+  "riskJudgment": "中国境内风险极低，HFRS处于基线水平；邮轮相关疫情距中国遥远，普通公众无需恐慌。",
+  "newCases": "加拿大报告1例推定病例，全球累计11例；无中国新增病例。",
+  "sourceSummary": "主要依据WHO疾病暴发新闻及专业监测。",
+  "shareLine": "5月18日：加拿大报告首例邮轮相关推定病例，全球累计11例；中国无新增，HFRS处于基线，风险极低。",
+  "watchFocus": [
+    "邮轮疫情进展",
+    "输入病例监测",
+    "中国HFRS基线"
+  ],
   "evidence": [
-    "法国确诊输入，有直飞中国",
-    "WHO通报邮轮聚集疫情共11例",
-    "国内HFRS监测正常"
+    "WHO 5月13日通报11例",
+    "加拿大推定病例1例",
+    "中国HFRS基线正常"
   ]
 }

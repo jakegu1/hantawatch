@@ -8,7 +8,7 @@ import { findNearestAndes, relativeTimeZh, type ImportProximity } from '@/lib/ne
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
-import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Activity } from 'lucide-react';
+import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Copy } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
@@ -82,6 +82,7 @@ export default function HomePage() {
   //  finishes in <200 ms so the swap is imperceptible.
   // ────────────────────────────────────────────────────────────────────
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(activeClusters);
+  const [briefCopied, setBriefCopied] = useState(false);
   useEffect(() => {
     let cancelled = false;
     fetch('/api/clusters', { cache: 'no-store', credentials: 'same-origin' })
@@ -188,7 +189,6 @@ export default function HomePage() {
   const briefItems = yesterdayItems.length > 0
     ? yesterdayItems
     : chronologicalRecentCases.filter((c) => !isLowInformationBriefTitle(c.title ?? c.notes ?? '')).slice(0, 3);
-  const surveillanceCount = chronologicalRecentCases.filter((c) => c.source?.confidence === 'surveillance').length;
   const latestSurveillance = chronologicalRecentCases.find((c) => c.source?.confidence === 'surveillance');
   const latestWho = liveRecentCases.find(isOfficialWho);
   const chinaRiskText = hpi.total <= 35
@@ -197,6 +197,24 @@ export default function HomePage() {
   const briefLatestChange = dynamicTodayBrief.latestChange ?? (briefItems[0] ? briefCaseText(briefItems[0]) : '过去 24 小时暂无新的高可信通报。');
   const briefSituation = dynamicTodayBrief.situation ?? dynamicTodayBrief.oneLine;
   const briefRiskJudgment = dynamicTodayBrief.riskJudgment ?? chinaRiskText;
+  const briefNewCases = dynamicTodayBrief.newCases ?? briefLatestChange;
+  const briefSourceSummary = dynamicTodayBrief.sourceSummary ?? (latestWho ? `主要依据：WHO DON（${latestWho.date}）` : latestSurveillance ? '主要依据：专业监测源' : '主要依据：现有公开数据');
+  const briefWatchFocus = (dynamicTodayBrief.watchFocus?.length ? dynamicTodayBrief.watchFocus : dynamicTodayBrief.evidence)?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
+  const briefShareLine = dynamicTodayBrief.shareLine ?? `${briefNewCases} ${briefRiskJudgment}`;
+  const domesticBaselineText = dynamicTodayBrief.domesticBaselineStatus === 'elevated'
+    ? '国内 HFRS 高于基线'
+    : dynamicTodayBrief.domesticBaselineStatus === 'below'
+      ? '国内 HFRS 低于基线'
+      : '国内 HFRS 基线正常';
+  const copyBriefShareLine = async () => {
+    try {
+      await navigator.clipboard.writeText(`病毒观察每日简报｜${dynamicTodayBrief.date}\n${briefShareLine}`);
+      setBriefCopied(true);
+      window.setTimeout(() => setBriefCopied(false), 1600);
+    } catch {
+      setBriefCopied(false);
+    }
+  };
 
   return (
     <div className="pb-16">
@@ -372,65 +390,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-page mt-6">
-        <div className="card border-brand-100 bg-gradient-to-br from-white to-brand-50/40">
-          <div className="flex items-start justify-between gap-3 mb-4">
-            <div>
-              <p className="text-[11px] font-medium text-brand-600 uppercase tracking-wider">每日简报</p>
-              <h2 className="text-lg font-bold text-gray-900 mt-0.5">昨天发生了什么，现在总体是什么情况</h2>
+      <section className="container-page mt-4 sm:mt-6">
+        <div className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
+          <div className="bg-gradient-to-r from-brand-800 via-brand-700 to-brand-600 px-4 py-3 text-white">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="text-[10px] font-semibold tracking-[0.18em] text-blue-100">每日简报</p>
+                <h2 className="mt-0.5 text-base font-bold">今天只看这一屏</h2>
+              </div>
+              <div className="text-right text-[11px] text-blue-100">
+                <div>{dynamicTodayBrief.date}</div>
+                <div>可截图 · 可引用</div>
+              </div>
             </div>
-            <span className="rounded-full bg-white px-2.5 py-1 text-[11px] text-gray-500 ring-1 ring-gray-200">
-              {dynamicTodayBrief.date}
-            </span>
+            <div className="mt-3 rounded-xl bg-white/12 p-3 ring-1 ring-white/15">
+              <div className="text-[11px] text-blue-100">昨日/最新新增</div>
+              <div className="mt-1 text-lg font-extrabold leading-snug">{briefNewCases}</div>
+              <div className="mt-1 text-[11px] leading-relaxed text-blue-50/90">{briefSourceSummary}</div>
+            </div>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-3">
-            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
-              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-                <Bell className="h-4 w-4 text-brand-500" />
-                昨日/最新动态
-              </div>
-              <p className="mt-2 text-xs leading-relaxed text-gray-700">{briefLatestChange}</p>
-              {dynamicTodayBrief.evidence && dynamicTodayBrief.evidence.length > 0 && (
-                <div className="mt-2 flex flex-wrap gap-1">
-                  {dynamicTodayBrief.evidence.map((item) => (
-                    <span key={item} className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] text-brand-700">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              )}
+          <div className="grid grid-cols-2 gap-2 p-3 text-xs sm:grid-cols-4">
+            <div className="rounded-xl bg-brand-50 p-2.5">
+              <div className="text-[10px] text-brand-600">主要来源</div>
+              <div className="mt-1 font-bold text-gray-900 line-clamp-2">{briefSourceSummary.replace(/^主要依据：/, '')}</div>
             </div>
-
-            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
-              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-                <Activity className="h-4 w-4 text-orange-500" />
-                当前总览
-              </div>
-              <p className="mt-2 text-xs leading-relaxed text-gray-600">{briefSituation}</p>
+            <div className="rounded-xl bg-orange-50 p-2.5">
+              <div className="text-[10px] text-orange-600">当前态势</div>
+              <div className="mt-1 font-bold text-gray-900 line-clamp-2">{briefSituation}</div>
             </div>
+            <div className="rounded-xl bg-green-50 p-2.5">
+              <div className="text-[10px] text-green-700">中国风险</div>
+              <div className="mt-1 font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
+              <div className="mt-0.5 text-[10px] text-gray-500">{domesticBaselineText}</div>
+            </div>
+            <div className="rounded-xl bg-gray-50 p-2.5">
+              <div className="text-[10px] text-gray-500">今日关注</div>
+              <div className="mt-1 flex flex-wrap gap-1">
+                {briefWatchFocus.map((item) => (
+                  <span key={item} className="rounded-full bg-white px-1.5 py-0.5 text-[10px] font-medium text-gray-700 ring-1 ring-gray-200">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
 
-            <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
-              <div className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-                <Shield className="h-4 w-4 text-green-600" />
-                风险判断
+          <div className="border-t border-gray-100 px-3 pb-3">
+            <div className="rounded-xl bg-gray-950 p-3 text-white">
+              <div className="flex items-start justify-between gap-3">
+                <p className="text-xs font-semibold leading-relaxed sm:text-sm">{briefShareLine}</p>
+                <button
+                  type="button"
+                  onClick={copyBriefShareLine}
+                  className="inline-flex shrink-0 items-center gap-1 rounded-full bg-white/10 px-2 py-1 text-[10px] text-white ring-1 ring-white/15"
+                >
+                  <Copy className="h-3 w-3" />
+                  {briefCopied ? '已复制' : '复制'}
+                </button>
               </div>
-              <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
-                <div className="rounded-lg bg-gray-50 p-2">
-                  <div className="text-gray-400">中国风险</div>
-                  <div className="font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
-                </div>
-                <div className="rounded-lg bg-gray-50 p-2">
-                  <div className="text-gray-400">专业监测</div>
-                  <div className="font-bold text-gray-800 truncate">{latestSurveillance?.title ?? `${surveillanceCount} 条待核查线索`}</div>
-                </div>
-                <div className="rounded-lg bg-gray-50 p-2 col-span-2">
-                  <div className="text-gray-400">判断</div>
-                  <div className="font-medium text-gray-800">{briefRiskJudgment}</div>
-                </div>
-              </div>
-              <div className="mt-2 text-[11px] text-gray-500">
-                WHO：{latestWho ? `${latestWho.date} · ${latestWho.title}` : '暂无新的 WHO DON 通报'}
+              <div className="mt-2 flex flex-wrap gap-1">
+                {(dynamicTodayBrief.evidence ?? briefWatchFocus).slice(0, 3).map((item) => (
+                  <span key={item} className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-blue-50">
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

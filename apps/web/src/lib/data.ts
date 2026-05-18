@@ -80,6 +80,10 @@ export interface DailyBrief {
   latestChange?: string;
   situation?: string;
   riskJudgment?: string;
+  newCases?: string;
+  sourceSummary?: string;
+  watchFocus?: string[];
+  shareLine?: string;
   evidence?: string[];
 }
 
@@ -97,6 +101,10 @@ export const todayBrief: DailyBrief = {
   latestChange: riskSnapshotDailyBrief?.latestChange ?? staticDailyBrief.latestChange,
   situation: riskSnapshotDailyBrief?.situation ?? staticDailyBrief.situation,
   riskJudgment: riskSnapshotDailyBrief?.riskJudgment ?? staticDailyBrief.riskJudgment,
+  newCases: riskSnapshotDailyBrief?.newCases ?? staticDailyBrief.newCases,
+  sourceSummary: riskSnapshotDailyBrief?.sourceSummary ?? staticDailyBrief.sourceSummary,
+  watchFocus: riskSnapshotDailyBrief?.watchFocus ?? staticDailyBrief.watchFocus,
+  shareLine: riskSnapshotDailyBrief?.shareLine ?? staticDailyBrief.shareLine,
   evidence: riskSnapshotDailyBrief?.evidence ?? staticDailyBrief.evidence,
 };
 
