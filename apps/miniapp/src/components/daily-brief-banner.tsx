@@ -45,7 +45,7 @@ export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor, highRi
         marginBottom: '16rpx',
       }}
     >
-      <View style={{ background: 'linear-gradient(135deg, #ffffff 0%, #eff6ff 55%, #ecfeff 100%)', padding: '24rpx' }}>
+      <View style={{ padding: '24rpx 24rpx 18rpx', borderBottom: '1rpx solid #eef2ff' }}>
         <View className="flex items-center" style={{ justifyContent: 'space-between', gap: '16rpx' }}>
           <View>
             <Text style={{ color: '#1d4ed8', fontSize: '20rpx', fontWeight: 700, letterSpacing: '4rpx', display: 'block' }}>
@@ -62,7 +62,7 @@ export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor, highRi
             </Text>
           </View>
         </View>
-        <View style={{ background: '#ffffff', border: '1rpx solid #bfdbfe', borderRadius: '20rpx', padding: '20rpx', marginTop: '20rpx' }}>
+        <View style={{ background: '#f8fafc', border: '1rpx solid #e2e8f0', borderRadius: '18rpx', padding: '20rpx', marginTop: '20rpx' }}>
           <Text style={{ color: '#1d4ed8', fontSize: '22rpx', fontWeight: 600, display: 'block' }}>昨日/最新新增</Text>
           <Text style={{ color: '#111827', fontSize: '34rpx', fontWeight: 800, lineHeight: 1.35, marginTop: '8rpx', display: 'block' }}>
             {newCases}
@@ -73,40 +73,40 @@ export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor, highRi
         </View>
       </View>
 
-      <View style={{ padding: '20rpx', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '12rpx' }}>
-        <View style={{ width: 'calc(50% - 6rpx)', background: '#fef2f2', borderRadius: '18rpx', padding: '16rpx' }}>
-          <Text style={{ color: '#b91c1c', fontSize: '20rpx', display: 'block' }}>最近高危病毒活动</Text>
-          <Text style={{ color: '#b91c1c', fontSize: '28rpx', fontWeight: 800, lineHeight: 1.25, marginTop: '6rpx', display: 'block' }}>
+      <View style={{ padding: '18rpx 24rpx 4rpx' }}>
+        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
+          <Text style={{ color: '#b91c1c', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>最近高危病毒活动</Text>
+          <Text style={{ color: '#991b1b', fontSize: '30rpx', fontWeight: 800, lineHeight: 1.25, marginTop: '6rpx', display: 'block' }}>
             {highRiskDistanceText}
           </Text>
           <Text style={{ color: '#4b5563', fontSize: '20rpx', lineHeight: 1.5, marginTop: '6rpx', display: 'block' }}>
             {highRiskDistanceContext}
           </Text>
         </View>
-        <View style={{ width: 'calc(50% - 6rpx)', background: '#eff6ff', borderRadius: '18rpx', padding: '16rpx' }}>
-          <Text style={{ color: '#2563eb', fontSize: '20rpx', display: 'block' }}>主要来源</Text>
-          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
+        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
+          <Text style={{ color: '#2563eb', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>主要来源</Text>
+          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
             {sourceSummary.replace(/^主要依据：/, '')}
           </Text>
         </View>
-        <View style={{ width: '100%', background: '#fff7ed', borderRadius: '18rpx', padding: '16rpx' }}>
-          <Text style={{ color: '#ea580c', fontSize: '20rpx', display: 'block' }}>当前态势</Text>
-          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
+        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
+          <Text style={{ color: '#ea580c', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>当前态势</Text>
+          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
             {situation}
           </Text>
         </View>
-        <View style={{ width: 'calc(50% - 6rpx)', background: '#f0fdf4', borderRadius: '18rpx', padding: '16rpx' }}>
-          <Text style={{ color: '#15803d', fontSize: '20rpx', display: 'block' }}>中国风险</Text>
-          <Text style={{ color: hpiColor, fontSize: '24rpx', fontWeight: 800, marginTop: '6rpx', display: 'block' }}>
-            {hpiTotal} · {hpiGradeZh}
-          </Text>
-          <Text style={{ color: baseline.color, fontSize: '20rpx', fontWeight: 600, marginTop: '4rpx', display: 'block' }}>
+        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
+          <View className="flex items-center" style={{ justifyContent: 'space-between', gap: '12rpx' }}>
+            <Text style={{ color: '#15803d', fontSize: '21rpx', fontWeight: 600 }}>中国风险</Text>
+            <Text style={{ color: hpiColor, fontSize: '22rpx', fontWeight: 800 }}>{hpiTotal} · {hpiGradeZh}</Text>
+          </View>
+          <Text style={{ color: baseline.color, fontSize: '21rpx', fontWeight: 700, marginTop: '6rpx', display: 'block' }}>
             {baseline.text}
           </Text>
         </View>
-        <View style={{ width: 'calc(50% - 6rpx)', background: '#f9fafb', borderRadius: '18rpx', padding: '16rpx' }}>
-          <Text style={{ color: '#6b7280', fontSize: '20rpx', display: 'block' }}>今日关注</Text>
-          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
+        <View style={{ paddingBottom: '16rpx' }}>
+          <Text style={{ color: '#6b7280', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>今日关注</Text>
+          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
             {focusSentence}
           </Text>
         </View>

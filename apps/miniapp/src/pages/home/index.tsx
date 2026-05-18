@@ -125,6 +125,12 @@ export default function HomePage() {
 
   const nearestImport = riskSnapshot.nearestImport as ImportProximity | null | undefined;
   const hpi = currentHpi;
+  const dynamicHpi7DayHistory = useMemo(() => {
+    if (hpi7DayHistory.length === 0) return hpi7DayHistory;
+    return hpi7DayHistory.map((point, index) =>
+      index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
+    );
+  }, [hpi.total]);
 
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
   const cluster = nearestAndes.nearest ?? liveClusters[0];
@@ -166,16 +172,6 @@ export default function HomePage() {
         <View className="flex" style={{ justifyContent: 'flex-end', marginBottom: '8rpx' }}>
           <DataFreshness meta={dataMeta} />
         </View>
-
-        {/* Daily brief banner */}
-        <DailyBriefBanner
-          brief={todayBrief}
-          hpiTotal={hpi.total}
-          hpiGradeZh={hpi.gradeZh}
-          hpiColor={hpi.color}
-          highRiskDistanceText={highRiskDistanceText}
-          highRiskDistanceContext={highRiskDistanceContext}
-        />
 
         {/* Andes warning strip */}
         <View
@@ -389,20 +385,31 @@ export default function HomePage() {
           <View className="flex items-center" style={{ justifyContent: 'space-between' }}>
             <Text style={{ fontSize: '22rpx', fontWeight: 500, color: '#6b7280' }}>HPI 近 7 天趋势</Text>
             <Text style={{ fontSize: '22rpx', fontFamily: 'monospace', color: '#6b7280' }}>
-              {hpi7DayHistory[0]?.value} → <Text style={{ color: hpi.color, fontWeight: 700 }}>{hpi7DayHistory[hpi7DayHistory.length - 1]?.value}</Text>
+              {dynamicHpi7DayHistory[0]?.value} → <Text style={{ color: hpi.color, fontWeight: 700 }}>{dynamicHpi7DayHistory[dynamicHpi7DayHistory.length - 1]?.value}</Text>
             </Text>
           </View>
           <View className="mt-2">
             <Sparkline
-              values={hpi7DayHistory.map((d) => d.value)}
-              labels={hpi7DayHistory.map((d) => d.date.slice(5))}
+              values={dynamicHpi7DayHistory.map((d) => d.value)}
+              labels={dynamicHpi7DayHistory.map((d) => d.date.slice(5))}
               color={hpi.color}
               height={48}
             />
           </View>
           <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '8rpx', display: 'block', lineHeight: 1.5 }}>
-            分数主要来自病毒本身的高危属性（人传人 + 高病死率），因距离中国大陆极远被大幅降权。
+            分数主要来自病毒本身的高危属性、输入监测距离、交通连接和国内基线状态。
           </Text>
+        </View>
+
+        <View style={{ marginTop: '16rpx' }}>
+          <DailyBriefBanner
+            brief={todayBrief}
+            hpiTotal={hpi.total}
+            hpiGradeZh={hpi.gradeZh}
+            hpiColor={hpi.color}
+            highRiskDistanceText={highRiskDistanceText}
+            highRiskDistanceContext={highRiskDistanceContext}
+          />
         </View>
       </View>
 

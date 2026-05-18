@@ -33,7 +33,7 @@ interface Props {
   importProximity?: ImportProximity | null;
 }
 
-export function NearestAndesCard({ result, lastCheckedAt }: Props) {
+export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Props) {
   const { nearest, count, all } = result;
 
   if (!nearest) {
@@ -50,10 +50,15 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
     );
   }
 
-  const km = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
+  const sourceKm = nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : null;
+  const hasCloserImport = importProximity != null && importProximity.distanceKm < (sourceKm ?? Infinity);
+  const km = hasCloserImport ? importProximity.distanceKm : sourceKm;
   const flag = flagForLocation(nearest.location?.name);
+  const displayLocation = hasCloserImport
+    ? `${importProximity.flag} ${importProximity.nameZh} · ${importProximity.statusZh}`
+    : nearest.location?.name || '位置待定位';
   const ago = relativeDateZh(nearest.lastUpdate);
-  const markerColor = SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
+  const markerColor = hasCloserImport ? '#d97706' : SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
 
   return (
     <View
@@ -116,7 +121,7 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
                 km
               </Text>
               <Text className="text-xs text-gray-500 ml-auto" style={{ marginBottom: '8rpx' }}>
-                距中国大陆
+                {hasCloserImport ? '距最近输入' : '距中国大陆'}
               </Text>
             </>
           ) : (
@@ -128,9 +133,14 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
         <View className="flex items-center gap-1" style={{ marginBottom: '6rpx' }}>
           <Text style={{ color: '#9ca3af', fontSize: '22rpx' }}>📌</Text>
           <Text className="text-xs text-gray-600 truncate flex-1">
-            {nearest.location?.name || '位置待定位'}
+            {displayLocation}
           </Text>
         </View>
+        {hasCloserImport && sourceKm && (
+          <Text style={{ color: '#9ca3af', fontSize: '20rpx', marginBottom: '8rpx', display: 'block' }}>
+            疫情源头：{flag} {nearest.location?.name} {fmt(sourceKm)} km
+          </Text>
+        )}
 
         {/* Dual-timestamp row — see apps/web/src/components/nearest-andes-card.tsx
             for the rationale. Splitting source-date from check-time prevents
@@ -155,7 +165,7 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
         {/* Distance bar */}
         {km !== null && (
           <View className="mb-3">
-            <DistanceBar distanceKm={km} markerColor={markerColor} clusterLabel={nearest.location?.name} />
+            <DistanceBar distanceKm={km} markerColor={markerColor} clusterLabel={hasCloserImport ? importProximity.nameZh : nearest.location?.name} />
           </View>
         )}
 
@@ -198,7 +208,7 @@ export function NearestAndesCard({ result, lastCheckedAt }: Props) {
             }}
           >
             <Text style={{ color: '#a16207', fontSize: '22rpx', fontWeight: 500 }}>
-              ✈ 无直飞中国
+              ✈ {hasCloserImport ? importProximity.travelConnectivityZh : '无直飞中国'}
             </Text>
           </View>
         </View>
