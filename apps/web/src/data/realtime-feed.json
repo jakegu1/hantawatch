@@ -1,32 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-18T15:25:14.916631+00:00",
+  "__generated_at": "2026-05-18T19:42:42.033897+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-18T15:25:08.375566+00:00",
+  "last_fetched": "2026-05-18T19:42:37.724344+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-c93fef9545508f8e",
-      "time": "2026-05-18T14:54:49.000Z",
-      "title_en": "WHO to give update on hantavirus and Ebola after outbreaks - BBC",
-      "body_en": "WHO to give update on hantavirus and Ebola after outbreaks BBC",
-      "summary_zh": "WHO 将就汉坦病毒和埃博拉疫情更新通报。",
+      "id": "rt-6c2879c037da3003",
+      "time": "2026-05-18T19:05:04.000Z",
+      "title_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave - The New York Times",
+      "body_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave The New York Times",
+      "summary_zh": "美国汉坦病毒患者被令隔离，尽管计划离开。",
       "key_facts_zh": [
-        "WHO",
-        "汉坦病毒",
-        "埃博拉"
+        "美国",
+        "隔离",
+        "患者"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-f52a5c54b6f66de2",
-      "time": "2026-05-18T14:47:54.000Z",
-      "title_en": "Hantavirus-stricken cruise ship docks in the Netherlands for disinfection - PBS",
-      "body_en": "Hantavirus-stricken cruise ship docks in the Netherlands for disinfection PBS",
-      "summary_zh": "受汉坦病毒影响的邮轮在荷兰靠港消毒。",
+      "id": "rt-cbb2e3c7d949bb42",
+      "time": "2026-05-18T18:58:16.000Z",
+      "title_en": "Hantavirus-stricken cruise ship docks in the Netherlands for disinfection - CBC",
+      "body_en": "Hantavirus-stricken cruise ship docks in the Netherlands for disinfection CBC",
+      "summary_zh": "汉坦病毒疫情邮轮在荷兰靠港消毒。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
@@ -35,63 +35,140 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-70bc3e222368c374",
-      "time": "2026-05-18T14:42:00.000Z",
-      "title_en": "Canada confirms hantavirus case linked to deadly cruise ship outbreak - New York Post",
-      "body_en": "Canada confirms hantavirus case linked to deadly cruise ship outbreak New York Post",
-      "summary_zh": "加拿大报告一例与致命邮轮疫情相关的汉坦病毒病例。",
-      "key_facts_zh": [
-        "加拿大",
-        "确诊",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f54d789ba99f5b75",
-      "time": "2026-05-18T14:33:18.000Z",
-      "title_en": "Hantavirus latest updates: Canada reports first presumptive case linked to MV Hondius as global total hits 11 - Yahoo",
-      "body_en": "Hantavirus latest updates: Canada reports first presumptive case linked to MV Hondius as global total hits 11 Yahoo",
-      "summary_zh": "加拿大报告首例与MV Hondius相关的推定病例，全球总数达11例。",
-      "key_facts_zh": [
-        "加拿大",
-        "推定病例",
-        "全球11例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4f627585b58b8e1d",
-      "time": "2026-05-18T14:07:50.000Z",
-      "title_en": "‘Crises’: WHO kicks off annual assembly amid Ebola, US withdrawal - South China Morning Post",
-      "body_en": "‘Crises’: WHO kicks off annual assembly amid Ebola, US withdrawal South China Morning Post",
-      "summary_zh": "WHO 年度大会在埃博拉和美国退出背景下召开。",
+      "id": "rt-5689b5cc3645d10e",
+      "time": "2026-05-18T18:45:44.000Z",
+      "title_en": "Ebola and hantavirus outbreaks sign of our 'dangerous' times: WHO | Hindustan Times - Hindustan Times",
+      "body_en": "Ebola and hantavirus outbreaks sign of our 'dangerous' times: WHO | Hindustan Times Hindustan Times",
+      "summary_zh": "WHO称埃博拉和汉坦病毒爆发是危险时代的标志。",
       "key_facts_zh": [
         "WHO",
-        "年度大会",
-        "埃博拉"
+        "埃博拉",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-6d8e92e0d4e6a81b",
-      "time": "2026-05-18T14:05:49.000Z",
-      "title_en": "Cruise ship hit by deadly hantavirus outbreak arrives in the Netherlands - CBC",
-      "body_en": "Cruise ship hit by deadly hantavirus outbreak arrives in the Netherlands CBC",
-      "summary_zh": "致命汉坦病毒疫情邮轮抵达荷兰。",
+      "id": "rt-5613d1f670431394",
+      "time": "2026-05-18T18:43:51.000Z",
+      "title_en": "Britain gets experimental drug from Japan to bolster hantavirus response - Reuters",
+      "body_en": "Britain gets experimental drug from Japan to bolster hantavirus response Reuters",
+      "summary_zh": "英国从日本获取实验性药物以加强汉坦病毒应对。",
+      "key_facts_zh": [
+        "英国",
+        "日本",
+        "实验药物"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b688b290ec16fbab",
+      "time": "2026-05-18T18:20:03.000Z",
+      "title_en": "WHO chief ties funding cuts to Ebola, hantavirus outbreaks - Al Jazeera",
+      "body_en": "WHO chief ties funding cuts to Ebola, hantavirus outbreaks Al Jazeera",
+      "summary_zh": "WHO负责人将资金削减与埃博拉和汉坦病毒爆发联系起来。",
+      "key_facts_zh": [
+        "WHO",
+        "资金削减",
+        "爆发"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-d0e5dd3b7546496b",
+      "time": "2026-05-18T18:12:12.000Z",
+      "title_en": "Cruise ship hit by deadly hantavirus outbreak docks in Netherlands for disinfection - KOMO",
+      "body_en": "Cruise ship hit by deadly hantavirus outbreak docks in Netherlands for disinfection KOMO Hantavirus-stricken cruise ship now in port in Netherlands CBS News Hantavirus-hit cruise ship docks in the Netherlands after long, deadly voyage NBC News",
+      "summary_zh": "致命汉坦病毒疫情邮轮在荷兰靠港消毒。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "疫情"
+        "消毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a69c289ed0740eff",
+      "time": "2026-05-18T18:07:31.000Z",
+      "title_en": "Adult dies from hantavirus in Colorado - Investing.com India",
+      "body_en": "Adult dies from hantavirus in Colorado Investing.com India",
+      "summary_zh": "科罗拉多州一名成年人死于汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-33b4ef956cf693c4",
+      "time": "2026-05-18T18:05:00.000Z",
+      "title_en": "Hantavirus Death in Colorado Unrelated to Cruise Ship Outbreak, Officials Confirm - Newsweek",
+      "body_en": "Hantavirus Death in Colorado Unrelated to Cruise Ship Outbreak, Officials Confirm Newsweek",
+      "summary_zh": "官方确认科罗拉多汉坦病毒死亡与邮轮疫情无关。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-98b8e5b32c1c1668",
+      "time": "2026-05-18T17:59:42.000Z",
+      "title_en": "Hantavirus-hit cruise ship docks in the Netherlands after long, deadly voyage - NBC News",
+      "body_en": "Hantavirus-hit cruise ship docks in the Netherlands after long, deadly voyage NBC News",
+      "summary_zh": "受汉坦病毒影响的邮轮在荷兰靠岸，航程致命。",
+      "key_facts_zh": [
+        "荷兰",
+        "邮轮",
+        "靠岸"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ca5af8aeea08a237",
+      "time": "2026-05-18T17:48:00.000Z",
+      "title_en": "Health leaders offer safety tips after Colorado hantavirus death - KKTV",
+      "body_en": "Health leaders offer safety tips after Colorado hantavirus death KKTV",
+      "summary_zh": "卫生官员在科罗拉多汉坦病毒死亡后提供安全提示。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "安全提示"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-89a22d0a36447ee4",
+      "time": "2026-05-18T17:45:00.000Z",
+      "title_en": "How scientists developed a hantavirus PCR test in a weekend - Scientific American",
+      "body_en": "How scientists developed a hantavirus PCR test in a weekend Scientific American",
+      "summary_zh": "科学家周末内开发出汉坦病毒PCR检测方法。",
+      "key_facts_zh": [
+        "PCR检测",
+        "研发"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7f6d105aaa6b2056",
+      "time": "2026-05-18T17:12:31.000Z",
+      "title_en": "Hantavirus-hit ship docks in the Netherlands, what we know so far - Sky News",
+      "body_en": "Hantavirus-hit ship docks in the Netherlands, what we know so far Sky News",
+      "summary_zh": "汉坦病毒疫情船只停靠荷兰，Sky News 报道已知情况。",
+      "key_facts_zh": [
+        "荷兰",
+        "邮轮",
+        "停靠"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-c8d4bb8830657726",
-      "time": "2026-05-18T14:05:31.000Z",
+      "time": "2026-05-18T17:05:48.000Z",
       "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
       "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
-      "summary_zh": "WHO 发布汉坦病毒焦点报告，概述已知信息与影响。",
+      "summary_zh": "WHO 发布汉坦病毒焦点报告，介绍已知情况与影响。",
       "key_facts_zh": [
         "WHO",
         "报告"
@@ -99,108 +176,54 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-f9ab022481d5b591",
-      "time": "2026-05-18T13:20:00.000Z",
-      "title_en": "Hantavirus outbreak: Nine UK citizens exposed on cruise ship flown back to Britain for isolation - The Times of India",
-      "body_en": "Hantavirus outbreak: Nine UK citizens exposed on cruise ship flown back to Britain for isolation The Times of India",
-      "summary_zh": "9名英国公民因邮轮汉坦病毒暴露被接回英国隔离。",
+      "id": "rt-19f3b416f5ad3a3d",
+      "time": "2026-05-18T16:28:09.000Z",
+      "title_en": "Canada confirms first hantavirus case - DT Next",
+      "body_en": "Canada confirms first hantavirus case DT Next",
+      "summary_zh": "加拿大报告首例汉坦病毒病例。",
       "key_facts_zh": [
-        "英国",
-        "9人",
-        "隔离"
+        "加拿大",
+        "首例病例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-d7e467c9ac0c21ec",
-      "time": "2026-05-18T13:17:00.000Z",
-      "title_en": "Hantavirus-Hit Cruise Ship Docks In Netherlands For Disinfection (Latest Updates) - Forbes",
-      "body_en": "Hantavirus-Hit Cruise Ship Docks In Netherlands For Disinfection (Latest Updates) Forbes",
-      "summary_zh": "汉坦病毒邮轮在荷兰停靠进行消毒。",
+      "id": "rt-b116c2c964958eaa",
+      "time": "2026-05-18T16:14:49.000Z",
+      "title_en": "Adult dies of hantavirus in Colorado, state health officials say - Reuters",
+      "body_en": "Adult dies of hantavirus in Colorado, state health officials say Reuters",
+      "summary_zh": "科罗拉多州一名成人因汉坦病毒死亡，州卫生官员通报。",
       "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "消毒"
+        "美国",
+        "科罗拉多",
+        "死亡 1 例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-ff04c6ec701a89cb",
-      "time": "2026-05-18T12:47:35.000Z",
-      "title_en": "Hantavirus-hit cruise ship arrives in Rotterdam for disinfection - The Globe and Mail",
-      "body_en": "Hantavirus-hit cruise ship arrives in Rotterdam for disinfection The Globe and Mail",
-      "summary_zh": "受汉坦病毒影响的邮轮抵达鹿特丹进行消毒。",
+      "id": "rt-db7f1715875d2efc",
+      "time": "2026-05-18T15:32:00.000Z",
+      "title_en": "Colorado adult dies from hantavirus after local rodent exposure - USA Today",
+      "body_en": "Colorado adult dies from hantavirus after local rodent exposure USA Today",
+      "summary_zh": "科罗拉多州一名成人因接触当地啮齿动物感染汉坦病毒死亡。",
       "key_facts_zh": [
-        "邮轮",
-        "鹿特丹",
-        "消毒"
+        "美国",
+        "科罗拉多",
+        "死亡 1 例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-ed15d0194314df3b",
-      "time": "2026-05-18T12:39:38.000Z",
-      "title_en": "Hantavirus cruise ship docks after seven weeks at sea - NBC News",
-      "body_en": "Hantavirus cruise ship docks after seven weeks at sea NBC News",
-      "summary_zh": "汉坦病毒邮轮在海上漂泊七周后靠岸。",
+      "id": "rt-c93fef9545508f8e",
+      "time": "2026-05-18T15:04:55.000Z",
+      "title_en": "WHO to give update on hantavirus and Ebola after outbreaks - BBC",
+      "body_en": "WHO to give update on hantavirus and Ebola after outbreaks BBC",
+      "summary_zh": "WHO 将就汉坦病毒和埃博拉疫情发布最新通报。",
       "key_facts_zh": [
-        "邮轮",
-        "七周",
-        "靠岸"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-14d0557fcb61d304",
-      "time": "2026-05-18T12:23:07.000Z",
-      "title_en": "Video: Dutch authority rules out further hantavirus spread as Hondius arrives - The Globe and Mail",
-      "body_en": "Video: Dutch authority rules out further hantavirus spread as Hondius arrives The Globe and Mail",
-      "summary_zh": "荷兰当局排除汉坦病毒进一步传播，Hondius号抵达。",
-      "key_facts_zh": [
-        "荷兰",
-        "排除传播",
-        "Hondius号"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a487aa83fb73759b",
-      "time": "2026-05-18T11:28:48.000Z",
-      "title_en": "Hantavirus Cruise Ship Arrives in Netherlands to Be Disinfected - TODAY.com",
-      "body_en": "Hantavirus Cruise Ship Arrives in Netherlands to Be Disinfected TODAY.com",
-      "summary_zh": "汉坦病毒邮轮抵达荷兰进行消毒。",
-      "key_facts_zh": [
-        "邮轮",
-        "荷兰",
-        "消毒"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-8252722dfed7dadd",
-      "time": "2026-05-18T11:28:23.000Z",
-      "title_en": "Ebola outbreak in Africa and hantavirus update - FOX 5 Atlanta",
-      "body_en": "Ebola outbreak in Africa and hantavirus update FOX 5 Atlanta",
-      "summary_zh": "新闻更新非洲埃博拉疫情和汉坦病毒情况。",
-      "key_facts_zh": [
-        "埃博拉",
-        "汉坦病毒",
-        "更新"
+        "WHO",
+        "通报"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-24415ed54f8d40f7",
-      "time": "2026-05-18T11:19:04.000Z",
-      "title_en": "Cruise ship at centre of Hantavirus outbreak docks in Rotterdam, Netherlands with remaining people on board - Sky News",
-      "body_en": "Cruise ship at centre of Hantavirus outbreak docks in Rotterdam, Netherlands with remaining people on board Sky News",
-      "summary_zh": "汉坦病毒暴发中心邮轮在鹿特丹靠岸，船上人员仍在。",
-      "key_facts_zh": [
-        "邮轮",
-        "鹿特丹",
-        "靠岸"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
