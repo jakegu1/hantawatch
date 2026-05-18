@@ -30,6 +30,30 @@ function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
 }
 
+function isOfficialWho(c: RecentCase): boolean {
+  const name = c.source?.name ?? '';
+  return c.source?.confidence === 'official' && (name.includes('WHO') || name.includes('DON'));
+}
+
+function isLowInformationBriefTitle(title: string): boolean {
+  const lower = title.toLowerCase();
+  return (
+    lower.includes('frequently asked questions') ||
+    lower.includes('faq') ||
+    lower.includes('what to know') ||
+    title.includes('是什么') ||
+    title.includes('什么是')
+  );
+}
+
+function briefCaseText(c: RecentCase): string {
+  const title = c.title ?? c.notes ?? c.source.name;
+  if (c.summary && c.source?.confidence !== 'news') {
+    return c.summary;
+  }
+  return title;
+}
+
 function distanceRingColor(km: number): string {
   if (km > 10000) return 'text-green-600';
   if (km > 3000) return 'text-yellow-600';
@@ -159,13 +183,20 @@ export default function HomePage() {
   const yesterdayDate = new Date(briefDate.getTime() - 86_400_000).toISOString().slice(0, 10);
   const yesterdayItems = chronologicalRecentCases
     .filter((c) => c.date >= yesterdayDate && c.date <= dynamicTodayBrief.date)
+    .filter((c) => !isLowInformationBriefTitle(c.title ?? c.notes ?? ''))
     .slice(0, 3);
-  const briefItems = yesterdayItems.length > 0 ? yesterdayItems : chronologicalRecentCases.slice(0, 3);
+  const briefItems = yesterdayItems.length > 0
+    ? yesterdayItems
+    : chronologicalRecentCases.filter((c) => !isLowInformationBriefTitle(c.title ?? c.notes ?? '')).slice(0, 3);
   const surveillanceCount = chronologicalRecentCases.filter((c) => c.source?.confidence === 'surveillance').length;
-  const latestWho = liveRecentCases.find((c) => {
-    const name = c.source?.name ?? '';
-    return name.includes('WHO') || name.includes('DON');
-  });
+  const latestSurveillance = chronologicalRecentCases.find((c) => c.source?.confidence === 'surveillance');
+  const latestWho = liveRecentCases.find(isOfficialWho);
+  const chinaRiskText = hpi.total <= 35
+    ? '对中国大陆公众的短期风险仍处于一般关注水平，重点是持续监测输入病例和官方通报。'
+    : 'HPI 已高于低位区间，建议重点查看官方通报、输入监测和国内基线变化。';
+  const briefLatestChange = dynamicTodayBrief.latestChange ?? (briefItems[0] ? briefCaseText(briefItems[0]) : '过去 24 小时暂无新的高可信通报。');
+  const briefSituation = dynamicTodayBrief.situation ?? dynamicTodayBrief.oneLine;
+  const briefRiskJudgment = dynamicTodayBrief.riskJudgment ?? chinaRiskText;
 
   return (
     <div className="pb-16">
@@ -359,15 +390,16 @@ export default function HomePage() {
                 <Bell className="h-4 w-4 text-brand-500" />
                 昨日/最新动态
               </div>
-              <div className="mt-2 space-y-2">
-                {briefItems.slice(0, 3).map((c) => (
-                  <div key={c.id} className="text-xs leading-relaxed">
-                    <span className="font-mono text-gray-500">{c.date}</span>
-                    <span className="mx-1 text-gray-300">·</span>
-                    <span className="text-gray-800">{c.title ?? c.notes ?? c.source.name}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="mt-2 text-xs leading-relaxed text-gray-700">{briefLatestChange}</p>
+              {dynamicTodayBrief.evidence && dynamicTodayBrief.evidence.length > 0 && (
+                <div className="mt-2 flex flex-wrap gap-1">
+                  {dynamicTodayBrief.evidence.map((item) => (
+                    <span key={item} className="rounded-full bg-brand-50 px-2 py-0.5 text-[10px] text-brand-700">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
@@ -375,7 +407,7 @@ export default function HomePage() {
                 <Activity className="h-4 w-4 text-orange-500" />
                 当前总览
               </div>
-              <p className="mt-2 text-xs leading-relaxed text-gray-600">{dynamicTodayBrief.oneLine}</p>
+              <p className="mt-2 text-xs leading-relaxed text-gray-600">{briefSituation}</p>
             </div>
 
             <div className="rounded-xl bg-white p-3 ring-1 ring-gray-100">
@@ -385,17 +417,20 @@ export default function HomePage() {
               </div>
               <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
                 <div className="rounded-lg bg-gray-50 p-2">
-                  <div className="text-gray-400">HPI</div>
+                  <div className="text-gray-400">中国风险</div>
                   <div className="font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-2">
                   <div className="text-gray-400">专业监测</div>
-                  <div className="font-bold text-gray-800">{surveillanceCount} 条</div>
+                  <div className="font-bold text-gray-800 truncate">{latestSurveillance?.title ?? `${surveillanceCount} 条待核查线索`}</div>
                 </div>
                 <div className="rounded-lg bg-gray-50 p-2 col-span-2">
-                  <div className="text-gray-400">WHO 置顶</div>
-                  <div className="font-medium text-gray-800 truncate">{latestWho?.title ?? '暂无更新'}</div>
+                  <div className="text-gray-400">判断</div>
+                  <div className="font-medium text-gray-800">{briefRiskJudgment}</div>
                 </div>
+              </div>
+              <div className="mt-2 text-[11px] text-gray-500">
+                WHO：{latestWho ? `${latestWho.date} · ${latestWho.title}` : '暂无新的 WHO DON 通报'}
               </div>
             </div>
           </div>

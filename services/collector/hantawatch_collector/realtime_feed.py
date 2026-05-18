@@ -381,6 +381,21 @@ def _format_item_for_prompt(u: RealtimeUpdate) -> str:
     )
 
 
+def _postprocess_translation_text(value: str) -> str:
+    replacements = {
+        "加拿大确认首例": "加拿大报告首例",
+        "加拿大确诊首例": "加拿大报告首例",
+        "加拿大确认": "加拿大报告",
+        "加拿大确诊": "加拿大报告",
+        "首例确诊": "首例病例",
+        "结束航程": "完成航程",
+    }
+    out = value
+    for old, new in replacements.items():
+        out = out.replace(old, new)
+    return out
+
+
 def _call_llm(
     *,
     client: httpx.Client,
@@ -488,8 +503,8 @@ def translate_updates(
                 strength = str(hit.get("signal_strength") or "").lower().strip()
                 if strength not in {"high", "medium", "low"}:
                     strength = "medium"  # safe default if model goes off-script
-                u.summary_zh = summary or "[翻译为空]"
-                u.key_facts_zh = tags
+                u.summary_zh = _postprocess_translation_text(summary) or "[翻译为空]"
+                u.key_facts_zh = [_postprocess_translation_text(t) for t in tags]
                 u.signal_strength = strength
     return out
 

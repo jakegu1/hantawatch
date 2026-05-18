@@ -407,6 +407,10 @@ def build_active_clusters(
 _OFFICIAL_CARRYOVER_MAX_AGE_DAYS = 30
 
 
+def _looks_chinese(text: str) -> bool:
+    return any("\u4e00" <= ch <= "\u9fff" for ch in text)
+
+
 def _recent_case_sort_key(row: dict) -> tuple[int, int]:
     source = row.get("source") or {}
     name = str(source.get("name") or "")
@@ -537,6 +541,26 @@ def build_recent_cases_intl(
                     continue
                 conf = (c.get("source") or {}).get("confidence")
                 if conf not in {"official", "surveillance"}:
+                    continue
+                title = str(c.get("title") or "")
+                if conf == "surveillance" and (
+                    not _looks_chinese(title)
+                    or any(
+                        pattern in title.lower()
+                        for pattern in (
+                            "frequently asked questions",
+                            "faq",
+                            "toolkit",
+                            "risks of a hantavirus infection",
+                            "what to know",
+                            "how worried",
+                            "understanding",
+                            "常见问题",
+                            "工具包",
+                            "风险科普",
+                        )
+                    )
+                ):
                     continue
                 case_date_str = c.get("date") or ""
                 try:
@@ -886,8 +910,8 @@ def build_risk_snapshot(
     }.get(daily_brief.get("domesticBaselineStatus"), "国内 HFRS 基线状态未知")
     if has_import_distance and nearest_import:
         dist_phrase = (
-            f"最近已确认输入为{nearest_import['nameZh']}，距中国大陆约 {displayed_distance_km:,} km；"
-            f"疫情源头{reference.get('name') or '当前重点疫情聚集'}约 {source_distance_km:,} km"
+            f"最近相关输入监测在{nearest_import['nameZh']}（{nearest_import['statusZh']}），距中国大陆约 {displayed_distance_km:,} km；"
+            f"源头仍为{reference.get('name') or '当前重点疫情聚集'}，距中国约 {source_distance_km:,} km"
         )
     elif distance_delta_km == 0:
         dist_phrase = "重点疫情聚集距中国大陆基本持平"
@@ -926,7 +950,7 @@ COUNTRY_EVIDENCE_LEVEL_ZH = {
     "official": "官方通报",
     "manual": "人工核验",
     "news": "新闻线索",
-    "signal": "信号热度",
+    "signal": "报道线索",
     "baseline": "流行基线",
 }
 
@@ -1026,7 +1050,7 @@ def build_country_risk_snapshot(
         if signal_30d > 0:
             risk_level = "watch"
             evidence = "signal"
-            status = f"近 30 天有 {signal_30d} 条公开信号"
+            status = f"近 30 天有 {signal_30d} 条相关报道线索"
         if isinstance(latest_event, dict):
             evidence = "official" if source_conf == "official" else "news"
             case_type = latest_event.get("caseType")
@@ -1054,7 +1078,7 @@ def build_country_risk_snapshot(
         elif isinstance(imp, dict):
             summary = imp.get("summary_zh") or "有输入/监测事件，需继续关注"
         elif signal_30d > 0:
-            summary = f"近 30 天公开信号 {signal_30d} 条，建议结合官方通报判断"
+            summary = f"近 30 天自动捕捉到 {signal_30d} 条相关报道，代表关注度上升，不等同于新增病例"
         else:
             summary = country.get("advice_zh") or "暂无近期公开事件，仍需遵循目的地卫生建议"
 

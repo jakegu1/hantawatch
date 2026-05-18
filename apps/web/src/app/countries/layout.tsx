@@ -13,7 +13,7 @@ import type { ReactNode } from 'react';
 export const metadata: Metadata = {
   title: '各国汉坦病毒情况',
   description:
-    '35 国汉坦病毒流行病学基线、MV Hondius 邮轮事件跨国输入跟踪、近 30 天报道信号热度。覆盖中国留学生热门目的地，支持按国家中英文与 ISO 代码搜索。',
+    '35 国汉坦病毒流行病学基线、MV Hondius 邮轮事件跨国输入跟踪、近 30 天相关报道活跃度。覆盖中国留学生热门目的地，支持按国家中英文与 ISO 代码搜索。',
 };
 
 export default function CountriesLayout({ children }: { children: ReactNode }) {

@@ -98,9 +98,9 @@ function CountryCard({ c }: { c: CountryView }) {
           <RiskBadge c={c} />
           {c.signals && (
           <span className="shrink-0 text-[11px] text-gray-500">
-            近 30 天 {c.signals.signalCount30d} 条
+            30 天报道 {c.signals.signalCount30d} 条
             {c.signals.signalCount7d > 0 && (
-              <span className="ml-1 text-orange-600">· 7 天 {c.signals.signalCount7d}</span>
+              <span className="ml-1 text-orange-600">· 7 天新增 {c.signals.signalCount7d}</span>
             )}
           </span>
           )}
@@ -121,7 +121,7 @@ function CountryCard({ c }: { c: CountryView }) {
               {c.risk.latestSourceRetrievedAt
                 ? `来源抓取：约 ${c.risk.sourceFreshnessHours ?? 0} 小时前${c.risk.stale ? ' · 需复核' : ''}`
                 : c.risk.lastSignalAt
-                  ? `最近信号：${c.risk.lastSignalAt.slice(0, 10)}`
+                  ? `最近报道线索：${c.risk.lastSignalAt.slice(0, 10)}`
                   : '近期未见自动事件，显示长期流行基线'}
             </div>
           </div>
@@ -247,8 +247,8 @@ export default function CountriesPage() {
     <div className="container-page py-8">
       <h1 className="text-2xl font-bold mb-2">各国汉坦病毒情况</h1>
       <p className="text-sm text-gray-500 mb-6 leading-relaxed">
-        覆盖 35 国流行病学基线 + MV Hondius 输入跟踪 + 近 30 天信号热度。
-        数据按「邮轮输入」「本土安第斯」「信号热度」排序，最相关国家排在前面。
+        覆盖 35 国流行病学基线 + MV Hondius 输入跟踪 + 近 30 天相关报道活跃度。
+        数据按「邮轮输入」「本土安第斯」「近期报道活跃度」排序，最相关国家排在前面。
       </p>
 
       {/* Search */}
@@ -314,7 +314,7 @@ export default function CountriesPage() {
           <strong className="text-gray-700">数据来源说明：</strong>
           各国流行病学基线由编辑依据公开年报与同行评议文献整理，
           每 6 个月人工 review 一次；MV Hondius 输入跟踪根据 WHO 与各国卫生机构通报维护；
-          「近 30 天信号热度」由系统自动聚合多语言新闻信号，仅反映报道活跃度，不等同于病例数。
+          「近 30 天相关报道活跃度」由系统自动聚合多语言公开报道，仅说明该国近期被提及较多，不等同于病例数。
         </p>
         <p className="mt-2">
           <strong className="text-gray-700">不构成医学/旅行建议：</strong>

@@ -46,6 +46,7 @@ except ImportError:
     pass
 
 from hantawatch_collector import MANUAL_FILES
+from hantawatch_collector.ai_brief import enhance_daily_brief
 from hantawatch_collector.builder import (
     build_active_clusters,
     build_daily_brief,
@@ -298,6 +299,15 @@ def main(argv: list[str] | None = None) -> int:
         except Exception as e:
             country_signals = None
             logger.warning("Country signals: build failed (%s) — keeping existing JSON", e)
+
+    if not args.no_network:
+        daily_brief = enhance_daily_brief(
+            daily_brief,
+            risk_snapshot=risk_snapshot,
+            recent_cases_intl=recent_intl,
+            realtime_feed=realtime_feed,
+        )
+        risk_snapshot["dailyBrief"] = daily_brief
 
     country_risk_snapshot = build_country_risk_snapshot(
         country_status_payload=read_json(out_dir / "country-status.json", default=None),

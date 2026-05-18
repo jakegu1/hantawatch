@@ -67,16 +67,27 @@ export interface DailyBrief {
   domesticBaselineStatus: 'normal' | 'elevated' | 'below';
   oneLine: string;
   daysSinceLastIntlAlert: number;
+  latestChange?: string;
+  situation?: string;
+  riskJudgment?: string;
+  evidence?: string[];
 }
 
+const riskSnapshotDailyBrief = riskSnapshot.dailyBrief as Partial<DailyBrief> | undefined;
+const staticDailyBrief = dailyBriefJson as DailyBrief;
+
 export const todayBrief: DailyBrief = {
-  date: riskSnapshot.dailyBrief?.date ?? dailyBriefJson.date,
-  distanceDeltaKm: riskSnapshot.dailyBrief?.distanceDeltaKm ?? dailyBriefJson.distanceDeltaKm,
-  hpiDelta: riskSnapshot.dailyBrief?.hpiDelta ?? dailyBriefJson.hpiDelta,
-  globalNewCases: riskSnapshot.dailyBrief?.globalNewCases ?? dailyBriefJson.globalNewCases,
-  domesticBaselineStatus: (riskSnapshot.dailyBrief?.domesticBaselineStatus ?? dailyBriefJson.domesticBaselineStatus) as DailyBrief['domesticBaselineStatus'],
-  oneLine: riskSnapshot.dailyBrief?.oneLine ?? dailyBriefJson.oneLine,
-  daysSinceLastIntlAlert: riskSnapshot.dailyBrief?.daysSinceLastIntlAlert ?? dailyBriefJson.daysSinceLastIntlAlert,
+  date: riskSnapshotDailyBrief?.date ?? staticDailyBrief.date,
+  distanceDeltaKm: riskSnapshotDailyBrief?.distanceDeltaKm ?? staticDailyBrief.distanceDeltaKm,
+  hpiDelta: riskSnapshotDailyBrief?.hpiDelta ?? staticDailyBrief.hpiDelta,
+  globalNewCases: riskSnapshotDailyBrief?.globalNewCases ?? staticDailyBrief.globalNewCases,
+  domesticBaselineStatus: (riskSnapshotDailyBrief?.domesticBaselineStatus ?? staticDailyBrief.domesticBaselineStatus) as DailyBrief['domesticBaselineStatus'],
+  oneLine: riskSnapshotDailyBrief?.oneLine ?? staticDailyBrief.oneLine,
+  daysSinceLastIntlAlert: riskSnapshotDailyBrief?.daysSinceLastIntlAlert ?? staticDailyBrief.daysSinceLastIntlAlert,
+  latestChange: riskSnapshotDailyBrief?.latestChange ?? staticDailyBrief.latestChange,
+  situation: riskSnapshotDailyBrief?.situation ?? staticDailyBrief.situation,
+  riskJudgment: riskSnapshotDailyBrief?.riskJudgment ?? staticDailyBrief.riskJudgment,
+  evidence: riskSnapshotDailyBrief?.evidence ?? staticDailyBrief.evidence,
 };
 
 // ---- China baseline ------------------------------------------------------
