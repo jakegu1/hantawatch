@@ -1,36 +1,99 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-18T02:59:08.898039+00:00",
+  "__generated_at": "2026-05-18T05:15:58.710150+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-18T02:59:07.607233+00:00",
+  "last_fetched": "2026-05-18T05:15:57.239225+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-f54d789ba99f5b75",
-      "time": "2026-05-18T02:43:57.000Z",
+      "time": "2026-05-18T04:58:01.000Z",
       "title_en": "Hantavirus latest updates: Canada reports first presumptive case linked to MV Hondius as global total hits 11 - Yahoo",
       "body_en": "Hantavirus latest updates: Canada reports first presumptive case linked to MV Hondius as global total hits 11 Yahoo",
       "summary_zh": "加拿大报告首例疑似汉坦病例，与MV Hondius邮轮相关，全球共11例。",
       "key_facts_zh": [
         "加拿大",
         "首例疑似",
-        "MV Hondius"
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-b4ce5712550f1fa7",
-      "time": "2026-05-18T02:28:31.000Z",
-      "title_en": "Lab confirms hantavirus in Canadian cruise passenger - CBC",
-      "body_en": "Lab confirms hantavirus in Canadian cruise passenger CBC",
-      "summary_zh": "实验室确认加拿大邮轮乘客感染汉坦病毒。",
+      "id": "rt-6a53194fadbf12dd",
+      "time": "2026-05-18T04:44:16.000Z",
+      "title_en": "Canadian authorities confirm first case of hantavirus | World News - Hindustan Times",
+      "body_en": "Canadian authorities confirm first case of hantavirus | World News Hindustan Times",
+      "summary_zh": "加拿大当局确认首例汉坦病毒病例。",
       "key_facts_zh": [
         "加拿大",
-        "确诊",
-        "邮轮乘客"
+        "首例确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-5e742e78c68a636c",
+      "time": "2026-05-18T04:18:17.000Z",
+      "title_en": "Medic with hantavirus symptoms in UK hospital as nine virus contacts to arrive - London Evening Standard",
+      "body_en": "Medic with hantavirus symptoms in UK hospital as nine virus contacts to arrive London Evening Standard",
+      "summary_zh": "英国医院收治一名有汉坦症状的医护人员，9名接触者将抵达。",
+      "key_facts_zh": [
+        "英国",
+        "医护人员",
+        "接触者"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-4fc9173f2460b2d7",
+      "time": "2026-05-18T03:01:00.000Z",
+      "title_en": "Cruise passenger in Canada tests positive for hantavirus after lab confirmation - Mid-day",
+      "body_en": "Cruise passenger in Canada tests positive for hantavirus after lab confirmation Mid-day",
+      "summary_zh": "加拿大邮轮乘客经实验室确认汉坦病毒阳性。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-49609fe271576195",
+      "time": "2026-05-18T02:59:08.000Z",
+      "title_en": "Hantavirus-hit cruise ship to arrive at Rotterdam as end of voyage - news.cgtn.com",
+      "body_en": "Hantavirus-hit cruise ship to arrive at Rotterdam as end of voyage news.cgtn.com",
+      "summary_zh": "受汉坦病毒影响的邮轮将抵达鹿特丹结束航程。",
+      "key_facts_zh": [
+        "邮轮",
+        "鹿特丹",
+        "航程结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9ea53419c9ef609b",
+      "time": "2026-05-18T02:55:06.000Z",
+      "title_en": "Canada confirms first hantavirus case - Telangana Today",
+      "body_en": "Canada confirms first hantavirus case Telangana Today",
+      "summary_zh": "加拿大确认首例汉坦病毒病例。",
+      "key_facts_zh": [
+        "加拿大",
+        "首例确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-335f48c59c66a213",
+      "time": "2026-05-18T02:47:35.000Z",
+      "title_en": "Canada confirms hantavirus case linked to MV Hondius cruise ship outbreak - Mathrubhumi English",
+      "body_en": "Canada confirms hantavirus case linked to MV Hondius cruise ship outbreak Mathrubhumi English",
+      "summary_zh": "加拿大确认汉坦病例与MV Hondius邮轮爆发相关。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "关联"
       ],
       "signal_strength": "high"
     },
@@ -41,34 +104,22 @@
       "body_en": "Hantavirus-hit cruise ship MV Hondius to dock in Rotterdam after onboard cases The Times of India",
       "summary_zh": "汉坦病毒疫情邮轮MV Hondius将在鹿特丹靠岸。",
       "key_facts_zh": [
-        "MV Hondius",
+        "邮轮",
         "鹿特丹",
-        "靠岸"
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-56955666e5f7c6dc",
-      "time": "2026-05-18T02:21:23.000Z",
-      "title_en": "Bali increases surveillance for hantavirus - Asia News Network",
-      "body_en": "Bali increases surveillance for hantavirus Asia News Network",
-      "summary_zh": "巴厘岛加强汉坦病毒监测。",
+      "id": "rt-65ce98a56923f0ef",
+      "time": "2026-05-18T02:10:17.000Z",
+      "title_en": "WHO keeps evaluation of hantavirus as 'low risk' as ship approaches end of voyage - The Hindu",
+      "body_en": "WHO keeps evaluation of hantavirus as 'low risk' as ship approaches end of voyage The Hindu",
+      "summary_zh": "WHO维持汉坦病毒低风险评估，邮轮即将靠岸。",
       "key_facts_zh": [
-        "巴厘岛",
-        "加强监测"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a7401839e7f0a833",
-      "time": "2026-05-18T02:17:33.000Z",
-      "title_en": "Canada confirms hantavirus case linked to cruise ship outbreak that has killed three passengers - Fox News",
-      "body_en": "Canada confirms hantavirus case linked to cruise ship outbreak that has killed three passengers Fox News",
-      "summary_zh": "加拿大确认邮轮疫情相关汉坦病例，已致3人死亡。",
-      "key_facts_zh": [
-        "加拿大",
-        "确诊",
-        "死亡3例"
+        "WHO",
+        "低风险",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -77,11 +128,24 @@
       "time": "2026-05-18T02:06:55.000Z",
       "title_en": "First positive case of hantavirus in B.C. is a low risk to public - CityNews Vancouver",
       "body_en": "First positive case of hantavirus in B.C. is a low risk to public CityNews Vancouver",
-      "summary_zh": "不列颠哥伦比亚省首例汉坦阳性，对公众风险低。",
+      "summary_zh": "不列颠哥伦比亚省首例汉坦病毒阳性，对公众风险低。",
       "key_facts_zh": [
-        "不列颠哥伦比亚",
+        "加拿大",
         "首例",
         "低风险"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b4ce5712550f1fa7",
+      "time": "2026-05-18T02:02:46.000Z",
+      "title_en": "Lab confirms hantavirus in Canadian cruise passenger - CBC",
+      "body_en": "Lab confirms hantavirus in Canadian cruise passenger CBC",
+      "summary_zh": "实验室确认加拿大邮轮乘客感染汉坦病毒。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -90,7 +154,7 @@
       "time": "2026-05-18T02:02:18.000Z",
       "title_en": "Health Officials Confirm First Case of Hantavirus in North America Stemming from Infected Cruise Ship - People.com",
       "body_en": "Health Officials Confirm First Case of Hantavirus in North America Stemming from Infected Cruise Ship People.com",
-      "summary_zh": "卫生官员确认北美首例汉坦病例来自感染邮轮。",
+      "summary_zh": "卫生官员确认北美首例汉坦病毒来自感染邮轮。",
       "key_facts_zh": [
         "北美",
         "首例",
@@ -99,28 +163,28 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-25b2f8b38fe3c8a5",
-      "time": "2026-05-18T01:52:51.000Z",
-      "title_en": "Hantavirus-Hit Cruise Ship Headed For Rotterdam - Marine News Magazine",
-      "body_en": "Hantavirus-Hit Cruise Ship Headed For Rotterdam Marine News Magazine",
-      "summary_zh": "汉坦病毒疫情邮轮驶往鹿特丹。",
+      "id": "rt-aae31ec927484241",
+      "time": "2026-05-18T01:23:13.000Z",
+      "title_en": "Hantavirus-hit cruise ship nears end of voyage, to dock in Rotterdam - France 24",
+      "body_en": "Hantavirus-hit cruise ship nears end of voyage, to dock in Rotterdam France 24",
+      "summary_zh": "汉坦病毒疫情邮轮即将结束航程，在鹿特丹靠岸。",
       "key_facts_zh": [
-        "MV Hondius",
+        "邮轮",
         "鹿特丹",
-        "航行中"
+        "靠岸"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-4875bb91328335c5",
-      "time": "2026-05-18T01:37:22.000Z",
-      "title_en": "Hantavirus-hit cruise ship nears end of voyage in Rotterdam - RTE.ie",
-      "body_en": "Hantavirus-hit cruise ship nears end of voyage in Rotterdam RTE.ie",
-      "summary_zh": "汉坦病毒疫情邮轮即将抵达鹿特丹结束航程。",
+      "id": "rt-c9f050bfbfae3265",
+      "time": "2026-05-18T01:21:36.000Z",
+      "title_en": "France confines more than 1,700 on British cruise ship in Bordeaux after gastroenteritis outbreak - AP News",
+      "body_en": "France confines more than 1,700 on British cruise ship in Bordeaux after gastroenteritis outbreak AP News",
+      "summary_zh": "法国在波尔多隔离一艘英国邮轮，超1700人因肠胃炎爆发被限制。",
       "key_facts_zh": [
+        "法国",
         "邮轮",
-        "鹿特丹",
-        "疫情"
+        "隔离1700人"
       ],
       "signal_strength": "high"
     },
@@ -138,25 +202,13 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-97acaaac6e1b11cc",
-      "time": "2026-05-18T00:55:54.000Z",
-      "title_en": "WHO keeps evaluation of hantavirus as 'low risk' - Le Monde.fr",
-      "body_en": "WHO keeps evaluation of hantavirus as 'low risk' Le Monde.fr",
-      "summary_zh": "WHO 维持汉坦病毒风险评估为低风险。",
-      "key_facts_zh": [
-        "WHO",
-        "低风险"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-fed0f36191dc101a",
       "time": "2026-05-18T00:25:00.000Z",
       "title_en": "Hantavirus-hit MV Hondius set to dock in Rotterdam for disinfection - India Today",
       "body_en": "Hantavirus-hit MV Hondius set to dock in Rotterdam for disinfection India Today",
-      "summary_zh": "汉坦病毒疫情邮轮 MV Hondius 将在鹿特丹停靠消毒。",
+      "summary_zh": "汉坦病毒感染的MV Hondius邮轮将在鹿特丹停靠消毒。",
       "key_facts_zh": [
-        "邮轮",
+        "MV Hondius",
         "鹿特丹",
         "消毒"
       ],
@@ -167,8 +219,9 @@
       "time": "2026-05-18T00:02:02.000Z",
       "title_en": "Hantavirus Hits Luxury Cruise: MV Hondius Docking for Disinfection - Devdiscourse",
       "body_en": "Hantavirus Hits Luxury Cruise: MV Hondius Docking for Disinfection Devdiscourse",
-      "summary_zh": "豪华邮轮 MV Hondius 因汉坦病毒疫情停靠消毒。",
+      "summary_zh": "汉坦病毒影响豪华邮轮，MV Hondius停靠消毒。",
       "key_facts_zh": [
+        "汉坦病毒",
         "邮轮",
         "消毒"
       ],
@@ -179,11 +232,24 @@
       "time": "2026-05-18T00:02:00.000Z",
       "title_en": "Hantavirus-hit cruise ship due to arrive at Rotterdam port as final destination - Reuters",
       "body_en": "Hantavirus-hit cruise ship due to arrive at Rotterdam port as final destination Reuters",
-      "summary_zh": "汉坦病毒疫情邮轮即将抵达鹿特丹港终点。",
+      "summary_zh": "汉坦病毒感染的邮轮将抵达鹿特丹港作为最终目的地。",
       "key_facts_zh": [
-        "邮轮",
         "鹿特丹",
-        "终点"
+        "邮轮",
+        "最终目的地"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-60a3851705dcea0c",
+      "time": "2026-05-17T23:49:51.000Z",
+      "title_en": "Canadian hantavirus case confirmed by national laboratory test - SooToday.com",
+      "body_en": "Canadian hantavirus case confirmed by national laboratory test SooToday.com",
+      "summary_zh": "加拿大汉坦病毒病例经国家实验室检测确认。",
+      "key_facts_zh": [
+        "加拿大",
+        "确诊",
+        "国家实验室"
       ],
       "signal_strength": "high"
     },
@@ -201,108 +267,30 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-14534205a94819f4",
-      "time": "2026-05-17T23:38:24.000Z",
-      "title_en": "San Mateo supervisor urges CDC to step up protections amid hantavirus outbreak - KRON4",
-      "body_en": "San Mateo supervisor urges CDC to step up protections amid hantavirus outbreak KRON4",
-      "summary_zh": "圣马特奥官员敦促CDC加强汉坦病毒防护。",
-      "key_facts_zh": [
-        "美国",
-        "CDC",
-        "敦促防护"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-b85974bf9d42d48a",
-      "time": "2026-05-17T23:37:00.000Z",
-      "title_en": "Health worker hospitalised with hantavirus symptoms as nine more arrive in UK - Birmingham Live",
-      "body_en": "Health worker hospitalised with hantavirus symptoms as nine more arrive in UK Birmingham Live",
-      "summary_zh": "英国一名医护人员因汉坦病毒症状住院，另有9人抵达。",
-      "key_facts_zh": [
-        "英国",
-        "医护人员",
-        "住院"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-aa2912d259da10ee",
-      "time": "2026-05-17T22:48:00.000Z",
-      "title_en": "Medic treated in UK as nine Britons exposed to hantavirus arrive - The Telegraph",
-      "body_en": "Medic treated in UK as nine Britons exposed to hantavirus arrive The Telegraph",
-      "summary_zh": "英国9名接触汉坦病毒者抵达，一名医护人员接受治疗。",
-      "key_facts_zh": [
-        "英国",
-        "9人接触",
-        "医护人员治疗"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-14dcf07aecc9a398",
-      "time": "2026-05-17T22:46:00.000Z",
-      "title_en": "Medic with hantavirus symptoms treated in UK hospital as 9 more linked to infected cruise set to arrive - The Mirror",
-      "body_en": "Medic with hantavirus symptoms treated in UK hospital as 9 more linked to infected cruise set to arrive The Mirror",
-      "summary_zh": "英国医护人员因汉坦病毒症状住院，9人与感染邮轮有关。",
-      "key_facts_zh": [
-        "英国",
-        "医护人员",
-        "住院"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-5ad6ebf4a9152ae4",
-      "time": "2026-05-17T22:04:42.000Z",
-      "title_en": "VIDEO: 4th possible exposure of Hantavirus in WA - KIRO 7 News Seattle",
-      "body_en": "VIDEO: 4th possible exposure of Hantavirus in WA KIRO 7 News Seattle",
-      "summary_zh": "华盛顿州报告第4例可能的汉坦病毒暴露。",
-      "key_facts_zh": [
-        "美国",
-        "华盛顿州",
-        "第4例可能暴露"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-31307de78c4ca31f",
-      "time": "2026-05-17T21:57:13.000Z",
-      "title_en": "WHO keeps evaluation of hantavirus as 'low risk' - Gulf News",
-      "body_en": "WHO keeps evaluation of hantavirus as 'low risk' Gulf News",
-      "summary_zh": "WHO维持汉坦病毒风险评估为“低风险”。",
-      "key_facts_zh": [
-        "WHO",
-        "低风险",
-        "评估"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-43d0962b1b8eb61f",
-      "time": "2026-05-17T21:46:42.000Z",
-      "title_en": "PHAC confirms hantavirus case in Canadian isolating in B.C. - CBC",
-      "body_en": "PHAC confirms hantavirus case in Canadian isolating in B.C. CBC",
-      "summary_zh": "加拿大公共卫生局确认不列颠哥伦比亚省一例汉坦病毒病例。",
+      "id": "rt-fbc5e23a58bfd796",
+      "time": "2026-05-17T23:39:19.000Z",
+      "title_en": "Hantavirus live updates: Canadian cruise ship passenger tests positive for hantavirus - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Hantavirus live updates: Canadian cruise ship passenger tests positive for hantavirus ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "加拿大",
-        "PHAC",
+        "邮轮",
         "确诊"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-c9f050bfbfae3265",
-      "time": "2026-05-17T21:41:09.000Z",
-      "title_en": "France confines more than 1,700 on British cruise ship in Bordeaux after gastroenteritis outbreak - AP News",
-      "body_en": "France confines more than 1,700 on British cruise ship in Bordeaux after gastroenteritis outbreak AP News",
-      "summary_zh": "法国在波尔多隔离一艘英国邮轮，1700多人因肠胃炎爆发被限制。",
+      "id": "rt-6b5b7812de7d6320",
+      "time": "2026-05-17T23:38:24.000Z",
+      "title_en": "San Mateo supervisor urges CDC to step up protections amid hantavirus outbreak - KRON4",
+      "body_en": "San Mateo supervisor urges CDC to step up protections amid hantavirus outbreak KRON4",
+      "summary_zh": "圣马特奥县官员敦促CDC加强汉坦病毒防护。",
       "key_facts_zh": [
-        "法国",
-        "邮轮",
-        "隔离"
+        "美国",
+        "圣马特奥",
+        "CDC"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
