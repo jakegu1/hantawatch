@@ -127,7 +127,7 @@ export default function DataPage() {
                 {c.source.url && !isMainlandSource(c.source.url) && (
                   <span
                     className="text-xs text-gray-400 mt-1 inline-block"
-                    title="境外来源不提供外链"
+                    title="该来源仅展示名称"
                   >
                     来源：{c.source.name}
                   </span>

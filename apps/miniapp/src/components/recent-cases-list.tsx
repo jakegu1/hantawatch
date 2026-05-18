@@ -172,10 +172,10 @@ export function RecentCasesList({ cases }: Props) {
                 {subtitle}
               </Text>
             )}
-            {c.source?.url && (
+            {c.source?.url && canLink && (
               <View className="mt-1" onClick={() => copyUrl(c.source.url)}>
-                <Text style={{ fontSize: '20rpx', color: canLink ? '#1e40af' : '#9ca3af' }}>
-                  {canLink ? '🔗 查看原文（点击复制链接）' : '🔒 境外来源（仅展示文字）'}
+                <Text style={{ fontSize: '20rpx', color: '#1e40af' }}>
+                  🔗 查看原文（点击复制链接）
                 </Text>
               </View>
             )}

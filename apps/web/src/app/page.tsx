@@ -8,7 +8,7 @@ import { findNearestAndes, relativeTimeZh, type ImportProximity } from '@/lib/ne
 import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
 import { isMainlandSource } from '@/lib/link-policy';
 import { SEROTYPES } from '@hantawatch/shared';
-import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Copy } from 'lucide-react';
+import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
@@ -82,7 +82,6 @@ export default function HomePage() {
   //  finishes in <200 ms so the swap is imperceptible.
   // ────────────────────────────────────────────────────────────────────
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(activeClusters);
-  const [briefCopied, setBriefCopied] = useState(false);
   useEffect(() => {
     let cancelled = false;
     fetch('/api/clusters', { cache: 'no-store', credentials: 'same-origin' })
@@ -206,15 +205,6 @@ export default function HomePage() {
     : dynamicTodayBrief.domesticBaselineStatus === 'below'
       ? '国内 HFRS 低于基线'
       : '国内 HFRS 基线正常';
-  const copyBriefShareLine = async () => {
-    try {
-      await navigator.clipboard.writeText(`病毒观察每日简报｜${dynamicTodayBrief.date}\n${briefShareLine}`);
-      setBriefCopied(true);
-      window.setTimeout(() => setBriefCopied(false), 1600);
-    } catch {
-      setBriefCopied(false);
-    }
-  };
 
   return (
     <div className="pb-16">
@@ -392,21 +382,21 @@ export default function HomePage() {
 
       <section className="container-page mt-4 sm:mt-6">
         <div className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
-          <div className="bg-gradient-to-r from-brand-800 via-brand-700 to-brand-600 px-4 py-3 text-white">
+          <div className="bg-gradient-to-r from-white via-brand-50 to-blue-50 px-4 py-3 text-gray-950">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-[10px] font-semibold tracking-[0.18em] text-blue-100">每日简报</p>
-                <h2 className="mt-0.5 text-base font-bold">今天只看这一屏</h2>
+                <p className="text-[10px] font-semibold tracking-[0.18em] text-brand-700">每日简报</p>
+                <h2 className="mt-0.5 text-base font-bold">新增病例与风险判断</h2>
               </div>
-              <div className="text-right text-[11px] text-blue-100">
+              <div className="text-right text-[11px] text-gray-600">
                 <div>{dynamicTodayBrief.date}</div>
-                <div>可截图 · 可引用</div>
+                <div>{hpi.total} · {hpi.gradeZh}</div>
               </div>
             </div>
-            <div className="mt-3 rounded-xl bg-white/12 p-3 ring-1 ring-white/15">
-              <div className="text-[11px] text-blue-100">昨日/最新新增</div>
-              <div className="mt-1 text-lg font-extrabold leading-snug">{briefNewCases}</div>
-              <div className="mt-1 text-[11px] leading-relaxed text-blue-50/90">{briefSourceSummary}</div>
+            <div className="mt-3 rounded-xl bg-white p-3 ring-1 ring-brand-100">
+              <div className="text-[11px] font-medium text-brand-700">昨日/最新新增</div>
+              <div className="mt-1 text-lg font-extrabold leading-snug text-gray-950">{briefNewCases}</div>
+              <div className="mt-1 text-[11px] leading-relaxed text-gray-600">{briefSourceSummary}</div>
             </div>
           </div>
 
@@ -437,18 +427,9 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-100 px-3 pb-3">
-            <div className="rounded-xl bg-gray-950 p-3 text-white">
-              <div className="flex items-start justify-between gap-3">
-                <p className="text-xs font-semibold leading-relaxed sm:text-sm">{briefShareLine}</p>
-                <button
-                  type="button"
-                  onClick={copyBriefShareLine}
-                  className="inline-flex shrink-0 items-center gap-1 rounded-full bg-white/10 px-2 py-1 text-[10px] text-white ring-1 ring-white/15"
-                >
-                  <Copy className="h-3 w-3" />
-                  {briefCopied ? '已复制' : '复制'}
-                </button>
-              </div>
+            <div className="rounded-xl bg-gray-900 p-3 text-white">
+              <div className="text-[10px] font-medium text-blue-100">综合判断</div>
+              <p className="mt-1 text-xs font-semibold leading-relaxed sm:text-sm">{briefShareLine}</p>
               <div className="mt-2 flex flex-wrap gap-1">
                 {(dynamicTodayBrief.evidence ?? briefWatchFocus).slice(0, 3).map((item) => (
                   <span key={item} className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-blue-50">

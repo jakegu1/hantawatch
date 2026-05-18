@@ -10,12 +10,9 @@ import type { DailyBrief } from '@/lib/data';
 
 interface Props {
   brief: DailyBrief;
-}
-
-function formatDelta(n: number, unit = ''): { sign: 'flat' | 'up' | 'down'; abs: string } {
-  if (n === 0) return { sign: 'flat', abs: '持平' };
-  const magnitude = Math.abs(n).toLocaleString('zh-CN');
-  return { sign: n > 0 ? 'up' : 'down', abs: `${magnitude}${unit}` };
+  hpiTotal: number;
+  hpiGradeZh: string;
+  hpiColor: string;
 }
 
 const baselineLabel: Record<DailyBrief['domesticBaselineStatus'], { text: string; color: string }> = {
@@ -24,57 +21,101 @@ const baselineLabel: Record<DailyBrief['domesticBaselineStatus'], { text: string
   below: { text: '低于基线', color: '#93c5fd' },
 };
 
-function arrow(sign: 'flat' | 'up' | 'down'): string {
-  if (sign === 'up') return '↑';
-  if (sign === 'down') return '↓';
-  return '—';
-}
-
-export function DailyBriefBanner({ brief }: Props) {
-  const distDelta = formatDelta(brief.distanceDeltaKm, ' km');
-  const hpiDelta = formatDelta(brief.hpiDelta);
+export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor }: Props) {
   const baseline = baselineLabel[brief.domesticBaselineStatus];
-
-  const distColor =
-    distDelta.sign === 'flat' ? '#dbeafe' : distDelta.sign === 'up' ? '#86efac' : '#fca5a5';
-  const hpiColor =
-    hpiDelta.sign === 'flat' ? '#dbeafe' : hpiDelta.sign === 'up' ? '#fca5a5' : '#86efac';
+  const newCases = brief.newCases ?? brief.latestChange ?? '过去 24 小时暂无新的高可信通报。';
+  const sourceSummary = brief.sourceSummary ?? '主要依据：现有公开数据';
+  const situation = brief.situation ?? brief.oneLine;
+  const riskJudgment = brief.shareLine ?? brief.riskJudgment ?? brief.oneLine;
+  const watchFocus = (brief.watchFocus?.length ? brief.watchFocus : brief.evidence)?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
+  const evidence = (brief.evidence ?? watchFocus).slice(0, 3);
 
   return (
     <View
       style={{
-        background: 'rgba(255,255,255,0.10)',
-        border: '1rpx solid rgba(255,255,255,0.15)',
-        borderRadius: '16rpx',
-        padding: '14rpx 18rpx',
+        background: '#ffffff',
+        border: '1rpx solid #dbeafe',
+        borderRadius: '24rpx',
+        overflow: 'hidden',
         marginBottom: '16rpx',
       }}
     >
-      <View className="flex items-center gap-2 flex-wrap">
-        <Text style={{ color: '#dbeafe', fontSize: '22rpx', fontWeight: 500 }}>
-          📅 今日 {brief.date.slice(5)}
-        </Text>
-        <Text style={{ color: '#94a3b8', fontSize: '22rpx' }}>·</Text>
-        <Text style={{ color: '#dbeafe', fontSize: '22rpx' }}>
-          较昨 <Text style={{ color: distColor, fontWeight: 600 }}>{arrow(distDelta.sign)} {distDelta.abs}</Text>
-        </Text>
-        <Text style={{ color: '#94a3b8', fontSize: '22rpx' }}>·</Text>
-        <Text style={{ color: '#dbeafe', fontSize: '22rpx' }}>
-          HPI <Text style={{ color: hpiColor, fontWeight: 600 }}>{arrow(hpiDelta.sign)} {hpiDelta.abs}</Text>
-        </Text>
+      <View style={{ background: 'linear-gradient(135deg, #ffffff 0%, #eff6ff 55%, #ecfeff 100%)', padding: '24rpx' }}>
+        <View className="flex items-center" style={{ justifyContent: 'space-between', gap: '16rpx' }}>
+          <View>
+            <Text style={{ color: '#1d4ed8', fontSize: '20rpx', fontWeight: 700, letterSpacing: '4rpx', display: 'block' }}>
+              每日简报
+            </Text>
+            <Text style={{ color: '#111827', fontSize: '30rpx', fontWeight: 800, marginTop: '4rpx', display: 'block' }}>
+              新增病例与风险判断
+            </Text>
+          </View>
+          <View style={{ alignItems: 'flex-end' }}>
+            <Text style={{ color: '#4b5563', fontSize: '20rpx', display: 'block', textAlign: 'right' }}>{brief.date}</Text>
+            <Text style={{ color: hpiColor, fontSize: '22rpx', fontWeight: 700, display: 'block', textAlign: 'right' }}>
+              {hpiTotal} · {hpiGradeZh}
+            </Text>
+          </View>
+        </View>
+        <View style={{ background: '#ffffff', border: '1rpx solid #bfdbfe', borderRadius: '20rpx', padding: '20rpx', marginTop: '20rpx' }}>
+          <Text style={{ color: '#1d4ed8', fontSize: '22rpx', fontWeight: 600, display: 'block' }}>昨日/最新新增</Text>
+          <Text style={{ color: '#111827', fontSize: '34rpx', fontWeight: 800, lineHeight: 1.35, marginTop: '8rpx', display: 'block' }}>
+            {newCases}
+          </Text>
+          <Text style={{ color: '#4b5563', fontSize: '22rpx', lineHeight: 1.5, marginTop: '8rpx', display: 'block' }}>
+            {sourceSummary}
+          </Text>
+        </View>
       </View>
-      <View className="mt-2 flex items-baseline" style={{ justifyContent: 'space-between', flexWrap: 'wrap', gap: '8rpx' }}>
-        <Text style={{ color: 'rgba(219,234,254,0.9)', fontSize: '22rpx', flex: 1 }}>
-          {brief.oneLine}
-        </Text>
-        <Text style={{ color: 'rgba(255,255,255,0.7)', fontSize: '20rpx' }}>
-          🟢 已 <Text style={{ color: '#86efac', fontWeight: 700 }}>{brief.daysSinceLastIntlAlert}</Text> 天无国际预警升级
-        </Text>
+
+      <View style={{ padding: '20rpx', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '12rpx' }}>
+        <View style={{ width: 'calc(50% - 6rpx)', background: '#eff6ff', borderRadius: '18rpx', padding: '16rpx' }}>
+          <Text style={{ color: '#2563eb', fontSize: '20rpx', display: 'block' }}>主要来源</Text>
+          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
+            {sourceSummary.replace(/^主要依据：/, '')}
+          </Text>
+        </View>
+        <View style={{ width: 'calc(50% - 6rpx)', background: '#fff7ed', borderRadius: '18rpx', padding: '16rpx' }}>
+          <Text style={{ color: '#ea580c', fontSize: '20rpx', display: 'block' }}>当前态势</Text>
+          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
+            {situation}
+          </Text>
+        </View>
+        <View style={{ width: 'calc(50% - 6rpx)', background: '#f0fdf4', borderRadius: '18rpx', padding: '16rpx' }}>
+          <Text style={{ color: '#15803d', fontSize: '20rpx', display: 'block' }}>中国风险</Text>
+          <Text style={{ color: hpiColor, fontSize: '24rpx', fontWeight: 800, marginTop: '6rpx', display: 'block' }}>
+            {hpiTotal} · {hpiGradeZh}
+          </Text>
+          <Text style={{ color: baseline.color, fontSize: '20rpx', fontWeight: 600, marginTop: '4rpx', display: 'block' }}>
+            {baseline.text}
+          </Text>
+        </View>
+        <View style={{ width: 'calc(50% - 6rpx)', background: '#f9fafb', borderRadius: '18rpx', padding: '16rpx' }}>
+          <Text style={{ color: '#6b7280', fontSize: '20rpx', display: 'block' }}>今日关注</Text>
+          <View className="flex flex-wrap gap-1" style={{ marginTop: '8rpx' }}>
+            {watchFocus.map((item) => (
+              <Text key={item} style={{ background: '#ffffff', color: '#374151', border: '1rpx solid #e5e7eb', borderRadius: '999rpx', padding: '2rpx 10rpx', fontSize: '18rpx', fontWeight: 600 }}>
+                {item}
+              </Text>
+            ))}
+          </View>
+        </View>
       </View>
-      <View className="mt-2">
-        <Text style={{ color: baseline.color, fontSize: '20rpx', fontWeight: 600 }}>
-          🛡️ 中国大陆 · {baseline.text}
-        </Text>
+
+      <View style={{ padding: '0 20rpx 20rpx' }}>
+        <View style={{ background: '#111827', borderRadius: '20rpx', padding: '18rpx' }}>
+          <Text style={{ color: '#bfdbfe', fontSize: '20rpx', fontWeight: 600, display: 'block' }}>综合判断</Text>
+          <Text style={{ color: '#ffffff', fontSize: '24rpx', fontWeight: 700, lineHeight: 1.55, marginTop: '6rpx', display: 'block' }}>
+            {riskJudgment}
+          </Text>
+          <View className="flex flex-wrap gap-1" style={{ marginTop: '12rpx' }}>
+            {evidence.map((item) => (
+              <Text key={item} style={{ background: 'rgba(255,255,255,0.10)', color: '#eff6ff', borderRadius: '999rpx', padding: '4rpx 12rpx', fontSize: '18rpx' }}>
+                {item}
+              </Text>
+            ))}
+          </View>
+        </View>
       </View>
     </View>
   );

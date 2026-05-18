@@ -162,7 +162,12 @@ export default function HomePage() {
         </View>
 
         {/* Daily brief banner */}
-        <DailyBriefBanner brief={todayBrief} />
+        <DailyBriefBanner
+          brief={todayBrief}
+          hpiTotal={hpi.total}
+          hpiGradeZh={hpi.gradeZh}
+          hpiColor={hpi.color}
+        />
 
         {/* Andes warning strip */}
         <View
