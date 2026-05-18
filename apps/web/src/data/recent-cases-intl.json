@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-17T19:05:15.061932+00:00",
+  "__generated_at": "2026-05-18T02:49:29.374893+00:00",
   "cases": [
     {
       "id": "who-2026-don601",
@@ -14,7 +14,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "official"
       }
     },
@@ -30,7 +30,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "official"
       }
     },
@@ -46,7 +46,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "official"
       }
     },
@@ -62,7 +62,7 @@
       "source": {
         "name": "Centers for Disease Control and Prevention | CDC (.gov)",
         "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5KejE3WWpITktMWTg3SVFQanQzUG5IYUF0MVg2SS0zOGRYMlBOQ0tkVGg3dTZFOUdrVGN0Xy1MZ3ByaFpVaXZfckpoYktKcG0ybWJnTnlRY3U?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -78,7 +78,7 @@
       "source": {
         "name": "European Centre for Disease Prevention and Control (ECDC)",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUlZrV2tleFRmcWtQWHZEUTl2dlVyTGg2NU1XNzBkeTJUdy14TlFDRzZzZTVDMk9yVW5mYWhYWXVEWFliS0s1d1lBR2JnUkgzNUNlcndsYWpqamxKQm9UU3ZuQ19YSDhheXdWM05OaFlFcmpZamt5VVFxaElXS19oaGxNbVhLd3dTOHkwbkpfOEdtRW1yS0d5ZWZQQ0VWckRSUWJXNV9uZGd5U2prTEtZUUJ4aGZVZkpFR01yTTY1aw?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -94,7 +94,23 @@
       "source": {
         "name": "European Centre for Disease Prevention and Control (ECDC)",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTVBhQmJ4WHFubHdtZkFVQzdFOWNxTDdmLVNNcHN4TGppQ1RYajBpZEp3MzV2bTZNSXpOTEhidXk2RzQzeTNVMG1IUEExQmZyMVczNDJMRmdKd2M3WEtvRC1SR01ST3dZNmlfcTFZeEFuckhKRHBwdDZjenhkaVQ3WDJCUlVfTXJTMXBianYzQmVmOHB0TTlqSkZtWC1EQXlaR3RQQlBGSnE?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
+        "confidence": "surveillance"
+      }
+    },
+    {
+      "id": "surv-news-news.google.com-rss-articles-cbmiqafbvv95cuxnztdyd3v1afvswev1sk5hrl91ds1ddmxltkdltfbyukdfelj6cwn4zlbzzi1rajjyne",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-13",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "Communicable disease threats report, 9-13 May 2026, Week 20 - European Centre for Disease Prevention and Control (ECDC)",
+      "summary": "",
+      "source": {
+        "name": "European Centre for Disease Prevention and Control (ECDC)",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZTdyd3V1aFVsWEV1Sk5HRl91dS1DdmxLTkdLTFByUkdFelJ6cWN4ZlBZZi1rajJyNEtRbExNLWRzd3pkYjRYdVA1SzBWZjN3MUVCblBSVUNzdkFkaG83TE9ldUs4ak9uQmNFbmFNak5pSXNHZ3liRzBvSE9ESFdGRVk0NnBHZjQ1TDdjOEhjenl5THB5TkJJWlhMazdJU0VUdE04dGRTbjE?oc=5",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -126,7 +142,7 @@
       "source": {
         "name": "canada.ca",
         "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOYk16eUVIU3dGZHNFQXlyNVdnX0M2SEk5TXZJWGxaQmREOHROcm5zbTNOV3NfTnFlNnFzcFVtNENFUE45YXNjY1QyYUxERFBlLUZPbmNwWk9XQnJ6NUlWc2VyNG5jclFaUGRRcVA3OHAtazVtTHNYcXBZSm1PS2hGdTcyU2Ntak5Lb3ZhVXJmamZQakswdVg0aC1ZWWhYNXBFRkJN?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -142,7 +158,7 @@
       "source": {
         "name": "Centers for Disease Control and Prevention | CDC (.gov)",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE03SG5ldVNCREhKUnQyVG96MUpEVTRkSlEyc0F5VzV0dDJWd1Y5V0Z0QjRPSmZ0UHRMX2dNWEFCVHpESkhEY1c5YmxjX3RPeGRfbGtnMVZhbXFKN0ZmZVE?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -158,7 +174,7 @@
       "source": {
         "name": "European Centre for Disease Prevention and Control (ECDC)",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPakIyQzhScnY1WkJ2RFMtbnZKQXg3WWNQMlRsZmo4eER2azZYRDR3V1o0Y0tXZkQ4Q1FlWnlvV2FYNUtvN1ZHTUxycDU0NFotUFRFcWp0Q2JETjZnNXRzZS0tY0lMS18zR2d4cm80VnRadXp4NGZiN0JoU2RLYVUwM3NUUHNRTWtRMkV5alE4ZHNrTUZPME1QN0FybUpmQmR4bmM5NHYwS2s3LU5Yc29TNkdNX1k2OG9jM0J5eVNqVHJubVdRVXc?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -174,7 +190,7 @@
       "source": {
         "name": "Argentina.gob.ar",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQXdUYWl3UWJmRGJtZ21qVHdvbWxXdm90YUdEaDhHOXlyLWRhWmhrSTRHU2VNWUNodmp3cFdWazRYS1gxa2JGek9aU0lzcFV1ZzV5VFBxVl8wcEp5VHpkRkJlTnpyY1hUTlYwLVRpaDE4cEw4OWlTVGVDanhScW45YnhzM1VqUUpPOVFfdUxtRzh4eXd3VGVoc2oyb1FWZ2lmV29Jb3gtRlVvODd4UWRGaWZ2b1k4VGU2eTZZNldvX1FRU0xIQlE?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -190,7 +206,7 @@
       "source": {
         "name": "ProMED",
         "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBnYmJvX1VaQi1lQnNNbWNYX2VGeTQ4cWRFYk5rc2JSbktZN0p4Qmw1cU5GTWplRmt5TmpjcFQ3RG5CWFhueURZWHQxVQ?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -206,7 +222,7 @@
       "source": {
         "name": "RKI - Startseite",
         "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPZ3JMRHB4MjQtbElQVlBVa1Vwc2VtYk8tYVBIdm96LUZmVGVCbjBfdkx0M2p6N09WMVFzUDZ0NzJJQWZSMXRGTnpXdlVVR0E3ZHNwQjZNZzZlYnZiSW5abmdJVWhvSGx6S3JJNHlaejY4R1ZKc0kyZHFJUTl1MndGZDNLdmQ2X3ZnSWJLSk5UMG1RampoOFZjX0dlTUpOdVVrYnlJS2Q0SHBqZFRlczREcjVwekFRSWtoSVROc0NEbjE4NXZPMDJ2b2plSHI1aTZtd2dNbkVfSVdocDJ5RDJPNEVyQXVIWjRmZWpnQURJSC1QVUIyV1dldURmTUFqYnZnVmxUNU9qcHU0MkdQ?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -222,7 +238,7 @@
       "source": {
         "name": "Santé publique France",
         "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQ2hPQUt1Z1pPMjdnX0h6S2VRbWR0REpTZFFOWVNEdE9XVzU2SWJFWEVvamh0MnRWYlh5bHVzNEdERFhSd3NPR1VaLS1Va2FpOTR4Z015M2FiNGUxRjdMbVNmd3VYZXdVOWEwRWlYT3Vyd3VmcDlmSWlYMHNDLUVYQWozWXgtYjlsellOODBUY2lfdnh3b1kza2w4X3p2TEdDaFBuY01kblo2aEZtOW94TUxTWFc2ZVlhTWVYUXJn?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -238,7 +254,7 @@
       "source": {
         "name": "RKI - Startseite",
         "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPR0ZyVEM4cEw0T3o5c0Y2TmlkenVqWWV3ZnNLclNFVXU4czNlVlNmb3NYSV8wWVBsZVM3LTlWRlkzX0I1M2EtN0Z4cHpsMFRJV2hFT2EyMGlzaEpQOFB1YTlfV3NWeHdIWWs5Y1BrNTJEVGRZeEJNRzBlQzNyOVVQUTZSekppUEItQVJsS1NUTGprMlFGSmo0SHBWZW5Yc1JfeVRtR1RKVkRUYktDVzRFclBVQTlQZFZpV2FNeU5jbk51eDdrWmVqaFlOcFM1UkxyVmZEZWNQM0tuSGdKTTdZSnkxb3NOTUs3a0VNbTB5c2Q0ckNCV01BOEhoa3lYRG9acHFyVnlCTVFoYnpYN3Z0cVFQUnU2SGs3cGlsMXVBVjJxa2JTR09NWGlpclFoQ2x0cnB1OS03bw?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "surveillance"
       }
     },
@@ -254,7 +270,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "news"
       }
     },
@@ -270,7 +286,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "news"
       }
     },
@@ -286,7 +302,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-17T19:05:00.941569+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544818+00:00",
         "confidence": "news"
       }
     },
@@ -302,7 +318,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-05-17T19:05:00.941024+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544259+00:00",
         "confidence": "news"
       }
     },
@@ -318,7 +334,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-17T19:05:00.941569+00:00",
+        "retrievedAt": "2026-05-18T02:49:08.544818+00:00",
         "confidence": "news"
       }
     }
