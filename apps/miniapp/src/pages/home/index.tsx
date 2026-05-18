@@ -135,6 +135,12 @@ export default function HomePage() {
   const hasImportDistance = riskSnapshot.hasImportDistance === true;
   const displayedDistanceKm = riskSnapshot.displayedDistanceKm ?? cluster?.distanceFromChinaKm ?? 0;
   const distTone = distanceRingBg(displayedDistanceKm);
+  const highRiskDistanceText = hasImportDistance && nearestImport
+    ? `约 ${fmt(displayedDistanceKm)} km（${nearestImport.nameZh}，${nearestImport.statusZh}）`
+    : `约 ${fmt(displayedDistanceKm)} km（${cluster?.location?.name ?? '当前重点疫情'}）`;
+  const highRiskDistanceContext = hasImportDistance && nearestImport
+    ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster?.distanceFromChinaKm ?? 0)} km；当前按最近输入监测距离展示。`
+    : '按当前最近 Andes 型重点疫情距离展示。';
 
   const ranking: Array<{ id: keyof typeof SEROTYPES; label: string; color: string; bg: string; border: string }> = [
     { id: 'andes', label: '🔴 高危关注', color: '#dc2626', bg: '#fef2f2', border: '#fca5a5' },
@@ -167,6 +173,8 @@ export default function HomePage() {
           hpiTotal={hpi.total}
           hpiGradeZh={hpi.gradeZh}
           hpiColor={hpi.color}
+          highRiskDistanceText={highRiskDistanceText}
+          highRiskDistanceContext={highRiskDistanceContext}
         />
 
         {/* Andes warning strip */}

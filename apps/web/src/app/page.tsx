@@ -205,6 +205,15 @@ export default function HomePage() {
     : dynamicTodayBrief.domesticBaselineStatus === 'below'
       ? '国内 HFRS 低于基线'
       : '国内 HFRS 基线正常';
+  const highRiskDistanceText = hasImportDistance && nearestImport
+    ? `约 ${fmt(displayedDistanceKm)} km（${nearestImport.nameZh}，${nearestImport.statusZh}）`
+    : `约 ${fmt(displayedDistanceKm)} km（${cluster.location?.name ?? '当前重点疫情'}）`;
+  const highRiskDistanceContext = hasImportDistance && nearestImport
+    ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster.distanceFromChinaKm)} km；当前按最近输入监测距离展示。`
+    : '按当前最近 Andes 型重点疫情距离展示。';
+  const briefFocusSentence = briefWatchFocus.length > 0
+    ? `${briefWatchFocus.join('、')}仍是今日主要观察点。`
+    : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
 
   return (
     <div className="pb-16">
@@ -400,29 +409,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 p-3 text-xs sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-2 p-3 text-xs">
+            <div className="rounded-xl bg-red-50 p-2.5">
+              <div className="text-[10px] text-red-700">最近高危病毒活动</div>
+              <div className="mt-1 text-base font-extrabold leading-tight text-red-700">{highRiskDistanceText}</div>
+              <div className="mt-1 text-[11px] leading-relaxed text-gray-600">{highRiskDistanceContext}</div>
+            </div>
             <div className="rounded-xl bg-brand-50 p-2.5">
               <div className="text-[10px] text-brand-600">主要来源</div>
-              <div className="mt-1 font-bold text-gray-900 line-clamp-2">{briefSourceSummary.replace(/^主要依据：/, '')}</div>
+              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefSourceSummary.replace(/^主要依据：/, '')}</div>
             </div>
-            <div className="rounded-xl bg-orange-50 p-2.5">
+            <div className="rounded-xl bg-orange-50 p-2.5 sm:col-span-2">
               <div className="text-[10px] text-orange-600">当前态势</div>
-              <div className="mt-1 font-bold text-gray-900 line-clamp-2">{briefSituation}</div>
+              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefSituation}</div>
             </div>
             <div className="rounded-xl bg-green-50 p-2.5">
               <div className="text-[10px] text-green-700">中国风险</div>
               <div className="mt-1 font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
-              <div className="mt-0.5 text-[10px] text-gray-500">{domesticBaselineText}</div>
+              <div className="mt-0.5 text-[11px] leading-relaxed text-gray-600">{domesticBaselineText}；{briefRiskJudgment}</div>
             </div>
             <div className="rounded-xl bg-gray-50 p-2.5">
               <div className="text-[10px] text-gray-500">今日关注</div>
-              <div className="mt-1 flex flex-wrap gap-1">
-                {briefWatchFocus.map((item) => (
-                  <span key={item} className="rounded-full bg-white px-1.5 py-0.5 text-[10px] font-medium text-gray-700 ring-1 ring-gray-200">
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefFocusSentence}</div>
             </div>
           </div>
 

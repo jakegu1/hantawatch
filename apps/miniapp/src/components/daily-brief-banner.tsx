@@ -13,21 +13,26 @@ interface Props {
   hpiTotal: number;
   hpiGradeZh: string;
   hpiColor: string;
+  highRiskDistanceText: string;
+  highRiskDistanceContext: string;
 }
 
 const baselineLabel: Record<DailyBrief['domesticBaselineStatus'], { text: string; color: string }> = {
-  normal: { text: '基线正常', color: '#86efac' },
-  elevated: { text: '高于基线', color: '#fdba74' },
-  below: { text: '低于基线', color: '#93c5fd' },
+  normal: { text: '基线正常', color: '#15803d' },
+  elevated: { text: '高于基线', color: '#c2410c' },
+  below: { text: '低于基线', color: '#1d4ed8' },
 };
 
-export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor }: Props) {
+export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor, highRiskDistanceText, highRiskDistanceContext }: Props) {
   const baseline = baselineLabel[brief.domesticBaselineStatus];
   const newCases = brief.newCases ?? brief.latestChange ?? '过去 24 小时暂无新的高可信通报。';
   const sourceSummary = brief.sourceSummary ?? '主要依据：现有公开数据';
   const situation = brief.situation ?? brief.oneLine;
   const riskJudgment = brief.shareLine ?? brief.riskJudgment ?? brief.oneLine;
   const watchFocus = (brief.watchFocus?.length ? brief.watchFocus : brief.evidence)?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
+  const focusSentence = watchFocus.length > 0
+    ? `${watchFocus.join('、')}仍是今日主要观察点。`
+    : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
   const evidence = (brief.evidence ?? watchFocus).slice(0, 3);
 
   return (
@@ -69,13 +74,22 @@ export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor }: Prop
       </View>
 
       <View style={{ padding: '20rpx', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '12rpx' }}>
+        <View style={{ width: 'calc(50% - 6rpx)', background: '#fef2f2', borderRadius: '18rpx', padding: '16rpx' }}>
+          <Text style={{ color: '#b91c1c', fontSize: '20rpx', display: 'block' }}>最近高危病毒活动</Text>
+          <Text style={{ color: '#b91c1c', fontSize: '28rpx', fontWeight: 800, lineHeight: 1.25, marginTop: '6rpx', display: 'block' }}>
+            {highRiskDistanceText}
+          </Text>
+          <Text style={{ color: '#4b5563', fontSize: '20rpx', lineHeight: 1.5, marginTop: '6rpx', display: 'block' }}>
+            {highRiskDistanceContext}
+          </Text>
+        </View>
         <View style={{ width: 'calc(50% - 6rpx)', background: '#eff6ff', borderRadius: '18rpx', padding: '16rpx' }}>
           <Text style={{ color: '#2563eb', fontSize: '20rpx', display: 'block' }}>主要来源</Text>
           <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
             {sourceSummary.replace(/^主要依据：/, '')}
           </Text>
         </View>
-        <View style={{ width: 'calc(50% - 6rpx)', background: '#fff7ed', borderRadius: '18rpx', padding: '16rpx' }}>
+        <View style={{ width: '100%', background: '#fff7ed', borderRadius: '18rpx', padding: '16rpx' }}>
           <Text style={{ color: '#ea580c', fontSize: '20rpx', display: 'block' }}>当前态势</Text>
           <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.35, marginTop: '6rpx', display: 'block' }}>
             {situation}
@@ -92,13 +106,9 @@ export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor }: Prop
         </View>
         <View style={{ width: 'calc(50% - 6rpx)', background: '#f9fafb', borderRadius: '18rpx', padding: '16rpx' }}>
           <Text style={{ color: '#6b7280', fontSize: '20rpx', display: 'block' }}>今日关注</Text>
-          <View className="flex flex-wrap gap-1" style={{ marginTop: '8rpx' }}>
-            {watchFocus.map((item) => (
-              <Text key={item} style={{ background: '#ffffff', color: '#374151', border: '1rpx solid #e5e7eb', borderRadius: '999rpx', padding: '2rpx 10rpx', fontSize: '18rpx', fontWeight: 600 }}>
-                {item}
-              </Text>
-            ))}
-          </View>
+          <Text style={{ color: '#111827', fontSize: '22rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
+            {focusSentence}
+          </Text>
         </View>
       </View>
 
