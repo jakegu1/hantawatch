@@ -1,19 +1,157 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-19T09:38:45.345314+00:00",
+  "__generated_at": "2026-05-19T14:55:51.564705+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-19T09:38:39.148537+00:00",
+  "last_fetched": "2026-05-19T14:55:45.936170+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-c8d4bb8830657726",
+      "time": "2026-05-19T14:22:09.000Z",
+      "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
+      "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
+      "summary_zh": "WHO发布汉坦病毒专题，介绍已知信息及意义。",
+      "key_facts_zh": [
+        "WHO",
+        "专题介绍"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-f1c727a9db2c2760",
+      "time": "2026-05-19T13:50:47.000Z",
+      "title_en": "Hantavirus Death Confirmed in Colorado as Health Officials Launch Investigation - People.com",
+      "body_en": "Hantavirus Death Confirmed in Colorado as Health Officials Launch Investigation People.com",
+      "summary_zh": "科罗拉多州确认汉坦病毒死亡病例，卫生官员展开调查。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-66244f0af3549724",
+      "time": "2026-05-19T13:37:07.000Z",
+      "title_en": "Fact Check: WHO advice on hantavirus time lag based on established science, not new narrative - Reuters",
+      "body_en": "Fact Check: WHO advice on hantavirus time lag based on established science, not new narrative Reuters",
+      "summary_zh": "路透社事实核查：WHO关于汉坦病毒时间滞后的建议基于科学。",
+      "key_facts_zh": [
+        "路透社",
+        "事实核查",
+        "WHO"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-f7aa899eea6e5761",
+      "time": "2026-05-19T13:00:00.000Z",
+      "title_en": "Argentina's icy outpost at the end of the world fears the hantavirus will chill tourism - WLRN",
+      "body_en": "Argentina's icy outpost at the end of the world fears the hantavirus will chill tourism WLRN",
+      "summary_zh": "阿根廷偏远地区担忧汉坦病毒影响旅游业。",
+      "key_facts_zh": [
+        "阿根廷",
+        "旅游影响"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-445701fce4c3c6f5",
+      "time": "2026-05-19T12:30:00.000Z",
+      "title_en": "Hantavirus-Hit Cruise Ship Will Sail Again In June (Latest Updates) - Forbes",
+      "body_en": "Hantavirus-Hit Cruise Ship Will Sail Again In June (Latest Updates) Forbes",
+      "summary_zh": "受汉坦病毒影响的邮轮将于六月复航。",
+      "key_facts_zh": [
+        "邮轮",
+        "六月复航"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6861a4510faca271",
+      "time": "2026-05-19T11:00:50.000Z",
+      "title_en": "A critical window to stop hantavirus is opening. Not all countries are managing exposed travelers the same way - CNN",
+      "body_en": "A critical window to stop hantavirus is opening. Not all countries are managing exposed travelers the same way CNN",
+      "summary_zh": "CNN报道各国对汉坦病毒暴露旅行者管理方式不同。",
+      "key_facts_zh": [
+        "CNN",
+        "旅行者管理"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-78de826bdf2b27bf",
+      "time": "2026-05-19T10:42:35.000Z",
+      "title_en": "Hantavirus Kills Colorado Man With Severe Symptoms: What Happens When This Rodent-Borne Virus Enters The Hu - News18",
+      "body_en": "Hantavirus Kills Colorado Man With Severe Symptoms: What Happens When This Rodent-Borne Virus Enters The Hu News18",
+      "summary_zh": "汉坦病毒致美国科罗拉多州一名男子死亡，症状严重。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b55dced5fef961c9",
+      "time": "2026-05-19T10:31:36.000Z",
+      "title_en": "Ebola international emergency, hantavirus update, ticks, heat, opioid deaths decline, and more. - Your Local Epidemiologist",
+      "body_en": "Ebola international emergency, hantavirus update, ticks, heat, opioid deaths decline, and more. Your Local Epidemiologist",
+      "summary_zh": "流行病学家更新埃博拉国际紧急状态、汉坦病毒、蜱虫等。",
+      "key_facts_zh": [
+        "流行病学家",
+        "埃博拉",
+        "汉坦病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-8492be29612a4ec5",
+      "time": "2026-05-19T10:00:09.000Z",
+      "title_en": "After Hantavirus, Ebola outbreak makes WHO concerned as spread remains uncertain - Deccan Herald",
+      "body_en": "After Hantavirus, Ebola outbreak makes WHO concerned as spread remains uncertain Deccan Herald",
+      "summary_zh": "WHO对埃博拉疫情表示担忧，传播仍不确定。",
+      "key_facts_zh": [
+        "WHO",
+        "埃博拉",
+        "担忧"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a655023fddc56553",
+      "time": "2026-05-19T09:47:48.000Z",
+      "title_en": "Dutch authorities expect more cruise ship outbreaks as hantavirus-hit vessel docks - France 24",
+      "body_en": "Dutch authorities expect more cruise ship outbreaks as hantavirus-hit vessel docks France 24",
+      "summary_zh": "荷兰当局预计更多邮轮爆发汉坦病毒，受染船只已靠港。",
+      "key_facts_zh": [
+        "荷兰",
+        "邮轮",
+        "预计更多爆发"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-16377dc3402398cf",
+      "time": "2026-05-19T08:31:28.000Z",
+      "title_en": "‘Don’t wait for proof’ – scientists call for tougher Hantavirus rules - AirQualityNews",
+      "body_en": "‘Don’t wait for proof’ – scientists call for tougher Hantavirus rules AirQualityNews",
+      "summary_zh": "科学家呼吁加强汉坦病毒防控，不要等待确凿证据。",
+      "key_facts_zh": [
+        "科学家",
+        "呼吁加强防控"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-5cc43b6fb1f9e14d",
       "time": "2026-05-19T06:29:35.000Z",
       "title_en": "UK bolsters hantavirus response with Japanese supply of experimental antiviral drug - Telegraph India",
       "body_en": "UK bolsters hantavirus response with Japanese supply of experimental antiviral drug Telegraph India",
-      "summary_zh": "英国从日本获取实验性抗病毒药物加强应对。",
+      "summary_zh": "英国从日本获得实验性抗病毒药物，加强汉坦病毒应对。",
       "key_facts_zh": [
         "英国",
         "日本",
@@ -22,36 +160,11 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-8395a3761570a370",
-      "time": "2026-05-19T06:28:33.000Z",
-      "title_en": "Public Health Agency of Canada confirms first hantavirus case in cruise passenger - The Sentinel - of this Land, for its People",
-      "body_en": "Public Health Agency of Canada confirms first hantavirus case in cruise passenger The Sentinel - of this Land, for its People",
-      "summary_zh": "加拿大公共卫生局确认邮轮乘客首例汉坦病毒。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "首例病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c8d4bb8830657726",
-      "time": "2026-05-19T05:16:56.000Z",
-      "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
-      "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
-      "summary_zh": "WHO发布汉坦病毒聚焦系列，介绍已知信息。",
-      "key_facts_zh": [
-        "WHO",
-        "信息汇总"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-7f9c34bd5cb04a7b",
       "time": "2026-05-19T04:40:01.000Z",
       "title_en": "Hantavirus Hunt: Argentine Scientists Set First Traps - NDTV",
       "body_en": "Hantavirus Hunt: Argentine Scientists Set First Traps NDTV",
-      "summary_zh": "阿根廷科学家首次设置陷阱搜寻汉坦病毒宿主。",
+      "summary_zh": "阿根廷科学家首次设置陷阱，开展汉坦病毒宿主调查。",
       "key_facts_zh": [
         "阿根廷",
         "科学家",
@@ -64,11 +177,11 @@
       "time": "2026-05-19T03:19:14.000Z",
       "title_en": "Argentina launches rodent hunt after deadly hantavirus outbreak on cruise ship - Firstpost",
       "body_en": "Argentina launches rodent hunt after deadly hantavirus outbreak on cruise ship Firstpost",
-      "summary_zh": "阿根廷邮轮爆发致命汉坦病毒后启动灭鼠行动。",
+      "summary_zh": "阿根廷在邮轮致命汉坦病毒爆发后启动啮齿动物捕杀。",
       "key_facts_zh": [
         "阿根廷",
         "邮轮",
-        "灭鼠行动"
+        "啮齿动物捕杀"
       ],
       "signal_strength": "high"
     },
@@ -77,176 +190,37 @@
       "time": "2026-05-19T02:49:00.000Z",
       "title_en": "Booming Expedition-Cruise Business Grapples With Fallout From Hantavirus Outbreak - WSJ",
       "body_en": "Booming Expedition-Cruise Business Grapples With Fallout From Hantavirus Outbreak WSJ",
-      "summary_zh": "探险邮轮业应对汉坦病毒爆发带来的影响。",
+      "summary_zh": "蓬勃发展的探险邮轮业应对汉坦病毒爆发的影响。",
       "key_facts_zh": [
         "邮轮业",
+        "汉坦病毒",
         "影响"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-6c4f3a6dd5c4674c",
-      "time": "2026-05-19T02:07:29.000Z",
-      "title_en": "Douglas County adult dies from hantavirus, health officials say there’s no link to cruise ship outbreak - Colorado Public Radio",
-      "body_en": "Douglas County adult dies from hantavirus, health officials say there’s no link to cruise ship outbreak Colorado Public Radio",
-      "summary_zh": "道格拉斯县一名成人死于汉坦病毒，卫生官员称与邮轮疫情无关。",
+      "id": "rt-3ca539e6a08b7c56",
+      "time": "2026-05-19T02:38:35.000Z",
+      "title_en": "Romania confirms hantavirus case, unrelated to cruise ship outbreak - news.cgtn.com",
+      "body_en": "Romania confirms hantavirus case, unrelated to cruise ship outbreak news.cgtn.com",
+      "summary_zh": "罗马尼亚确认一例汉坦病毒病例，与邮轮爆发无关。",
       "key_facts_zh": [
-        "美国",
-        "死亡1例",
+        "罗马尼亚",
+        "确诊",
         "无关邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-be751d3c9c15c397",
-      "time": "2026-05-19T02:04:59.000Z",
-      "title_en": "Cruise ship with hantavirus outbreak reaches final port - CBC",
-      "body_en": "Cruise ship with hantavirus outbreak reaches final port CBC",
-      "summary_zh": "爆发汉坦病毒的邮轮抵达最终港口。",
-      "key_facts_zh": [
-        "邮轮",
-        "抵达",
-        "疫情"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-22439db35fabf40c",
-      "time": "2026-05-18T23:32:11.000Z",
-      "title_en": "Hantavirus-stricken cruise ship docks in Netherlands - The Shillong Times",
-      "body_en": "Hantavirus-stricken cruise ship docks in Netherlands The Shillong Times",
-      "summary_zh": "受汉坦病毒影响的邮轮在荷兰靠岸。",
-      "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "靠岸"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-068d7c9a82a15f5e",
-      "time": "2026-05-18T22:30:00.000Z",
-      "title_en": "Hantavirus-hit ship docks in Rotterdam at voyage end - Mumbai Mirror",
-      "body_en": "Hantavirus-hit ship docks in Rotterdam at voyage end Mumbai Mirror",
-      "summary_zh": "汉坦病毒疫情邮轮在鹿特丹完成航程靠岸。",
-      "key_facts_zh": [
-        "鹿特丹",
-        "邮轮",
-        "靠岸"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b116c2c964958eaa",
-      "time": "2026-05-18T21:55:26.000Z",
-      "title_en": "Adult dies of hantavirus in Colorado, state health officials say - Reuters",
-      "body_en": "Adult dies of hantavirus in Colorado, state health officials say Reuters",
-      "summary_zh": "科罗拉多州一名成人死于汉坦病毒，州卫生官员确认。",
+      "id": "rt-9bbb676d7275a287",
+      "time": "2026-05-19T02:07:29.000Z",
+      "title_en": "Douglas County adult dies from hantavirus, health officials say there’s no link to cruise ship outbreak - Colorado Public Radio",
+      "body_en": "Douglas County adult dies from hantavirus, health officials say there’s no link to cruise ship outbreak Colorado Public Radio Colorado adult dies from hantavirus after local rodent exposure USA Today Hantavirus-Hit Cruise Ship Will Sail Again In June (Latest Updates) Forbes",
+      "summary_zh": "美国科罗拉多州一名成人死于汉坦病毒，卫生官员称与邮轮疫情无关。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多",
-        "死亡1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ba6d4bbba2c35b2b",
-      "time": "2026-05-18T21:24:00.000Z",
-      "title_en": "Argentina’s icy outpost at the end of the world fears the hantavirus will chill tourism - AP News",
-      "body_en": "Argentina’s icy outpost at the end of the world fears the hantavirus will chill tourism AP News",
-      "summary_zh": "阿根廷偏远地区担忧汉坦病毒影响旅游业。",
-      "key_facts_zh": [
-        "阿根廷",
-        "旅游业",
-        "担忧"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-c28fd895cf0c78d3",
-      "time": "2026-05-18T21:20:00.000Z",
-      "title_en": "Global Hantavirus precautions in place as ship docks in the Netherlands - CityNews Montreal",
-      "body_en": "Global Hantavirus precautions in place as ship docks in the Netherlands CityNews Montreal",
-      "summary_zh": "全球汉坦病毒预防措施启动，邮轮停靠荷兰。",
-      "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "全球预防"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4ea5e73845fd8a1f",
-      "time": "2026-05-18T20:39:00.000Z",
-      "title_en": "Fatal Colorado hantavirus case not linked to cruise ship, officials say - The Hill",
-      "body_en": "Fatal Colorado hantavirus case not linked to cruise ship, officials say The Hill",
-      "summary_zh": "科罗拉多州致命汉坦病毒病例与邮轮无关。",
-      "key_facts_zh": [
-        "美国",
-        "科罗拉多",
-        "死亡1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0e5926d04d5a59dc",
-      "time": "2026-05-18T20:20:22.000Z",
-      "title_en": "Ebola and hantavirus have African leaders talking 'health sovereignty' as donor support fades - PBS",
-      "body_en": "Ebola and hantavirus have African leaders talking 'health sovereignty' as donor support fades PBS",
-      "summary_zh": "埃博拉和汉坦病毒促使非洲领导人讨论健康主权。",
-      "key_facts_zh": [
-        "非洲",
-        "健康主权"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-83495a4ffb2f045b",
-      "time": "2026-05-18T20:02:40.000Z",
-      "title_en": "Colorado records first hantavirus death since 2024. It’s not from the cruise ship. - The Colorado Sun",
-      "body_en": "Colorado records first hantavirus death since 2024. It’s not from the cruise ship. The Colorado Sun",
-      "summary_zh": "科罗拉多州2024年以来首例汉坦病毒死亡，与邮轮无关。",
-      "key_facts_zh": [
-        "美国",
-        "科罗拉多",
-        "死亡1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ee945217a3bbffb8",
-      "time": "2026-05-18T19:43:47.000Z",
-      "title_en": "WHO assembly opens under shadow of Ebola, hantavirus and funding cuts - UN News",
-      "body_en": "WHO assembly opens under shadow of Ebola, hantavirus and funding cuts UN News",
-      "summary_zh": "世卫大会在埃博拉、汉坦病毒和资金削减阴影下开幕。",
-      "key_facts_zh": [
-        "WHO",
-        "世卫大会"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0e2e90affbb417aa",
-      "time": "2026-05-18T19:33:00.000Z",
-      "title_en": "Canadian passenger now presumed positive for hantavirus - cidrap.umn.edu",
-      "body_en": "Canadian passenger now presumed positive for hantavirus cidrap.umn.edu",
-      "summary_zh": "加拿大乘客被推定汉坦病毒阳性。",
-      "key_facts_zh": [
-        "加拿大",
-        "推定阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-6c2879c037da3003",
-      "time": "2026-05-18T19:05:05.000Z",
-      "title_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave - The New York Times",
-      "body_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave The New York Times",
-      "summary_zh": "美国汉坦病毒患者被令隔离，尽管计划离开。",
-      "key_facts_zh": [
-        "美国",
-        "隔离",
-        "汉坦病毒"
+        "死亡1例",
+        "科罗拉多"
       ],
       "signal_strength": "high"
     }
