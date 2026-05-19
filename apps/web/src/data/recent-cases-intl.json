@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-19T02:55:34.871522+00:00",
+  "__generated_at": "2026-05-19T09:38:45.341911+00:00",
   "cases": [
     {
       "id": "who-2026-don601",
@@ -14,7 +14,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "official"
       }
     },
@@ -30,7 +30,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "official"
       }
     },
@@ -46,7 +46,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "official"
       }
     },
@@ -57,12 +57,12 @@
       "date": "2026-05-15",
       "caseType": "suspected",
       "count": 0,
-      "title": "ECDC发布安第斯病毒感染者感染防控快速科学建议。",
+      "title": "ECDC发布安第斯病毒感染防控快速科学建议。",
       "summary": "ECDC；安第斯病毒；防控建议",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUlZrV2tleFRmcWtQWHZEUTl2dlVyTGg2NU1XNzBkeTJUdy14TlFDRzZzZTVDMk9yVW5mYWhYWXVEWFliS0s1d1lBR2JnUkgzNUNlcndsYWpqamxKQm9UU3ZuQ19YSDhheXdWM05OaFlFcmpZamt5VVFxaElXS19oaGxNbVhLd3dTOHkwbkpfOEdtRW1yS0d5ZWZQQ0VWckRSUWJXNV9uZGd5U2prTEtZUUJ4aGZVZkpFR01yTTY1aw?oc=5",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "surveillance"
       }
     },
@@ -73,12 +73,12 @@
       "date": "2026-05-13",
       "caseType": "suspected",
       "count": 0,
-      "title": "ECDC就2026年安第斯病毒疫情发布自我隔离建议。",
+      "title": "ECDC发布2026年安第斯病毒暴发自我隔离建议。",
       "summary": "ECDC；安第斯病毒；自我隔离",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNTVBhQmJ4WHFubHdtZkFVQzdFOWNxTDdmLVNNcHN4TGppQ1RYajBpZEp3MzV2bTZNSXpOTEhidXk2RzQzeTNVMG1IUEExQmZyMVczNDJMRmdKd2M3WEtvRC1SR01ST3dZNmlfcTFZeEFuckhKRHBwdDZjenhkaVQ3WDJCUlVfTXJTMXBianYzQmVmOHB0TTlqSkZtWC1EQXlaR3RQQlBGSnE?oc=5",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "surveillance"
       }
     },
@@ -99,18 +99,34 @@
       }
     },
     {
+      "id": "surv-news-news.google.com-rss-articles-cbmixgfbvv95cuxqdkr1bnm0nllta3ruexhezhvwv3m1bnlraglktwdbmtfyqkxkckxmb3vxyulrtwvful",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-09",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "ECDC发布邮轮安第斯汉坦病毒暴发乘客管理指南。",
+      "summary": "ECDC；邮轮；乘客管理",
+      "source": {
+        "name": "专业监测源",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdkR1bnM0NllTa3RueXhEZHVWV3M1bnlRaGlKTWdBMTFyQkxKckxmb3VXYUlrTWVfUlRjbEljRzV3akxCNUEwUjR6bU5kSnRUWFlMZHFQVVFQVm9tMk9Ra2VkZmtEbDJvZDV1NlBTQlhKNE9xWksyV09JOW14V3J3SWd6dzVtUFZzakhGV1IwUkdjeHdnOEMyWWo5VUdaSUhybmJYVmFoZElLckRiSXd1aTVOekdEdjA0U19LdTc2WlpTV0hLR0E?oc=5",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
+        "confidence": "surveillance"
+      }
+    },
+    {
       "id": "surv-news-news.google.com-rss-articles-cbmixgfbvv95cuxpakiyqzhscny1wkj2rfmtbnzkqxg3wwnqmlrszmo4eer2azzyrdr3v1o0y0txzkq4q1",
       "regionCode": "INT",
       "serotypeId": "other",
       "date": "2026-05-07",
       "caseType": "suspected",
       "count": 0,
-      "title": "ECDC报告2026年5月18日邮轮安第斯汉坦病毒疫情。",
-      "summary": "ECDC；邮轮；安第斯病毒",
+      "title": "ECDC通报2026年5月18日邮轮安第斯汉坦病毒暴发。",
+      "summary": "ECDC；邮轮；暴发",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPakIyQzhScnY1WkJ2RFMtbnZKQXg3WWNQMlRsZmo4eER2azZYRDR3V1o0Y0tXZkQ4Q1FlWnlvV2FYNUtvN1ZHTUxycDU0NFotUFRFcWp0Q2JETjZnNXRzZS0tY0lMS18zR2d4cm80VnRadXp4NGZiN0JoU2RLYVUwM3NUUHNRTWtRMkV5alE4ZHNrTUZPME1QN0FybUpmQmR4bmM5NHYwS2s3LU5Yc29TNkdNX1k2OG9jM0J5eVNqVHJubVdRVXc?oc=5",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "surveillance"
       }
     },
@@ -121,12 +137,12 @@
       "date": "2026-05-04",
       "caseType": "suspected",
       "count": 0,
-      "title": "智利卫生部与国际组织监测MV Hondius船上汉坦病毒病例。",
+      "title": "智利卫生部与国际组织监测MV Hondius号汉坦病毒病例。",
       "summary": "智利；MV Hondius；监测",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOQXdUYWl3UWJmRGJtZ21qVHdvbWxXdm90YUdEaDhHOXlyLWRhWmhrSTRHU2VNWUNodmp3cFdWazRYS1gxa2JGek9aU0lzcFV1ZzV5VFBxVl8wcEp5VHpkRkJlTnpyY1hUTlYwLVRpaDE4cEw4OWlTVGVDanhScW45YnhzM1VqUUpPOVFfdUxtRzh4eXd3VGVoc2oyb1FWZ2lmV29Jb3gtRlVvODd4UWRGaWZ2b1k4VGU2eTZZNldvX1FRU0xIQlE?oc=5",
-        "retrievedAt": "2026-05-19T02:55:10.497229+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944374+00:00",
         "confidence": "surveillance"
       }
     },
@@ -174,7 +190,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-19T02:55:10.497681+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944871+00:00",
         "confidence": "news"
       }
     },
@@ -190,7 +206,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-19T02:55:10.497681+00:00",
+        "retrievedAt": "2026-05-19T09:38:19.944871+00:00",
         "confidence": "news"
       }
     }
