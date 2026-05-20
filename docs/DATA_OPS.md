@@ -49,6 +49,10 @@
 
 GitHub Action `.github/workflows/collect-data.yml` 每天 04:00 / 10:00 / 16:00 / 22:00（北京时间）自动跑：
 
+**轻量采集（每小时）**：`.github/workflows/collect-data-light.yml` 执行 `python main.py --feeds-only`，只更新 `recent-cases-intl.json`、`realtime-feed.json`、`country-signals.json` 与 `meta.json` 中的线索源状态；不碰 WHO/ECDC/HPI。全量管道仍每 6 小时一次。
+
+原 6 小时全量任务：
+
 1. 安装 collector
 2. 跑单元测试（HPI 数值与前端必须一致）
 3. 跑 `python main.py`

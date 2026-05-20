@@ -1,6 +1,7 @@
 export default defineAppConfig({
   pages: [
     'pages/home/index',
+    'pages/events/mv-hondius/index',
     'pages/data/index',
     'pages/wiki/index',
     'pages/guide/index',

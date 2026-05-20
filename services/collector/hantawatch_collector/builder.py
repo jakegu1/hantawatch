@@ -702,6 +702,7 @@ def build_daily_brief(
     active_clusters: list[dict],
     prev_distance_km: int | None,
     prev_reference_cluster_id: str | None = None,
+    prev_confirmed_cases: int | None = None,
     domestic_baseline_status: str,
 ) -> dict:
     """Compose today's brief. Distance Δ is computed as the change in the
@@ -762,14 +763,31 @@ def build_daily_brief(
 
     one_line = f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。"
 
+    # Global case tally + delta vs previous collector run (same cluster).
+    global_cases_total = 0
+    global_cases_delta = 0
+    ref_id = reference_id
+    if ref_id and active_clusters:
+        for cluster in active_clusters:
+            if cluster.get("id") == ref_id:
+                global_cases_total = int(cluster.get("confirmedCases", 0) or 0)
+                break
+    if prev_confirmed_cases is not None:
+        global_cases_delta = global_cases_total - int(prev_confirmed_cases)
+
     return {
         "date": today,
         "distanceDeltaKm": distance_delta_km,
         "hpiDelta": hpi_delta,
-        "globalNewCases": 0,  # placeholder; needs structured counts
+        "globalNewCases": global_cases_delta,
+        "globalCasesTotal": global_cases_total,
         "domesticBaselineStatus": domestic_baseline_status,
         "oneLine": one_line,
         "daysSinceLastIntlAlert": days_since,
+        # Honest labels — frontend also recomputes from live feeds.
+        "whoDaysSinceOfficialUpdate": days_since,
+        "cluesLast24h": 0,
+        "headline24h": "",
     }
 
 

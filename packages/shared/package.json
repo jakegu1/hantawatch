@@ -7,7 +7,11 @@
   "exports": {
     ".": "./src/index.ts",
     "./types": "./src/types/index.ts",
-    "./constants": "./src/constants/index.ts"
+    "./constants": "./src/constants/index.ts",
+    "./timeline": "./src/timeline.ts",
+    "./daily-brief-display": "./src/daily-brief-display.ts",
+    "./feed-definitions": "./src/feed-definitions.ts",
+    "./mv-hondius-event": "./src/mv-hondius-event.ts"
   },
   "scripts": {
     "lint": "tsc --noEmit",

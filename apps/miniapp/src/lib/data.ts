@@ -9,6 +9,7 @@
  * Mirrors apps/web/src/lib/data.ts. Keep the two in sync.
  */
 
+import { sortRecentCasesByDate } from '@hantawatch/shared/timeline';
 import type {
   ActiveCluster,
   CaseRecord,
@@ -67,6 +68,9 @@ export interface DailyBrief {
   domesticBaselineStatus: 'normal' | 'elevated' | 'below';
   oneLine: string;
   daysSinceLastIntlAlert: number;
+  whoDaysSinceOfficialUpdate?: number;
+  cluesLast24h?: number;
+  headline24h?: string;
   latestChange?: string;
   situation?: string;
   riskJudgment?: string;
@@ -88,6 +92,13 @@ export const todayBrief: DailyBrief = {
   domesticBaselineStatus: (riskSnapshotDailyBrief?.domesticBaselineStatus ?? staticDailyBrief.domesticBaselineStatus) as DailyBrief['domesticBaselineStatus'],
   oneLine: riskSnapshotDailyBrief?.oneLine ?? staticDailyBrief.oneLine,
   daysSinceLastIntlAlert: riskSnapshotDailyBrief?.daysSinceLastIntlAlert ?? staticDailyBrief.daysSinceLastIntlAlert,
+  whoDaysSinceOfficialUpdate:
+    riskSnapshotDailyBrief?.whoDaysSinceOfficialUpdate ??
+    staticDailyBrief.whoDaysSinceOfficialUpdate ??
+    riskSnapshotDailyBrief?.daysSinceLastIntlAlert ??
+    staticDailyBrief.daysSinceLastIntlAlert,
+  cluesLast24h: riskSnapshotDailyBrief?.cluesLast24h ?? staticDailyBrief.cluesLast24h,
+  headline24h: riskSnapshotDailyBrief?.headline24h ?? staticDailyBrief.headline24h,
   latestChange: riskSnapshotDailyBrief?.latestChange ?? staticDailyBrief.latestChange,
   situation: riskSnapshotDailyBrief?.situation ?? staticDailyBrief.situation,
   riskJudgment: riskSnapshotDailyBrief?.riskJudgment ?? staticDailyBrief.riskJudgment,
@@ -144,9 +155,7 @@ const intlCases: RecentCase[] = (recentCasesIntlJson.cases as RawIntlCase[])
     };
   });
 
-export const recentCases: RecentCase[] = dedupByTitle(
-  [...intlCases, ...chinaCases].sort((a, b) => b.date.localeCompare(a.date)),
-);
+export const recentCases: RecentCase[] = dedupByTitle(sortRecentCasesByDate([...intlCases, ...chinaCases]));
 
 // ---- Pipeline meta -------------------------------------------------------
 
@@ -217,6 +226,13 @@ export const realtimeFeed: RealtimeFeed = {
 
 export const hondiusImports: MvHondiusImport[] =
   (mvHondiusImportsJson.imports as MvHondiusImport[]) ?? [];
+
+export const hondiusImportSummaries: { date: string; summary_zh: string }[] = hondiusImports.map(
+  (imp) => ({
+    date: imp.date,
+    summary_zh: imp.summary_zh,
+  }),
+);
 
 export const hondiusOutbreakName: string =
   (mvHondiusImportsJson as { outbreakName?: string }).outbreakName ??

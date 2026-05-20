@@ -1,0 +1,78 @@
+name: Collect data (light feeds)
+
+# Hourly refresh of fast-moving sources (news, ProMED/surveillance, realtime).
+# Full WHO/ECDC/HPI pipeline remains on collect-data.yml (every 6h).
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '只抓取不写文件（true/false）'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-data-light
+  cancel-in-progress: false
+
+jobs:
+  collect-light:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install collector
+        working-directory: services/collector
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[dev]
+
+      - name: Run light collector
+        working-directory: services/collector
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_BASE_URL: ${{ secrets.LLM_API_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          LLM_THINKING: ${{ secrets.LLM_THINKING }}
+        run: |
+          set +e
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python main.py --feeds-only --dry-run
+          else
+            python main.py --feeds-only
+          fi
+          rc=$?
+          set -e
+          if [ "$rc" -eq 0 ] || [ "$rc" -eq 2 ]; then
+            exit 0
+          fi
+          exit "$rc"
+
+      - name: Commit & push
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "hantawatch-bot"
+          git config user.email "bot@bingduguancha.com"
+          git add apps/web/src/data/recent-cases-intl.json \
+                  apps/web/src/data/realtime-feed.json \
+                  apps/web/src/data/country-signals.json \
+                  apps/web/src/data/meta.json
+          if git diff --cached --quiet; then
+            echo "No light-feed changes."
+            exit 0
+          fi
+          git commit -m "chore(data): light feeds update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push || (git fetch origin main && git rebase origin/main && git push)

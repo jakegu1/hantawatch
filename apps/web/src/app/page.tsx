@@ -1,12 +1,11 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, recentCases, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, realtimeFeed, riskSnapshot, sortRecentCases } from '@/lib/data';
-import type { DailyBrief, RecentCase } from '@/lib/data';
-import { findNearestAndes, relativeTimeZh, type ImportProximity } from '@/lib/nearest-cluster';
-import type { SerotypeId, ActiveCluster } from '@hantawatch/shared/types';
-import { isMainlandSource } from '@/lib/link-policy';
+import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
+import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
+import { dataMeta, hondiusImportSummaries, realtimeFeed, riskSnapshot } from '@/lib/data';
+import { findNearestAndes, type ImportProximity } from '@/lib/nearest-cluster';
+import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
 import { Shield, MapPin, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
@@ -14,8 +13,12 @@ import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
+import { DailyBriefSection } from '@/components/daily-brief-section';
+import { FeedLegend } from '@/components/feed-legend';
+import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
 import { SubscribeForm } from '@/components/subscribe-form';
 import { RealtimeFeedSection } from '@/components/realtime-feed-section';
+import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 
 // NOTE (2026-05-13): the interactive MapLibre world map has been removed.
 // - Carto/OSM tile CDNs are unreliable behind the GFW, so mainland users
@@ -28,30 +31,6 @@ import { RealtimeFeedSection } from '@/components/realtime-feed-section';
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
-}
-
-function isOfficialWho(c: RecentCase): boolean {
-  const name = c.source?.name ?? '';
-  return c.source?.confidence === 'official' && (name.includes('WHO') || name.includes('DON'));
-}
-
-function isLowInformationBriefTitle(title: string): boolean {
-  const lower = title.toLowerCase();
-  return (
-    lower.includes('frequently asked questions') ||
-    lower.includes('faq') ||
-    lower.includes('what to know') ||
-    title.includes('是什么') ||
-    title.includes('什么是')
-  );
-}
-
-function briefCaseText(c: RecentCase): string {
-  const title = c.title ?? c.notes ?? c.source.name;
-  if (c.summary && c.source?.confidence !== 'news') {
-    return c.summary;
-  }
-  return title;
 }
 
 function distanceRingColor(km: number): string {
@@ -100,56 +79,7 @@ export default function HomePage() {
     };
   }, []);
 
-  // ────────────────────────────────────────────────────────────────────
-  //  Live "最新通报" entries — admin can add/hide rows from /admin →
-  //  「通报管理」 tab. Same fetch-then-merge pattern as liveClusters.
-  //  Initial state is the static `recentCases` built from JSON; the
-  //  useEffect overlays additions + hides without waiting for a redeploy.
-  // ────────────────────────────────────────────────────────────────────
-  const [liveRecentCases, setLiveRecentCases] = useState<RecentCase[]>(recentCases);
-  useEffect(() => {
-    let cancelled = false;
-    fetch('/api/news-entries', { cache: 'no-store', credentials: 'same-origin' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data) => {
-        if (cancelled || !data) return;
-        const hiddenIds: string[] = Array.isArray(data.hiddenIds) ? data.hiddenIds : [];
-        const rawAdditions: Array<Record<string, unknown>> = Array.isArray(data.additions) ? data.additions : [];
-
-        if (hiddenIds.length === 0 && rawAdditions.length === 0) return; // no-op fast path
-
-        // Narrow `caseType` to the CaseRecord union — anything unexpected
-        // from the API falls back to 'confirmed' (the only case-type the
-        // admin form currently emits, but we defend against schema drift).
-        const normalizeCaseType = (v: unknown): 'confirmed' | 'clinical' | 'suspected' =>
-          v === 'clinical' || v === 'suspected' ? v : 'confirmed';
-
-        const additions: RecentCase[] = rawAdditions.map((a) => ({
-          id: (a.id as string) ?? `admin-${Date.now()}`,
-          regionCode: (a.regionCode as string) ?? (a.scope === 'china' ? '000000' : 'INT'),
-          serotypeId: ((a.serotypeId as SerotypeId) ?? 'other'),
-          date: (a.date as string) ?? '',
-          caseType: normalizeCaseType(a.caseType),
-          count: Number(a.count ?? 0),
-          title: (a.title as string) ?? undefined,
-          summary: (a.summary as string) ?? undefined,
-          source: {
-            name: (a.sourceName as string) ?? '',
-            url: (a.sourceUrl as string) ?? '',
-            retrievedAt: (a.createdAt as string) ?? new Date().toISOString(),
-            confidence: ((a.confidence as RecentCase['source']['confidence']) ?? 'official'),
-          },
-          notes: (a.notes as string) ?? undefined,
-          scope: ((a.scope as 'china' | 'international') ?? 'international'),
-        }));
-
-        const hideSet = new Set(hiddenIds);
-        const merged = sortRecentCases([...recentCases.filter((c) => !hideSet.has(c.id)), ...additions]);
-        setLiveRecentCases(merged);
-      })
-      .catch(() => { /* keep static baseline */ });
-    return () => { cancelled = true; };
-  }, []);
+  const liveRecentCases = useLiveRecentCases();
 
   // The hero now centres on the *nearest active Andes cluster*, not
   // "liveClusters[0]" (which is just whatever the collector happened to
@@ -174,47 +104,38 @@ export default function HomePage() {
       index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
     );
   }, [hpi.total]);
-  const dynamicTodayBrief: DailyBrief = todayBrief;
-  const chronologicalRecentCases = useMemo(
-    () => [...liveRecentCases].sort((a, b) => b.date.localeCompare(a.date)),
-    [liveRecentCases],
+  const briefContent = useMemo(
+    () =>
+      buildBriefSectionContent({
+        briefDate: todayBrief.date,
+        oneLine: todayBrief.oneLine,
+        latestChange: todayBrief.latestChange,
+        situation: todayBrief.situation,
+        riskJudgment: todayBrief.riskJudgment,
+        newCases: todayBrief.newCases,
+        sourceSummary: todayBrief.sourceSummary,
+        watchFocus: todayBrief.watchFocus,
+        evidence: todayBrief.evidence,
+        shareLine: todayBrief.shareLine,
+        daysSinceLastIntlAlert: todayBrief.daysSinceLastIntlAlert,
+        clusterLastUpdate: cluster?.lastUpdate,
+        domesticBaselineStatus: todayBrief.domesticBaselineStatus,
+        recentCases: liveRecentCases,
+        realtimeUpdates: realtimeFeed.updates,
+        importSummaries: hondiusImportSummaries,
+        hpiTotal: hpi.total,
+      }),
+    [liveRecentCases, cluster?.lastUpdate, hpi.total],
   );
-  const briefDate = new Date(`${dynamicTodayBrief.date}T00:00:00+08:00`);
-  const yesterdayDate = new Date(briefDate.getTime() - 86_400_000).toISOString().slice(0, 10);
-  const yesterdayItems = chronologicalRecentCases
-    .filter((c) => c.date >= yesterdayDate && c.date <= dynamicTodayBrief.date)
-    .filter((c) => !isLowInformationBriefTitle(c.title ?? c.notes ?? ''))
-    .slice(0, 3);
-  const briefItems = yesterdayItems.length > 0
-    ? yesterdayItems
-    : chronologicalRecentCases.filter((c) => !isLowInformationBriefTitle(c.title ?? c.notes ?? '')).slice(0, 3);
-  const latestSurveillance = chronologicalRecentCases.find((c) => c.source?.confidence === 'surveillance');
-  const latestWho = liveRecentCases.find(isOfficialWho);
-  const chinaRiskText = hpi.total <= 35
-    ? '对中国大陆公众的短期风险仍处于一般关注水平，重点是持续监测输入病例和官方通报。'
-    : 'HPI 已高于低位区间，建议重点查看官方通报、输入监测和国内基线变化。';
-  const briefLatestChange = dynamicTodayBrief.latestChange ?? (briefItems[0] ? briefCaseText(briefItems[0]) : '过去 24 小时暂无新的高可信通报。');
-  const briefSituation = dynamicTodayBrief.situation ?? dynamicTodayBrief.oneLine;
-  const briefRiskJudgment = dynamicTodayBrief.riskJudgment ?? chinaRiskText;
-  const briefNewCases = dynamicTodayBrief.newCases ?? briefLatestChange;
-  const briefSourceSummary = dynamicTodayBrief.sourceSummary ?? (latestWho ? `主要依据：WHO DON（${latestWho.date}）` : latestSurveillance ? '主要依据：专业监测源' : '主要依据：现有公开数据');
-  const briefWatchFocus = (dynamicTodayBrief.watchFocus?.length ? dynamicTodayBrief.watchFocus : dynamicTodayBrief.evidence)?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
-  const briefShareLine = dynamicTodayBrief.shareLine ?? `${briefNewCases} ${briefRiskJudgment}`;
-  const domesticBaselineText = dynamicTodayBrief.domesticBaselineStatus === 'elevated'
-    ? '国内 HFRS 高于基线'
-    : dynamicTodayBrief.domesticBaselineStatus === 'below'
-      ? '国内 HFRS 低于基线'
-      : '国内 HFRS 基线正常';
+
+  const { metrics: briefMetrics } = briefContent;
+
   const highRiskDistanceText = hasImportDistance && nearestImport
     ? `约 ${fmt(displayedDistanceKm)} km（${nearestImport.nameZh}，${nearestImport.statusZh}）`
     : `约 ${fmt(displayedDistanceKm)} km（${cluster.location?.name ?? '当前重点疫情'}）`;
   const highRiskDistanceContext = hasImportDistance && nearestImport
     ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster.distanceFromChinaKm)} km；当前按最近输入监测距离展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
-  const briefFocusSentence = briefWatchFocus.length > 0
-    ? `${briefWatchFocus.join('、')}仍是今日主要观察点。`
-    : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
-
   return (
     <div className="pb-16">
       {/* ================================================================ */}
@@ -230,7 +151,11 @@ export default function HomePage() {
           </div>
 
           {/* Daily brief banner */}
-          <DailyBriefBanner brief={dynamicTodayBrief} />
+          <DailyBriefBanner
+            brief={todayBrief}
+            headline24h={briefMetrics.headline24h}
+            alertLabel={briefMetrics.alertLabel}
+          />
 
           {/* ⚠ Andes warning — compact 1–2 line strip on mobile, expanded on sm+ */}
           <div className="rounded-xl bg-red-500/15 backdrop-blur border border-red-300/30 px-3 py-2.5 sm:p-5 mb-3 sm:mb-4">
@@ -389,66 +314,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-page mt-4 sm:mt-6">
-        <div className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-sm">
-          <div className="bg-gradient-to-r from-white via-brand-50 to-blue-50 px-4 py-3 text-gray-950">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <p className="text-[10px] font-semibold tracking-[0.18em] text-brand-700">每日简报</p>
-                <h2 className="mt-0.5 text-base font-bold">新增病例与风险判断</h2>
-              </div>
-              <div className="text-right text-[11px] text-gray-600">
-                <div>{dynamicTodayBrief.date}</div>
-                <div>{hpi.total} · {hpi.gradeZh}</div>
-              </div>
-            </div>
-            <div className="mt-3 rounded-xl bg-white p-3 ring-1 ring-brand-100">
-              <div className="text-[11px] font-medium text-brand-700">昨日/最新新增</div>
-              <div className="mt-1 text-lg font-extrabold leading-snug text-gray-950">{briefNewCases}</div>
-              <div className="mt-1 text-[11px] leading-relaxed text-gray-600">{briefSourceSummary}</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2 p-3 text-xs">
-            <div className="rounded-xl bg-red-50 p-2.5">
-              <div className="text-[10px] text-red-700">最近高危病毒活动</div>
-              <div className="mt-1 text-base font-extrabold leading-tight text-red-700">{highRiskDistanceText}</div>
-              <div className="mt-1 text-[11px] leading-relaxed text-gray-600">{highRiskDistanceContext}</div>
-            </div>
-            <div className="rounded-xl bg-brand-50 p-2.5">
-              <div className="text-[10px] text-brand-600">主要来源</div>
-              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefSourceSummary.replace(/^主要依据：/, '')}</div>
-            </div>
-            <div className="rounded-xl bg-orange-50 p-2.5 sm:col-span-2">
-              <div className="text-[10px] text-orange-600">当前态势</div>
-              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefSituation}</div>
-            </div>
-            <div className="rounded-xl bg-green-50 p-2.5">
-              <div className="text-[10px] text-green-700">中国风险</div>
-              <div className="mt-1 font-bold" style={{ color: hpi.color }}>{hpi.total} · {hpi.gradeZh}</div>
-              <div className="mt-0.5 text-[11px] leading-relaxed text-gray-600">{domesticBaselineText}；{briefRiskJudgment}</div>
-            </div>
-            <div className="rounded-xl bg-gray-50 p-2.5">
-              <div className="text-[10px] text-gray-500">今日关注</div>
-              <div className="mt-1 font-bold leading-relaxed text-gray-900">{briefFocusSentence}</div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-100 px-3 pb-3">
-            <div className="rounded-xl bg-gray-900 p-3 text-white">
-              <div className="text-[10px] font-medium text-blue-100">综合判断</div>
-              <p className="mt-1 text-xs font-semibold leading-relaxed sm:text-sm">{briefShareLine}</p>
-              <div className="mt-2 flex flex-wrap gap-1">
-                {(dynamicTodayBrief.evidence ?? briefWatchFocus).slice(0, 3).map((item) => (
-                  <span key={item} className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-blue-50">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DailyBriefSection
+        briefDate={todayBrief.date}
+        hpiTotal={hpi.total}
+        hpiGradeZh={hpi.gradeZh}
+        hpiColor={hpi.color}
+        content={briefContent}
+        highRiskDistanceText={highRiskDistanceText}
+        highRiskDistanceContext={highRiskDistanceContext}
+      />
 
       {/* ================================================================ */}
       {/* SECTION 2: Serotype status — ranked by concern level             */}
@@ -554,6 +428,8 @@ export default function HomePage() {
             <span className="text-[11px] text-gray-400">国际 + 国内 · 按日期倒序</span>
           </div>
 
+          <FeedLegend feedId="recent-cases" compact />
+
           {/* Legend — explain serotype labels + confidence levels at a glance */}
           <div className="flex flex-wrap items-center gap-1.5 mb-3 text-[10px] text-gray-500">
             <span className="inline-flex items-center gap-1 rounded-full bg-red-50 text-red-700 px-2 py-0.5 font-medium ring-1 ring-red-200">
@@ -566,121 +442,14 @@ export default function HomePage() {
             <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 text-blue-800 px-2 py-0.5 font-medium">官方通报</span>
             <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 text-purple-800 px-2 py-0.5 font-medium">专业监测</span>
             <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 text-amber-800 px-2 py-0.5 font-medium">新闻线索</span>
+            <span className="mx-1 text-gray-300">·</span>
+            <span className="inline-flex items-center gap-1 rounded-full bg-purple-50 text-purple-800 px-2 py-0.5 font-medium ring-1 ring-purple-200">监测动态</span>
           </div>
 
-          <ol className="space-y-3">
-            {liveRecentCases.map((c) => {
-              const sero = SEROTYPES[c.serotypeId];
-              const isAndes = c.serotypeId === 'andes';
-              const isIntl = c.scope === 'international';
-
-              // Serotype chip: red when Andes (the only human-to-human serotype), neutral otherwise.
-              const seroChipClass = isAndes
-                ? 'bg-red-50 text-red-700 ring-red-200 font-semibold'
-                : 'bg-gray-50 text-gray-600 ring-gray-200';
-
-              // Row accent: red for Andes, brand for international non-Andes, gray for domestic.
-              const accentClass = isAndes
-                ? 'border-l-red-500 bg-red-50/50'
-                : isIntl
-                  ? 'border-l-brand-400 bg-brand-50/30'
-                  : 'border-l-gray-300';
-
-              // News leads (confidence === 'news') are surfaced separately
-              // from WHO/ECDC official reports so users can tell them apart at
-              // a glance. They still go through the same record shape so old
-              // consumers continue to work.
-              const isNewsLead = c.source?.confidence === 'news';
-              const isSurveillanceLead = c.source?.confidence === 'surveillance';
-              const scopeBadge = isNewsLead
-                ? { label: '新闻线索', cls: 'bg-amber-100 text-amber-800' }
-                : isSurveillanceLead
-                  ? { label: '专业监测', cls: 'bg-purple-100 text-purple-800' }
-                  : isIntl
-                    ? { label: '官方通报', cls: isAndes ? 'badge-severe' : 'badge-elevated' }
-                    : { label: '国内通报', cls: 'badge-low' };
-
-              const title = c.title ?? c.notes ?? '';
-              // Subtitle rules:
-              //   - News leads: never show a summary line. Google News's
-              //     <description> is structurally noisy (story-bundle
-              //     concat of multiple headlines); the title alone is
-              //     enough. See lib/news-format.ts.
-              //   - Official entries (WHO DON / ECDC): show their summary
-              //     if present; it's hand-written by the publisher.
-              //   - Domestic / fallback: show the canned serotype hint so
-              //     the row never reads as a bare title.
-              const subtitle = isNewsLead
-                ? null
-                : c.summary
-                  ? c.summary
-                  : isAndes
-                    ? '安第斯型为唯一确认可人传人的汉坦病毒，需持续关注'
-                    : '该血清型不具备人际传播能力';
-
-              return (
-                <li key={c.id} className={`flex gap-3 border-l-2 pl-4 -mx-2 px-4 py-2 rounded-r-lg ${accentClass}`}>
-                  <div className="flex-1 min-w-0">
-                    {/* Dual-timestamp row: distinguishes "when was this
-                        announced" (🗓 from c.date, day-precision) from
-                        "when did our collector last verify it" (🔄 from
-                        c.source.retrievedAt, minute-precision). The
-                        distinction matters on a monitoring tool —
-                        otherwise users assume a 3-day-old WHO bulletin
-                        means "the system is stale", but it's actually
-                        "WHO hasn't issued a new bulletin in 3 days, and
-                        we re-checked 5 minutes ago". */}
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-1 text-[11px] text-gray-500">
-                      <span className="inline-flex items-center gap-1">
-                        <span className="font-medium text-gray-700 font-mono">{c.date}</span>
-                        <span className="text-gray-300">·</span>
-                        {/* suppressHydrationWarning: relativeTimeZh calls new Date()
-                            which differs between SSR (build-time) and client (view-time).
-                            Without this, React throws Error #425 and kills ALL useEffects
-                            — including the /api/news-entries fetch that merges admin entries. */}
-                        <span suppressHydrationWarning>🔄 系统核查 {relativeTimeZh(c.source.retrievedAt)}</span>
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-1">
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full ring-1 ${seroChipClass}`}>
-                        {isAndes && <span className="mr-0.5">⚠</span>}
-                        {sero?.nameZh ?? c.serotypeId}
-                        {sero?.nameEn && <span className="ml-1 opacity-60 text-[9px]">{sero.nameEn}</span>}
-                      </span>
-                      {/* Link policy (see lib/link-policy.ts):
-                          Only mainland sources get a clickable anchor.
-                          Overseas sources (WHO, ECDC, Reuters, Taiwan CDC,
-                          Swiss BAG, news.google.com tracker URLs, …) are
-                          shown as plain text — the source-outlet name is
-                          still visible so readers know *who* reported it,
-                          but we don't aggregate outbound traffic to
-                          overseas properties. */}
-                      {isMainlandSource(c.source.url) ? (
-                        <a
-                          href={c.source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[10px] text-gray-400 hover:text-brand-700 hover:underline truncate max-w-[200px]"
-                          title={c.source.name}
-                        >
-                          {c.source.name} ↗
-                        </a>
-                      ) : (
-                        <span className="text-[10px] text-gray-400 truncate max-w-[200px]">
-                          {c.source.name}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-gray-800 font-medium leading-snug">{title}</p>
-                    {subtitle && <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{subtitle}</p>}
-                  </div>
-                  <span className={`badge text-[10px] self-start flex-shrink-0 ${scopeBadge.cls}`}>
-                    {scopeBadge.label}
-                  </span>
-                </li>
-              );
-            })}
-          </ol>
+          <RecentCasesTimeline
+            cases={liveRecentCases}
+            monitoringLeads={briefMetrics.monitoringLeads}
+          />
 
           <p className="mt-3 text-[10px] text-gray-400 leading-relaxed">
             数据每 6 小时自动抓取 WHO / ECDC 官方通报 +
@@ -710,6 +479,7 @@ export default function HomePage() {
               实时动态
             </h2>
           </div>
+          <FeedLegend feedId="realtime" compact />
           <RealtimeFeedSection feed={realtimeFeed} previewCount={2} />
         </div>
       </section>

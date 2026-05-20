@@ -4,24 +4,26 @@ import Taro, { useLoad, useShareAppMessage, useShareTimeline } from '@tarojs/tar
 import { useEffect, useMemo, useState } from 'react';
 import { SEROTYPES } from '@hantawatch/shared';
 import type { ActiveCluster } from '@hantawatch/shared/types';
+import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import {
   activeClusters as baselineClusters,
   currentHpi,
   hpi7DayHistory,
   todayBrief,
-  recentCases,
   chinaHfrsHistory,
   chinaHfrsMonthly2026,
   dataMeta,
+  hondiusImportSummaries,
   realtimeFeed,
   riskSnapshot,
 } from '@/lib/data';
-import type { RecentCase } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import type { ImportProximity } from '@/lib/nearest-cluster';
-import { fetchClusters, fetchNewsEntries, trackPageView } from '@/utils/api';
-import type { ManualNewsEntryPayload } from '@/utils/api';
+import { fetchClusters, trackPageView } from '@/utils/api';
+import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
+import { DailyBriefSection } from '@/components/daily-brief-section';
+import { FeedLegend } from '@/components/feed-legend';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { Sparkline } from '@/components/sparkline';
@@ -47,7 +49,7 @@ export default function HomePage() {
   // dependency). After mount, optionally refresh from /api/clusters so
   // editorial overrides (saved via the web /admin queue) take effect.
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(baselineClusters);
-  const [liveRecentCases, setLiveRecentCases] = useState<RecentCase[]>(recentCases);
+  const liveRecentCases = useLiveRecentCases();
 
   useLoad(() => {
     trackPageView('pages/home/index');
@@ -62,43 +64,6 @@ export default function HomePage() {
       })
       .catch((err) => {
         console.error('[HantaWatch] fetchClusters failed, keeping bundled baseline:', err);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchNewsEntries()
-      .then((data) => {
-        if (cancelled) return;
-        const hiddenIds = Array.isArray(data.hiddenIds) ? data.hiddenIds : [];
-        const rawAdditions = Array.isArray(data.additions) ? data.additions : [];
-        if (hiddenIds.length === 0 && rawAdditions.length === 0) return;
-        const additions: RecentCase[] = rawAdditions.map((a: ManualNewsEntryPayload) => ({
-          id: a.id,
-          regionCode: a.regionCode ?? (a.scope === 'china' ? '000000' : 'INT'),
-          serotypeId: a.serotypeId ?? 'other',
-          date: a.date ?? '',
-          caseType: a.caseType === 'clinical' || a.caseType === 'suspected' ? a.caseType : 'confirmed',
-          count: Number(a.count ?? 0),
-          title: a.title,
-          summary: a.summary,
-          source: {
-            name: a.sourceName ?? '',
-            url: a.sourceUrl ?? '',
-            retrievedAt: a.createdAt ?? new Date().toISOString(),
-            confidence: a.confidence ?? 'official',
-          },
-          notes: a.notes,
-          scope: a.scope ?? 'international',
-        }));
-        const hideSet = new Set(hiddenIds);
-        setLiveRecentCases([...recentCases.filter((c) => !hideSet.has(c.id)), ...additions].sort((a, b) => b.date.localeCompare(a.date)));
-      })
-      .catch((err) => {
-        console.error('[HantaWatch] fetchNewsEntries failed, keeping bundled baseline:', err);
       });
     return () => {
       cancelled = true;
@@ -148,6 +113,30 @@ export default function HomePage() {
     ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster?.distanceFromChinaKm ?? 0)} km；当前按最近输入监测距离展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
 
+  const briefContent = useMemo(
+    () =>
+      buildBriefSectionContent({
+        briefDate: todayBrief.date,
+        oneLine: todayBrief.oneLine,
+        latestChange: todayBrief.latestChange,
+        situation: todayBrief.situation,
+        riskJudgment: todayBrief.riskJudgment,
+        newCases: todayBrief.newCases,
+        sourceSummary: todayBrief.sourceSummary,
+        watchFocus: todayBrief.watchFocus,
+        evidence: todayBrief.evidence,
+        shareLine: todayBrief.shareLine,
+        daysSinceLastIntlAlert: todayBrief.daysSinceLastIntlAlert,
+        clusterLastUpdate: cluster?.lastUpdate,
+        domesticBaselineStatus: todayBrief.domesticBaselineStatus,
+        recentCases: liveRecentCases,
+        realtimeUpdates: realtimeFeed.updates,
+        importSummaries: hondiusImportSummaries,
+        hpiTotal: hpi.total,
+      }),
+    [liveRecentCases, cluster?.lastUpdate, hpi.total],
+  );
+
   const ranking: Array<{ id: keyof typeof SEROTYPES; label: string; color: string; bg: string; border: string }> = [
     { id: 'andes', label: '🔴 高危关注', color: '#dc2626', bg: '#fef2f2', border: '#fca5a5' },
     { id: 'sin_nombre', label: '🟠 警惕', color: '#ea580c', bg: '#fff7ed', border: '#fed7aa' },
@@ -172,6 +161,12 @@ export default function HomePage() {
         <View className="flex" style={{ justifyContent: 'flex-end', marginBottom: '8rpx' }}>
           <DataFreshness meta={dataMeta} />
         </View>
+
+        <DailyBriefBanner
+          brief={todayBrief}
+          headline24h={briefContent.metrics.headline24h}
+          alertLabel={briefContent.metrics.alertLabel}
+        />
 
         {/* Andes warning strip */}
         <View
@@ -401,17 +396,17 @@ export default function HomePage() {
           </Text>
         </View>
 
-        <View style={{ marginTop: '16rpx' }}>
-          <DailyBriefBanner
-            brief={todayBrief}
-            hpiTotal={hpi.total}
-            hpiGradeZh={hpi.gradeZh}
-            hpiColor={hpi.color}
-            highRiskDistanceText={highRiskDistanceText}
-            highRiskDistanceContext={highRiskDistanceContext}
-          />
-        </View>
       </View>
+
+      <DailyBriefSection
+        briefDate={todayBrief.date}
+        hpiTotal={hpi.total}
+        hpiGradeZh={hpi.gradeZh}
+        hpiColor={hpi.color}
+        content={briefContent}
+        highRiskDistanceText={highRiskDistanceText}
+        highRiskDistanceContext={highRiskDistanceContext}
+      />
 
       {/* ============================================================ */}
       {/* SECTION 2 · 各血清型关注等级                                   */}
@@ -531,7 +526,12 @@ export default function HomePage() {
             </View>
             <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>国际 + 国内 · 按日期倒序</Text>
           </View>
-          <RecentCasesList cases={liveRecentCases.slice(0, 12)} />
+          <FeedLegend feedId="recent-cases" />
+          <RecentCasesList
+            cases={liveRecentCases}
+            monitoringLeads={briefContent.metrics.monitoringLeads}
+            maxRows={12}
+          />
         </View>
       </View>
 
@@ -551,6 +551,7 @@ export default function HomePage() {
               <Text style={{ fontSize: '28rpx', fontWeight: 600 }}>实时动态</Text>
             </View>
           </View>
+          <FeedLegend feedId="realtime" />
           <RealtimeFeedSection feed={realtimeFeed} previewCount={2} />
         </View>
       </View>

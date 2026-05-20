@@ -1,132 +1,72 @@
 /**
- * Taro port of apps/web/src/components/daily-brief-banner.tsx.
- *
- * Pure Taro components; the lucide-react icons used on web are replaced
- * with emoji to avoid pulling an icon font into the miniapp bundle.
+ * Taro port of apps/web/src/components/daily-brief-banner.tsx — keep in sync.
  */
-
 import { View, Text } from '@tarojs/components';
 import type { DailyBrief } from '@/lib/data';
 
 interface Props {
   brief: DailyBrief;
-  hpiTotal: number;
-  hpiGradeZh: string;
-  hpiColor: string;
-  highRiskDistanceText: string;
-  highRiskDistanceContext: string;
+  headline24h: string;
+  alertLabel: string;
 }
 
 const baselineLabel: Record<DailyBrief['domesticBaselineStatus'], { text: string; color: string }> = {
-  normal: { text: '基线正常', color: '#15803d' },
-  elevated: { text: '高于基线', color: '#c2410c' },
-  below: { text: '低于基线', color: '#1d4ed8' },
+  normal: { text: '基线正常', color: '#86efac' },
+  elevated: { text: '高于基线', color: '#fdba74' },
+  below: { text: '低于基线', color: '#93c5fd' },
 };
 
-export function DailyBriefBanner({ brief, hpiTotal, hpiGradeZh, hpiColor, highRiskDistanceText, highRiskDistanceContext }: Props) {
+function formatDelta(n: number, unit = ''): { sign: 'flat' | 'up' | 'down'; abs: string } {
+  if (n === 0) return { sign: 'flat', abs: '持平' };
+  const magnitude = Math.abs(n).toLocaleString('zh-CN');
+  return { sign: n > 0 ? 'up' : 'down', abs: `${magnitude}${unit}` };
+}
+
+export function DailyBriefBanner({ brief, headline24h, alertLabel }: Props) {
+  const distDelta = formatDelta(brief.distanceDeltaKm, ' km');
+  const hpiDelta = formatDelta(brief.hpiDelta);
   const baseline = baselineLabel[brief.domesticBaselineStatus];
-  const newCases = brief.newCases ?? brief.latestChange ?? '过去 24 小时暂无新的高可信通报。';
-  const sourceSummary = brief.sourceSummary ?? '主要依据：现有公开数据';
-  const situation = brief.situation ?? brief.oneLine;
-  const riskJudgment = brief.shareLine ?? brief.riskJudgment ?? brief.oneLine;
-  const watchFocus = (brief.watchFocus?.length ? brief.watchFocus : brief.evidence)?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
-  const focusSentence = watchFocus.length > 0
-    ? `${watchFocus.join('、')}仍是今日主要观察点。`
-    : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
-  const evidence = (brief.evidence ?? watchFocus).slice(0, 3);
+
+  const distArrow = distDelta.sign === 'up' ? '↑' : distDelta.sign === 'down' ? '↓' : '—';
+  const hpiArrow = hpiDelta.sign === 'up' ? '↑' : hpiDelta.sign === 'down' ? '↓' : '—';
 
   return (
     <View
       style={{
-        background: '#ffffff',
-        border: '1rpx solid #dbeafe',
-        borderRadius: '24rpx',
-        overflow: 'hidden',
+        background: 'rgba(255,255,255,0.10)',
+        border: '1rpx solid rgba(255,255,255,0.15)',
+        borderRadius: '16rpx',
+        padding: '16rpx 20rpx',
         marginBottom: '16rpx',
       }}
     >
-      <View style={{ padding: '24rpx 24rpx 18rpx', borderBottom: '1rpx solid #eef2ff' }}>
-        <View className="flex items-center" style={{ justifyContent: 'space-between', gap: '16rpx' }}>
-          <View>
-            <Text style={{ color: '#1d4ed8', fontSize: '20rpx', fontWeight: 700, letterSpacing: '4rpx', display: 'block' }}>
-              每日简报
-            </Text>
-            <Text style={{ color: '#111827', fontSize: '30rpx', fontWeight: 800, marginTop: '4rpx', display: 'block' }}>
-              新增病例与风险判断
-            </Text>
-          </View>
-          <View style={{ alignItems: 'flex-end' }}>
-            <Text style={{ color: '#4b5563', fontSize: '20rpx', display: 'block', textAlign: 'right' }}>{brief.date}</Text>
-            <Text style={{ color: hpiColor, fontSize: '22rpx', fontWeight: 700, display: 'block', textAlign: 'right' }}>
-              {hpiTotal} · {hpiGradeZh}
-            </Text>
-          </View>
-        </View>
-        <View style={{ background: '#f8fafc', border: '1rpx solid #e2e8f0', borderRadius: '18rpx', padding: '20rpx', marginTop: '20rpx' }}>
-          <Text style={{ color: '#1d4ed8', fontSize: '22rpx', fontWeight: 600, display: 'block' }}>昨日/最新新增</Text>
-          <Text style={{ color: '#111827', fontSize: '34rpx', fontWeight: 800, lineHeight: 1.35, marginTop: '8rpx', display: 'block' }}>
-            {newCases}
-          </Text>
-          <Text style={{ color: '#4b5563', fontSize: '22rpx', lineHeight: 1.5, marginTop: '8rpx', display: 'block' }}>
-            {sourceSummary}
-          </Text>
-        </View>
+      <View className="flex items-center gap-2 mb-2">
+        <Text style={{ fontSize: '22rpx', color: 'rgba(255,255,255,0.9)', fontWeight: 500 }}>
+          今日 {brief.date.slice(5)}
+        </Text>
+        <Text style={{ fontSize: '18rpx', color: 'rgba(255,255,255,0.5)' }}>24h 要点</Text>
       </View>
 
-      <View style={{ padding: '18rpx 24rpx 4rpx' }}>
-        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
-          <Text style={{ color: '#b91c1c', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>最近高危病毒活动</Text>
-          <Text style={{ color: '#991b1b', fontSize: '30rpx', fontWeight: 800, lineHeight: 1.25, marginTop: '6rpx', display: 'block' }}>
-            {highRiskDistanceText}
-          </Text>
-          <Text style={{ color: '#4b5563', fontSize: '20rpx', lineHeight: 1.5, marginTop: '6rpx', display: 'block' }}>
-            {highRiskDistanceContext}
-          </Text>
-        </View>
-        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
-          <Text style={{ color: '#2563eb', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>主要来源</Text>
-          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
-            {sourceSummary.replace(/^主要依据：/, '')}
-          </Text>
-        </View>
-        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
-          <Text style={{ color: '#ea580c', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>当前态势</Text>
-          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
-            {situation}
-          </Text>
-        </View>
-        <View style={{ borderBottom: '1rpx solid #f3f4f6', paddingBottom: '16rpx', marginBottom: '16rpx' }}>
-          <View className="flex items-center" style={{ justifyContent: 'space-between', gap: '12rpx' }}>
-            <Text style={{ color: '#15803d', fontSize: '21rpx', fontWeight: 600 }}>中国风险</Text>
-            <Text style={{ color: hpiColor, fontSize: '22rpx', fontWeight: 800 }}>{hpiTotal} · {hpiGradeZh}</Text>
-          </View>
-          <Text style={{ color: baseline.color, fontSize: '21rpx', fontWeight: 700, marginTop: '6rpx', display: 'block' }}>
-            {baseline.text}
-          </Text>
-        </View>
-        <View style={{ paddingBottom: '16rpx' }}>
-          <Text style={{ color: '#6b7280', fontSize: '21rpx', fontWeight: 600, display: 'block' }}>今日关注</Text>
-          <Text style={{ color: '#111827', fontSize: '23rpx', fontWeight: 700, lineHeight: 1.45, marginTop: '6rpx', display: 'block' }}>
-            {focusSentence}
-          </Text>
-        </View>
+      <Text style={{ fontSize: '26rpx', color: '#fff', fontWeight: 600, lineHeight: 1.45, display: 'block', marginBottom: '12rpx' }}>
+        {headline24h}
+      </Text>
+
+      <View className="flex flex-wrap items-center gap-2" style={{ fontSize: '20rpx', color: 'rgba(255,255,255,0.75)' }}>
+        <Text style={{ opacity: 0.6 }}>结构指标</Text>
+        <Text>
+          距 {distArrow} {distDelta.abs}
+        </Text>
+        <Text style={{ opacity: 0.4 }}>·</Text>
+        <Text>
+          HPI {hpiArrow} {hpiDelta.abs}
+        </Text>
+        <Text style={{ opacity: 0.4 }}>·</Text>
+        <Text style={{ color: baseline.color, fontWeight: 600 }}>{baseline.text}</Text>
       </View>
 
-      <View style={{ padding: '0 20rpx 20rpx' }}>
-        <View style={{ background: '#111827', borderRadius: '20rpx', padding: '18rpx' }}>
-          <Text style={{ color: '#bfdbfe', fontSize: '20rpx', fontWeight: 600, display: 'block' }}>综合判断</Text>
-          <Text style={{ color: '#ffffff', fontSize: '24rpx', fontWeight: 700, lineHeight: 1.55, marginTop: '6rpx', display: 'block' }}>
-            {riskJudgment}
-          </Text>
-          <View className="flex flex-wrap gap-1" style={{ marginTop: '12rpx' }}>
-            {evidence.map((item) => (
-              <Text key={item} style={{ background: 'rgba(255,255,255,0.10)', color: '#eff6ff', borderRadius: '999rpx', padding: '4rpx 12rpx', fontSize: '18rpx' }}>
-                {item}
-              </Text>
-            ))}
-          </View>
-        </View>
-      </View>
+      <Text style={{ fontSize: '20rpx', color: 'rgba(219,234,254,0.85)', marginTop: '10rpx', display: 'block', lineHeight: 1.5 }}>
+        {alertLabel}
+      </Text>
     </View>
   );
 }

@@ -42,6 +42,8 @@ hantawatch/
 ## 文档
 
 - [产品全景计划书](docs/PRODUCT_PLAN.md)
+- [每日简报与最新通报改进](docs/BRIEF_AND_TIMELINE_IMPROVEMENTS.md)
+- [动态数据清单与数据链评估](docs/DATA_CHAIN_INVENTORY.md)
 
 ## 许可
 

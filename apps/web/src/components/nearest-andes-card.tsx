@@ -28,7 +28,9 @@
  * second outbreak doesn't get hidden behind the headline.
  */
 
-import { Plane, Users, Skull, MapPin, ExternalLink, Calendar } from 'lucide-react';
+import Link from 'next/link';
+import { Plane, Users, Skull, MapPin, ExternalLink, Calendar, ChevronRight } from 'lucide-react';
+import { MV_HONDIUS_EVENT_PATH } from '@hantawatch/shared/mv-hondius-event';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
 import { type NearestAndesResult, type ImportProximity, flagForLocation, relativeTimeZh } from '@/lib/nearest-cluster';
@@ -217,6 +219,16 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
             来源：{nearest.source.name || 'WHO Disease Outbreak News'}
             <ExternalLink className="h-2.5 w-2.5" />
           </a>
+        )}
+
+        {nearest.id === 'mv-hondius-2026' && (
+          <Link
+            href={MV_HONDIUS_EVENT_PATH}
+            className="mt-2 flex items-center justify-between rounded-lg bg-brand-50 px-3 py-2 text-[11px] font-semibold text-brand-800 hover:bg-brand-100"
+          >
+            完整事件时间线与各国病例表
+            <ChevronRight className="h-3.5 w-3.5" />
+          </Link>
         )}
 
         {/* Other active Andes clusters — only shown when N>1, since a

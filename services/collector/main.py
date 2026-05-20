@@ -94,6 +94,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
                    help="Skip WHO/ECDC/news pipeline; only fetch + translate "
                         "the realtime feed. Useful when iterating on the LLM "
                         "path without re-running the full collector.")
+    p.add_argument("--feeds-only", action="store_true",
+                   help="Light run: news + surveillance + realtime + country "
+                        "signals only. Refreshes recent-cases-intl via "
+                        "carry-over (no new WHO/ECDC fetch).")
     return p.parse_args(argv)
 
 
@@ -102,6 +106,66 @@ def _read_domestic_baseline_status(out_dir: Path) -> str:
     `baselineStatus` field. Defaults to 'normal' if not present."""
     baseline = read_json(out_dir / "china-baseline.json", default=None) or {}
     return baseline.get("baselineStatus", "normal")
+
+
+def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
+    """Light pipeline (~hourly): fast-moving feeds without WHO/ECDC/HPI."""
+    logger.info("feeds-only mode: news + surveillance + realtime (no WHO/ECDC/HPI)")
+    partial_failure = False
+    news_leads = fetch_news_leads()
+    surveillance_leads = fetch_surveillance_leads()
+    recent_intl = build_recent_cases_intl(
+        [],
+        news_leads,
+        ecdc=None,
+        surveillance_leads=surveillance_leads,
+        fallback_path=out_dir / "recent-cases-intl.json",
+    )
+    recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")
+
+    try:
+        feed = build_realtime_feed()
+    except Exception as e:
+        logger.error("realtime feed: build failed (%s)", e)
+        feed = None
+        partial_failure = True
+
+    try:
+        country_signals = aggregate_country_signals()
+    except Exception as e:
+        logger.warning("country signals: build failed (%s) — keeping existing", e)
+        country_signals = None
+
+    if dry_run:
+        logger.info("--dry-run: skipping write")
+        return 2 if partial_failure else 0
+
+    write_generated_json(out_dir / "recent-cases-intl.json", {"cases": recent_intl})
+    if feed is not None:
+        write_generated_json(out_dir / "realtime-feed.json", feed.to_payload())
+    if country_signals is not None:
+        write_generated_json(out_dir / "country-signals.json", country_signals)
+
+    meta = read_json(out_dir / "meta.json", default=None) or {}
+    meta.setdefault("sources", {})
+    meta["sources"]["news_leads"] = {
+        "entries": len(news_leads),
+        "ok": bool(news_leads),
+        "perQuery": getattr(fetch_news_leads, "last_diagnostics", None),
+    }
+    meta["sources"]["surveillance_leads"] = {
+        "entries": len(surveillance_leads),
+        "ok": bool(surveillance_leads),
+    }
+    meta["sources"]["feeds_light_run"] = {"ok": True, "at": meta.get("lastCollectedAt")}
+    write_generated_json(out_dir / "meta.json", meta)
+
+    logger.info(
+        "feeds-only done: %d intl cases, realtime=%s",
+        len(recent_intl),
+        "yes" if feed else "unchanged",
+    )
+    return 2 if partial_failure else 0
 
 
 def _run_realtime_only(out_dir: Path, dry_run: bool) -> int:
@@ -165,7 +229,12 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("  dry run: %s", args.dry_run)
     if args.realtime_only:
         logger.info("  mode: realtime-only")
+    if args.feeds_only:
+        logger.info("  mode: feeds-only")
     logger.info("  manual files (untouched): %s", ", ".join(sorted(MANUAL_FILES)))
+
+    if args.feeds_only:
+        return _run_feeds_only(out_dir, args.dry_run)
 
     # Fast path: skip the WHO/ECDC pipeline entirely.
     if args.realtime_only:
@@ -233,12 +302,21 @@ def main(argv: list[str] | None = None) -> int:
     # ---- 7. Compute daily brief (Δ vs yesterday) ----
     prev_distance = get_prev_nearest_distance(out_dir / "meta.json")
     prev_reference_cluster_id = get_prev_reference_cluster_id(out_dir / "meta.json")
+    prev_confirmed_cases: int | None = None
+    reference_id = (current_hpi.get("referenceCluster") or {}).get("id")
+    prev_clusters_payload = read_json(out_dir / "active-clusters.json", default=None)
+    if reference_id and isinstance(prev_clusters_payload, dict):
+        for pc in prev_clusters_payload.get("clusters") or []:
+            if isinstance(pc, dict) and pc.get("id") == reference_id:
+                prev_confirmed_cases = int(pc.get("confirmedCases", 0) or 0)
+                break
     daily_brief = build_daily_brief(
         current_hpi=current_hpi,
         hpi_history=hpi_history,
         active_clusters=clusters,
         prev_distance_km=prev_distance,
         prev_reference_cluster_id=prev_reference_cluster_id,
+        prev_confirmed_cases=prev_confirmed_cases,
         domestic_baseline_status=domestic_baseline,
     )
 

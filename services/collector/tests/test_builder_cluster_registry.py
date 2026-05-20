@@ -184,11 +184,13 @@ def test_daily_brief_wording_uses_direction_words():
     brief = build_daily_brief(
         current_hpi=current_hpi,
         hpi_history=[{"date": "2026-05-13", "value": 13}, {"date": "2026-05-14", "value": 24}],
-        active_clusters=[{"lastUpdate": "2026-05-13"}],
+        active_clusters=[{"lastUpdate": "2026-05-13", "id": "mv-hondius-2026", "confirmedCases": 8}],
         prev_distance_km=16500,
         prev_reference_cluster_id="mv-hondius-2026",
+        prev_confirmed_cases=6,
         domestic_baseline_status="normal",
     )
+    assert brief.get("globalNewCases") == 2
     assert "近了 2,000 km" in brief["oneLine"]
     assert "HPI 指数增加 11" in brief["oneLine"]
     assert "-2000" not in brief["oneLine"]

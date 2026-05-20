@@ -18,6 +18,7 @@
  *   - recent-cases-china.json   (MANUAL — domestic case bulletins)
  */
 
+import { sortRecentCasesByDate } from '@hantawatch/shared/timeline';
 import type {
   ActiveCluster,
   CaseRecord,
@@ -77,6 +78,9 @@ export interface DailyBrief {
   domesticBaselineStatus: 'normal' | 'elevated' | 'below';
   oneLine: string;
   daysSinceLastIntlAlert: number;
+  whoDaysSinceOfficialUpdate?: number;
+  cluesLast24h?: number;
+  headline24h?: string;
   latestChange?: string;
   situation?: string;
   riskJudgment?: string;
@@ -98,6 +102,13 @@ export const todayBrief: DailyBrief = {
   domesticBaselineStatus: (riskSnapshotDailyBrief?.domesticBaselineStatus ?? staticDailyBrief.domesticBaselineStatus) as DailyBrief['domesticBaselineStatus'],
   oneLine: riskSnapshotDailyBrief?.oneLine ?? staticDailyBrief.oneLine,
   daysSinceLastIntlAlert: riskSnapshotDailyBrief?.daysSinceLastIntlAlert ?? staticDailyBrief.daysSinceLastIntlAlert,
+  whoDaysSinceOfficialUpdate:
+    riskSnapshotDailyBrief?.whoDaysSinceOfficialUpdate ??
+    staticDailyBrief.whoDaysSinceOfficialUpdate ??
+    riskSnapshotDailyBrief?.daysSinceLastIntlAlert ??
+    staticDailyBrief.daysSinceLastIntlAlert,
+  cluesLast24h: riskSnapshotDailyBrief?.cluesLast24h ?? staticDailyBrief.cluesLast24h,
+  headline24h: riskSnapshotDailyBrief?.headline24h ?? staticDailyBrief.headline24h,
   latestChange: riskSnapshotDailyBrief?.latestChange ?? staticDailyBrief.latestChange,
   situation: riskSnapshotDailyBrief?.situation ?? staticDailyBrief.situation,
   riskJudgment: riskSnapshotDailyBrief?.riskJudgment ?? staticDailyBrief.riskJudgment,
@@ -211,22 +222,9 @@ const intlCases: RecentCase[] = (recentCasesIntlJson.cases as RawIntlCase[])
  * Merged, sorted timeline. Domestic + international.
  */
 
-function recentCaseTier(c: RecentCase): number {
-  const name = c.source?.name ?? '';
-  const conf = c.source?.confidence;
-  if (name.includes('WHO') || name.includes('DON')) return 0;
-  if (conf === 'official') return 1;
-  if (conf === 'surveillance') return 2;
-  if (conf === 'news') return 3;
-  return 4;
-}
-
+/** Default timeline order — newest first (see packages/shared/src/timeline.ts). */
 export function sortRecentCases(rows: RecentCase[]): RecentCase[] {
-  return [...rows].sort((a, b) => {
-    const tierDiff = recentCaseTier(a) - recentCaseTier(b);
-    if (tierDiff !== 0) return tierDiff;
-    return b.date.localeCompare(a.date);
-  });
+  return sortRecentCasesByDate(rows);
 }
 
 export const recentCases: RecentCase[] = dedupByTitle(sortRecentCases([...intlCases, ...chinaCases]));
@@ -341,6 +339,14 @@ export const realtimeFeed: RealtimeFeed = {
 
 export const hondiusImports: MvHondiusImport[] =
   (mvHondiusImportsJson.imports as MvHondiusImport[]) ?? [];
+
+/** For daily-brief headline fallback — shared shape with collector + shared lib. */
+export const hondiusImportSummaries: { date: string; summary_zh: string }[] = hondiusImports.map(
+  (imp) => ({
+    date: imp.date,
+    summary_zh: imp.summary_zh,
+  }),
+);
 
 export const hondiusOutbreakName: string =
   (mvHondiusImportsJson as { outbreakName?: string }).outbreakName ??
