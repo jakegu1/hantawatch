@@ -767,6 +767,18 @@ def build_daily_brief(
         distance_direction = "远了" if distance_delta_km > 0 else "近了"
         dist_phrase = f"重点疫情聚集离中国大陆{distance_direction} {abs(distance_delta_km):,} km"
 
+    # Global case tally + delta vs previous collector run (same cluster).
+    global_cases_total = 0
+    global_cases_delta = 0
+    ref_id = reference_id
+    if ref_id and active_clusters:
+        for cluster in active_clusters:
+            if cluster.get("id") == ref_id:
+                global_cases_total = int(cluster.get("confirmedCases", 0) or 0)
+                break
+    if prev_confirmed_cases is not None:
+        global_cases_delta = global_cases_total - int(prev_confirmed_cases)
+
     # Build change-driven headline — prioritise what's new over static metrics
     changes: list[str] = []
     if global_cases_delta > 0:
@@ -795,19 +807,6 @@ def build_daily_brief(
 
     # Also keep the structural (static) line for the brief section
     structural_line = f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。"
-
-
-    # Global case tally + delta vs previous collector run (same cluster).
-    global_cases_total = 0
-    global_cases_delta = 0
-    ref_id = reference_id
-    if ref_id and active_clusters:
-        for cluster in active_clusters:
-            if cluster.get("id") == ref_id:
-                global_cases_total = int(cluster.get("confirmedCases", 0) or 0)
-                break
-    if prev_confirmed_cases is not None:
-        global_cases_delta = global_cases_total - int(prev_confirmed_cases)
 
     return {
         "date": today,

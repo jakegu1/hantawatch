@@ -191,8 +191,9 @@ def test_daily_brief_wording_uses_direction_words():
         domestic_baseline_status="normal",
     )
     assert brief.get("globalNewCases") == 2
-    assert "近了 2,000 km" in brief["oneLine"]
-    assert "HPI 指数增加 11" in brief["oneLine"]
+    assert "聚集地靠近 2,000 km" in brief["oneLine"]
+    assert "HPI 上升 11" in brief["oneLine"]
+    assert "全球确诊增加 2 例" in brief["oneLine"]
     assert "-2000" not in brief["oneLine"]
 
 
