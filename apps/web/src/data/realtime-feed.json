@@ -1,19 +1,70 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-20T02:55:58.583390+00:00",
+  "__generated_at": "2026-05-20T09:27:29.060962+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-20T02:55:52.146608+00:00",
+  "last_fetched": "2026-05-20T09:27:23.591409+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-553ffd3d26d470f0",
-      "time": "2026-05-20T02:12:00.000Z",
-      "title_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders - CNN",
-      "body_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders CNN American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave The New York Times Hantavirus update: CDC confirms 2 brought to Omaha facility ordered to quarantine WOWT",
-      "summary_zh": "美国邮轮乘客被隔离，CDC确认2人送至奥马哈并强制隔离。",
+      "id": "rt-bd0afaf6f125cd81",
+      "time": "2026-05-20T08:49:00.000Z",
+      "title_en": "Investigators trap rodents in search for source of deadly hantavirus outbreak - The Independent",
+      "body_en": "Investigators trap rodents in search for source of deadly hantavirus outbreak The Independent",
+      "summary_zh": "调查人员设陷阱捕捉啮齿动物，寻找致命汉坦病毒爆发源头。",
+      "key_facts_zh": [
+        "调查",
+        "啮齿动物",
+        "源头"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c8d4bb8830657726",
+      "time": "2026-05-20T08:27:17.000Z",
+      "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
+      "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
+      "summary_zh": "WHO发布汉坦病毒聚焦系列，介绍已知信息和意义。",
+      "key_facts_zh": [
+        "WHO",
+        "汉坦病毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-870618a76893a239",
+      "time": "2026-05-20T08:10:13.000Z",
+      "title_en": "Hantavirus scare threatens Argentina’s Ushuaia tourism appeal - Travel Tomorrow",
+      "body_en": "Hantavirus scare threatens Argentina’s Ushuaia tourism appeal Travel Tomorrow",
+      "summary_zh": "汉坦病毒恐慌威胁阿根廷乌斯怀亚旅游业。",
+      "key_facts_zh": [
+        "阿根廷",
+        "乌斯怀亚",
+        "旅游"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-996802fac273cc05",
+      "time": "2026-05-20T07:52:30.000Z",
+      "title_en": "Argentines hunting for source of hantavirus outbreak trap rats in southernmost city - CityNews Halifax",
+      "body_en": "Argentines hunting for source of hantavirus outbreak trap rats in southernmost city CityNews Halifax",
+      "summary_zh": "阿根廷人在最南端城市设陷阱捕鼠，寻找汉坦病毒爆发源头。",
+      "key_facts_zh": [
+        "阿根廷",
+        "捕鼠",
+        "源头"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-5f73f16496eebd87",
+      "time": "2026-05-20T07:18:30.000Z",
+      "title_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders - KITV",
+      "body_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders KITV",
+      "summary_zh": "受汉坦病毒影响的邮轮上美国乘客对隔离令感到措手不及。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -22,43 +73,95 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-8d5dbb4740175be3",
-      "time": "2026-05-20T02:06:54.000Z",
-      "title_en": "Japan provided antiviral medication Avigan to U.K. for cruise ship Hantavirus outbreak - Asia News Network",
-      "body_en": "Japan provided antiviral medication Avigan to U.K. for cruise ship Hantavirus outbreak Asia News Network",
-      "summary_zh": "日本向英国提供抗病毒药物Avigan，用于邮轮汉坦病毒疫情。",
+      "id": "rt-c7bb433d2221889d",
+      "time": "2026-05-20T06:30:42.000Z",
+      "title_en": "France hantavirus update: contact cases continue to test negative - The Connexion",
+      "body_en": "France hantavirus update: contact cases continue to test negative The Connexion",
+      "summary_zh": "法国汉坦病毒接触者检测持续阴性。",
       "key_facts_zh": [
-        "日本",
-        "英国",
-        "Avigan"
+        "法国",
+        "接触者",
+        "检测阴性"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-be23466116bdf0c0",
+      "time": "2026-05-20T06:09:54.000Z",
+      "title_en": "Scientists had to shelve hantavirus vaccine as funding ran out before outbreak - The Jerusalem Post",
+      "body_en": "Scientists had to shelve hantavirus vaccine as funding ran out before outbreak The Jerusalem Post",
+      "summary_zh": "科学家因资金耗尽搁置汉坦病毒疫苗研发。",
+      "key_facts_zh": [
+        "疫苗",
+        "资金耗尽",
+        "搁置"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-d582af807c190c54",
+      "time": "2026-05-20T06:00:25.000Z",
+      "title_en": "First suspected hantavirus case in Portugal tests negative - Euronews.com",
+      "body_en": "First suspected hantavirus case in Portugal tests negative Euronews.com",
+      "summary_zh": "葡萄牙首例疑似汉坦病毒病例检测阴性。",
+      "key_facts_zh": [
+        "葡萄牙",
+        "首例疑似",
+        "检测阴性"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c5bec035cb9e78ea",
+      "time": "2026-05-20T05:45:35.000Z",
+      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
+      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
+      "summary_zh": "CDC 更新邮轮上安第斯病毒疫情现状。",
+      "key_facts_zh": [
+        "CDC",
+        "邮轮",
+        "安第斯病毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a81610314b71e0f5",
+      "time": "2026-05-20T04:39:40.000Z",
+      "title_en": "Hantavirus Update: MV Hondius Cruise Operator Says Ship Not The Source Of Outbreak - NDTV",
+      "body_en": "Hantavirus Update: MV Hondius Cruise Operator Says Ship Not The Source Of Outbreak NDTV",
+      "summary_zh": "MV Hondius 邮轮运营商否认船只是疫情源头。",
+      "key_facts_zh": [
+        "邮轮",
+        "MV Hondius",
+        "否认源头"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ab03bca3dd3cafbb",
+      "time": "2026-05-20T04:29:00.000Z",
+      "title_en": "Hantavirus outbreak: Britain gets experimental drug from Japan — what is it? (wait till you hear its COVI - The Times of India",
+      "body_en": "Hantavirus outbreak: Britain gets experimental drug from Japan — what is it? (wait till you hear its COVI The Times of India",
+      "summary_zh": "英国从日本获取实验性药物应对汉坦病毒疫情。",
+      "key_facts_zh": [
+        "英国",
+        "日本",
+        "实验药物"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f1905382b92fde4e",
       "time": "2026-05-20T01:57:00.000Z",
       "title_en": "MV Hondius hantavirus outbreak: 9 UK citizens exposed to virus, medic with symptoms treated in London; is - The Times of India",
       "body_en": "MV Hondius hantavirus outbreak: 9 UK citizens exposed to virus, medic with symptoms treated in London; is The Times of India",
-      "summary_zh": "MV Hondius邮轮疫情：9名英国公民暴露，一名有症状医护人员在伦敦治疗。",
+      "summary_zh": "MV Hondius 邮轮疫情：9 名英国公民暴露，一名医护人员在伦敦治疗。",
       "key_facts_zh": [
         "英国",
         "邮轮",
-        "9例暴露"
+        "9 人暴露"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-f6f9216a56cb0cea",
-      "time": "2026-05-20T01:50:00.000Z",
-      "title_en": "Hantavirus research advancing in Saskatoon - CTV News",
-      "body_en": "Hantavirus research advancing in Saskatoon CTV News",
-      "summary_zh": "萨斯卡通汉坦病毒研究取得进展。",
-      "key_facts_zh": [
-        "加拿大",
-        "萨斯卡通",
-        "研究进展"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-d434ee407c421cd0",
@@ -69,71 +172,20 @@
       "key_facts_zh": [
         "加拿大",
         "萨斯卡通",
-        "研究"
+        "研究突破"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0d833b224712b38f",
-      "time": "2026-05-19T23:28:09.000Z",
-      "title_en": "Americans exposed to hantavirus forced to quarantine - NBC News",
-      "body_en": "Americans exposed to hantavirus forced to quarantine NBC News",
-      "summary_zh": "暴露于汉坦病毒的美国人被强制隔离。",
-      "key_facts_zh": [
-        "美国",
-        "强制隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f292feb3b653bec5",
-      "time": "2026-05-19T22:29:46.000Z",
-      "title_en": "Argentine authorities trap rats to hunt for source of deadly hantavirus outbreak - CBC",
-      "body_en": "Argentine authorities trap rats to hunt for source of deadly hantavirus outbreak CBC",
-      "summary_zh": "阿根廷当局捕鼠以寻找致命汉坦病毒疫情源头。",
-      "key_facts_zh": [
-        "阿根廷",
-        "捕鼠",
-        "疫情源头"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c5bec035cb9e78ea",
-      "time": "2026-05-19T22:02:53.000Z",
-      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
-      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "CDC 发布邮轮汉坦病毒疫情现状。",
-      "key_facts_zh": [
-        "CDC",
-        "邮轮",
-        "疫情现状"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-7e435ab11768569c",
       "time": "2026-05-19T21:53:05.000Z",
       "title_en": "Hantavirus outbreak doesn't appear to have originated on Dutch cruise ship, CEO says - CBC",
       "body_en": "Hantavirus outbreak doesn't appear to have originated on Dutch cruise ship, CEO says CBC",
-      "summary_zh": "CEO 称汉坦病毒疫情非源于荷兰邮轮。",
+      "summary_zh": "荷兰邮轮 CEO 称汉坦病毒疫情并非源于该船。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "CEO声明"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-253419a9692ac835",
-      "time": "2026-05-19T21:21:01.000Z",
-      "title_en": "CDC quarantine orders issued for two cruise ship passengers in Nebraska hospital monitoring - Goodreturns",
-      "body_en": "CDC quarantine orders issued for two cruise ship passengers in Nebraska hospital monitoring Goodreturns",
-      "summary_zh": "CDC 对两名邮轮乘客发布隔离令，在内布拉斯加医院监测。",
-      "key_facts_zh": [
-        "CDC",
-        "内布拉斯加",
-        "隔离令"
+        "CEO"
       ],
       "signal_strength": "high"
     },
@@ -142,125 +194,24 @@
       "time": "2026-05-19T21:19:00.000Z",
       "title_en": "Deadly hantavirus outbreak triggers rodent hunt in Argentina - The Independent",
       "body_en": "Deadly hantavirus outbreak triggers rodent hunt in Argentina The Independent",
-      "summary_zh": "阿根廷致命汉坦病毒爆发，引发灭鼠行动。",
+      "summary_zh": "阿根廷致命汉坦病毒疫情引发灭鼠行动。",
       "key_facts_zh": [
         "阿根廷",
         "灭鼠",
-        "致命"
+        "死亡"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-318ee8a42deb3bc5",
-      "time": "2026-05-19T20:55:50.000Z",
-      "title_en": "Hantavirus updates: Canadian cruise ship passenger tests positive for hantavirus - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Hantavirus updates: Canadian cruise ship passenger tests positive for hantavirus ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-dcaa6432f70f7528",
-      "time": "2026-05-19T20:53:00.000Z",
-      "title_en": "US health officials order quarantine for 2 passengers from cruise ship with hantavirus outbreak - AP News",
-      "body_en": "US health officials order quarantine for 2 passengers from cruise ship with hantavirus outbreak AP News",
-      "summary_zh": "美国卫生官员对邮轮两名乘客下令隔离。",
+      "id": "rt-f4705f667fff7c68",
+      "time": "2026-05-19T20:53:52.000Z",
+      "title_en": "US health officials order quarantine for 2 passengers from cruise ship with hantavirus outbreak - North Shore News",
+      "body_en": "US health officials order quarantine for 2 passengers from cruise ship with hantavirus outbreak North Shore News",
+      "summary_zh": "美国卫生官员对邮轮汉坦病毒疫情两名乘客实施隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
         "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ce46f0bf7095b5a3",
-      "time": "2026-05-19T20:31:34.000Z",
-      "title_en": "Colorado reports adult death linked to hantavirus - LiveNOW from FOX",
-      "body_en": "Colorado reports adult death linked to hantavirus LiveNOW from FOX",
-      "summary_zh": "科罗拉多州报告一例成人汉坦病毒死亡。",
-      "key_facts_zh": [
-        "科罗拉多",
-        "死亡 1 例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-e45dad96fd356c5b",
-      "time": "2026-05-19T20:26:52.000Z",
-      "title_en": "Argentines hunting for source of hantavirus outbreak trap rats in southernmost city - Toronto Star",
-      "body_en": "Argentines hunting for source of hantavirus outbreak trap rats in southernmost city Toronto Star",
-      "summary_zh": "阿根廷在最南端城市捕鼠以寻找汉坦病毒源头。",
-      "key_facts_zh": [
-        "阿根廷",
-        "捕鼠",
-        "源头调查"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-12a7fdc836e946fb",
-      "time": "2026-05-19T20:23:42.000Z",
-      "title_en": "CDC informs clinicians of available testing for suspected hantavirus infection - American Hospital Association",
-      "body_en": "CDC informs clinicians of available testing for suspected hantavirus infection American Hospital Association",
-      "summary_zh": "CDC 通知临床医生可对疑似汉坦病毒感染者进行检测。",
-      "key_facts_zh": [
-        "CDC",
-        "检测指南"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-9ac343453181d932",
-      "time": "2026-05-19T20:19:39.000Z",
-      "title_en": "Hantavirus cruise operator says ship not source of outbreak | Hindustan Times - Hindustan Times",
-      "body_en": "Hantavirus cruise operator says ship not source of outbreak | Hindustan Times Hindustan Times",
-      "summary_zh": "邮轮运营商称船只并非疫情源头。",
-      "key_facts_zh": [
-        "邮轮",
-        "否认源头"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-c5b720c78d82ff4b",
-      "time": "2026-05-19T20:06:00.000Z",
-      "title_en": "CDC requiring some former cruise passengers to stay in hantavirus quarantine - The Hill",
-      "body_en": "CDC requiring some former cruise passengers to stay in hantavirus quarantine The Hill",
-      "summary_zh": "CDC 要求部分前邮轮乘客进行汉坦病毒隔离。",
-      "key_facts_zh": [
-        "CDC",
-        "邮轮",
-        "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-34855983166fa8e7",
-      "time": "2026-05-19T17:30:00.000Z",
-      "title_en": "What Is Favipiravir? COVID-Era Antiviral Now Used In Hantavirus Response In UK - Health and Me",
-      "body_en": "What Is Favipiravir? COVID-Era Antiviral Now Used In Hantavirus Response In UK Health and Me",
-      "summary_zh": "英国使用新冠抗病毒药法匹拉韦应对汉坦病毒。",
-      "key_facts_zh": [
-        "英国",
-        "法匹拉韦",
-        "治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6c2879c037da3003",
-      "time": "2026-05-19T16:12:00.000Z",
-      "title_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave - The New York Times",
-      "body_en": "American Hantavirus Patient Ordered to Stay in Quarantine Despite Plans to Leave The New York Times",
-      "summary_zh": "美国汉坦病毒患者被命令继续隔离，尽管计划离开。",
-      "key_facts_zh": [
-        "美国",
-        "患者",
-        "隔离命令"
       ],
       "signal_strength": "high"
     }
