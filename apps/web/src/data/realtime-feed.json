@@ -1,19 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-20T14:57:52.956975+00:00",
+  "__generated_at": "2026-05-20T16:14:00.090973+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-20T14:57:47.616369+00:00",
+  "last_fetched": "2026-05-20T16:13:54.629316+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-77e3821db034646d",
+      "time": "2026-05-20T15:25:30.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际海事环境中的自然史、感染控制与临床管理。",
+      "key_facts_zh": [
+        "WHO",
+        "研讨会",
+        "海事环境"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-5e0860f5b9fd3584",
       "time": "2026-05-20T12:37:36.000Z",
       "title_en": "Moderna’s stock rides hantavirus fears as spotlight returns to infectious disease platform - BioSpace",
       "body_en": "Moderna’s stock rides hantavirus fears as spotlight returns to infectious disease platform BioSpace",
-      "summary_zh": "Moderna 因汉坦病毒担忧股价上涨，平台受关注。",
+      "summary_zh": "Moderna 股价因汉坦病毒担忧上涨，传染病平台受关注。",
       "key_facts_zh": [
         "Moderna",
         "股价",
@@ -26,37 +39,24 @@
       "time": "2026-05-20T12:00:00.000Z",
       "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
       "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
-      "summary_zh": "WHO 发布汉坦病毒专题，介绍已知信息和影响。",
+      "summary_zh": "WHO 举办汉坦病毒焦点研讨会，总结已知信息及其意义。",
       "key_facts_zh": [
         "WHO",
-        "汉坦病毒",
-        "专题"
+        "研讨会",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-6aa62d69418c4d0a",
-      "time": "2026-05-20T11:30:28.000Z",
-      "title_en": "Colorado Reports Its First Hantavirus Death Since 2024 - Gizmodo",
-      "body_en": "Colorado Reports Its First Hantavirus Death Since 2024 Gizmodo",
-      "summary_zh": "科罗拉多州报告自2024年以来首例汉坦病毒死亡。",
+      "id": "rt-3f7470d0b2d22e4f",
+      "time": "2026-05-20T11:40:00.000Z",
+      "title_en": "CDC upgrades voluntary hantavirus quarantine order to mandatory: What to know - firstcoastnews.com",
+      "body_en": "CDC upgrades voluntary hantavirus quarantine order to mandatory: What to know firstcoastnews.com",
+      "summary_zh": "CDC 将自愿汉坦病毒隔离令升级为强制令。",
       "key_facts_zh": [
-        "科罗拉多",
-        "汉坦病毒",
-        "死亡 1 例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-8c2025b546ebcd6d",
-      "time": "2026-05-20T08:49:54.000Z",
-      "title_en": "Hantavirus outbreak likely to have started before passengers boarded ship, says Oceanwide Expeditions - TTG Media",
-      "body_en": "Hantavirus outbreak likely to have started before passengers boarded ship, says Oceanwide Expeditions TTG Media",
-      "summary_zh": "Oceanwide 称汉坦病毒爆发可能始于乘客登船前。",
-      "key_facts_zh": [
-        "邮轮",
-        "汉坦病毒",
-        "爆发前"
+        "CDC",
+        "强制隔离",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-05-20T08:49:00.000Z",
       "title_en": "Investigators trap rodents in search for source of deadly hantavirus outbreak - The Independent",
       "body_en": "Investigators trap rodents in search for source of deadly hantavirus outbreak The Independent",
-      "summary_zh": "调查人员设陷阱捕捉啮齿动物，寻找致命汉坦病毒暴发源头。",
+      "summary_zh": "调查人员设陷阱捕捉啮齿动物，寻找致命汉坦病毒爆发源头。",
       "key_facts_zh": [
         "调查",
         "啮齿动物",
@@ -78,11 +78,23 @@
       "time": "2026-05-20T07:39:00.000Z",
       "title_en": "Hantavirus does not appear to have originated on MV Hondius, line says - Travel Weekly - Home",
       "body_en": "Hantavirus does not appear to have originated on MV Hondius, line says Travel Weekly - Home",
-      "summary_zh": "邮轮公司称汉坦病毒并非源自MV Hondius号。",
+      "summary_zh": "邮轮公司称汉坦病毒似乎并非源自MV Hondius号。",
       "key_facts_zh": [
-        "邮轮",
         "MV Hondius",
         "非源头"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-608ac9f0c9cd5d66",
+      "time": "2026-05-20T06:33:09.000Z",
+      "title_en": "Ebola, hantavirus show world's risk preparedness lagging: pandemic expert - France 24",
+      "body_en": "Ebola, hantavirus show world's risk preparedness lagging: pandemic expert France 24",
+      "summary_zh": "大流行专家称埃博拉和汉坦病毒显示世界风险准备不足。",
+      "key_facts_zh": [
+        "专家",
+        "风险准备",
+        "不足"
       ],
       "signal_strength": "medium"
     },
@@ -91,11 +103,11 @@
       "time": "2026-05-20T06:30:42.000Z",
       "title_en": "France hantavirus update: contact cases continue to test negative - The Connexion",
       "body_en": "France hantavirus update: contact cases continue to test negative The Connexion",
-      "summary_zh": "法国汉坦病毒接触者检测持续为阴性。",
+      "summary_zh": "法国汉坦病毒更新：接触病例继续检测阴性。",
       "key_facts_zh": [
         "法国",
-        "接触者",
-        "检测阴性"
+        "接触病例",
+        "阴性"
       ],
       "signal_strength": "high"
     },
@@ -104,7 +116,7 @@
       "time": "2026-05-20T06:28:00.000Z",
       "title_en": "First suspected hantavirus case in Portugal tests negative - Yahoo News Canada",
       "body_en": "First suspected hantavirus case in Portugal tests negative Yahoo News Canada",
-      "summary_zh": "葡萄牙首例疑似汉坦病毒病例检测为阴性。",
+      "summary_zh": "葡萄牙首例疑似汉坦病毒病例检测阴性。",
       "key_facts_zh": [
         "葡萄牙",
         "首例疑似",
@@ -117,20 +129,33 @@
       "time": "2026-05-20T04:39:40.000Z",
       "title_en": "Hantavirus Update: MV Hondius Cruise Operator Says Ship Not The Source Of Outbreak - NDTV",
       "body_en": "Hantavirus Update: MV Hondius Cruise Operator Says Ship Not The Source Of Outbreak NDTV",
-      "summary_zh": "MV Hondius邮轮运营商称该船并非疫情源头。",
+      "summary_zh": "MV Hondius邮轮运营商否认船只是疫情源头。",
       "key_facts_zh": [
-        "邮轮运营商",
-        "MV Hondius",
-        "非源头"
+        "邮轮",
+        "运营商",
+        "否认源头"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-d1f0712992560336",
+      "time": "2026-05-20T04:34:52.000Z",
+      "title_en": "Argentina Authorities Trap Rats In Ushuaia, Hunt For Hantavirus Outbreak Source - NDTV",
+      "body_en": "Argentina Authorities Trap Rats In Ushuaia, Hunt For Hantavirus Outbreak Source NDTV",
+      "summary_zh": "阿根廷当局在乌斯怀亚捕鼠，搜寻汉坦病毒源头。",
+      "key_facts_zh": [
+        "阿根廷",
+        "捕鼠",
+        "搜寻源头"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-ab03bca3dd3cafbb",
       "time": "2026-05-20T04:29:00.000Z",
       "title_en": "Hantavirus outbreak: Britain gets experimental drug from Japan — what is it? (wait till you hear its COVI - The Times of India",
       "body_en": "Hantavirus outbreak: Britain gets experimental drug from Japan — what is it? (wait till you hear its COVI The Times of India",
-      "summary_zh": "英国从日本获得实验性药物应对汉坦病毒疫情。",
+      "summary_zh": "英国从日本获得实验性药物用于汉坦病毒治疗。",
       "key_facts_zh": [
         "英国",
         "日本",
@@ -143,7 +168,7 @@
       "time": "2026-05-20T02:12:00.000Z",
       "title_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders - CNN",
       "body_en": "American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders CNN",
-      "summary_zh": "美国邮轮乘客因汉坦病毒新隔离令感到措手不及。",
+      "summary_zh": "美国乘客称被汉坦病毒邮轮隔离令“蒙蔽”和“误导”。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -156,11 +181,11 @@
       "time": "2026-05-20T01:57:00.000Z",
       "title_en": "MV Hondius hantavirus outbreak: 9 UK citizens exposed to virus, medic with symptoms treated in London; is - The Times of India",
       "body_en": "MV Hondius hantavirus outbreak: 9 UK citizens exposed to virus, medic with symptoms treated in London; is The Times of India",
-      "summary_zh": "MV Hondius 邮轮暴发汉坦病毒，9名英国公民暴露，一名有症状的医务人员在伦敦接受治疗。",
+      "summary_zh": "MV Hondius邮轮疫情：9名英国公民暴露，一名有症状医护人员在伦敦治疗。",
       "key_facts_zh": [
         "英国",
-        "邮轮",
-        "暴露9人"
+        "9人暴露",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -169,39 +194,13 @@
       "time": "2026-05-20T01:50:00.000Z",
       "title_en": "Hantavirus research advancing in Saskatoon - CTV News",
       "body_en": "Hantavirus research advancing in Saskatoon CTV News",
-      "summary_zh": "萨斯卡通汉坦病毒研究取得进展。",
+      "summary_zh": "萨斯卡通的汉坦病毒研究取得进展。",
       "key_facts_zh": [
         "加拿大",
         "萨斯卡通",
         "研究进展"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-d434ee407c421cd0",
-      "time": "2026-05-20T00:06:00.000Z",
-      "title_en": "Saskatoon researchers strive to make breakthroughs in hantavirus research - CTV News",
-      "body_en": "Saskatoon researchers strive to make breakthroughs in hantavirus research CTV News",
-      "summary_zh": "萨斯卡通研究人员致力于汉坦病毒研究突破。",
-      "key_facts_zh": [
-        "加拿大",
-        "萨斯卡通",
-        "研究突破"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0d833b224712b38f",
-      "time": "2026-05-19T23:28:09.000Z",
-      "title_en": "Americans exposed to hantavirus forced to quarantine - NBC News",
-      "body_en": "Americans exposed to hantavirus forced to quarantine NBC News",
-      "summary_zh": "暴露于汉坦病毒的美国人被迫隔离。",
-      "key_facts_zh": [
-        "美国",
-        "暴露",
-        "隔离"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
