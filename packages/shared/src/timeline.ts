@@ -152,6 +152,17 @@ export interface MonitoringLead {
 const MONITORING_KEYWORDS =
   /andes|安第斯|hondius|邮轮|汉坦|hantavirus|加拿大|推定|初筛|presumptive|输入|病例/i;
 
+/** Financial / stock-market noise that isn't a public-health signal. */
+const FINANCIAL_NOISE_KEYWORDS =
+  /股价|股票|stock|shares?|market\s+cap|market\s+value|市值|涨[跌幅]|investor|分析师|nasdaq|nyse/i;
+
+/** One-liner summaries that don't add epidemiological signal. */
+const LOW_SIGNAL_PATTERNS = [
+  /举办.*研讨会/i,
+  /举办.*webinar/i,
+  /网络研讨会/i,
+];
+
 /** High-signal realtime rows promoted above the authoritative timeline. */
 export function pickMonitoringLeads(
   updates: RealtimeSignalInput[],
@@ -165,6 +176,10 @@ export function pickMonitoringLeads(
     .filter((u) => {
       const t = new Date(u.time).getTime();
       if (Number.isNaN(t) || t < windowStart) return false;
+      // Drop financial noise (stock moves, analyst chatter)
+      if (FINANCIAL_NOISE_KEYWORDS.test(u.summary_zh)) return false;
+      // Drop low-signal patterns (webinars, press announcements)
+      if (LOW_SIGNAL_PATTERNS.some((p) => p.test(u.summary_zh))) return false;
       if (u.signal_strength === 'high') return true;
       return MONITORING_KEYWORDS.test(u.summary_zh);
     })

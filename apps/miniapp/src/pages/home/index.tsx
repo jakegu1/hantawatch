@@ -132,6 +132,7 @@ export default function HomePage() {
         recentCases: liveRecentCases,
         realtimeUpdates: realtimeFeed.updates,
         importSummaries: hondiusImportSummaries,
+        structuralLine: todayBrief.structuralLine,
         hpiTotal: hpi.total,
       }),
     [liveRecentCases, cluster?.lastUpdate, hpi.total],

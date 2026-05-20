@@ -97,7 +97,7 @@ export function DailyBriefSection({
 
           {officialExcerpt && (
             <div className="rounded-xl bg-gray-50 border border-gray-200 p-3">
-              <p className="text-[10px] font-medium text-gray-500">书面简报摘录（collector / WHO）</p>
+              <p className="text-[10px] font-medium text-gray-500">事件摘要（collector）</p>
               <p className="mt-1 text-sm text-gray-700 leading-relaxed">{officialExcerpt}</p>
             </div>
           )}

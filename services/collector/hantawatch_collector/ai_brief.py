@@ -54,11 +54,16 @@ def _postprocess_brief_text(value: str) -> str:
         "加拿大确诊": "加拿大报告",
         "结束航程": "完成航程",
         "尤其是直飞航线": "以及后续官方通报",
-        "无需担忧": "无需恐慌",
+        # Never inject the word "panic" into risk judgments, even as negation.
+        # "无需担忧" is left as-is; the LLM prompt already asks for 克制表述.
     }
     out = value
     for old, new in replacements.items():
         out = out.replace(old, new)
+    # Strip standalone "无需恐慌" regardless of punctuation to fix stale
+    # collector output that may have been written before this patch.
+    import re
+    out = re.sub(r'[，。；]?\s*无需恐慌[，。；]?', '', out)
     if "加拿大" in out:
         out = out.replace("汉坦病毒确诊输入病例", "汉坦病毒初筛阳性病例")
         out = out.replace("汉坦病毒确诊病例", "汉坦病毒初筛阳性病例")

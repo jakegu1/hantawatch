@@ -71,7 +71,7 @@ export function DailyBriefSection({
 
           {officialExcerpt && (
             <View style={{ marginTop: '12rpx', background: '#f9fafb', borderRadius: '12rpx', padding: '12rpx' }}>
-              <Text style={{ fontSize: '20rpx', color: '#6b7280' }}>书面简报摘录</Text>
+              <Text style={{ fontSize: '20rpx', color: '#6b7280' }}>事件摘要</Text>
               <Text style={{ fontSize: '22rpx', color: '#374151', marginTop: '4rpx', display: 'block' }}>{officialExcerpt}</Text>
             </View>
           )}

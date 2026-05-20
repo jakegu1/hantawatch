@@ -89,6 +89,7 @@ export interface DailyBrief {
   watchFocus?: string[];
   shareLine?: string;
   evidence?: string[];
+  structuralLine?: string;
 }
 
 const riskSnapshotDailyBrief = riskSnapshot.dailyBrief as Partial<DailyBrief> | undefined;
@@ -117,6 +118,7 @@ export const todayBrief: DailyBrief = {
   watchFocus: riskSnapshotDailyBrief?.watchFocus ?? staticDailyBrief.watchFocus,
   shareLine: riskSnapshotDailyBrief?.shareLine ?? staticDailyBrief.shareLine,
   evidence: riskSnapshotDailyBrief?.evidence ?? staticDailyBrief.evidence,
+  structuralLine: riskSnapshotDailyBrief?.structuralLine ?? staticDailyBrief.structuralLine,
 };
 
 // ---- China baseline (yearly, monthly, by province) -----------------------

@@ -107,6 +107,7 @@ export const todayBrief: DailyBrief = {
   watchFocus: riskSnapshotDailyBrief?.watchFocus ?? staticDailyBrief.watchFocus,
   shareLine: riskSnapshotDailyBrief?.shareLine ?? staticDailyBrief.shareLine,
   evidence: riskSnapshotDailyBrief?.evidence ?? staticDailyBrief.evidence,
+  structuralLine: riskSnapshotDailyBrief?.structuralLine ?? staticDailyBrief.structuralLine,
 };
 
 // ---- China baseline ------------------------------------------------------

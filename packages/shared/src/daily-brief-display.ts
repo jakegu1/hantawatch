@@ -20,6 +20,8 @@ export interface ImportSummaryInput {
 export interface BriefDisplayInput {
   briefDate: string;
   oneLine: string;
+  /** Collector-generated static structural line (dist + HPI + baseline) */
+  structuralLine?: string;
   latestChange?: string;
   situation?: string;
   riskJudgment?: string;
@@ -131,7 +133,8 @@ export function computeBriefDisplay(input: BriefDisplayInput): BriefDisplayMetri
 
   let alertLabel = `距上次 WHO 官方更新 ${whoDays} 天`;
   if (cluesLast24h > 0) {
-    alertLabel += ` · 近 24h ${cluesLast24h} 条线索`;
+    const shown = Math.min(cluesLast24h, monitoringLeads.length + 1);
+    alertLabel += ` · 近 24h ${cluesLast24h} 条线索（展示 ${shown} 条最高信号）`;
   } else {
     alertLabel += ' · 近 24h 无新高可信通报';
   }
@@ -160,6 +163,7 @@ export interface BriefSectionContent {
   briefShareLine: string;
   domesticBaselineText: string;
   briefFocusSentence: string;
+  /** Static structural line (dist + HPI + baseline, no change detection) */
   structuralMetricsLine: string;
   /** Action-oriented guidance based on current risk context */
   userActionHint: string;
@@ -223,8 +227,20 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
         ? '主要依据：专业监测源'
         : '主要依据：现有公开数据');
 
-  const briefWatchFocus = (
-    input.watchFocus?.length ? input.watchFocus : input.evidence
+  // Dynamic watchFocus: prefer live signals over static JSON fallback.
+  const dynamicWatchFocus = (() => {
+    const live: string[] = [];
+    if (metrics.monitoringLeads[0]?.summary_zh) {
+      live.push(metrics.monitoringLeads[0].summary_zh.slice(0, 12));
+    }
+    if (briefHeadline24h && briefHeadline24h.length > 10) {
+      live.push(briefHeadline24h.slice(0, 12));
+    }
+    if (metrics.cluesLast24h > 0) live.push('近24h监测线索');
+    return live.length >= 2 ? live.slice(0, 3) : undefined;
+  })();
+  const briefWatchFocus = dynamicWatchFocus ??
+    (input.watchFocus?.length ? input.watchFocus : input.evidence
   )?.slice(0, 3) ?? ['官方通报', '输入病例', '国内基线'];
 
   const briefShareLine = input.shareLine ?? `${briefNewCases} ${briefRiskJudgment}`;
@@ -241,7 +257,7 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
       ? `${briefWatchFocus.join('、')}仍是今日主要观察点。`
       : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
 
-  const structuralMetricsLine = input.oneLine;
+  const structuralMetricsLine = input.structuralLine || input.oneLine;
 
   const userActionHint = (() => {
     if (input.hpiTotal <= 20) return '当前风险处于低位，保持常规卫生防护即可。';
