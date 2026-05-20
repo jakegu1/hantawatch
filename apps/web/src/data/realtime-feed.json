@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-20T16:14:00.090973+00:00",
+  "__generated_at": "2026-05-20T16:15:29.030799+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-20T16:13:54.629316+00:00",
+  "last_fetched": "2026-05-20T16:15:27.725925+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-05-20T15:25:30.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际海事环境中的自然史、感染控制与临床管理。",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际航海环境。",
       "key_facts_zh": [
         "WHO",
         "研讨会",
-        "海事环境"
+        "航海环境"
       ],
       "signal_strength": "high"
     },
@@ -26,7 +26,7 @@
       "time": "2026-05-20T12:37:36.000Z",
       "title_en": "Moderna’s stock rides hantavirus fears as spotlight returns to infectious disease platform - BioSpace",
       "body_en": "Moderna’s stock rides hantavirus fears as spotlight returns to infectious disease platform BioSpace",
-      "summary_zh": "Moderna 股价因汉坦病毒担忧上涨，传染病平台受关注。",
+      "summary_zh": "Moderna 因汉坦病毒担忧股价上涨。",
       "key_facts_zh": [
         "Moderna",
         "股价",
@@ -39,7 +39,7 @@
       "time": "2026-05-20T12:00:00.000Z",
       "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
       "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒焦点研讨会，总结已知信息及其意义。",
+      "summary_zh": "WHO 举办汉坦病毒焦点研讨会，总结已知信息。",
       "key_facts_zh": [
         "WHO",
         "研讨会",
@@ -52,7 +52,7 @@
       "time": "2026-05-20T11:40:00.000Z",
       "title_en": "CDC upgrades voluntary hantavirus quarantine order to mandatory: What to know - firstcoastnews.com",
       "body_en": "CDC upgrades voluntary hantavirus quarantine order to mandatory: What to know firstcoastnews.com",
-      "summary_zh": "CDC 将自愿汉坦病毒隔离令升级为强制令。",
+      "summary_zh": "CDC 将汉坦病毒自愿隔离令升级为强制。",
       "key_facts_zh": [
         "CDC",
         "强制隔离",
@@ -67,7 +67,7 @@
       "body_en": "Investigators trap rodents in search for source of deadly hantavirus outbreak The Independent",
       "summary_zh": "调查人员设陷阱捕捉啮齿动物，寻找致命汉坦病毒爆发源头。",
       "key_facts_zh": [
-        "调查",
+        "调查中",
         "啮齿动物",
         "源头"
       ],
@@ -78,8 +78,9 @@
       "time": "2026-05-20T07:39:00.000Z",
       "title_en": "Hantavirus does not appear to have originated on MV Hondius, line says - Travel Weekly - Home",
       "body_en": "Hantavirus does not appear to have originated on MV Hondius, line says Travel Weekly - Home",
-      "summary_zh": "邮轮公司称汉坦病毒似乎并非源自MV Hondius号。",
+      "summary_zh": "邮轮公司称汉坦病毒并非源自 MV Hondius 号。",
       "key_facts_zh": [
+        "邮轮",
         "MV Hondius",
         "非源头"
       ],
@@ -90,11 +91,10 @@
       "time": "2026-05-20T06:33:09.000Z",
       "title_en": "Ebola, hantavirus show world's risk preparedness lagging: pandemic expert - France 24",
       "body_en": "Ebola, hantavirus show world's risk preparedness lagging: pandemic expert France 24",
-      "summary_zh": "大流行专家称埃博拉和汉坦病毒显示世界风险准备不足。",
+      "summary_zh": "大流行专家称埃博拉和汉坦病毒显示全球风险准备不足。",
       "key_facts_zh": [
         "专家",
-        "风险准备",
-        "不足"
+        "风险准备不足"
       ],
       "signal_strength": "medium"
     },
@@ -107,7 +107,7 @@
       "key_facts_zh": [
         "法国",
         "接触病例",
-        "阴性"
+        "检测阴性"
       ],
       "signal_strength": "high"
     },
@@ -120,7 +120,7 @@
       "key_facts_zh": [
         "葡萄牙",
         "首例疑似",
-        "阴性"
+        "检测阴性"
       ],
       "signal_strength": "high"
     },
@@ -132,7 +132,7 @@
       "summary_zh": "MV Hondius邮轮运营商否认船只是疫情源头。",
       "key_facts_zh": [
         "邮轮",
-        "运营商",
+        "MV Hondius",
         "否认源头"
       ],
       "signal_strength": "medium"
@@ -142,11 +142,11 @@
       "time": "2026-05-20T04:34:52.000Z",
       "title_en": "Argentina Authorities Trap Rats In Ushuaia, Hunt For Hantavirus Outbreak Source - NDTV",
       "body_en": "Argentina Authorities Trap Rats In Ushuaia, Hunt For Hantavirus Outbreak Source NDTV",
-      "summary_zh": "阿根廷当局在乌斯怀亚捕鼠，搜寻汉坦病毒源头。",
+      "summary_zh": "阿根廷当局在乌斯怀亚捕鼠，追查汉坦病毒源头。",
       "key_facts_zh": [
         "阿根廷",
-        "捕鼠",
-        "搜寻源头"
+        "乌斯怀亚",
+        "捕鼠"
       ],
       "signal_strength": "high"
     },
@@ -184,7 +184,7 @@
       "summary_zh": "MV Hondius邮轮疫情：9名英国公民暴露，一名有症状医护人员在伦敦治疗。",
       "key_facts_zh": [
         "英国",
-        "9人暴露",
+        "9例暴露",
         "邮轮"
       ],
       "signal_strength": "high"
