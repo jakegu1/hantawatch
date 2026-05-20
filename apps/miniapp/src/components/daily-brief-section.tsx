@@ -22,7 +22,7 @@ export function DailyBriefSection({
   highRiskDistanceText,
   highRiskDistanceContext,
 }: Props) {
-  const { metrics, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, briefFocusSentence, structuralMetricsLine, officialExcerpt } = content;
+  const { metrics, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, briefFocusSentence, structuralMetricsLine, officialExcerpt, userActionHint } = content;
 
   return (
     <View className="container-page" style={{ padding: '0 24rpx', marginTop: '16rpx' }}>
@@ -101,6 +101,15 @@ export function DailyBriefSection({
               {briefShareLine}
             </Text>
           </View>
+
+          {userActionHint && (
+            <View style={{ marginTop: '16rpx', background: '#ecfdf5', border: '2rpx solid #a7f3d0', borderRadius: '12rpx', padding: '16rpx' }}>
+              <Text style={{ fontSize: '20rpx', fontWeight: 600, color: '#047857' }}>行动建议</Text>
+              <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#065f46', marginTop: '4rpx', display: 'block', lineHeight: 1.45 }}>
+                {userActionHint}
+              </Text>
+            </View>
+          )}
 
           <View
             style={{ marginTop: '16rpx', background: '#eff6ff', borderRadius: '12rpx', padding: '16rpx' }}

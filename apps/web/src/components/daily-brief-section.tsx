@@ -38,6 +38,7 @@ export function DailyBriefSection({
     briefFocusSentence,
     structuralMetricsLine,
     officialExcerpt,
+    userActionHint,
   } = content;
 
   return (
@@ -142,6 +143,13 @@ export function DailyBriefSection({
               ))}
             </div>
           </div>
+
+          {userActionHint && (
+            <div className="rounded-xl bg-emerald-50 border border-emerald-200 p-3">
+              <p className="text-[10px] font-medium text-emerald-700">行动建议</p>
+              <p className="mt-1 text-sm font-semibold text-emerald-900 leading-snug">{userActionHint}</p>
+            </div>
+          )}
 
           <Link
             href={MV_HONDIUS_EVENT_PATH}

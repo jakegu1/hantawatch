@@ -160,6 +160,18 @@ def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
     meta["sources"]["feeds_light_run"] = {"ok": True, "at": meta.get("lastCollectedAt")}
     write_generated_json(out_dir / "meta.json", meta)
 
+    # Refresh daily-brief.json in-place: update cluesLast24h and headline24h
+    # from the feeds that just ran, so the brief reflects the latest signal
+    # count even between full collector runs.
+    brief = read_json(out_dir / "daily-brief.json", default=None)
+    if brief is not None:
+        clues_count = len(news_leads) + len(surveillance_leads)
+        brief["cluesLast24h"] = clues_count
+        if feed is not None and feed.updates:
+            brief["headline24h"] = feed.updates[0].summary_zh
+        write_generated_json(out_dir / "daily-brief.json", brief)
+        logger.info("daily-brief refreshed: clues=%d", clues_count)
+
     logger.info(
         "feeds-only done: %d intl cases, realtime=%s",
         len(recent_intl),
@@ -310,6 +322,7 @@ def main(argv: list[str] | None = None) -> int:
             if isinstance(pc, dict) and pc.get("id") == reference_id:
                 prev_confirmed_cases = int(pc.get("confirmedCases", 0) or 0)
                 break
+    clues_count = len(news_leads) + len(surveillance_leads) if surveillance_leads else len(news_leads)
     daily_brief = build_daily_brief(
         current_hpi=current_hpi,
         hpi_history=hpi_history,
@@ -318,6 +331,7 @@ def main(argv: list[str] | None = None) -> int:
         prev_reference_cluster_id=prev_reference_cluster_id,
         prev_confirmed_cases=prev_confirmed_cases,
         domestic_baseline_status=domestic_baseline,
+        clues_last_24h=clues_count,
     )
 
     imports_payload = read_json(out_dir / "mv-hondius-imports.json", default=None)
@@ -379,11 +393,13 @@ def main(argv: list[str] | None = None) -> int:
             logger.warning("Country signals: build failed (%s) — keeping existing JSON", e)
 
     if not args.no_network:
+        previous_brief = read_json(out_dir / "daily-brief.json", default=None)
         daily_brief = enhance_daily_brief(
             daily_brief,
             risk_snapshot=risk_snapshot,
             recent_cases_intl=recent_intl,
             realtime_feed=realtime_feed,
+            previous_brief=previous_brief,
         )
         risk_snapshot["dailyBrief"] = daily_brief
 

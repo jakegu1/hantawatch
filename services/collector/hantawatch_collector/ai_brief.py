@@ -73,6 +73,7 @@ def enhance_daily_brief(
     risk_snapshot: dict[str, Any],
     recent_cases_intl: list[dict[str, Any]],
     realtime_feed: Any | None = None,
+    previous_brief: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     api_key = os.environ.get("LLM_API_KEY")
     if not api_key:
@@ -91,6 +92,16 @@ def enhance_daily_brief(
             for u in getattr(realtime_feed, "updates", [])[:6]
         ]
 
+    yesterday_context = {}
+    if previous_brief:
+        yesterday_context = {
+            "yesterdayDate": previous_brief.get("date"),
+            "yesterdayOneLine": previous_brief.get("oneLine"),
+            "yesterdayHeadline24h": previous_brief.get("headline24h"),
+            "yesterdayLatestChange": previous_brief.get("latestChange"),
+            "yesterdayNewCases": previous_brief.get("newCases"),
+        }
+
     payload = {
         "date": daily_brief.get("date"),
         "ruleBasedOneLine": daily_brief.get("oneLine"),
@@ -102,6 +113,7 @@ def enhance_daily_brief(
         "nearestImport": risk_snapshot.get("nearestImport") if isinstance(risk_snapshot, dict) else None,
         "recentCases": [_brief_case(row) for row in recent_cases_intl[:10]],
         "realtimeUpdates": realtime_updates,
+        "yesterdayBrief": yesterday_context,
     }
 
     try:

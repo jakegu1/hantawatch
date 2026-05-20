@@ -704,9 +704,15 @@ def build_daily_brief(
     prev_reference_cluster_id: str | None = None,
     prev_confirmed_cases: int | None = None,
     domestic_baseline_status: str,
+    clues_last_24h: int = 0,
 ) -> dict:
     """Compose today's brief. Distance Δ is computed as the change in the
-    nearest cluster's distance vs. yesterday (kept in meta.json)."""
+    nearest cluster's distance vs. yesterday (kept in meta.json).
+
+    `clues_last_24h` should be the count of news + surveillance leads
+    fetched in this run (or carried over from feeds-only). Written into
+    the JSON so the value is self-describing and doesn't require a
+    frontend recompute for API consumers."""
     today = _today_cn().isoformat()
 
     reference = current_hpi.get("referenceCluster") or {}
@@ -761,7 +767,35 @@ def build_daily_brief(
         distance_direction = "远了" if distance_delta_km > 0 else "近了"
         dist_phrase = f"重点疫情聚集离中国大陆{distance_direction} {abs(distance_delta_km):,} km"
 
-    one_line = f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。"
+    # Build change-driven headline — prioritise what's new over static metrics
+    changes: list[str] = []
+    if global_cases_delta > 0:
+        changes.append(f"全球确诊增加 {global_cases_delta} 例")
+    elif global_cases_delta < 0:
+        changes.append(f"全球确诊减少 {abs(global_cases_delta)} 例")
+    if hpi_delta != 0:
+        direction = "上升" if hpi_delta > 0 else "下降"
+        changes.append(f"HPI {direction} {abs(hpi_delta)}")
+    if days_since == 0:
+        changes.append("WHO 今日发布新官方通报")
+    if distance_delta_km != 0 and comparable_distance:
+        direction = "靠近" if distance_delta_km < 0 else "远离"
+        changes.append(f"聚集地{direction} {abs(distance_delta_km):,} km")
+    if clues_last_24h > 0:
+        changes.append(f"近 24h 新增 {clues_last_24h} 条监测线索")
+
+    if changes:
+        change_phrase = "；".join(changes)
+        one_line = f"今日变化：{change_phrase}。当前 HPI {current_hpi['total']}（{grade_zh}），{baseline_phrase}。"
+    else:
+        one_line = (
+            f"今日无新增官方通报或监测信号。当前态势与昨日持平："
+            f"HPI {current_hpi['total']}（{grade_zh}），{baseline_phrase}。"
+        )
+
+    # Also keep the structural (static) line for the brief section
+    structural_line = f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。"
+
 
     # Global case tally + delta vs previous collector run (same cluster).
     global_cases_total = 0
@@ -784,10 +818,10 @@ def build_daily_brief(
         "domesticBaselineStatus": domestic_baseline_status,
         "oneLine": one_line,
         "daysSinceLastIntlAlert": days_since,
-        # Honest labels — frontend also recomputes from live feeds.
         "whoDaysSinceOfficialUpdate": days_since,
-        "cluesLast24h": 0,
+        "cluesLast24h": clues_last_24h,
         "headline24h": "",
+        "structuralLine": structural_line,
     }
 
 

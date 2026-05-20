@@ -161,6 +161,8 @@ export interface BriefSectionContent {
   domesticBaselineText: string;
   briefFocusSentence: string;
   structuralMetricsLine: string;
+  /** Action-oriented guidance based on current risk context */
+  userActionHint: string;
 }
 
 function briefCaseText(c: TimelineCase): string {
@@ -241,6 +243,16 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
   const structuralMetricsLine = input.oneLine;
 
+  const userActionHint = (() => {
+    if (input.hpiTotal <= 20) return '当前风险处于低位，保持常规卫生防护即可。';
+    const hasImport = input.importSummaries?.some(
+      (i) => i.summary_zh.includes('确诊输入') || i.summary_zh.includes('隔离中'),
+    );
+    if (hasImport) return '如有前往已报告输入病例国家的旅行计划，可关注当地卫生部门更新。';
+    if (input.hpiTotal <= 35) return '风险处于一般关注水平，建议查看下方最新通报了解详情。';
+    return 'HPI 已上升，建议重点查看官方通报和输入监测动态。';
+  })();
+
   return {
     metrics,
     briefHeadline24h,
@@ -255,5 +267,6 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
     domesticBaselineText,
     briefFocusSentence,
     structuralMetricsLine,
+    userActionHint,
   };
 }
