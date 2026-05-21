@@ -1,19 +1,58 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-21T09:36:15.245357+00:00",
+  "__generated_at": "2026-05-21T12:40:53.290472+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-21T09:36:10.072254+00:00",
+  "last_fetched": "2026-05-21T12:40:51.961785+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-e18ed25fbdbd59b9",
+      "time": "2026-05-21T12:02:03.000Z",
+      "title_en": "American who was on the hantavirus cruise ship says isolation center is like ‘prison’ - NBC News",
+      "body_en": "American who was on the hantavirus cruise ship says isolation center is like ‘prison’ NBC News American Passenger Blocked From Leaving Federal Hantavirus Quarantine The New York Times American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders CNN",
+      "summary_zh": "美国汉坦病毒邮轮乘客称隔离中心像监狱。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f85294b14b9457b8",
+      "time": "2026-05-21T11:34:00.000Z",
+      "title_en": "UK Begins Study on Andes Hantavirus with Outbreak Protocol - Mirage News",
+      "body_en": "UK Begins Study on Andes Hantavirus with Outbreak Protocol Mirage News",
+      "summary_zh": "英国启动安第斯汉坦病毒研究并制定暴发协议。",
+      "key_facts_zh": [
+        "英国",
+        "研究",
+        "暴发协议"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-c5214bf2386de0bc",
+      "time": "2026-05-21T10:53:03.000Z",
+      "title_en": "Hantavirus, ebola outbreaks proof world isn’t yet prepared to protect all 8 bn people: WHO’s Helen Clark - Firstpost",
+      "body_en": "Hantavirus, ebola outbreaks proof world isn’t yet prepared to protect all 8 bn people: WHO’s Helen Clark Firstpost",
+      "summary_zh": "WHO 的 Helen Clark 称汉坦病毒和埃博拉暴发证明世界尚未准备好保护80亿人。",
+      "key_facts_zh": [
+        "WHO",
+        "Helen Clark",
+        "防范不足"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-77e3821db034646d",
-      "time": "2026-05-21T07:07:48.000Z",
+      "time": "2026-05-21T10:09:52.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际海事环境。",
+      "summary_zh": "WHO 举办汉坦病毒国际海事环境网络研讨会。",
       "key_facts_zh": [
         "WHO",
         "网络研讨会"
@@ -25,10 +64,11 @@
       "time": "2026-05-21T01:31:49.000Z",
       "title_en": "Man Charged After Threatening Mass Shooting Over Possible Hantavirus Outbreak Lockdown: Police - People.com",
       "body_en": "Man Charged After Threatening Mass Shooting Over Possible Hantavirus Outbreak Lockdown: Police People.com",
-      "summary_zh": "美国一男子因威胁在汉坦病毒隔离期间实施枪击被捕。",
+      "summary_zh": "美国一男子因威胁在汉坦病毒隔离区实施枪击被捕。",
       "key_facts_zh": [
         "美国",
-        "威胁枪击"
+        "威胁枪击",
+        "被捕"
       ],
       "signal_strength": "high"
     },
@@ -37,10 +77,11 @@
       "time": "2026-05-21T01:07:29.000Z",
       "title_en": "CDC Chief Orders 2 Americans to Quarantine Over Hantavirus Concern - MedPage Today",
       "body_en": "CDC Chief Orders 2 Americans to Quarantine Over Hantavirus Concern MedPage Today",
-      "summary_zh": "美国 CDC 下令两名美国人因汉坦病毒风险隔离。",
+      "summary_zh": "美国 CDC 主任下令两名美国人因汉坦病毒隔离。",
       "key_facts_zh": [
         "美国 CDC",
-        "隔离"
+        "隔离",
+        "2人"
       ],
       "signal_strength": "high"
     },
@@ -62,7 +103,7 @@
       "time": "2026-05-20T23:03:58.000Z",
       "title_en": "Americans exposed to Hantavirus upset about being forced to quarantine in Nebraska - NBC News",
       "body_en": "Americans exposed to Hantavirus upset about being forced to quarantine in Nebraska NBC News",
-      "summary_zh": "接触汉坦病毒的美国人对强制在内布拉斯加隔离表示不满。",
+      "summary_zh": "接触汉坦病毒的美国人对被强制在内布拉斯加州隔离表示不满。",
       "key_facts_zh": [
         "美国",
         "隔离",
@@ -75,10 +116,10 @@
       "time": "2026-05-20T21:04:23.000Z",
       "title_en": "Public Health Alerts: Andes hantavirus on a cruise ship, 2026 - CIDRAP",
       "body_en": "Public Health Alerts: Andes hantavirus on a cruise ship, 2026 CIDRAP",
-      "summary_zh": "2026年邮轮暴发安第斯汉坦病毒，公共卫生警报。",
+      "summary_zh": "CIDRAP 发布 2026 年邮轮安第斯汉坦病毒公共卫生警报。",
       "key_facts_zh": [
+        "CIDRAP",
         "邮轮",
-        "安第斯汉坦病毒",
         "公共卫生警报"
       ],
       "signal_strength": "high"
@@ -88,88 +129,13 @@
       "time": "2026-05-20T17:40:00.000Z",
       "title_en": "American cruise ship passengers push for home quarantine after hantavirus exposure - CIDRAP",
       "body_en": "American cruise ship passengers push for home quarantine after hantavirus exposure CIDRAP",
-      "summary_zh": "美国邮轮乘客在接触汉坦病毒后争取居家隔离。",
+      "summary_zh": "美国邮轮乘客接触汉坦病毒后要求居家隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
         "居家隔离"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-b4ccaa25330b7ddb",
-      "time": "2026-05-20T17:33:32.000Z",
-      "title_en": "Hantavirus-hit cruise operator says ship was not source of outbreak - Global News",
-      "body_en": "Hantavirus-hit cruise operator says ship was not source of outbreak Global News",
-      "summary_zh": "涉汉坦病毒邮轮运营商称船非疫情源头。",
-      "key_facts_zh": [
-        "邮轮",
-        "运营商",
-        "否认"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-b1a2ed0d31f4330d",
-      "time": "2026-05-20T17:12:00.000Z",
-      "title_en": "ND monitoring seven individuals for hantavirus linked to cruise ship; risk to public low - KFYR-TV",
-      "body_en": "ND monitoring seven individuals for hantavirus linked to cruise ship; risk to public low KFYR-TV",
-      "summary_zh": "北达科他州监测七名与邮轮相关汉坦病毒接触者，公众风险低。",
-      "key_facts_zh": [
-        "北达科他州",
-        "监测",
-        "7人"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-fc0358c1fe3d332f",
-      "time": "2026-05-20T17:11:09.000Z",
-      "title_en": "Hyundai Bioscience to supply antiviral drug in event of Ebola or Hantavirus spread - BioSpectrum Asia",
-      "body_en": "Hyundai Bioscience to supply antiviral drug in event of Ebola or Hantavirus spread BioSpectrum Asia",
-      "summary_zh": "韩国现代生物科学将供应抗病毒药物以应对埃博拉或汉坦病毒传播。",
-      "key_facts_zh": [
-        "韩国",
-        "抗病毒药物"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-f98e074b43ac0578",
-      "time": "2026-05-20T16:08:11.000Z",
-      "title_en": "Residents linked to Hantavirus outbreak in Wales - here's the latest update - South Wales Argus",
-      "body_en": "Residents linked to Hantavirus outbreak in Wales - here's the latest update South Wales Argus",
-      "summary_zh": "威尔士居民与汉坦病毒疫情相关，最新更新。",
-      "key_facts_zh": [
-        "威尔士",
-        "疫情关联"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-e683faaa66cae255",
-      "time": "2026-05-20T15:47:26.000Z",
-      "title_en": "UKHSA: Japan Ships Favipiravir for Hantavirus Response - Pharmacy Business",
-      "body_en": "UKHSA: Japan Ships Favipiravir for Hantavirus Response Pharmacy Business",
-      "summary_zh": "英国卫生安全局称日本运送法匹拉韦用于汉坦病毒应对。",
-      "key_facts_zh": [
-        "英国卫生安全局",
-        "日本",
-        "法匹拉韦"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c8d4bb8830657726",
-      "time": "2026-05-20T12:00:00.000Z",
-      "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
-      "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
-      "summary_zh": "WHO 发布汉坦病毒焦点报告：已知信息及其意义。",
-      "key_facts_zh": [
-        "WHO",
-        "焦点报告"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
