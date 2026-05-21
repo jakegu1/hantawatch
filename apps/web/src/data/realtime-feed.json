@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-21T08:45:27.904396+00:00",
+  "__generated_at": "2026-05-21T08:47:05.972381+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-21T08:45:26.060995+00:00",
+  "last_fetched": "2026-05-21T08:47:00.870476+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -52,7 +52,7 @@
       "time": "2026-05-21T01:07:29.000Z",
       "title_en": "CDC Chief Orders 2 Americans to Quarantine Over Hantavirus Concern - MedPage Today",
       "body_en": "CDC Chief Orders 2 Americans to Quarantine Over Hantavirus Concern MedPage Today",
-      "summary_zh": "美国 CDC 负责人下令对两名美国人进行汉坦病毒隔离。",
+      "summary_zh": "美国 CDC 主任下令对两名美国人进行汉坦病毒隔离。",
       "key_facts_zh": [
         "美国 CDC",
         "隔离",
@@ -78,13 +78,13 @@
       "time": "2026-05-20T23:03:58.000Z",
       "title_en": "Americans exposed to Hantavirus upset about being forced to quarantine in Nebraska - NBC News",
       "body_en": "Americans exposed to Hantavirus upset about being forced to quarantine in Nebraska NBC News American Passenger Blocked From Leaving Federal Hantavirus Quarantine The New York Times American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders CNN",
-      "summary_zh": "暴露于汉坦病毒的美国乘客因被强制在内布拉斯加隔离而不满。",
+      "summary_zh": "美国乘客因汉坦病毒暴露被强制在内布拉斯加隔离，表达不满。",
       "key_facts_zh": [
         "美国",
         "乘客",
         "隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-3c152556c251406d",
@@ -110,20 +110,20 @@
         "乘客",
         "居家隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-b4ccaa25330b7ddb",
       "time": "2026-05-20T17:33:32.000Z",
       "title_en": "Hantavirus-hit cruise operator says ship was not source of outbreak - Global News",
       "body_en": "Hantavirus-hit cruise operator says ship was not source of outbreak Global News",
-      "summary_zh": "汉坦病毒疫情邮轮运营商称船非爆发源头。",
+      "summary_zh": "汉坦病毒邮轮运营商称船非疫情源头。",
       "key_facts_zh": [
         "邮轮",
         "运营商",
         "否认"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-b1a2ed0d31f4330d",
@@ -132,7 +132,7 @@
       "body_en": "ND monitoring seven individuals for hantavirus linked to cruise ship; risk to public low KFYR-TV",
       "summary_zh": "北达科他州监测七名与邮轮相关汉坦病毒接触者，公众风险低。",
       "key_facts_zh": [
-        "北达科他州",
+        "北达科他",
         "监测",
         "7人"
       ],
@@ -143,9 +143,9 @@
       "time": "2026-05-20T17:11:09.000Z",
       "title_en": "Hyundai Bioscience to supply antiviral drug in event of Ebola or Hantavirus spread - BioSpectrum Asia",
       "body_en": "Hyundai Bioscience to supply antiviral drug in event of Ebola or Hantavirus spread BioSpectrum Asia",
-      "summary_zh": "现代生物科学将供应抗病毒药物以应对埃博拉或汉坦病毒传播。",
+      "summary_zh": "Hyundai Bioscience 将供应抗病毒药物以应对埃博拉或汉坦病毒传播。",
       "key_facts_zh": [
-        "现代生物科学",
+        "Hyundai",
         "抗病毒药",
         "供应"
       ],
@@ -156,10 +156,11 @@
       "time": "2026-05-20T16:13:23.000Z",
       "title_en": "Hantavirus vaccines and treatments under development - TradingView",
       "body_en": "Hantavirus vaccines and treatments under development TradingView",
-      "summary_zh": "TradingView 报道汉坦病毒疫苗和治疗正在研发。",
+      "summary_zh": "TradingView 报道汉坦病毒疫苗和治疗研究进展。",
       "key_facts_zh": [
-        "疫苗研发",
-        "治疗研发"
+        "疫苗",
+        "治疗",
+        "研发"
       ],
       "signal_strength": "medium"
     },
@@ -171,20 +172,21 @@
       "summary_zh": "威尔士居民与汉坦病毒疫情相关，最新更新。",
       "key_facts_zh": [
         "威尔士",
-        "疫情关联"
+        "疫情",
+        "居民"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-e683faaa66cae255",
-      "time": "2026-05-20T15:47:26.000Z",
-      "title_en": "UKHSA: Japan Ships Favipiravir for Hantavirus Response - Pharmacy Business",
-      "body_en": "UKHSA: Japan Ships Favipiravir for Hantavirus Response Pharmacy Business",
-      "summary_zh": "日本向英国运送法匹拉韦用于汉坦病毒应对。",
+      "id": "rt-c8d4bb8830657726",
+      "time": "2026-05-20T12:00:00.000Z",
+      "title_en": "Hantavirus in Focus I: what we know and what it means - World Health Organization (WHO)",
+      "body_en": "Hantavirus in Focus I: what we know and what it means World Health Organization (WHO)",
+      "summary_zh": "WHO 发布汉坦病毒焦点：已知信息及意义。",
       "key_facts_zh": [
-        "日本",
-        "英国",
-        "法匹拉韦"
+        "WHO",
+        "焦点",
+        "信息"
       ],
       "signal_strength": "high"
     }
