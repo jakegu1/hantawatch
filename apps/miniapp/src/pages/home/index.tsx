@@ -7,6 +7,7 @@ import type { ActiveCluster } from '@hantawatch/shared/types';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import {
   activeClusters as baselineClusters,
+  arcgisCases,
   currentHpi,
   hpi7DayHistory,
   todayBrief,

@@ -372,9 +372,10 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
 function _computeCaseTableSummary(rows: CaseTableRow[]): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
   return {
-    totalConfirmed: rows.reduce((s, r) => s + r.totalConfirmed, 0),
+    // Only count Andes serotype for confirmed & deaths (exclude HTNV/SEOV local cases)
+    totalConfirmed: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.totalConfirmed, 0),
     totalMonitoring: rows.reduce((s, r) => s + r.monitoring, 0),
-    totalDeaths: rows.reduce((s, r) => s + r.deaths, 0),
+    totalDeaths: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.deaths, 0),
   };
 }
 
