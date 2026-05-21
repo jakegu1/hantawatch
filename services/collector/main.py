@@ -70,6 +70,7 @@ from hantawatch_collector.news_leads import fetch_news_leads
 from hantawatch_collector.official_sources import check_official_sources
 from hantawatch_collector.realtime_feed import build_realtime_feed
 from hantawatch_collector.surveillance_leads import fetch_surveillance_leads
+from hantawatch_collector.andv_dashboard import fetch_andv_data
 from hantawatch_collector.who_don import fetch_who_don_entries
 
 logging.basicConfig(
@@ -277,6 +278,23 @@ def main(argv: list[str] | None = None) -> int:
         surveillance_leads = fetch_surveillance_leads()
         if not surveillance_leads:
             logger.info("surveillance-leads: no entries")
+
+        # ArcGIS ANDV Dashboard — per-person tracking (supplementary).
+        # Failure is non-fatal; the collector continues with WHO/ECDC data.
+        arcgis_data = None
+        try:
+            arcgis_data = fetch_andv_data()
+            if arcgis_data:
+                logger.info(
+                    "ArcGIS ANDV Dashboard: %d countries, %d total tracked",
+                    len(arcgis_data["cases"]),
+                    sum(r["total"] for r in arcgis_data["cases"]),
+                )
+            else:
+                logger.info("ArcGIS ANDV Dashboard: no data (network blocked or schema changed)")
+        except Exception as e:
+            logger.warning("ArcGIS ANDV Dashboard: fetch failed (%s) — continuing", e)
+
         try:
             official_sources_status = check_official_sources()
         except Exception as e:
@@ -462,6 +480,11 @@ def main(argv: list[str] | None = None) -> int:
             write_generated_json(
                 out_dir / "country-signals.json",
                 country_signals,
+            )
+        if arcgis_data:
+            write_generated_json(
+                out_dir / "arcgis-andv-tracking.json",
+                arcgis_data,
             )
 
     logger.info("Done.")

@@ -26,13 +26,13 @@ import httpx
 logger = logging.getLogger(__name__)
 
 FEATURE_SERVER_URL = (
-    "https://services2.arcgis.com/xsh7pVZv42relbEf/arcgis/rest/services/"
-    "Hantavirus_Map_Layers/FeatureServer"
+    "https://services1.arcgis.com/wb4Og4gH5mvzQAIV/arcgis/rest/services/"
+    "Tracking_Hantavirus_2026/FeatureServer"
 )
 
-# Layer IDs to query (0-indexed). Each layer may represent a different
-# facet of the dashboard (cases by country, timeline, etc.).
-LAYER_IDS = (0, 1, 2, 3, 4)
+# Layer IDs to query. Layer 1 is the main case-point layer.
+# Layer 0 is likely the dashboard config / summary.
+LAYER_IDS = (0, 1)
 
 
 def _query_layer(
@@ -63,30 +63,85 @@ def _query_layer(
         return None
 
 
-def _extract_case_rows(attributes: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Normalise ArcGIS attributes into a standard case row dict.
+# Normalise raw ArcGIS LASTLOCATION values (often city-level or city, country)
+# into canonical country names for aggregation.
+_CITY_TO_COUNTRY: dict[str, str] = {
+    "NEBRASKA, USA": "UNITED STATES",
+    "ARIZONA, USA": "UNITED STATES",
+    "CALIFORNIA": "UNITED STATES",
+    "GEORGIA, USA": "UNITED STATES",
+    "NEW JERSEY": "UNITED STATES",
+    "TEXAS": "UNITED STATES",
+    "VIRGINIA": "UNITED STATES",
+    "ALICANTE, SPAIN": "SPAIN",
+    "TENERIFE": "SPAIN",
+    "PRAIA, CAPE VERDE": "CAPE VERDE",
+    "JOHANNESBURG": "SOUTH AFRICA",
+    "ZURICH": "SWITZERLAND",
+    "TRISTAN DA CUNHA": "ST HELENA",
+    "ST HELENA": "UNITED KINGDOM",
+    "MV HONDIUS": "ONBOARD",
+    "MV HONDUS": "ONBOARD",
+    "UNKNOWN": "",
+}
 
-    Field names are guessed based on common ArcGIS Dashboard naming conventions.
-    If the actual schema differs, this function is the single place to adjust.
+
+def _normalise_location(raw: str) -> str:
+    """Map a raw LASTLOCATION value to a canonical country name."""
+    upper = raw.strip().upper()
+    if upper in _CITY_TO_COUNTRY:
+        return _CITY_TO_COUNTRY[upper]
+    # Heuristic: if it contains a comma, the part after the comma is the country
+    if ", " in raw:
+        return raw.split(", ")[-1].strip()
+    return raw.strip()
+
+
+def _extract_case_rows(attributes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Aggregate per-person ArcGIS attributes into per-country summary rows.
+
+    The Tracking_Hantavirus_2026 FeatureServer (Layer 1) has one feature
+    per individual with fields: LASTLOCATION, STATUS, DEATH, DETAILS, etc.
+    We count by country + status after normalising city-level locations.
     """
-    rows: list[dict[str, Any]] = []
+    from collections import defaultdict
+
+    country_stats: dict[str, dict[str, int]] = defaultdict(
+        lambda: {"confirmed": 0, "monitoring": 0, "deaths": 0, "total": 0}
+    )
     for attr in attributes:
-        country = (
-            attr.get("Country")
-            or attr.get("Country_Other")
+        raw = str(
+            attr.get("LASTLOCATION")
+            or attr.get("Country")
             or attr.get("NAME")
-            or attr.get("location")
             or ""
-        )
-        if not country:
+        ).strip()
+        if not raw:
             continue
+        location = _normalise_location(raw)
+        if not location:
+            continue
+
+        stats = country_stats[location]
+        stats["total"] += 1
+        status = str(attr.get("STATUS") or "").upper()
+        if status == "CONFIRMED":
+            stats["confirmed"] += 1
+        elif status == "MONITORING":
+            stats["monitoring"] += 1
+        # Check dedicated DEATH field (may be "YES" or 1)
+        death_val = attr.get("DEATH")
+        if death_val and str(death_val).upper() in ("YES", "1", "TRUE"):
+            stats["deaths"] += 1
+
+    rows: list[dict[str, Any]] = []
+    for country, stats in sorted(country_stats.items()):
         rows.append({
             "country": country,
-            "confirmed": int(attr.get("Confirmed", 0) or 0),
-            "suspected": int(attr.get("Suspected", 0) or attr.get("Probable", 0) or 0),
-            "deaths": int(attr.get("Deaths", 0) or 0),
-            "exposed": int(attr.get("Exposed", 0) or attr.get("Monitoring", 0) or 0),
-            "lastUpdate": attr.get("LastUpdate") or attr.get("Date") or "",
+            "confirmed": stats["confirmed"],
+            "monitoring": stats["monitoring"],
+            "deaths": stats["deaths"],
+            "total": stats["total"],
         })
     return rows
 
