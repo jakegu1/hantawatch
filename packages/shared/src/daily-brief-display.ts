@@ -304,12 +304,16 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
     .replace(/，，/g, '，');
 
   const userActionHint = (() => {
-    if (input.hpiTotal <= 20) return '当前风险处于低位，保持常规卫生防护即可。';
-    const hasImport = input.importSummaries?.some(
-      (i) => i.summary_zh.includes('确诊输入') || i.summary_zh.includes('隔离中'),
-    );
-    if (hasImport) return '如有前往已报告输入病例国家的旅行计划，可关注当地卫生部门更新。';
-    if (input.hpiTotal <= 35) return '风险处于一般关注水平，建议查看下方最新通报了解详情。';
+    if (input.hpiTotal <= 20) return '当前无需特殊行动，保持常规卫生防护即可。';
+    const importCountries = (input.importSummaries ?? [])
+      .filter((i) => i.summary_zh.includes('确诊输入') || i.summary_zh.includes('隔离中'))
+      .map((i) => i.summary_zh.match(/[\u4e00-\u9fff]{2,3}(?=确诊|输入|隔离)/)?.[0])
+      .filter(Boolean);
+    if (importCountries.length > 0) {
+      const cs = [...new Set(importCountries)].slice(0, 2).join('、');
+      return `已有输入病例报告国家：${cs}。如有相关旅行计划，可查看中国驻当地使领馆健康提示。`;
+    }
+    if (input.hpiTotal <= 35) return '当前无需特殊行动，建议关注下方最新通报了解态势变化。';
     return 'HPI 已上升，建议重点查看官方通报和输入监测动态。';
   })();
 
