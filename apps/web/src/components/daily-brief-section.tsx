@@ -73,6 +73,7 @@ export function DailyBriefSection({
     structuralMetricsLine,
     officialExcerpt,
     userActionHint,
+    caseTable,
   } = content;
 
   const [showDetails, setShowDetails] = useState(false);
@@ -125,7 +126,56 @@ export function DailyBriefSection({
           </div>
         </div>
 
-        {/* ─── ④ 24h 事件 ─── */}
+        {/* ─── ④ 病例动态表 ─── */}
+        {caseTable.length > 0 && (
+          <div className="border-b border-gray-100 px-4 py-2.5 sm:px-5">
+            <p className="text-[9px] font-semibold uppercase tracking-wider text-gray-500 mb-2">
+              已确认病例动态
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-[10px]">
+                <thead>
+                  <tr className="text-left text-gray-400 border-b border-gray-100">
+                    <th className="pb-1 font-medium">日期</th>
+                    <th className="pb-1 font-medium">国家/事件</th>
+                    <th className="pb-1 font-medium">毒株</th>
+                    <th className="pb-1 font-medium text-right">确诊</th>
+                    <th className="pb-1 font-medium text-right">死亡</th>
+                    <th className="pb-1 font-medium">来源</th>
+                    <th className="pb-1 font-medium text-center">邮轮</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {caseTable.slice(0, 6).map((row, i) => (
+                    <tr key={i} className="border-b border-gray-50">
+                      <td className="py-1 font-mono text-gray-600">{row.date.slice(5)}</td>
+                      <td className="py-1 font-medium text-gray-800">
+                        {row.countryFlag} {row.countryNameZh}
+                      </td>
+                      <td className="py-1 text-gray-500">{row.serotypeLabel}</td>
+                      <td className="py-1 text-right font-mono text-gray-800">
+                        {row.totalConfirmed > 0 && (
+                          <span className={row.newConfirmed > 0 ? 'text-red-600 font-bold' : ''}>
+                            {row.totalConfirmed}
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-1 text-right font-mono text-gray-800">
+                        {row.deaths > 0 ? <span className="text-red-600">{row.deaths}</span> : '—'}
+                      </td>
+                      <td className="py-1 text-gray-400 truncate max-w-[80px]">{row.sourceName}</td>
+                      <td className="py-1 text-center">
+                        {row.cruiseRelated ? '✅' : '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* ─── ⑤ 24h 事件 ─── */}
         {metrics.monitoringLeads.length > 0 && (
           <div className="border-b border-gray-100">
             <div className="px-4 py-2.5 sm:px-5">

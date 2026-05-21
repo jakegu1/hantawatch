@@ -12,6 +12,20 @@ import {
   type TimelineCase,
 } from './timeline';
 
+/** Structured case-table row for Google AI Mode style comparison. */
+export interface CaseTableRow {
+  date: string;
+  countryNameZh: string;
+  countryFlag: string;
+  caseType: 'import' | 'local' | 'outbreak';
+  serotypeLabel: string;
+  newConfirmed: number;
+  totalConfirmed: number;
+  deaths: number;
+  sourceName: string;
+  cruiseRelated: boolean;
+}
+
 export interface ImportSummaryInput {
   date: string;
   summary_zh: string;
@@ -171,6 +185,8 @@ export interface BriefSectionContent {
   structuralMetricsLine: string;
   /** Action-oriented guidance based on current risk context */
   userActionHint: string;
+  /** Structured case table for comparison view */
+  caseTable: CaseTableRow[];
 }
 
 function briefCaseText(c: TimelineCase): string {
@@ -344,5 +360,112 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
     briefFocusSentence,
     structuralMetricsLine,
     userActionHint,
+    caseTable: buildCaseTable(input),
   };
+}
+
+/** Build structured case table from recent cases + import summaries. */
+function countryFlagFor(name: string): string {
+  const map: Record<string, string> = { '法国': '🇫🇷', '西班牙': '🇪🇸', '美国': '🇺🇸',
+    '加拿大': '🇨🇦', '英国': '🇬🇧', '德国': '🇩🇪', '澳大利亚': '🇦🇺', '智利': '🇨🇱',
+    '阿根廷': '🇦🇷', '台湾省': '🇹🇼', '罗马尼亚': '🇷🇴', '中国': '🇨🇳',
+  };
+  return map[name] ?? '🌐';
+}
+
+function serotypeLabel(id: string): string {
+  const map: Record<string, string> = { 'andes': 'ANDV', 'hantaan': 'HTNV',
+    'seoul': 'SEOV', 'puumala': 'PUUV', 'sin_nombre': 'SNV' };
+  return map[id] ?? (id === 'other' ? '欧洲株' : id.toUpperCase());
+}
+
+function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
+  const rows: CaseTableRow[] = [];
+  const seen = new Set<string>();
+
+  // 1. Active clusters (outbreak source)
+  for (const c of input.recentCases) {
+    if (c.source?.confidence === 'official' && c.id.startsWith('who-')) {
+      const key = `outbreak-${c.id}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      // Extract counts from summary if present
+      const summary = c.summary ?? '';
+      const confMatch = summary.match(/(\d+)\s*例\s*确诊/);
+      const suspMatch = summary.match(/(\d+)\s*例\s*(?:结果未定|可能|疑似)/);
+      const deathMatch = summary.match(/(\d+)\s*例\s*死亡/);
+      rows.push({
+        date: c.date,
+        countryNameZh: 'MV Hondius 邮轮',
+        countryFlag: '🚢',
+        caseType: 'outbreak',
+        serotypeLabel: 'ANDV',
+        newConfirmed: 0,
+        totalConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
+        deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
+        sourceName: c.source.name,
+        cruiseRelated: true,
+      });
+    }
+  }
+
+  // 2. Import / monitoring entries from importSummaries
+  for (const imp of (input.importSummaries ?? [])) {
+    const name = imp.countryNameZh ?? '';
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+    const confMatch = imp.summary_zh.match(/(\d+)\s*例\s*(?:新\s*)?确诊/);
+    const deathMatch = imp.summary_zh.match(/(\d+)\s*例\s*死亡/);
+    const isImport = imp.summary_zh.includes('确诊输入') || imp.summary_zh.includes('隔离中');
+    rows.push({
+      date: imp.date,
+      countryNameZh: name,
+      countryFlag: countryFlagFor(name),
+      caseType: isImport ? 'import' : 'local',
+      serotypeLabel: 'ANDV',
+      newConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
+      totalConfirmed: confMatch ? parseInt(confMatch[1]) : (isImport ? 1 : 0),
+      deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
+      sourceName: isImport ? 'WHO / 各国卫生部' : '官方通报',
+      cruiseRelated: isImport,
+    });
+  }
+
+  // 3. Non-outbreak recent cases from timeline (local/sporadic)
+  for (const c of input.recentCases) {
+    if (c.source?.confidence === 'official' && c.id.startsWith('who-')) continue;
+    const name = c.title ?? c.notes ?? '';
+    if (!name || seen.has(name)) continue;
+    const country = c.title?.match(/^(.{2,4})(?:省|市|州|报告|通报|确认|确诊|出现)/)?.[1]
+      ?? c.notes?.match(/^(.{2,4})(?:省|市|州)/)?.[1];
+    if (!country) continue;
+    if (seen.has(country)) continue;
+    seen.add(country);
+    const isChina = c.scope === 'china';
+    const summary = c.summary ?? c.notes ?? '';
+    rows.push({
+      date: c.date,
+      countryNameZh: country,
+      countryFlag: isChina ? '🇨🇳' : countryFlagFor(country),
+      caseType: isChina ? 'local' : 'local',
+      serotypeLabel: serotypeLabel(c.serotypeId),
+      newConfirmed: 1,
+      totalConfirmed: 1,
+      deaths: summary.includes('死亡') ? 1 : 0,
+      sourceName: c.source?.name ?? '',
+      cruiseRelated: false,
+    });
+  }
+
+  // Deduplicate by countryNameZh and sort by date desc
+  const deduped: CaseTableRow[] = [];
+  const dedupKeys = new Set<string>();
+  for (const r of rows.sort((a, b) => b.date.localeCompare(a.date))) {
+    const k = `${r.countryNameZh}-${r.serotypeLabel}-${r.date}`;
+    if (!dedupKeys.has(k)) {
+      dedupKeys.add(k);
+      deduped.push(r);
+    }
+  }
+  return deduped.slice(0, 8);
 }

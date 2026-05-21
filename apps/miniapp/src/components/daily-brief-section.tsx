@@ -30,7 +30,7 @@ export function DailyBriefSection({
   highRiskDistanceText,
   highRiskDistanceContext,
 }: Props) {
-  const { metrics, briefTakeaway, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, structuralMetricsLine, officialExcerpt, userActionHint } = content;
+  const { metrics, briefTakeaway, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, structuralMetricsLine, officialExcerpt, userActionHint, caseTable } = content;
   const [showDetails, setShowDetails] = useState(false);
 
   const pct = Math.min(100, Math.max(0, hpiTotal));
@@ -85,7 +85,43 @@ export function DailyBriefSection({
           </View>
         </View>
 
-        {/* ④ Monitoring leads */}
+        {/* ④ Case table */}
+        {caseTable.length > 0 && (
+          <View style={{ padding: '8rpx 20rpx 12rpx 20rpx', borderBottom: '1rpx solid #f1f5f9' }}>
+            <Text style={{ fontSize: '18rpx', fontWeight: 600, color: '#6b7280' }}>已确认病例动态</Text>
+            <View style={{ marginTop: '6rpx', flexDirection: 'column' }}>
+              {/* Header */}
+              <View style={{ flexDirection: 'row', borderBottom: '1rpx solid #e5e7eb', paddingBottom: '4rpx' }}>
+                <Text style={{ flex: 2, fontSize: '16rpx', color: '#9ca3af' }}>日期</Text>
+                <Text style={{ flex: 3, fontSize: '16rpx', color: '#9ca3af' }}>国家</Text>
+                <Text style={{ flex: 1.5, fontSize: '16rpx', color: '#9ca3af' }}>毒株</Text>
+                <Text style={{ flex: 1, fontSize: '16rpx', textAlign: 'right', color: '#9ca3af' }}>确诊</Text>
+                <Text style={{ flex: 1, fontSize: '16rpx', textAlign: 'right', color: '#9ca3af' }}>死亡</Text>
+                <Text style={{ width: '28rpx', textAlign: 'center', fontSize: '16rpx', color: '#9ca3af' }}>🚢</Text>
+              </View>
+              {caseTable.slice(0, 5).map((row, i) => (
+                <View key={i} style={{ flexDirection: 'row', paddingTop: '4rpx', paddingBottom: '4rpx', borderBottom: '1rpx solid #f9fafb' }}>
+                  <Text style={{ flex: 2, fontSize: '18rpx', color: '#6b7280' }}>{row.date.slice(5)}</Text>
+                  <Text style={{ flex: 3, fontSize: '18rpx', fontWeight: 600, color: '#111827' }}>
+                    {row.countryFlag} {row.countryNameZh}
+                  </Text>
+                  <Text style={{ flex: 1.5, fontSize: '18rpx', color: '#6b7280' }}>{row.serotypeLabel}</Text>
+                  <Text style={{ flex: 1, fontSize: '18rpx', textAlign: 'right', color: row.newConfirmed > 0 ? '#dc2626' : '#374151', fontWeight: row.newConfirmed > 0 ? '700' : '400' }}>
+                    {row.totalConfirmed > 0 ? row.totalConfirmed : '—'}
+                  </Text>
+                  <Text style={{ flex: 1, fontSize: '18rpx', textAlign: 'right', color: row.deaths > 0 ? '#dc2626' : '#374151' }}>
+                    {row.deaths > 0 ? row.deaths : '—'}
+                  </Text>
+                  <Text style={{ width: '28rpx', textAlign: 'center', fontSize: '16rpx' }}>
+                    {row.cruiseRelated ? '✅' : ''}
+                  </Text>
+                </View>
+              ))}
+            </View>
+          </View>
+        )}
+
+        {/* ⑤ Monitoring leads */}
         {metrics.monitoringLeads.length > 0 && (
           <View style={{ padding: '12rpx 20rpx', borderBottom: '1rpx solid #f1f5f9', background: '#faf5ff' }}>
             <Text style={{ fontSize: '18rpx', fontWeight: 600, color: '#7c3aed' }}>待官方确认的监测动态</Text>
