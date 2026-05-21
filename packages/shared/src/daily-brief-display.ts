@@ -295,7 +295,13 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
       ? `${briefWatchFocus.join('、')}仍是今日主要观察点。`
       : '继续关注官方通报、输入病例监测和国内 HFRS 基线变化。';
 
-  const structuralMetricsLine = input.structuralLine || input.oneLine;
+  // Strip HPI clause from structural line — HPI is already shown in the top badge
+  // and may differ from collector raw value due to nearestImport adjustment.
+  const structuralMetricsLine = (input.structuralLine || input.oneLine)
+    .replace(/，?\s*HPI[^，。]*[，。]?\s*/g, '，')
+    .replace(/，+，/g, '，')
+    .replace(/^，|，$/g, '')
+    .replace(/，，/g, '，');
 
   const userActionHint = (() => {
     if (input.hpiTotal <= 20) return '当前风险处于低位，保持常规卫生防护即可。';

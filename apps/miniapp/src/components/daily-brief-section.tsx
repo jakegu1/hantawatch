@@ -62,9 +62,20 @@ export function DailyBriefSection({
             <View style={{ marginTop: '12rpx', background: '#faf5ff', borderRadius: '12rpx', padding: '12rpx', border: '1rpx solid #e9d5ff' }}>
               <Text style={{ fontSize: '20rpx', fontWeight: 600, color: '#7c3aed' }}>待官方确认的监测动态</Text>
               {metrics.monitoringLeads.map((lead) => (
-                <Text key={lead.id} style={{ fontSize: '24rpx', color: '#374151', marginTop: '8rpx', display: 'block' }}>
-                  {lead.summary_zh}
-                </Text>
+                <View key={lead.id} style={{ marginTop: '8rpx' }}>
+                  <Text style={{ fontSize: '24rpx', color: '#374151', display: 'block' }}>
+                    {lead.summary_zh}
+                  </Text>
+                  {lead.key_facts_zh?.length > 0 && (
+                    <View className="flex flex-wrap gap-1 mt-1">
+                      {lead.key_facts_zh.slice(0, 4).map((f) => (
+                        <Text key={f} style={{ fontSize: '18rpx', color: '#7c3aed', background: '#f5f3ff', borderRadius: '8rpx', padding: '2rpx 8rpx' }}>
+                          {f}
+                        </Text>
+                      ))}
+                    </View>
+                  )}
+                </View>
               ))}
             </View>
           )}

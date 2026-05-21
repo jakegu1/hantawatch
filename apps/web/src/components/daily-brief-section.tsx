@@ -90,6 +90,15 @@ export function DailyBriefSection({
                 {metrics.monitoringLeads.map((lead) => (
                   <li key={lead.id} className="text-sm text-gray-800 leading-snug">
                     {lead.summary_zh}
+                    {lead.key_facts_zh?.length > 0 && (
+                      <span className="ml-2 inline-flex flex-wrap gap-1 align-middle">
+                        {lead.key_facts_zh.slice(0, 4).map((f) => (
+                          <span key={f} className="inline-block rounded-full bg-purple-100 px-1.5 py-0.5 text-[9px] text-purple-700">
+                            {f}
+                          </span>
+                        ))}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
