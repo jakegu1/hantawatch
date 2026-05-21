@@ -28,6 +28,7 @@ export function DailyBriefSection({
   const {
     metrics,
     briefHeadline24h,
+    briefTakeaway,
     briefNewCases,
     briefSituation,
     briefRiskJudgment,
@@ -75,7 +76,7 @@ export function DailyBriefSection({
                 </span>
               )}
             </div>
-            <p className="mt-2 text-base sm:text-lg font-bold leading-snug text-gray-950">{briefNewCases}</p>
+            <p className="mt-2 text-base sm:text-lg font-bold leading-snug text-gray-950">{briefTakeaway || briefNewCases}</p>
             <p className="mt-2 text-[11px] text-gray-600">{briefSourceSummary}</p>
           </div>
 
@@ -105,6 +106,10 @@ export function DailyBriefSection({
           <div className="rounded-xl bg-slate-50 border border-slate-200 p-3">
             <p className="text-[10px] font-medium text-slate-500">结构指标（较慢变化）</p>
             <p className="mt-1 text-xs text-slate-700 leading-relaxed">{structuralMetricsLine}</p>
+            <p className="mt-1.5 text-[9px] text-slate-400">
+              HPI / 距离均为 collector 原始值；
+              前端 HPI 已基于输入监测动态调整（见顶部 Badge）。
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-2 text-xs">

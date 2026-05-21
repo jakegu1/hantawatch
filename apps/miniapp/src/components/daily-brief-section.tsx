@@ -22,7 +22,7 @@ export function DailyBriefSection({
   highRiskDistanceText,
   highRiskDistanceContext,
 }: Props) {
-  const { metrics, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, briefFocusSentence, structuralMetricsLine, officialExcerpt, userActionHint } = content;
+  const { metrics, briefTakeaway, briefNewCases, briefSituation, briefRiskJudgment, briefShareLine, domesticBaselineText, briefFocusSentence, structuralMetricsLine, officialExcerpt, userActionHint } = content;
 
   return (
     <View className="container-page" style={{ padding: '0 24rpx', marginTop: '16rpx' }}>
@@ -54,7 +54,7 @@ export function DailyBriefSection({
           <View style={{ background: '#f5f3ff', border: '2rpx solid #c4b5fd', borderRadius: '12rpx', padding: '16rpx' }}>
             <Text style={{ fontSize: '20rpx', fontWeight: 700, color: '#6d28d9' }}>24 小时要点</Text>
             <Text style={{ fontSize: '28rpx', fontWeight: 800, color: '#111827', marginTop: '8rpx', display: 'block', lineHeight: 1.4 }}>
-              {briefNewCases}
+              {briefTakeaway || briefNewCases}
             </Text>
           </View>
 
@@ -80,6 +80,9 @@ export function DailyBriefSection({
             <Text style={{ fontSize: '20rpx', color: '#64748b' }}>结构指标</Text>
             <Text style={{ fontSize: '22rpx', color: '#475569', marginTop: '4rpx', display: 'block', lineHeight: 1.5 }}>
               {structuralMetricsLine}
+            </Text>
+            <Text style={{ fontSize: '18rpx', color: '#94a3b8', marginTop: '4rpx', display: 'block' }}>
+              HPI / 距离均为 collector 原始值；前端 HPI 已基于输入监测动态调整。
             </Text>
           </View>
 

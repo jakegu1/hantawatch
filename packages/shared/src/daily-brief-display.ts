@@ -152,6 +152,8 @@ export interface BriefSectionContent {
   metrics: BriefDisplayMetrics;
   /** Primary 24h fact — always from live signals, not stale JSON alone */
   briefHeadline24h: string;
+  /** Synthesised takeaway for the "24h要点" hero area (not raw signal) */
+  briefTakeaway: string;
   briefLatestChange: string;
   briefSituation: string;
   briefRiskJudgment: string;
@@ -206,6 +208,22 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
   const briefHeadline24h = metrics.headline24h;
 
+  // Synthesised takeaway — not a raw signal, but a contextualised sentence.
+  const briefTakeaway = (() => {
+    // AI-generated latestChange is designed for this slot
+    if (input.latestChange?.trim() && input.latestChange.trim().length > 15) {
+      return input.latestChange.trim();
+    }
+    // Synthesise from monitoring leads
+    if (metrics.monitoringLeads.length > 0) {
+      const signals = metrics.monitoringLeads.map((l) => l.summary_zh).join('；');
+      if (signals.length <= 100) return `今日监测信号：${signals}。`;
+      return `今日监测信号：${signals.slice(0, 97)}…。`;
+    }
+    // Fallback to raw headline
+    return briefHeadline24h;
+  })();
+
   const briefLatestChange =
     metrics.monitoringLeads[0]?.summary_zh ??
     (briefItems[0] ? briefCaseText(briefItems[0]) : briefHeadline24h);
@@ -227,16 +245,30 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
         ? '主要依据：专业监测源'
         : '主要依据：现有公开数据');
 
-  // Dynamic watchFocus: prefer live signals over static JSON fallback.
+  // Dynamic watchFocus from monitoring lead key_facts (deduplicated, ≤8 chars each).
   const dynamicWatchFocus = (() => {
+    const seen = new Set<string>();
     const live: string[] = [];
-    if (metrics.monitoringLeads[0]?.summary_zh) {
-      live.push(metrics.monitoringLeads[0].summary_zh.slice(0, 12));
+    for (const lead of metrics.monitoringLeads) {
+      const facts = lead.key_facts_zh ?? [];
+      for (const f of facts) {
+        const clean = f.replace(/[，,。.、\s]+/g, '').slice(0, 8);
+        if (clean && !seen.has(clean)) {
+          seen.add(clean);
+          live.push(clean);
+        }
+      }
     }
-    if (briefHeadline24h && briefHeadline24h.length > 10) {
-      live.push(briefHeadline24h.slice(0, 12));
+    if (live.length < 2 && briefHeadline24h) {
+      // Fallback: first 8 meaningful chars from headline
+      const headlineToken = briefHeadline24h.replace(/[，,。.、\s]+/g, '').slice(0, 8);
+      if (headlineToken && !seen.has(headlineToken)) {
+        live.push(headlineToken);
+      }
     }
-    if (metrics.cluesLast24h > 0) live.push('近24h监测线索');
+    if (live.length < 2 && metrics.cluesLast24h > 0) {
+      live.push('近24h监测线索');
+    }
     return live.length >= 2 ? live.slice(0, 3) : undefined;
   })();
   const briefWatchFocus = dynamicWatchFocus ??
@@ -272,6 +304,7 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
   return {
     metrics,
     briefHeadline24h,
+    briefTakeaway,
     briefLatestChange,
     briefSituation,
     briefRiskJudgment,
