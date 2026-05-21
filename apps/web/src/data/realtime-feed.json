@@ -1,19 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-21T22:15:37.106672+00:00",
+  "__generated_at": "2026-05-21T23:55:51.476014+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-21T22:15:35.894700+00:00",
+  "last_fetched": "2026-05-21T23:55:49.868349+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-3e7db9970da49723",
-      "time": "2026-05-21T21:20:41.000Z",
-      "title_en": "Officials monitoring World Cup health risks including Ebola, hantavirus - FOX 4 News Dallas-Fort Worth",
-      "body_en": "Officials monitoring World Cup health risks including Ebola, hantavirus FOX 4 News Dallas-Fort Worth",
-      "summary_zh": "美国达拉斯官员监测世界杯健康风险，包括埃博拉和汉坦病毒。",
+      "id": "rt-1c94e821820e2ae6",
+      "time": "2026-05-21T22:41:15.000Z",
+      "title_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings - BioPharma APAC",
+      "body_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings BioPharma APAC",
+      "summary_zh": "现代生物科学公司称XAFTY对埃博拉和汉坦病毒有潜在疗效。",
+      "key_facts_zh": [
+        "韩国",
+        "XAFTY",
+        "潜在治疗"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-71c2565406ef49f1",
+      "time": "2026-05-21T22:31:39.000Z",
+      "title_en": "Officials monitor World Cup for Ebola, hantavirus risks - FOX 4 News Dallas-Fort Worth",
+      "body_en": "Officials monitor World Cup for Ebola, hantavirus risks FOX 4 News Dallas-Fort Worth",
+      "summary_zh": "官员监测世界杯期间埃博拉和汉坦病毒风险。",
       "key_facts_zh": [
         "美国",
         "世界杯",
@@ -22,50 +35,11 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-eaec0bbe569efc5a",
-      "time": "2026-05-21T20:19:09.000Z",
-      "title_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine - NPR",
-      "body_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine NPR N.Y. man who was on hantavirus cruise ship says Nebraska isolation center feels like ‘prison’ NBC News American passenger on hantavirus-hit cruise feels ‘blindsided’ and ‘misled’ by new quarantine orders CNN",
-      "summary_zh": "美国乘客因联邦隔离令感到被背叛，内布拉斯加隔离中心如监狱。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4890b270fbc410a1",
-      "time": "2026-05-21T19:15:52.000Z",
-      "title_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected - KATU",
-      "body_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected KATU",
-      "summary_zh": "研究：汉坦病毒在太平洋西北部啮齿动物中比预期更普遍。",
-      "key_facts_zh": [
-        "美国",
-        "研究",
-        "啮齿动物"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-098017b87252c7f4",
-      "time": "2026-05-21T19:15:00.000Z",
-      "title_en": "Hantavirus found in shocking number of Pacific Northwest rodents - Scientific American",
-      "body_en": "Hantavirus found in shocking number of Pacific Northwest rodents Scientific American",
-      "summary_zh": "科学美国人：汉坦病毒在太平洋西北部啮齿动物中数量惊人。",
-      "key_facts_zh": [
-        "美国",
-        "研究",
-        "啮齿动物"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-77e3821db034646d",
-      "time": "2026-05-21T19:14:54.000Z",
+      "time": "2026-05-21T22:15:44.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO 举办网络研讨会，聚焦国际海事环境中的汉坦病毒。",
+      "summary_zh": "WHO举办汉坦病毒网络研讨会，聚焦国际海事环境。",
       "key_facts_zh": [
         "WHO",
         "网络研讨会",
@@ -74,15 +48,53 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-c3203012a4a34b66",
+      "time": "2026-05-21T22:14:21.000Z",
+      "title_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus - Bergeson & Campbell",
+      "body_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus Bergeson & Campbell",
+      "summary_zh": "美国EPA启动汉坦病毒紧急病原体指南。",
+      "key_facts_zh": [
+        "美国EPA",
+        "紧急指南"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-eaec0bbe569efc5a",
+      "time": "2026-05-21T20:19:09.000Z",
+      "title_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine - NPR",
+      "body_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine NPR",
+      "summary_zh": "美国乘客因汉坦病毒隔离令感到被背叛。",
+      "key_facts_zh": [
+        "美国",
+        "隔离",
+        "乘客"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6ecd631d2dd6f44b",
+      "time": "2026-05-21T18:17:11.000Z",
+      "title_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist - University of Alberta",
+      "body_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist University of Alberta",
+      "summary_zh": "病毒学家称埃博拉和汉坦病毒凸显全球大流行防范需求。",
+      "key_facts_zh": [
+        "加拿大",
+        "病毒学家",
+        "防范"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-043bcfab19ad75b1",
       "time": "2026-05-21T18:13:43.000Z",
       "title_en": "2 Americans forced into quarantine following deadly cruise ship hantavirus outbreak - NPR",
       "body_en": "2 Americans forced into quarantine following deadly cruise ship hantavirus outbreak NPR",
-      "summary_zh": "美国2人因邮轮汉坦病毒疫情被强制隔离。",
+      "summary_zh": "两名美国人因邮轮汉坦病毒爆发被强制隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "强制隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -91,24 +103,24 @@
       "time": "2026-05-21T18:05:00.000Z",
       "title_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers - The Guardian",
       "body_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers The Guardian",
-      "summary_zh": "美国对接触致命病毒旅客的限制可能侵犯权利。",
+      "summary_zh": "美国对接触致命病毒旅行者的限制可能侵犯权利。",
       "key_facts_zh": [
         "美国",
         "旅行限制",
-        "权利争议"
+        "权利"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-fb32968bfd01051c",
-      "time": "2026-05-21T17:53:39.000Z",
-      "title_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest - KXLY.com",
-      "body_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest KXLY.com",
-      "summary_zh": "华盛顿州立大学研究发现太平洋西北地区汉坦病毒高流行。",
+      "id": "rt-21ddc9e01c325708",
+      "time": "2026-05-21T17:33:01.000Z",
+      "title_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest - WSU Insider",
+      "body_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest WSU Insider",
+      "summary_zh": "华盛顿州立大学研究发现美国西北部部分地区汉坦病毒高流行。",
       "key_facts_zh": [
         "美国",
         "华盛顿州立大学",
-        "汉坦病毒流行"
+        "高流行"
       ],
       "signal_strength": "medium"
     },
@@ -121,7 +133,7 @@
       "key_facts_zh": [
         "英国",
         "邮轮",
-        "监测研究"
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -130,38 +142,50 @@
       "time": "2026-05-21T16:03:50.000Z",
       "title_en": "N.Y. man who was on hantavirus cruise ship says Nebraska isolation center feels like ‘prison’ - NBC News",
       "body_en": "N.Y. man who was on hantavirus cruise ship says Nebraska isolation center feels like ‘prison’ NBC News",
-      "summary_zh": "纽约汉坦病毒邮轮乘客称内布拉斯加隔离中心像监狱。",
+      "summary_zh": "纽约男子称内布拉斯加隔离中心像监狱，他曾乘坐汉坦病毒邮轮。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "隔离中心"
+        "纽约",
+        "内布拉斯加"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-5915894d8553cfc8",
+      "time": "2026-05-21T15:40:06.000Z",
+      "title_en": "High prevalence of hantavirus in some areas of the Pacific Northwest - Medical Xpress",
+      "body_en": "High prevalence of hantavirus in some areas of the Pacific Northwest Medical Xpress",
+      "summary_zh": "美国西北部部分地区汉坦病毒高流行。",
+      "key_facts_zh": [
+        "美国",
+        "高流行"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-58be3ebc94a9e214",
       "time": "2026-05-21T15:29:05.000Z",
       "title_en": "Cruise ship plays a crucial role in the hantavirus outbreak - Clinical Trials Arena",
       "body_en": "Cruise ship plays a crucial role in the hantavirus outbreak Clinical Trials Arena",
-      "summary_zh": "邮轮在汉坦病毒暴发中扮演关键角色。",
+      "summary_zh": "邮轮在汉坦病毒暴发中发挥关键作用。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒"
+        "暴发"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-fffae4cc4573a794",
       "time": "2026-05-21T15:05:29.000Z",
       "title_en": "Molecular evolutionary analysis of the current MV Hondius Andes virus outbreak - Virological",
       "body_en": "Molecular evolutionary analysis of the current MV Hondius Andes virus outbreak Virological",
-      "summary_zh": "对MV Hondius邮轮安第斯病毒暴发进行分子进化分析。",
+      "summary_zh": "对当前MV Hondius安第斯病毒暴发进行分子进化分析。",
       "key_facts_zh": [
-        "邮轮",
-        "分子进化",
-        "安第斯病毒"
+        "MV Hondius",
+        "安第斯病毒",
+        "进化分析"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-b4ea7fae36f18cf0",
@@ -171,35 +195,10 @@
       "summary_zh": "欧盟加速汉坦病毒疫苗研究。",
       "key_facts_zh": [
         "欧盟",
-        "疫苗研究"
+        "疫苗",
+        "加速"
       ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-88dc0ff5c3c59711",
-      "time": "2026-05-21T13:31:40.000Z",
-      "title_en": "MEPs clash over EU hantavirus response in Covid déjà-vu - Euractiv",
-      "body_en": "MEPs clash over EU hantavirus response in Covid déjà-vu Euractiv",
-      "summary_zh": "欧洲议会议员就欧盟汉坦病毒应对措施发生冲突。",
-      "key_facts_zh": [
-        "欧盟",
-        "欧洲议会",
-        "应对措施"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-2855e2eba69d5329",
-      "time": "2026-05-21T11:14:30.000Z",
-      "title_en": "Sentara prepares for possible hantavirus infections - WAVY.com",
-      "body_en": "Sentara prepares for possible hantavirus infections WAVY.com",
-      "summary_zh": "Sentara医院为可能的汉坦病毒感染做准备。",
-      "key_facts_zh": [
-        "Sentara",
-        "准备",
-        "汉坦病毒"
-      ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
