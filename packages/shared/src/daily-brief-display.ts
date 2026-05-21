@@ -16,15 +16,15 @@ import {
 export interface CaseTableRow {
   date: string;
   countryNameZh: string;
-  countryFlag: string;
   caseType: 'import' | 'local' | 'outbreak';
+  /** Source type for display: 邮轮输入 / 本地散发 / 聚集疫情 */
+  sourceType: string;
   serotypeLabel: string;
   newConfirmed: number;
   totalConfirmed: number;
   deaths: number;
   monitoring: number;
   sourceName: string;
-  cruiseRelated: boolean;
 }
 
 export interface ImportSummaryInput {
@@ -190,6 +190,8 @@ export interface BriefSectionContent {
   userActionHint: string;
   /** Structured case table for comparison view */
   caseTable: CaseTableRow[];
+  /** Summary totals: confirmed, monitoring, deaths across all rows */
+  caseTableSummary: { totalConfirmed: number; totalMonitoring: number; totalDeaths: number };
 }
 
 function briefCaseText(c: TimelineCase): string {
@@ -364,22 +366,32 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
     structuralMetricsLine,
     userActionHint,
     caseTable: buildCaseTable(input),
+    caseTableSummary: _computeCaseTableSummary(buildCaseTable(input)),
+  };
+}
+
+function _computeCaseTableSummary(rows: CaseTableRow[]): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
+  return {
+    totalConfirmed: rows.reduce((s, r) => s + r.totalConfirmed, 0),
+    totalMonitoring: rows.reduce((s, r) => s + r.monitoring, 0),
+    totalDeaths: rows.reduce((s, r) => s + r.deaths, 0),
   };
 }
 
 /** Build structured case table from recent cases + import summaries. */
-function countryFlagFor(name: string): string {
-  const map: Record<string, string> = { '法国': '🇫🇷', '西班牙': '🇪🇸', '美国': '🇺🇸',
-    '加拿大': '🇨🇦', '英国': '🇬🇧', '德国': '🇩🇪', '澳大利亚': '🇦🇺', '智利': '🇨🇱',
-    '阿根廷': '🇦🇷', '台湾省': '🇹🇼', '罗马尼亚': '🇷🇴', '中国': '🇨🇳',
+/** Serotype → Chinese display name */
+function serotypeLabel(id: string): string {
+  const map: Record<string, string> = {
+    'andes': '安第斯型', 'hantaan': '汉滩型', 'seoul': '汉城型',
+    'puumala': '普马拉型', 'sin_nombre': '无名型',
   };
-  return map[name] ?? '🌐';
+  return map[id] ?? (id === 'other' ? '欧洲株' : id);
 }
 
-function serotypeLabel(id: string): string {
-  const map: Record<string, string> = { 'andes': 'ANDV', 'hantaan': 'HTNV',
-    'seoul': 'SEOV', 'puumala': 'PUUV', 'sin_nombre': 'SNV' };
-  return map[id] ?? (id === 'other' ? '欧洲株' : id.toUpperCase());
+/** Normalise 台湾 → 台湾省 */
+function normaliseCountry(name: string): string {
+  if (name === '台湾' || name === '台湾省') return '台湾省';
+  return name;
 }
 
 function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
@@ -400,15 +412,14 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
       rows.push({
         date: c.date,
         countryNameZh: 'MV Hondius 邮轮',
-        countryFlag: '🚢',
         caseType: 'outbreak',
-        serotypeLabel: 'ANDV',
+        sourceType: '聚集疫情',
+        serotypeLabel: serotypeLabel(c.serotypeId),
         newConfirmed: 0,
         totalConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
         deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
         monitoring: 0,
         sourceName: c.source.name,
-        cruiseRelated: true,
       });
     }
   }
@@ -423,16 +434,15 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
     const isImport = imp.summary_zh.includes('确诊输入') || imp.summary_zh.includes('隔离中');
     rows.push({
       date: imp.date,
-      countryNameZh: name,
-      countryFlag: countryFlagFor(name),
+      countryNameZh: normaliseCountry(name),
       caseType: isImport ? 'import' : 'local',
-      serotypeLabel: 'ANDV',
+      sourceType: isImport ? '邮轮输入' : '本地散发',
+      serotypeLabel: '安第斯型',
       newConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
       totalConfirmed: confMatch ? parseInt(confMatch[1]) : (isImport ? 1 : 0),
       deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
       monitoring: 0,
       sourceName: isImport ? 'WHO / 各国卫生部' : '官方通报',
-      cruiseRelated: isImport,
     });
   }
 
@@ -450,16 +460,15 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
     const summary = c.summary ?? c.notes ?? '';
     rows.push({
       date: c.date,
-      countryNameZh: country,
-      countryFlag: isChina ? '🇨🇳' : countryFlagFor(country),
-      caseType: isChina ? 'local' : 'local',
+      countryNameZh: normaliseCountry(isChina ? '中国' : country),
+      caseType: 'local',
+      sourceType: '本地散发',
       serotypeLabel: serotypeLabel(c.serotypeId),
       newConfirmed: 1,
       totalConfirmed: 1,
       deaths: summary.includes('死亡') ? 1 : 0,
       monitoring: 0,
       sourceName: c.source?.name ?? '',
-      cruiseRelated: false,
     });
   }
 
