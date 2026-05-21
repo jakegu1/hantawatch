@@ -1,8 +1,135 @@
 {
-  "__generated_by": "hantawatch-collector@0.1.0 (placeholder)",
-  "__note": "This file is auto-generated when the collector runs. Placeholder exists so builds don't fail before first collector run.",
-  "fetchedAt": "",
-  "sourceUrl": "",
-  "layerCount": 0,
-  "cases": []
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-05-21T08:45:27.905263+00:00",
+  "fetchedAt": "2026-05-21T08:45:08.080465+00:00",
+  "sourceUrl": "https://services1.arcgis.com/wb4Og4gH5mvzQAIV/arcgis/rest/services/Tracking_Hantavirus_2026/FeatureServer",
+  "layerCount": 1,
+  "cases": [
+    {
+      "country": "AUSTRALIA",
+      "confirmed": 0,
+      "monitoring": 6,
+      "deaths": 0,
+      "total": 6
+    },
+    {
+      "country": "BELGIUM",
+      "confirmed": 0,
+      "monitoring": 2,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "CANADA",
+      "confirmed": 0,
+      "monitoring": 7,
+      "deaths": 0,
+      "total": 7
+    },
+    {
+      "country": "CAPE VERDE",
+      "confirmed": 0,
+      "monitoring": 1,
+      "deaths": 0,
+      "total": 1
+    },
+    {
+      "country": "FRANCE",
+      "confirmed": 1,
+      "monitoring": 4,
+      "deaths": 0,
+      "total": 6
+    },
+    {
+      "country": "GERMANY",
+      "confirmed": 0,
+      "monitoring": 4,
+      "deaths": 0,
+      "total": 4
+    },
+    {
+      "country": "GREECE",
+      "confirmed": 0,
+      "monitoring": 1,
+      "deaths": 0,
+      "total": 1
+    },
+    {
+      "country": "IRELAND",
+      "confirmed": 0,
+      "monitoring": 2,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "NETHERLANDS",
+      "confirmed": 2,
+      "monitoring": 3,
+      "deaths": 0,
+      "total": 6
+    },
+    {
+      "country": "ONBOARD",
+      "confirmed": 0,
+      "monitoring": 0,
+      "deaths": 0,
+      "total": 3
+    },
+    {
+      "country": "SINGAPORE",
+      "confirmed": 0,
+      "monitoring": 1,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "SOUTH AFRICA",
+      "confirmed": 1,
+      "monitoring": 0,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "SPAIN",
+      "confirmed": 1,
+      "monitoring": 0,
+      "deaths": 0,
+      "total": 3
+    },
+    {
+      "country": "ST HELENA",
+      "confirmed": 1,
+      "monitoring": 0,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "SWITZERLAND",
+      "confirmed": 1,
+      "monitoring": 0,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "TURKEY",
+      "confirmed": 0,
+      "monitoring": 2,
+      "deaths": 0,
+      "total": 2
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "confirmed": 0,
+      "monitoring": 28,
+      "deaths": 0,
+      "total": 28
+    },
+    {
+      "country": "UNITED STATES",
+      "confirmed": 1,
+      "monitoring": 24,
+      "deaths": 0,
+      "total": 26
+    }
+  ]
 }
