@@ -342,11 +342,14 @@ SYSTEM_PROMPT = (
     "犹豫时往低档判。\n\n"
     "【第二步：翻译 + 提取关键事实】\n"
     "对每条都翻译，无论强度：\n"
-    "1. summary_zh：≤40 个中文字写核心要点。事实优先，不带情绪。\n"
+    "1. summary_zh：≤50 中文字，必须含地点（国家/地区）。事实优先，不带情绪。\n"
+    "   例：「美国内布拉斯加州一男子因威胁在隔离区实施枪击被捕」。\n"
     "2. key_facts_zh：1-3 个短标签，每个≤8 汉字。优先："
     "国家/地区中文名（「美国」「西班牙」「内布拉斯加」）、"
-    "病例动态（「新增 2 例」「确诊」「监测中」「死亡 1 例」）、"
-    "主体（「WHO」「CDC」「邮轮」）。\n\n"
+    "病例动态（「新增 2 例」「确诊」「监测中」）、"
+    "主体（「WHO」「美国 CDC」「邮轮」）。\n"
+    "3. 缩写规则：CDC 必须写成「美国 CDC」，UNMC 必须写成「内布拉斯加医学中心」，"
+    "ECDC 写成「欧洲 CDC」，PHAC 写成「加拿大公共卫生署」。\n\n"
     "输出必须是合法 JSON，不要 markdown、不要解释。"
 )
 
@@ -389,6 +392,14 @@ def _postprocess_translation_text(value: str) -> str:
         "加拿大确诊": "加拿大报告",
         "首例确诊": "首例病例",
         "结束航程": "完成航程",
+        # Expand bare abbreviations that may survive the prompt constraint.
+        " UNMC ": " 内布拉斯加医学中心 ",
+        "在UNMC": "在内布拉斯加医学中心",
+        "到UNMC": "到内布拉斯加医学中心",
+        "留在UNMC": "留在内布拉斯加医学中心",
+        "CDC 命令": "美国 CDC 命令",
+        "CDC命令": "美国 CDC 命令",
+        "CDC 的": "美国 CDC 的",
     }
     out = value
     for old, new in replacements.items():
