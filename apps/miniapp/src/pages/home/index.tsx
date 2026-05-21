@@ -110,7 +110,7 @@ export default function HomePage() {
     ? `约 ${fmt(displayedDistanceKm)} km（${nearestImport.nameZh}，${nearestImport.statusZh}）`
     : `约 ${fmt(displayedDistanceKm)} km（${cluster?.location?.name ?? '当前重点疫情'}）`;
   const highRiskDistanceContext = hasImportDistance && nearestImport
-    ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster?.distanceFromChinaKm ?? 0)} km；当前按最近输入监测距离展示。`
+    ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster?.distanceFromChinaKm ?? 0)} km；当前按地理距离最近的输入病例展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
 
   const briefContent = useMemo(

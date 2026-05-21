@@ -133,8 +133,8 @@ export function computeBriefDisplay(input: BriefDisplayInput): BriefDisplayMetri
 
   let alertLabel = `距上次 WHO 官方更新 ${whoDays} 天`;
   if (cluesLast24h > 0) {
-    const shown = Math.min(cluesLast24h, monitoringLeads.length + 1);
-    alertLabel += ` · 近 24h ${cluesLast24h} 条线索（展示 ${shown} 条最高信号）`;
+    const shown = monitoringLeads.length;
+    alertLabel += ` · 近 24h 抓取 ${cluesLast24h} 条相关信息，精选 ${shown} 条高可信信号`;
   } else {
     alertLabel += ' · 近 24h 无新高可信通报';
   }
@@ -208,19 +208,22 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
   const briefHeadline24h = metrics.headline24h;
 
-  // Synthesised takeaway — not a raw signal, but a contextualised sentence.
+  // Synthesised takeaway — prefers fresh hourly signals over stale collector AI.
   const briefTakeaway = (() => {
-    // AI-generated latestChange is designed for this slot
-    if (input.latestChange?.trim() && input.latestChange.trim().length > 15) {
-      return input.latestChange.trim();
+    // 1. Fresh 24h headline from realtime feed (updated hourly via feeds-only)
+    if (briefHeadline24h && briefHeadline24h.length > 15) {
+      return briefHeadline24h;
     }
-    // Synthesise from monitoring leads
+    // 2. Synthesise from monitoring leads
     if (metrics.monitoringLeads.length > 0) {
       const signals = metrics.monitoringLeads.map((l) => l.summary_zh).join('；');
       if (signals.length <= 100) return `今日监测信号：${signals}。`;
       return `今日监测信号：${signals.slice(0, 97)}…。`;
     }
-    // Fallback to raw headline
+    // 3. Fallback: AI latestChange from last full collector run
+    if (input.latestChange?.trim() && input.latestChange.trim().length > 15) {
+      return input.latestChange.trim();
+    }
     return briefHeadline24h;
   })();
 
@@ -245,29 +248,32 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
         ? '主要依据：专业监测源'
         : '主要依据：现有公开数据');
 
-  // Dynamic watchFocus from monitoring lead key_facts (deduplicated, ≤8 chars each).
+  // Dynamic watchFocus from monitoring lead key_facts (deduplicated, ≤6 chars each).
   const dynamicWatchFocus = (() => {
     const seen = new Set<string>();
     const live: string[] = [];
     for (const lead of metrics.monitoringLeads) {
       const facts = lead.key_facts_zh ?? [];
       for (const f of facts) {
-        const clean = f.replace(/[，,。.、\s]+/g, '').slice(0, 8);
+        // Keep full fact, cap at 6 chars for display density
+        const clean = f.replace(/[，,。.、\s]+/g, '').slice(0, 6);
         if (clean && !seen.has(clean)) {
           seen.add(clean);
           live.push(clean);
         }
       }
     }
-    if (live.length < 2 && briefHeadline24h) {
-      // Fallback: first 8 meaningful chars from headline
-      const headlineToken = briefHeadline24h.replace(/[，,。.、\s]+/g, '').slice(0, 8);
-      if (headlineToken && !seen.has(headlineToken)) {
-        live.push(headlineToken);
+    if (live.length < 2 && input.evidence?.length) {
+      for (const e of input.evidence) {
+        const clean = e.replace(/[，,。.、\s]+/g, '').slice(0, 6);
+        if (clean && !seen.has(clean) && live.length < 3) {
+          seen.add(clean);
+          live.push(clean);
+        }
       }
     }
     if (live.length < 2 && metrics.cluesLast24h > 0) {
-      live.push('近24h监测线索');
+      live.push('近24h新信号');
     }
     return live.length >= 2 ? live.slice(0, 3) : undefined;
   })();
