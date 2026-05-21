@@ -394,6 +394,16 @@ function normaliseCountry(name: string): string {
   return name;
 }
 
+/** ArcGIS English country names → Chinese for merge matching */
+const ARCGIS_COUNTRY_MAP: Record<string, string> = {
+  'FRANCE': '法国', 'SPAIN': '西班牙', 'UNITED STATES': '美国',
+  'UNITED KINGDOM': '英国', 'CANADA': '加拿大', 'AUSTRALIA': '澳大利亚',
+  'GERMANY': '德国', 'NETHERLANDS': '荷兰', 'BELGIUM': '比利时',
+  'SWITZERLAND': '瑞士', 'SOUTH AFRICA': '南非', 'SINGAPORE': '新加坡',
+  'TURKEY': '土耳其', 'GREECE': '希腊', 'IRELAND': '爱尔兰',
+  'CAPE VERDE': '佛得角', 'ST HELENA': '圣赫勒拿', 'ONBOARD': 'MV Hondius 邮轮',
+};
+
 function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   const rows: CaseTableRow[] = [];
   const seen = new Set<string>();
@@ -475,16 +485,31 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   // Merge ArcGIS monitoring data into existing rows
   if (input.arcgisCases?.length) {
     for (const ac of input.arcgisCases) {
+      const arcgisCountryZh = ARCGIS_COUNTRY_MAP[ac.country.toUpperCase()] || ac.country;
       const existing = rows.find((r) => {
-        const cn = r.countryNameZh.toUpperCase();
-        const acn = ac.country.toUpperCase();
-        return cn === acn || cn.includes(acn) || acn.includes(cn);
+        const cn = r.countryNameZh;
+        return cn === arcgisCountryZh || cn.includes(arcgisCountryZh) || arcgisCountryZh.includes(cn);
       });
       if (existing) {
         existing.monitoring = ac.monitoring;
         if (existing.totalConfirmed === 0 && ac.confirmed > 0) {
           existing.totalConfirmed = ac.confirmed;
         }
+      }
+      // If no existing row, add a new one from ArcGIS data
+      if (!existing && ac.total > 0) {
+        rows.push({
+          date: '',
+          countryNameZh: arcgisCountryZh,
+          caseType: 'import',
+          sourceType: '邮轮输入',
+          serotypeLabel: '安第斯型',
+          newConfirmed: ac.confirmed,
+          totalConfirmed: ac.confirmed,
+          deaths: 0,
+          monitoring: ac.monitoring,
+          sourceName: 'ArcGIS ANDV Dashboard',
+        });
       }
     }
   }
