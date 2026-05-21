@@ -15,6 +15,8 @@ import {
 export interface ImportSummaryInput {
   date: string;
   summary_zh: string;
+  /** Canonical Chinese country name for display (e.g. "法国") */
+  countryNameZh?: string;
 }
 
 export interface BriefDisplayInput {
@@ -305,12 +307,21 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
   const userActionHint = (() => {
     if (input.hpiTotal <= 20) return '当前无需特殊行动，保持常规卫生防护即可。';
-    const importCountries = (input.importSummaries ?? [])
-      .filter((i) => i.summary_zh.includes('确诊输入') || i.summary_zh.includes('隔离中'))
-      .map((i) => i.summary_zh.match(/[\u4e00-\u9fff]{2,3}(?=确诊|输入|隔离)/)?.[0])
-      .filter(Boolean);
-    if (importCountries.length > 0) {
-      const cs = [...new Set(importCountries)].slice(0, 2).join('、');
+    const importSummaries = input.importSummaries ?? [];
+    const candidates = importSummaries.filter(
+      (i) => i.summary_zh.includes('确诊输入') || i.summary_zh.includes('隔离中'),
+    );
+    // Prefer explicit countryNameZh, fallback to regex extract from summary
+    const names = candidates
+      .map((i) => {
+        if (i.countryNameZh) return i.countryNameZh;
+        // Try country name before 确诊/输入/隔离 (2-3 CJK chars, may have intervening digits/space)
+        const m = i.summary_zh.match(/([\u4e00-\u9fff]{2,3}).*?(?:确诊输入|隔离)/);
+        return m?.[1] ?? null;
+      })
+      .filter(Boolean) as string[];
+    if (names.length > 0) {
+      const cs = [...new Set(names)].slice(0, 2).join('、');
       return `已有输入病例报告国家：${cs}。如有相关旅行计划，可查看中国驻当地使领馆健康提示。`;
     }
     if (input.hpiTotal <= 35) return '当前无需特殊行动，建议关注下方最新通报了解态势变化。';

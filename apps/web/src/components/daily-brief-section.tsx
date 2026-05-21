@@ -5,7 +5,6 @@ import { ChevronRight, Radio, Sparkles, ChevronDown, ChevronUp } from 'lucide-re
 import { useState } from 'react';
 import type { BriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import { MV_HONDIUS_EVENT_PATH } from '@hantawatch/shared/mv-hondius-event';
-import { FeedLegend } from '@/components/feed-legend';
 
 interface DailyBriefSectionProps {
   briefDate: string;
@@ -194,24 +193,10 @@ export function DailyBriefSection({
               <p className="text-xs text-slate-700 leading-relaxed">{structuralMetricsLine}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div className="rounded-lg bg-orange-50 p-2.5 ring-1 ring-orange-100">
-                <div className="text-[9px] text-orange-700 font-medium mb-0.5">态势综合</div>
-                <div className="text-xs font-bold leading-relaxed text-gray-900">{briefSituation}</div>
-              </div>
-              <div className="rounded-lg bg-blue-50 p-2.5 ring-1 ring-blue-100">
-                <div className="text-[9px] text-blue-700 font-medium mb-0.5">中国风险</div>
-                <div className="text-xs font-bold leading-relaxed text-gray-900">{briefRiskJudgment}</div>
-              </div>
-            </div>
-
             <div className="rounded-lg bg-gray-900 p-3 text-white">
-              <p className="text-[9px] font-medium text-blue-200 mb-0.5">综合判断</p>
+              <p className="text-[9px] font-medium text-blue-200 mb-0.5">综合判断与风险</p>
               <p className="text-xs font-semibold leading-relaxed">{briefShareLine}</p>
-            </div>
-
-            <div className="px-2 py-1.5 border-b border-brand-100 bg-white -mx-4 sm:-mx-5">
-              <FeedLegend feedId="daily-brief" compact />
+              <p className="mt-1 text-[9px] text-slate-400 leading-relaxed">{briefRiskJudgment}</p>
             </div>
 
             <Link

@@ -342,13 +342,18 @@ export const realtimeFeed: RealtimeFeed = {
 export const hondiusImports: MvHondiusImport[] =
   (mvHondiusImportsJson.imports as MvHondiusImport[]) ?? [];
 
+const _COUNTRY_NAMES_ZH: Record<string, string> = {
+  US: '美国', AU: '澳大利亚', ES: '西班牙', FR: '法国',
+  CA: '加拿大', GB: '英国', DE: '德国', CL: '智利', AR: '阿根廷',
+};
+
 /** For daily-brief headline fallback — shared shape with collector + shared lib. */
-export const hondiusImportSummaries: { date: string; summary_zh: string }[] = hondiusImports.map(
-  (imp) => ({
+export const hondiusImportSummaries: { date: string; summary_zh: string; countryNameZh?: string }[] =
+  hondiusImports.map((imp) => ({
     date: imp.date,
     summary_zh: imp.summary_zh,
-  }),
-);
+    countryNameZh: _COUNTRY_NAMES_ZH[imp.iso2?.toUpperCase() ?? ''] ?? undefined,
+  }));
 
 export const hondiusOutbreakName: string =
   (mvHondiusImportsJson as { outbreakName?: string }).outbreakName ??
