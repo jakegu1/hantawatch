@@ -22,6 +22,7 @@ export interface CaseTableRow {
   newConfirmed: number;
   totalConfirmed: number;
   deaths: number;
+  monitoring: number;
   sourceName: string;
   cruiseRelated: boolean;
 }
@@ -53,6 +54,8 @@ export interface BriefDisplayInput {
   recentCases: TimelineCase[];
   realtimeUpdates: RealtimeSignalInput[];
   importSummaries?: ImportSummaryInput[];
+  /** ArcGIS per-country tracking data (monitoring counts) */
+  arcgisCases?: Array<{ country: string; confirmed: number; monitoring: number; total: number }>;
   hpiTotal: number;
   chinaRiskFallback?: string;
 }
@@ -403,6 +406,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
         newConfirmed: 0,
         totalConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
         deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
+        monitoring: 0,
         sourceName: c.source.name,
         cruiseRelated: true,
       });
@@ -426,6 +430,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
       newConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
       totalConfirmed: confMatch ? parseInt(confMatch[1]) : (isImport ? 1 : 0),
       deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
+      monitoring: 0,
       sourceName: isImport ? 'WHO / 各国卫生部' : '官方通报',
       cruiseRelated: isImport,
     });
@@ -452,9 +457,27 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
       newConfirmed: 1,
       totalConfirmed: 1,
       deaths: summary.includes('死亡') ? 1 : 0,
+      monitoring: 0,
       sourceName: c.source?.name ?? '',
       cruiseRelated: false,
     });
+  }
+
+  // Merge ArcGIS monitoring data into existing rows
+  if (input.arcgisCases?.length) {
+    for (const ac of input.arcgisCases) {
+      const existing = rows.find((r) => {
+        const cn = r.countryNameZh.toUpperCase();
+        const acn = ac.country.toUpperCase();
+        return cn === acn || cn.includes(acn) || acn.includes(cn);
+      });
+      if (existing) {
+        existing.monitoring = ac.monitoring;
+        if (existing.totalConfirmed === 0 && ac.confirmed > 0) {
+          existing.totalConfirmed = ac.confirmed;
+        }
+      }
+    }
   }
 
   // Deduplicate by countryNameZh and sort by date desc

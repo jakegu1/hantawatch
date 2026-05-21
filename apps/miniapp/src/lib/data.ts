@@ -233,6 +233,11 @@ const _COUNTRY_NAMES_ZH: Record<string, string> = {
   CA: '加拿大', GB: '英国', DE: '德国', CL: '智利', AR: '阿根廷',
 };
 
+import arcgisAndvTrackingJson from '@web-data/arcgis-andv-tracking.json';
+
+export const arcgisCases: Array<{ country: string; confirmed: number; monitoring: number; total: number }> =
+  (arcgisAndvTrackingJson as { cases?: typeof arcgisCases }).cases ?? [];
+
 export const hondiusImportSummaries: { date: string; summary_zh: string; countryNameZh?: string }[] =
   hondiusImports.map((imp) => ({
     date: imp.date,

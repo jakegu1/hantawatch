@@ -140,6 +140,7 @@ export function DailyBriefSection({
                     <th className="pb-1 font-medium">国家/事件</th>
                     <th className="pb-1 font-medium">毒株</th>
                     <th className="pb-1 font-medium text-right">确诊</th>
+                    <th className="pb-1 font-medium text-right">监测中</th>
                     <th className="pb-1 font-medium text-right">死亡</th>
                     <th className="pb-1 font-medium">来源</th>
                     <th className="pb-1 font-medium text-center">邮轮</th>
@@ -159,6 +160,9 @@ export function DailyBriefSection({
                             {row.totalConfirmed}
                           </span>
                         )}
+                      </td>
+                      <td className="py-1 text-right font-mono text-gray-500">
+                        {row.monitoring > 0 ? row.monitoring : '—'}
                       </td>
                       <td className="py-1 text-right font-mono text-gray-800">
                         {row.deaths > 0 ? <span className="text-red-600">{row.deaths}</span> : '—'}

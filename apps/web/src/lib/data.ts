@@ -348,6 +348,12 @@ const _COUNTRY_NAMES_ZH: Record<string, string> = {
 };
 
 /** For daily-brief headline fallback — shared shape with collector + shared lib. */
+// ---- ArcGIS ANDV tracking (auto-fetched) --------------------------------
+import arcgisAndvTrackingJson from '@/data/arcgis-andv-tracking.json';
+
+export const arcgisCases: Array<{ country: string; confirmed: number; monitoring: number; total: number }> =
+  (arcgisAndvTrackingJson as { cases?: typeof arcgisCases }).cases ?? [];
+
 export const hondiusImportSummaries: { date: string; summary_zh: string; countryNameZh?: string }[] =
   hondiusImports.map((imp) => ({
     date: imp.date,

@@ -132,6 +132,7 @@ export default function HomePage() {
         recentCases: liveRecentCases,
         realtimeUpdates: realtimeFeed.updates,
         importSummaries: hondiusImportSummaries,
+        arcgisCases: arcgisCases,
         structuralLine: todayBrief.structuralLine,
         hpiTotal: hpi.total,
       }),

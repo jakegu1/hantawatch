@@ -125,6 +125,12 @@ def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
     recent_intl = merge_manual_news_leads(recent_intl, out_dir / "news-leads-manual.json")
 
     try:
+        arcgis_data = fetch_andv_data()
+    except Exception as e:
+        logger.warning("ArcGIS ANDV Dashboard: feeds-only fetch failed (%s)", e)
+        arcgis_data = None
+
+    try:
         feed = build_realtime_feed()
     except Exception as e:
         logger.error("realtime feed: build failed (%s)", e)
@@ -146,6 +152,8 @@ def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
         write_generated_json(out_dir / "realtime-feed.json", feed.to_payload())
     if country_signals is not None:
         write_generated_json(out_dir / "country-signals.json", country_signals)
+    if arcgis_data is not None:
+        write_generated_json(out_dir / "arcgis-andv-tracking.json", arcgis_data)
 
     meta = read_json(out_dir / "meta.json", default=None) or {}
     meta.setdefault("sources", {})

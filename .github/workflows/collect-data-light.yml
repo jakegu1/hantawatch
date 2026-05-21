@@ -70,7 +70,8 @@ jobs:
                   apps/web/src/data/realtime-feed.json \
                   apps/web/src/data/country-signals.json \
                   apps/web/src/data/meta.json \
-                  apps/web/src/data/daily-brief.json
+                  apps/web/src/data/daily-brief.json \
+                  apps/web/src/data/arcgis-andv-tracking.json
           if git diff --cached --quiet; then
             echo "No light-feed changes."
             exit 0
