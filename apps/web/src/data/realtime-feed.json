@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-22T02:42:21.877661+00:00",
+  "__generated_at": "2026-05-22T02:43:36.978208+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-22T02:42:20.663132+00:00",
+  "last_fetched": "2026-05-22T02:43:31.237586+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,11 @@
       "time": "2026-05-22T01:17:35.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒国际海运环境网络研讨会。",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际海运环境。",
       "key_facts_zh": [
         "WHO",
-        "研讨会"
+        "研讨会",
+        "海运"
       ],
       "signal_strength": "high"
     },
@@ -25,10 +26,11 @@
       "time": "2026-05-21T22:41:15.000Z",
       "title_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings - BioPharma APAC",
       "body_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings BioPharma APAC",
-      "summary_zh": "现代生物科学称XAFTY对埃博拉和汉坦病毒有治疗潜力。",
+      "summary_zh": "现代生物科学公司称 XAFTY 对埃博拉和汉坦病毒有治疗潜力。",
       "key_facts_zh": [
-        "现代生物科学",
-        "治疗"
+        "韩国",
+        "XAFTY",
+        "治疗潜力"
       ],
       "signal_strength": "medium"
     },
@@ -37,10 +39,11 @@
       "time": "2026-05-21T22:40:09.000Z",
       "title_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected - KOMO",
       "body_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected KOMO",
-      "summary_zh": "研究发现太平洋西北部啮齿动物汉坦病毒比预期更普遍。",
+      "summary_zh": "研究发现太平洋西北地区啮齿动物汉坦病毒携带率高于预期。",
       "key_facts_zh": [
         "美国",
-        "研究"
+        "啮齿动物",
+        "携带率"
       ],
       "signal_strength": "medium"
     },
@@ -49,10 +52,11 @@
       "time": "2026-05-21T22:14:21.000Z",
       "title_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus - Bergeson & Campbell",
       "body_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus Bergeson & Campbell",
-      "summary_zh": "美国 EPA 启动汉坦病毒紧急病毒病原体指南。",
+      "summary_zh": "美国 EPA 针对汉坦病毒启动紧急病毒病原体指南。",
       "key_facts_zh": [
         "美国 EPA",
-        "指南"
+        "紧急指南",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -65,18 +69,6 @@
       "key_facts_zh": [
         "美国",
         "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-098017b87252c7f4",
-      "time": "2026-05-21T19:15:00.000Z",
-      "title_en": "A shocking number of Pacific Northwest rodents may carry hantavirus - Scientific American",
-      "body_en": "A shocking number of Pacific Northwest rodents may carry hantavirus Scientific American",
-      "summary_zh": "美国太平洋西北地区大量啮齿动物携带汉坦病毒。",
-      "key_facts_zh": [
-        "美国",
-        "啮齿动物"
       ],
       "signal_strength": "medium"
     },
@@ -110,11 +102,11 @@
       "time": "2026-05-21T17:33:01.000Z",
       "title_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest - WSU Insider",
       "body_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest WSU Insider",
-      "summary_zh": "华盛顿州立大学研究发现太平洋西北部分地区汉坦病毒高流行。",
+      "summary_zh": "华盛顿州立大学研究发现美国太平洋西北地区汉坦病毒高流行率。",
       "key_facts_zh": [
         "美国",
-        "研究",
-        "高流行"
+        "华盛顿州立大学",
+        "高流行率"
       ],
       "signal_strength": "medium"
     },
@@ -136,11 +128,11 @@
       "time": "2026-05-21T16:03:50.000Z",
       "title_en": "N.Y. man who was on hantavirus cruise ship says Nebraska isolation center feels like ‘prison’ - NBC News",
       "body_en": "N.Y. man who was on hantavirus cruise ship says Nebraska isolation center feels like ‘prison’ NBC News",
-      "summary_zh": "纽约男子称内布拉斯加隔离中心像监狱。",
+      "summary_zh": "纽约男子称内布拉斯加隔离中心像监狱，他曾乘坐汉坦病毒邮轮。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "隔离中心"
+        "纽约",
+        "内布拉斯加"
       ],
       "signal_strength": "high"
     },
@@ -152,7 +144,6 @@
       "summary_zh": "邮轮在汉坦病毒暴发中发挥关键作用。",
       "key_facts_zh": [
         "邮轮",
-        "暴发",
         "关键作用"
       ],
       "signal_strength": "medium"
@@ -165,8 +156,8 @@
       "summary_zh": "对当前 MV Hondius 安第斯病毒暴发进行分子进化分析。",
       "key_facts_zh": [
         "MV Hondius",
-        "分子进化",
-        "安第斯病毒"
+        "安第斯病毒",
+        "分子进化"
       ],
       "signal_strength": "medium"
     },
@@ -178,8 +169,7 @@
       "summary_zh": "欧盟加速汉坦病毒疫苗研究。",
       "key_facts_zh": [
         "欧盟",
-        "疫苗",
-        "加速研究"
+        "疫苗研究"
       ],
       "signal_strength": "high"
     }
