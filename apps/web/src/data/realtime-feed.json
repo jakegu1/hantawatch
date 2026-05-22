@@ -1,19 +1,45 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-22T13:27:18.413076+00:00",
+  "__generated_at": "2026-05-22T14:34:18.523758+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-22T13:27:16.611437+00:00",
+  "last_fetched": "2026-05-22T14:34:13.177787+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-dfaf49fd24847a0c",
+      "time": "2026-05-22T14:00:00.000Z",
+      "title_en": "LIVE AT 9:15 A.M.: Officials to brief on cruise ship hantavirus quarantine in Omaha - WOWT",
+      "body_en": "LIVE AT 9:15 A.M.: Officials to brief on cruise ship hantavirus quarantine in Omaha WOWT",
+      "summary_zh": "美国奥马哈官员将简报邮轮汉坦病毒隔离情况。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-76149d49dfaa7d79",
+      "time": "2026-05-22T13:49:25.000Z",
+      "title_en": "WHO chief says hantavirus cases linked to cruise ship rise to 12 - Anadolu Ajansı",
+      "body_en": "WHO chief says hantavirus cases linked to cruise ship rise to 12 Anadolu Ajansı",
+      "summary_zh": "WHO 称邮轮关联汉坦病毒病例增至 12 例。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "12 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-11db881cd74a4c88",
       "time": "2026-05-22T12:51:46.000Z",
       "title_en": "WHO urges ongoing monitoring of hantavirus after new case - Devdiscourse",
       "body_en": "WHO urges ongoing monitoring of hantavirus after new case Devdiscourse",
-      "summary_zh": "WHO敦促新病例后持续监测汉坦病毒。",
+      "summary_zh": "WHO 敦促在新病例后持续监测汉坦病毒。",
       "key_facts_zh": [
         "WHO",
         "监测"
@@ -21,24 +47,26 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-8371ed60c0651296",
-      "time": "2026-05-22T12:45:00Z",
-      "title_en": "All 27 on board Hondius test negative for hantavirus",
-      "summary_zh": "Hondius号船上27人汉坦病毒检测均阴性。",
+      "id": "rt-8970fd6a5a16fb75",
+      "time": "2026-05-22T12:31:00.000Z",
+      "title_en": "Lab that ran 400,000 COVID tests now preparing for Ebola, hantavirus - Stock Titan",
+      "body_en": "Lab that ran 400,000 COVID tests now preparing for Ebola, hantavirus Stock Titan",
+      "summary_zh": "曾做 40 万新冠检测的实验室准备应对埃博拉和汉坦病毒。",
       "key_facts_zh": [
-        "邮轮",
-        "检测阴性"
+        "实验室",
+        "准备"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-db00f46064bd3621",
-      "time": "2026-05-22T12:00:00Z",
-      "title_en": "WATCH | Inside the African lab that helped crack hantavirus outbreak",
-      "summary_zh": "视频：非洲实验室协助破解汉坦病毒爆发。",
+      "id": "rt-77e3821db034646d",
+      "time": "2026-05-22T12:00:00.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
+      "summary_zh": "WHO 举办汉坦病毒临床管理网络研讨会。",
       "key_facts_zh": [
-        "非洲",
-        "实验室"
+        "WHO",
+        "研讨会"
       ],
       "signal_strength": "medium"
     },
@@ -56,23 +84,11 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-104f31bc66e8f85d",
-      "time": "2026-05-22T11:15:00Z",
-      "title_en": "All Hondius crew members in Rotterdam test negative for hantavirus",
-      "summary_zh": "鹿特丹Hondius邮轮全体船员汉坦病毒检测阴性。",
-      "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "检测阴性"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-8d9224cc683a3b66",
       "time": "2026-05-22T11:00:02.000Z",
       "title_en": "Hantavirus exposure risk may be higher than believed in parts of US, study finds - Fox News",
       "body_en": "Hantavirus exposure risk may be higher than believed in parts of US, study finds Fox News",
-      "summary_zh": "研究称美国部分地区汉坦病毒暴露风险可能更高。",
+      "summary_zh": "福克斯新闻：研究称美国部分地区汉坦病毒暴露风险高于预期。",
       "key_facts_zh": [
         "美国",
         "暴露风险",
@@ -81,40 +97,80 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-77e3821db034646d",
-      "time": "2026-05-22T10:27:21.000Z",
-      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
-      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO举办汉坦病毒网络研讨会，聚焦自然史与临床管理。",
-      "key_facts_zh": [
-        "WHO",
-        "网络研讨会",
-        "临床管理"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-e9e88919fd91223e",
       "time": "2026-05-22T08:26:20.000Z",
       "title_en": "Public health in action: from detection to response – how International Health Regulations (2005) guided response to hantavirus outbreak - World Health Organization (WHO)",
       "body_en": "Public health in action: from detection to response – how International Health Regulations (2005) guided response to hantavirus outbreak World Health Organization (WHO)",
-      "summary_zh": "WHO 介绍国际卫生条例指导汉坦病毒疫情应对。",
+      "summary_zh": "WHO 发布国际卫生条例指导汉坦病毒疫情应对。",
       "key_facts_zh": [
         "WHO",
-        "汉坦病毒",
-        "国际卫生条例"
+        "国际卫生条例",
+        "应对"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-868d0aac6d66cf25",
-      "time": "2026-05-22T08:00:00Z",
-      "title_en": "Hantavirus outbreak : How an African lab identified the deadly Andes strain",
-      "summary_zh": "非洲实验室识别出致命的安第斯汉坦病毒株。",
+      "id": "rt-1fe90dafbe41b4e2",
+      "time": "2026-05-22T02:34:00.000Z",
+      "title_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus - Healthbeat",
+      "body_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus Healthbeat",
+      "summary_zh": "汉坦病毒邮轮隔离令基于不含汉坦病毒的疾病清单。",
       "key_facts_zh": [
-        "非洲",
-        "安第斯病毒株",
-        "实验室"
+        "邮轮",
+        "隔离",
+        "美国"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7c633a5000638fa5",
+      "time": "2026-05-21T23:08:00.000Z",
+      "title_en": "‘Shocking number’ of PNW rodents may carry hantavirus, Scientific American says - OregonLive.com",
+      "body_en": "‘Shocking number’ of PNW rodents may carry hantavirus, Scientific American says OregonLive.com",
+      "summary_zh": "《科学美国人》称太平洋西北地区大量啮齿动物携带汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "啮齿动物",
+        "汉坦病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-42212a874845602a",
+      "time": "2026-05-21T22:40:09.000Z",
+      "title_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected - KOMO",
+      "body_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected KOMO",
+      "summary_zh": "研究发现太平洋西北地区啮齿动物汉坦病毒携带率高于预期。",
+      "key_facts_zh": [
+        "美国",
+        "啮齿动物",
+        "研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-eaec0bbe569efc5a",
+      "time": "2026-05-21T20:19:09.000Z",
+      "title_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine - NPR",
+      "body_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine NPR",
+      "summary_zh": "美国乘客因联邦汉坦病毒隔离令感到被背叛。",
+      "key_facts_zh": [
+        "美国",
+        "乘客",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-098017b87252c7f4",
+      "time": "2026-05-21T19:15:00.000Z",
+      "title_en": "Hantavirus found in shocking number of Pacific Northwest rodents - Scientific American",
+      "body_en": "Hantavirus found in shocking number of Pacific Northwest rodents Scientific American",
+      "summary_zh": "《科学美国人》称太平洋西北地区大量啮齿动物携带汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "啮齿动物",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     }
