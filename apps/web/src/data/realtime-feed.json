@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-22T08:58:08.268811+00:00",
+  "__generated_at": "2026-05-22T10:21:12.579008+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-22T08:58:02.489790+00:00",
+  "last_fetched": "2026-05-22T10:21:10.681736+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -22,41 +22,41 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-fc774678b078c34f",
-      "time": "2026-05-22T07:26:10.000Z",
-      "title_en": "Hantavirus outbreak: How an African lab contributed to the scientific breakthrough - The Economic Times",
-      "body_en": "Hantavirus outbreak: How an African lab contributed to the scientific breakthrough The Economic Times",
-      "summary_zh": "经济时报报道非洲实验室对汉坦病毒科学突破的贡献。",
+      "id": "rt-e9e88919fd91223e",
+      "time": "2026-05-22T08:26:20.000Z",
+      "title_en": "Public health in action: from detection to response – how International Health Regulations (2005) guided response to hantavirus outbreak - World Health Organization (WHO)",
+      "body_en": "Public health in action: from detection to response – how International Health Regulations (2005) guided response to hantavirus outbreak World Health Organization (WHO)",
+      "summary_zh": "WHO 发布国际卫生条例应对汉坦病毒疫情指南。",
       "key_facts_zh": [
-        "非洲",
-        "实验室",
-        "科学突破"
+        "WHO",
+        "国际卫生条例",
+        "应对指南"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-77e3821db034646d",
       "time": "2026-05-22T07:23:24.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO举办汉坦病毒网络研讨会，聚焦国际海事环境。",
+      "summary_zh": "WHO 举办网络研讨会聚焦国际海运中汉坦病毒管理。",
       "key_facts_zh": [
         "WHO",
         "网络研讨会",
-        "海事环境"
+        "海运"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-1fe90dafbe41b4e2",
       "time": "2026-05-22T02:34:00.000Z",
       "title_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus - Healthbeat",
       "body_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus Healthbeat",
-      "summary_zh": "邮轮隔离令依据的疾病清单未包含汉坦病毒。",
+      "summary_zh": "汉坦病毒邮轮隔离令基于不含汉坦病毒的疾病清单。",
       "key_facts_zh": [
         "邮轮",
-        "隔离",
-        "清单遗漏"
+        "隔离令",
+        "清单不符"
       ],
       "signal_strength": "medium"
     },
@@ -65,11 +65,11 @@
       "time": "2026-05-21T23:08:00.000Z",
       "title_en": "‘Shocking number’ of PNW rodents may carry hantavirus, Scientific American says - OregonLive.com",
       "body_en": "‘Shocking number’ of PNW rodents may carry hantavirus, Scientific American says OregonLive.com",
-      "summary_zh": "科学美国人称太平洋西北地区大量啮齿动物携带汉坦病毒。",
+      "summary_zh": "《科学美国人》称太平洋西北地区大量啮齿动物携带汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "啮齿动物",
-        "携带病毒"
+        "携带率高"
       ],
       "signal_strength": "medium"
     },
@@ -82,32 +82,32 @@
       "key_facts_zh": [
         "美国",
         "研究",
-        "啮齿动物"
+        "携带率高于预期"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c3203012a4a34b66",
+      "time": "2026-05-21T22:14:02.000Z",
+      "title_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus - Bergeson & Campbell",
+      "body_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus Bergeson & Campbell",
+      "summary_zh": "美国 EPA 启动汉坦病毒紧急病原体指南。",
+      "key_facts_zh": [
+        "美国 EPA",
+        "紧急指南",
+        "汉坦病毒"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-eaec0bbe569efc5a",
       "time": "2026-05-21T20:19:09.000Z",
       "title_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine - NPR",
       "body_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine NPR",
-      "summary_zh": "美国乘客因联邦汉坦病毒隔离令感到被背叛。",
+      "summary_zh": "美国乘客因汉坦病毒隔离令感到被背叛。",
       "key_facts_zh": [
         "美国",
-        "乘客",
         "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-6ecd631d2dd6f44b",
-      "time": "2026-05-21T18:17:11.000Z",
-      "title_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist - University of Alberta",
-      "body_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist University of Alberta",
-      "summary_zh": "病毒学家称埃博拉和汉坦疫情凸显全球大流行防范需求。",
-      "key_facts_zh": [
-        "病毒学家",
-        "全球防范"
       ],
       "signal_strength": "medium"
     },
@@ -129,10 +129,10 @@
       "time": "2026-05-21T18:05:00.000Z",
       "title_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers - The Guardian",
       "body_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers The Guardian",
-      "summary_zh": "美国对接触致命病毒旅行者的限制可能侵犯权利。",
+      "summary_zh": "美国对接触致命病毒旅客的限制可能侵犯权利并阻碍志愿者。",
       "key_facts_zh": [
         "美国",
-        "旅行限制",
+        "限制",
         "权利"
       ],
       "signal_strength": "medium"
@@ -142,10 +142,10 @@
       "time": "2026-05-21T17:33:01.000Z",
       "title_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest - WSU Insider",
       "body_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest WSU Insider",
-      "summary_zh": "华盛顿州立大学研究发现美国西北部部分地区汉坦病毒高流行。",
+      "summary_zh": "华盛顿州立大学研究发现太平洋西北部分地区汉坦病毒高流行。",
       "key_facts_zh": [
         "美国",
-        "华盛顿州立大学",
+        "研究",
         "高流行"
       ],
       "signal_strength": "medium"
