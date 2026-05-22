@@ -1,25 +1,38 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-22T02:59:32.915033+00:00",
+  "__generated_at": "2026-05-22T06:44:05.443887+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-22T02:59:28.370830+00:00",
+  "last_fetched": "2026-05-22T06:44:04.168857+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-77e3821db034646d",
-      "time": "2026-05-22T01:17:35.000Z",
+      "time": "2026-05-22T04:21:08.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus in an international maritime setting: natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
       "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦国际海事环境。",
       "key_facts_zh": [
         "WHO",
         "网络研讨会",
-        "海事环境"
+        "国际海事"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-1fe90dafbe41b4e2",
+      "time": "2026-05-22T02:34:00.000Z",
+      "title_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus - Healthbeat",
+      "body_en": "Hantavirus cruise ship quarantine orders are based on a disease list that doesn’t include hantavirus Healthbeat",
+      "summary_zh": "汉坦病毒邮轮隔离令基于不含汉坦病毒的疾病清单。",
+      "key_facts_zh": [
+        "邮轮",
+        "隔离令",
+        "清单问题"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-7c633a5000638fa5",
@@ -29,21 +42,20 @@
       "summary_zh": "《科学美国人》称太平洋西北地区大量啮齿动物携带汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "太平洋西北",
-        "啮齿动物"
+        "啮齿动物",
+        "携带病毒"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-1c94e821820e2ae6",
-      "time": "2026-05-21T22:41:15.000Z",
+      "time": "2026-05-21T22:50:51.000Z",
       "title_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings - BioPharma APAC",
       "body_en": "Hyundai Bioscience Positions XAFTY As Potential Ebola And Hantavirus Treatment Following Strong IC50 Findings BioPharma APAC",
-      "summary_zh": "现代生物科学称XAFTY对埃博拉和汉坦病毒有治疗潜力。",
+      "summary_zh": "韩国现代生物科学宣布XAFTY对埃博拉和汉坦病毒有强效。",
       "key_facts_zh": [
-        "现代生物科学",
-        "XAFTY",
-        "治疗潜力"
+        "韩国",
+        "治疗进展"
       ],
       "signal_strength": "medium"
     },
@@ -52,32 +64,32 @@
       "time": "2026-05-21T22:40:09.000Z",
       "title_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected - KOMO",
       "body_en": "Study finds deadly hantavirus more widespread in Pacific Northwest rodents than expected KOMO",
-      "summary_zh": "研究发现太平洋西北地区啮齿动物汉坦病毒携带率高于预期。",
+      "summary_zh": "研究发现美国太平洋西北地区啮齿动物汉坦病毒携带率高于预期。",
       "key_facts_zh": [
         "美国",
-        "太平洋西北",
-        "啮齿动物"
+        "啮齿动物",
+        "研究"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-c3203012a4a34b66",
-      "time": "2026-05-21T22:14:21.000Z",
+      "time": "2026-05-21T22:14:02.000Z",
       "title_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus - Bergeson & Campbell",
       "body_en": "EPA Activates Emergency Viral Pathogen Guidance for Hantavirus Bergeson & Campbell",
-      "summary_zh": "美国 EPA 启动汉坦病毒紧急病原体指南。",
+      "summary_zh": "美国EPA启动汉坦病毒紧急病毒病原体指南。",
       "key_facts_zh": [
-        "美国 EPA",
+        "美国EPA",
         "紧急指南"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-eaec0bbe569efc5a",
       "time": "2026-05-21T20:19:09.000Z",
       "title_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine - NPR",
       "body_en": "American passenger feels 'betrayed' by federal order to stay in hantavirus quarantine NPR",
-      "summary_zh": "美国乘客因联邦隔离令感到被背叛。",
+      "summary_zh": "美国乘客因联邦汉坦病毒隔离令感到被背叛。",
       "key_facts_zh": [
         "美国",
         "隔离",
@@ -90,24 +102,11 @@
       "time": "2026-05-21T19:15:00.000Z",
       "title_en": "A shocking number of Pacific Northwest rodents may carry hantavirus - Scientific American",
       "body_en": "A shocking number of Pacific Northwest rodents may carry hantavirus Scientific American",
-      "summary_zh": "美国太平洋西北地区大量啮齿动物携带汉坦病毒。",
+      "summary_zh": "科学美国人报道太平洋西北地区大量啮齿动物携带汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "啮齿动物",
-        "携带"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6ecd631d2dd6f44b",
-      "time": "2026-05-21T18:17:11.000Z",
-      "title_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist - University of Alberta",
-      "body_en": "Ebola and hantavirus outbreaks highlight need for global pandemic preparedness, says virologist University of Alberta",
-      "summary_zh": "加拿大阿尔伯塔大学病毒学家强调全球大流行防范。",
-      "key_facts_zh": [
-        "加拿大",
-        "病毒学家",
-        "防范"
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -116,11 +115,11 @@
       "time": "2026-05-21T18:13:43.000Z",
       "title_en": "2 Americans forced into quarantine following deadly cruise ship hantavirus outbreak - NPR",
       "body_en": "2 Americans forced into quarantine following deadly cruise ship hantavirus outbreak NPR",
-      "summary_zh": "美国2人因邮轮汉坦病毒疫情被强制隔离。",
+      "summary_zh": "美国两名乘客因邮轮汉坦病毒疫情被强制隔离。",
       "key_facts_zh": [
         "美国",
-        "强制隔离",
-        "邮轮"
+        "邮轮",
+        "强制隔离"
       ],
       "signal_strength": "high"
     },
@@ -129,11 +128,11 @@
       "time": "2026-05-21T18:05:00.000Z",
       "title_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers - The Guardian",
       "body_en": "US curbs on travelers exposed to deadly viruses may infringe rights and deter volunteers The Guardian",
-      "summary_zh": "美国对接触致命病毒旅客的限制可能侵犯权利。",
+      "summary_zh": "美国对接触致命病毒旅客的限制可能侵犯权利并阻碍志愿者。",
       "key_facts_zh": [
         "美国",
-        "旅客限制",
-        "权利争议"
+        "边境管控",
+        "争议"
       ],
       "signal_strength": "medium"
     },
@@ -142,11 +141,11 @@
       "time": "2026-05-21T17:33:01.000Z",
       "title_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest - WSU Insider",
       "body_en": "WSU study finds high prevalence of hantavirus in some parts of Pacific Northwest WSU Insider",
-      "summary_zh": "华盛顿州立大学研究发现太平洋西北地区汉坦病毒高流行。",
+      "summary_zh": "华盛顿州立大学研究发现太平洋西北部分地区汉坦病毒高流行。",
       "key_facts_zh": [
         "美国",
-        "华盛顿州立大学",
-        "高流行率"
+        "研究",
+        "高流行"
       ],
       "signal_strength": "medium"
     },
@@ -177,39 +176,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-58be3ebc94a9e214",
-      "time": "2026-05-21T15:29:05.000Z",
-      "title_en": "Cruise ship plays a crucial role in the hantavirus outbreak - Clinical Trials Arena",
-      "body_en": "Cruise ship plays a crucial role in the hantavirus outbreak Clinical Trials Arena",
-      "summary_zh": "邮轮在汉坦病毒暴发中发挥关键作用。",
-      "key_facts_zh": [
-        "邮轮",
-        "关键作用"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-fffae4cc4573a794",
       "time": "2026-05-21T15:05:29.000Z",
       "title_en": "Molecular evolutionary analysis of the current MV Hondius Andes virus outbreak - Virological",
       "body_en": "Molecular evolutionary analysis of the current MV Hondius Andes virus outbreak Virological",
-      "summary_zh": "对MV Hondius安第斯病毒暴发进行分子进化分析。",
+      "summary_zh": "针对当前MV Hondius Andes病毒暴发的分子进化分析。",
       "key_facts_zh": [
-        "分子进化",
-        "安第斯病毒",
-        "MV Hondius"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-b4ea7fae36f18cf0",
-      "time": "2026-05-21T14:32:50.000Z",
-      "title_en": "EU accelerates research into hantavirus vaccines - Anadolu Ajansı",
-      "body_en": "EU accelerates research into hantavirus vaccines Anadolu Ajansı",
-      "summary_zh": "欧盟加速汉坦病毒疫苗研究。",
-      "key_facts_zh": [
-        "欧盟",
-        "疫苗研究"
+        "分子进化分析",
+        "Andes病毒",
+        "暴发"
       ],
       "signal_strength": "medium"
     }
