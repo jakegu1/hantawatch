@@ -1,13 +1,39 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-23T06:30:06.051175+00:00",
+  "__generated_at": "2026-05-23T08:15:23.202584+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-23T06:30:04.920862+00:00",
+  "last_fetched": "2026-05-23T08:15:18.220842+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-225084f7d48bf480",
+      "time": "2026-05-23T06:58:27.000Z",
+      "title_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine - NDTV Doctor",
+      "body_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine NDTV Doctor",
+      "summary_zh": "美国邮轮上接触汉坦病毒者在内布拉斯加州隔离。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-0dd79f233c1d6c0e",
+      "time": "2026-05-23T05:43:00.000Z",
+      "title_en": "Researchers highlight hidden spread of Hantavirus in Pacific Northwest rodents - krem.com",
+      "body_en": "Researchers highlight hidden spread of Hantavirus in Pacific Northwest rodents krem.com",
+      "summary_zh": "研究揭示汉坦病毒在太平洋西北部啮齿动物中隐匿传播。",
+      "key_facts_zh": [
+        "美国",
+        "研究",
+        "啮齿动物"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-bc11321d74099198",
       "time": "2026-05-22T23:30:00.000Z",
@@ -17,20 +43,20 @@
       "key_facts_zh": [
         "加拿大",
         "维多利亚",
-        "住院3人"
+        "住院"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-69b17f62bd2f57eb",
+      "id": "rt-0fe62c7660467cc4",
       "time": "2026-05-22T22:18:00.000Z",
-      "title_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - The Independent",
-      "body_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine The Independent",
-      "summary_zh": "美国邮轮接触汉坦病毒乘客在内布拉斯加州隔离。",
+      "title_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - Toronto Star",
+      "body_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine Toronto Star",
+      "summary_zh": "美国邮轮上接触汉坦病毒者在内布拉斯加州隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "内布拉斯加"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -42,10 +68,22 @@
       "summary_zh": "安第斯病毒引发美国实验室对汉坦病毒的讨论。",
       "key_facts_zh": [
         "美国",
-        "安第斯病毒",
-        "实验室"
+        "实验室",
+        "安第斯病毒"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-30ee31f7becae620",
+      "time": "2026-05-22T20:48:46.000Z",
+      "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
+      "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC Canada’s chief public health officer delivers updates on hantavirus, Ebola Radio-Canada Risk low, but Niagara officials keep watch as hantavirus cases reach Canada St. Catharines Standard",
+      "summary_zh": "加拿大首席公共卫生官称无新增汉坦病毒病例。",
+      "key_facts_zh": [
+        "加拿大",
+        "无新增病例"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-c7874ced7a3ddd1d",
@@ -60,28 +98,14 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-30ee31f7becae620",
-      "time": "2026-05-22T20:02:34.000Z",
-      "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
-      "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC Canada’s chief public health officer delivers updates on hantavirus, Ebola Radio-Canada Risk low, but Niagara officials keep watch as hantavirus cases reach Canada St. Catharines Standard",
-      "summary_zh": "加拿大首席公共卫生官称无埃博拉病例，无新增汉坦病例。",
-      "key_facts_zh": [
-        "加拿大",
-        "无新增",
-        "首席卫生官"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-0b325a57a7456fdc",
       "time": "2026-05-22T17:51:27.000Z",
       "title_en": "VIDEO: Study finds high prevalence of hantavirus in some areas of PNW - KIRO 7 News Seattle",
       "body_en": "VIDEO: Study finds high prevalence of hantavirus in some areas of PNW KIRO 7 News Seattle",
-      "summary_zh": "研究显示美国太平洋西北地区部分区域汉坦病毒高流行。",
+      "summary_zh": "研究显示太平洋西北部分地区汉坦病毒高流行。",
       "key_facts_zh": [
         "美国",
-        "研究",
-        "高流行"
+        "高流行率"
       ],
       "signal_strength": "medium"
     },
@@ -90,11 +114,11 @@
       "time": "2026-05-22T17:09:00.000Z",
       "title_en": "Watch: Nebraska Medicine, UNMC experts give update on hantavirus passengers in quarantine - KETV",
       "body_en": "Watch: Nebraska Medicine, UNMC experts give update on hantavirus passengers in quarantine KETV",
-      "summary_zh": "内布拉斯加医学中心专家更新隔离中汉坦病毒乘客情况。",
+      "summary_zh": "内布拉斯加医学中心专家更新隔离乘客情况。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加医学中心",
-        "隔离",
-        "专家更新"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -116,10 +140,10 @@
       "time": "2026-05-22T15:54:13.000Z",
       "title_en": "Hantavirus: Final 14 days of home quarantine for negative cases - Euronews.com",
       "body_en": "Hantavirus: Final 14 days of home quarantine for negative cases Euronews.com",
-      "summary_zh": "汉坦病毒阴性病例最后14天居家隔离。",
+      "summary_zh": "阴性病例最后14天居家隔离。",
       "key_facts_zh": [
         "居家隔离",
-        "阴性病例"
+        "14天"
       ],
       "signal_strength": "high"
     },
@@ -128,7 +152,7 @@
       "time": "2026-05-22T15:38:00.000Z",
       "title_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha - WOWT",
       "body_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha WOWT",
-      "summary_zh": "官员通报奥马哈邮轮汉坦病毒隔离最新情况。",
+      "summary_zh": "美国奥马哈官员通报邮轮汉坦病毒隔离最新情况。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -145,20 +169,33 @@
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "船员确诊"
+        "新增 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-d12c82b78040ecb1",
+      "time": "2026-05-22T15:15:00.000Z",
+      "title_en": "Canada’s top doctor set to give an update on both Ebola and hantavirus today - CityNews Toronto",
+      "body_en": "Canada’s top doctor set to give an update on both Ebola and hantavirus today CityNews Toronto",
+      "summary_zh": "加拿大首席医生将更新埃博拉和汉坦病毒情况。",
+      "key_facts_zh": [
+        "加拿大",
+        "加拿大公共卫生署",
+        "疫情更新"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-8e8d6ee2a7c2ab54",
       "time": "2026-05-22T14:45:31.000Z",
       "title_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive - NBC News",
       "body_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive NBC News WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital World Health Organization (WHO) WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "荷兰邮轮关联汉坦病毒病例增至12例，船员检测阳性。",
+      "summary_zh": "与邮轮相关的汉坦病毒病例升至12例，荷兰新增1例。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "新增1例"
+        "累计 12 例"
       ],
       "signal_strength": "high"
     },
@@ -167,11 +204,11 @@
       "time": "2026-05-22T14:00:00.000Z",
       "title_en": "Hantavirus update: Nebraska officials awaiting CDC guidance on passengers’ release - WOWT",
       "body_en": "Hantavirus update: Nebraska officials awaiting CDC guidance on passengers’ release WOWT",
-      "summary_zh": "内布拉斯加州等待美国CDC指导释放乘客。",
+      "summary_zh": "内布拉斯加州官员等待美国 CDC 关于乘客解除隔离的指导。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加",
-        "美国CDC",
-        "隔离"
+        "等待美国 CDC"
       ],
       "signal_strength": "high"
     },
@@ -180,39 +217,26 @@
       "time": "2026-05-22T14:00:00.000Z",
       "title_en": "LIVE AT 9:15 A.M.: Officials to brief on cruise ship hantavirus quarantine in Omaha - WOWT",
       "body_en": "LIVE AT 9:15 A.M.: Officials to brief on cruise ship hantavirus quarantine in Omaha WOWT",
-      "summary_zh": "奥马哈官员将简报邮轮汉坦病毒隔离情况。",
+      "summary_zh": "奥马哈官员将通报邮轮汉坦病毒隔离情况。",
       "key_facts_zh": [
-        "奥马哈",
+        "美国",
         "邮轮",
         "隔离"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-76149d49dfaa7d79",
       "time": "2026-05-22T13:49:25.000Z",
       "title_en": "WHO chief says hantavirus cases linked to cruise ship rise to 12 - Anadolu Ajansı",
       "body_en": "WHO chief says hantavirus cases linked to cruise ship rise to 12 Anadolu Ajansı",
-      "summary_zh": "WHO称邮轮关联汉坦病毒病例增至12例。",
+      "summary_zh": "WHO 称与邮轮相关的汉坦病毒病例升至12例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "12例"
+        "累计 12 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-77e3821db034646d",
-      "time": "2026-05-22T12:00:00.000Z",
-      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital - World Health Organization (WHO)",
-      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in Focus II: hantavirus natural history, infection control and clinical management of patients in hospital World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦自然史、感染控制与临床管理。",
-      "key_facts_zh": [
-        "WHO",
-        "网络研讨会",
-        "汉坦病毒"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
