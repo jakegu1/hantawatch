@@ -20,9 +20,9 @@
           "hl": "zh-CN",
           "fetched": 100,
           "blocked": 2,
-          "no_signal": 9,
+          "no_signal": 10,
           "duplicate": 0,
-          "non_authoritative": 11,
+          "non_authoritative": 10,
           "kept": 3,
           "ok": true
         }
@@ -35,7 +35,7 @@
       "checkedAt": "2026-05-23T08:14:54.274507+00:00"
     },
     "surveillance_leads": {
-      "entries": 9,
+      "entries": 10,
       "ok": true
     },
     "feeds_light_run": {
