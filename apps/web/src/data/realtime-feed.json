@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-23T19:00:37.104489+00:00",
+  "__generated_at": "2026-05-23T19:06:01.395183+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-23T19:00:35.783006+00:00",
+  "last_fetched": "2026-05-23T19:05:56.945787+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,11 +26,11 @@
       "time": "2026-05-23T13:49:00.000Z",
       "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
       "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
-      "summary_zh": "南非科学家识别数千英里外邮轮上的汉坦病毒。",
+      "summary_zh": "南非科学家如何识别数千英里外邮轮上的汉坦病毒。",
       "key_facts_zh": [
         "南非",
-        "识别",
-        "邮轮"
+        "科学家",
+        "识别病毒"
       ],
       "signal_strength": "medium"
     },
@@ -52,7 +52,7 @@
       "time": "2026-05-23T12:44:52.000Z",
       "title_en": "MV Hondius captain disembarks, no new hantavirus deaths reported - news.cgtn.com",
       "body_en": "MV Hondius captain disembarks, no new hantavirus deaths reported news.cgtn.com",
-      "summary_zh": "Hondius号船长下船，无新增汉坦死亡报告。",
+      "summary_zh": "Hondius号船长下船，无新增汉坦死亡病例。",
       "key_facts_zh": [
         "Hondius号",
         "船长下船",
@@ -68,17 +68,17 @@
       "summary_zh": "美国邮轮接触汉坦病毒者在内布拉斯加州隔离。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "邮轮"
+        "邮轮",
+        "隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-bc11321d74099198",
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "加拿大维多利亚3名汉坦病毒患者住院。",
+      "summary_zh": "加拿大维多利亚市3名汉坦病毒患者住院。",
       "key_facts_zh": [
         "加拿大",
         "维多利亚",
@@ -94,17 +94,17 @@
       "summary_zh": "美国邮轮接触汉坦病毒者在内布拉斯加州隔离。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "邮轮"
+        "邮轮",
+        "隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9ac4185f51afe8f0",
       "time": "2026-05-22T21:00:52.000Z",
       "title_en": "Andes Virus Shifts Hantavirus Conversation for US Labs - Clinical Lab Products",
       "body_en": "Andes Virus Shifts Hantavirus Conversation for US Labs Clinical Lab Products",
-      "summary_zh": "安第斯病毒改变美国实验室汉坦病毒讨论。",
+      "summary_zh": "安第斯病毒引发美国实验室对汉坦病毒关注。",
       "key_facts_zh": [
         "美国",
         "安第斯病毒"
@@ -116,7 +116,7 @@
       "time": "2026-05-22T20:21:42.000Z",
       "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
       "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
-      "summary_zh": "加拿大联邦政府更新汉坦病毒和埃博拉疫情。",
+      "summary_zh": "加拿大联邦更新汉坦病毒和埃博拉疫情。",
       "key_facts_zh": [
         "加拿大",
         "联邦更新"
@@ -144,7 +144,8 @@
       "summary_zh": "欧洲新闻台报道阴性病例居家隔离最后14天。",
       "key_facts_zh": [
         "欧洲",
-        "居家隔离"
+        "居家隔离",
+        "14天"
       ],
       "signal_strength": "high"
     },
@@ -156,8 +157,8 @@
       "summary_zh": "美国奥马哈邮轮汉坦病毒隔离最新简报。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "隔离"
+        "奥马哈",
+        "邮轮隔离"
       ],
       "signal_strength": "high"
     },
@@ -166,7 +167,7 @@
       "time": "2026-05-22T15:38:00.000Z",
       "title_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation - The Telegraph",
       "body_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation The Telegraph Inside an African lab that helped crack the hantavirus outbreak Reuters WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "荷兰邮轮船员汉坦病毒检测阳性，已隔离。",
+      "summary_zh": "荷兰邮轮一名船员汉坦病毒检测阳性并隔离。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
@@ -179,9 +180,10 @@
       "time": "2026-05-22T15:01:00.000Z",
       "title_en": "Risk low, but Niagara officials keep watch as hantavirus cases reach Canada - St. Catharines Standard",
       "body_en": "Risk low, but Niagara officials keep watch as hantavirus cases reach Canada St. Catharines Standard",
-      "summary_zh": "加拿大尼亚加拉官员监测汉坦病毒，风险低。",
+      "summary_zh": "加拿大尼亚加拉官员监测汉坦病毒病例，风险低。",
       "key_facts_zh": [
         "加拿大",
+        "尼亚加拉",
         "监测中"
       ],
       "signal_strength": "medium"
@@ -191,11 +193,11 @@
       "time": "2026-05-22T14:45:31.000Z",
       "title_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive - NBC News",
       "body_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive NBC News",
-      "summary_zh": "邮轮汉坦病毒病例增至12例，一名船员检测阳性。",
+      "summary_zh": "邮轮汉坦病毒病例增至12例，一名船员确诊。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒",
-        "新增1例"
+        "新增1例",
+        "美国"
       ],
       "signal_strength": "high"
     }
