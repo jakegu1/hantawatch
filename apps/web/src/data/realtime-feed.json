@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-23T21:47:18.001895+00:00",
+  "__generated_at": "2026-05-23T22:45:22.736982+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-23T21:47:16.194135+00:00",
+  "last_fetched": "2026-05-23T22:45:21.251159+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,32 +13,20 @@
       "time": "2026-05-23T16:55:00.000Z",
       "title_en": "New hantavirus infection confirmed in Hondius crew member isolated in Netherlands - NL Times",
       "body_en": "New hantavirus infection confirmed in Hondius crew member isolated in Netherlands NL Times",
-      "summary_zh": "荷兰确认Hondius号船员新增汉坦病毒感染，已隔离。",
+      "summary_zh": "荷兰确认Hondius号船员新增汉坦病毒感染。",
       "key_facts_zh": [
         "荷兰",
         "新增1例",
-        "船员隔离"
+        "Hondius号"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-ce8c80cfed618195",
-      "time": "2026-05-23T16:09:47.000Z",
-      "title_en": "Hantavirus cases on expedition ship haven't impacted cruise sales or pricing - Travel Weekly",
-      "body_en": "Hantavirus cases on expedition ship haven't impacted cruise sales or pricing Travel Weekly",
-      "summary_zh": "汉坦病毒病例未影响探险邮轮销售或定价。",
-      "key_facts_zh": [
-        "邮轮",
-        "未影响销售"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-30ee31f7becae620",
       "time": "2026-05-23T16:06:26.000Z",
       "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
       "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC",
-      "summary_zh": "加拿大公共卫生署称无埃博拉及新增汉坦病例。",
+      "summary_zh": "加拿大首席卫生官称无埃博拉及新增汉坦病例。",
       "key_facts_zh": [
         "加拿大",
         "无新增病例"
@@ -50,7 +38,7 @@
       "time": "2026-05-23T13:49:00.000Z",
       "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
       "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
-      "summary_zh": "南非科学家如何识别数千英里外邮轮上的汉坦病毒。",
+      "summary_zh": "南非科学家识别数千英里外邮轮上的汉坦病毒。",
       "key_facts_zh": [
         "南非",
         "科学家",
@@ -65,7 +53,7 @@
       "body_en": "MV Hondius captain disembarks, no new hantavirus deaths reported news.cgtn.com",
       "summary_zh": "Hondius号船长下船，无新增汉坦死亡病例。",
       "key_facts_zh": [
-        "邮轮",
+        "Hondius号",
         "船长下船",
         "无新增死亡"
       ],
@@ -76,10 +64,10 @@
       "time": "2026-05-23T11:08:14.000Z",
       "title_en": "Hantavirus update: Nebraska officials awaiting CDC guidance on passengers’ release - WOWT",
       "body_en": "Hantavirus update: Nebraska officials awaiting CDC guidance on passengers’ release WOWT",
-      "summary_zh": "内布拉斯加州等待美国 CDC 指导释放乘客。",
+      "summary_zh": "内布拉斯加州等待美国CDC指导释放乘客。",
       "key_facts_zh": [
-        "美国 CDC",
         "内布拉斯加",
+        "美国CDC",
         "等待指导"
       ],
       "signal_strength": "high"
@@ -92,8 +80,8 @@
       "summary_zh": "科学家破解邮轮汉坦病毒爆发原因。",
       "key_facts_zh": [
         "邮轮",
-        "科学家",
-        "破解爆发"
+        "汉坦病毒",
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -102,7 +90,20 @@
       "time": "2026-05-23T06:58:27.000Z",
       "title_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine - NDTV Doctor",
       "body_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine NDTV Doctor",
-      "summary_zh": "美国乘客在邮轮接触汉坦病毒后在内布拉斯加隔离。",
+      "summary_zh": "美国乘客在邮轮接触汉坦病毒，于内布拉斯加州隔离。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f8d49c033e08c0ec",
+      "time": "2026-05-23T01:39:00.000Z",
+      "title_en": "Passengers exposed to hantavirus get Nebraska food, Tai Chi and tornado warning during quarantine - KETV",
+      "body_en": "Passengers exposed to hantavirus get Nebraska food, Tai Chi and tornado warning during quarantine KETV",
+      "summary_zh": "邮轮汉坦病毒接触者在内布拉斯加隔离，获当地食物和太极活动。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -115,11 +116,11 @@
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "维多利亚三名汉坦病毒相关患者仍在住院。",
+      "summary_zh": "加拿大维多利亚市3名汉坦病毒相关患者仍在住院。",
       "key_facts_zh": [
+        "加拿大",
         "维多利亚",
-        "住院",
-        "3人"
+        "住院"
       ],
       "signal_strength": "high"
     },
@@ -128,7 +129,7 @@
       "time": "2026-05-22T22:37:03.000Z",
       "title_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - CityNews Halifax",
       "body_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine CityNews Halifax",
-      "summary_zh": "美国乘客在邮轮接触汉坦病毒后在内布拉斯加隔离。",
+      "summary_zh": "美国邮轮汉坦病毒接触者在内布拉斯加隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -141,10 +142,10 @@
       "time": "2026-05-22T20:21:42.000Z",
       "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
       "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
-      "summary_zh": "加拿大联邦更新汉坦病毒和埃博拉疫情。",
+      "summary_zh": "加拿大公共卫生署发布汉坦病毒和埃博拉疫情更新。",
       "key_facts_zh": [
-        "加拿大",
-        "联邦更新"
+        "加拿大公共卫生署",
+        "疫情更新"
       ],
       "signal_strength": "medium"
     },
@@ -165,7 +166,7 @@
       "time": "2026-05-22T16:40:47.000Z",
       "title_en": "WHO says 12th person infected with hantavirus detected in the Netherlands - Al Jazeera",
       "body_en": "WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "WHO 称荷兰发现第12例汉坦病毒感染者。",
+      "summary_zh": "WHO 称荷兰发现第 12 例汉坦病毒感染者。",
       "key_facts_zh": [
         "WHO",
         "荷兰",
@@ -178,11 +179,10 @@
       "time": "2026-05-22T15:54:13.000Z",
       "title_en": "Hantavirus: Final 14 days of home quarantine for negative cases - Euronews.com",
       "body_en": "Hantavirus: Final 14 days of home quarantine for negative cases Euronews.com",
-      "summary_zh": "汉坦病毒阴性病例最后14天居家隔离。",
+      "summary_zh": "汉坦病毒阴性病例最后 14 天居家隔离。",
       "key_facts_zh": [
         "居家隔离",
-        "14天",
-        "阴性"
+        "14天"
       ],
       "signal_strength": "high"
     },
@@ -191,7 +191,7 @@
       "time": "2026-05-22T15:38:00.000Z",
       "title_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha - WOWT",
       "body_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha WOWT",
-      "summary_zh": "奥马哈邮轮汉坦病毒隔离最新简报。",
+      "summary_zh": "官员通报奥马哈邮轮汉坦病毒隔离最新情况。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -200,15 +200,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-ed2e294a8ca3119a",
+      "id": "rt-b393e359d62c29d2",
       "time": "2026-05-22T15:38:00.000Z",
       "title_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation - The Telegraph",
-      "body_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation The Telegraph Inside an African lab that helped crack the hantavirus outbreak Reuters WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "荷兰邮轮船员汉坦病毒检测阳性被隔离。",
+      "body_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation The Telegraph",
+      "summary_zh": "荷兰邮轮船员汉坦病毒检测阳性，已隔离。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "船员确诊"
+        "确诊"
       ],
       "signal_strength": "high"
     },
