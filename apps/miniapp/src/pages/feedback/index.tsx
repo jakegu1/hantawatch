@@ -1,5 +1,5 @@
 import './index.scss';
-import { View, Text, Input, Textarea, Button, Picker } from '@tarojs/components';
+import { View, Text, Textarea, Button, Picker } from '@tarojs/components';
 import Taro, { useLoad } from '@tarojs/taro';
 import { useState } from 'react';
 import { submitFeedback, trackPageView } from '@/utils/api';
@@ -13,7 +13,6 @@ const FEEDBACK_TYPES = [
 export default function FeedbackPage() {
   const [typeIndex, setTypeIndex] = useState(0);
   const [message, setMessage] = useState('');
-  const [contact, setContact] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -36,11 +35,10 @@ export default function FeedbackPage() {
       await submitFeedback({
         type: FEEDBACK_TYPES[typeIndex].key,
         message: v,
-        contact: contact.trim() || undefined,
+
       });
       setSuccess(true);
       setMessage('');
-      setContact('');
     } catch {
       Taro.showToast({ title: '提交失败，请稍后重试', icon: 'none' });
     } finally {
@@ -131,27 +129,6 @@ export default function FeedbackPage() {
           <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
             {message.length}/2000
           </Text>
-        </View>
-
-        {/* 联系方式 */}
-        <View className="mt-3">
-          <Text style={{ fontSize: '24rpx', fontWeight: 500, color: '#374151', display: 'block', marginBottom: '6rpx' }}>
-            联系方式（选填）
-          </Text>
-          <Input
-            type="text"
-            value={contact}
-            onInput={(e) => setContact(e.detail.value)}
-            placeholder="邮箱或手机号，方便我们回复"
-            style={{
-              border: '1rpx solid #d1d5db',
-              borderRadius: '12rpx',
-              padding: '16rpx',
-              fontSize: '26rpx',
-              color: '#111827',
-              background: '#fff',
-            }}
-          />
         </View>
 
         {/* 提交 */}

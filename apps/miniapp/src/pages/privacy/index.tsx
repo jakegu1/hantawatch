@@ -3,8 +3,8 @@ import { View, Text } from '@tarojs/components';
 import { useLoad } from '@tarojs/taro';
 import { trackPageView } from '@/utils/api';
 
-const VERSION = '1.0';
-const EFFECTIVE_DATE = '2026-05-13';
+const VERSION = '1.1';
+const EFFECTIVE_DATE = '2026-05-23';
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
@@ -96,17 +96,18 @@ export default function PrivacyPage() {
         </P>
 
         <H2>二、我们收集什么</H2>
-        <H3>2.1 你主动提交的信息</H3>
-        <Bullet>
-          <Text style={{ fontWeight: 600 }}>邮箱地址</Text>
-          ：仅当你主动填写"订阅预警通知"表单时收集，用于发送 HPI 阈值变化、聚集地距离圈层变化、官方发布新通报等触发式预警邮件。你可以随时通过任意一封通知邮件底部的链接退订。
-        </Bullet>
+        <H3>2.1 小程序版本不收集邮箱</H3>
+        <P>
+          <Text style={{ fontWeight: 600 }}>本微信小程序版本不提供邮箱订阅功能，不收集任何邮箱地址。</Text>
+          邮件预警订阅仅通过 Web 版（bingduguancha.com）提供，相关隐私条款详见 Web 版隐私政策。
+        </P>
+        <H3>2.2 反馈内容</H3>
         <Bullet>
           <Text style={{ fontWeight: 600 }}>反馈内容</Text>
-          ：当你通过反馈页面提交反馈时，我们会保存你填写的文本内容。提交是匿名的，除非你在文本中主动留下联系方式。
+          ：当你通过反馈页面提交反馈时，我们会保存你填写的文本内容。提交是<Text style={{ fontWeight: 600 }}>完全匿名</Text>的，不收集邮箱、手机号或任何联系方式。
         </Bullet>
 
-        <H3>2.2 自动收集的匿名信息</H3>
+        <H3>2.3 自动收集的匿名信息</H3>
         <Bullet>
           <Text style={{ fontWeight: 600 }}>访问统计</Text>
           ：我们记录页面路径、访问时间戳、来源（如有）、设备型号（user agent），用于优化产品。
@@ -118,18 +119,16 @@ export default function PrivacyPage() {
           <Text style={{ fontWeight: 600 }}>不包含任何用户输入</Text>。
         </Bullet>
 
-        <H3>2.3 我们不会收集的信息</H3>
+        <H3>2.4 我们不会收集的信息</H3>
         <Bullet>真实姓名、身份证号、手机号</Bullet>
         <Bullet>身体健康信息、症状描述、就诊记录</Bullet>
         <Bullet>位置信息（GPS）</Bullet>
         <Bullet>通讯录、相册、麦克风、摄像头权限</Bullet>
 
-        <H2>三、微信生态额外说明</H2>
+        <H2>三、微信小程序额外说明</H2>
         <P>
-          小程序运行时，微信平台可能向我们提供一个匿名的小程序 OpenID
-          （仅在你授权"获取用户信息"时），用于区分独立访客。我们
-          <Text style={{ fontWeight: 600 }}>不会</Text>
-          通过 OpenID 反查你的微信昵称、头像、好友列表或聊天记录。
+          本小程序<Text style={{ fontWeight: 600 }}>不调用</Text>微信登录、获取用户信息、获取手机号等任何可能收集个人信息的微信 API。
+          访问统计仅记录匿名页面路径和时间戳，无法关联到个人微信账号。
         </P>
 
         <H2>四、信息的使用与共享</H2>

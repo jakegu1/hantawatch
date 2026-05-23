@@ -63,7 +63,6 @@ export function fetchNewsEntries(): Promise<NewsEntriesPayload> {
 export function submitFeedback(data: {
   type: string;
   message: string;
-  contact?: string;
   website?: string;
 }): Promise<{ success: boolean }> {
   return request('/feedback/submit', {

@@ -32,7 +32,6 @@ import { TrendBar } from '@/components/trend-bar';
 import { RecentCasesList } from '@/components/recent-cases-list';
 import { RealtimeFeedSection } from '@/components/realtime-feed-section';
 import { HpiBreakdown } from '@/components/hpi-breakdown';
-import { SubscribeForm } from '@/components/subscribe-form';
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
@@ -587,7 +586,9 @@ export default function HomePage() {
           <Text style={{ fontSize: '22rpx', color: '#4b5563', marginTop: '6rpx', marginBottom: '12rpx', display: 'block', lineHeight: 1.5 }}>
             只在以下情况通知你：聚集地距离跨圈层 / HPI 跨阈值 / 官方发布新通报。<Text style={{ color: '#374151', fontWeight: 600 }}>不会发送日常推送。</Text>
           </Text>
-          <SubscribeForm />
+          <Text style={{ fontSize: '20rpx', color: '#6b7280', display: 'block', marginTop: '8rpx' }}>
+            风险等级变化时，可通过病毒观察 Web 版订阅邮件通知（bingduguancha.com）。
+          </Text>
 
           <View
             className="flex items-center gap-3 mt-3 pt-3"
