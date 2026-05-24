@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-24T02:56:54.986724+00:00",
+  "__generated_at": "2026-05-24T08:26:40.005262+00:00",
   "date": "2026-05-24",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-24T02:56:36.972229+00:00"
+    "updatedAt": "2026-05-24T08:26:20.880916+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-24T02:56:36.972229+00:00"
+    "updatedAt": "2026-05-24T08:26:20.880916+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -114,20 +114,20 @@
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "5月23日荷兰确认Hondius号船员新增1例汉坦病毒感染；加拿大无新增病例。",
-    "situation": "MV Hondius邮轮安第斯型聚集疫情持续，WHO累计12例（含3例死亡）；法国有确诊输入，距中国约8400公里。",
-    "riskJudgment": "国内HFRS处于基线正常范围，HPI指数31（一般关注），普通公众风险极低。",
+    "situation": "MV Hondius邮轮安第斯型聚集疫情持续，累计12例（9确诊、1结果未定、2可能），3例死亡。法国1例确诊输入，距中国8400公里。国内HFRS基线正常。",
+    "riskJudgment": "中国公众风险极低。输入病例距中国远，邮轮疫情未影响中国。国内HFRS处于正常水平，无需过度担忧。",
     "newCases": "5月23日荷兰新增1例确诊；WHO累计12例。",
     "sourceSummary": "主要依据WHO疾病暴发新闻及专业监测源。",
-    "shareLine": "5月23日荷兰新增1例汉坦病毒确诊，WHO累计12例；国内HFRS正常",
+    "shareLine": "5月23日荷兰新增1例汉坦病毒确诊，累计12例。法国有1例输入。国内HFRS正常",
     "watchFocus": [
-      "邮轮聚集疫情进展",
-      "法国输入病例监测",
+      "邮轮疫情进展",
+      "法国输入病例",
       "国内HFRS基线"
     ],
     "evidence": [
       "WHO 5月13日通报",
-      "荷兰5月23日新增确诊",
-      "HPI指数31一般关注"
+      "荷兰5月23日新增",
+      "法国5月15日输入"
     ]
   }
 }
