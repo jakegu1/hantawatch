@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-24T02:37:09.689784+00:00",
+  "__generated_at": "2026-05-24T02:56:54.988598+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-24T02:37:07.845390+00:00",
+  "last_fetched": "2026-05-24T02:56:50.945848+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-05-24T00:14:00.000Z",
       "title_en": "Study: Sin Nombre hantavirus may be more widespread among PNW rodents - KGW",
       "body_en": "Study: Sin Nombre hantavirus may be more widespread among PNW rodents KGW",
-      "summary_zh": "研究显示辛诺柏汉坦病毒在太平洋西北地区啮齿动物中可能更普遍。",
+      "summary_zh": "研究显示辛诺柏汉坦病毒在太平洋西北部啮齿动物中可能更普遍。",
       "key_facts_zh": [
         "美国",
         "研究",
@@ -25,12 +25,12 @@
       "id": "rt-e694387deab03ec2",
       "time": "2026-05-24T00:04:00.000Z",
       "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
-      "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "南非科学家24小时内识别出邮轮汉坦病毒疫情，荷兰新增第12例。",
+      "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News MV Hondius captain disembarks, no new hantavirus deaths reported news.cgtn.com",
+      "summary_zh": "南非科学家24小时内识别出邮轮汉坦病毒疫情。",
       "key_facts_zh": [
         "南非",
-        "荷兰",
-        "邮轮"
+        "邮轮",
+        "识别疫情"
       ],
       "signal_strength": "high"
     },
@@ -39,59 +39,33 @@
       "time": "2026-05-23T16:55:00.000Z",
       "title_en": "New hantavirus infection confirmed in Hondius crew member isolated in Netherlands - NL Times",
       "body_en": "New hantavirus infection confirmed in Hondius crew member isolated in Netherlands NL Times",
-      "summary_zh": "荷兰确认Hondius号船员感染汉坦病毒，已隔离。",
+      "summary_zh": "荷兰确认Hondius号船员新感染汉坦病毒，已隔离。",
       "key_facts_zh": [
         "荷兰",
-        "邮轮",
-        "新增1例"
+        "新增确诊",
+        "邮轮"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-3f713647147eaa32",
-      "time": "2026-05-23T13:49:00.000Z",
-      "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
-      "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
-      "summary_zh": "南非科学家识别出数千英里外邮轮上的汉坦病毒。",
-      "key_facts_zh": [
-        "南非",
-        "邮轮",
-        "识别病毒"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-1a20e3a7ef179213",
       "time": "2026-05-23T12:44:52.000Z",
       "title_en": "MV Hondius captain disembarks, no new hantavirus deaths reported - news.cgtn.com",
       "body_en": "MV Hondius captain disembarks, no new hantavirus deaths reported news.cgtn.com",
-      "summary_zh": "MV Hondius 船长下船，无新增汉坦病毒死亡报告。",
+      "summary_zh": "MV Hondius 船长下船，无新增汉坦病毒死亡。",
       "key_facts_zh": [
-        "MV Hondius",
+        "邮轮",
         "船长下船",
         "无新增死亡"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-70494293b5ac8b3f",
-      "time": "2026-05-23T08:42:46.000Z",
-      "title_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore - Telangana Today",
-      "body_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore Telangana Today",
-      "summary_zh": "科学家破解与远海邮轮相关的罕见汉坦病毒爆发。",
-      "key_facts_zh": [
-        "科学家",
-        "邮轮",
-        "破解爆发"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-225084f7d48bf480",
       "time": "2026-05-23T06:58:27.000Z",
       "title_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine - NDTV Doctor",
       "body_en": "Americans Exposed To Hantavirus On Ship Enjoy Some Nebraska Hospitality While Waiting In Quarantine NDTV Doctor",
-      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "summary_zh": "美国游客在邮轮接触汉坦病毒，在内布拉斯加隔离。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
@@ -104,11 +78,11 @@
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "加拿大维多利亚3名汉坦病毒患者仍在住院。",
+      "summary_zh": "加拿大维多利亚市3名汉坦病毒相关患者仍在住院。",
       "key_facts_zh": [
         "加拿大",
-        "维多利亚",
-        "3人住院"
+        "住院",
+        "3人"
       ],
       "signal_strength": "high"
     },
@@ -123,17 +97,18 @@
         "邮轮",
         "隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-c7874ced7a3ddd1d",
       "time": "2026-05-22T20:21:42.000Z",
       "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
       "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
-      "summary_zh": "加拿大联邦更新汉坦病毒和埃博拉疫情通报。",
+      "summary_zh": "加拿大联邦政府更新汉坦病毒和埃博拉疫情通报。",
       "key_facts_zh": [
         "加拿大",
-        "联邦更新"
+        "联邦更新",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -142,10 +117,11 @@
       "time": "2026-05-22T19:39:00.000Z",
       "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
       "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC",
-      "summary_zh": "加拿大首席公共卫生官称无埃博拉及新增汉坦病例。",
+      "summary_zh": "加拿大首席公共卫生官称无埃博拉病例，无新增汉坦病例。",
       "key_facts_zh": [
         "加拿大",
-        "无新增病例"
+        "无新增",
+        "首席卫生官"
       ],
       "signal_strength": "high"
     },
@@ -154,10 +130,11 @@
       "time": "2026-05-22T18:18:18.000Z",
       "title_en": "Canada’s chief public health officer delivers updates on hantavirus, Ebola - Radio-Canada",
       "body_en": "Canada’s chief public health officer delivers updates on hantavirus, Ebola Radio-Canada",
-      "summary_zh": "加拿大首席公共卫生官更新汉坦病毒和埃博拉信息。",
+      "summary_zh": "加拿大首席公共卫生官更新汉坦病毒和埃博拉疫情。",
       "key_facts_zh": [
         "加拿大",
-        "官方更新"
+        "首席卫生官",
+        "疫情更新"
       ],
       "signal_strength": "high"
     },
@@ -192,7 +169,7 @@
       "time": "2026-05-22T15:38:00.000Z",
       "title_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha - WOWT",
       "body_en": "FULL BRIEFING: Officials share latest on cruise ship hantavirus quarantine in Omaha WOWT",
-      "summary_zh": "官方简报：奥马哈邮轮汉坦病毒隔离最新情况。",
+      "summary_zh": "官员简报奥马哈邮轮汉坦病毒隔离最新情况。",
       "key_facts_zh": [
         "美国",
         "奥马哈",
