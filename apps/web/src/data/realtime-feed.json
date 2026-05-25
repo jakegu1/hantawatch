@@ -1,24 +1,51 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T10:09:08.785423+00:00",
+  "__generated_at": "2026-05-25T11:47:47.210158+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T10:09:02.521849+00:00",
+  "last_fetched": "2026-05-25T11:47:46.052690+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-37a7a38321e7964e",
-      "time": "2026-05-25T05:30:00.000Z",
-      "title_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak - Irish Independent",
-      "body_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak Irish Independent",
-      "summary_zh": "爱尔兰公司推出快速汉坦病毒抗体检测试剂盒。",
+      "id": "rt-663be7bc141333ce",
+      "time": "2026-05-25T08:10:50.000Z",
+      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
+      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
+      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先救治。",
       "key_facts_zh": [
-        "爱尔兰",
-        "抗体检测"
+        "英国",
+        "医院",
+        "优先救治"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7c42c1269ccdf6f6",
+      "time": "2026-05-25T07:45:00.000Z",
+      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
+      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先救治。",
+      "key_facts_zh": [
+        "英国",
+        "医院",
+        "担忧"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5a1e979f7ce9a36d",
+      "time": "2026-05-25T06:51:00.000Z",
+      "title_en": "Royal Navy warship arrives at remote 'hantavirus' island - Daily Express",
+      "body_en": "Royal Navy warship arrives at remote 'hantavirus' island Daily Express",
+      "summary_zh": "英国皇家海军军舰抵达偏远汉坦病毒岛屿。",
+      "key_facts_zh": [
+        "英国",
+        "皇家海军",
+        "岛屿"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-e787e65c890f6739",
@@ -41,8 +68,8 @@
       "summary_zh": "台湾今年确诊第三例汉坦病毒病例。",
       "key_facts_zh": [
         "台湾",
-        "新增 1 例",
-        "确诊"
+        "确诊",
+        "第三例"
       ],
       "signal_strength": "high"
     },
@@ -88,7 +115,7 @@
       "time": "2026-05-24T14:13:00.000Z",
       "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
       "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
-      "summary_zh": "汉坦病毒在美国蔓延，研究人员震惊。",
+      "summary_zh": "汉坦病毒在美国蔓延，研究人员惊讶。",
       "key_facts_zh": [
         "美国",
         "蔓延",
@@ -101,7 +128,7 @@
       "time": "2026-05-24T12:00:00.000Z",
       "title_en": "Inside an African lab that helped crack the hantavirus outbreak - Daily Monitor",
       "body_en": "Inside an African lab that helped crack the hantavirus outbreak Daily Monitor",
-      "summary_zh": "非洲实验室帮助破解汉坦病毒爆发。",
+      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
       "key_facts_zh": [
         "非洲",
         "实验室",
@@ -131,7 +158,7 @@
       "key_facts_zh": [
         "WHO",
         "荷兰",
-        "新增病例"
+        "新病例"
       ],
       "signal_strength": "high"
     },
@@ -144,7 +171,7 @@
       "key_facts_zh": [
         "南非",
         "邮轮",
-        "病毒识别"
+        "识别"
       ],
       "signal_strength": "medium"
     },
@@ -156,7 +183,7 @@
       "summary_zh": "科学家破解与远海邮轮相关的罕见汉坦病毒疫情。",
       "key_facts_zh": [
         "邮轮",
-        "疫情破解"
+        "破解"
       ],
       "signal_strength": "medium"
     },
@@ -165,11 +192,37 @@
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "维多利亚市三名与汉坦病毒疫情相关者仍在住院。",
+      "summary_zh": "维多利亚市3名与汉坦病毒疫情相关者仍在住院。",
       "key_facts_zh": [
         "加拿大",
         "维多利亚",
         "住院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f04680ae0773b23f",
+      "time": "2026-05-22T22:18:00.000Z",
+      "title_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - AP News",
+      "body_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine AP News",
+      "summary_zh": "船上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c7874ced7a3ddd1d",
+      "time": "2026-05-22T20:21:42.000Z",
+      "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
+      "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
+      "summary_zh": "加拿大公共卫生署发布汉坦病毒和埃博拉疫情联邦更新。",
+      "key_facts_zh": [
+        "加拿大公共卫生署",
+        "汉坦病毒",
+        "埃博拉"
       ],
       "signal_strength": "high"
     }
