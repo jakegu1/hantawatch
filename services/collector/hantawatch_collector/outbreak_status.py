@@ -54,6 +54,13 @@ def _extract_who_deaths(summary: str) -> int:
     return int(m.group(1)) if m else 0
 
 
+def _attr(obj: Any, key: str, default: Any = "") -> Any:
+    """Safely access a dict key or dataclass attribute."""
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return getattr(obj, key, default)
+
+
 def build_outbreak_status(
     *,
     active_clusters: list[dict[str, Any]],
@@ -72,14 +79,14 @@ def build_outbreak_status(
             continue
 
         # ----- Totals from WHO DON (latest entry wins) -----
-        who_for_cluster = [w for w in who_entries if w.get("id", "").startswith(cluster_id)]
-        latest_who = max(who_for_cluster, key=lambda w: w.get("date", "")) if who_for_cluster else None
+        who_for_cluster = [w for w in who_entries if _attr(w, "id").startswith(cluster_id)]
+        latest_who = max(who_for_cluster, key=lambda w: _attr(w, "date")) if who_for_cluster else None
 
         totals_confirmed = 0
         totals_deaths = 0
         totals_indeterminate = 0
         if latest_who:
-            summary = latest_who.get("summary", "")
+            summary = _attr(latest_who, "summary")
             totals_confirmed = _extract_who_total(summary)
             totals_deaths = _extract_who_deaths(summary)
 
@@ -165,8 +172,8 @@ def build_outbreak_status(
             },
             "perCountry": per_country,
             "lastUpdate": {
-                "asOfDate": latest_who.get("date", "") if latest_who else "",
-                "source": latest_who.get("source", {"name": ""}) if latest_who else {},
+                "asOfDate": _attr(latest_who, "date") if latest_who else "",
+                "source": _attr(latest_who, "source", {"name": ""}) if latest_who else {},
                 "headlineZh": "",
             },
             "provenance": {
