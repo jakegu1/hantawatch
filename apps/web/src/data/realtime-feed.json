@@ -1,72 +1,62 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T07:10:35.901534+00:00",
+  "__generated_at": "2026-05-25T09:49:59.187113+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T07:10:30.209133+00:00",
+  "last_fetched": "2026-05-25T09:49:57.889632+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-686d3b8670b33cd8",
-      "time": "2026-05-25T06:52:13.000Z",
-      "title_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks - Yahoo",
-      "body_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks Yahoo",
-      "summary_zh": "WHO称疫情趋稳，荷兰报告新病例，船长下船。",
+      "id": "rt-663be7bc141333ce",
+      "time": "2026-05-25T08:10:50.000Z",
+      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
+      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
+      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先治疗。",
       "key_facts_zh": [
-        "WHO",
-        "荷兰",
-        "新病例"
+        "英国",
+        "医院",
+        "优先治疗"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7c42c1269ccdf6f6",
+      "time": "2026-05-25T07:45:00.000Z",
+      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
+      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先治疗。",
+      "key_facts_zh": [
+        "英国",
+        "医院",
+        "优先治疗"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-37a7a38321e7964e",
       "time": "2026-05-25T05:30:00.000Z",
       "title_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak - Irish Independent",
       "body_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak Irish Independent",
-      "summary_zh": "爱尔兰公司推出快速抗体检测试剂盒。",
+      "summary_zh": "爱尔兰公司推出快速汉坦病毒抗体检测试剂盒，用于邮轮疫情。",
       "key_facts_zh": [
         "爱尔兰",
-        "检测试剂盒"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6d787cf45a246fb4",
-      "time": "2026-05-25T04:30:00Z",
-      "title_en": "WHO chief : Cruise ship hantavirus outbreak stable for now",
-      "summary_zh": "WHO称邮轮汉坦病毒疫情暂时稳定。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情稳定"
+        "抗体检测",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-006d7d8daeb80a90",
-      "time": "2026-05-25T03:00:00.000Z",
-      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritized' amid A&E chaos - Liverpool Echo",
-      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritized' amid A&E chaos Liverpool Echo",
-      "summary_zh": "英国医院员工称汉坦病毒患者被优先处理。",
+      "id": "rt-e787e65c890f6739",
+      "time": "2026-05-25T03:59:27.000Z",
+      "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
+      "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
+      "summary_zh": "WHO 称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
-        "英国",
-        "医院",
-        "优先"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-33e4d0d826168160",
-      "time": "2026-05-25T02:00:00Z",
-      "title_en": "Congo tightens travel as Ebola spreads and supplies run low",
-      "summary_zh": "刚果因埃博拉扩散加强旅行管控。",
-      "key_facts_zh": [
-        "刚果",
-        "埃博拉",
-        "旅行管控"
+        "WHO",
+        "邮轮",
+        "疫情稳定"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +68,8 @@
       "summary_zh": "台湾今年确诊第三例汉坦病毒病例。",
       "key_facts_zh": [
         "台湾",
-        "第三例"
+        "新增 1 例",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -87,10 +78,10 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事称汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 总干事称汉坦病毒局势目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定"
+        "局势稳定"
       ],
       "signal_strength": "high"
     },
@@ -99,47 +90,113 @@
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "数千英里外邮轮上汉坦病毒识别竞赛。",
+      "summary_zh": "邮轮上数千英里外识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒",
+        "识别病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-feb62daaf0b7b121",
+      "time": "2026-05-24T16:41:00.000Z",
+      "title_en": "Navy sends doctors to treat rat virus patient on remote island - The Telegraph",
+      "body_en": "Navy sends doctors to treat rat virus patient on remote island The Telegraph",
+      "summary_zh": "海军派医生前往偏远岛屿治疗鼠病毒患者。",
+      "key_facts_zh": [
+        "海军",
+        "偏远岛屿",
+        "治疗"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-73f88955021548c7",
+      "time": "2026-05-24T14:13:00.000Z",
+      "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
+      "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
+      "summary_zh": "汉坦病毒在美国蔓延，研究人员称其广泛且复杂。",
+      "key_facts_zh": [
+        "美国",
+        "蔓延",
+        "研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-f69f83b939b00e0a",
+      "time": "2026-05-24T12:00:00.000Z",
+      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - Daily Monitor",
+      "body_en": "Inside an African lab that helped crack the hantavirus outbreak Daily Monitor",
+      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
+      "key_facts_zh": [
+        "非洲",
+        "实验室",
+        "破解"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-e694387deab03ec2",
+      "time": "2026-05-24T00:04:00.000Z",
+      "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
+      "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India",
+      "summary_zh": "南非科学家24小时内识别汉坦病毒爆发。",
+      "key_facts_zh": [
+        "南非",
+        "24小时",
         "识别"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-bf5ff12d8fb90d3a",
-      "time": "2026-05-24T20:15:00Z",
-      "title_en": "Americans exposed to hantavirus on ship enjoy Nebraska hospitality while in quarantine",
-      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "id": "rt-686d3b8670b33cd8",
+      "time": "2026-05-23T18:17:56.000Z",
+      "title_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks - Yahoo",
+      "body_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks Yahoo",
+      "summary_zh": "WHO称疫情趋稳，荷兰报告新病例，船长下船。",
       "key_facts_zh": [
-        "美国",
+        "WHO",
+        "荷兰",
+        "新增病例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-3f713647147eaa32",
+      "time": "2026-05-23T13:49:00.000Z",
+      "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
+      "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
+      "summary_zh": "南非科学家识别出数千英里外邮轮上的汉坦病毒。",
+      "key_facts_zh": [
+        "南非",
         "邮轮",
-        "隔离"
+        "识别病毒"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-e916b1389f8e272c",
-      "time": "2026-05-24T18:00:00Z",
-      "title_en": "Gates Foundation commits $15 million to support Ebola response in DRC , Uganda",
-      "summary_zh": "盖茨基金会承诺1500万美元支持刚果（金）和乌干达埃博拉应对。",
+      "id": "rt-70494293b5ac8b3f",
+      "time": "2026-05-23T08:42:46.000Z",
+      "title_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore - Telangana Today",
+      "body_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore Telangana Today",
+      "summary_zh": "科学家破解与远海邮轮相关的罕见汉坦病毒疫情。",
       "key_facts_zh": [
-        "盖茨基金会",
-        "刚果（金）",
-        "乌干达"
+        "邮轮",
+        "疫情破解"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-cae22f35a56d628f",
-      "time": "2026-05-24T17:30:00Z",
-      "title_en": "Measles kills more than 500 children in Bangladesh : NPR",
-      "summary_zh": "孟加拉国麻疹导致500多名儿童死亡。",
+      "id": "rt-bc11321d74099198",
+      "time": "2026-05-22T23:30:00.000Z",
+      "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
+      "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
+      "summary_zh": "维多利亚市3名与汉坦病毒疫情相关者仍在住院。",
       "key_facts_zh": [
-        "孟加拉国",
-        "麻疹",
-        "儿童死亡"
+        "加拿大",
+        "维多利亚",
+        "住院"
       ],
       "signal_strength": "high"
     }
