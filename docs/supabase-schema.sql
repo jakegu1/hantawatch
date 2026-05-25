@@ -131,6 +131,36 @@ alter table alert_subscriptions   enable row level security;
 alter table cluster_overrides     enable row level security;
 alter table manual_news_entries   enable row level security;
 alter table feedback              enable row level security;
+alter table imports_overrides     enable row level security;
+
+-- ---------------------------------------------------------------------
+-- Table 5: imports_overrides
+--   Per-outbreak per-country override + proposal layer. Read by
+--   /api/outbreak-status and written from /admin/审核队列 ("imports" tab).
+-- ---------------------------------------------------------------------
+create table if not exists imports_overrides (
+  outbreak_id        text not null,
+  iso2               text not null,
+  status             text not null check (status in ('proposed','approved','rejected')),
+  confirmed          int,
+  monitoring         int,
+  quarantine         int,
+  deaths             int,
+  country_status     text,
+  as_of              date,
+  summary_zh         text,
+  evidence_json      jsonb,
+  proposed_by        text,
+  proposed_at        timestamptz not null default now(),
+  decided_by         text,
+  decided_at         timestamptz,
+  suppress_until_at  timestamptz,
+  note               text,
+  primary key (outbreak_id, iso2)
+);
+
+create index if not exists idx_imports_overrides_status
+  on imports_overrides (status, proposed_at desc);
 
 -- No policies created → all anon/auth requests blocked. Service-role
 -- bypasses RLS automatically.

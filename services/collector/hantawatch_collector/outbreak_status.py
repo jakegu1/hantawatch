@@ -1,4 +1,4 @@
-"""Compose the canonical outbreak-status ledger (P1).
+"""Compose the canonical outbreak-status ledger (P1) + proposal diff (P2).
 
 Priority (highest wins per (outbreak_id, iso2, field)):
   1. admin_override   — Supabase imports_overrides (read by /api/outbreak-status)
@@ -13,6 +13,7 @@ from __future__ import annotations
 import logging
 import re
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -175,3 +176,92 @@ def build_outbreak_status(
         })
 
     return outbreaks
+
+
+# P2 helpers ---------------------------------------------------------------
+
+def diff_imports_against_overrides(
+    *,
+    current_ledger: list[dict[str, Any]],
+    previous_ledger_path: Path | None = None,
+    supabase_overrides: list[dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
+    """Return proposal rows for new countries detected in the current ledger.
+
+    A proposal is created when a country appears in the current ledger's
+    perCountry that was NOT in the previous ledger AND is not already covered
+    by an approved/rejected (within suppress window) override.
+    """
+    proposals: list[dict[str, Any]] = []
+    prev_iso2_set: set[str] = set()
+
+    # Collect previous iso2 set if previous ledger path provided
+    if previous_ledger_path:
+        try:
+            import json as _json
+            prev_data = _json.loads(previous_ledger_path.read_text(encoding='utf-8'))
+            for ob in prev_data.get('outbreaks', []):
+                for pc in ob.get('perCountry', []):
+                    iso2 = pc.get('iso2', '')
+                    if iso2:
+                        prev_iso2_set.add(iso2)
+        except Exception:
+            pass  # First run or missing file → no previous set
+
+    # Suppress: iso2 already in approved/rejected overrides
+    suppress: set[str] = set()
+    if supabase_overrides:
+        for ov in supabase_overrides:
+            if ov.get('status') in ('approved', 'rejected'):
+                suppress.add(ov.get('iso2', ''))
+
+    for ob in current_ledger:
+        outbreak_id = ob.get('id', '')
+        for pc in ob.get('perCountry', []):
+            iso2 = pc.get('iso2', '')
+            if not iso2 or iso2 in prev_iso2_set or iso2 in suppress:
+                continue
+            proposals.append({
+                'outbreak_id': outbreak_id,
+                'iso2': iso2,
+                'status': 'proposed',
+                'confirmed': pc.get('confirmed', 0),
+                'monitoring': pc.get('monitoring', 0),
+                'deaths': pc.get('deaths', 0),
+                'country_status': pc.get('status', 'monitoring'),
+                'as_of': pc.get('asOf', ''),
+                'summary_zh': f'{pc.get("nameZh", iso2)}: ArcGIS 追踪检测到新国别',
+                'evidence_json': pc.get('evidence', []),
+                'note': '',
+            })
+    return proposals
+
+
+def auto_approve_overdue_proposals(
+    proposals: list[dict[str, Any]],
+    *,
+    now: datetime | None = None,
+    auto_approve_hours: int = 6,
+) -> list[dict[str, Any]]:
+    """Auto-approve proposals with official-tier evidence older than N hours."""
+    from datetime import datetime as _dt, timedelta, timezone as _tz
+
+    now = now or _dt.now(_tz.utc)
+    threshold = now - timedelta(hours=auto_approve_hours)
+
+    for p in proposals:
+        evidence = p.get('evidence_json', [])
+        if isinstance(evidence, list):
+            has_official = any(e.get('tier') == 'official' for e in evidence)
+            proposed_at = p.get('proposed_at', '')
+            if has_official and proposed_at:
+                try:
+                    ptime = _dt.fromisoformat(proposed_at)
+                    if ptime < threshold:
+                        p['status'] = 'approved'
+                        p['decided_by'] = 'auto'
+                        p['decided_at'] = now.isoformat()
+                except ValueError:
+                    pass
+    return proposals
+
