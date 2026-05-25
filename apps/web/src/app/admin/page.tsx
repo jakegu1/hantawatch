@@ -7,8 +7,9 @@ import { DataFreshness } from '@/components/data-freshness';
 import { ClusterReviewQueue } from '@/components/cluster-review-queue';
 import { ManualDataPanel } from '@/components/manual-data-panel';
 import { NewsCmsPanel } from '@/components/news-cms-panel';
+import { ImportsReviewQueue } from '@/components/imports-review-queue';
 import {
-  CheckCircle, BarChart3, MessageSquare, Settings,
+  CheckCircle, BarChart3, MessageSquare, Settings, Globe,
   Mail, Download, RefreshCw, LogOut, FileEdit, Newspaper,
 } from 'lucide-react';
 
@@ -48,7 +49,7 @@ interface SubscribersResponse {
   error?: string;
 }
 
-type TabId = 'review' | 'news' | 'manual' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
+type TabId = 'review' | 'imports' | 'news' | 'manual' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
 
 /**
  * NOTE on auth (changed 2026-05-13):
@@ -157,6 +158,7 @@ export default function AdminPage() {
 
   const tabs = [
     { id: 'review' as const, label: '审核队列', icon: CheckCircle },
+    { id: 'imports' as const, label: '进出口审核', icon: Globe },
     { id: 'news' as const, label: '通报管理', icon: Newspaper },
     { id: 'manual' as const, label: '手工数据', icon: FileEdit },
     { id: 'hpi' as const, label: 'HPI因子', icon: Settings },
@@ -202,6 +204,10 @@ export default function AdminPage() {
           Backed by Supabase (cluster_overrides table); homepage live-fetches
           via /api/clusters and re-renders within a second of save. */}
       {activeTab === 'review' && <ClusterReviewQueue />}
+
+      {/* Imports Review — approve/reject auto-detected country import proposals
+          from ArcGIS + realtime feed. Backed by Supabase (imports_overrides table). */}
+      {activeTab === 'imports' && <ImportsReviewQueue />}
 
       {/* News CMS — add/delete "最新通报" timeline entries. Backed by
           Supabase (manual_news_entries table); homepage merges these on top

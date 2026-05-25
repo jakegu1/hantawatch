@@ -39,7 +39,7 @@ export async function fetchImportsOverrides(): Promise<ImportOverride[]> {
   return (data ?? []).map((r: Record<string, unknown>) => ({
     outbreakId: String(r.outbreak_id ?? ''),
     iso2: String(r.iso2 ?? ''),
-    status: String(r.status ?? 'proposed'),
+    status: (String(r.status ?? 'proposed')) as ImportOverride['status'],
     confirmed: r.confirmed as number | null,
     monitoring: r.monitoring as number | null,
     quarantine: r.quarantine as number | null,
@@ -100,7 +100,7 @@ export async function fetchImportProposals(): Promise<ImportOverride[]> {
     console.warn('imports_overrides proposals fetch failed:', error.message);
     return [];
   }
-  return data ?? [];
+  return (data ?? []) as unknown as ImportOverride[];
 }
 
 export function applyImportOverride(
