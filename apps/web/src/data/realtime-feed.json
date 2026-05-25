@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T17:05:36.872219+00:00",
+  "__generated_at": "2026-05-25T17:22:28.479509+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T17:05:32.021075+00:00",
+  "last_fetched": "2026-05-25T17:22:14.191654+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,9 +13,8 @@
       "time": "2026-05-25T16:50:00.000Z",
       "title_en": "Hantavirus incident raises fitness-to-fly questions - eTNW",
       "body_en": "Hantavirus incident raises fitness-to-fly questions eTNW",
-      "summary_zh": "汉坦病毒事件引发飞行适航性问题讨论。",
+      "summary_zh": "汉坦病毒事件引发飞行适航性疑问。",
       "key_facts_zh": [
-        "汉坦病毒",
         "飞行适航"
       ],
       "signal_strength": "medium"
@@ -37,37 +36,23 @@
       "time": "2026-05-25T13:49:53.000Z",
       "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
       "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先处理。",
+      "summary_zh": "英国阿罗韦公园医院员工称汉坦患者被优先处理。",
       "key_facts_zh": [
         "英国",
-        "医院",
-        "优先"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-61f5a0213973ea07",
-      "time": "2026-05-25T13:14:00.000Z",
-      "title_en": "Washington State University study sheds new light on hantavirus - KING5.com",
-      "body_en": "Washington State University study sheds new light on hantavirus KING5.com",
-      "summary_zh": "华盛顿州立大学研究揭示汉坦病毒新信息。",
-      "key_facts_zh": [
-        "美国",
-        "研究",
-        "汉坦病毒"
+        "医院"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-33a726907367fbf5",
       "time": "2026-05-25T09:12:00.000Z",
-      "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - dailystar.co.uk",
-      "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship dailystar.co.uk",
-      "summary_zh": "英国医院员工因邮轮汉坦病毒患者隔离而不堪重负。",
+      "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - Daily Star",
+      "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship Daily Star",
+      "summary_zh": "英国医院因邮轮汉坦患者隔离而人手不足。",
       "key_facts_zh": [
         "英国",
-        "医院",
-        "邮轮"
+        "邮轮",
+        "医院"
       ],
       "signal_strength": "high"
     },
@@ -76,7 +61,7 @@
       "time": "2026-05-25T07:45:00.000Z",
       "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
       "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
-      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先对待。",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先处理。",
       "key_facts_zh": [
         "英国",
         "医院员工",
@@ -102,9 +87,9 @@
       "time": "2026-05-25T01:23:58.000Z",
       "title_en": "Third hantavirus case confirmed in Taiwan this year - Outbreak News Today",
       "body_en": "Third hantavirus case confirmed in Taiwan this year Outbreak News Today",
-      "summary_zh": "台湾今年确诊第三例汉坦病毒病例。",
+      "summary_zh": "台湾省今年确诊第三例汉坦病毒病例。",
       "key_facts_zh": [
-        "台湾",
+        "台湾省",
         "第三例",
         "确诊"
       ],
@@ -115,19 +100,32 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事称汉坦病毒局势暂时稳定。",
+      "summary_zh": "WHO 总干事表示汉坦病毒疫情暂时稳定。",
       "key_facts_zh": [
         "WHO",
-        "局势稳定"
+        "疫情稳定"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-16b226635760c414",
+      "time": "2026-05-24T22:01:20.000Z",
+      "title_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada - TheTravel",
+      "body_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada TheTravel",
+      "summary_zh": "加拿大政府警告美洲最和平国家汉坦病毒激增。",
+      "key_facts_zh": [
+        "加拿大",
+        "警告",
+        "激增"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-74440a0db5d86abd",
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "数千英里外邮轮上汉坦病毒的识别竞赛。",
+      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
         "识别",
@@ -149,19 +147,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-73f88955021548c7",
-      "time": "2026-05-24T14:13:00.000Z",
-      "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
-      "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
-      "summary_zh": "美国研究人员称汉坦病毒正在蔓延，令人震惊。",
-      "key_facts_zh": [
-        "美国",
-        "研究人员",
-        "蔓延"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-e694387deab03ec2",
       "time": "2026-05-24T00:04:00.000Z",
       "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
@@ -172,7 +157,7 @@
         "科学家",
         "识别疫情"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-686d3b8670b33cd8",
