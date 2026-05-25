@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -55,6 +56,7 @@ from hantawatch_collector.outbreak_status import (
     build_outbreak_status,
     diff_imports_against_overrides,
 )
+from hantawatch_collector.realtime_extractor import extract_country_deltas
 from hantawatch_collector.builder import (
     build_active_clusters,
     build_daily_brief,
@@ -430,12 +432,24 @@ def main(argv: list[str] | None = None) -> int:
             country_signals = None
             logger.warning("Country signals: build failed (%s) — keeping existing JSON", e)
 
+    # ---- P3: structured realtime extraction (parallel to translation) ----
+    realtime_extracted: list[dict] = []
+    if realtime_feed is not None:
+        realtime_extracted = extract_country_deltas(
+            realtime_feed.updates,
+            api_key=os.environ.get("LLM_API_KEY"),
+            base_url=os.environ.get("LLM_API_BASE_URL"),
+            model=os.environ.get("LLM_MODEL"),
+            cache_path=out_dir / "realtime-extractions-cache.json",
+        )
+
     # ---- Build outbreak-status ledger (P1) ----
     outbreak_status = build_outbreak_status(
         active_clusters=clusters,
         who_entries=who_entries if not args.no_network else [],
         mv_hondius_imports=(imports_payload.get("imports") if imports_payload else None) or [],
         arcgis_cases=(arcgis_data.get("cases") if arcgis_data else None) or [],
+        realtime_extracted=realtime_extracted,
     )
 
     prev_outbreak_path = out_dir / "outbreak-status.json"
