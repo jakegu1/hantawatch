@@ -1,19 +1,31 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T19:26:27.867657+00:00",
+  "__generated_at": "2026-05-25T20:59:48.647420+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T19:26:19.261703+00:00",
+  "last_fetched": "2026-05-25T20:59:47.180443+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-4d45f06ae2af1c37",
-      "time": "2026-05-25T19:05:37.000Z",
-      "title_en": "Spanish national evacuated from hantavirus cruise ship tests positive - The Straits Times",
-      "body_en": "Spanish national evacuated from hantavirus cruise ship tests positive The Straits Times",
-      "summary_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性。",
+      "id": "rt-4f6e8546c3b105b2",
+      "time": "2026-05-25T20:30:00.000Z",
+      "title_en": "Hantavirus Outbreak Now Stable, No New Cases And Deaths Reported: WHO - Health and Me",
+      "body_en": "Hantavirus Outbreak Now Stable, No New Cases And Deaths Reported: WHO Health and Me",
+      "summary_zh": "WHO 称汉坦疫情稳定，无新增病例和死亡。",
+      "key_facts_zh": [
+        "WHO",
+        "疫情稳定"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6e6770d24a8f2dda",
+      "time": "2026-05-25T20:04:00.000Z",
+      "title_en": "Spanish national tests positive for hantavirus after evacuating cruise ship - The News International",
+      "body_en": "Spanish national tests positive for hantavirus after evacuating cruise ship The News International",
+      "summary_zh": "西班牙公民撤离邮轮后检测汉坦病毒阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -22,11 +34,62 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-0c68c6a4df16c6f5",
+      "time": "2026-05-25T20:02:33.000Z",
+      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
+      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
+      "summary_zh": "英国 Arrowe Park 医院员工称汉坦患者被优先处理。",
+      "key_facts_zh": [
+        "英国",
+        "医院",
+        "优先处理"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a7597771bc3ec9ee",
+      "time": "2026-05-25T19:42:03.000Z",
+      "title_en": "Spanish government confirms new case of hantavirus - NBC News",
+      "body_en": "Spanish government confirms new case of hantavirus NBC News",
+      "summary_zh": "西班牙政府确认新增一例汉坦病例。",
+      "key_facts_zh": [
+        "西班牙",
+        "新增 1 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-bb1ddb4116ae9331",
+      "time": "2026-05-25T19:25:26.000Z",
+      "title_en": "Hantavirus detected in another person in Spain who was on board the MV Hondius - Українські Національні Новини (УНН)",
+      "body_en": "Hantavirus detected in another person in Spain who was on board the MV Hondius Українські Національні Новини (УНН)",
+      "summary_zh": "西班牙另一名 MV Hondius 邮轮乘客检测汉坦阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "新增 1 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-6f3dc330cc1652c7",
       "time": "2026-05-25T18:50:00.000Z",
       "title_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus - CBC",
       "body_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC",
-      "summary_zh": "MV Hondius 邮轮一名西班牙乘客汉坦病毒检测阳性。",
+      "summary_zh": "加拿大 CBC 报道 MV Hondius 邮轮西班牙乘客汉坦阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-632f7fd12c1686ec",
+      "time": "2026-05-25T18:45:41.000Z",
+      "title_en": "Spanish citizen evacuated from MV Hondius cruise ship tests positive for hantavirus - Scripps News",
+      "body_en": "Spanish citizen evacuated from MV Hondius cruise ship tests positive for hantavirus Scripps News",
+      "summary_zh": "西班牙公民从 MV Hondius 邮轮撤离后检测汉坦阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -37,9 +100,9 @@
     {
       "id": "rt-5dbbd600df98d758",
       "time": "2026-05-25T18:28:56.000Z",
-      "title_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus - CNN",
-      "body_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus CNN",
-      "summary_zh": "西班牙公民从邮轮撤离后汉坦病毒检测阳性。",
+      "title_en": "Spanish citizen evacuated from hantavirus-hit cruise ship tests positive - CNN",
+      "body_en": "Spanish citizen evacuated from hantavirus-hit cruise ship tests positive CNN",
+      "summary_zh": "CNN 报道西班牙公民从汉坦疫情邮轮撤离后确诊。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -48,7 +111,20 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-3daa42383bdebfae",
+      "id": "rt-27c309ee38a2a166",
+      "time": "2026-05-25T18:28:46.000Z",
+      "title_en": "Spanish national evacuated from hantavirus cruise ship tests positive - Deccan Herald",
+      "body_en": "Spanish national evacuated from hantavirus cruise ship tests positive Deccan Herald",
+      "summary_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-51c13956d732a97a",
       "time": "2026-05-25T18:27:52.000Z",
       "title_en": "Spaniard evacuated from hantavirus ship tests positive - RTE.ie",
       "body_en": "Spaniard evacuated from hantavirus ship tests positive RTE.ie",
@@ -112,23 +188,11 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-7f5e44fb81749abb",
-      "time": "2026-05-25T09:57:00.000Z",
-      "title_en": "Nebraska's public health lab spun up a new hantavirus test in days - Omaha World-Herald",
-      "body_en": "Nebraska's public health lab spun up a new hantavirus test in days Omaha World-Herald",
-      "summary_zh": "内布拉斯加州公共卫生实验室数日内开发出汉坦病毒新检测方法。",
-      "key_facts_zh": [
-        "内布拉斯加",
-        "新检测"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-33a726907367fbf5",
       "time": "2026-05-25T09:12:00.000Z",
       "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - Daily Star",
       "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship Daily Star",
-      "summary_zh": "英国医院员工因邮轮汉坦患者隔离而不堪重负。",
+      "summary_zh": "英国医院因邮轮汉坦病毒患者隔离而压力巨大。",
       "key_facts_zh": [
         "英国",
         "医院",
@@ -137,11 +201,24 @@
       "signal_strength": "medium"
     },
     {
+      "id": "rt-7c42c1269ccdf6f6",
+      "time": "2026-05-25T07:45:00.000Z",
+      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
+      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者优先权问题。",
+      "key_facts_zh": [
+        "英国",
+        "医院",
+        "员工担忧"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-e787e65c890f6739",
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -154,36 +231,10 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事表示汉坦病毒局势目前稳定。",
+      "summary_zh": "WHO 称汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "疫情稳定"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-16b226635760c414",
-      "time": "2026-05-24T22:01:20.000Z",
-      "title_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada - TheTravel",
-      "body_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada TheTravel",
-      "summary_zh": "加拿大政府警告美洲最和平国家汉坦病毒激增。",
-      "key_facts_zh": [
-        "加拿大",
-        "政府警告",
-        "汉坦病毒激增"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-feb62daaf0b7b121",
-      "time": "2026-05-24T16:41:00.000Z",
-      "title_en": "Navy sends doctors to treat rat virus patient on remote island - The Telegraph",
-      "body_en": "Navy sends doctors to treat rat virus patient on remote island The Telegraph",
-      "summary_zh": "美国海军派医生前往偏远岛屿治疗鼠病毒患者。",
-      "key_facts_zh": [
-        "美国海军",
-        "医生",
-        "鼠病毒患者"
       ],
       "signal_strength": "high"
     }
