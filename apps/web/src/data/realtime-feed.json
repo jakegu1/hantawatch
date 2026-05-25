@@ -1,72 +1,173 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T17:23:25.550383+00:00",
+  "__generated_at": "2026-05-25T19:19:09.026522+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T17:23:24.138569+00:00",
+  "last_fetched": "2026-05-25T19:19:08.040212+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-61a78c35700131cc",
-      "time": "2026-05-25T16:50:00.000Z",
-      "title_en": "Hantavirus incident raises fitness-to-fly questions - eTNW",
-      "body_en": "Hantavirus incident raises fitness-to-fly questions eTNW",
-      "summary_zh": "汉坦病毒事件引发飞行适航性疑问。",
+      "id": "rt-4d45f06ae2af1c37",
+      "time": "2026-05-25T19:05:37.000Z",
+      "title_en": "Spanish national evacuated from hantavirus cruise ship tests positive - The Straits Times",
+      "body_en": "Spanish national evacuated from hantavirus cruise ship tests positive The Straits Times",
+      "summary_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性。",
       "key_facts_zh": [
-        "飞行适航"
+        "西班牙",
+        "邮轮",
+        "确诊"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6f3dc330cc1652c7",
+      "time": "2026-05-25T18:50:00.000Z",
+      "title_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus - CBC",
+      "body_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC",
+      "summary_zh": "MV Hondius 邮轮上一西班牙乘客汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-5dbbd600df98d758",
+      "time": "2026-05-25T18:28:56.000Z",
+      "title_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus - CNN",
+      "body_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus CNN",
+      "summary_zh": "从邮轮撤离的西班牙公民汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-3daa42383bdebfae",
+      "time": "2026-05-25T18:27:52.000Z",
+      "title_en": "Spaniard evacuated from hantavirus ship tests positive - RTE.ie",
+      "body_en": "Spaniard evacuated from hantavirus ship tests positive RTE.ie",
+      "summary_zh": "从汉坦病毒邮轮撤离的西班牙人检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-2d7bac35b438390e",
+      "time": "2026-05-25T18:08:34.000Z",
+      "title_en": "Spanish Cruise Evacuee Tests Positive for Hantavirus - Devdiscourse",
+      "body_en": "Spanish Cruise Evacuee Tests Positive for Hantavirus Devdiscourse",
+      "summary_zh": "西班牙邮轮撤离者汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-88464791b3f71d95",
+      "time": "2026-05-25T17:50:43.000Z",
+      "title_en": "Health ministry confirms another hantavirus case in Spain - Euronews.com",
+      "body_en": "Health ministry confirms another hantavirus case in Spain Euronews.com",
+      "summary_zh": "西班牙卫生部确认新增一例汉坦病毒病例。",
+      "key_facts_zh": [
+        "西班牙",
+        "卫生部",
+        "新增 1 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-27395dd10ff382eb",
+      "time": "2026-05-25T17:46:43.000Z",
+      "title_en": "Hantavirus Hits Spain: Quarantine in Madrid Military Hospital - Devdiscourse",
+      "body_en": "Hantavirus Hits Spain: Quarantine in Madrid Military Hospital Devdiscourse",
+      "summary_zh": "汉坦病毒袭击西班牙，马德里军事医院隔离。",
+      "key_facts_zh": [
+        "西班牙",
+        "马德里",
+        "隔离"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-381c9f7a1ed208c8",
       "time": "2026-05-25T15:43:32.000Z",
       "title_en": "Hantavirus ‘stable for now,’ WHO leader says - Yahoo News New Zealand",
       "body_en": "Hantavirus ‘stable for now,’ WHO leader says Yahoo News New Zealand",
-      "summary_zh": "WHO 领导人称汉坦病毒目前稳定。",
+      "summary_zh": "WHO 官员称汉坦病毒疫情暂时稳定。",
       "key_facts_zh": [
         "WHO",
-        "稳定"
+        "疫情稳定"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-0c68c6a4df16c6f5",
       "time": "2026-05-25T13:49:53.000Z",
       "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
       "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国阿罗公园医院员工称汉坦患者被优先。",
+      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先治疗。",
       "key_facts_zh": [
         "英国",
         "医院",
-        "优先"
+        "优先治疗"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-64da72d0bee00e6d",
+      "time": "2026-05-25T12:57:00.000Z",
+      "title_en": "Ebola and hantavirus outbreaks prompt raft of conspiracy theories in divided US - The Guardian",
+      "body_en": "Ebola and hantavirus outbreaks prompt raft of conspiracy theories in divided US The Guardian",
+      "summary_zh": "[翻译缺失 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7f5e44fb81749abb",
+      "time": "2026-05-25T09:57:00.000Z",
+      "title_en": "Nebraska's public health lab spun up a new hantavirus test in days - Omaha World-Herald",
+      "body_en": "Nebraska's public health lab spun up a new hantavirus test in days Omaha World-Herald",
+      "summary_zh": "内布拉斯加州公共卫生实验室数日内开发出新型汉坦病毒检测方法。",
+      "key_facts_zh": [
+        "内布拉斯加",
+        "新检测"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-33a726907367fbf5",
       "time": "2026-05-25T09:12:00.000Z",
       "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - Daily Star",
       "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship Daily Star",
-      "summary_zh": "英国医院因邮轮汉坦患者隔离不堪重负。",
+      "summary_zh": "英国医院员工因邮轮汉坦病毒患者隔离而工作负荷过重。",
       "key_facts_zh": [
         "英国",
-        "邮轮",
-        "医院不堪重负"
+        "医院",
+        "邮轮"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-7c42c1269ccdf6f6",
       "time": "2026-05-25T07:45:00.000Z",
       "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
       "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
-      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先处理。",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先治疗。",
       "key_facts_zh": [
         "英国",
-        "医院员工",
-        "担忧"
+        "医院",
+        "优先治疗"
       ],
       "signal_strength": "medium"
     },
@@ -75,7 +176,7 @@
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -84,27 +185,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-a596dca8fb5043d0",
-      "time": "2026-05-25T01:23:58.000Z",
-      "title_en": "Third hantavirus case confirmed in Taiwan this year - Outbreak News Today",
-      "body_en": "Third hantavirus case confirmed in Taiwan this year Outbreak News Today",
-      "summary_zh": "台湾省今年确诊第三例汉坦病毒病例。",
-      "key_facts_zh": [
-        "台湾省",
-        "第三例",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-4f97adaaee76e84a",
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事称汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 称汉坦病毒局势目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定"
+        "局势稳定"
       ],
       "signal_strength": "high"
     },
@@ -117,7 +205,7 @@
       "key_facts_zh": [
         "加拿大",
         "警告",
-        "激增"
+        "疫情激增"
       ],
       "signal_strength": "medium"
     },
@@ -126,11 +214,10 @@
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "数千英里外邮轮上汉坦病毒的识别竞赛。",
+      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
-        "识别",
-        "竞赛"
+        "识别病毒"
       ],
       "signal_strength": "medium"
     },
@@ -139,50 +226,11 @@
       "time": "2026-05-24T16:41:00.000Z",
       "title_en": "Navy sends doctors to treat rat virus patient on remote island - The Telegraph",
       "body_en": "Navy sends doctors to treat rat virus patient on remote island The Telegraph",
-      "summary_zh": "英国海军派医生前往偏远岛屿治疗鼠病毒患者。",
-      "key_facts_zh": [
-        "英国",
-        "海军",
-        "治疗患者"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-73f88955021548c7",
-      "time": "2026-05-24T14:13:00.000Z",
-      "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
-      "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
-      "summary_zh": "美国研究人员称汉坦病毒正在蔓延。",
+      "summary_zh": "美国海军派医生前往偏远岛屿治疗鼠病毒患者。",
       "key_facts_zh": [
         "美国",
-        "研究人员",
-        "蔓延"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-e694387deab03ec2",
-      "time": "2026-05-24T00:04:00.000Z",
-      "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
-      "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India",
-      "summary_zh": "南非科学家24小时内识别汉坦病毒疫情。",
-      "key_facts_zh": [
-        "南非",
-        "科学家",
-        "识别疫情"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-686d3b8670b33cd8",
-      "time": "2026-05-23T18:17:56.000Z",
-      "title_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks - Yahoo",
-      "body_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks Yahoo",
-      "summary_zh": "WHO称疫情趋稳，荷兰报告新病例，船长下船。",
-      "key_facts_zh": [
-        "WHO",
-        "荷兰",
-        "新病例"
+        "海军",
+        "治疗患者"
       ],
       "signal_strength": "high"
     }
