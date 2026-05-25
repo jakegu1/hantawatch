@@ -350,12 +350,19 @@ const _COUNTRY_NAMES_ZH: Record<string, string> = {
 /** For daily-brief headline fallback — shared shape with collector + shared lib. */
 // ---- ArcGIS ANDV tracking (auto-fetched) --------------------------------
 import arcgisAndvTrackingJson from '@/data/arcgis-andv-tracking.json';
+import outbreakStatusJson from '@/data/outbreak-status.json';
 
 export const arcgisCases: Array<{ country: string; confirmed: number; monitoring: number; total: number }> =
   (arcgisAndvTrackingJson as { cases?: typeof arcgisCases }).cases ?? [];
 
 export const arcgisFetchedAt: string =
   (arcgisAndvTrackingJson as { fetchedAt?: string }).fetchedAt ?? '';
+
+export const outbreakStatus: Array<{
+  id: string; name: string; serotypeId: string;
+  totals: { confirmed: number; deaths: number };
+  perCountry: Array<{ iso2: string; nameZh: string; confirmed: number; monitoring: number; deaths: number; status: string }>;
+}> = (outbreakStatusJson as { outbreaks?: typeof outbreakStatus }).outbreaks ?? [];
 
 export const hondiusImportSummaries: { date: string; summary_zh: string; countryNameZh?: string }[] =
   hondiusImports.map((imp) => ({

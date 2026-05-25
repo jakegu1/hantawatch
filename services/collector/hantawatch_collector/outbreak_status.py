@@ -78,17 +78,11 @@ def build_outbreak_status(
         if not cluster_id:
             continue
 
-        # ----- Totals from WHO DON (latest entry wins) -----
-        who_for_cluster = [w for w in who_entries if _attr(w, "id").startswith(cluster_id)]
-        latest_who = max(who_for_cluster, key=lambda w: _attr(w, "date")) if who_for_cluster else None
-
-        totals_confirmed = 0
-        totals_deaths = 0
-        totals_indeterminate = 0
-        if latest_who:
-            summary = _attr(latest_who, "summary")
-            totals_confirmed = _extract_who_total(summary)
-            totals_deaths = _extract_who_deaths(summary)
+        # ----- Totals from cluster curated fields -----
+        totals_confirmed = int(cluster.get("confirmedCases", 0) or 0)
+        totals_deaths = int(cluster.get("deaths", 0) or 0)
+        totals_indeterminate = int(cluster.get("suspectedCases", 0) or 0)
+        latest_who_date = cluster.get("lastUpdate", "")
 
         # ----- Per-country: import json > arcgis -----
         per_country: list[dict[str, Any]] = []
@@ -172,8 +166,8 @@ def build_outbreak_status(
             },
             "perCountry": per_country,
             "lastUpdate": {
-                "asOfDate": _attr(latest_who, "date") if latest_who else "",
-                "source": _attr(latest_who, "source", {"name": ""}) if latest_who else {},
+                "asOfDate": latest_who_date,
+                "source": cluster.get("source", {"name": ""}),
                 "headlineZh": "",
             },
             "provenance": {

@@ -27,6 +27,7 @@ import {
   countryViews,
   countryViewsByContinent,
   hondiusImports,
+  outbreakStatus,
   hondiusOutbreakName,
   searchCountries,
 } from '@/lib/data';
@@ -42,10 +43,10 @@ const SEROTYPE_LABEL_ZH: Record<string, string> = {
   other: '其他',
 };
 
-function StatusBadge({ imp }: { imp: MvHondiusImport }) {
+function StatusBadge({ imp }: { imp: { status: string; confirmedImports?: number; monitoringCount?: number; quarantineCount?: number; deaths?: number } }) {
   // Colour-coded by status. Picked to match the rest of the site's
   // semantic palette (red = high, amber = elevated, blue = info).
-  const palette: Record<MvHondiusImport['status'], { bg: string; fg: string; label: string }> = {
+  const palette: Record<string, { bg: string; fg: string; label: string }> = {
     imports_confirmed: { bg: 'bg-red-50', fg: 'text-red-700', label: '确诊输入' },
     presumptive_positive: { bg: 'bg-orange-50', fg: 'text-orange-700', label: '初筛阳性' },
     quarantine_active: { bg: 'bg-amber-50', fg: 'text-amber-700', label: '隔离中' },
@@ -179,16 +180,40 @@ function CountryCard({ c }: { c: CountryView }) {
 }
 
 function ImportsBanner() {
-  if (hondiusImports.length === 0) return null;
-  // Sort imports: confirmed > quarantine > monitoring > closed.
-  const order: Record<MvHondiusImport['status'], number> = {
+  // Prefer outbreak-status ledger (P1); fall back to legacy hondiusImports
+  const countries = outbreakStatus.length > 0
+    ? outbreakStatus[0].perCountry.map((pc) => ({
+        iso2: pc.iso2,
+        nameZh: pc.nameZh || pc.iso2,
+        status: pc.confirmed > 0 ? 'imports_confirmed' as const : 'monitoring' as const,
+        confirmedImports: pc.confirmed,
+        monitoringCount: pc.monitoring,
+        deaths: pc.deaths,
+        date: '',
+        summary_zh: '',
+        note: '',
+      }))
+    : hondiusImports.map((imp) => ({
+        iso2: imp.iso2,
+        nameZh: imp.iso2,
+        status: imp.status,
+        confirmedImports: imp.confirmedImports ?? 0,
+        monitoringCount: imp.monitoringCount ?? 0,
+        deaths: imp.deaths ?? 0,
+        date: imp.date,
+        summary_zh: imp.summary_zh,
+        note: '',
+      }));
+
+  if (countries.length === 0) return null;
+  const order: Record<string, number> = {
     imports_confirmed: 0,
     presumptive_positive: 1,
     quarantine_active: 2,
     monitoring: 3,
     closed: 4,
   };
-  const sorted = [...hondiusImports].sort((a, b) => order[a.status] - order[b.status]);
+  const sorted = [...countries].sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3));
   const byIso2 = new Map(countryViews.map((c) => [c.iso2, c]));
 
   return (

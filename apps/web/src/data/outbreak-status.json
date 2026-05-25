@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-05-25T06:33:35.545028+00:00",
+  "__generated_at": "2026-05-25T06:55:44.603779+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -12,11 +12,11 @@
         "name": "南美洲海域（始发乌斯怀亚）"
       },
       "totals": {
-        "all": 0,
-        "confirmed": 0,
-        "indeterminate": 0,
+        "all": 11,
+        "confirmed": 8,
+        "indeterminate": 3,
         "possible": 0,
-        "deaths": 0
+        "deaths": 3
       },
       "perCountry": [
         {
@@ -114,7 +114,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743410+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054632+00:00"
             }
           ]
         },
@@ -133,7 +133,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743431+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054644+00:00"
             }
           ]
         },
@@ -152,7 +152,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743447+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054653+00:00"
             }
           ]
         },
@@ -171,7 +171,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743458+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054660+00:00"
             }
           ]
         },
@@ -190,7 +190,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743469+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054666+00:00"
             }
           ]
         },
@@ -209,7 +209,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743480+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054673+00:00"
             }
           ]
         },
@@ -228,7 +228,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743492+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054680+00:00"
             }
           ]
         },
@@ -247,7 +247,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743503+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054686+00:00"
             }
           ]
         },
@@ -266,7 +266,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743515+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054692+00:00"
             }
           ]
         },
@@ -285,7 +285,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743526+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054698+00:00"
             }
           ]
         },
@@ -304,18 +304,23 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-25T06:33:30.743538+00:00"
+              "retrievedAt": "2026-05-25T06:55:39.054704+00:00"
             }
           ]
         }
       ],
       "lastUpdate": {
-        "asOfDate": "",
-        "source": {},
+        "asOfDate": "2026-05-13",
+        "source": {
+          "name": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+          "retrievedAt": "2026-05-25T06:55:13.893928+00:00",
+          "confidence": "official"
+        },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-05-25T06:33:30.743547+00:00",
+        "generatedAt": "2026-05-25T06:55:39.054710+00:00",
         "contributors": [
           "who_don",
           "arcgis",

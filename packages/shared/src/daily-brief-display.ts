@@ -58,6 +58,12 @@ export interface BriefDisplayInput {
   arcgisCases?: Array<{ country: string; confirmed: number; monitoring: number; total: number }>;
   /** ISO date (YYYY-MM-DD) when ArcGIS data was fetched, for synthetic row dates */
   arcgisFetchedAt?: string;
+  /** Primary structured outbreak ledger from outbreak-status.json (P1) */
+  outbreakStatus?: Array<{
+    id: string; name: string; serotypeId: string;
+    totals: { all: number; confirmed: number; deaths: number; indeterminate: number };
+    perCountry: Array<{ iso2: string; nameZh: string; confirmed: number; monitoring: number; deaths: number; status: string; asOf: string; }>;
+  }>;
   hpiTotal: number;
   chinaRiskFallback?: string;
 }
@@ -368,13 +374,25 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
     structuralMetricsLine,
     userActionHint,
     caseTable: buildCaseTable(input),
-    caseTableSummary: _computeCaseTableSummary(buildCaseTable(input)),
+    caseTableSummary: _computeCaseTableSummary(buildCaseTable(input), input.outbreakStatus),
   };
 }
 
-function _computeCaseTableSummary(rows: CaseTableRow[]): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
+function _computeCaseTableSummary(
+  rows: CaseTableRow[],
+  outbreakStatus?: BriefDisplayInput['outbreakStatus'],
+): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
+  // Prefer outbreak-status ledger (single source of truth)
+  if (outbreakStatus?.length) {
+    const ob = outbreakStatus[0];
+    return {
+      totalConfirmed: ob.totals.confirmed,
+      totalMonitoring: ob.perCountry.reduce((s, c) => s + c.monitoring, 0),
+      totalDeaths: ob.totals.deaths,
+    };
+  }
+  // Fallback: compute from rows
   return {
-    // Only count Andes serotype for confirmed & deaths (exclude HTNV/SEOV local cases)
     totalConfirmed: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.totalConfirmed, 0),
     totalMonitoring: rows.reduce((s, r) => s + r.monitoring, 0),
     totalDeaths: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.deaths, 0),
@@ -411,8 +429,44 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   const rows: CaseTableRow[] = [];
   const seen = new Set<string>();
 
-  // 1. Active clusters (outbreak source)
-  // Group WHO DON entries by outbreak scope (e.g. mv-hondius-2026).
+  // 1. Active clusters (outbreak source) — outbreakStatus as primary
+  if (input.outbreakStatus?.length) {
+    for (const ob of input.outbreakStatus) {
+      // Outbreak summary row
+      rows.push({
+        date: ob.perCountry[0]?.asOf || input.briefDate,
+        countryNameZh: ob.name,
+        caseType: 'outbreak',
+        sourceType: '聚集疫情',
+        serotypeLabel: serotypeLabel(ob.serotypeId),
+        newConfirmed: 0,
+        totalConfirmed: ob.totals.confirmed,
+        deaths: ob.totals.deaths,
+        monitoring: 0,
+        sourceName: 'WHO / ECDC / ArcGIS',
+      });
+      // Per-country rows from outbreakStatus
+      for (const pc of ob.perCountry) {
+        const countryZh = pc.nameZh || pc.iso2;
+        rows.push({
+          date: pc.asOf || input.briefDate,
+          countryNameZh: countryZh,
+          caseType: pc.confirmed > 0 ? 'import' : 'local',
+          sourceType: pc.confirmed > 0 ? '邮轮输入' : '本地散发',
+          serotypeLabel: serotypeLabel(ob.serotypeId),
+          newConfirmed: 0,
+          totalConfirmed: pc.confirmed,
+          deaths: pc.deaths,
+          monitoring: pc.monitoring,
+          sourceName: 'ArcGIS / 手动维护',
+        });
+      }
+    }
+    // Skip the old WHO-DON-based section 1
+    // Fall through to remaining sections only if outbreakStatus is empty
+  } else {
+    // Legacy path (before outbreakStatus exists) — keep existing code
+    // Group WHO DON entries by outbreak scope (e.g. mv-hondius-2026).
   // Keep only the latest entry. Use improved "共报告 N 例" regex.
   {
     const outbreakEntries = input.recentCases.filter(
@@ -449,6 +503,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
       });
     }
   }
+  } // end else (outbreakStatus fallback)
 
   // 2. Import / monitoring entries from importSummaries
   for (const imp of (input.importSummaries ?? [])) {
