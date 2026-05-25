@@ -42,4 +42,5 @@ GENERATED_FILES = frozenset({
     "country-signals.json",
     "arcgis-andv-tracking.json",
     "outbreak-status.json",
+    "realtime-extractions-cache.json",
 })

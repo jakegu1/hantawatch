@@ -112,3 +112,37 @@ def apply_compliance_to_brief(brief: dict[str, Any]) -> tuple[dict[str, Any], li
             warnings.append(f"compliance_corrected: {key}")
 
     return out, warnings
+
+
+def apply_compliance_to_realtime_updates(
+    updates: list,
+) -> tuple[list, list[str]]:
+    """Normalize summary_zh + key_facts_zh on each realtime update.
+
+    Mutates updates in place AND returns them (caller convenience).
+    Returns (updates, warnings).
+    """
+    warnings: list[str] = []
+    for u in updates:
+        summary_zh = getattr(u, "summary_zh", None)
+        if isinstance(summary_zh, str):
+            fixed = apply_china_compliance(summary_zh)
+            if fixed != summary_zh:
+                u.summary_zh = fixed
+                warnings.append(f"compliance_corrected: {u.id}.summary_zh")
+        key_facts_zh = getattr(u, "key_facts_zh", None)
+        if isinstance(key_facts_zh, list):
+            new_facts: list = []
+            changed = False
+            for fact in key_facts_zh:
+                if isinstance(fact, str):
+                    fixed_fact = apply_china_compliance(fact)
+                    if fixed_fact != fact:
+                        changed = True
+                    new_facts.append(fixed_fact)
+                else:
+                    new_facts.append(fact)
+            if changed:
+                u.key_facts_zh = new_facts
+                warnings.append(f"compliance_corrected: {u.id}.key_facts_zh")
+    return updates, warnings

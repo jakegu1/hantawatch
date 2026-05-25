@@ -12,9 +12,10 @@ from __future__ import annotations
 
 import logging
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 from .builder import IMPORT_NAME_ZH
 
@@ -65,6 +66,143 @@ def _attr(obj: Any, key: str, default: Any = "") -> Any:
 
 def _has_cjk(text: str) -> bool:
     return any("\u4e00" <= ch <= "\u9fff" for ch in text)
+
+
+def _parse_event_time(value: str) -> datetime | None:
+    text = (value or "").strip()
+    if not text:
+        return None
+    if len(text) == 10:
+        try:
+            return datetime.fromisoformat(f"{text}T12:00:00+00:00")
+        except ValueError:
+            return None
+    try:
+        dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def _within_24h(value: str, now: datetime) -> bool:
+    dt = _parse_event_time(value)
+    if dt is None:
+        return False
+    return (now - dt) <= timedelta(hours=24)
+
+
+def _is_official_feed_url(url: str) -> bool:
+    host = (urlparse(url).hostname or "").lower()
+    return host.endswith("who.int") or host.endswith("ecdc.europa.eu")
+
+
+def _ensure_per_country(
+    per_country: list[dict[str, Any]],
+    seen_iso2: set[str],
+    iso2: str,
+) -> dict[str, Any]:
+    iso2 = iso2.upper()
+    for pc in per_country:
+        if pc.get("iso2") == iso2:
+            return pc
+    seen_iso2.add(iso2)
+    pc = {
+        "iso2": iso2,
+        "nameZh": _name_zh_for_iso2(iso2),
+        "status": "monitoring",
+        "confirmed": 0,
+        "monitoring": 0,
+        "quarantine": 0,
+        "deaths": 0,
+        "newConfirmedToday": 0,
+        "asOf": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "evidence": [],
+        "note": "",
+    }
+    per_country.append(pc)
+    return pc
+
+
+def _append_realtime_evidence(
+    pc: dict[str, Any],
+    delta: dict[str, Any],
+    *,
+    retrieved_at: str,
+) -> None:
+    reasoning = (delta.get("reasoning_zh") or "").strip()
+    pc.setdefault("evidence", []).append({
+        "tier": "news",
+        "url": delta.get("source_url") or "",
+        "sourceName": "Realtime LLM Extractor",
+        "retrievedAt": retrieved_at,
+        "asOf": delta.get("as_of") or "",
+        "reasoningZh": reasoning,
+    })
+
+
+def _apply_realtime_promotions(
+    per_country: list[dict[str, Any]],
+    seen_iso2: set[str],
+    realtime_extracted: list[dict[str, Any]],
+    *,
+    now: datetime | None = None,
+) -> None:
+    """Promote perCountry rows using P3 realtime extraction gradient."""
+    now = now or datetime.now(timezone.utc)
+    eligible: list[dict[str, Any]] = []
+    for row in realtime_extracted:
+        iso2 = (row.get("iso2") or "").upper()
+        if not iso2:
+            continue
+        if row.get("confidence") != "high":
+            continue
+        if int(row.get("delta_confirmed", 0) or 0) <= 0:
+            continue
+        event_time = row.get("time") or row.get("as_of") or ""
+        if not _within_24h(str(event_time), now):
+            continue
+        eligible.append(row)
+
+    by_iso: dict[str, list[dict[str, Any]]] = {}
+    for row in eligible:
+        iso2 = str(row.get("iso2")).upper()
+        by_iso.setdefault(iso2, []).append(row)
+
+    for iso2, group in by_iso.items():
+        pc = _ensure_per_country(per_country, seen_iso2, iso2)
+        promoted = False
+
+        if len(group) >= 2:
+            if pc.get("status") == "monitoring":
+                pc["status"] = "presumptive_positive"
+            pc["monitoring"] = int(pc.get("monitoring", 0) or 0) + sum(
+                int(x.get("delta_monitoring", 0) or 0) for x in group
+            )
+            promoted = True
+        elif len(group) == 1:
+            row = group[0]
+            url = row.get("source_url") or ""
+            if _is_official_feed_url(url):
+                pc["status"] = "imports_confirmed"
+                add_conf = int(row.get("delta_confirmed", 0) or 0)
+                pc["confirmed"] = int(pc.get("confirmed", 0) or 0) + add_conf
+                pc["newConfirmedToday"] = int(pc.get("newConfirmedToday", 0) or 0) + add_conf
+                promoted = True
+            else:
+                add_mon = int(row.get("delta_monitoring", 0) or 0)
+                if add_mon <= 0:
+                    add_mon = 1
+                pc["monitoring"] = int(pc.get("monitoring", 0) or 0) + add_mon
+                promoted = True
+
+        if promoted:
+            for row in group:
+                _append_realtime_evidence(pc, row, retrieved_at=now.isoformat())
+            latest_as_of = max((str(x.get("as_of") or "") for x in group), default="")
+            if latest_as_of:
+                pc["asOf"] = latest_as_of
 
 
 def _name_zh_for_iso2(iso2: str, raw_name: str | None = None) -> str:
@@ -152,26 +290,8 @@ def build_outbreak_status(
                 ],
             })
 
-        # Layer 3: realtime-LLM extracted (P3 — empty for now)
-        for rt in realtime:
-            iso2 = rt.get("iso2", "")
-            if not iso2 or iso2 in seen_iso2:
-                continue
-            seen_iso2.add(iso2)
-            per_country.append({
-                "iso2": iso2,
-                "nameZh": _name_zh_for_iso2(iso2, rt.get("country_zh")),
-                "status": "presumptive_positive",
-                "confirmed": int(rt.get("delta_confirmed", 0) or 0),
-                "monitoring": int(rt.get("delta_monitoring", 0) or 0),
-                "quarantine": 0,
-                "deaths": int(rt.get("delta_deaths", 0) or 0),
-                "newConfirmedToday": int(rt.get("delta_confirmed", 0) or 0),
-                "asOf": rt.get("as_of", ""),
-                "evidence": [
-                    {"tier": "news", "url": "", "sourceName": "LLM Realtime Extractor", "retrievedAt": ""}
-                ],
-            })
+        # Layer 3: realtime-LLM extracted deltas (P3 promotion gradient)
+        _apply_realtime_promotions(per_country, seen_iso2, realtime)
 
         # Sort perCountry by confirmed descending (highest first)
         per_country.sort(key=lambda pc: int(pc.get("confirmed", 0) or 0), reverse=True)
@@ -196,7 +316,7 @@ def build_outbreak_status(
             },
             "provenance": {
                 "generatedAt": datetime.now(timezone.utc).isoformat(),
-                "contributors": ["who_don", "arcgis", "mv_hondius_imports"],
+                "contributors": ["who_don", "arcgis", "mv_hondius_imports", "realtime_llm"],
             },
         })
 
