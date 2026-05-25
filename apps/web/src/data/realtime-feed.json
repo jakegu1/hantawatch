@@ -1,51 +1,24 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T09:49:59.187113+00:00",
+  "__generated_at": "2026-05-25T10:09:08.785423+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T09:49:57.889632+00:00",
+  "last_fetched": "2026-05-25T10:09:02.521849+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-663be7bc141333ce",
-      "time": "2026-05-25T08:10:50.000Z",
-      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
-      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先治疗。",
-      "key_facts_zh": [
-        "英国",
-        "医院",
-        "优先治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7c42c1269ccdf6f6",
-      "time": "2026-05-25T07:45:00.000Z",
-      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
-      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
-      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先治疗。",
-      "key_facts_zh": [
-        "英国",
-        "医院",
-        "优先治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-37a7a38321e7964e",
       "time": "2026-05-25T05:30:00.000Z",
       "title_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak - Irish Independent",
       "body_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak Irish Independent",
-      "summary_zh": "爱尔兰公司推出快速汉坦病毒抗体检测试剂盒，用于邮轮疫情。",
+      "summary_zh": "爱尔兰公司推出快速汉坦病毒抗体检测试剂盒。",
       "key_facts_zh": [
         "爱尔兰",
-        "抗体检测",
-        "邮轮"
+        "抗体检测"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e787e65c890f6739",
@@ -105,8 +78,8 @@
       "summary_zh": "海军派医生前往偏远岛屿治疗鼠病毒患者。",
       "key_facts_zh": [
         "海军",
-        "偏远岛屿",
-        "治疗"
+        "派医生",
+        "偏远岛屿"
       ],
       "signal_strength": "high"
     },
@@ -115,11 +88,11 @@
       "time": "2026-05-24T14:13:00.000Z",
       "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
       "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
-      "summary_zh": "汉坦病毒在美国蔓延，研究人员称其广泛且复杂。",
+      "summary_zh": "汉坦病毒在美国蔓延，研究人员震惊。",
       "key_facts_zh": [
         "美国",
         "蔓延",
-        "研究"
+        "研究人员"
       ],
       "signal_strength": "medium"
     },
@@ -128,11 +101,11 @@
       "time": "2026-05-24T12:00:00.000Z",
       "title_en": "Inside an African lab that helped crack the hantavirus outbreak - Daily Monitor",
       "body_en": "Inside an African lab that helped crack the hantavirus outbreak Daily Monitor",
-      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
+      "summary_zh": "非洲实验室帮助破解汉坦病毒爆发。",
       "key_facts_zh": [
         "非洲",
         "实验室",
-        "破解"
+        "破解爆发"
       ],
       "signal_strength": "medium"
     },
@@ -144,8 +117,8 @@
       "summary_zh": "南非科学家24小时内识别汉坦病毒爆发。",
       "key_facts_zh": [
         "南非",
-        "24小时",
-        "识别"
+        "科学家",
+        "24小时识别"
       ],
       "signal_strength": "high"
     },
@@ -171,7 +144,7 @@
       "key_facts_zh": [
         "南非",
         "邮轮",
-        "识别病毒"
+        "病毒识别"
       ],
       "signal_strength": "medium"
     },
@@ -192,7 +165,7 @@
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "维多利亚市3名与汉坦病毒疫情相关者仍在住院。",
+      "summary_zh": "维多利亚市三名与汉坦病毒疫情相关者仍在住院。",
       "key_facts_zh": [
         "加拿大",
         "维多利亚",
