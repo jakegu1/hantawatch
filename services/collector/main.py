@@ -49,6 +49,7 @@ except ImportError:
     pass
 
 from hantawatch_collector import MANUAL_FILES
+from hantawatch_collector._compliance import apply_compliance_to_realtime_updates
 from hantawatch_collector._compliance_audit import run_compliance_gate
 from hantawatch_collector.ai_brief import enhance_daily_brief
 from hantawatch_collector.imports_proposals import submit_import_proposals
@@ -119,6 +120,16 @@ def _read_domestic_baseline_status(out_dir: Path) -> str:
     return baseline.get("baselineStatus", "normal")
 
 
+def _normalize_realtime_feed_compliance(feed):
+    """Post-translate geographic compliance on realtime feed updates."""
+    if feed is None:
+        return feed
+    feed.updates, rt_warnings = apply_compliance_to_realtime_updates(feed.updates)
+    if rt_warnings:
+        logger.info("realtime compliance corrections: %s", "; ".join(rt_warnings))
+    return feed
+
+
 def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
     """Light pipeline (~hourly): fast-moving feeds without WHO/ECDC/HPI."""
     logger.info("feeds-only mode: news + surveillance + realtime (no WHO/ECDC/HPI)")
@@ -141,7 +152,7 @@ def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
         arcgis_data = None
 
     try:
-        feed = build_realtime_feed()
+        feed = _normalize_realtime_feed_compliance(build_realtime_feed())
     except Exception as e:
         logger.error("realtime feed: build failed (%s)", e)
         feed = None
@@ -212,7 +223,7 @@ def _run_realtime_only(out_dir: Path, dry_run: bool) -> int:
     which preserves the existing JSON), 2 if an unexpected error fired."""
     logger.info("realtime-only mode: skipping WHO/ECDC/news pipeline")
     try:
-        feed = build_realtime_feed()
+        feed = _normalize_realtime_feed_compliance(build_realtime_feed())
     except Exception as e:
         logger.error("realtime feed: build failed (%s)", e)
         return 2
@@ -405,7 +416,7 @@ def main(argv: list[str] | None = None) -> int:
     country_signals = None
     if not args.no_network:
         try:
-            realtime_feed = build_realtime_feed()
+            realtime_feed = _normalize_realtime_feed_compliance(build_realtime_feed())
             if realtime_feed:
                 logger.info(
                     "Realtime feed: %d updates (translated=%s)",

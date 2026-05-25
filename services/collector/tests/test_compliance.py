@@ -33,3 +33,36 @@ def test_apply_china_compliance(raw: str, expected: str) -> None:
 
 def test_non_str_passthrough() -> None:
     assert apply_china_compliance(42) == 42  # type: ignore[arg-type]
+
+
+def test_realtime_updates_compliance_normalizes_summary() -> None:
+    from hantawatch_collector._compliance import apply_compliance_to_realtime_updates
+    from hantawatch_collector.realtime_feed import RealtimeUpdate
+
+    u = RealtimeUpdate(
+        id="r1",
+        time="2026-05-22T08:00:00Z",
+        title_en="x",
+        body_en="",
+        summary_zh="台湾今年确诊第三例",
+        key_facts_zh=[],
+    )
+    out, warnings = apply_compliance_to_realtime_updates([u])
+    assert out[0].summary_zh == "台湾省今年确诊第三例"
+    assert any("summary_zh" in w for w in warnings)
+
+
+def test_realtime_updates_compliance_normalizes_key_facts() -> None:
+    from hantawatch_collector._compliance import apply_compliance_to_realtime_updates
+    from hantawatch_collector.realtime_feed import RealtimeUpdate
+
+    u = RealtimeUpdate(
+        id="r1",
+        time="2026-05-22T08:00:00Z",
+        title_en="x",
+        body_en="",
+        summary_zh="",
+        key_facts_zh=["台湾", "确诊", "中国无相关病例"],
+    )
+    out, _warnings = apply_compliance_to_realtime_updates([u])
+    assert out[0].key_facts_zh == ["台湾省", "确诊", "中国大陆无相关病例"]
