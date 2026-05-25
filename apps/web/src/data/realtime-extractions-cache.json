@@ -181,6 +181,118 @@
         "source_url": "",
         "time": "2026-05-23T18:17:56.000Z"
       }
+    ],
+    "rt-4d45f06ae2af1c37": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性，新增1例确诊病例。",
+        "update_id": "rt-4d45f06ae2af1c37",
+        "source_url": "",
+        "time": "2026-05-25T19:05:37.000Z"
+      }
+    ],
+    "rt-6f3dc330cc1652c7": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙乘客从MV Hondius邮轮检测阳性，新增1例确诊病例。",
+        "update_id": "rt-6f3dc330cc1652c7",
+        "source_url": "",
+        "time": "2026-05-25T18:50:00.000Z"
+      }
+    ],
+    "rt-5dbbd600df98d758": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙公民从邮轮撤离后检测阳性，新增1例确诊病例。",
+        "update_id": "rt-5dbbd600df98d758",
+        "source_url": "",
+        "time": "2026-05-25T18:28:56.000Z"
+      }
+    ],
+    "rt-3daa42383bdebfae": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙人从汉坦病毒邮轮撤离后检测阳性，新增1例确诊病例。",
+        "update_id": "rt-3daa42383bdebfae",
+        "source_url": "",
+        "time": "2026-05-25T18:27:52.000Z"
+      }
+    ],
+    "rt-2d7bac35b438390e": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙邮轮撤离者检测阳性，新增1例确诊病例。",
+        "update_id": "rt-2d7bac35b438390e",
+        "source_url": "",
+        "time": "2026-05-25T18:08:34.000Z"
+      }
+    ],
+    "rt-88464791b3f71d95": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "high",
+        "reasoning_zh": "西班牙卫生部确认新增一例汉坦病毒病例，新增1例确诊病例。",
+        "update_id": "rt-88464791b3f71d95",
+        "source_url": "",
+        "time": "2026-05-25T17:50:43.000Z"
+      }
+    ],
+    "rt-27395dd10ff382eb": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "low",
+        "reasoning_zh": "报道称汉坦病毒影响西班牙，马德里军事医院隔离，但未提供具体新增数字。",
+        "update_id": "rt-27395dd10ff382eb",
+        "source_url": "",
+        "time": "2026-05-25T17:46:43.000Z"
+      }
+    ],
+    "rt-7f5e44fb81749abb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "low",
+        "reasoning_zh": "内布拉斯加州公共卫生实验室开发新汉坦病毒检测方法，无新增病例报告。",
+        "update_id": "rt-7f5e44fb81749abb",
+        "source_url": "",
+        "time": "2026-05-25T09:57:00.000Z"
+      }
     ]
   }
 }

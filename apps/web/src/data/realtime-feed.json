@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T19:19:09.026522+00:00",
+  "__generated_at": "2026-05-25T19:26:27.867657+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T19:19:08.040212+00:00",
+  "last_fetched": "2026-05-25T19:26:19.261703+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-05-25T18:50:00.000Z",
       "title_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus - CBC",
       "body_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC",
-      "summary_zh": "MV Hondius 邮轮上一西班牙乘客汉坦病毒检测阳性。",
+      "summary_zh": "MV Hondius 邮轮一名西班牙乘客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -39,7 +39,7 @@
       "time": "2026-05-25T18:28:56.000Z",
       "title_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus - CNN",
       "body_en": "Spanish citizen evacuated from cruise ship tests positive for hantavirus CNN",
-      "summary_zh": "从邮轮撤离的西班牙公民汉坦病毒检测阳性。",
+      "summary_zh": "西班牙公民从邮轮撤离后汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -52,7 +52,7 @@
       "time": "2026-05-25T18:27:52.000Z",
       "title_en": "Spaniard evacuated from hantavirus ship tests positive - RTE.ie",
       "body_en": "Spaniard evacuated from hantavirus ship tests positive RTE.ie",
-      "summary_zh": "从汉坦病毒邮轮撤离的西班牙人检测阳性。",
+      "summary_zh": "西班牙人从汉坦病毒邮轮撤离后检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -104,33 +104,11 @@
       "time": "2026-05-25T15:43:32.000Z",
       "title_en": "Hantavirus ‘stable for now,’ WHO leader says - Yahoo News New Zealand",
       "body_en": "Hantavirus ‘stable for now,’ WHO leader says Yahoo News New Zealand",
-      "summary_zh": "WHO 官员称汉坦病毒疫情暂时稳定。",
+      "summary_zh": "WHO 官员称汉坦病毒目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定"
+        "稳定"
       ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0c68c6a4df16c6f5",
-      "time": "2026-05-25T13:49:53.000Z",
-      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
-      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先治疗。",
-      "key_facts_zh": [
-        "英国",
-        "医院",
-        "优先治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-64da72d0bee00e6d",
-      "time": "2026-05-25T12:57:00.000Z",
-      "title_en": "Ebola and hantavirus outbreaks prompt raft of conspiracy theories in divided US - The Guardian",
-      "body_en": "Ebola and hantavirus outbreaks prompt raft of conspiracy theories in divided US The Guardian",
-      "summary_zh": "[翻译缺失 · 请参考英文原文]",
-      "key_facts_zh": [],
       "signal_strength": "medium"
     },
     {
@@ -138,7 +116,7 @@
       "time": "2026-05-25T09:57:00.000Z",
       "title_en": "Nebraska's public health lab spun up a new hantavirus test in days - Omaha World-Herald",
       "body_en": "Nebraska's public health lab spun up a new hantavirus test in days Omaha World-Herald",
-      "summary_zh": "内布拉斯加州公共卫生实验室数日内开发出新型汉坦病毒检测方法。",
+      "summary_zh": "内布拉斯加州公共卫生实验室数日内开发出汉坦病毒新检测方法。",
       "key_facts_zh": [
         "内布拉斯加",
         "新检测"
@@ -150,7 +128,7 @@
       "time": "2026-05-25T09:12:00.000Z",
       "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - Daily Star",
       "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship Daily Star",
-      "summary_zh": "英国医院员工因邮轮汉坦病毒患者隔离而工作负荷过重。",
+      "summary_zh": "英国医院员工因邮轮汉坦患者隔离而不堪重负。",
       "key_facts_zh": [
         "英国",
         "医院",
@@ -159,24 +137,11 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-7c42c1269ccdf6f6",
-      "time": "2026-05-25T07:45:00.000Z",
-      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
-      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
-      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先治疗。",
-      "key_facts_zh": [
-        "英国",
-        "医院",
-        "优先治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-e787e65c890f6739",
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 称邮轮汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -189,10 +154,10 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 称汉坦病毒局势目前稳定。",
+      "summary_zh": "WHO 总干事表示汉坦病毒局势目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "局势稳定"
+        "疫情稳定"
       ],
       "signal_strength": "high"
     },
@@ -204,20 +169,8 @@
       "summary_zh": "加拿大政府警告美洲最和平国家汉坦病毒激增。",
       "key_facts_zh": [
         "加拿大",
-        "警告",
-        "疫情激增"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-74440a0db5d86abd",
-      "time": "2026-05-24T20:25:00.000Z",
-      "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
-      "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
-      "key_facts_zh": [
-        "邮轮",
-        "识别病毒"
+        "政府警告",
+        "汉坦病毒激增"
       ],
       "signal_strength": "medium"
     },
@@ -228,9 +181,9 @@
       "body_en": "Navy sends doctors to treat rat virus patient on remote island The Telegraph",
       "summary_zh": "美国海军派医生前往偏远岛屿治疗鼠病毒患者。",
       "key_facts_zh": [
-        "美国",
-        "海军",
-        "治疗患者"
+        "美国海军",
+        "医生",
+        "鼠病毒患者"
       ],
       "signal_strength": "high"
     }
