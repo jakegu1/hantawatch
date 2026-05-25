@@ -1,0 +1,32 @@
+{
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-05-25T07:43:48.784792+00:00",
+  "date": "2026-05-25",
+  "distanceDeltaKm": 0,
+  "hpiDelta": 0,
+  "globalNewCases": 0,
+  "globalCasesTotal": 8,
+  "domesticBaselineStatus": "normal",
+  "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
+  "daysSinceLastIntlAlert": 12,
+  "whoDaysSinceOfficialUpdate": 12,
+  "cluesLast24h": 12,
+  "headline24h": "",
+  "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
+  "latestChange": "5月25日WHO称邮轮汉坦疫情稳定；台湾报告今年第3例确诊（非邮轮关联）。",
+  "situation": "MV Hondius邮轮相关聚集疫情共11例（8确诊、3死亡），多国监测中；法国、西班牙各有1例确诊输入。",
+  "riskJudgment": "中国境内HFRS基线正常，邮轮疫情距中国超8000公里，输入风险低，无需过度担忧。",
+  "newCases": "5月25日无新增官方确诊病例；台湾报告1例本地确诊（非邮轮关联）。",
+  "sourceSummary": "WHO、美国CDC、欧洲CDC及台湾卫生机构。",
+  "shareLine": "5月25日：WHO称邮轮汉坦疫情稳定；台湾今年第3例确诊（非邮轮关联）。中国境内HFRS正常",
+  "watchFocus": [
+    "邮轮接触者随访",
+    "台湾本地病例",
+    "法国输入监测"
+  ],
+  "evidence": [
+    "WHO 5月13日DON通报",
+    "美国CDC 5月15日监测",
+    "台湾5月25日确诊报告"
+  ]
+}

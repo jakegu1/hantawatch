@@ -1,0 +1,332 @@
+{
+  "__generated_by": "hantawatch-collector",
+  "__generated_at": "2026-05-25T07:43:48.791124+00:00",
+  "outbreaks": [
+    {
+      "id": "mv-hondius-2026",
+      "name": "MV Hondius 邮轮安第斯型聚集疫情",
+      "serotypeId": "andes",
+      "origin": {
+        "lat": -54.8,
+        "lng": -68.3,
+        "name": "南美洲海域（始发乌斯怀亚）"
+      },
+      "totals": {
+        "all": 11,
+        "confirmed": 8,
+        "indeterminate": 3,
+        "possible": 0,
+        "deaths": 3
+      },
+      "perCountry": [
+        {
+          "iso2": "US",
+          "nameZh": "美国",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 41,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-15",
+          "evidence": [
+            {
+              "tier": "official",
+              "url": "",
+              "sourceName": "手动维护导入数据",
+              "retrievedAt": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "iso2": "AU",
+          "nameZh": "澳大利亚",
+          "status": "quarantine_active",
+          "confirmed": 0,
+          "monitoring": 0,
+          "quarantine": 6,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-15",
+          "evidence": [
+            {
+              "tier": "official",
+              "url": "",
+              "sourceName": "手动维护导入数据",
+              "retrievedAt": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "iso2": "ES",
+          "nameZh": "西班牙",
+          "status": "imports_confirmed",
+          "confirmed": 1,
+          "monitoring": 0,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-15",
+          "evidence": [
+            {
+              "tier": "official",
+              "url": "",
+              "sourceName": "手动维护导入数据",
+              "retrievedAt": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "iso2": "FR",
+          "nameZh": "法国",
+          "status": "imports_confirmed",
+          "confirmed": 1,
+          "monitoring": 0,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-15",
+          "evidence": [
+            {
+              "tier": "official",
+              "url": "",
+              "sourceName": "手动维护导入数据",
+              "retrievedAt": ""
+            }
+          ],
+          "note": ""
+        },
+        {
+          "iso2": "BE",
+          "nameZh": "比利时",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 2,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619501+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "CA",
+          "nameZh": "加拿大",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 7,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619512+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "DE",
+          "nameZh": "德国",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 4,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619520+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "GR",
+          "nameZh": "希腊",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 1,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619526+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "IE",
+          "nameZh": "爱尔兰",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 2,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619531+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "NL",
+          "nameZh": "荷兰",
+          "status": "monitoring",
+          "confirmed": 2,
+          "monitoring": 3,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619537+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "SG",
+          "nameZh": "新加坡",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 1,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619543+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "ZA",
+          "nameZh": "南非",
+          "status": "monitoring",
+          "confirmed": 1,
+          "monitoring": 0,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619548+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "CH",
+          "nameZh": "瑞士",
+          "status": "monitoring",
+          "confirmed": 1,
+          "monitoring": 0,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619553+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "TR",
+          "nameZh": "土耳其",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 2,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619559+00:00"
+            }
+          ]
+        },
+        {
+          "iso2": "GB",
+          "nameZh": "英国",
+          "status": "monitoring",
+          "confirmed": 0,
+          "monitoring": 28,
+          "quarantine": 0,
+          "deaths": 0,
+          "newConfirmedToday": 0,
+          "asOf": "2026-05-25",
+          "evidence": [
+            {
+              "tier": "arcgis",
+              "url": "",
+              "sourceName": "ArcGIS ANDV Dashboard",
+              "retrievedAt": "2026-05-25T07:43:42.619563+00:00"
+            }
+          ]
+        }
+      ],
+      "lastUpdate": {
+        "asOfDate": "2026-05-13",
+        "source": {
+          "name": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+          "retrievedAt": "2026-05-25T07:43:17.830426+00:00",
+          "confidence": "official"
+        },
+        "headlineZh": ""
+      },
+      "provenance": {
+        "generatedAt": "2026-05-25T07:43:42.619568+00:00",
+        "contributors": [
+          "who_don",
+          "arcgis",
+          "mv_hondius_imports"
+        ]
+      }
+    }
+  ]
+}
