@@ -28,6 +28,9 @@ jobs:
       - name: TypeScript check
         run: pnpm check
 
+      - name: Web unit tests
+        run: pnpm --filter @hantawatch/web test
+
   build:
     name: Production Build
     runs-on: ubuntu-latest
