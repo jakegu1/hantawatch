@@ -63,6 +63,22 @@ def _attr(obj: Any, key: str, default: Any = "") -> Any:
     return getattr(obj, key, default)
 
 
+def _has_cjk(text: str) -> bool:
+    return any("\u4e00" <= ch <= "\u9fff" for ch in text)
+
+
+def _name_zh_for_iso2(iso2: str, raw_name: str | None = None) -> str:
+    """Resolve Chinese country label: IMPORT_NAME_ZH wins; never emit English."""
+    iso = (iso2 or "").upper()
+    mapped = IMPORT_NAME_ZH.get(iso, "")
+    if mapped:
+        return mapped
+    candidate = (raw_name or "").strip()
+    if candidate and _has_cjk(candidate):
+        return candidate
+    return ""
+
+
 def build_outbreak_status(
     *,
     active_clusters: list[dict[str, Any]],
@@ -97,7 +113,10 @@ def build_outbreak_status(
                 seen_iso2.add(iso2)
                 per_country.append({
                     "iso2": iso2,
-                    "nameZh": imp.get("nameZh") or imp.get("countryZh") or IMPORT_NAME_ZH.get(iso2, iso2),
+                    "nameZh": _name_zh_for_iso2(
+                        iso2,
+                        imp.get("nameZh") or imp.get("countryZh"),
+                    ),
                     "status": imp.get("status", "monitoring"),
                     "confirmed": int(imp.get("confirmedImports", 0) or 0),
                     "monitoring": int(imp.get("monitoringCount", 0) or 0),
@@ -120,7 +139,7 @@ def build_outbreak_status(
             seen_iso2.add(iso2)
             per_country.append({
                 "iso2": iso2,
-                "nameZh": IMPORT_NAME_ZH.get(iso2, iso2),
+                "nameZh": _name_zh_for_iso2(iso2),
                 "status": "monitoring",
                 "confirmed": int(ac.get("confirmed", 0) or 0),
                 "monitoring": int(ac.get("monitoring", 0) or 0),
@@ -141,7 +160,7 @@ def build_outbreak_status(
             seen_iso2.add(iso2)
             per_country.append({
                 "iso2": iso2,
-                "nameZh": rt.get("country_zh", ""),
+                "nameZh": _name_zh_for_iso2(iso2, rt.get("country_zh")),
                 "status": "presumptive_positive",
                 "confirmed": int(rt.get("delta_confirmed", 0) or 0),
                 "monitoring": int(rt.get("delta_monitoring", 0) or 0),
