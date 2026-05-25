@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T16:48:31.397011+00:00",
+  "__generated_at": "2026-05-25T17:05:36.870099+00:00",
   "date": "2026-05-26",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 13,
   "whoDaysSinceOfficialUpdate": 13,
   "cluesLast24h": 12,
-  "headline24h": "汉坦病毒事件引发飞行适航性疑问。",
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "5月25日WHO称疫情趋稳；台湾省今年第3例确诊；荷兰新增1例确诊。",
-  "situation": "MV Hondius邮轮安第斯型聚集疫情累计11例（8确诊），3例死亡；多国监测中，中国大陆无相关病例。",
-  "riskJudgment": "中国大陆无本土病例，HPI指数31（一般关注），国内HFRS基线正常，公众",
+  "situation": "MV Hondius邮轮安第斯型聚集疫情累计11例（8确诊、3结果未定），3例死亡；多国监测中，中国大陆无相关病例。",
+  "riskJudgment": "中国大陆境内无汉坦病例，HFRS基线正常；输入风险极低",
   "newCases": "5月25日台湾省新增1例确诊；5月23日荷兰新增1例确诊。",
-  "sourceSummary": "WHO官方通报、ArcGIS监测、多国卫生部门",
-  "shareLine": "汉坦病毒疫情平稳：WHO称稳定，中国大陆无病例，台湾省新增1例确诊，荷兰新增1例注意卫生。",
+  "sourceSummary": "WHO疾病暴发新闻、ArcGIS ANDV Dashboard、各国官方通报。",
+  "shareLine": "5月26日：MV Hondius邮轮汉坦疫情累计11例（含台湾省1例确诊）；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "邮轮接触者随访",
-    "欧洲输入病例",
-    "台湾省本土病例"
+    "邮轮接触者随访进展",
+    "荷兰新增确诊详情",
+    "台湾省病例溯源"
   ],
   "evidence": [
-    "WHO 5月13日DON",
+    "WHO DON 5月13日更新",
     "ArcGIS ANDV Dashboard",
-    "台湾省卫生部门通报"
+    "台湾省CDC通报"
   ],
   "_guardrail_warnings": [
     "brief contains \"400\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",

@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T17:02:50.252660+00:00",
+  "__generated_at": "2026-05-25T17:05:36.872219+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T17:02:48.738413+00:00",
+  "last_fetched": "2026-05-25T17:05:32.021075+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-05-25T16:50:00.000Z",
       "title_en": "Hantavirus incident raises fitness-to-fly questions - eTNW",
       "body_en": "Hantavirus incident raises fitness-to-fly questions eTNW",
-      "summary_zh": "汉坦病毒事件引发飞行适航性疑问。",
+      "summary_zh": "汉坦病毒事件引发飞行适航性问题讨论。",
       "key_facts_zh": [
         "汉坦病毒",
         "飞行适航"
@@ -25,10 +25,9 @@
       "time": "2026-05-25T15:43:32.000Z",
       "title_en": "Hantavirus ‘stable for now,’ WHO leader says - Yahoo News New Zealand",
       "body_en": "Hantavirus ‘stable for now,’ WHO leader says Yahoo News New Zealand",
-      "summary_zh": "WHO 领导人称汉坦病毒“目前稳定”。",
+      "summary_zh": "WHO 领导人称汉坦病毒目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "汉坦病毒",
         "稳定"
       ],
       "signal_strength": "high"
@@ -42,7 +41,7 @@
       "key_facts_zh": [
         "英国",
         "医院",
-        "优先处理"
+        "优先"
       ],
       "signal_strength": "medium"
     },
@@ -53,7 +52,7 @@
       "body_en": "Washington State University study sheds new light on hantavirus KING5.com",
       "summary_zh": "华盛顿州立大学研究揭示汉坦病毒新信息。",
       "key_facts_zh": [
-        "华盛顿州立大学",
+        "美国",
         "研究",
         "汉坦病毒"
       ],
@@ -90,7 +89,7 @@
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情暂时稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -116,32 +115,19 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事表示汉坦病毒疫情目前稳定。",
+      "summary_zh": "WHO 总干事称汉坦病毒局势暂时稳定。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定"
+        "局势稳定"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-16b226635760c414",
-      "time": "2026-05-24T22:01:20.000Z",
-      "title_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada - TheTravel",
-      "body_en": "Canadian Government Warns Of Fatal Hantavirus Surge In The Americas' Most Peaceful Nation After Canada TheTravel",
-      "summary_zh": "加拿大政府警告美洲最和平国家汉坦病毒致命激增。",
-      "key_facts_zh": [
-        "加拿大",
-        "警告",
-        "致命激增"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-74440a0db5d86abd",
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "邮轮上数千英里外识别汉坦病毒的竞赛。",
+      "summary_zh": "数千英里外邮轮上汉坦病毒的识别竞赛。",
       "key_facts_zh": [
         "邮轮",
         "识别",
@@ -167,7 +153,7 @@
       "time": "2026-05-24T14:13:00.000Z",
       "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
       "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
-      "summary_zh": "美国研究人员称汉坦病毒正在蔓延。",
+      "summary_zh": "美国研究人员称汉坦病毒正在蔓延，令人震惊。",
       "key_facts_zh": [
         "美国",
         "研究人员",
