@@ -1,7 +1,7 @@
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { ImportsBanner } from '@/app/countries/page';
+import { ImportsBanner } from '@/components/imports-banner';
 
 vi.mock('@/lib/data', () => ({
   outbreakStatus: [
