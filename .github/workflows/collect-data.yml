@@ -87,6 +87,11 @@ jobs:
             echo "Collector ok."
             exit 0
           elif [ "$rc" -eq 2 ]; then
+            if [ -f apps/web/src/data/.compliance_audit_failed ]; then
+              echo "::error title=Compliance audit failed::Generated JSON contains geographic naming violations."
+              cat apps/web/src/data/.compliance_audit_failed >&2
+              exit 2
+            fi
             echo "::warning title=Collector partial failure::main.py returned 2 — one or more sources failed but partial output was written. Continuing to commit & push."
             exit 0
           else

@@ -15,7 +15,8 @@ Env vars are auto-loaded from (in priority order):
 Exit codes:
     0 — all sources fetched successfully
     1 — fatal error (could not even start)
-    2 — one or more sources failed but partial output was still written
+    2 — partial source failure OR compliance audit failure (see
+        `.compliance_audit_failed` in out_dir to distinguish)
 """
 
 from __future__ import annotations
@@ -47,6 +48,7 @@ except ImportError:
     pass
 
 from hantawatch_collector import MANUAL_FILES
+from hantawatch_collector._compliance_audit import run_compliance_gate
 from hantawatch_collector.ai_brief import enhance_daily_brief
 from hantawatch_collector.imports_proposals import submit_import_proposals
 from hantawatch_collector.outbreak_status import (
@@ -192,6 +194,9 @@ def _run_feeds_only(out_dir: Path, dry_run: bool) -> int:
         len(recent_intl),
         "yes" if feed else "unchanged",
     )
+    compliance_rc = run_compliance_gate(out_dir, dry_run=dry_run)
+    if compliance_rc != 0:
+        return compliance_rc
     return 2 if partial_failure else 0
 
 
@@ -243,7 +248,7 @@ def _run_realtime_only(out_dir: Path, dry_run: bool) -> int:
         write_generated_json(out_dir / "realtime-feed.json", feed.to_payload())
     if country_signals is not None:
         write_generated_json(out_dir / "country-signals.json", country_signals)
-    return 0
+    return run_compliance_gate(out_dir, dry_run=dry_run)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -532,6 +537,10 @@ def main(argv: list[str] | None = None) -> int:
                 "outbreaks": outbreak_status,
             },
         )
+
+    compliance_rc = run_compliance_gate(out_dir, dry_run=args.dry_run)
+    if compliance_rc != 0:
+        return compliance_rc
 
     logger.info("Done.")
     return 2 if partial_failure else 0
