@@ -426,6 +426,8 @@ def main(argv: list[str] | None = None) -> int:
             recent_cases_intl=recent_intl,
             realtime_feed=realtime_feed,
             previous_brief=previous_brief,
+            mv_hondius_imports=(imports_payload.get("imports") if imports_payload else None) or [],
+            arcgis_cases=(arcgis_data.get("cases") if arcgis_data else None) or [],
         )
         risk_snapshot["dailyBrief"] = daily_brief
 

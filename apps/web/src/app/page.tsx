@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, hondiusImportSummaries, realtimeFeed, riskSnapshot, arcgisCases } from '@/lib/data';
+import { dataMeta, hondiusImportSummaries, realtimeFeed, riskSnapshot, arcgisCases, arcgisFetchedAt } from '@/lib/data';
 import { findNearestAndes, type ImportProximity } from '@/lib/nearest-cluster';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
@@ -124,6 +124,7 @@ export default function HomePage() {
         realtimeUpdates: realtimeFeed.updates,
         importSummaries: hondiusImportSummaries,
         arcgisCases: arcgisCases,
+        arcgisFetchedAt: arcgisFetchedAt || undefined,
         structuralLine: todayBrief.structuralLine,
         hpiTotal: hpi.total,
       }),

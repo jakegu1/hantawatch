@@ -56,6 +56,8 @@ export interface BriefDisplayInput {
   importSummaries?: ImportSummaryInput[];
   /** ArcGIS per-country tracking data (monitoring counts) */
   arcgisCases?: Array<{ country: string; confirmed: number; monitoring: number; total: number }>;
+  /** ISO date (YYYY-MM-DD) when ArcGIS data was fetched, for synthetic row dates */
+  arcgisFetchedAt?: string;
   hpiTotal: number;
   chinaRiskFallback?: string;
 }
@@ -410,16 +412,29 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   const seen = new Set<string>();
 
   // 1. Active clusters (outbreak source)
-  for (const c of input.recentCases) {
-    if (c.source?.confidence === 'official' && c.id.startsWith('who-')) {
-      const key = `outbreak-${c.id}`;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      // Extract counts from summary if present
+  // Group WHO DON entries by outbreak scope (e.g. mv-hondius-2026).
+  // Keep only the latest entry. Use improved "共报告 N 例" regex.
+  {
+    const outbreakEntries = input.recentCases.filter(
+      (c) => c.source?.confidence === 'official' && c.id.startsWith('who-')
+    );
+    // Group all WHO entries as one outbreak. Keep only the latest.
+    const groups = new Map<string, TimelineCase>();
+    for (const c of outbreakEntries) {
+      const scope = 'international';
+      const latest = groups.get(scope);
+      if (!latest || c.date > latest.date) groups.set(scope, c);
+    }
+    for (const c of groups.values()) {
       const summary = c.summary ?? '';
+      // Prefer WHO-style "共报告 N 例" total line. Fall back to summing subsets.
+      const totalMatch = summary.match(/共报告\s*(\d+)\s*例/);
       const confMatch = summary.match(/(\d+)\s*例\s*确诊/);
       const suspMatch = summary.match(/(\d+)\s*例\s*(?:结果未定|可能|疑似)/);
       const deathMatch = summary.match(/(\d+)\s*例\s*死亡/);
+      const total = totalMatch
+        ? parseInt(totalMatch[1])
+        : (confMatch ? parseInt(confMatch[1]) : 0) + (suspMatch ? parseInt(suspMatch[1]) : 0);
       rows.push({
         date: c.date,
         countryNameZh: 'MV Hondius 邮轮',
@@ -427,7 +442,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
         sourceType: '聚集疫情',
         serotypeLabel: serotypeLabel(c.serotypeId),
         newConfirmed: 0,
-        totalConfirmed: confMatch ? parseInt(confMatch[1]) : 0,
+        totalConfirmed: total,
         deaths: deathMatch ? parseInt(deathMatch[1]) : 0,
         monitoring: 0,
         sourceName: c.source.name,
@@ -500,7 +515,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
       // If no existing row, add a new one from ArcGIS data
       if (!existing && ac.total > 0) {
         rows.push({
-          date: '',
+          date: input.arcgisFetchedAt ?? new Date().toISOString().slice(0, 10),
           countryNameZh: arcgisCountryZh,
           caseType: 'import',
           sourceType: '邮轮输入',

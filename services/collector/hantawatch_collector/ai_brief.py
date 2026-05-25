@@ -17,7 +17,10 @@ SYSTEM_PROMPT = (
     "不要把报道数量说成病例数；不要使用夸张标题；如果没有新增事实，要明确说没有新的官方确认。"
     "除非官方明确宣布结案，不要说疫情“已受控”“结束”“解除”，应写“仍在监测/随访中”。"
     "看到 presumptive/possible/probable/疑似/可能/初筛阳性 时，绝不能写成“确诊/确认”。"
-    "输出必须是合法 JSON，不要 markdown、不要解释。"
+    "输出必须是合法 JSON，不要 markdown、不要解释。\n\n"
+    "重要约束：如果你在 latestChange/situation 中提到某国新增病例，"
+    "该国必须出现在 mvHondiusImports 或 arcgisCases 中；否则只能写成"
+    "「待官方确认的监测线索」，不能写「新增 X 例确诊」。"
 )
 
 USER_TEMPLATE = (
@@ -73,6 +76,75 @@ def _postprocess_brief_text(value: str) -> str:
     return out
 
 
+# Chinese country-name list for validation (must match ARCGIS_COUNTRY_MAP in TS)
+_KNOWN_COUNTRY_NAMES_ZH = [
+    '法国', '西班牙', '美国', '英国', '加拿大', '澳大利亚', '德国', '荷兰',
+    '比利时', '瑞士', '南非', '新加坡', '土耳其', '希腊', '爱尔兰', '佛得角',
+    '智利', '阿根廷', '罗马尼亚', '意大利',
+]
+
+# ArcGIS English → Chinese reverse mapping for validator matching
+_ARCGIS_EN_TO_ZH: dict[str, str] = {
+    'FRANCE': '法国', 'SPAIN': '西班牙', 'UNITED STATES': '美国',
+    'UNITED KINGDOM': '英国', 'CANADA': '加拿大', 'AUSTRALIA': '澳大利亚',
+    'GERMANY': '德国', 'NETHERLANDS': '荷兰', 'BELGIUM': '比利时',
+    'SWITZERLAND': '瑞士', 'SOUTH AFRICA': '南非', 'SINGAPORE': '新加坡',
+    'TURKEY': '土耳其', 'GREECE': '希腊', 'IRELAND': '爱尔兰',
+    'CAPE VERDE': '佛得角', 'ST HELENA': '英国',
+}
+
+
+def _validate_brief_against_structural(
+    brief: dict[str, Any],
+    imports: list[dict[str, Any]],
+    arcgis: list[dict[str, Any]],
+) -> list[str]:
+    """Check that country mentions in the brief correspond to known structural data.
+
+    Returns a list of warning strings (empty = valid).
+    """
+    # Collect known countries from structural data
+    known = set()
+    for imp in imports:
+        iso = (imp.get('iso2') or '').upper()
+        # Map back from iso2 to Chinese name
+        if iso:
+            known.add(iso)
+    for ac in arcgis:
+        country = (ac.get('country') or '').strip().upper()
+        if country:
+            zh_name = _ARCGIS_EN_TO_ZH.get(country)
+            if zh_name:
+                known.add(zh_name)
+            known.add(country)
+
+    # Scan brief fields for Chinese country names
+    text = ' '.join([
+        str(brief.get('latestChange', '')),
+        str(brief.get('situation', '')),
+    ])
+    warnings: list[str] = []
+    for name in _KNOWN_COUNTRY_NAMES_ZH:
+        if name in text:
+            # Check if this country appears in structural data
+            # We use a simple iso2 reverse map for the most common countries
+            iso2_map = {
+                '法国': 'FR', '西班牙': 'ES', '美国': 'US', '英国': 'GB',
+                '加拿大': 'CA', '澳大利亚': 'AU', '德国': 'DE', '荷兰': 'NL',
+                '比利时': 'BE', '瑞士': 'CH', '南非': 'ZA', '新加坡': 'SG',
+                '土耳其': 'TR', '希腊': 'GR', '爱尔兰': 'IE', '佛得角': 'CV',
+                '智利': 'CL', '阿根廷': 'AR', '罗马尼亚': 'RO', '意大利': 'IT',
+            }
+            iso = iso2_map.get(name, '')
+            # Check iso2 in imports, or name.upper() in arcgis country set
+            if iso and iso in known:
+                continue
+            if name.upper() in known:
+                continue
+            warnings.append(f'brief mentions "{name}" but it is not in mvHondiusImports or arcgisCases')
+    return warnings
+
+
 def enhance_daily_brief(
     daily_brief: dict[str, Any],
     *,
@@ -80,6 +152,8 @@ def enhance_daily_brief(
     recent_cases_intl: list[dict[str, Any]],
     realtime_feed: Any | None = None,
     previous_brief: dict[str, Any] | None = None,
+    mv_hondius_imports: list[dict[str, Any]] | None = None,
+    arcgis_cases: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     api_key = os.environ.get("LLM_API_KEY")
     if not api_key:
@@ -120,6 +194,9 @@ def enhance_daily_brief(
         "recentCases": [_brief_case(row) for row in recent_cases_intl[:10]],
         "realtimeUpdates": realtime_updates,
         "yesterdayBrief": yesterday_context,
+        # Structural ground truth (P0.d: prevent LLM from inventing countries)
+        "mvHondiusImports": mv_hondius_imports or [],
+        "arcgisCases": arcgis_cases or [],
     }
 
     try:
@@ -141,6 +218,11 @@ def enhance_daily_brief(
 
     if not isinstance(result, dict):
         return daily_brief
+
+    warnings = _validate_brief_against_structural(result, mv_hondius_imports or [], arcgis_cases or [])
+    if warnings:
+        result["_guardrail_warnings"] = warnings
+        logger.warning("brief guardrail warnings: %s", "; ".join(warnings))
 
     enhanced = dict(daily_brief)
     for key in ("latestChange", "situation", "riskJudgment", "newCases", "sourceSummary", "shareLine"):

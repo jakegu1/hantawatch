@@ -354,6 +354,9 @@ import arcgisAndvTrackingJson from '@/data/arcgis-andv-tracking.json';
 export const arcgisCases: Array<{ country: string; confirmed: number; monitoring: number; total: number }> =
   (arcgisAndvTrackingJson as { cases?: typeof arcgisCases }).cases ?? [];
 
+export const arcgisFetchedAt: string =
+  (arcgisAndvTrackingJson as { fetchedAt?: string }).fetchedAt ?? '';
+
 export const hondiusImportSummaries: { date: string; summary_zh: string; countryNameZh?: string }[] =
   hondiusImports.map((imp) => ({
     date: imp.date,
