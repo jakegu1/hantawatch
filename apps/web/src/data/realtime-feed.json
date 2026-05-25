@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T17:22:28.479509+00:00",
+  "__generated_at": "2026-05-25T17:23:25.550383+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T17:22:14.191654+00:00",
+  "last_fetched": "2026-05-25T17:23:24.138569+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -36,10 +36,11 @@
       "time": "2026-05-25T13:49:53.000Z",
       "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
       "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国阿罗韦公园医院员工称汉坦患者被优先处理。",
+      "summary_zh": "英国阿罗公园医院员工称汉坦患者被优先。",
       "key_facts_zh": [
         "英国",
-        "医院"
+        "医院",
+        "优先"
       ],
       "signal_strength": "medium"
     },
@@ -48,11 +49,11 @@
       "time": "2026-05-25T09:12:00.000Z",
       "title_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship - Daily Star",
       "body_en": "UK hospital staff 'drowning' due to hantavirus patients isolating after cruise ship Daily Star",
-      "summary_zh": "英国医院因邮轮汉坦患者隔离而人手不足。",
+      "summary_zh": "英国医院因邮轮汉坦患者隔离不堪重负。",
       "key_facts_zh": [
         "英国",
         "邮轮",
-        "医院"
+        "医院不堪重负"
       ],
       "signal_strength": "high"
     },
@@ -74,7 +75,7 @@
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情暂时稳定。",
+      "summary_zh": "WHO 总干事称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -100,7 +101,7 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事表示汉坦病毒疫情暂时稳定。",
+      "summary_zh": "WHO 总干事称汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "疫情稳定"
@@ -125,7 +126,7 @@
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
+      "summary_zh": "数千英里外邮轮上汉坦病毒的识别竞赛。",
       "key_facts_zh": [
         "邮轮",
         "识别",
@@ -147,17 +148,30 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-73f88955021548c7",
+      "time": "2026-05-24T14:13:00.000Z",
+      "title_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ - New York Post",
+      "body_en": "Hantavirus is gaining ground in the US, startling researchers: ‘Widespread and complex virus’ New York Post",
+      "summary_zh": "美国研究人员称汉坦病毒正在蔓延。",
+      "key_facts_zh": [
+        "美国",
+        "研究人员",
+        "蔓延"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-e694387deab03ec2",
       "time": "2026-05-24T00:04:00.000Z",
       "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
       "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India",
-      "summary_zh": "南非科学家24小时内识别出汉坦病毒疫情。",
+      "summary_zh": "南非科学家24小时内识别汉坦病毒疫情。",
       "key_facts_zh": [
         "南非",
         "科学家",
         "识别疫情"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-686d3b8670b33cd8",
