@@ -7,6 +7,7 @@
  * See `docs/supabase-schema.sql` for DDL.
  */
 
+import { importNameZh } from '@hantawatch/shared/constants';
 import { getSupabase, isSupabaseConfigured } from './supabase';
 
 export type ImportOverrideStatus = 'proposed' | 'approved' | 'rejected';
@@ -193,7 +194,7 @@ export function applyImportsOverride<T extends OutbreakLedgerLike>(
     } else {
       byIso.set(iso, {
         iso2: iso,
-        nameZh: ov.summaryZh?.split(':')[0]?.trim() || iso,
+        nameZh: importNameZh(iso),
         status: ov.countryStatus ?? 'monitoring',
         confirmed: ov.confirmed ?? 0,
         monitoring: ov.monitoring ?? 0,

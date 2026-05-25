@@ -59,7 +59,7 @@ export interface BriefDisplayInput {
   /** ISO date (YYYY-MM-DD) when ArcGIS data was fetched, for synthetic row dates */
   arcgisFetchedAt?: string;
   /** Primary structured outbreak ledger from outbreak-status.json (P1) */
-  outbreakStatus?: Array<{
+  outbreakStatus: Array<{
     id: string; name: string; serotypeId: string;
     totals: { all: number; confirmed: number; deaths: number; indeterminate: number };
     perCountry: Array<{ iso2: string; nameZh: string; confirmed: number; monitoring: number; deaths: number; status: string; asOf: string; }>;
@@ -380,10 +380,10 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 
 function _computeCaseTableSummary(
   rows: CaseTableRow[],
-  outbreakStatus?: BriefDisplayInput['outbreakStatus'],
+  outbreakStatus: BriefDisplayInput['outbreakStatus'],
 ): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
   // Prefer outbreak-status ledger (single source of truth)
-  if (outbreakStatus?.length) {
+  if (outbreakStatus.length) {
     const ob = outbreakStatus[0];
     return {
       totalConfirmed: ob.totals.confirmed,
@@ -430,7 +430,7 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   const seen = new Set<string>();
 
   // 1. Active clusters (outbreak source) — outbreakStatus as primary
-  if (input.outbreakStatus?.length) {
+  if (input.outbreakStatus.length) {
     for (const ob of input.outbreakStatus) {
       // Outbreak summary row
       rows.push({

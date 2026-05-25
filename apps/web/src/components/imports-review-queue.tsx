@@ -55,11 +55,17 @@ export function ImportsReviewQueue() {
           outbreakId: item.outbreakId,
           iso2: item.iso2,
           action,
+          // status / decidedBy / suppressUntilAt are set server-side from `action`.
           patch: {
             confirmed: item.confirmed,
             monitoring: item.monitoring,
+            quarantine: item.quarantine,
             deaths: item.deaths,
+            countryStatus: item.countryStatus,
+            asOf: item.asOf,
             summaryZh: item.summaryZh,
+            note: item.note,
+            evidenceJson: item.evidenceJson,
           },
         }),
       });

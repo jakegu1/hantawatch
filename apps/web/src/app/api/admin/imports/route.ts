@@ -107,9 +107,21 @@ export async function POST(req: NextRequest) {
 
   if ('confirmed' in rawPatch) patch.confirmed = sanitizeInt(rawPatch.confirmed);
   if ('monitoring' in rawPatch) patch.monitoring = sanitizeInt(rawPatch.monitoring);
+  if ('quarantine' in rawPatch) patch.quarantine = sanitizeInt(rawPatch.quarantine);
   if ('deaths' in rawPatch) patch.deaths = sanitizeInt(rawPatch.deaths);
+  if ('countryStatus' in rawPatch && typeof rawPatch.countryStatus === 'string') {
+    patch.countryStatus = rawPatch.countryStatus.slice(0, 64);
+  }
+  if ('asOf' in rawPatch) {
+    const v = rawPatch.asOf;
+    if (v === null || v === '') patch.asOf = null;
+    else if (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v)) patch.asOf = v;
+  }
   if ('summaryZh' in rawPatch && typeof rawPatch.summaryZh === 'string') {
     patch.summaryZh = rawPatch.summaryZh.slice(0, 200);
+  }
+  if ('evidenceJson' in rawPatch && Array.isArray(rawPatch.evidenceJson)) {
+    patch.evidenceJson = rawPatch.evidenceJson;
   }
   if ('note' in rawPatch && typeof rawPatch.note === 'string') {
     patch.note = rawPatch.note.slice(0, 500);

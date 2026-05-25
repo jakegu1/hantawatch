@@ -15,3 +15,4 @@
 export { SEROTYPES, SEROTYPE_RANK_ORDER, SEROTYPE_RISK_WEIGHTS } from './serotypes';
 export { CHINA_PROVINCES } from './regions';
 export { HANTA_HISTORY, HANTA_HISTORY_TYPE_META } from './hanta-history';
+export { IMPORT_NAME_ZH, importNameZh } from './import-names';
