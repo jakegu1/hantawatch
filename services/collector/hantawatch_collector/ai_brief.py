@@ -9,6 +9,7 @@ from typing import Any
 
 import httpx
 
+from ._compliance import apply_compliance_to_brief
 from .realtime_feed import DEFAULT_DEEPSEEK_BASE_URL, DEFAULT_LLM_MODEL, DEFAULT_LLM_THINKING, _call_llm
 
 logger = logging.getLogger(__name__)
@@ -23,7 +24,12 @@ SYSTEM_PROMPT = (
     "重要约束：如果你在 latestChange/situation 中提到某国新增病例，"
     "该国必须出现在 outbreakStatus.perCountry 中；否则只能写成"
     "「待官方确认的监测线索」，不能写「新增 X 例确诊」。"
-    "outbreakStatus.outbreaks[0].totals 中的数字是权威值，不要与之矛盾。"
+    "outbreakStatus.outbreaks[0].totals 中的数字是权威值，不要与之矛盾。\n\n"
+    "【地理称谓合规要求（强制）】\n"
+    "- 涉及台湾时一律使用「台湾省」，不得使用「台湾」独称（「台湾海峡」「台湾大学」等已成立的复合专有名词除外）\n"
+    "- 当文本同时涉及中国大陆与台湾省/香港/澳门时，「中国」必须使用「中国大陆」\n"
+    "- 不得使用「中华民国」「ROC」「Taiwan」等称谓\n"
+    "- 违反此规则的输出会被自动拒绝并重新生成"
 )
 
 USER_TEMPLATE = (
@@ -37,6 +43,8 @@ USER_TEMPLATE = (
     "\"watchFocus\":[\"关注点1≤12字\",\"关注点2≤12字\",\"关注点3≤12字\"],"
     "\"shareLine\":\"≤80字，可直接复制或截图传播的一句话\","
     "\"evidence\":[\"依据1≤18字\",\"依据2≤18字\",\"依据3≤18字\"]}}。\n\n"
+    "合规表述示例：latestChange 写「5月25日台湾省新增1例监测；中国大陆无本土新增。」"
+    "不要写「台湾新增」或「中国无新增」。\n\n"
     "数据：\n{payload}"
 )
 
@@ -304,5 +312,13 @@ def enhance_daily_brief(
         merged.extend(ledger_errors)
         enhanced["_guardrail_warnings"] = merged
         logger.warning("brief ledger guardrail: %s", "; ".join(ledger_errors))
+
+    enhanced, compliance_warnings = apply_compliance_to_brief(enhanced)
+    if compliance_warnings:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(compliance_warnings)
+        enhanced["_guardrail_warnings"] = merged
+        logger.info("brief compliance corrections: %s", "; ".join(compliance_warnings))
 
     return enhanced
