@@ -40,4 +40,6 @@ GENERATED_FILES = frozenset({
     "realtime-feed.json",
     # Auto-aggregated per-country signal heat (Layer 3 of the /countries page).
     "country-signals.json",
+    "arcgis-andv-tracking.json",
+    "outbreak-status.json",
 })

@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Load .env files BEFORE importing collector modules so any env-driven
@@ -47,6 +48,7 @@ except ImportError:
 
 from hantawatch_collector import MANUAL_FILES
 from hantawatch_collector.ai_brief import enhance_daily_brief
+from hantawatch_collector.outbreak_status import build_outbreak_status
 from hantawatch_collector.builder import (
     build_active_clusters,
     build_daily_brief,
@@ -418,6 +420,14 @@ def main(argv: list[str] | None = None) -> int:
             country_signals = None
             logger.warning("Country signals: build failed (%s) — keeping existing JSON", e)
 
+    # ---- Build outbreak-status ledger (P1) ----
+    outbreak_status = build_outbreak_status(
+        active_clusters=clusters,
+        who_entries=who_entries if not args.no_network else [],
+        mv_hondius_imports=(imports_payload.get("imports") if imports_payload else None) or [],
+        arcgis_cases=(arcgis_data.get("cases") if arcgis_data else None) or [],
+    )
+
     if not args.no_network:
         previous_brief = read_json(out_dir / "daily-brief.json", default=None)
         daily_brief = enhance_daily_brief(
@@ -496,6 +506,14 @@ def main(argv: list[str] | None = None) -> int:
                 out_dir / "arcgis-andv-tracking.json",
                 arcgis_data,
             )
+        write_generated_json(
+            out_dir / "outbreak-status.json",
+            {
+                "__generated_by": "hantawatch-collector",
+                "__generated_at": datetime.now(timezone.utc).isoformat(),
+                "outbreaks": outbreak_status,
+            },
+        )
 
     logger.info("Done.")
     return 2 if partial_failure else 0
