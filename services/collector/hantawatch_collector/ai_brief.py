@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -19,8 +21,9 @@ SYSTEM_PROMPT = (
     "看到 presumptive/possible/probable/疑似/可能/初筛阳性 时，绝不能写成“确诊/确认”。"
     "输出必须是合法 JSON，不要 markdown、不要解释。\n\n"
     "重要约束：如果你在 latestChange/situation 中提到某国新增病例，"
-    "该国必须出现在 mvHondiusImports 或 arcgisCases 中；否则只能写成"
+    "该国必须出现在 outbreakStatus.perCountry 中；否则只能写成"
     "「待官方确认的监测线索」，不能写「新增 X 例确诊」。"
+    "outbreakStatus.outbreaks[0].totals 中的数字是权威值，不要与之矛盾。"
 )
 
 USER_TEMPLATE = (
@@ -66,7 +69,6 @@ def _postprocess_brief_text(value: str) -> str:
         out = out.replace(old, new)
     # Strip standalone "无需恐慌" regardless of punctuation to fix stale
     # collector output that may have been written before this patch.
-    import re
     out = re.sub(r'[，。；]?\s*无需恐慌[，。；]?', '', out)
     if "加拿大" in out:
         out = out.replace("汉坦病毒确诊输入病例", "汉坦病毒初筛阳性病例")
@@ -145,6 +147,57 @@ def _validate_brief_against_structural(
     return warnings
 
 
+def _validate_brief_against_ledger(
+    brief: dict[str, Any],
+    outbreak_status: list[dict[str, Any]] | None,
+    risk_snapshot: dict[str, Any] | None = None,
+) -> list[str]:
+    """Ensure digit sequences in brief fields match the outbreak-status ledger."""
+    allowed: set[int] = set()
+
+    if outbreak_status:
+        ob = outbreak_status[0]
+        totals = ob.get("totals", {})
+        allowed.update({
+            int(totals.get("all", 0) or 0),
+            int(totals.get("confirmed", 0) or 0),
+            int(totals.get("deaths", 0) or 0),
+            int(totals.get("indeterminate", 0) or 0),
+        })
+        for pc in ob.get("perCountry", []):
+            allowed.add(int(pc.get("confirmed", 0) or 0))
+            allowed.add(int(pc.get("monitoring", 0) or 0))
+
+    if risk_snapshot:
+        current_hpi = risk_snapshot.get("currentHpi") if isinstance(risk_snapshot, dict) else {}
+        if isinstance(current_hpi, dict):
+            allowed.add(int(current_hpi.get("total", 0) or 0))
+        allowed.add(int(risk_snapshot.get("displayedDistanceKm", 0) or 0))
+        allowed.add(int(risk_snapshot.get("sourceDistanceKm", 0) or 0))
+
+    if not allowed:
+        return []
+
+    text = " ".join(
+        str(brief.get(k, "")) for k in (
+            "oneLine", "structuralLine", "riskJudgment", "shareLine",
+            "situation", "latestChange", "newCases",
+        )
+    )
+    text_without_dates = re.sub(r"\d+月\d+日", "", text)
+    text_without_dates = re.sub(r"\d+月", "", text_without_dates)
+    text_without_dates = re.sub(r"\d{4}年", "", text_without_dates)
+
+    violations: list[str] = []
+    for num_str in re.findall(r"\d+", text_without_dates):
+        n = int(num_str)
+        if n not in allowed:
+            violations.append(
+                f'brief contains "{n}" which is not in allowed set {sorted(allowed)}'
+            )
+    return violations
+
+
 def enhance_daily_brief(
     daily_brief: dict[str, Any],
     *,
@@ -154,6 +207,8 @@ def enhance_daily_brief(
     previous_brief: dict[str, Any] | None = None,
     mv_hondius_imports: list[dict[str, Any]] | None = None,
     arcgis_cases: list[dict[str, Any]] | None = None,
+    outbreak_status: list[dict[str, Any]] | None = None,
+    out_dir: Path | str | None = None,
 ) -> dict[str, Any]:
     api_key = os.environ.get("LLM_API_KEY")
     if not api_key:
@@ -194,10 +249,13 @@ def enhance_daily_brief(
         "recentCases": [_brief_case(row) for row in recent_cases_intl[:10]],
         "realtimeUpdates": realtime_updates,
         "yesterdayBrief": yesterday_context,
-        # Structural ground truth (P0.d: prevent LLM from inventing countries)
+        # Structural ground truth (P1: ledger is authoritative)
+        "outbreakStatus": outbreak_status or [],
         "mvHondiusImports": mv_hondius_imports or [],
         "arcgisCases": arcgis_cases or [],
     }
+    if out_dir is not None:
+        payload["_outDir"] = str(out_dir)
 
     try:
         with httpx.Client(timeout=httpx.Timeout(60.0)) as client:
@@ -235,4 +293,16 @@ def enhance_daily_brief(
     evidence = result.get("evidence")
     if isinstance(evidence, list):
         enhanced["evidence"] = [_postprocess_brief_text(str(item).strip()) for item in evidence if str(item).strip()][:3]
+
+    if isinstance(result.get("_guardrail_warnings"), list):
+        enhanced["_guardrail_warnings"] = result["_guardrail_warnings"]
+
+    ledger_errors = _validate_brief_against_ledger(enhanced, outbreak_status, risk_snapshot)
+    if ledger_errors:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(ledger_errors)
+        enhanced["_guardrail_warnings"] = merged
+        logger.warning("brief ledger guardrail: %s", "; ".join(ledger_errors))
+
     return enhanced
