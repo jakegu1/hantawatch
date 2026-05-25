@@ -1,23 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T14:41:09.402622+00:00",
+  "__generated_at": "2026-05-25T14:49:28.327233+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T14:41:08.237067+00:00",
+  "last_fetched": "2026-05-25T14:49:22.435229+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-61f5a0213973ea07",
-      "time": "2026-05-25T13:14:00.000Z",
-      "title_en": "Washington State University study sheds new light on hantavirus - KING5.com",
-      "body_en": "Washington State University study sheds new light on hantavirus KING5.com",
-      "summary_zh": "华盛顿州立大学研究揭示汉坦病毒新见解。",
+      "id": "rt-0c68c6a4df16c6f5",
+      "time": "2026-05-25T13:49:53.000Z",
+      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
+      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
+      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先处理。",
       "key_facts_zh": [
-        "美国",
-        "华盛顿州立大学",
-        "研究"
+        "英国",
+        "医院",
+        "优先处理"
       ],
       "signal_strength": "medium"
     },
@@ -26,33 +26,33 @@
       "time": "2026-05-25T09:30:00.000Z",
       "title_en": "More than a quarter of mice on the Palouse show signs of previous Hantavirus infection, WSU study finds - The Spokesman-Review",
       "body_en": "More than a quarter of mice on the Palouse show signs of previous Hantavirus infection, WSU study finds The Spokesman-Review",
-      "summary_zh": "华盛顿州立大学研究发现帕卢斯地区超四分之一老鼠曾感染汉坦病毒。",
+      "summary_zh": "华盛顿州立大学研究：帕卢斯地区超四分之一老鼠曾感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "帕卢斯",
+        "华盛顿州立大学",
         "老鼠感染"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-5a1e979f7ce9a36d",
-      "time": "2026-05-25T06:51:00.000Z",
-      "title_en": "Royal Navy warship arrives at remote 'hantavirus' island - Daily Express",
-      "body_en": "Royal Navy warship arrives at remote 'hantavirus' island Daily Express",
-      "summary_zh": "英国皇家海军军舰抵达偏远汉坦病毒岛屿。",
+      "id": "rt-7c42c1269ccdf6f6",
+      "time": "2026-05-25T07:45:00.000Z",
+      "title_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' - Manchester Evening News",
+      "body_en": "Staff at north west Hantavirus hospital raise concerns over patients being 'prioritised' Manchester Evening News",
+      "summary_zh": "英国西北部汉坦病毒医院员工担忧患者被优先处理。",
       "key_facts_zh": [
         "英国",
-        "皇家海军",
-        "岛屿"
+        "医院",
+        "员工担忧"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e787e65c890f6739",
       "time": "2026-05-25T03:59:27.000Z",
       "title_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' - upi.com",
       "body_en": "WHO chief: Cruise ship hantavirus outbreak 'stable for now' upi.com",
-      "summary_zh": "WHO 称邮轮汉坦疫情目前稳定。",
+      "summary_zh": "WHO 称邮轮汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -65,10 +65,9 @@
       "time": "2026-05-25T01:23:58.000Z",
       "title_en": "Third hantavirus case confirmed in Taiwan this year - Outbreak News Today",
       "body_en": "Third hantavirus case confirmed in Taiwan this year Outbreak News Today",
-      "summary_zh": "台湾今年确诊第三例汉坦病例。",
+      "summary_zh": "台湾今年第三例汉坦病毒确诊。",
       "key_facts_zh": [
         "台湾",
-        "确诊",
         "第三例"
       ],
       "signal_strength": "high"
@@ -78,61 +77,48 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 称汉坦疫情目前稳定。",
+      "summary_zh": "WHO 总干事称汉坦病毒局势目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定"
+        "局势稳定"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-74440a0db5d86abd",
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "邮轮上识别汉坦病毒的竞赛。",
+      "summary_zh": "邮轮上数千英里外识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
         "识别病毒"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-feb62daaf0b7b121",
       "time": "2026-05-24T16:41:00.000Z",
       "title_en": "Navy sends doctors to treat rat virus patient on remote island - The Telegraph",
       "body_en": "Navy sends doctors to treat rat virus patient on remote island The Telegraph",
-      "summary_zh": "海军派医生赴偏远岛屿治疗鼠病毒患者。",
+      "summary_zh": "海军派医生前往偏远岛屿治疗鼠病毒患者。",
       "key_facts_zh": [
         "海军",
-        "医生",
+        "派医生",
         "偏远岛屿"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-f69f83b939b00e0a",
-      "time": "2026-05-24T12:00:00.000Z",
-      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - Daily Monitor",
-      "body_en": "Inside an African lab that helped crack the hantavirus outbreak Daily Monitor",
-      "summary_zh": "非洲实验室协助破解汉坦病毒疫情。",
-      "key_facts_zh": [
-        "非洲",
-        "实验室",
-        "疫情破解"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-e694387deab03ec2",
       "time": "2026-05-24T00:04:00.000Z",
       "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
       "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India",
-      "summary_zh": "南非科学家24小时内识别汉坦病毒疫情。",
+      "summary_zh": "南非科学家在24小时内识别出汉坦病毒疫情。",
       "key_facts_zh": [
         "南非",
         "科学家",
-        "24小时识别"
+        "识别疫情"
       ],
       "signal_strength": "medium"
     },
@@ -141,7 +127,7 @@
       "time": "2026-05-23T13:49:00.000Z",
       "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
       "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
-      "summary_zh": "南非科学家识别数千英里外邮轮汉坦病毒。",
+      "summary_zh": "美联社报道南非科学家如何识别邮轮上的汉坦病毒。",
       "key_facts_zh": [
         "南非",
         "科学家",
@@ -156,9 +142,48 @@
       "body_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore Telangana Today",
       "summary_zh": "科学家破解与邮轮相关的罕见汉坦病毒疫情。",
       "key_facts_zh": [
-        "科学家",
         "邮轮",
+        "科学家",
+        "破解疫情"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-bc11321d74099198",
+      "time": "2026-05-22T23:30:00.000Z",
+      "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
+      "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
+      "summary_zh": "加拿大维多利亚市3名与汉坦病毒疫情相关者仍在住院。",
+      "key_facts_zh": [
+        "加拿大",
+        "维多利亚",
+        "3人住院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c7874ced7a3ddd1d",
+      "time": "2026-05-22T20:21:42.000Z",
+      "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
+      "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
+      "summary_zh": "加拿大联邦更新汉坦病毒和埃博拉疫情信息。",
+      "key_facts_zh": [
+        "加拿大",
+        "联邦更新",
         "汉坦病毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-30ee31f7becae620",
+      "time": "2026-05-22T19:39:00.000Z",
+      "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
+      "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC",
+      "summary_zh": "加拿大首席公共卫生官称无埃博拉及新增汉坦病例。",
+      "key_facts_zh": [
+        "加拿大",
+        "无新增病例",
+        "首席卫生官"
       ],
       "signal_strength": "medium"
     }
