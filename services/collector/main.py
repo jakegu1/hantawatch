@@ -48,7 +48,11 @@ except ImportError:
 
 from hantawatch_collector import MANUAL_FILES
 from hantawatch_collector.ai_brief import enhance_daily_brief
-from hantawatch_collector.outbreak_status import build_outbreak_status
+from hantawatch_collector.imports_proposals import submit_import_proposals
+from hantawatch_collector.outbreak_status import (
+    build_outbreak_status,
+    diff_imports_against_overrides,
+)
 from hantawatch_collector.builder import (
     build_active_clusters,
     build_daily_brief,
@@ -271,6 +275,7 @@ def main(argv: list[str] | None = None) -> int:
         ecdc = None
         news_leads = []
         surveillance_leads = []
+        arcgis_data = None
         official_sources_status = read_json(out_dir / "official-sources.json", default=None)
         logger.info("--no-network: skipping all fetches")
     else:
@@ -428,6 +433,13 @@ def main(argv: list[str] | None = None) -> int:
         arcgis_cases=(arcgis_data.get("cases") if arcgis_data else None) or [],
     )
 
+    prev_outbreak_path = out_dir / "outbreak-status.json"
+    import_proposals = diff_imports_against_overrides(
+        current_ledger=outbreak_status,
+        previous_ledger_path=prev_outbreak_path if prev_outbreak_path.exists() else None,
+        supabase_overrides=None,
+    )
+
     if not args.no_network:
         previous_brief = read_json(out_dir / "daily-brief.json", default=None)
         daily_brief = enhance_daily_brief(
@@ -438,6 +450,8 @@ def main(argv: list[str] | None = None) -> int:
             previous_brief=previous_brief,
             mv_hondius_imports=(imports_payload.get("imports") if imports_payload else None) or [],
             arcgis_cases=(arcgis_data.get("cases") if arcgis_data else None) or [],
+            outbreak_status=outbreak_status,
+            out_dir=out_dir,
         )
         risk_snapshot["dailyBrief"] = daily_brief
 
@@ -458,6 +472,10 @@ def main(argv: list[str] | None = None) -> int:
         news_diagnostics=news_diagnostics,
         official_sources_status=official_sources_status,
     )
+    if import_proposals and not args.dry_run:
+        sources = meta.setdefault("sources", {})
+        if isinstance(sources, dict):
+            submit_import_proposals(import_proposals, meta_sources=sources)
     reference = current_hpi.get("referenceCluster") or {}
     reference_km = int(reference.get("distanceFromChinaKm", 0) or 0)
     if reference_km > 0:

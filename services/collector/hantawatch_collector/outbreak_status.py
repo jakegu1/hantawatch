@@ -16,6 +16,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .builder import IMPORT_NAME_ZH
+
 logger = logging.getLogger(__name__)
 
 # Import-name → iso2 reverse map (shared with builder.py).
@@ -95,7 +97,7 @@ def build_outbreak_status(
                 seen_iso2.add(iso2)
                 per_country.append({
                     "iso2": iso2,
-                    "nameZh": imp.get("nameZh") or imp.get("countryZh", ""),
+                    "nameZh": imp.get("nameZh") or imp.get("countryZh") or IMPORT_NAME_ZH.get(iso2, iso2),
                     "status": imp.get("status", "monitoring"),
                     "confirmed": int(imp.get("confirmedImports", 0) or 0),
                     "monitoring": int(imp.get("monitoringCount", 0) or 0),
@@ -118,7 +120,7 @@ def build_outbreak_status(
             seen_iso2.add(iso2)
             per_country.append({
                 "iso2": iso2,
-                "nameZh": country_en.title(),
+                "nameZh": IMPORT_NAME_ZH.get(iso2, iso2),
                 "status": "monitoring",
                 "confirmed": int(ac.get("confirmed", 0) or 0),
                 "monitoring": int(ac.get("monitoring", 0) or 0),
@@ -151,6 +153,9 @@ def build_outbreak_status(
                     {"tier": "news", "url": "", "sourceName": "LLM Realtime Extractor", "retrievedAt": ""}
                 ],
             })
+
+        # Sort perCountry by confirmed descending (highest first)
+        per_country.sort(key=lambda pc: int(pc.get("confirmed", 0) or 0), reverse=True)
 
         outbreaks.append({
             "id": cluster_id,
@@ -209,12 +214,31 @@ def diff_imports_against_overrides(
         except Exception:
             pass  # First run or missing file → no previous set
 
-    # Suppress: iso2 already in approved/rejected overrides
+    # Suppress: approved always; rejected until suppress_until_at (if set)
     suppress: set[str] = set()
+    now = datetime.now(timezone.utc)
     if supabase_overrides:
         for ov in supabase_overrides:
-            if ov.get('status') in ('approved', 'rejected'):
-                suppress.add(ov.get('iso2', ''))
+            iso2 = (ov.get('iso2') or '').upper()
+            if not iso2:
+                continue
+            status = ov.get('status')
+            if status == 'approved':
+                suppress.add(iso2)
+                continue
+            if status == 'rejected':
+                until_raw = ov.get('suppress_until_at')
+                if not until_raw:
+                    suppress.add(iso2)
+                    continue
+                try:
+                    until = datetime.fromisoformat(str(until_raw).replace('Z', '+00:00'))
+                    if until.tzinfo is None:
+                        until = until.replace(tzinfo=timezone.utc)
+                    if until > now:
+                        suppress.add(iso2)
+                except ValueError:
+                    suppress.add(iso2)
 
     for ob in current_ledger:
         outbreak_id = ob.get('id', '')

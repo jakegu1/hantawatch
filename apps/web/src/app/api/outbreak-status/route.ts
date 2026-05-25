@@ -1,19 +1,44 @@
 import { NextResponse } from 'next/server';
 import outbreakStatusJson from '@/data/outbreak-status.json';
+import {
+  applyImportsOverridesToOutbreaks,
+  fetchImportsOverrides,
+} from '@/lib/imports-overrides';
 
 /**
  * GET /api/outbreak-status
  *
- * Public endpoint. Returns the normalized outbreak-status ledger.
- * Until P2 lands, Supabase overrides are not applied (baseline only).
+ * Public endpoint. Baseline from outbreak-status.json with approved
+ * Supabase imports_overrides merged at request time (P2).
  */
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function GET() {
-  const outbreaks = (outbreakStatusJson as { outbreaks?: unknown[] }).outbreaks ?? [];
+  const baseline = (outbreakStatusJson as { outbreaks?: unknown[] }).outbreaks ?? [];
+  let outbreaks = baseline;
+  let overrideCount = 0;
+
+  try {
+    const overrides = await fetchImportsOverrides();
+    overrideCount = overrides.length;
+    if (overrides.length) {
+      outbreaks = applyImportsOverridesToOutbreaks(
+        baseline as Parameters<typeof applyImportsOverridesToOutbreaks>[0],
+        overrides,
+      );
+    }
+  } catch {
+    // Fall back to baseline when Supabase is down.
+  }
+
   return NextResponse.json({
     outbreaks,
-    generatedAt: (outbreakStatusJson as { __generated_at?: string }).__generated_at ?? new Date().toISOString(),
+    overrideCount,
+    generatedAt:
+      (outbreakStatusJson as { __generated_at?: string }).__generated_at ??
+      new Date().toISOString(),
+  }, {
+    headers: { 'cache-control': 'no-store, max-age=0' },
   });
 }
