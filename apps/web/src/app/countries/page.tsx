@@ -179,7 +179,29 @@ function CountryCard({ c }: { c: CountryView }) {
   );
 }
 
-function ImportsBanner() {
+function formatAsOfBanner(isoDate: string): string | null {
+  if (!isoDate || isoDate.length < 10) return null;
+  const m = parseInt(isoDate.slice(5, 7), 10);
+  const d = parseInt(isoDate.slice(8, 10), 10);
+  if (!m || !d) return null;
+  return `${m}月${d}日`;
+}
+
+function importMetadataLine(imp: {
+  confirmedImports: number;
+  monitoringCount: number;
+  asOf?: string;
+  date?: string;
+}): string {
+  const parts: string[] = [];
+  if (imp.confirmedImports > 0) parts.push(`确诊 ${imp.confirmedImports}`);
+  if (imp.monitoringCount > 0) parts.push(`监测 ${imp.monitoringCount}`);
+  const asOfLabel = formatAsOfBanner(imp.asOf ?? imp.date ?? '');
+  if (asOfLabel) parts.push(`数据截至 ${asOfLabel}`);
+  return parts.join(' · ');
+}
+
+export function ImportsBanner() {
   // Prefer outbreak-status ledger (P1); fall back to legacy hondiusImports
   const countries = outbreakStatus.length > 0
     ? outbreakStatus[0].perCountry.map((pc) => ({
@@ -189,7 +211,8 @@ function ImportsBanner() {
         confirmedImports: pc.confirmed,
         monitoringCount: pc.monitoring,
         deaths: pc.deaths,
-        date: '',
+        asOf: pc.asOf,
+        date: pc.asOf,
         summary_zh: '',
         note: '',
       }))
@@ -200,6 +223,7 @@ function ImportsBanner() {
         confirmedImports: imp.confirmedImports ?? 0,
         monitoringCount: imp.monitoringCount ?? 0,
         deaths: imp.deaths ?? 0,
+        asOf: imp.date,
         date: imp.date,
         summary_zh: imp.summary_zh,
         note: '',
@@ -214,7 +238,6 @@ function ImportsBanner() {
     closed: 4,
   };
   const sorted = [...countries].sort((a, b) => (order[a.status] ?? 3) - (order[b.status] ?? 3));
-  const byIso2 = new Map(countryViews.map((c) => [c.iso2, c]));
 
   return (
     <section className="card border-l-4 border-l-red-500 mb-6">
@@ -227,16 +250,20 @@ function ImportsBanner() {
       </div>
       <div className="grid gap-2 sm:grid-cols-2">
         {sorted.map((imp) => {
-          const country = byIso2.get(imp.iso2.toUpperCase());
+          const meta = importMetadataLine(imp);
           return (
             <div key={imp.iso2} className="flex items-start gap-2 text-sm">
-              <span className="text-xl shrink-0" aria-hidden>{country?.flag ?? '🏳️'}</span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="font-medium">{country?.nameZh ?? imp.iso2}</span>
+                  <span className="font-medium">{imp.nameZh}</span>
                   <StatusBadge imp={imp} />
                 </div>
-                <div className="text-xs text-gray-600 mt-0.5 leading-relaxed">{imp.summary_zh}</div>
+                {meta ? (
+                  <p className="text-xs text-gray-500 mt-0.5">{meta}</p>
+                ) : null}
+                {imp.summary_zh ? (
+                  <div className="text-xs text-gray-600 mt-0.5 leading-relaxed">{imp.summary_zh}</div>
+                ) : null}
               </div>
             </div>
           );

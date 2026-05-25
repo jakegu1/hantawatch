@@ -422,7 +422,7 @@ const ARCGIS_COUNTRY_MAP: Record<string, string> = {
   'CAPE VERDE': '佛得角', 'ST HELENA': '圣赫勒拿', 'ONBOARD': 'MV Hondius 邮轮',
 };
 
-function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
+export function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
   const rows: CaseTableRow[] = [];
   const seen = new Set<string>();
 
@@ -564,33 +564,26 @@ function buildCaseTable(input: BriefDisplayInput): CaseTableRow[] {
           existing.totalConfirmed = ac.confirmed;
         }
       }
-      // If no existing row, add a new one from ArcGIS data
-      if (!existing && ac.total > 0) {
-        rows.push({
-          date: input.arcgisFetchedAt ?? new Date().toISOString().slice(0, 10),
-          countryNameZh: arcgisCountryZh,
-          caseType: 'import',
-          sourceType: '邮轮输入',
-          serotypeLabel: '安第斯型',
-          newConfirmed: ac.confirmed,
-          totalConfirmed: ac.confirmed,
-          deaths: 0,
-          monitoring: ac.monitoring,
-          sourceName: 'ArcGIS ANDV Dashboard',
-        });
-      }
     }
   }
 
-  // Deduplicate by countryNameZh and sort by date desc
+  const sortCaseTableRows = (a: CaseTableRow, b: CaseTableRow): number => {
+    if (a.caseType === 'outbreak' && b.caseType !== 'outbreak') return -1;
+    if (b.caseType === 'outbreak' && a.caseType !== 'outbreak') return 1;
+    return b.date.localeCompare(a.date);
+  };
+
+  // Deduplicate by countryNameZh; outbreak row first, then date desc
   const deduped: CaseTableRow[] = [];
   const dedupKeys = new Set<string>();
-  for (const r of rows.sort((a, b) => b.date.localeCompare(a.date))) {
+  for (const r of rows.sort(sortCaseTableRows)) {
     const k = `${r.countryNameZh}-${r.serotypeLabel}-${r.date}`;
     if (!dedupKeys.has(k)) {
       dedupKeys.add(k);
       deduped.push(r);
     }
   }
-  return deduped.slice(0, 8);
+  return deduped
+    .map((r) => ({ ...r, date: r.date.slice(0, 10) }))
+    .slice(0, 8);
 }
