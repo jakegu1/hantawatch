@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T07:08:16.320108+00:00",
+  "__generated_at": "2026-05-25T07:10:35.901534+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T07:08:15.028659+00:00",
+  "last_fetched": "2026-05-25T07:10:30.209133+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -17,7 +17,7 @@
       "key_facts_zh": [
         "WHO",
         "荷兰",
-        "新增病例"
+        "新病例"
       ],
       "signal_strength": "high"
     },
@@ -26,7 +26,7 @@
       "time": "2026-05-25T05:30:00.000Z",
       "title_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak - Irish Independent",
       "body_en": "Irish firm launches rapid hantavirus antibody kits after deadly cruise ship outbreak Irish Independent",
-      "summary_zh": "爱尔兰公司推出快速汉坦病毒抗体检测试剂盒。",
+      "summary_zh": "爱尔兰公司推出快速抗体检测试剂盒。",
       "key_facts_zh": [
         "爱尔兰",
         "检测试剂盒"
@@ -37,7 +37,7 @@
       "id": "rt-6d787cf45a246fb4",
       "time": "2026-05-25T04:30:00Z",
       "title_en": "WHO chief : Cruise ship hantavirus outbreak stable for now",
-      "summary_zh": "WHO总干事称邮轮汉坦病毒疫情暂时稳定。",
+      "summary_zh": "WHO称邮轮汉坦病毒疫情暂时稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -54,7 +54,7 @@
       "key_facts_zh": [
         "英国",
         "医院",
-        "优先处理"
+        "优先"
       ],
       "signal_strength": "medium"
     },
@@ -62,11 +62,11 @@
       "id": "rt-33e4d0d826168160",
       "time": "2026-05-25T02:00:00Z",
       "title_en": "Congo tightens travel as Ebola spreads and supplies run low",
-      "summary_zh": "刚果因埃博拉扩散和物资短缺加强旅行限制。",
+      "summary_zh": "刚果因埃博拉扩散加强旅行管控。",
       "key_facts_zh": [
         "刚果",
         "埃博拉",
-        "旅行限制"
+        "旅行管控"
       ],
       "signal_strength": "high"
     },
@@ -78,8 +78,7 @@
       "summary_zh": "台湾今年确诊第三例汉坦病毒病例。",
       "key_facts_zh": [
         "台湾",
-        "第三例",
-        "确诊"
+        "第三例"
       ],
       "signal_strength": "high"
     },
@@ -88,10 +87,10 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事称汉坦病毒局势目前稳定。",
+      "summary_zh": "WHO 总干事称汉坦病毒疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
-        "局势稳定"
+        "疫情稳定"
       ],
       "signal_strength": "high"
     },
@@ -100,10 +99,11 @@
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "邮轮上数千英里外识别汉坦病毒的竞赛。",
+      "summary_zh": "数千英里外邮轮上汉坦病毒识别竞赛。",
       "key_facts_zh": [
         "邮轮",
-        "识别汉坦病毒"
+        "汉坦病毒",
+        "识别"
       ],
       "signal_strength": "high"
     },
@@ -111,7 +111,7 @@
       "id": "rt-bf5ff12d8fb90d3a",
       "time": "2026-05-24T20:15:00Z",
       "title_en": "Americans exposed to hantavirus on ship enjoy Nebraska hospitality while in quarantine",
-      "summary_zh": "在邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -123,10 +123,10 @@
       "id": "rt-e916b1389f8e272c",
       "time": "2026-05-24T18:00:00Z",
       "title_en": "Gates Foundation commits $15 million to support Ebola response in DRC , Uganda",
-      "summary_zh": "盖茨基金会承诺1500万美元支持刚果和乌干达埃博拉应对。",
+      "summary_zh": "盖茨基金会承诺1500万美元支持刚果（金）和乌干达埃博拉应对。",
       "key_facts_zh": [
         "盖茨基金会",
-        "刚果",
+        "刚果（金）",
         "乌干达"
       ],
       "signal_strength": "high"
@@ -135,7 +135,7 @@
       "id": "rt-cae22f35a56d628f",
       "time": "2026-05-24T17:30:00Z",
       "title_en": "Measles kills more than 500 children in Bangladesh : NPR",
-      "summary_zh": "孟加拉国麻疹导致超过500名儿童死亡。",
+      "summary_zh": "孟加拉国麻疹导致500多名儿童死亡。",
       "key_facts_zh": [
         "孟加拉国",
         "麻疹",
