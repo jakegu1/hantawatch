@@ -121,22 +121,15 @@ create index if not exists idx_feedback_created_at
   on feedback (created_at desc);
 
 -- ---------------------------------------------------------------------
--- Row-Level Security:
---   We access these tables ONLY from the Next.js server side, using the
---   service_role key. RLS therefore doesn't matter for our app, but
---   leaving RLS *enabled* protects against accidental anon-key exposure
---   in client bundles.
--- ---------------------------------------------------------------------
-alter table alert_subscriptions   enable row level security;
-alter table cluster_overrides     enable row level security;
-alter table manual_news_entries   enable row level security;
-alter table feedback              enable row level security;
-alter table imports_overrides     enable row level security;
-
--- ---------------------------------------------------------------------
 -- Table 5: imports_overrides
 --   Per-outbreak per-country override + proposal layer. Read by
 --   /api/outbreak-status and written from /admin/审核队列 ("imports" tab).
+--   Mirrors cluster_overrides but keyed by (outbreak_id, iso2).
+--
+--   `status` of a row:
+--     'proposed' — collector auto-detected a new country/number; awaits admin
+--     'approved' — admin clicked approve; merged into live ledger
+--     'rejected' — admin clicked reject; suppressed for `suppress_until_at`
 -- ---------------------------------------------------------------------
 create table if not exists imports_overrides (
   outbreak_id        text not null,
@@ -162,6 +155,19 @@ create table if not exists imports_overrides (
 create index if not exists idx_imports_overrides_status
   on imports_overrides (status, proposed_at desc);
 
+-- ---------------------------------------------------------------------
+-- Row-Level Security:
+--   We access these tables ONLY from the Next.js server side, using the
+--   service_role key. RLS therefore doesn't matter for our app, but
+--   leaving RLS *enabled* protects against accidental anon-key exposure
+--   in client bundles.
+-- ---------------------------------------------------------------------
+alter table alert_subscriptions   enable row level security;
+alter table cluster_overrides     enable row level security;
+alter table manual_news_entries   enable row level security;
+alter table feedback              enable row level security;
+alter table imports_overrides     enable row level security;
+
 -- No policies created → all anon/auth requests blocked. Service-role
 -- bypasses RLS automatically.
 
@@ -170,4 +176,5 @@ create index if not exists idx_imports_overrides_status
 --   select count(*) from alert_subscriptions;     -- should work
 --   select * from cluster_overrides limit 5;      -- empty initially
 --   select * from manual_news_entries limit 5;    -- empty initially
+--   select * from imports_overrides limit 5;      -- empty initially
 -- ---------------------------------------------------------------------
