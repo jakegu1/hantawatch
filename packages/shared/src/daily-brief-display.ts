@@ -11,6 +11,7 @@ import {
   type RealtimeSignalInput,
   type TimelineCase,
 } from './timeline';
+import type { OutbreakStatus } from './types/outbreak-status';
 
 /** Structured case-table row for Google AI Mode style comparison. */
 export interface CaseTableRow {
@@ -59,11 +60,7 @@ export interface BriefDisplayInput {
   /** ISO date (YYYY-MM-DD) when ArcGIS data was fetched, for synthetic row dates */
   arcgisFetchedAt?: string;
   /** Primary structured outbreak ledger from outbreak-status.json (P1) */
-  outbreakStatus: Array<{
-    id: string; name: string; serotypeId: string;
-    totals: { all: number; confirmed: number; deaths: number; indeterminate: number };
-    perCountry: Array<{ iso2: string; nameZh: string; confirmed: number; monitoring: number; deaths: number; status: string; asOf: string; }>;
-  }>;
+  outbreakStatus: OutbreakStatus[];
   hpiTotal: number;
   chinaRiskFallback?: string;
 }

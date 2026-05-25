@@ -15,6 +15,7 @@ import {
   chinaHfrsMonthly2026,
   dataMeta,
   hondiusImportSummaries,
+  outbreakStatus,
   realtimeFeed,
   riskSnapshot,
 } from '@/lib/data';
@@ -134,9 +135,10 @@ export default function HomePage() {
         importSummaries: hondiusImportSummaries,
         arcgisCases: arcgisCases,
         structuralLine: todayBrief.structuralLine,
+        outbreakStatus,
         hpiTotal: hpi.total,
       }),
-    [liveRecentCases, cluster?.lastUpdate, hpi.total],
+    [liveRecentCases, cluster?.lastUpdate, hpi.total, outbreakStatus],
   );
 
   const ranking: Array<{ id: keyof typeof SEROTYPES; label: string; color: string; bg: string; border: string }> = [

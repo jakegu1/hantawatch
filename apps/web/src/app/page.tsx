@@ -3,7 +3,15 @@
 import { useEffect, useMemo, useState } from 'react';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
-import { dataMeta, hondiusImportSummaries, realtimeFeed, riskSnapshot, arcgisCases, arcgisFetchedAt } from '@/lib/data';
+import {
+  dataMeta,
+  hondiusImportSummaries,
+  realtimeFeed,
+  riskSnapshot,
+  arcgisCases,
+  arcgisFetchedAt,
+  outbreakStatus,
+} from '@/lib/data';
 import { findNearestAndes, type ImportProximity } from '@/lib/nearest-cluster';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
@@ -126,9 +134,10 @@ export default function HomePage() {
         arcgisCases: arcgisCases,
         arcgisFetchedAt: arcgisFetchedAt || undefined,
         structuralLine: todayBrief.structuralLine,
+        outbreakStatus,
         hpiTotal: hpi.total,
       }),
-    [liveRecentCases, cluster?.lastUpdate, hpi.total],
+    [liveRecentCases, cluster?.lastUpdate, hpi.total, outbreakStatus],
   );
 
   const { metrics: briefMetrics } = briefContent;

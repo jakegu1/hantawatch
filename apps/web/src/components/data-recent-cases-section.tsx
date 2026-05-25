@@ -7,6 +7,7 @@ import {
   activeClusters,
   dataMeta,
   hondiusImportSummaries,
+  outbreakStatus,
   realtimeFeed,
   todayBrief,
 } from '@/lib/data';
@@ -29,9 +30,10 @@ export function DataRecentCasesSection() {
         recentCases: liveRecentCases,
         realtimeUpdates: realtimeFeed.updates,
         importSummaries: hondiusImportSummaries,
+        outbreakStatus,
         hpiTotal: 0,
       }),
-    [liveRecentCases, cluster?.lastUpdate],
+    [liveRecentCases, cluster?.lastUpdate, outbreakStatus],
   );
 
   const metrics = briefContent.metrics;

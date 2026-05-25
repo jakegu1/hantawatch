@@ -234,6 +234,11 @@ const _COUNTRY_NAMES_ZH: Record<string, string> = {
 };
 
 import arcgisAndvTrackingJson from '@web-data/arcgis-andv-tracking.json';
+import type { OutbreakStatus } from '@hantawatch/shared/types/outbreak-status';
+import outbreakStatusJson from '@web-data/outbreak-status.json';
+
+export const outbreakStatus: OutbreakStatus[] =
+  (outbreakStatusJson as unknown as { outbreaks?: OutbreakStatus[] }).outbreaks ?? [];
 
 export const arcgisCases: Array<{ country: string; confirmed: number; monitoring: number; total: number }> =
   (arcgisAndvTrackingJson as { cases?: typeof arcgisCases }).cases ?? [];
