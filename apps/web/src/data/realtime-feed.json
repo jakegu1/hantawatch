@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T02:45:50.789574+00:00",
+  "__generated_at": "2026-05-25T03:33:18.473978+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T02:45:49.643861+00:00",
+  "last_fetched": "2026-05-25T03:33:13.205602+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-3db35eb87f656687",
+      "time": "2026-05-25T03:00:00.000Z",
+      "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritized' amid A&E chaos - Yahoo News UK",
+      "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritized' amid A&E chaos Yahoo News UK",
+      "summary_zh": "英国阿罗公园医院员工称汉坦病毒患者被优先处理。",
+      "key_facts_zh": [
+        "英国",
+        "医院",
+        "优先处理"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-a596dca8fb5043d0",
       "time": "2026-05-25T01:23:58.000Z",
@@ -16,7 +29,8 @@
       "summary_zh": "台湾今年确诊第三例汉坦病毒病例。",
       "key_facts_zh": [
         "台湾",
-        "新增 1 例"
+        "第三例",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -30,17 +44,18 @@
         "WHO",
         "局势稳定"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-74440a0db5d86abd",
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "一艘邮轮上发现汉坦病毒，正进行识别。",
+      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
-        "识别中"
+        "识别",
+        "竞赛"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +67,21 @@
       "summary_zh": "海军派医生前往偏远岛屿治疗鼠病毒患者。",
       "key_facts_zh": [
         "海军",
-        "治疗患者"
+        "医生",
+        "偏远岛屿"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-540a5387f78fc019",
+      "time": "2026-05-24T15:28:39.000Z",
+      "title_en": "Americans exposed to hantavirus on ship enjoy Nebraska hospitality while in quarantine - KSL.com",
+      "body_en": "Americans exposed to hantavirus on ship enjoy Nebraska hospitality while in quarantine KSL.com",
+      "summary_zh": "船上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -61,32 +90,100 @@
       "time": "2026-05-24T14:53:17.000Z",
       "title_en": "Hantavirus confirmed in crew member - EU Reporter",
       "body_en": "Hantavirus confirmed in crew member EU Reporter",
-      "summary_zh": "一名船员确诊汉坦病毒。",
+      "summary_zh": "欧盟记者报道船员确诊汉坦病毒。",
       "key_facts_zh": [
-        "船员",
-        "确诊"
+        "船员确诊",
+        "欧盟"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-f69f83b939b00e0a",
+      "time": "2026-05-24T12:00:00.000Z",
+      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - Daily Monitor",
+      "body_en": "Inside an African lab that helped crack the hantavirus outbreak Daily Monitor",
+      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
+      "key_facts_zh": [
+        "非洲",
+        "实验室",
+        "破解"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-1773e526bbde88ff",
+      "time": "2026-05-24T08:47:39.000Z",
+      "title_en": "Race against a virus How did scientists crack hantavirus cruise mystery? - Ahmedabad Mirror",
+      "body_en": "Race against a virus How did scientists crack hantavirus cruise mystery? Ahmedabad Mirror",
+      "summary_zh": "科学家竞相破解邮轮汉坦病毒谜团。",
+      "key_facts_zh": [
+        "邮轮",
+        "科学家",
+        "破解"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-b9ed245fb00679de",
+      "time": "2026-05-24T04:39:22.000Z",
+      "title_en": "A shocking number of Pacific Northwest rodents may carry hantavirus, study finds - KTVZ",
+      "body_en": "A shocking number of Pacific Northwest rodents may carry hantavirus, study finds KTVZ",
+      "summary_zh": "研究发现太平洋西北部大量啮齿动物携带汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "啮齿动物",
+        "携带"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e694387deab03ec2",
       "time": "2026-05-24T00:04:00.000Z",
       "title_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours - The Times of India",
       "body_en": "Mayday! SA scientists identified hantavirus outbreak in 24 hours The Times of India",
-      "summary_zh": "[翻译为空]",
-      "key_facts_zh": [],
+      "summary_zh": "南非科学家24小时内识别汉坦病毒爆发。",
+      "key_facts_zh": [
+        "南非",
+        "科学家",
+        "识别"
+      ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-686d3b8670b33cd8",
+      "time": "2026-05-23T17:32:08.000Z",
+      "title_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks - Yahoo",
+      "body_en": "Hantavirus latest updates: WHO says outbreak is stabilizing as the Netherlands reports new case and ship captain disembarks Yahoo",
+      "summary_zh": "WHO称疫情趋稳，荷兰报告新病例，船长下船。",
+      "key_facts_zh": [
+        "WHO",
+        "荷兰",
+        "新增病例"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-3f713647147eaa32",
       "time": "2026-05-23T13:49:00.000Z",
       "title_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away - AP News",
       "body_en": "How South African scientists identified hantavirus on a cruise ship thousands of miles away AP News",
-      "summary_zh": "美联社报道南非科学家识别千里外邮轮汉坦病毒。",
+      "summary_zh": "南非科学家识别出数千英里外邮轮上的汉坦病毒。",
       "key_facts_zh": [
         "南非",
         "邮轮",
-        "识别"
+        "识别病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-70494293b5ac8b3f",
+      "time": "2026-05-23T08:42:46.000Z",
+      "title_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore - Telangana Today",
+      "body_en": "How scientists cracked a rare hantavirus outbreak linked to a cruise ship far from shore Telangana Today",
+      "summary_zh": "科学家破解与远海邮轮相关的罕见汉坦病毒疫情。",
+      "key_facts_zh": [
+        "邮轮",
+        "疫情破解"
       ],
       "signal_strength": "medium"
     },
@@ -95,11 +192,11 @@
       "time": "2026-05-22T23:30:00.000Z",
       "title_en": "Three linked to hantavirus outbreak remain in hospital in Victoria - Times Colonist",
       "body_en": "Three linked to hantavirus outbreak remain in hospital in Victoria Times Colonist",
-      "summary_zh": "加拿大维多利亚3名汉坦病毒感染者仍在住院。",
+      "summary_zh": "维多利亚三名与汉坦病毒疫情相关者仍在住院。",
       "key_facts_zh": [
         "加拿大",
-        "3人住院",
-        "汉坦病毒"
+        "维多利亚",
+        "住院"
       ],
       "signal_strength": "high"
     },
@@ -108,10 +205,10 @@
       "time": "2026-05-22T22:18:00.000Z",
       "title_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - AP News",
       "body_en": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine AP News",
-      "summary_zh": "美国邮轮上接触汉坦病毒的乘客在内布拉斯加州隔离。",
+      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
+        "内布拉斯加",
         "隔离"
       ],
       "signal_strength": "high"
@@ -121,78 +218,13 @@
       "time": "2026-05-22T20:21:42.000Z",
       "title_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 - CPAC.ca",
       "body_en": "Federal Update on Hantavirus and Ebola Outbreaks – May 22, 2026 CPAC.ca",
-      "summary_zh": "加拿大公共卫生署发布汉坦病毒和埃博拉疫情联邦更新。",
-      "key_facts_zh": [
-        "加拿大公共卫生署",
-        "汉坦病毒",
-        "埃博拉"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-30ee31f7becae620",
-      "time": "2026-05-22T19:39:00.000Z",
-      "title_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says - CBC",
-      "body_en": "No Ebola cases in Canada and no new hantavirus cases, chief public health officer says CBC",
-      "summary_zh": "加拿大首席公共卫生官称无埃博拉病例，无新增汉坦病例。",
+      "summary_zh": "加拿大联邦政府发布汉坦病毒和埃博拉疫情更新。",
       "key_facts_zh": [
         "加拿大",
-        "无新增",
+        "联邦更新",
         "汉坦病毒"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1040ad09edfbffb1",
-      "time": "2026-05-22T18:18:18.000Z",
-      "title_en": "Canada’s chief public health officer delivers updates on hantavirus, Ebola - Radio-Canada",
-      "body_en": "Canada’s chief public health officer delivers updates on hantavirus, Ebola Radio-Canada",
-      "summary_zh": "加拿大首席公共卫生官更新汉坦病毒和埃博拉疫情。",
-      "key_facts_zh": [
-        "加拿大",
-        "汉坦病毒",
-        "埃博拉"
-      ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-d762755c403f79ba",
-      "time": "2026-05-22T16:40:47.000Z",
-      "title_en": "WHO says 12th person infected with hantavirus detected in the Netherlands - Al Jazeera",
-      "body_en": "WHO says 12th person infected with hantavirus detected in the Netherlands Al Jazeera",
-      "summary_zh": "WHO称荷兰发现第12例汉坦病毒感染者。",
-      "key_facts_zh": [
-        "WHO",
-        "荷兰",
-        "第12例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b393e359d62c29d2",
-      "time": "2026-05-22T15:38:00.000Z",
-      "title_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation - The Telegraph",
-      "body_en": "Dutch cruise ship crew member tests positive for Hantavirus in isolation The Telegraph",
-      "summary_zh": "荷兰邮轮一名船员汉坦病毒检测阳性，已隔离。",
-      "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "船员确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-5773d3af3d9b218b",
-      "time": "2026-05-22T14:45:31.000Z",
-      "title_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive - NBC News",
-      "body_en": "Hantavirus cases linked to cruise ship rise to 12 after crew member tests positive NBC News",
-      "summary_zh": "邮轮汉坦病毒病例增至12例，一名船员确诊。",
-      "key_facts_zh": [
-        "邮轮",
-        "新增1例",
-        "美国"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
