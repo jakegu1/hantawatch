@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T16:35:22.641779+00:00",
+  "__generated_at": "2026-05-25T16:48:31.397714+00:00",
   "date": "2026-05-26",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -63,8 +63,8 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "WHO 5 月 15 日更新通报中包含法国 1 例新确诊输入；初步接触者监测中未发症状。",
       "stale": false,
-      "signalCount30d": 10,
-      "signalCount7d": 6,
+      "signalCount30d": 8,
+      "signalCount7d": 5,
       "lastSignalAt": "2026-05-22T14:57:16+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-05-15"
@@ -87,12 +87,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 17 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 18 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 18 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 17,
+      "signalCount30d": 18,
       "signalCount7d": 15,
-      "lastSignalAt": "2026-05-23T18:17:56+00:00"
+      "lastSignalAt": "2026-05-24T12:15:00+00:00"
     },
     "CH": {
       "iso2": "CH",
@@ -151,10 +151,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 3,
       "signalCount7d": 2,
       "lastSignalAt": "2026-05-22T14:00:05+00:00"
     },
@@ -332,12 +332,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 4 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 4,
-      "signalCount7d": 4,
-      "lastSignalAt": "2026-05-24T22:01:20+00:00"
+      "signalCount30d": 3,
+      "signalCount7d": 3,
+      "lastSignalAt": "2026-05-22T19:39:00+00:00"
     },
     "CN": {
       "iso2": "CN",
@@ -436,9 +436,9 @@
       "statusZh": "隔离中",
       "riskSummaryZh": "6 名邮轮乘客抵达澳大利亚，开始为期 3 周的隔离观察。",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-05-24T05:01:46+00:00",
+      "signalCount30d": 3,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-05-24T12:00:00+00:00",
       "importStatus": "quarantine_active",
       "importDate": "2026-05-15"
     },

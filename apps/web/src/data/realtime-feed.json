@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-25T16:47:08.602241+00:00",
+  "__generated_at": "2026-05-25T16:48:31.399219+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-25T16:47:06.607545+00:00",
+  "last_fetched": "2026-05-25T16:48:26.768479+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,9 +13,10 @@
       "time": "2026-05-25T15:43:32.000Z",
       "title_en": "Hantavirus ‘stable for now,’ WHO leader says - Yahoo News New Zealand",
       "body_en": "Hantavirus ‘stable for now,’ WHO leader says Yahoo News New Zealand",
-      "summary_zh": "WHO领导人称汉坦病毒目前稳定。",
+      "summary_zh": "WHO官员称汉坦病毒目前稳定。",
       "key_facts_zh": [
         "WHO",
+        "汉坦病毒",
         "稳定"
       ],
       "signal_strength": "medium"
@@ -25,11 +26,11 @@
       "time": "2026-05-25T13:49:53.000Z",
       "title_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos - facebook.com",
       "body_en": "Stretched Arrowe Park staff claim hantavirus patients 'prioritised' amid A&E chaos facebook.com",
-      "summary_zh": "英国Arrowe Park医院员工称汉坦患者被优先处理。",
+      "summary_zh": "英国Arrowe Park医院员工称汉坦患者被优先。",
       "key_facts_zh": [
         "英国",
         "医院",
-        "优先"
+        "汉坦患者"
       ],
       "signal_strength": "medium"
     },
@@ -52,7 +53,7 @@
       "body_en": "Washington State University study sheds new light on hantavirus KING5.com",
       "summary_zh": "华盛顿州立大学汉坦病毒研究新进展。",
       "key_facts_zh": [
-        "华盛顿州立大学",
+        "美国",
         "研究进展"
       ],
       "signal_strength": "medium"
@@ -61,11 +62,11 @@
       "id": "rt-6502a1e2a53ef2b1",
       "time": "2026-05-25T09:30:00Z",
       "title_en": "UK hospital staff drowning due to hantavirus patients isolating after cruise",
-      "summary_zh": "英国医院因邮轮汉坦病毒患者隔离致人手不足。",
+      "summary_zh": "英国医院因邮轮隔离的汉坦病毒患者不堪重负。",
       "key_facts_zh": [
         "英国",
-        "医院",
-        "邮轮"
+        "邮轮",
+        "医院不堪重负"
       ],
       "signal_strength": "high"
     },
@@ -80,13 +81,13 @@
         "医院",
         "员工担忧"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-6d787cf45a246fb4",
       "time": "2026-05-25T04:30:00Z",
       "title_en": "WHO chief : Cruise ship hantavirus outbreak stable for now",
-      "summary_zh": "WHO 总干事称邮轮汉坦疫情暂时稳定。",
+      "summary_zh": "WHO 称邮轮汉坦疫情暂时稳定。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -98,7 +99,7 @@
       "id": "rt-33e4d0d826168160",
       "time": "2026-05-25T02:00:00Z",
       "title_en": "Congo tightens travel as Ebola spreads and supplies run low",
-      "summary_zh": "刚果因埃博拉扩散和物资短缺加强旅行管控。",
+      "summary_zh": "刚果因埃博拉扩散及物资短缺加强旅行管控。",
       "key_facts_zh": [
         "刚果",
         "埃博拉",
@@ -124,7 +125,7 @@
       "time": "2026-05-24T22:17:00.000Z",
       "title_en": "WHO chief says hantavirus ‘situation is stable for now’ - The Hill",
       "body_en": "WHO chief says hantavirus ‘situation is stable for now’ The Hill",
-      "summary_zh": "WHO 总干事称汉坦疫情目前稳定。",
+      "summary_zh": "WHO 称汉坦疫情目前稳定。",
       "key_facts_zh": [
         "WHO",
         "疫情稳定"
@@ -136,10 +137,10 @@
       "time": "2026-05-24T20:25:00.000Z",
       "title_en": "The race to identify hantavirus on a cruise ship thousands of miles away - The Independent",
       "body_en": "The race to identify hantavirus on a cruise ship thousands of miles away The Independent",
-      "summary_zh": "报道称正争分夺秒识别数千英里外邮轮上的汉坦病毒。",
+      "summary_zh": "数千英里外邮轮上识别汉坦病毒的竞赛。",
       "key_facts_zh": [
         "邮轮",
-        "病毒识别"
+        "识别病毒"
       ],
       "signal_strength": "medium"
     },
@@ -147,7 +148,7 @@
       "id": "rt-bf5ff12d8fb90d3a",
       "time": "2026-05-24T20:15:00Z",
       "title_en": "Americans exposed to hantavirus on ship enjoy Nebraska hospitality while in quarantine",
-      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加州隔离。",
+      "summary_zh": "邮轮上接触汉坦病毒的美国人在内布拉斯加隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
