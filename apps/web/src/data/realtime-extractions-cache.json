@@ -629,6 +629,76 @@
         "source_url": "",
         "time": "2026-05-25T20:30:00Z"
       }
+    ],
+    "rt-427f7d368b3c0bde": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "标题称第二例汉坦病毒病例，但未明确是新增还是累计，按新增1例处理。",
+        "update_id": "rt-427f7d368b3c0bde",
+        "source_url": "",
+        "time": "2026-05-26T04:55:01.000Z"
+      }
+    ],
+    "rt-b0e5972c1022258c": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "标题确认西班牙人中一例汉坦病毒病例，按新增1例处理。",
+        "update_id": "rt-b0e5972c1022258c",
+        "source_url": "",
+        "time": "2026-05-26T04:37:29.000Z"
+      }
+    ],
+    "rt-7e64f82188400f3f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮死亡事件，但无具体国家或新增数字。",
+        "update_id": "rt-7e64f82188400f3f",
+        "source_url": "",
+        "time": "2026-05-26T04:06:22.000Z"
+      }
+    ],
+    "rt-80ea0158524b86aa": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道涉及官员辞职，未提供病例数字或国家。",
+        "update_id": "rt-80ea0158524b86aa",
+        "source_url": "",
+        "time": "2026-05-26T03:20:01.000Z"
+      }
+    ],
+    "rt-fc8baa392ac3df33": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "high",
+        "reasoning_zh": "多源官方确认西班牙公民检测阳性，新增1例。",
+        "update_id": "rt-fc8baa392ac3df33",
+        "source_url": "",
+        "time": "2026-05-25T18:28:56.000Z"
+      }
     ]
   }
 }
