@@ -12,7 +12,7 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 3,
+      "entries": 2,
       "ok": true,
       "perQuery": [
         {
@@ -20,10 +20,10 @@
           "hl": "zh-CN",
           "fetched": 100,
           "blocked": 0,
-          "no_signal": 5,
+          "no_signal": 4,
           "duplicate": 0,
-          "non_authoritative": 17,
-          "kept": 3,
+          "non_authoritative": 19,
+          "kept": 2,
           "ok": true
         }
       ]
@@ -35,7 +35,7 @@
       "checkedAt": "2026-05-26T20:06:30.202387+00:00"
     },
     "surveillance_leads": {
-      "entries": 4,
+      "entries": 10,
       "ok": true
     },
     "feeds_light_run": {
