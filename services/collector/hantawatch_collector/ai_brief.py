@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import re
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -39,6 +40,21 @@ SYSTEM_PROMPT = (
     "合规 shareLine 范例：\n"
     "「5月25日：MV Hondius 邮轮汉坦疫情累计 11 例（含台湾省 1 例监测）；"
     "中国大陆境内无相关病例，国内 HFRS 基线正常。」\n\n"
+    "【WHO 数据滞后表达规则】\n"
+    "outbreaks[0].totals 来自 WHO DON，可能滞后于现实。判断滞后的依据："
+    "outbreaks[0].lastUpdate.asOfDate 距 date 字段的天数。\n\n"
+    "规则 A（> 7 天滞后）：shareLine 和 situation 都必须明示"
+    "「WHO 上次官方更新 X 天前」。\n\n"
+    "规则 B（perCountry 含 evidence.tier == \"news\" 的条目）：必须在"
+    "shareLine 或 latestChange 中提到「其后 [国家] 卫生部/CDC 已报告新增 N"
+    "例，待 WHO 复核」，N 取 evidence 数组里来自 Realtime LLM Extractor"
+    "源的条目数。\n\n"
+    "规则 C（明确的事实声明）：避免「截至 5 月 25 日累计 11 例」这种把 WHO"
+    "数据假装成最新数据的表达。改用「WHO 公布累计 11 例（上次更新 5/13）」。\n\n"
+    "合规示例：\n"
+    "shareLine: WHO 累计 11 例（5/13 更新，至今 13 天）；其后西班牙卫生部、"
+    "台湾省 CDC、荷兰 RIVM 各新增 1 例，待 WHO 复核；中国大陆无相关病例，"
+    "国内 HFRS 基线正常。\n\n"
     "【地理称谓合规要求（强制）】\n"
     "- 涉及台湾时一律使用「台湾省」，不得使用「台湾」独称（「台湾海峡」「台湾大学」等已成立的复合专有名词除外）\n"
     "- 当文本同时涉及中国大陆与台湾省/香港/澳门时，「中国」必须使用「中国大陆」\n"
@@ -61,6 +77,41 @@ USER_TEMPLATE = (
     "不要写「台湾新增」或「中国无新增」。\n\n"
     "数据：\n{payload}"
 )
+
+
+def _outbreak_status_for_llm(outbreak_status: list[dict[str, Any]] | None) -> dict[str, Any]:
+    """Serialize outbreak ledger for LLM (full perCountry + evidence arrays)."""
+    outbreaks: list[dict[str, Any]] = []
+    for ob in outbreak_status or []:
+        if not isinstance(ob, dict):
+            continue
+        per_country: list[dict[str, Any]] = []
+        for pc in ob.get("perCountry") or []:
+            if not isinstance(pc, dict):
+                continue
+            per_country.append({
+                "iso2": pc.get("iso2"),
+                "nameZh": pc.get("nameZh"),
+                "status": pc.get("status"),
+                "confirmed": pc.get("confirmed"),
+                "monitoring": pc.get("monitoring"),
+                "quarantine": pc.get("quarantine"),
+                "deaths": pc.get("deaths"),
+                "newConfirmedToday": pc.get("newConfirmedToday"),
+                "asOf": pc.get("asOf"),
+                "evidence": [
+                    dict(ev) for ev in (pc.get("evidence") or []) if isinstance(ev, dict)
+                ],
+            })
+        outbreaks.append({
+            "id": ob.get("id"),
+            "name": ob.get("name"),
+            "serotypeId": ob.get("serotypeId"),
+            "totals": ob.get("totals"),
+            "lastUpdate": ob.get("lastUpdate"),
+            "perCountry": per_country,
+        })
+    return {"outbreaks": outbreaks}
 
 
 def _brief_case(row: dict[str, Any]) -> dict[str, Any]:
@@ -98,6 +149,67 @@ def _postprocess_brief_text(value: str) -> str:
         out = out.replace("确诊输入病例", "初筛阳性病例")
         out = out.replace("确诊病例", "初筛阳性病例")
     return out
+
+
+def _has_who_lag_indicator(text: str) -> bool:
+    """Already discloses WHO lag → don't double-prefix."""
+    if not isinstance(text, str) or "WHO" not in text:
+        return False
+    return bool(
+        re.search(r"WHO[^。\n]{0,30}天前", text)
+        or re.search(r"WHO[^。\n]{0,30}公布累计\s*\d+", text)
+        or re.search(r"WHO[^。\n]{0,30}上次.{0,5}更新", text)
+    )
+
+
+def _enforce_who_lag_disclosure(
+    brief: dict[str, Any],
+    outbreak_status: list[dict[str, Any]] | dict[str, Any] | None,
+) -> tuple[dict[str, Any], list[str]]:
+    """If WHO lastUpdate.asOfDate is > 7 days before brief.date,
+    prepend 'WHO {M}/{D} 公布累计 {N} 例（{lag} 天前）；' to shareLine
+    and situation when missing.
+
+    Idempotent: skips fields already containing the indicator.
+    """
+    obs = outbreak_status or []
+    if isinstance(obs, dict):
+        obs = obs.get("outbreaks") or []
+    if not obs:
+        return brief, []
+
+    o = obs[0]
+    last_update = o.get("lastUpdate") or {}
+    asof_str = (last_update.get("asOfDate") or "").strip()
+    brief_date_str = (brief.get("date") or "").strip()
+    if len(asof_str) < 10 or len(brief_date_str) < 10:
+        return brief, []
+
+    try:
+        asof_dt = date.fromisoformat(asof_str[:10])
+        brief_dt = date.fromisoformat(brief_date_str[:10])
+    except (ValueError, TypeError):
+        return brief, []
+
+    lag_days = (brief_dt - asof_dt).days
+    if lag_days <= 7:
+        return brief, []
+
+    totals_all = (o.get("totals") or {}).get("all") or 0
+    asof_short = f"{asof_dt.month}/{asof_dt.day}"
+    prefix = f"WHO {asof_short} 公布累计 {totals_all} 例（{lag_days} 天前）；"
+
+    out = dict(brief)
+    warnings: list[str] = []
+    for field in ("shareLine", "situation"):
+        text = out.get(field)
+        if not isinstance(text, str) or not text.strip():
+            continue
+        if _has_who_lag_indicator(text):
+            continue
+        out[field] = prefix + text
+        warnings.append(f"who_lag_disclosure: {field} prepended")
+    return out, warnings
 
 
 # Chinese country-name list for validation (must match ARCGIS_COUNTRY_MAP in TS)
@@ -271,8 +383,8 @@ def enhance_daily_brief(
         "recentCases": [_brief_case(row) for row in recent_cases_intl[:10]],
         "realtimeUpdates": realtime_updates,
         "yesterdayBrief": yesterday_context,
-        # Structural ground truth (P1: ledger is authoritative)
-        "outbreakStatus": outbreak_status or [],
+        # Structural ground truth (P1: ledger is authoritative; full evidence for P5.c)
+        "outbreakStatus": _outbreak_status_for_llm(outbreak_status),
         "mvHondiusImports": mv_hondius_imports or [],
         "arcgisCases": arcgis_cases or [],
     }
@@ -318,6 +430,14 @@ def enhance_daily_brief(
 
     if isinstance(result.get("_guardrail_warnings"), list):
         enhanced["_guardrail_warnings"] = result["_guardrail_warnings"]
+
+    enhanced, lag_warnings = _enforce_who_lag_disclosure(enhanced, outbreak_status)
+    if lag_warnings:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(lag_warnings)
+        enhanced["_guardrail_warnings"] = merged
+        logger.info("brief who-lag enforcement: %s", "; ".join(lag_warnings))
 
     ledger_errors = _validate_brief_against_ledger(enhanced, outbreak_status, risk_snapshot)
     if ledger_errors:
