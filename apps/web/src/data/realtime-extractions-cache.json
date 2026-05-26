@@ -713,6 +713,76 @@
         "source_url": "",
         "time": "2026-05-26T05:30:25.000Z"
       }
+    ],
+    "rt-7edbcf3a1465fc4b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道提及美国官员提供法律保护以开发汉坦病毒治疗，但未提及新增病例数。",
+        "update_id": "rt-7edbcf3a1465fc4b",
+        "source_url": "",
+        "time": "2026-05-26T09:41:21.000Z"
+      }
+    ],
+    "rt-0466c9456fc4ed45": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙媒体确认第二例西班牙人感染汉坦病毒，为新增确诊病例。",
+        "update_id": "rt-0466c9456fc4ed45",
+        "source_url": "",
+        "time": "2026-05-26T07:54:00.000Z"
+      }
+    ],
+    "rt-2dd76a75a3b43548": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰媒体报道西班牙邮轮乘客检测阳性，为新增确诊病例。",
+        "update_id": "rt-2dd76a75a3b43548",
+        "source_url": "",
+        "time": "2026-05-26T07:39:35.000Z"
+      }
+    ],
+    "rt-49a9ecf5692aa9a4": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "UPI报道西班牙人检测阳性，为新增确诊病例。",
+        "update_id": "rt-49a9ecf5692aa9a4",
+        "source_url": "",
+        "time": "2026-05-26T06:38:42.000Z"
+      }
+    ],
+    "rt-24953dcc1fd9c803": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "The National报道马德里医院西班牙患者检测阳性，为新增确诊病例。",
+        "update_id": "rt-24953dcc1fd9c803",
+        "source_url": "",
+        "time": "2026-05-26T06:29:29.000Z"
+      }
     ]
   }
 }

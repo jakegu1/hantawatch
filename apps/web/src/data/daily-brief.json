@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T05:49:39.532087+00:00",
+  "__generated_at": "2026-05-26T09:50:12.317888+00:00",
   "date": "2026-05-26",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,25 +11,26 @@
   "daysSinceLastIntlAlert": 13,
   "whoDaysSinceOfficialUpdate": 13,
   "cluesLast24h": 14,
-  "headline24h": "西班牙确认第二名邮轮汉坦病毒病例。",
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "5月25日西班牙、台湾省、荷兰各新增1例确诊；美国科罗拉多州1例初筛阳性待确认。",
-  "situation": "WHO 5月13日更新MV Hondius邮轮聚集疫情累计11例（8确诊、3结果未定），其后西班牙、台湾省、荷兰各新增1例确诊，美国1例初筛阳性；中国大陆无相关病例，国内HFRS基线正常。",
-  "riskJudgment": "中国大陆无输入风险，HFRS基线正常；邮轮相关疫情距中国约16,500 km，普通公众风险极低。",
-  "newCases": "5月25日西班牙、台湾省、荷兰各新增1例确诊；美国1例初筛阳性。",
-  "sourceSummary": "WHO DON、西班牙卫生部、台湾省CDC、美国CDC、ArcGIS监测",
-  "shareLine": "WHO累计11例（5/13更新，至今13天）；其后西班牙、台湾省、荷兰各新增1例确诊，美国1例初筛阳性；中国大陆无相关病例，国内HFRS基线正常。",
+  "latestChange": "5月26日西班牙确认第二例邮轮汉坦病例；美国肯尼迪提供法律保护以开发疗法。",
+  "situation": "WHO 5/13 公布累计 11 例（13 天前）；MV Hondius 邮轮安第斯型聚集疫情累计11例（WHO 5月13日更新），多国监测中；中国大陆无相关病例。",
+  "riskJudgment": "中国大陆境内无输入风险，国内HFRS基线正常；邮轮相关疫情距中国约16,500 km。",
+  "newCases": "5月26日西班牙新增1例确诊（邮轮相关）；无其他官方新增。",
+  "sourceSummary": "WHO DON、西班牙卫生部、ArcGIS Dashboard、新闻线索。",
+  "shareLine": "WHO累计11例（5/13更新，滞后13天）；5月26日西班牙新增1例确诊；中国大陆无相关病例，HFRS基线正常。",
   "watchFocus": [
     "西班牙新增确诊",
-    "美国初筛阳性",
-    "邮轮接触者随访"
+    "美国监测41人",
+    "WHO数据滞后13天"
   ],
   "evidence": [
     "WHO DON 5月13日",
-    "西班牙卫生部5月25日",
-    "美国CDC 5月25日"
+    "西班牙卫生部确认",
+    "ArcGIS ANDV Dashboard"
   ],
   "_guardrail_warnings": [
+    "who_lag_disclosure: situation prepended",
     "brief contains \"400\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"16\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"500\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
@@ -38,6 +39,10 @@
     "brief contains \"500\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
-    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]"
+    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "compliance_corrected: riskJudgment"
   ]
 }
