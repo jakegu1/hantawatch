@@ -293,6 +293,216 @@
         "source_url": "",
         "time": "2026-05-25T09:57:00.000Z"
       }
+    ],
+    "rt-755d36994288f129": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "美国科罗拉多州一名居民检测阳性，来源为地方媒体KUSA，可信度中等。",
+        "update_id": "rt-755d36994288f129",
+        "source_url": "",
+        "time": "2026-05-25T22:47:00.000Z"
+      }
+    ],
+    "rt-5c9a23fd2fda04a3": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙一名邮轮乘客检测阳性，来源为太阳报，可信度中等。",
+        "update_id": "rt-5c9a23fd2fda04a3",
+        "source_url": "",
+        "time": "2026-05-25T22:25:00.000Z"
+      }
+    ],
+    "rt-5ace8b9a8274c256": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "一名隔离的西班牙人检测阳性，来源为NDTV，可信度中等。",
+        "update_id": "rt-5ace8b9a8274c256",
+        "source_url": "",
+        "time": "2026-05-25T21:42:21.000Z"
+      }
+    ],
+    "rt-f664c4fe790acf2e": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "high",
+        "reasoning_zh": "西班牙卫生部确认一名男子感染汉坦病毒，官方来源，可信度高。",
+        "update_id": "rt-f664c4fe790acf2e",
+        "source_url": "",
+        "time": "2026-05-25T21:21:00.000Z"
+      }
+    ],
+    "rt-bd9f10f0922b3d1c": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "新华社报道西班牙隔离人群中新增一例阳性，可信度中等。",
+        "update_id": "rt-bd9f10f0922b3d1c",
+        "source_url": "",
+        "time": "2026-05-25T21:01:15.000Z"
+      }
+    ],
+    "rt-51771dbc03c5d4cd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "美国科罗拉多州一名男子感染汉坦病毒，来源为Denver7，可信度中等。",
+        "update_id": "rt-51771dbc03c5d4cd",
+        "source_url": "",
+        "time": "2026-05-25T21:01:01.000Z"
+      }
+    ],
+    "rt-4f6e8546c3b105b2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "high",
+        "reasoning_zh": "WHO报告疫情稳定，无新增病例和死亡，未指定国家，delta为0。",
+        "update_id": "rt-4f6e8546c3b105b2",
+        "source_url": "",
+        "time": "2026-05-25T20:30:00.000Z"
+      }
+    ],
+    "rt-6e6770d24a8f2dda": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙国民在撤离邮轮后检测阳性，来源为The News International，可信度中等。",
+        "update_id": "rt-6e6770d24a8f2dda",
+        "source_url": "",
+        "time": "2026-05-25T20:04:00.000Z"
+      }
+    ],
+    "rt-83aff7896da8206f": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "Anadolu Ajansı报道西班牙马德里医院隔离人群中新增1例汉坦病毒确诊病例。",
+        "update_id": "rt-83aff7896da8206f",
+        "source_url": "",
+        "time": "2026-05-25T19:55:05.000Z"
+      }
+    ],
+    "rt-a7597771bc3ec9ee": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "NBC News报道西班牙政府确认新增1例汉坦病毒病例。",
+        "update_id": "rt-a7597771bc3ec9ee",
+        "source_url": "",
+        "time": "2026-05-25T19:42:03.000Z"
+      }
+    ],
+    "rt-bb1ddb4116ae9331": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "乌克兰国家新闻社报道在西班牙的MV Hondius船上另1人检测出汉坦病毒阳性。",
+        "update_id": "rt-bb1ddb4116ae9331",
+        "source_url": "",
+        "time": "2026-05-25T19:25:26.000Z"
+      }
+    ],
+    "rt-cad1dd278180474f": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "The Journal报道一名从汉坦病毒邮轮撤离的西班牙隔离者检测阳性。",
+        "update_id": "rt-cad1dd278180474f",
+        "source_url": "",
+        "time": "2026-05-25T19:18:00.000Z"
+      }
+    ],
+    "rt-632f7fd12c1686ec": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "Scripps News报道从MV Hondius邮轮撤离的西班牙公民检测出汉坦病毒阳性。",
+        "update_id": "rt-632f7fd12c1686ec",
+        "source_url": "",
+        "time": "2026-05-25T18:45:41.000Z"
+      }
+    ],
+    "rt-27c309ee38a2a166": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "Deccan Herald报道从汉坦病毒邮轮撤离的西班牙国民检测阳性。",
+        "update_id": "rt-27c309ee38a2a166",
+        "source_url": "",
+        "time": "2026-05-25T18:28:46.000Z"
+      }
+    ],
+    "rt-51c13956d732a97a": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "RTE.ie报道从汉坦病毒船撤离的西班牙人检测阳性。",
+        "update_id": "rt-51c13956d732a97a",
+        "source_url": "",
+        "time": "2026-05-25T18:27:52.000Z"
+      }
     ]
   }
 }
