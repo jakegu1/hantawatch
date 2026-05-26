@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T15:19:52.431599+00:00",
+  "__generated_at": "2026-05-26T15:34:27.457055+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-26T15:19:42.284814+00:00",
+  "last_fetched": "2026-05-26T15:34:26.108893+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,10 +26,10 @@
       "time": "2026-05-26T15:02:10.000Z",
       "title_en": "More People Being Monitored at Home for Potential Hantavirus Exposure - MedPage Today",
       "body_en": "More People Being Monitored at Home for Potential Hantavirus Exposure MedPage Today",
-      "summary_zh": "更多人在家监测汉坦病毒暴露风险。",
+      "summary_zh": "更多人因潜在汉坦病毒暴露在家监测。",
       "key_facts_zh": [
         "监测中",
-        "暴露风险"
+        "暴露"
       ],
       "signal_strength": "medium"
     },
@@ -41,8 +41,7 @@
       "summary_zh": "乘客离开感染邮轮数周后汉坦病毒检测阳性。",
       "key_facts_zh": [
         "邮轮",
-        "乘客确诊",
-        "美国"
+        "乘客确诊"
       ],
       "signal_strength": "high"
     },
@@ -51,7 +50,7 @@
       "time": "2026-05-26T14:08:00.000Z",
       "title_en": "Spanish passenger on MV Hondius tests positive for hantavirus after being evacuated from cruise ship - New York Post",
       "body_en": "Spanish passenger on MV Hondius tests positive for hantavirus after being evacuated from cruise ship New York Post",
-      "summary_zh": "MV Hondius 号西班牙乘客撤离后汉坦病毒阳性。",
+      "summary_zh": "MV Hondius号西班牙乘客撤离后汉坦病毒阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -60,17 +59,17 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-5b743dbb35dc97f6",
-      "time": "2026-05-26T12:00:00.000Z",
-      "title_en": "Sin nombre hantavirus strain still focus for Southwest tribes despite Andes strain - ictnews.org",
-      "body_en": "Sin nombre hantavirus strain still focus for Southwest tribes despite Andes strain ictnews.org",
-      "summary_zh": "西南部落仍关注辛诺柏汉坦病毒株。",
+      "id": "rt-7d88b58c838d344e",
+      "time": "2026-05-26T13:59:20.000Z",
+      "title_en": "Spanish passenger evacuated from MV Hondius tests positive for hantavirus - CityNews Calgary",
+      "body_en": "Spanish passenger evacuated from MV Hondius tests positive for hantavirus CityNews Calgary",
+      "summary_zh": "MV Hondius号西班牙乘客撤离后汉坦病毒阳性。",
       "key_facts_zh": [
-        "美国",
-        "西南部落",
-        "病毒株"
+        "西班牙",
+        "邮轮",
+        "确诊"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-46bc85035f899e7e",
@@ -90,7 +89,7 @@
       "time": "2026-05-26T09:43:36.000Z",
       "title_en": "Spain confirms new hantavirus case among cruise ship passengers quarantining in Madrid - Sur in English",
       "body_en": "Spain confirms new hantavirus case among cruise ship passengers quarantining in Madrid Sur in English",
-      "summary_zh": "西班牙确认邮轮乘客在马德里隔离时新增病例。",
+      "summary_zh": "西班牙确认邮轮隔离乘客新增汉坦病例。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -103,11 +102,10 @@
       "time": "2026-05-26T09:41:30.000Z",
       "title_en": "Kennedy offers legal shield to develop hantavirus treatment - Axios",
       "body_en": "Kennedy offers legal shield to develop hantavirus treatment Axios",
-      "summary_zh": "肯尼迪提供法律保护以开发汉坦病毒治疗。",
+      "summary_zh": "肯尼迪提供法律保护以研发汉坦治疗。",
       "key_facts_zh": [
         "肯尼迪",
-        "法律保护",
-        "治疗开发"
+        "治疗研发"
       ],
       "signal_strength": "medium"
     },
@@ -116,11 +114,11 @@
       "time": "2026-05-26T07:54:00.000Z",
       "title_en": "Second Spanish national confirmed to have contracted hantavirus onboard MV Hondius cruise ship - Olive Press News Spain",
       "body_en": "Second Spanish national confirmed to have contracted hantavirus onboard MV Hondius cruise ship Olive Press News Spain",
-      "summary_zh": "第二名西班牙国民在邮轮上确诊汉坦病毒。",
+      "summary_zh": "西班牙确认第二名国民在邮轮感染汉坦。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "第二例确诊"
+        "第二例"
       ],
       "signal_strength": "high"
     },
@@ -142,11 +140,11 @@
       "time": "2026-05-26T06:38:42.000Z",
       "title_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak - upi.com",
       "body_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak upi.com",
-      "summary_zh": "一名西班牙人在邮轮相关疫情中汉坦病毒检测阳性。",
+      "summary_zh": "西班牙人邮轮相关疫情中汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "检测阳性"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -155,11 +153,11 @@
       "time": "2026-05-26T06:29:29.000Z",
       "title_en": "Spanish patient at Madrid hospital tests positive for hantavirus - The National",
       "body_en": "Spanish patient at Madrid hospital tests positive for hantavirus The National",
-      "summary_zh": "马德里医院一名西班牙患者汉坦病毒检测阳性。",
+      "summary_zh": "西班牙马德里医院患者汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "马德里",
-        "检测阳性"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -168,11 +166,11 @@
       "time": "2026-05-26T05:30:25.000Z",
       "title_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 - Health and Me",
       "body_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 Health and Me",
-      "summary_zh": "西班牙隔离人员中汉坦病毒病例增至13例。",
+      "summary_zh": "西班牙隔离者确诊汉坦病毒，病例升至13例。",
       "key_facts_zh": [
         "西班牙",
         "隔离",
-        "13例"
+        "病例13"
       ],
       "signal_strength": "high"
     },
@@ -181,7 +179,7 @@
       "time": "2026-05-26T04:58:53.000Z",
       "title_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain - National Herald",
       "body_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain National Herald",
-      "summary_zh": "西班牙隔离邮轮乘客中发现第二例汉坦病毒病例。",
+      "summary_zh": "西班牙隔离邮轮乘客中检测出第二例汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
@@ -194,26 +192,13 @@
       "time": "2026-05-26T03:20:01.000Z",
       "title_en": "Acting NIAID chief steps down amid Ebola, hantavirus concerns - Medical Xpress",
       "body_en": "Acting NIAID chief steps down amid Ebola, hantavirus concerns Medical Xpress",
-      "summary_zh": "美国NIAID代理主任因埃博拉和汉坦病毒担忧辞职。",
+      "summary_zh": "美国NIAID代理主任因埃博拉和汉坦病毒疫情辞职。",
       "key_facts_zh": [
         "美国",
         "NIAID",
         "辞职"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-755d36994288f129",
-      "time": "2026-05-25T22:47:00.000Z",
-      "title_en": "Coloradan tests positive for hantavirus - KUSA.com",
-      "body_en": "Coloradan tests positive for hantavirus KUSA.com",
-      "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "美国",
-        "科罗拉多",
-        "确诊"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
