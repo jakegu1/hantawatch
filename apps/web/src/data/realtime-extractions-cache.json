@@ -783,6 +783,104 @@
         "source_url": "",
         "time": "2026-05-26T06:29:29.000Z"
       }
+    ],
+    "rt-0dee688f7191450f": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "high",
+        "reasoning_zh": "西班牙政府确认新增1例汉坦病毒病例，与邮轮相关。",
+        "update_id": "rt-0dee688f7191450f",
+        "source_url": "",
+        "time": "2026-05-26T15:04:23.000Z"
+      }
+    ],
+    "rt-dbf9e76d9999beec": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称更多人居家监测，但未指明国家，无法提取具体增量。",
+        "update_id": "rt-dbf9e76d9999beec",
+        "source_url": "",
+        "time": "2026-05-26T15:02:10.000Z"
+      }
+    ],
+    "rt-7612eec2a2a59dde": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称乘客检测阳性，但未明确国家，无法提取增量。",
+        "update_id": "rt-7612eec2a2a59dde",
+        "source_url": "",
+        "time": "2026-05-26T14:33:02.000Z"
+      }
+    ],
+    "rt-c97d748a26e8fd5f": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "high",
+        "reasoning_zh": "西班牙乘客检测阳性，新增1例确诊病例。",
+        "update_id": "rt-c97d748a26e8fd5f",
+        "source_url": "",
+        "time": "2026-05-26T14:08:00.000Z"
+      }
+    ],
+    "rt-5b743dbb35dc97f6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道关注病毒株，未提及新增病例数。",
+        "update_id": "rt-5b743dbb35dc97f6",
+        "source_url": "",
+        "time": "2026-05-26T12:00:00.000Z"
+      }
+    ],
+    "rt-46bc85035f899e7e": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "high",
+        "reasoning_zh": "乘客在西班牙检测阳性，新增1例确诊病例。",
+        "update_id": "rt-46bc85035f899e7e",
+        "source_url": "",
+        "time": "2026-05-26T10:53:16.000Z"
+      }
+    ],
+    "rt-6f3828171765f1a1": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "high",
+        "reasoning_zh": "西班牙确认新增1例汉坦病毒病例，邮轮乘客在马德里隔离。",
+        "update_id": "rt-6f3828171765f1a1",
+        "source_url": "",
+        "time": "2026-05-26T09:43:36.000Z"
+      }
     ]
   }
 }
