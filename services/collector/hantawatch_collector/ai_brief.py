@@ -155,11 +155,17 @@ def _has_who_lag_indicator(text: str) -> bool:
     """Already discloses WHO lag → don't double-prefix."""
     if not isinstance(text, str) or "WHO" not in text:
         return False
-    return bool(
-        re.search(r"WHO[^。\n]{0,30}天前", text)
-        or re.search(r"WHO[^。\n]{0,30}公布累计\s*\d+", text)
-        or re.search(r"WHO[^。\n]{0,30}上次.{0,5}更新", text)
+    lag_patterns = (
+        r"WHO[^。\n]{0,40}天前",
+        r"WHO[^。\n]{0,40}至今\s*\d+\s*天",
+        r"WHO[^。\n]{0,40}公布累计\s*\d+",
+        r"WHO[^。\n]{0,40}累计\s*\d+例",
+        r"WHO[^。\n]{0,40}上次.{0,10}更新",
+        r"距\s*WHO[^。\n]{0,30}官方更新[^。\n]{0,20}\d+\s*天",
+        r"WHO[^。\n]{0,40}\d+/\d+[^。\n]{0,30}更新",
+        r"WHO[^。\n]{0,20}\d+月\d+日[^。\n]{0,30}公布累计",
     )
+    return any(re.search(p, text) for p in lag_patterns)
 
 
 def _enforce_who_lag_disclosure(

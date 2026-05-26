@@ -196,7 +196,12 @@ export interface BriefSectionContent {
   /** Structured case table for comparison view */
   caseTable: CaseTableRow[];
   /** Summary totals: confirmed, monitoring, deaths across all rows */
-  caseTableSummary: { totalConfirmed: number; totalMonitoring: number; totalDeaths: number };
+  caseTableSummary: {
+    totalAll: number;
+    totalConfirmed: number;
+    totalMonitoring: number;
+    totalDeaths: number;
+  };
 }
 
 function briefCaseText(c: TimelineCase): string {
@@ -378,21 +383,30 @@ export function buildBriefSectionContent(input: BriefDisplayInput): BriefSection
 function _computeCaseTableSummary(
   rows: CaseTableRow[],
   outbreakStatus: BriefDisplayInput['outbreakStatus'],
-): { totalConfirmed: number; totalMonitoring: number; totalDeaths: number } {
+): {
+  totalAll: number;
+  totalConfirmed: number;
+  totalMonitoring: number;
+  totalDeaths: number;
+} {
   // Prefer outbreak-status ledger (single source of truth)
   if (outbreakStatus.length) {
     const ob = outbreakStatus[0];
     return {
+      totalAll: ob.totals.all,
       totalConfirmed: ob.totals.confirmed,
       totalMonitoring: ob.perCountry.reduce((s, c) => s + c.monitoring, 0),
       totalDeaths: ob.totals.deaths,
     };
   }
   // Fallback: compute from rows
+  const andesRows = rows.filter((r) => r.serotypeLabel === '安第斯型');
+  const confirmed = andesRows.reduce((s, r) => s + r.totalConfirmed, 0);
   return {
-    totalConfirmed: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.totalConfirmed, 0),
+    totalAll: confirmed,
+    totalConfirmed: confirmed,
     totalMonitoring: rows.reduce((s, r) => s + r.monitoring, 0),
-    totalDeaths: rows.filter((r) => r.serotypeLabel === '安第斯型').reduce((s, r) => s + r.deaths, 0),
+    totalDeaths: andesRows.reduce((s, r) => s + r.deaths, 0),
   };
 }
 
