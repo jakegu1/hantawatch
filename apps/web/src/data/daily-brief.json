@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T03:04:22.565668+00:00",
+  "__generated_at": "2026-05-26T03:25:52.714824+00:00",
   "date": "2026-05-26",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -10,24 +10,24 @@
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "daysSinceLastIntlAlert": 13,
   "whoDaysSinceOfficialUpdate": 13,
-  "cluesLast24h": 10,
+  "cluesLast24h": 12,
   "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "5月25日西班牙、台湾省、荷兰各新增1例确诊；美国科罗拉多州1例初筛阳性待确认。",
-  "situation": "MV Hondius 邮轮安第斯型聚集疫情累计11例（8确诊、3结果未定），3例死亡；多国监测中，中国大陆无相关病例。",
+  "situation": "MV Hondius邮轮安第斯型聚集疫情累计11例（8确诊、3结果未定），3例死亡；多国监测中，中国大陆无相关病例。",
   "riskJudgment": "中国大陆境内无汉坦病毒输入病例，国内HFRS处于基线正常范围，公众风险极低。",
   "newCases": "5月25日西班牙、台湾省、荷兰各新增1例确诊；美国1例初筛阳性。",
-  "sourceSummary": "WHO官方通报、ArcGIS监测、新闻线索。",
-  "shareLine": "5月25日：西班牙、台湾省、荷兰各新增1例确诊；美国1例初筛阳性。中国大陆无相关病例，HFRS基线正常。",
+  "sourceSummary": "WHO官方通报及多国卫生部门监测数据。",
+  "shareLine": "5月26日：MV Hondius邮轮汉坦疫情累计11例（8确诊），西班牙、台湾省、荷兰各新增1例；中国大陆无相关病例，HFRS基线正常。",
   "watchFocus": [
+    "邮轮聚集疫情进展",
     "西班牙新增确诊",
-    "美国初筛阳性",
-    "邮轮接触者随访"
+    "美国初筛阳性确认"
   ],
   "evidence": [
     "WHO 5月13日DON通报",
-    "ArcGIS ANDV Dashboard",
-    "西班牙卫生部确认"
+    "西班牙卫生部确认",
+    "ArcGIS ANDV Dashboard"
   ],
   "_guardrail_warnings": [
     "brief contains \"400\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
