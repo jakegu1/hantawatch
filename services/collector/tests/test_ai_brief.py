@@ -7,7 +7,11 @@ from typing import Any
 
 import pytest
 
-from hantawatch_collector.ai_brief import SYSTEM_PROMPT, enhance_daily_brief
+from hantawatch_collector.ai_brief import (
+    SYSTEM_PROMPT,
+    _has_who_lag_indicator,
+    enhance_daily_brief,
+)
 
 
 def test_system_prompt_includes_who_lag_rules() -> None:
@@ -81,6 +85,59 @@ def test_enhance_daily_brief_sends_full_outbreak_evidence_to_llm(
     assert es["iso2"] == "ES"
     assert len(es["evidence"]) == 3
     assert es["evidence"][1]["tier"] == "news"
+
+
+@pytest.mark.parametrize(
+    ("text", "expected"),
+    [
+        ("WHO累计11例（5/13更新，至今13天）", True),
+        ("WHO 5/13 公布累计 11 例（13 天前）", True),
+        ("WHO 上次更新已 13 天", True),
+        ("WHO 5月13日公布累计 11 例", True),
+        ("距 WHO 官方更新 13 天", True),
+        ("WHO 数据可靠", False),
+        ("5/13 累计 11 例", False),
+        ("参考 ECDC 5/13 数据", False),
+    ],
+)
+def test_has_who_lag_indicator_catches_llm_paraphrases(text: str, expected: bool) -> None:
+    assert _has_who_lag_indicator(text) is expected
+
+
+def test_no_double_who_prefix_in_share_line(monkeypatch: pytest.MonkeyPatch) -> None:
+    share_line = "WHO累计11例（5/13更新，至今13天）；5月25日西班牙新增1例。"
+
+    def _fake_call_llm(*, messages, **_kwargs):
+        return {
+            "latestChange": "5月25日西班牙新增1例。",
+            "situation": "多国监测中。",
+            "riskJudgment": "风险低。",
+            "newCases": "有新增。",
+            "sourceSummary": "WHO",
+            "shareLine": share_line,
+            "watchFocus": ["a"],
+            "evidence": ["b"],
+        }
+
+    monkeypatch.setattr("hantawatch_collector.ai_brief._call_llm", _fake_call_llm)
+    monkeypatch.setattr(
+        "hantawatch_collector.ai_brief._validate_brief_against_ledger",
+        lambda *_a, **_k: [],
+    )
+    monkeypatch.setenv("LLM_API_KEY", "test-key")
+
+    outbreak_status = [{
+        "totals": {"all": 11, "confirmed": 8},
+        "lastUpdate": {"asOfDate": "2026-05-13"},
+    }]
+    out = enhance_daily_brief(
+        {"date": "2026-05-26", "oneLine": "rule"},
+        risk_snapshot={"currentHpi": {"total": 24}},
+        recent_cases_intl=[],
+        outbreak_status=outbreak_status,
+    )
+    assert out["shareLine"].count("WHO") == 1
+    assert out["shareLine"].startswith(share_line)
 
 
 def test_who_lag_disclosure_prepends_when_above_7_days() -> None:

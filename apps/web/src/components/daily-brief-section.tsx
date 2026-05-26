@@ -96,7 +96,7 @@ export function DailyBriefSection({
           <div className="flex items-center justify-between mb-2">
             <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">病例与监测动态</p>
             <span className="text-[9px] text-gray-400">
-              安第斯确诊 {caseTableSummary.totalConfirmed} · 监测 {caseTableSummary.totalMonitoring} · 死亡 {caseTableSummary.totalDeaths}
+              安第斯累计 {caseTableSummary.totalAll} · 监测 {caseTableSummary.totalMonitoring} · 死亡 {caseTableSummary.totalDeaths}
             </span>
           </div>
           <div className="space-y-2">
