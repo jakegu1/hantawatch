@@ -1,22 +1,74 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T05:51:13.243415+00:00",
+  "__generated_at": "2026-05-26T08:28:18.051582+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-26T05:51:11.853737+00:00",
+  "last_fetched": "2026-05-26T08:28:16.675309+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-0466c9456fc4ed45",
+      "time": "2026-05-26T07:54:00.000Z",
+      "title_en": "Second Spaniard confirmed as cruise ship hantavirus case - Olive Press News Spain",
+      "body_en": "Second Spaniard confirmed as cruise ship hantavirus case Olive Press News Spain",
+      "summary_zh": "西班牙确认第二名邮轮汉坦病毒病例。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "新增1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-2dd76a75a3b43548",
+      "time": "2026-05-26T07:39:35.000Z",
+      "title_en": "Spanish cruise ship passenger tests positive for hantavirus - DutchNews.nl",
+      "body_en": "Spanish cruise ship passenger tests positive for hantavirus DutchNews.nl",
+      "summary_zh": "西班牙邮轮乘客汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-49a9ecf5692aa9a4",
+      "time": "2026-05-26T06:38:42.000Z",
+      "title_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak - upi.com",
+      "body_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak upi.com",
+      "summary_zh": "西班牙人邮轮相关汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-24953dcc1fd9c803",
+      "time": "2026-05-26T06:29:29.000Z",
+      "title_en": "Spanish patient at Madrid hospital tests positive for hantavirus - The National",
+      "body_en": "Spanish patient at Madrid hospital tests positive for hantavirus The National",
+      "summary_zh": "西班牙马德里医院患者汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "西班牙",
+        "马德里",
+        "确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-7256d41e4595a4dd",
       "time": "2026-05-26T05:30:25.000Z",
       "title_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 - Health and Me",
       "body_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 Health and Me",
-      "summary_zh": "西班牙隔离人员确诊汉坦病毒，病例升至13例。",
+      "summary_zh": "西班牙隔离者汉坦病毒阳性，病例升至13例。",
       "key_facts_zh": [
         "西班牙",
-        "新增1例",
+        "隔离",
         "13例"
       ],
       "signal_strength": "high"
@@ -26,11 +78,11 @@
       "time": "2026-05-26T04:55:01.000Z",
       "title_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain - National Herald",
       "body_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain National Herald",
-      "summary_zh": "西班牙邮轮隔离乘客中发现第二例汉坦病毒病例。",
+      "summary_zh": "西班牙隔离邮轮乘客中发现第二例汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "第二例"
+        "新增1例"
       ],
       "signal_strength": "high"
     },
@@ -39,9 +91,10 @@
       "time": "2026-05-26T04:37:29.000Z",
       "title_en": "Hantavirus Case Confirmed Among Quarantined Spaniards - NDTV",
       "body_en": "Hantavirus Case Confirmed Among Quarantined Spaniards NDTV",
-      "summary_zh": "西班牙隔离人员中确认汉坦病毒病例。",
+      "summary_zh": "西班牙隔离者中确认汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
+        "隔离",
         "确诊"
       ],
       "signal_strength": "high"
@@ -73,26 +126,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-5c9a23fd2fda04a3",
-      "time": "2026-05-25T22:25:00.000Z",
-      "title_en": "Health alert as cruise ship passenger tests positive for hantavirus in Spain - after being evacuated from Hondius - thesun.co.uk",
-      "body_en": "Health alert as cruise ship passenger tests positive for hantavirus in Spain - after being evacuated from Hondius thesun.co.uk",
-      "summary_zh": "西班牙邮轮乘客汉坦病毒阳性，从Hondius号撤离。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-5ace8b9a8274c256",
       "time": "2026-05-25T21:42:21.000Z",
       "title_en": "Quarantined Spaniard Tests Positive For Hantavirus - NDTV",
       "body_en": "Quarantined Spaniard Tests Positive For Hantavirus NDTV",
-      "summary_zh": "西班牙隔离人员汉坦病毒检测阳性。",
+      "summary_zh": "西班牙一隔离旅客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
+        "隔离",
         "确诊"
       ],
       "signal_strength": "high"
@@ -102,23 +143,11 @@
       "time": "2026-05-25T21:21:00.000Z",
       "title_en": "Spanish man contracts Hantavirus, health ministry says - wng.org",
       "body_en": "Spanish man contracts Hantavirus, health ministry says wng.org",
-      "summary_zh": "西班牙卫生部通报一名男子感染汉坦病毒。",
+      "summary_zh": "西班牙卫生部称一名男子感染汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
+        "卫生部",
         "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-bd9f10f0922b3d1c",
-      "time": "2026-05-25T21:01:15.000Z",
-      "title_en": "New positive for hantavirus confirmed among quarantined Spaniards - Xinhua",
-      "body_en": "New positive for hantavirus confirmed among quarantined Spaniards Xinhua",
-      "summary_zh": "西班牙隔离人员中新增一例汉坦病毒阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "新增 1 例",
-        "隔离中"
       ],
       "signal_strength": "high"
     },
@@ -127,11 +156,11 @@
       "time": "2026-05-25T21:01:01.000Z",
       "title_en": "Arapahoe County man recovering after contracting hantavirus; infection not tied to cruise ship cluster - Denver7",
       "body_en": "Arapahoe County man recovering after contracting hantavirus; infection not tied to cruise ship cluster Denver7",
-      "summary_zh": "美国阿拉帕霍县一男子感染汉坦病毒后康复，与邮轮无关。",
+      "summary_zh": "美国阿拉帕霍县男子感染汉坦病毒康复，与邮轮无关。",
       "key_facts_zh": [
         "美国",
-        "康复",
-        "非邮轮关联"
+        "阿拉帕霍",
+        "康复"
       ],
       "signal_strength": "high"
     },
@@ -140,9 +169,9 @@
       "time": "2026-05-25T21:00:37.000Z",
       "title_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus - CBC",
       "body_en": "Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC",
-      "summary_zh": "MV Hondius 邮轮上一西班牙乘客汉坦病毒检测阳性。",
+      "summary_zh": "加拿大公共卫生署称MV Hondius邮轮西班牙乘客汉坦病毒阳性。",
       "key_facts_zh": [
-        "西班牙",
+        "加拿大公共卫生署",
         "邮轮",
         "确诊"
       ],
@@ -153,24 +182,11 @@
       "time": "2026-05-25T20:30:00.000Z",
       "title_en": "Hantavirus Outbreak Now Stable, No New Cases And Deaths Reported: WHO - Health and Me",
       "body_en": "Hantavirus Outbreak Now Stable, No New Cases And Deaths Reported: WHO Health and Me",
-      "summary_zh": "WHO 称汉坦病毒疫情稳定，无新增病例和死亡。",
+      "summary_zh": "WHO称汉坦病毒疫情稳定，无新增病例和死亡。",
       "key_facts_zh": [
         "WHO",
-        "疫情稳定",
+        "稳定",
         "无新增"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-6e6770d24a8f2dda",
-      "time": "2026-05-25T20:04:00.000Z",
-      "title_en": "Spanish national tests positive for hantavirus after evacuating cruise ship - The News International",
-      "body_en": "Spanish national tests positive for hantavirus after evacuating cruise ship The News International",
-      "summary_zh": "一名西班牙国民从邮轮撤离后汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -179,11 +195,11 @@
       "time": "2026-05-25T19:55:05.000Z",
       "title_en": "Spain confirms new hantavirus case among those quarantined at Madrid hospital - Anadolu Ajansı",
       "body_en": "Spain confirms new hantavirus case among those quarantined at Madrid hospital Anadolu Ajansı",
-      "summary_zh": "西班牙确认马德里医院隔离人员中新增一例汉坦病毒。",
+      "summary_zh": "西班牙马德里医院隔离者中新增汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
-        "马德里",
-        "新增 1 例"
+        "新增 1 例",
+        "马德里医院"
       ],
       "signal_strength": "high"
     },
@@ -192,36 +208,10 @@
       "time": "2026-05-25T19:42:03.000Z",
       "title_en": "Spanish government confirms new case of hantavirus - NBC News",
       "body_en": "Spanish government confirms new case of hantavirus NBC News",
-      "summary_zh": "西班牙政府确认新增一例汉坦病毒病例。",
+      "summary_zh": "西班牙政府确认新增汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
         "新增 1 例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-bb1ddb4116ae9331",
-      "time": "2026-05-25T19:25:26.000Z",
-      "title_en": "Hantavirus detected in another person in Spain who was on board the MV Hondius - Українські Національні Новини (УНН)",
-      "body_en": "Hantavirus detected in another person in Spain who was on board the MV Hondius Українські Національні Новини (УНН)",
-      "summary_zh": "西班牙MV Hondius邮轮上又一人检出汉坦病毒。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "新增1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-cad1dd278180474f",
-      "time": "2026-05-25T19:18:00.000Z",
-      "title_en": "Quarantined Spanish national evacuated from hantavirus cruise ship tests positive - The Journal",
-      "body_en": "Quarantined Spanish national evacuated from hantavirus cruise ship tests positive The Journal",
-      "summary_zh": "西班牙从汉坦病毒邮轮撤离的隔离公民检测阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -230,24 +220,24 @@
       "time": "2026-05-25T18:45:41.000Z",
       "title_en": "Spanish citizen evacuated from MV Hondius cruise ship tests positive for hantavirus - Scripps News",
       "body_en": "Spanish citizen evacuated from MV Hondius cruise ship tests positive for hantavirus Scripps News",
-      "summary_zh": "西班牙公民从MV Hondius邮轮撤离后检测阳性。",
+      "summary_zh": "从MV Hondius邮轮撤离的西班牙公民汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "确诊"
+        "确诊 1 例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-fc8baa392ac3df33",
+      "id": "rt-5dbbd600df98d758",
       "time": "2026-05-25T18:28:56.000Z",
       "title_en": "Spanish citizen evacuated from hantavirus-hit cruise ship tests positive - CNN",
-      "body_en": "Spanish citizen evacuated from hantavirus-hit cruise ship tests positive CNN Spanish national evacuated from hantavirus cruise ship tests positive Reuters Spanish government confirms new case of hantavirus NBC News Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC Health ministry confirms another hantavirus case in Spain Euronews.com Hantavirus Case Confirmed Among Quarantined Spaniards NDTV Quarantined Spaniard Tests Positive For Hantavirus NDTV Health alert as cruise ship passenger tests positive for hantavirus in Spain - after being evacuated from Hondius t",
-      "summary_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性，政府确认新病例。",
+      "body_en": "Spanish citizen evacuated from hantavirus-hit cruise ship tests positive CNN Spanish passenger from the MV Hondius cruise ship tests positive for hantavirus CBC Spanish government confirms new case of hantavirus NBC News",
+      "summary_zh": "从汉坦病毒邮轮撤离的西班牙乘客检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "确诊"
+        "确诊 1 例"
       ],
       "signal_strength": "high"
     },
@@ -256,11 +246,11 @@
       "time": "2026-05-25T18:28:46.000Z",
       "title_en": "Spanish national evacuated from hantavirus cruise ship tests positive - Deccan Herald",
       "body_en": "Spanish national evacuated from hantavirus cruise ship tests positive Deccan Herald",
-      "summary_zh": "西班牙公民从汉坦病毒邮轮撤离后检测阳性。",
+      "summary_zh": "从汉坦病毒邮轮撤离的西班牙国民检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "确诊"
+        "确诊 1 例"
       ],
       "signal_strength": "high"
     },
@@ -269,11 +259,11 @@
       "time": "2026-05-25T18:27:52.000Z",
       "title_en": "Spaniard evacuated from hantavirus ship tests positive - RTE.ie",
       "body_en": "Spaniard evacuated from hantavirus ship tests positive RTE.ie",
-      "summary_zh": "西班牙人从汉坦病毒邮轮撤离后检测阳性。",
+      "summary_zh": "从汉坦病毒邮轮撤离的西班牙人检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "确诊"
+        "确诊 1 例"
       ],
       "signal_strength": "high"
     },
@@ -282,11 +272,11 @@
       "time": "2026-05-25T18:08:34.000Z",
       "title_en": "Spanish Cruise Evacuee Tests Positive for Hantavirus - Devdiscourse",
       "body_en": "Spanish Cruise Evacuee Tests Positive for Hantavirus Devdiscourse",
-      "summary_zh": "西班牙邮轮撤离者检测汉坦病毒阳性。",
+      "summary_zh": "西班牙邮轮撤离者汉坦病毒检测阳性。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "确诊"
+        "确诊 1 例"
       ],
       "signal_strength": "high"
     },
@@ -295,11 +285,10 @@
       "time": "2026-05-25T17:50:43.000Z",
       "title_en": "Health ministry confirms another hantavirus case in Spain - Euronews.com",
       "body_en": "Health ministry confirms another hantavirus case in Spain Euronews.com",
-      "summary_zh": "西班牙卫生部确认新增一例汉坦病毒病例。",
+      "summary_zh": "西班牙卫生部确认新增汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
-        "卫生部",
-        "新增1例"
+        "新增 1 例"
       ],
       "signal_strength": "high"
     }
