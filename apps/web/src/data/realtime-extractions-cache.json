@@ -881,6 +881,146 @@
         "source_url": "",
         "time": "2026-05-26T09:43:36.000Z"
       }
+    ],
+    "rt-d09344415adc093f": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称一名英国人在荷兰治疗后返回英国，但未提供新增病例数字。",
+        "update_id": "rt-d09344415adc093f",
+        "source_url": "",
+        "time": "2026-05-26T19:44:00.000Z"
+      }
+    ],
+    "rt-1e699a8e5b001b96": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名暴露者已解除观察，但未提及新增病例。",
+        "update_id": "rt-1e699a8e5b001b96",
+        "source_url": "",
+        "time": "2026-05-26T19:37:00.000Z"
+      }
+    ],
+    "rt-f4062d4c1088e070": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名在KU医院观察者已解除观察，无新增病例。",
+        "update_id": "rt-f4062d4c1088e070",
+        "source_url": "",
+        "time": "2026-05-26T19:13:32.000Z"
+      }
+    ],
+    "rt-c2411828a66a8a61": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称一名科罗拉多人检测阳性，但未说明是否为新增病例。",
+        "update_id": "rt-c2411828a66a8a61",
+        "source_url": "",
+        "time": "2026-05-26T18:39:00.000Z"
+      }
+    ],
+    "rt-aca17af7a4692d72": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道涉及政治争议，未提供新增病例数字。",
+        "update_id": "rt-aca17af7a4692d72",
+        "source_url": "",
+        "time": "2026-05-26T17:43:00.000Z"
+      }
+    ],
+    "rt-83ae624682c54301": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名暴露者已出院，无新增病例。",
+        "update_id": "rt-83ae624682c54301",
+        "source_url": "",
+        "time": "2026-05-26T17:13:00.000Z"
+      }
+    ],
+    "rt-b576321041d96b2e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮需额外清洁，但未明确国家及新增病例。",
+        "update_id": "rt-b576321041d96b2e",
+        "source_url": "",
+        "time": "2026-05-26T16:27:19.000Z"
+      }
+    ],
+    "rt-677048ef655fb920": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道介绍非洲实验室工作，未提供新增病例数字。",
+        "update_id": "rt-677048ef655fb920",
+        "source_url": "",
+        "time": "2026-05-26T16:00:03.000Z"
+      }
+    ],
+    "rt-a322447df3b8494f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "CBS News报道美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例，新增1例确诊。",
+        "update_id": "rt-a322447df3b8494f",
+        "source_url": "",
+        "time": "2026-05-26T15:53:00.000Z"
+      }
+    ],
+    "rt-6656968ed4a03657": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "CityNews Montreal报道一名西班牙乘客从MV Hondius撤离后检测出汉坦病毒阳性，新增1例确诊。",
+        "update_id": "rt-6656968ed4a03657",
+        "source_url": "",
+        "time": "2026-05-26T14:40:00.000Z"
+      }
     ]
   }
 }

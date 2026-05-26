@@ -1,33 +1,33 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T15:19:52.429398+00:00",
-  "date": "2026-05-26",
+  "__generated_at": "2026-05-26T20:07:04.436443+00:00",
+  "date": "2026-05-27",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 8,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 13,
-  "whoDaysSinceOfficialUpdate": 13,
-  "cluesLast24h": 13,
-  "headline24h": "涉汉坦病毒致命疫情的邮轮需额外清洁。",
+  "daysSinceLastIntlAlert": 14,
+  "whoDaysSinceOfficialUpdate": 14,
+  "cluesLast24h": 14,
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "5月26日西班牙确认第二例邮轮汉坦病例；美国肯尼迪提供法律保护以开发疗法。",
-  "situation": "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；多国监测中，中国大陆无相关病例。",
-  "riskJudgment": "中国大陆无本土病例，HFRS基线正常；输入风险极低",
-  "newCases": "5月26日西班牙新增1例确诊（邮轮相关）；无其他官方新增。",
-  "sourceSummary": "WHO DON、西班牙政府、ArcGIS监测面板",
-  "shareLine": "WHO累计11例（5/13更新，至今13天）；其后西班牙、法国各新增1例确诊输入；中国大陆无相关病例，国内HFRS基线正常。",
+  "latestChange": "5月26日西班牙确认第二例邮轮汉坦病例；美国科罗拉多州一人检测阳性（待官方确认）。",
+  "situation": "MV Hondius 邮轮安第斯型聚集疫情 WHO 累计 11 例（5/13 更新，至今 14 天）；多国监测中，中国大陆无相关病例。",
+  "riskJudgment": "中国大陆无本土病例，HFRS 基线正常；输入风险极低",
+  "newCases": "5月26日西班牙新增1例确诊（邮轮相关）；美国科罗拉多州1例初筛阳性待确认。",
+  "sourceSummary": "WHO DON 5/13 更新；ArcGIS 仪表盘；Realtime LLM 新闻线索。",
+  "shareLine": "WHO 累计 11 例（5/13 更新，至今 14 天）；其后西班牙新增 1 例确诊，美国科罗拉多 1 例初筛阳性；中国大陆无相关病例，国内 HFRS 基线正常。",
   "watchFocus": [
     "西班牙新增确诊",
-    "邮轮接触者随访",
-    "国内HFRS基线"
+    "美国科罗拉多初筛",
+    "WHO 数据滞后"
   ],
   "evidence": [
-    "WHO DON 5月13日",
-    "西班牙政府5月26日",
-    "ArcGIS ANDV Dashboard"
+    "WHO DON 5/13",
+    "ArcGIS ANDV Dashboard",
+    "Realtime LLM Extractor"
   ],
   "_guardrail_warnings": [
     "brief contains \"400\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
@@ -36,6 +36,9 @@
     "brief contains \"24\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
-    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]"
+    "brief contains \"14\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
+    "brief contains \"14\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]"
   ]
 }
