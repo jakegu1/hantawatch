@@ -503,6 +503,132 @@
         "source_url": "",
         "time": "2026-05-25T18:27:52.000Z"
       }
+    ],
+    "rt-a4eb66ae1ead5aa9": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙公民从汉坦病毒感染的邮轮撤离后检测阳性，新增1例确诊病例。",
+        "update_id": "rt-a4eb66ae1ead5aa9",
+        "source_url": "",
+        "time": "2026-05-25T23:45:00Z"
+      }
+    ],
+    "rt-6b66896081b0228c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "科罗拉多州居民检测阳性，新增1例确诊病例。",
+        "update_id": "rt-6b66896081b0228c",
+        "source_url": "",
+        "time": "2026-05-25T23:30:00Z"
+      }
+    ],
+    "rt-e08f20a8540d85df": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "新华社报道西班牙隔离人员中新增1例汉坦病毒阳性。",
+        "update_id": "rt-e08f20a8540d85df",
+        "source_url": "",
+        "time": "2026-05-25T23:00:00Z"
+      }
+    ],
+    "rt-dd168a57e077e6b7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "low",
+        "reasoning_zh": "关于PREP法案的声明，未提及具体病例数字。",
+        "update_id": "rt-dd168a57e077e6b7",
+        "source_url": "",
+        "time": "2026-05-25T22:45:00Z"
+      }
+    ],
+    "rt-ac4c3547637d0ee1": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙报告与马德里医院相关的新增汉坦病毒病例。",
+        "update_id": "rt-ac4c3547637d0ee1",
+        "source_url": "",
+        "time": "2026-05-25T22:00:00Z"
+      }
+    ],
+    "rt-dbc60c68d7ee23d5": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "low",
+        "reasoning_zh": "标题仅提及邮轮病例，无新增数字。",
+        "update_id": "rt-dbc60c68d7ee23d5",
+        "source_url": "",
+        "time": "2026-05-25T21:30:00Z"
+      }
+    ],
+    "rt-6cfef922ec58ec9f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "low",
+        "reasoning_zh": "内容涉及埃博拉入境限制，与汉坦病毒无关。",
+        "update_id": "rt-6cfef922ec58ec9f",
+        "source_url": "",
+        "time": "2026-05-25T20:45:00Z"
+      }
+    ],
+    "rt-eab4d04e8849c294": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙确认马德里医院隔离人员中新增1例汉坦病毒病例。",
+        "update_id": "rt-eab4d04e8849c294",
+        "source_url": "",
+        "time": "2026-05-25T20:45:00Z"
+      }
+    ],
+    "rt-a82ef20dc57848e4": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-25",
+        "confidence": "high",
+        "reasoning_zh": "西班牙国民从汉坦病毒邮轮隔离后检测阳性，新增1例确诊病例。",
+        "update_id": "rt-a82ef20dc57848e4",
+        "source_url": "",
+        "time": "2026-05-25T20:30:00Z"
+      }
     ]
   }
 }
