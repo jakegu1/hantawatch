@@ -84,7 +84,7 @@ export function DailyBriefSection({ briefDate, hpiTotal, hpiGradeZh, hpiColor, c
           <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12rpx' }}>
             <Text style={{ fontSize: '18rpx', fontWeight: 600, color: '#6b7280', letterSpacing: '0.05em' }}>病例与监测动态</Text>
             <Text style={{ fontSize: '16rpx', color: '#9ca3af' }}>
-              安第斯确诊 {caseTableSummary.totalConfirmed} · 监测 {caseTableSummary.totalMonitoring} · 死亡 {caseTableSummary.totalDeaths}
+              安第斯累计 {caseTableSummary.totalAll} · 监测 {caseTableSummary.totalMonitoring} · 死亡 {caseTableSummary.totalDeaths}
             </Text>
           </View>
           {caseTable.slice(0, 7).map((row, i) => (

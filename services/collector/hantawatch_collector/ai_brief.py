@@ -287,6 +287,32 @@ def _validate_brief_against_structural(
     return warnings
 
 
+def _extract_ledger_check_integers(text: str) -> list[int]:
+    """Pull integers from brief copy for ledger validation, skipping dates and context noise."""
+    t = re.sub(
+        r"\d{1,3}(?:,\d{3})+",
+        lambda m: m.group(0).replace(",", ""),
+        text,
+    )
+    t = re.sub(r"\d{4}-\d{2}-\d{2}", " ", t)
+    t = re.sub(r"\d{1,2}/\d{1,2}", " ", t)
+    t = re.sub(r"\d+月\d+日", " ", t)
+    t = re.sub(r"\d{4}年", " ", t)
+    t = re.sub(
+        r"HPI\s*指数[^。；\n]{0,40}（当前\s*\d+）",
+        " ",
+        t,
+        flags=re.IGNORECASE,
+    )
+    t = re.sub(r"HPI\s*指数[^。；\n]{0,20}\d+", " ", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bHPI\s+\d+\b", " ", t, flags=re.IGNORECASE)
+    t = re.sub(r"（当前\s*\d+）", " ", t)
+    t = re.sub(r"\d+\s*天前", " ", t)
+    t = re.sub(r"距[^。；\n]{0,40}\d+\s*天", " ", t)
+    t = re.sub(r"近\s*\d+\s*(?:小时|h|H)\b", " ", t, flags=re.IGNORECASE)
+    return [int(m) for m in re.findall(r"\d+", t)]
+
+
 def _validate_brief_against_ledger(
     brief: dict[str, Any],
     outbreak_status: list[dict[str, Any]] | None,
@@ -324,13 +350,9 @@ def _validate_brief_against_ledger(
             "situation", "latestChange", "newCases",
         )
     )
-    text_without_dates = re.sub(r"\d+月\d+日", "", text)
-    text_without_dates = re.sub(r"\d+月", "", text_without_dates)
-    text_without_dates = re.sub(r"\d{4}年", "", text_without_dates)
 
     violations: list[str] = []
-    for num_str in re.findall(r"\d+", text_without_dates):
-        n = int(num_str)
+    for n in _extract_ledger_check_integers(text):
         if n not in allowed:
             violations.append(
                 f'brief contains "{n}" which is not in allowed set {sorted(allowed)}'
