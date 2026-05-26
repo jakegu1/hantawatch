@@ -81,3 +81,74 @@ def test_enhance_daily_brief_sends_full_outbreak_evidence_to_llm(
     assert es["iso2"] == "ES"
     assert len(es["evidence"]) == 3
     assert es["evidence"][1]["tier"] == "news"
+
+
+def test_who_lag_disclosure_prepends_when_above_7_days() -> None:
+    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
+
+    brief = {
+        "date": "2026-05-26",
+        "shareLine": "5月25日：西班牙、台湾省各新增1例。中国大陆无相关病例。",
+        "situation": "MV Hondius 累计11例，多国监测中。",
+    }
+    outbreak_status = [{
+        "totals": {"all": 11},
+        "lastUpdate": {"asOfDate": "2026-05-13"},
+    }]
+    out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
+    assert out["shareLine"].startswith("WHO 5/13 公布累计 11 例（13 天前）；")
+    assert out["situation"].startswith("WHO 5/13 公布累计 11 例（13 天前）；")
+    assert len(warnings) == 2
+
+
+def test_who_lag_disclosure_skipped_within_7_days() -> None:
+    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
+
+    brief = {
+        "date": "2026-05-20",
+        "shareLine": "5月19日：荷兰新增1例。",
+        "situation": "累计11例。",
+    }
+    outbreak_status = [{
+        "totals": {"all": 11},
+        "lastUpdate": {"asOfDate": "2026-05-15"},
+    }]
+    out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
+    assert out["shareLine"] == "5月19日：荷兰新增1例。"
+    assert warnings == []
+
+
+def test_who_lag_disclosure_idempotent_when_already_compliant() -> None:
+    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
+
+    brief = {
+        "date": "2026-05-26",
+        "shareLine": "WHO 5/13 公布累计 11 例（13 天前）；多国新增。",
+        "situation": "WHO 上次更新 13 天前；累计11例。",
+    }
+    outbreak_status = [{
+        "totals": {"all": 11},
+        "lastUpdate": {"asOfDate": "2026-05-13"},
+    }]
+    out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
+    assert out["shareLine"].count("WHO") == 1
+    assert out["situation"].count("WHO") == 1
+    assert warnings == []
+
+
+def test_who_lag_disclosure_uses_brief_date_not_system_today() -> None:
+    """Lag computed against brief.date (deterministic), not datetime.now()."""
+    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
+
+    brief = {
+        "date": "2030-01-01",
+        "shareLine": "测试。",
+        "situation": "测试。",
+    }
+    outbreak_status = [{
+        "totals": {"all": 5},
+        "lastUpdate": {"asOfDate": "2026-05-13"},
+    }]
+    out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
+    assert "WHO 5/13" in out["shareLine"]
+    assert "天前" in out["shareLine"]

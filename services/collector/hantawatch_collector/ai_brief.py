@@ -4,6 +4,7 @@ import json
 import logging
 import os
 import re
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -148,6 +149,67 @@ def _postprocess_brief_text(value: str) -> str:
         out = out.replace("确诊输入病例", "初筛阳性病例")
         out = out.replace("确诊病例", "初筛阳性病例")
     return out
+
+
+def _has_who_lag_indicator(text: str) -> bool:
+    """Already discloses WHO lag → don't double-prefix."""
+    if not isinstance(text, str) or "WHO" not in text:
+        return False
+    return bool(
+        re.search(r"WHO[^。\n]{0,30}天前", text)
+        or re.search(r"WHO[^。\n]{0,30}公布累计\s*\d+", text)
+        or re.search(r"WHO[^。\n]{0,30}上次.{0,5}更新", text)
+    )
+
+
+def _enforce_who_lag_disclosure(
+    brief: dict[str, Any],
+    outbreak_status: list[dict[str, Any]] | dict[str, Any] | None,
+) -> tuple[dict[str, Any], list[str]]:
+    """If WHO lastUpdate.asOfDate is > 7 days before brief.date,
+    prepend 'WHO {M}/{D} 公布累计 {N} 例（{lag} 天前）；' to shareLine
+    and situation when missing.
+
+    Idempotent: skips fields already containing the indicator.
+    """
+    obs = outbreak_status or []
+    if isinstance(obs, dict):
+        obs = obs.get("outbreaks") or []
+    if not obs:
+        return brief, []
+
+    o = obs[0]
+    last_update = o.get("lastUpdate") or {}
+    asof_str = (last_update.get("asOfDate") or "").strip()
+    brief_date_str = (brief.get("date") or "").strip()
+    if len(asof_str) < 10 or len(brief_date_str) < 10:
+        return brief, []
+
+    try:
+        asof_dt = date.fromisoformat(asof_str[:10])
+        brief_dt = date.fromisoformat(brief_date_str[:10])
+    except (ValueError, TypeError):
+        return brief, []
+
+    lag_days = (brief_dt - asof_dt).days
+    if lag_days <= 7:
+        return brief, []
+
+    totals_all = (o.get("totals") or {}).get("all") or 0
+    asof_short = f"{asof_dt.month}/{asof_dt.day}"
+    prefix = f"WHO {asof_short} 公布累计 {totals_all} 例（{lag_days} 天前）；"
+
+    out = dict(brief)
+    warnings: list[str] = []
+    for field in ("shareLine", "situation"):
+        text = out.get(field)
+        if not isinstance(text, str) or not text.strip():
+            continue
+        if _has_who_lag_indicator(text):
+            continue
+        out[field] = prefix + text
+        warnings.append(f"who_lag_disclosure: {field} prepended")
+    return out, warnings
 
 
 # Chinese country-name list for validation (must match ARCGIS_COUNTRY_MAP in TS)
@@ -368,6 +430,14 @@ def enhance_daily_brief(
 
     if isinstance(result.get("_guardrail_warnings"), list):
         enhanced["_guardrail_warnings"] = result["_guardrail_warnings"]
+
+    enhanced, lag_warnings = _enforce_who_lag_disclosure(enhanced, outbreak_status)
+    if lag_warnings:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(lag_warnings)
+        enhanced["_guardrail_warnings"] = merged
+        logger.info("brief who-lag enforcement: %s", "; ".join(lag_warnings))
 
     ledger_errors = _validate_brief_against_ledger(enhanced, outbreak_status, risk_snapshot)
     if ledger_errors:
