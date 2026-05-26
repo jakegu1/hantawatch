@@ -699,6 +699,20 @@
         "source_url": "",
         "time": "2026-05-25T18:28:56.000Z"
       }
+    ],
+    "rt-7256d41e4595a4dd": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "标题称病例升至13例，但未说明新增数量，故delta为0。来源为Health and Me，可信度低。",
+        "update_id": "rt-7256d41e4595a4dd",
+        "source_url": "",
+        "time": "2026-05-26T05:30:25.000Z"
+      }
     ]
   }
 }
