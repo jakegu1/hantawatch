@@ -8,8 +8,14 @@ from typing import Any
 import pytest
 
 from hantawatch_collector.ai_brief import (
+    SHARE_SITUATION_JACCARD_THRESHOLD,
     SYSTEM_PROMPT,
+    _build_situation_fallback,
+    _dedupe_share_situation,
+    _enforce_who_lag_disclosure,
     _has_who_lag_indicator,
+    _jaccard_char_bigrams,
+    _share_situation_overlap_score,
     _validate_brief_against_ledger,
     enhance_daily_brief,
 )
@@ -178,8 +184,7 @@ def test_validator_still_catches_real_violations() -> None:
 
 
 def test_who_lag_disclosure_prepends_when_above_7_days() -> None:
-    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
-
+    """P5.d: situation no longer auto-prefixed; dedup post-processor handles overlap."""
     brief = {
         "date": "2026-05-26",
         "shareLine": "5月25日：西班牙、台湾省各新增1例。中国大陆无相关病例。",
@@ -191,8 +196,8 @@ def test_who_lag_disclosure_prepends_when_above_7_days() -> None:
     }]
     out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
     assert out["shareLine"].startswith("WHO 5/13 公布累计 11 例（13 天前）；")
-    assert out["situation"].startswith("WHO 5/13 公布累计 11 例（13 天前）；")
-    assert len(warnings) == 2
+    assert out["situation"] == brief["situation"]
+    assert len(warnings) == 1
 
 
 def test_who_lag_disclosure_skipped_within_7_days() -> None:
@@ -213,8 +218,6 @@ def test_who_lag_disclosure_skipped_within_7_days() -> None:
 
 
 def test_who_lag_disclosure_idempotent_when_already_compliant() -> None:
-    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
-
     brief = {
         "date": "2026-05-26",
         "shareLine": "WHO 5/13 公布累计 11 例（13 天前）；多国新增。",
@@ -226,14 +229,186 @@ def test_who_lag_disclosure_idempotent_when_already_compliant() -> None:
     }]
     out, warnings = _enforce_who_lag_disclosure(brief, outbreak_status)
     assert out["shareLine"].count("WHO") == 1
-    assert out["situation"].count("WHO") == 1
+    assert "WHO" in out["situation"]
     assert warnings == []
+
+
+@pytest.mark.parametrize(
+    ("a", "b", "expected"),
+    [
+        ("", "abc", 0.0),
+        ("abc", "", 0.0),
+        ("a", "a", 0.0),
+        ("abcd", "abcd", 1.0),
+        ("abcd", "abce", 0.5),
+        ("abcd, ", "abcd", 1.0),
+        ("中国大陆", "中国大陆", 1.0),
+        ("中国大陆", "中国香港", 0.2),
+    ],
+)
+def test_jaccard_char_bigrams_basic(a: str, b: str, expected: float) -> None:
+    assert _jaccard_char_bigrams(a, b) == pytest.approx(expected, abs=0.01)
+
+
+def test_dedupe_share_situation_replaces_on_high_overlap() -> None:
+    brief = {
+        "date": "2026-05-26",
+        "shareLine": (
+            "WHO 5/13 公布累计 11 例（13 天前）；其后西班牙、法国各新增 1 例确诊输入，"
+            "待 WHO 复核；中国大陆无相关病例，国内 HFRS 基线正常。"
+        ),
+        "situation": (
+            "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；"
+            "多国监测中，中国大陆无相关病例。"
+        ),
+    }
+    outbreak_status = [{
+        "perCountry": [
+            {"iso2": "ES", "nameZh": "西班牙", "evidence": [{"tier": "news"}]},
+            {"iso2": "FR", "nameZh": "法国", "evidence": [{"tier": "official"}]},
+        ],
+    }]
+    out, warnings = _dedupe_share_situation(brief, outbreak_status)
+    assert out["situation"] != brief["situation"]
+    assert out["situation"].startswith("WHO 数据每")
+    assert "西班牙" in out["situation"]
+    assert "法国" not in out["situation"]
+    assert len(warnings) == 1
+    assert warnings[0].startswith("share_situation_overlap:")
+    jaccard = float(warnings[0].split("jaccard=")[1].rstrip(")"))
+    assert SHARE_SITUATION_JACCARD_THRESHOLD <= jaccard <= 1.0
+
+
+def test_dedupe_share_situation_passes_through_when_distinct() -> None:
+    brief = {
+        "shareLine": (
+            "WHO 5/13 公布累计 11 例（13 天前）；其后西班牙、法国各新增 1 例确诊输入，"
+            "待 WHO 复核；中国大陆无相关病例。"
+        ),
+        "situation": (
+            "WHO 数据每 1–2 周更新，期间由各国卫生部公告与 ArcGIS 监测补足，国内基线未变。"
+        ),
+    }
+    out, warnings = _dedupe_share_situation(brief, [])
+    assert out["situation"] == brief["situation"]
+    assert warnings == []
+
+
+def test_dedupe_share_situation_idempotent() -> None:
+    brief = {
+        "shareLine": (
+            "WHO 5/13 公布累计 11 例（13 天前）；其后西班牙、法国各新增 1 例确诊输入，"
+            "待 WHO 复核；中国大陆无相关病例，国内 HFRS 基线正常。"
+        ),
+        "situation": (
+            "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；"
+            "多国监测中，中国大陆无相关病例。"
+        ),
+    }
+    outbreak_status = [{
+        "perCountry": [
+            {"iso2": "ES", "nameZh": "西班牙", "evidence": [{"tier": "news"}]},
+        ],
+    }]
+    first, w1 = _dedupe_share_situation(brief, outbreak_status)
+    assert len(w1) == 1
+    second, w2 = _dedupe_share_situation(first, outbreak_status)
+    assert second == first
+    assert w2 == []
+
+
+@pytest.mark.parametrize(
+    "brief",
+    [
+        {"shareLine": "", "situation": "anything"},
+        {"shareLine": "anything", "situation": ""},
+        {"shareLine": "anything"},
+        {},
+    ],
+)
+def test_dedupe_handles_empty_or_missing_fields(brief: dict[str, Any]) -> None:
+    out, warnings = _dedupe_share_situation(brief, [])
+    assert out == brief
+    assert warnings == []
+
+
+def test_fallback_uses_news_tier_country_names() -> None:
+    outbreak_status = [{
+        "perCountry": [
+            {"iso2": "ES", "nameZh": "西班牙", "evidence": [{"tier": "news"}]},
+            {"iso2": "DE", "nameZh": "德国", "evidence": [{"tier": "news"}]},
+            {"iso2": "US", "nameZh": "美国", "evidence": [{"tier": "official"}]},
+        ],
+    }]
+    result = _build_situation_fallback(outbreak_status)
+    assert "西班牙" in result
+    assert "德国" in result
+    assert "美国" not in result
+    assert len(result) <= 75
+
+
+def test_fallback_handles_no_news_countries() -> None:
+    empty = _build_situation_fallback([{"perCountry": []}])
+    assert "近期暂无新增待复核" in empty
+    assert len(empty) <= 75
+    generic = _build_situation_fallback(None)
+    assert "WHO 数据每" in generic
+    assert len(generic) <= 75
+
+
+def test_enhance_daily_brief_emits_distinct_shareline_and_situation(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    redundant_situation = (
+        "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；"
+        "多国监测中，中国大陆无相关病例。"
+    )
+
+    def _fake_call_llm(*, messages, **_kwargs):
+        return {
+            "latestChange": "5月25日西班牙新增1例。",
+            "situation": redundant_situation,
+            "riskJudgment": "风险低。",
+            "newCases": "有新增。",
+            "sourceSummary": "WHO",
+            "shareLine": "其后西班牙、法国各新增1例确诊输入；中国大陆无相关病例。",
+            "watchFocus": ["a"],
+            "evidence": ["b"],
+        }
+
+    monkeypatch.setattr("hantawatch_collector.ai_brief._call_llm", _fake_call_llm)
+    monkeypatch.setattr(
+        "hantawatch_collector.ai_brief._validate_brief_against_ledger",
+        lambda *_a, **_k: [],
+    )
+    monkeypatch.setenv("LLM_API_KEY", "test-key")
+
+    outbreak_status = [{
+        "totals": {"all": 11, "confirmed": 8},
+        "lastUpdate": {"asOfDate": "2026-05-13"},
+        "perCountry": [
+            {"iso2": "ES", "nameZh": "西班牙", "evidence": [{"tier": "news"}]},
+        ],
+    }]
+    out = enhance_daily_brief(
+        {"date": "2026-05-26", "oneLine": "rule"},
+        risk_snapshot={"currentHpi": {"total": 24}},
+        recent_cases_intl=[],
+        outbreak_status=outbreak_status,
+    )
+    assert out["shareLine"].startswith("WHO 5/13 公布累计")
+    assert not out["situation"].startswith("WHO 5/13 公布累计")
+    assert out["situation"].startswith("WHO 数据每")
+    assert (
+        round(_share_situation_overlap_score(out["shareLine"], out["situation"]), 2)
+        < SHARE_SITUATION_JACCARD_THRESHOLD
+    )
+    guardrails = out.get("_guardrail_warnings") or []
+    assert any(str(w).startswith("share_situation_overlap:") for w in guardrails)
 
 
 def test_who_lag_disclosure_uses_brief_date_not_system_today() -> None:
     """Lag computed against brief.date (deterministic), not datetime.now()."""
-    from hantawatch_collector.ai_brief import _enforce_who_lag_disclosure
-
     brief = {
         "date": "2030-01-01",
         "shareLine": "测试。",
