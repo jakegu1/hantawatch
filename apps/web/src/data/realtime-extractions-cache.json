@@ -1189,6 +1189,160 @@
         "source_url": "",
         "time": "2026-05-26T23:28:12.000Z"
       }
+    ],
+    "rt-0a8859704764ba17": [
+      {
+        "iso2": "PL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称船长在波兰隔离，但未提供新增病例数字，无法提取增量。",
+        "update_id": "rt-0a8859704764ba17",
+        "source_url": "",
+        "time": "2026-05-27T06:36:00.000Z"
+      }
+    ],
+    "rt-cebf2b6cea649fdf": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "事实核查文章，未涉及具体国家或新增病例数字。",
+        "update_id": "rt-cebf2b6cea649fdf",
+        "source_url": "",
+        "time": "2026-05-27T06:15:00Z"
+      }
+    ],
+    "rt-d9ef448591d6f4ef": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称美国内布拉斯加和亚特兰大有隔离患者，但未提供新增数字。",
+        "update_id": "rt-d9ef448591d6f4ef",
+        "source_url": "",
+        "time": "2026-05-27T04:00:00Z"
+      }
+    ],
+    "rt-1af1e6d0f684ae21": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称皮特金县确认本地风险，但未提供新增病例数字。",
+        "update_id": "rt-1af1e6d0f684ae21",
+        "source_url": "",
+        "time": "2026-05-27T03:30:00Z"
+      }
+    ],
+    "rt-dc8c0988894de8f5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道涉及政策争议，未提供新增病例数字。",
+        "update_id": "rt-dc8c0988894de8f5",
+        "source_url": "",
+        "time": "2026-05-27T03:00:00Z"
+      }
+    ],
+    "rt-1a40cd8d65fe5ca2": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称英国公民在荷兰住院后返回英国，但未提供新增病例数字。",
+        "update_id": "rt-1a40cd8d65fe5ca2",
+        "source_url": "",
+        "time": "2026-05-27T01:30:00Z"
+      }
+    ],
+    "rt-1d01158e5d544769": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称三人从堪萨斯医院出院，但未提供新增病例数字。",
+        "update_id": "rt-1d01158e5d544769",
+        "source_url": "",
+        "time": "2026-05-27T01:00:00Z"
+      }
+    ],
+    "rt-5aab717d159aebdb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称科罗拉多州病例引发担忧，但未提供新增数字。",
+        "update_id": "rt-5aab717d159aebdb",
+        "source_url": "",
+        "time": "2026-05-27T01:00:00Z"
+      }
+    ],
+    "rt-71fe648af1f78a86": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及邮轮加强清洁，但未提供具体国家或病例数字。",
+        "update_id": "rt-71fe648af1f78a86",
+        "source_url": "",
+        "time": "2026-05-27T01:00:00Z"
+      }
+    ],
+    "rt-64163f801643e372": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "high",
+        "reasoning_zh": "西班牙官方确认第二例汉坦病毒病例，来自MV Hondius。",
+        "update_id": "rt-64163f801643e372",
+        "source_url": "",
+        "time": "2026-05-27T00:45:00Z"
+      }
+    ],
+    "rt-a55b6f58a25ae700": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "medium",
+        "reasoning_zh": "一名英国人在荷兰治疗后返回英国，但未说明新增病例数。",
+        "update_id": "rt-a55b6f58a25ae700",
+        "source_url": "",
+        "time": "2026-05-27T00:15:00Z"
+      }
     ]
   }
 }
