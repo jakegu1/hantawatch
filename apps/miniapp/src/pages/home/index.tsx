@@ -24,7 +24,8 @@ import type { ImportProximity } from '@/lib/nearest-cluster';
 import { fetchClusters, trackPageView } from '@/utils/api';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
-import { DailyBriefSection } from '@/components/daily-brief-section';
+import { RealtimeSituationSection } from '@/components/realtime-situation-section';
+import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { FeedLegend } from '@/components/feed-legend';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
@@ -402,15 +403,7 @@ export default function HomePage() {
 
       </View>
 
-      <DailyBriefSection
-        briefDate={todayBrief.date}
-        hpiTotal={hpi.total}
-        hpiGradeZh={hpi.gradeZh}
-        hpiColor={hpi.color}
-        content={briefContent}
-        highRiskDistanceText={highRiskDistanceText}
-        highRiskDistanceContext={highRiskDistanceContext}
-      />
+      <RealtimeSituationSection data={loadRealtimeSituation()} />
 
       {/* ============================================================ */}
       {/* SECTION 2 · 各血清型关注等级                                   */}
