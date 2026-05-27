@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T15:35:00.286257+00:00",
+  "__generated_at": "2026-05-27T16:33:52.108528+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T15:34:49.778044+00:00",
+  "last_fetched": "2026-05-27T16:33:50.851430+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -37,7 +37,7 @@
       "time": "2026-05-27T13:50:42.000Z",
       "title_en": "Hantavirus: Case count hits 13 as another MV Hondius passenger tests positive in Spain; situation stable, says WHO - Mint",
       "body_en": "Hantavirus: Case count hits 13 as another MV Hondius passenger tests positive in Spain; situation stable, says WHO Mint",
-      "summary_zh": "西班牙新增1例MV Hondius乘客确诊，病例总数达13例，WHO称情况稳定。",
+      "summary_zh": "西班牙新增1例MV Hondius乘客确诊，病例数达13例，WHO称情况稳定。",
       "key_facts_zh": [
         "西班牙",
         "新增1例",
@@ -47,26 +47,13 @@
     },
     {
       "id": "rt-5d0cdb189416250a",
-      "time": "2026-05-27T12:34:22.000Z",
+      "time": "2026-05-27T13:24:00.000Z",
       "title_en": "Hantavirus cases linked to cruise ship outbreak rise to 13 - politico.eu",
       "body_en": "Hantavirus cases linked to cruise ship outbreak rise to 13 politico.eu",
       "summary_zh": "与邮轮爆发相关的汉坦病毒病例升至13例。",
       "key_facts_zh": [
         "邮轮",
-        "13例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-eae1b88129a7d38d",
-      "time": "2026-05-27T11:26:56.000Z",
-      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says - NBC News",
-      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says NBC News Passenger Tests Positive For Hantavirus Weeks After Leaving Infected Cruise Ship (Latest Updates) Forbes Spanish national evacuated from hantavirus cruise ship tests positive Reuters",
-      "summary_zh": "西班牙新增1例邮轮相关汉坦病毒病例，总数达13例，WHO确认。",
-      "key_facts_zh": [
-        "西班牙",
-        "新增1例",
-        "WHO"
+        "病例13例"
       ],
       "signal_strength": "high"
     },
@@ -75,11 +62,24 @@
       "time": "2026-05-27T09:22:44.000Z",
       "title_en": "Hantavirus cases from cruise ship outbreak rise to 13 - Türkiye Today",
       "body_en": "Hantavirus cases from cruise ship outbreak rise to 13 Türkiye Today",
-      "summary_zh": "土耳其邮轮暴发汉坦病毒，病例升至13例。",
+      "summary_zh": "土耳其：邮轮汉坦病毒暴发病例升至13例。",
       "key_facts_zh": [
         "土耳其",
         "邮轮",
-        "新增13例"
+        "13例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-1af17f24ccace3ae",
+      "time": "2026-05-27T08:49:18.000Z",
+      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain: WHO - TRT World",
+      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain: WHO TRT World",
+      "summary_zh": "WHO：西班牙新增病例，邮轮汉坦病毒病例升至13例。",
+      "key_facts_zh": [
+        "WHO",
+        "西班牙",
+        "13例"
       ],
       "signal_strength": "high"
     },
@@ -91,7 +91,7 @@
       "summary_zh": "波兰：汉坦病毒邮轮船长在波兰隔离。",
       "key_facts_zh": [
         "波兰",
-        "邮轮",
+        "船长",
         "隔离"
       ],
       "signal_strength": "high"
@@ -101,24 +101,36 @@
       "time": "2026-05-27T04:38:01.000Z",
       "title_en": "Hantavirus Outbreak On Cruise Ship Triggers Intensive Cleaning Measures - NDTV",
       "body_en": "Hantavirus Outbreak On Cruise Ship Triggers Intensive Cleaning Measures NDTV",
-      "summary_zh": "邮轮暴发汉坦疫情，启动强化清洁措施。",
+      "summary_zh": "邮轮汉坦病毒暴发引发强化清洁措施。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦疫情",
-        "强化清洁"
+        "清洁措施"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7edbcf3a1465fc4b",
+      "time": "2026-05-27T00:46:23.000Z",
+      "title_en": "Kennedy offers legal shield to develop hantavirus treatment - Axios",
+      "body_en": "Kennedy offers legal shield to develop hantavirus treatment Axios",
+      "summary_zh": "美国肯尼迪提供法律保护以开发汉坦病毒疗法。",
+      "key_facts_zh": [
+        "美国",
+        "法律保护",
+        "治疗"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-3d889b087ef9e6c9",
       "time": "2026-05-27T00:34:41.000Z",
       "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
       "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
-      "summary_zh": "萨斯卡通研究人员对汉坦疫苗进行动物试验早期阶段。",
+      "summary_zh": "加拿大萨斯卡通研究人员对汉坦病毒疫苗进行动物测试。",
       "key_facts_zh": [
         "加拿大",
         "萨斯卡通",
-        "疫苗动物试验"
+        "动物测试"
       ],
       "signal_strength": "medium"
     },
@@ -127,11 +139,11 @@
       "time": "2026-05-26T23:30:00.000Z",
       "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak - AspenTimes.com",
       "body_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak AspenTimes.com",
-      "summary_zh": "皮特金县确认当地汉坦风险与邮轮毒株不同。",
+      "summary_zh": "美国皮特金县确认当地汉坦病毒株与邮轮疫情不同。",
       "key_facts_zh": [
         "美国",
         "皮特金县",
-        "毒株差异"
+        "病毒株不同"
       ],
       "signal_strength": "high"
     },
@@ -140,11 +152,11 @@
       "time": "2026-05-26T23:28:12.000Z",
       "title_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine - Yahoo News Canada",
       "body_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine Yahoo News Canada",
-      "summary_zh": "萨斯卡通研究人员进行汉坦疫苗动物试验早期阶段。",
+      "summary_zh": "加拿大萨斯卡通研究人员进行汉坦病毒疫苗动物测试。",
       "key_facts_zh": [
         "加拿大",
         "萨斯卡通",
-        "疫苗动物试验"
+        "动物测试"
       ],
       "signal_strength": "medium"
     },
@@ -153,11 +165,11 @@
       "time": "2026-05-26T22:40:00.000Z",
       "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
       "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
-      "summary_zh": "致命汉坦疫情邮轮需额外清洁。",
+      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "致命疫情",
-        "额外清洁"
+        "额外清洁",
+        "疫情"
       ],
       "signal_strength": "high"
     },
@@ -166,11 +178,11 @@
       "time": "2026-05-26T21:53:58.000Z",
       "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
       "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
-      "summary_zh": "在荷兰治疗的汉坦患者返回英国。",
+      "summary_zh": "一名英国人在荷兰治疗汉坦病毒后返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "患者返回"
+        "返回"
       ],
       "signal_strength": "high"
     },
@@ -179,11 +191,11 @@
       "time": "2026-05-26T21:45:00.000Z",
       "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
       "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
-      "summary_zh": "在荷兰治疗的汉坦患者返回英国。",
+      "summary_zh": "一名英国人在荷兰治疗汉坦病毒后返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "患者返回"
+        "返回"
       ],
       "signal_strength": "high"
     },
@@ -195,8 +207,8 @@
       "summary_zh": "美国堪萨斯城三人因汉坦病毒暴露后出院。",
       "key_facts_zh": [
         "美国",
-        "3人出院",
-        "汉坦病毒"
+        "汉坦病毒",
+        "出院"
       ],
       "signal_strength": "high"
     }
