@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-05-26T15:19:52.432703+00:00",
+  "__generated_at": "2026-05-27T05:10:20.553756+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -28,13 +28,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623117+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951519+00:00"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "nameZh": "西班牙",
           "status": "imports_confirmed",
           "confirmed": 1,
-          "monitoring": 0,
+          "monitoring": 1,
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
@@ -59,33 +59,9 @@
               "tier": "news",
               "url": "",
               "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-26T15:19:48.623178+00:00",
+              "retrievedAt": "2026-05-27T05:10:16.951581+00:00",
               "asOf": "2026-05-26",
               "reasoningZh": "西班牙政府确认新增1例汉坦病毒病例，与邮轮相关。"
-            },
-            {
-              "tier": "news",
-              "url": "",
-              "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-26T15:19:48.623178+00:00",
-              "asOf": "2026-05-26",
-              "reasoningZh": "西班牙乘客检测阳性，新增1例确诊病例。"
-            },
-            {
-              "tier": "news",
-              "url": "",
-              "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-26T15:19:48.623178+00:00",
-              "asOf": "2026-05-26",
-              "reasoningZh": "乘客在西班牙检测阳性，新增1例确诊病例。"
-            },
-            {
-              "tier": "news",
-              "url": "",
-              "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-26T15:19:48.623178+00:00",
-              "asOf": "2026-05-26",
-              "reasoningZh": "西班牙确认新增1例汉坦病毒病例，邮轮乘客在马德里隔离。"
             }
           ],
           "note": ""
@@ -119,13 +95,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623138+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951542+00:00"
             }
           ]
         },
@@ -138,13 +114,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623151+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951554+00:00"
             }
           ]
         },
@@ -197,13 +173,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623043+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951441+00:00"
             }
           ]
         },
@@ -216,13 +192,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623068+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951467+00:00"
             }
           ]
         },
@@ -235,13 +211,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623084+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951481+00:00"
             }
           ]
         },
@@ -254,13 +230,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623095+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951493+00:00"
             }
           ]
         },
@@ -273,13 +249,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623106+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951505+00:00"
             }
           ]
         },
@@ -292,13 +268,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623128+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951531+00:00"
             }
           ]
         },
@@ -311,13 +287,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623161+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951565+00:00"
             }
           ]
         },
@@ -330,13 +306,13 @@
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
-          "asOf": "2026-05-26",
+          "asOf": "2026-05-27",
           "evidence": [
             {
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-26T15:19:48.623172+00:00"
+              "retrievedAt": "2026-05-27T05:10:16.951575+00:00"
             }
           ]
         }
@@ -346,13 +322,13 @@
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-          "retrievedAt": "2026-05-26T15:19:25.945136+00:00",
+          "retrievedAt": "2026-05-27T05:10:00.357908+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-05-26T15:19:48.623251+00:00",
+        "generatedAt": "2026-05-27T05:10:16.951658+00:00",
         "contributors": [
           "who_don",
           "arcgis",

@@ -1,204 +1,202 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T15:34:27.457055+00:00",
+  "__generated_at": "2026-05-27T05:10:20.552410+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-26T15:34:26.108893+00:00",
+  "last_fetched": "2026-05-27T05:10:14.199720+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-3d889b087ef9e6c9",
+      "time": "2026-05-27T00:34:41.000Z",
+      "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
+      "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
+      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
+      "key_facts_zh": [
+        "加拿大",
+        "疫苗",
+        "动物试验"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-12ff637cf7940ec5",
+      "time": "2026-05-26T23:28:12.000Z",
+      "title_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine - Yahoo News Canada",
+      "body_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine Yahoo News Canada",
+      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
+      "key_facts_zh": [
+        "加拿大",
+        "疫苗",
+        "动物试验"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-32d05a6b256f1e45",
+      "time": "2026-05-26T22:40:00.000Z",
+      "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
+      "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
+      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
+      "key_facts_zh": [
+        "邮轮",
+        "额外清洁"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a2bfe1047f939e8d",
+      "time": "2026-05-26T21:53:58.000Z",
+      "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
+      "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
+      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
+      "key_facts_zh": [
+        "英国",
+        "荷兰",
+        "患者返回"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9ae924243155e680",
+      "time": "2026-05-26T21:51:00.000Z",
+      "title_en": "Three Kansans discharged after exposure to hantavirus patient who died - The Topeka Capital-Journal",
+      "body_en": "Three Kansans discharged after exposure to hantavirus patient who died The Topeka Capital-Journal",
+      "summary_zh": "美国堪萨斯州三名接触汉坦病毒死者的人员出院。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "三人出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e20e8f9b7e54d8a1",
+      "time": "2026-05-26T21:50:16.000Z",
+      "title_en": "After hantavirus exposure, three Kansans discharged from hospital - The Topeka Capital-Journal",
+      "body_en": "After hantavirus exposure, three Kansans discharged from hospital The Topeka Capital-Journal",
+      "summary_zh": "美国堪萨斯州三名汉坦病毒接触者出院。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "三人出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-155c27ba53813267",
+      "time": "2026-05-26T21:45:00.000Z",
+      "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
+      "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
+      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
+      "key_facts_zh": [
+        "英国",
+        "荷兰",
+        "患者返回"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-63cc3c4e36c8152a",
+      "time": "2026-05-26T21:21:00.000Z",
+      "title_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure - KCTV",
+      "body_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure KCTV",
+      "summary_zh": "美国堪萨斯州堪萨斯城三人接触汉坦病毒后出院。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "3人出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ce00b0f73a1d9fba",
+      "time": "2026-05-26T20:34:33.000Z",
+      "title_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus - Kansas Reflector",
+      "body_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus Kansas Reflector",
+      "summary_zh": "堪萨斯州立法领导人批准延长对三名接触汉坦病毒居民的监测。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "延长监测"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-01606514ff012fda",
+      "time": "2026-05-26T20:30:40.000Z",
+      "title_en": "3 Kansans with exposure to Andes hantavirus released from University of Kansas Health System - KSHB 41 Kansas City",
+      "body_en": "3 Kansans with exposure to Andes hantavirus released from University of Kansas Health System KSHB 41 Kansas City",
+      "summary_zh": "三名接触安第斯汉坦病毒的堪萨斯人从堪萨斯大学卫生系统出院。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "3人出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-1e699a8e5b001b96",
+      "time": "2026-05-26T19:37:00.000Z",
+      "title_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say - KMBC",
+      "body_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say KMBC",
+      "summary_zh": "美国堪萨斯大学医院释放3名汉坦病毒暴露者。",
+      "key_facts_zh": [
+        "美国",
+        "3人出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c2411828a66a8a61",
+      "time": "2026-05-26T18:39:00.000Z",
+      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - KUSA.com",
+      "body_en": "Latest headlines | Coloradan tests positive for hantavirus KUSA.com",
+      "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
+      "key_facts_zh": [
+        "美国",
+        "新增1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b576321041d96b2e",
+      "time": "2026-05-26T16:27:19.000Z",
+      "title_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning - Toronto Star",
+      "body_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning Toronto Star",
+      "summary_zh": "致命汉坦病毒暴发邮轮需额外清洁。",
+      "key_facts_zh": [
+        "邮轮",
+        "清洁"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-677048ef655fb920",
+      "time": "2026-05-26T16:00:03.000Z",
+      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - ThePrint",
+      "body_en": "Inside an African lab that helped crack the hantavirus outbreak ThePrint",
+      "summary_zh": "非洲实验室协助破解汉坦病毒暴发。",
+      "key_facts_zh": [
+        "非洲",
+        "实验室"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-0dee688f7191450f",
       "time": "2026-05-26T15:04:23.000Z",
       "title_en": "Spanish government confirms new case of hantavirus linked to cruise ship - Global News",
       "body_en": "Spanish government confirms new case of hantavirus linked to cruise ship Global News",
-      "summary_zh": "西班牙政府确认邮轮关联汉坦病毒新病例。",
+      "summary_zh": "西班牙政府确认邮轮相关汉坦病毒新病例。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "新增病例"
+        "新增1例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-dbf9e76d9999beec",
-      "time": "2026-05-26T15:02:10.000Z",
-      "title_en": "More People Being Monitored at Home for Potential Hantavirus Exposure - MedPage Today",
-      "body_en": "More People Being Monitored at Home for Potential Hantavirus Exposure MedPage Today",
-      "summary_zh": "更多人因潜在汉坦病毒暴露在家监测。",
-      "key_facts_zh": [
-        "监测中",
-        "暴露"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7612eec2a2a59dde",
-      "time": "2026-05-26T14:33:02.000Z",
-      "title_en": "Passenger Tests Positive For Hantavirus Weeks After Leaving Infected Cruise Ship (Latest Updates) - Forbes",
-      "body_en": "Passenger Tests Positive For Hantavirus Weeks After Leaving Infected Cruise Ship (Latest Updates) Forbes",
-      "summary_zh": "乘客离开感染邮轮数周后汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "邮轮",
-        "乘客确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c97d748a26e8fd5f",
-      "time": "2026-05-26T14:08:00.000Z",
-      "title_en": "Spanish passenger on MV Hondius tests positive for hantavirus after being evacuated from cruise ship - New York Post",
-      "body_en": "Spanish passenger on MV Hondius tests positive for hantavirus after being evacuated from cruise ship New York Post",
-      "summary_zh": "MV Hondius号西班牙乘客撤离后汉坦病毒阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7d88b58c838d344e",
-      "time": "2026-05-26T13:59:20.000Z",
-      "title_en": "Spanish passenger evacuated from MV Hondius tests positive for hantavirus - CityNews Calgary",
-      "body_en": "Spanish passenger evacuated from MV Hondius tests positive for hantavirus CityNews Calgary",
-      "summary_zh": "MV Hondius号西班牙乘客撤离后汉坦病毒阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-46bc85035f899e7e",
-      "time": "2026-05-26T10:53:16.000Z",
-      "title_en": "Passenger Evacuated from Hantavirus-Hit Cruise Ship Tests Positive for Disease in Spain - People.com",
-      "body_en": "Passenger Evacuated from Hantavirus-Hit Cruise Ship Tests Positive for Disease in Spain People.com",
-      "summary_zh": "西班牙一邮轮乘客确诊汉坦病毒。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-6f3828171765f1a1",
-      "time": "2026-05-26T09:43:36.000Z",
-      "title_en": "Spain confirms new hantavirus case among cruise ship passengers quarantining in Madrid - Sur in English",
-      "body_en": "Spain confirms new hantavirus case among cruise ship passengers quarantining in Madrid Sur in English",
-      "summary_zh": "西班牙确认邮轮隔离乘客新增汉坦病例。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "新增病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7edbcf3a1465fc4b",
-      "time": "2026-05-26T09:41:30.000Z",
-      "title_en": "Kennedy offers legal shield to develop hantavirus treatment - Axios",
-      "body_en": "Kennedy offers legal shield to develop hantavirus treatment Axios",
-      "summary_zh": "肯尼迪提供法律保护以研发汉坦治疗。",
-      "key_facts_zh": [
-        "肯尼迪",
-        "治疗研发"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0466c9456fc4ed45",
-      "time": "2026-05-26T07:54:00.000Z",
-      "title_en": "Second Spanish national confirmed to have contracted hantavirus onboard MV Hondius cruise ship - Olive Press News Spain",
-      "body_en": "Second Spanish national confirmed to have contracted hantavirus onboard MV Hondius cruise ship Olive Press News Spain",
-      "summary_zh": "西班牙确认第二名国民在邮轮感染汉坦。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "第二例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-2dd76a75a3b43548",
-      "time": "2026-05-26T07:39:35.000Z",
-      "title_en": "Spanish cruise ship passenger tests positive for hantavirus - DutchNews.nl",
-      "body_en": "Spanish cruise ship passenger tests positive for hantavirus DutchNews.nl",
-      "summary_zh": "西班牙邮轮乘客汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-49a9ecf5692aa9a4",
-      "time": "2026-05-26T06:38:42.000Z",
-      "title_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak - upi.com",
-      "body_en": "Spaniard tests positive for hantavirus in cruise-linked oubtreak upi.com",
-      "summary_zh": "西班牙人邮轮相关疫情中汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-24953dcc1fd9c803",
-      "time": "2026-05-26T06:29:29.000Z",
-      "title_en": "Spanish patient at Madrid hospital tests positive for hantavirus - The National",
-      "body_en": "Spanish patient at Madrid hospital tests positive for hantavirus The National",
-      "summary_zh": "西班牙马德里医院患者汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "西班牙",
-        "马德里",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7256d41e4595a4dd",
-      "time": "2026-05-26T05:30:25.000Z",
-      "title_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 - Health and Me",
-      "body_en": "Hantavirus: Quarantined Spanish National Tests Positive; Cases Rise To 13 Health and Me",
-      "summary_zh": "西班牙隔离者确诊汉坦病毒，病例升至13例。",
-      "key_facts_zh": [
-        "西班牙",
-        "隔离",
-        "病例13"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-427f7d368b3c0bde",
-      "time": "2026-05-26T04:58:53.000Z",
-      "title_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain - National Herald",
-      "body_en": "Second Hantavirus case detected among cruise passengers quarantined in Spain National Herald",
-      "summary_zh": "西班牙隔离邮轮乘客中检测出第二例汉坦病毒。",
-      "key_facts_zh": [
-        "西班牙",
-        "邮轮",
-        "第二例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-80ea0158524b86aa",
-      "time": "2026-05-26T03:20:01.000Z",
-      "title_en": "Acting NIAID chief steps down amid Ebola, hantavirus concerns - Medical Xpress",
-      "body_en": "Acting NIAID chief steps down amid Ebola, hantavirus concerns Medical Xpress",
-      "summary_zh": "美国NIAID代理主任因埃博拉和汉坦病毒疫情辞职。",
-      "key_facts_zh": [
-        "美国",
-        "NIAID",
-        "辞职"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }

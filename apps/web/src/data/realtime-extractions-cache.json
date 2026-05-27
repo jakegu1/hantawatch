@@ -881,6 +881,314 @@
         "source_url": "",
         "time": "2026-05-26T09:43:36.000Z"
       }
+    ],
+    "rt-d09344415adc093f": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称一名英国人在荷兰治疗后返回英国，但未提供新增病例数字。",
+        "update_id": "rt-d09344415adc093f",
+        "source_url": "",
+        "time": "2026-05-26T19:44:00.000Z"
+      }
+    ],
+    "rt-1e699a8e5b001b96": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名暴露者已解除观察，但未提及新增病例。",
+        "update_id": "rt-1e699a8e5b001b96",
+        "source_url": "",
+        "time": "2026-05-26T19:37:00.000Z"
+      }
+    ],
+    "rt-f4062d4c1088e070": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名在KU医院观察者已解除观察，无新增病例。",
+        "update_id": "rt-f4062d4c1088e070",
+        "source_url": "",
+        "time": "2026-05-26T19:13:32.000Z"
+      }
+    ],
+    "rt-c2411828a66a8a61": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称一名科罗拉多人检测阳性，但未说明是否为新增病例。",
+        "update_id": "rt-c2411828a66a8a61",
+        "source_url": "",
+        "time": "2026-05-26T18:39:00.000Z"
+      }
+    ],
+    "rt-aca17af7a4692d72": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道涉及政治争议，未提供新增病例数字。",
+        "update_id": "rt-aca17af7a4692d72",
+        "source_url": "",
+        "time": "2026-05-26T17:43:00.000Z"
+      }
+    ],
+    "rt-83ae624682c54301": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称3名暴露者已出院，无新增病例。",
+        "update_id": "rt-83ae624682c54301",
+        "source_url": "",
+        "time": "2026-05-26T17:13:00.000Z"
+      }
+    ],
+    "rt-b576321041d96b2e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮需额外清洁，但未明确国家及新增病例。",
+        "update_id": "rt-b576321041d96b2e",
+        "source_url": "",
+        "time": "2026-05-26T16:27:19.000Z"
+      }
+    ],
+    "rt-677048ef655fb920": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道介绍非洲实验室工作，未提供新增病例数字。",
+        "update_id": "rt-677048ef655fb920",
+        "source_url": "",
+        "time": "2026-05-26T16:00:03.000Z"
+      }
+    ],
+    "rt-a322447df3b8494f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "CBS News报道美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例，新增1例确诊。",
+        "update_id": "rt-a322447df3b8494f",
+        "source_url": "",
+        "time": "2026-05-26T15:53:00.000Z"
+      }
+    ],
+    "rt-6656968ed4a03657": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "CityNews Montreal报道一名西班牙乘客从MV Hondius撤离后检测出汉坦病毒阳性，新增1例确诊。",
+        "update_id": "rt-6656968ed4a03657",
+        "source_url": "",
+        "time": "2026-05-26T14:40:00.000Z"
+      }
+    ],
+    "rt-3d889b087ef9e6c9": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "加拿大萨斯卡通研究人员进行汉坦病毒疫苗动物试验，无新增病例报告。",
+        "update_id": "rt-3d889b087ef9e6c9",
+        "source_url": "",
+        "time": "2026-05-27T00:34:41.000Z"
+      }
+    ],
+    "rt-cbacdb8aa469e51b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "美国皮特金县确认当地汉坦病毒风险与邮轮爆发毒株不同，无新增病例。",
+        "update_id": "rt-cbacdb8aa469e51b",
+        "source_url": "",
+        "time": "2026-05-26T23:30:00.000Z"
+      }
+    ],
+    "rt-32d05a6b256f1e45": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "邮轮发生致命汉坦病毒爆发，需额外清洁，未明确国家。",
+        "update_id": "rt-32d05a6b256f1e45",
+        "source_url": "",
+        "time": "2026-05-26T22:40:00.000Z"
+      }
+    ],
+    "rt-a2bfe1047f939e8d": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "一名英国人在荷兰接受汉坦病毒治疗后返回英国，无新增病例数字。",
+        "update_id": "rt-a2bfe1047f939e8d",
+        "source_url": "",
+        "time": "2026-05-26T21:53:58.000Z"
+      }
+    ],
+    "rt-9ae924243155e680": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "三名堪萨斯人接触汉坦病毒死亡患者后出院，无新增病例。",
+        "update_id": "rt-9ae924243155e680",
+        "source_url": "",
+        "time": "2026-05-26T21:51:00.000Z"
+      }
+    ],
+    "rt-e20e8f9b7e54d8a1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "三名堪萨斯人接触汉坦病毒后出院，无新增病例。",
+        "update_id": "rt-e20e8f9b7e54d8a1",
+        "source_url": "",
+        "time": "2026-05-26T21:50:16.000Z"
+      }
+    ],
+    "rt-155c27ba53813267": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "一名英国人在荷兰接受汉坦病毒治疗后返回英国，无新增病例数字。",
+        "update_id": "rt-155c27ba53813267",
+        "source_url": "",
+        "time": "2026-05-26T21:45:00.000Z"
+      }
+    ],
+    "rt-69b44b0c5e6e20e7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "拉霍亚研究所研究免疫细胞如何对抗安第斯汉坦病毒，无新增病例。",
+        "update_id": "rt-69b44b0c5e6e20e7",
+        "source_url": "",
+        "time": "2026-05-26T21:22:24.000Z"
+      }
+    ],
+    "rt-63cc3c4e36c8152a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "美国堪萨斯州三人因汉坦病毒暴露住院后出院，无新增病例或死亡数字。",
+        "update_id": "rt-63cc3c4e36c8152a",
+        "source_url": "",
+        "time": "2026-05-26T21:21:00.000Z"
+      }
+    ],
+    "rt-ce00b0f73a1d9fba": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 3,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "美国堪萨斯州立法者批准对三名暴露居民延长监测，delta_monitoring为3。",
+        "update_id": "rt-ce00b0f73a1d9fba",
+        "source_url": "",
+        "time": "2026-05-26T20:34:33.000Z"
+      }
+    ],
+    "rt-01606514ff012fda": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "medium",
+        "reasoning_zh": "美国堪萨斯州三名暴露于安第斯汉坦病毒者出院，无新增病例或死亡。",
+        "update_id": "rt-01606514ff012fda",
+        "source_url": "",
+        "time": "2026-05-26T20:30:40.000Z"
+      }
+    ],
+    "rt-12ff637cf7940ec5": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "加拿大萨斯卡通研究人员对汉坦病毒疫苗进行动物试验早期阶段，未提及病例变化。",
+        "update_id": "rt-12ff637cf7940ec5",
+        "source_url": "",
+        "time": "2026-05-26T23:28:12.000Z"
+      }
     ]
   }
 }
