@@ -5,9 +5,11 @@
  * use "AI 翻译" wording only when referring to translation (disclaimer).
  */
 
+import { useState } from 'react';
 import type { RealtimeSituation } from '@/data/realtime-situation';
 import './realtime-situation-section.scss'
 import { View, Text } from '@tarojs/components';
+import { useDidShow } from '@tarojs/taro';
 
 const SITUATION_DISCLAIMER =
   '实时态势中部分事件来自各国 CDC 与 AI 翻译的海外新闻信号，未经 WHO 复核，仅作早期预警参考。';
@@ -43,13 +45,16 @@ function relativeFromIso(isoStr: string, now = new Date()): string {
   return `${t.getMonth() + 1}月${t.getDate()}日`;
 }
 
+/** Beijing wall-clock from ISO — timezone-invariant (same as web realtime-feed-section fmtTime). */
 function formatEventTime(isoStr: string) {
-  const t = new Date(isoStr);
-  const m = t.getMonth() + 1;
-  const d = t.getDate();
-  const hh = String(t.getHours()).padStart(2, '0');
-  const mm = String(t.getMinutes()).padStart(2, '0');
-  return { date: `${m}/${d}`, clock: `${hh}:${mm}` };
+  const d = new Date(isoStr);
+  if (Number.isNaN(d.getTime())) return { date: '--', clock: '--:--' };
+  const cn = new Date(d.getTime() + 8 * 3600_000);
+  const m = cn.getUTCMonth() + 1;
+  const day = cn.getUTCDate();
+  const hh = String(cn.getUTCHours()).padStart(2, '0');
+  const mm = String(cn.getUTCMinutes()).padStart(2, '0');
+  return { date: `${m}/${day}`, clock: `${hh}:${mm}` };
 }
 
 function kmToTier(km: number): 'primary' | 'secondary' | 'tertiary' | 'far' {
@@ -244,6 +249,9 @@ function EventsBlock({
 }
 
 export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) {
+  const [refreshKey, setRefreshKey] = useState(0);
+  useDidShow(() => setRefreshKey((k) => k + 1));
+
   const code = data.state.code as StateCode;
   const headline = data.headline;
   const domesticDetails =
@@ -268,7 +276,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
   return (
     <View style={{ padding: "0 24rpx", marginTop: "16rpx" }}>
-      <View className={stateCardClass(code)}>
+      <View className={stateCardClass(code)} key={refreshKey}>
         <View className="rs-live-strip">
           <Text className="rs-live-dot" />
           <Text>实时</Text>
