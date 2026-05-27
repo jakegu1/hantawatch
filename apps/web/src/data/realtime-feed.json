@@ -1,31 +1,56 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T19:15:49.869331+00:00",
+  "__generated_at": "2026-05-27T20:12:27.646798+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T19:15:47.917506+00:00",
+  "last_fetched": "2026-05-27T20:12:16.080962+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-116a4c2e68b91ea8",
-      "time": "2026-05-27T17:40:00.000Z",
-      "title_en": "MMG App Update: New Hantavirus Guidance for Seafarers | Gard - News and Statistics - IndexBox",
-      "body_en": "MMG App Update: New Hantavirus Guidance for Seafarers | Gard - News and Statistics IndexBox",
-      "summary_zh": "Gard发布针对海员的新汉坦病毒指南。",
+      "id": "rt-d3e3903e2a44243e",
+      "time": "2026-05-27T19:30:00Z",
+      "title_en": "Kansas legislative leaders approve extended monitoring of 3 exposed to hantavirus",
+      "summary_zh": "美国堪萨斯州议会批准对3名汉坦病毒暴露者延长监测。",
       "key_facts_zh": [
-        "海员",
-        "指南"
+        "美国",
+        "堪萨斯",
+        "监测中"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6168a5202bef1906",
+      "time": "2026-05-27T18:55:00.000Z",
+      "title_en": "Hantavirus outbreak linked to cruise ship grows to 13 cases - CIDRAP",
+      "body_en": "Hantavirus outbreak linked to cruise ship grows to 13 cases CIDRAP",
+      "summary_zh": "邮轮关联汉坦病毒疫情增至13例。",
+      "key_facts_zh": [
+        "邮轮",
+        "13例",
+        "美国"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-cfb7887c3138e53e",
+      "time": "2026-05-27T18:30:00Z",
+      "title_en": "Cruise Ship Hantavirus Outbreak Grows To 13 Cases As Spain Confirms Another Infected Passenger",
+      "summary_zh": "西班牙确认新增1例邮轮汉坦病毒病例，总数达13例。",
+      "key_facts_zh": [
+        "西班牙",
+        "新增1例",
+        "邮轮"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-2e30a6091215936c",
       "time": "2026-05-27T16:40:42.000Z",
       "title_en": "WHO Reports 13 Hantavirus Cases Tied to Cruise Ship Cluster - Morocco World News",
       "body_en": "WHO Reports 13 Hantavirus Cases Tied to Cruise Ship Cluster Morocco World News",
-      "summary_zh": "WHO报告13例汉坦病毒病例与邮轮聚集性疫情相关。",
+      "summary_zh": "WHO报告邮轮集群汉坦病毒病例达13例。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -34,15 +59,61 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-72dd4f26e901086e",
+      "time": "2026-05-27T16:15:00Z",
+      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain , WHO says",
+      "summary_zh": "WHO称西班牙邮轮疫情病例增至13例。",
+      "key_facts_zh": [
+        "WHO",
+        "西班牙",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-cce3a4839af87c3b",
+      "time": "2026-05-27T16:15:00Z",
+      "title_en": "Spain confirms 2nd Hantavirus case after cruise ship evacuation",
+      "summary_zh": "西班牙确认邮轮疏散后第2例汉坦病毒病例。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "新增1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-8d1af98c531fd0a5",
+      "time": "2026-05-27T15:30:00Z",
+      "title_en": "WHO Confirms 13th Hantavirus Case",
+      "summary_zh": "WHO确认第13例汉坦病毒病例。",
+      "key_facts_zh": [
+        "WHO",
+        "确诊13例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-50364f173a103fa7",
       "time": "2026-05-27T15:21:27.000Z",
       "title_en": "MV Hondius Cruise Ship Will Proceed with Next Voyage 34 Days After Hantavirus Outbreak Passengers Disembarked - People.com",
       "body_en": "MV Hondius Cruise Ship Will Proceed with Next Voyage 34 Days After Hantavirus Outbreak Passengers Disembarked People.com",
-      "summary_zh": "MV Hondius号邮轮在疫情暴发34天后将恢复航行。",
+      "summary_zh": "MV Hondius邮轮在疫情34天后将恢复航行。",
       "key_facts_zh": [
         "邮轮",
-        "复航",
-        "34天"
+        "恢复航行"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-17265db1be7f465a",
+      "time": "2026-05-27T14:15:00Z",
+      "title_en": "US Restricts Disease Experts from Communicating With WHO Amid Ebola Outbreak and Global Health , Reports Reveal",
+      "summary_zh": "美国限制疾病专家与WHO沟通。",
+      "key_facts_zh": [
+        "美国",
+        "WHO",
+        "限制沟通"
       ],
       "signal_strength": "high"
     },
@@ -54,162 +125,66 @@
       "summary_zh": "英国卫生官员监测汉坦病毒病例。",
       "key_facts_zh": [
         "英国",
-        "监测"
+        "监测中"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-6a97a23a2012d827",
       "time": "2026-05-27T13:50:42.000Z",
       "title_en": "Hantavirus: Case count hits 13 as another MV Hondius passenger tests positive in Spain; situation stable, says WHO - Mint",
       "body_en": "Hantavirus: Case count hits 13 as another MV Hondius passenger tests positive in Spain; situation stable, says WHO Mint",
-      "summary_zh": "西班牙新增1例MV Hondius乘客确诊，病例总数达13例，WHO称情况稳定。",
+      "summary_zh": "WHO称西班牙MV Hondius邮轮汉坦病毒病例增至13例，情况稳定。",
       "key_facts_zh": [
         "西班牙",
-        "新增1例",
-        "WHO"
+        "WHO",
+        "新增1例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-2a1e7638f5a6d826",
+      "time": "2026-05-27T13:30:00Z",
+      "title_en": "Traws Pharma Announces Antiviral Program Targeting Ongoing Hantavirus and Ebola Virus Disease Outbreaks",
+      "summary_zh": "Traws Pharma宣布针对汉坦病毒和埃博拉疫情的抗病毒项目。",
+      "key_facts_zh": [
+        "Traws Pharma",
+        "抗病毒项目"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-5d0cdb189416250a",
       "time": "2026-05-27T13:24:00.000Z",
       "title_en": "Hantavirus cases linked to cruise ship outbreak rise to 13 - politico.eu",
       "body_en": "Hantavirus cases linked to cruise ship outbreak rise to 13 politico.eu",
-      "summary_zh": "与邮轮暴发相关的汉坦病毒病例升至13例。",
+      "summary_zh": "与邮轮爆发相关的汉坦病毒病例升至13例。",
       "key_facts_zh": [
         "邮轮",
-        "13例"
+        "新增1例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-f9ac3b4962460389",
-      "time": "2026-05-27T10:56:40.000Z",
-      "title_en": "Fact check: Viral hantavirus map does not show confirmed cases - Euronews.com",
-      "body_en": "Fact check: Viral hantavirus map does not show confirmed cases Euronews.com",
-      "summary_zh": "欧洲新闻台辟谣：流传的汉坦病毒地图并非确诊病例。",
+      "id": "rt-1604b35c8931e3aa",
+      "time": "2026-05-27T12:45:00Z",
+      "title_en": "Hantavirus cruise outbreak rises with new case in Spain",
+      "summary_zh": "西班牙邮轮汉坦病毒爆发新增一例。",
       "key_facts_zh": [
-        "欧洲新闻台",
-        "辟谣",
-        "地图"
+        "西班牙",
+        "邮轮",
+        "新增1例"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
-      "id": "rt-44dab43454ef0140",
-      "time": "2026-05-27T10:38:58.000Z",
-      "title_en": "Lilly wheels and deals, Moderna gets boost on hantavirus scare, ASCO excitement builds - BioSpace",
-      "body_en": "Lilly wheels and deals, Moderna gets boost on hantavirus scare, ASCO excitement builds BioSpace",
-      "summary_zh": "Moderna 因汉坦病毒恐慌获提振，ASCO 期待升温。",
-      "key_facts_zh": [
-        "Moderna",
-        "汉坦病毒",
-        "股市"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-b85eabd73e47f9ed",
-      "time": "2026-05-27T08:12:45.000Z",
-      "title_en": "Repatriation flight video falsely shared as evidence of staged hantavirus crisis - AFP Fact Check",
-      "body_en": "Repatriation flight video falsely shared as evidence of staged hantavirus crisis AFP Fact Check",
-      "summary_zh": "法新社辟谣：撤侨视频被误传为汉坦病毒危机证据。",
-      "key_facts_zh": [
-        "法新社",
-        "辟谣",
-        "撤侨视频"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7998f3a510f6d41e",
-      "time": "2026-05-27T07:20:42.000Z",
-      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says - Reuters",
-      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says Reuters",
-      "summary_zh": "WHO 通报邮轮汉坦病毒疫情增至 13 例，西班牙新增 1 例。",
+      "id": "rt-12998a4080a6b02b",
+      "time": "2026-05-27T10:45:00Z",
+      "title_en": "Ebola outbreak spreading faster than can be controlled warns WHO",
+      "summary_zh": "WHO警告埃博拉疫情扩散速度超出控制能力。",
       "key_facts_zh": [
         "WHO",
-        "西班牙",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-3d889b087ef9e6c9",
-      "time": "2026-05-27T00:34:41.000Z",
-      "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
-      "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
-      "summary_zh": "萨斯卡通研究人员对汉坦病毒疫苗进行动物试验早期阶段。",
-      "key_facts_zh": [
-        "萨斯卡通",
-        "疫苗",
-        "动物试验"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-12ff637cf7940ec5",
-      "time": "2026-05-26T23:28:12.000Z",
-      "title_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine - Yahoo News Canada",
-      "body_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine Yahoo News Canada",
-      "summary_zh": "加拿大萨斯卡通研究人员对汉坦病毒疫苗进行动物测试早期阶段。",
-      "key_facts_zh": [
-        "加拿大",
-        "疫苗",
-        "动物测试"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7edbcf3a1465fc4b",
-      "time": "2026-05-26T23:20:06.000Z",
-      "title_en": "Kennedy offers legal shield to develop hantavirus treatment - Axios",
-      "body_en": "Kennedy offers legal shield to develop hantavirus treatment Axios",
-      "summary_zh": "美国肯尼迪提供法律保护以开发汉坦病毒治疗。",
-      "key_facts_zh": [
-        "美国",
-        "法律保护",
-        "治疗开发"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-4bd5b5e08fd56c58",
-      "time": "2026-05-26T22:40:00.000Z",
-      "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - KXII",
-      "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning KXII",
-      "summary_zh": "致命汉坦病毒爆发中心的邮轮需额外清洁。",
-      "key_facts_zh": [
-        "邮轮",
-        "额外清洁",
-        "爆发中心"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a2bfe1047f939e8d",
-      "time": "2026-05-26T21:53:58.000Z",
-      "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
-      "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
-      "summary_zh": "一名在荷兰治疗的英国人感染汉坦病毒后返回英国。",
-      "key_facts_zh": [
-        "英国",
-        "荷兰",
-        "返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-63cc3c4e36c8152a",
-      "time": "2026-05-26T21:21:00.000Z",
-      "title_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure - KCTV",
-      "body_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure KCTV",
-      "summary_zh": "美国堪萨斯城三人接触汉坦病毒后出院。",
-      "key_facts_zh": [
-        "美国",
-        "堪萨斯城",
-        "三人出院"
+        "埃博拉"
       ],
       "signal_strength": "high"
     }
