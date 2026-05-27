@@ -1,46 +1,87 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T07:11:13.242938+00:00",
+  "__generated_at": "2026-05-27T07:51:11.889573+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T07:10:56.746325+00:00",
+  "last_fetched": "2026-05-27T07:51:01.743513+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-3338a027169d4e0a",
+      "time": "2026-05-27T07:33:42.000Z",
+      "title_en": "Hantavirus cruise ship kept in Rotterdam for extra cleaning - DutchNews.nl",
+      "body_en": "Hantavirus cruise ship kept in Rotterdam for extra cleaning DutchNews.nl",
+      "summary_zh": "荷兰鹿特丹港汉坦病毒邮轮滞留进行额外清洁。",
+      "key_facts_zh": [
+        "荷兰",
+        "邮轮",
+        "清洁"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-041c121e6a68db6b",
+      "time": "2026-05-27T07:20:25.000Z",
+      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says - Internazionale",
+      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says Internazionale",
+      "summary_zh": "WHO称邮轮汉坦病毒疫情病例增至13例，西班牙新增1例。",
+      "key_facts_zh": [
+        "WHO",
+        "西班牙",
+        "新增 1 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-57fa1d115780f78f",
+      "time": "2026-05-27T06:45:00Z",
+      "title_en": "Deadly Hantavirus Reaches U . S . Soil : Quarantined Patients in Nebraska and Atlanta After Cruise Ship Outbreak Kills Three and Infects Dozens Worldwide",
+      "summary_zh": "致命汉坦病毒抵达美国，内布拉斯加和亚特兰大患者隔离，邮轮疫情致3死数十感染。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "3 死"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-0a8859704764ba17",
       "time": "2026-05-27T06:36:00.000Z",
       "title_en": "Captain of Hantavirus cruise horror quarantined in Poland - TVP World",
       "body_en": "Captain of Hantavirus cruise horror quarantined in Poland TVP World",
-      "summary_zh": "汉坦病毒邮轮疫情船长在波兰隔离。",
+      "summary_zh": "汉坦病毒邮轮船长在波兰隔离。",
       "key_facts_zh": [
         "波兰",
-        "邮轮",
+        "船长",
         "隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-cebf2b6cea649fdf",
-      "time": "2026-05-27T06:15:00Z",
-      "title_en": "Fact Check : WHO Never Linked Hantavirus to Child Vaccination",
-      "summary_zh": "事实核查：WHO 从未将汉坦病毒与儿童疫苗接种关联。",
+      "id": "rt-c40da5a61e83a9d9",
+      "time": "2026-05-27T06:33:12.000Z",
+      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - sightmagazine.com.au",
+      "body_en": "Inside an African lab that helped crack the hantavirus outbreak sightmagazine.com.au",
+      "summary_zh": "非洲实验室协助破解汉坦病毒疫情。",
       "key_facts_zh": [
-        "WHO",
-        "辟谣"
+        "非洲",
+        "实验室",
+        "破解"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-d9ef448591d6f4ef",
-      "time": "2026-05-27T04:00:00Z",
-      "title_en": "Deadly Hantavirus Reaches U . S . Soil : Quarantined Patients in Nebraska and Atlanta After Cruise Ship Outbreak Kills Three and Infects Dozens Worldwide",
-      "summary_zh": "致命汉坦病毒抵达美国，内布拉斯加和亚特兰大患者隔离，邮轮疫情致3死数十感染。",
+      "id": "rt-261d272c44521823",
+      "time": "2026-05-27T04:38:01.000Z",
+      "title_en": "Hantavirus Outbreak On Cruise Ship Triggers Intensive Cleaning Measures - NDTV",
+      "body_en": "Hantavirus Outbreak On Cruise Ship Triggers Intensive Cleaning Measures NDTV",
+      "summary_zh": "邮轮爆发汉坦病毒，触发强化清洁措施。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
-        "3死"
+        "爆发",
+        "清洁措施"
       ],
       "signal_strength": "high"
     },
@@ -48,23 +89,10 @@
       "id": "rt-1af1e6d0f684ae21",
       "time": "2026-05-27T03:30:00Z",
       "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak",
-      "summary_zh": "皮特金县确认当地汉坦病毒风险与邮轮疫情毒株不同。",
+      "summary_zh": "皮特金县确认本地汉坦病毒毒株与邮轮不同。",
       "key_facts_zh": [
-        "美国",
         "皮特金县",
         "毒株差异"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-dc8c0988894de8f5",
-      "time": "2026-05-27T03:00:00Z",
-      "title_en": "MAHA activists arent happy with RFK Jr ., and the fallout is over HHS Secretary decision on legal protections for hantavirus treatment drugmakers",
-      "summary_zh": "MAHA 活动人士不满 RFK Jr. 关于汉坦病毒治疗药物法律保护的决定。",
-      "key_facts_zh": [
-        "美国",
-        "RFK Jr.",
-        "法律保护"
       ],
       "signal_strength": "medium"
     },
@@ -72,11 +100,11 @@
       "id": "rt-1a40cd8d65fe5ca2",
       "time": "2026-05-27T01:30:00Z",
       "title_en": "Brit hospitalised with hantavirus in the Netherlands after cruise ship outbreak returns to united kingdom",
-      "summary_zh": "一名英国人在荷兰感染汉坦病毒住院，此前邮轮爆发疫情后返回英国。",
+      "summary_zh": "英国公民在荷兰感染汉坦病毒住院后返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "邮轮"
+        "住院"
       ],
       "signal_strength": "high"
     },
@@ -84,10 +112,9 @@
       "id": "rt-1d01158e5d544769",
       "time": "2026-05-27T01:00:00Z",
       "title_en": "Three people released from Kansas hospital after hantavirus exposure",
-      "summary_zh": "三名接触汉坦病毒的人员从堪萨斯医院出院。",
+      "summary_zh": "美国堪萨斯州三人因汉坦病毒暴露后出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯",
         "出院"
       ],
       "signal_strength": "high"
@@ -96,11 +123,11 @@
       "id": "rt-5aab717d159aebdb",
       "time": "2026-05-27T01:00:00Z",
       "title_en": "Hantavirus Cases In Colorado Have Health Officials Concerned",
-      "summary_zh": "科罗拉多州汉坦病毒病例引发卫生官员担忧。",
+      "summary_zh": "美国科罗拉多州汉坦病毒病例引发卫生官员担忧。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多",
-        "病例"
+        "病例",
+        "担忧"
       ],
       "signal_strength": "medium"
     },
@@ -108,7 +135,7 @@
       "id": "rt-71fe648af1f78a86",
       "time": "2026-05-27T01:00:00Z",
       "title_en": "Cruise ship at center of hantavirus outbreak to undergo extra cleaning",
-      "summary_zh": "爆发汉坦病毒的邮轮将接受额外清洁。",
+      "summary_zh": "汉坦病毒暴发中心的邮轮将进行额外清洁。",
       "key_facts_zh": [
         "邮轮",
         "清洁"
@@ -119,11 +146,11 @@
       "id": "rt-64163f801643e372",
       "time": "2026-05-27T00:45:00Z",
       "title_en": "Spain confirms second hantavirus case from MV Hondius",
-      "summary_zh": "西班牙确认来自MV Hondius邮轮的第二例汉坦病毒病例。",
+      "summary_zh": "西班牙确认来自MV Hondius的第二例汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
-        "邮轮",
-        "新增 1 例"
+        "第二例",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -132,38 +159,13 @@
       "time": "2026-05-27T00:34:41.000Z",
       "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
       "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
-      "summary_zh": "萨斯卡通研究人员对汉坦病毒疫苗进行动物试验早期阶段。",
+      "summary_zh": "加拿大萨斯卡通研究人员对汉坦病毒疫苗进行动物试验早期阶段。",
       "key_facts_zh": [
         "加拿大",
         "疫苗",
         "动物试验"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a55b6f58a25ae700",
-      "time": "2026-05-27T00:15:00Z",
-      "title_en": "Briton treated in Netherlands for hantavirus returns to united kingdom",
-      "summary_zh": "一名在荷兰接受治疗的英国汉坦病毒患者返回英国。",
-      "key_facts_zh": [
-        "英国",
-        "荷兰",
-        "汉坦病毒"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-cbacdb8aa469e51b",
-      "time": "2026-05-26T23:30:00.000Z",
-      "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak - AspenTimes.com",
-      "body_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak AspenTimes.com",
-      "summary_zh": "皮特金县确认当地汉坦病毒风险与邮轮爆发毒株不同。",
-      "key_facts_zh": [
-        "美国",
-        "皮特金县",
-        "汉坦病毒"
-      ],
-      "signal_strength": "high"
     }
   ]
 }

@@ -1343,6 +1343,76 @@
         "source_url": "",
         "time": "2026-05-27T00:15:00Z"
       }
+    ],
+    "rt-3338a027169d4e0a": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮在鹿特丹进行额外清洁，未提供新增病例数字。",
+        "update_id": "rt-3338a027169d4e0a",
+        "source_url": "",
+        "time": "2026-05-27T07:33:42.000Z"
+      }
+    ],
+    "rt-041c121e6a68db6b": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "high",
+        "reasoning_zh": "WHO报告西班牙新增1例，累计13例，来源权威。",
+        "update_id": "rt-041c121e6a68db6b",
+        "source_url": "",
+        "time": "2026-05-27T07:20:25.000Z"
+      }
+    ],
+    "rt-57fa1d115780f78f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "标题提及美国内布拉斯加和亚特兰大有隔离患者，但无具体新增数字。",
+        "update_id": "rt-57fa1d115780f78f",
+        "source_url": "",
+        "time": "2026-05-27T06:45:00Z"
+      }
+    ],
+    "rt-c40da5a61e83a9d9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及非洲实验室协助破解疫情，但未指定国家或提供病例数字。",
+        "update_id": "rt-c40da5a61e83a9d9",
+        "source_url": "",
+        "time": "2026-05-27T06:33:12.000Z"
+      }
+    ],
+    "rt-261d272c44521823": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮疫情触发清洁措施，无具体国家或新增数字。",
+        "update_id": "rt-261d272c44521823",
+        "source_url": "",
+        "time": "2026-05-27T04:38:01.000Z"
+      }
     ]
   }
 }
