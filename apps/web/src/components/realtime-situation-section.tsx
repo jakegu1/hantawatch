@@ -43,13 +43,16 @@ function relativeFromIso(isoStr: string, now = new Date()): string {
   return `${t.getMonth() + 1}月${t.getDate()}日`;
 }
 
+/** Beijing wall-clock from ISO — must match server and client (see realtime-feed-section fmtTime). */
 function formatEventTime(isoStr: string) {
-  const t = new Date(isoStr);
-  const m = t.getMonth() + 1;
-  const d = t.getDate();
-  const hh = String(t.getHours()).padStart(2, '0');
-  const mm = String(t.getMinutes()).padStart(2, '0');
-  return { date: `${m}/${d}`, clock: `${hh}:${mm}` };
+  const d = new Date(isoStr);
+  if (Number.isNaN(d.getTime())) return { date: '--', clock: '--:--' };
+  const cn = new Date(d.getTime() + 8 * 3600_000);
+  const m = cn.getUTCMonth() + 1;
+  const day = cn.getUTCDate();
+  const hh = String(cn.getUTCHours()).padStart(2, '0');
+  const mm = String(cn.getUTCMinutes()).padStart(2, '0');
+  return { date: `${m}/${day}`, clock: `${hh}:${mm}` };
 }
 
 function kmToTier(km: number): 'primary' | 'secondary' | 'tertiary' | 'far' {

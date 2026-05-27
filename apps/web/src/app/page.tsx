@@ -23,6 +23,7 @@ import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { loadRealtimeSituation } from '@/data/realtime-situation';
+import { useLiveRealtimeSituation } from '@/lib/use-realtime-situation';
 import { FeedLegend } from '@/components/feed-legend';
 import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
 import { SubscribeForm } from '@/components/subscribe-form';
@@ -89,6 +90,7 @@ export default function HomePage() {
   }, []);
 
   const liveRecentCases = useLiveRecentCases();
+  const liveSituation = useLiveRealtimeSituation(loadRealtimeSituation());
 
   // The hero now centres on the *nearest active Andes cluster*, not
   // "liveClusters[0]" (which is just whatever the collector happened to
@@ -327,7 +329,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <RealtimeSituationSection data={loadRealtimeSituation()} />
+      <RealtimeSituationSection data={liveSituation} />
 
       {/* ================================================================ */}
       {/* SECTION 2: Serotype status — ranked by concern level             */}
