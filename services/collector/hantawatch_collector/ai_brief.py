@@ -15,6 +15,11 @@ from .realtime_feed import DEFAULT_DEEPSEEK_BASE_URL, DEFAULT_LLM_MODEL, DEFAULT
 
 logger = logging.getLogger(__name__)
 
+SHARE_SITUATION_JACCARD_THRESHOLD: float = 0.55
+SHARE_SITUATION_NGRAM_SIZE: int = 2
+
+_JACCARD_STRIP_CHARS = "，。；：、（）()「」\"\"',.;:!?"
+
 SYSTEM_PROMPT = (
     "你是病毒观察的每日简报编辑。面向中国普通用户，用中文说明汉坦病毒态势。"
     "要求：准确、克制、不制造恐慌；优先官方通报，其次专业监测，再次新闻线索；"
@@ -36,25 +41,23 @@ SYSTEM_PROMPT = (
     "- 理性看待 / 理性应对\n"
     "- 请大家 / 广大群众 / 积极配合\n"
     "- 共同努力 / 携手抗疫\n\n"
-    "shareLine 应直接陈述：累计/新增/确诊/监测的具体数字 + 关键地点 + 中国大陆的状态。不超过 80 字。\n\n"
-    "合规 shareLine 范例：\n"
-    "「5月25日：MV Hondius 邮轮汉坦疫情累计 11 例（含台湾省 1 例监测）；"
-    "中国大陆境内无相关病例，国内 HFRS 基线正常。」\n\n"
     "【WHO 数据滞后表达规则】\n"
     "outbreaks[0].totals 来自 WHO DON，可能滞后于现实。判断滞后的依据："
     "outbreaks[0].lastUpdate.asOfDate 距 date 字段的天数。\n\n"
-    "规则 A（> 7 天滞后）：shareLine 和 situation 都必须明示"
-    "「WHO 上次官方更新 X 天前」。\n\n"
-    "规则 B（perCountry 含 evidence.tier == \"news\" 的条目）：必须在"
-    "shareLine 或 latestChange 中提到「其后 [国家] 卫生部/CDC 已报告新增 N"
-    "例，待 WHO 复核」，N 取 evidence 数组里来自 Realtime LLM Extractor"
-    "源的条目数。\n\n"
-    "规则 C（明确的事实声明）：避免「截至 5 月 25 日累计 11 例」这种把 WHO"
-    "数据假装成最新数据的表达。改用「WHO 公布累计 11 例（上次更新 5/13）」。\n\n"
-    "合规示例：\n"
-    "shareLine: WHO 累计 11 例（5/13 更新，至今 13 天）；其后西班牙卫生部、"
-    "台湾省 CDC、荷兰 RIVM 各新增 1 例，待 WHO 复核；中国大陆无相关病例，"
-    "国内 HFRS 基线正常。\n\n"
+    "规则 A（> 7 天滞后）：**shareLine** 必须明示「WHO M/D 公布累计 N 例（K 天前）」。"
+    "**situation** 不重复该数字短语；改为解释 WHO 数据为何滞后、近期由谁补足，"
+    "以及待 WHO 复核的事项。\n\n"
+    "规则 B（perCountry 含 evidence.tier == \"news\" 的条目）：在 **shareLine** 中"
+    "追加「其后 [国家列表] 各新增 N 例，待 WHO 复核」，其中 N = evidence 数组里来自 "
+    "Realtime LLM Extractor 源的条目数。**situation** 不重复这些国家的具体新增数，"
+    "可定性提到「待官方复核」。\n\n"
+    "规则 C：避免「截至 M 月 D 日累计 N 例」这种把 WHO 数据假装成最新数据的表达。"
+    "改用「WHO 公布累计 N 例（上次更新 M/D）」。\n\n"
+    "合规配对示例：\n"
+    "shareLine: WHO 5/13 公布累计 11 例（13 天前）；其后西班牙、法国各新增 1 例确诊输入，"
+    "待 WHO 复核；中国大陆无相关病例，国内 HFRS 基线正常。\n"
+    "situation: WHO 数据每 1–2 周更新，期间由各国卫生部公告与 ArcGIS 监测补足；"
+    "西班牙新增暂待 WHO 复核，多国维持监测，国内基线未变。\n\n"
     "【地理称谓合规要求（强制）】\n"
     "- 涉及台湾时一律使用「台湾省」，不得使用「台湾」独称（「台湾海峡」「台湾大学」等已成立的复合专有名词除外）\n"
     "- 当文本同时涉及中国大陆与台湾省/香港/澳门时，「中国」必须使用「中国大陆」\n"
@@ -66,15 +69,22 @@ USER_TEMPLATE = (
     "请基于以下结构化数据生成每日简报字段。返回 JSON："
     "{{\"latestChange\":\"≤65字，昨天/最新真正发生了什么。每条必须附日期（如 5月20日法国确诊），"
     "位置不明的信息注明国家或地区\","
-    "\"situation\":\"≤75字，当前总体情况\","
+    "\"situation\":\"≤75字，解释 WHO 数据滞后期间由谁补足、当前监测分布、待 WHO 复核的事项。"
+    "不得重复 shareLine 中的任何数字（累计/新增/天数等），改为定性描述。\","
     "\"riskJudgment\":\"≤65字，中国用户该如何理解当前风险\","
     "\"newCases\":\"≤40字，直接回答昨日/最新有没有新增病例或初筛阳性。附日期\","
     "\"sourceSummary\":\"≤32字，说明主要依据来自 WHO/官方/专业监测/新闻线索\","
     "\"watchFocus\":[\"关注点1≤12字\",\"关注点2≤12字\",\"关注点3≤12字\"],"
-    "\"shareLine\":\"≤80字，可直接复制或截图传播的一句话\","
+    "\"shareLine\":\"≤80字，承载本次简报的全部数字事实：WHO 累计 + 滞后天数 + 各国新增"
+    "（含「待 WHO 复核」标注）+ 中国大陆状态。可直接截图传播。\","
     "\"evidence\":[\"依据1≤18字\",\"依据2≤18字\",\"依据3≤18字\"]}}。\n\n"
     "合规表述示例：latestChange 写「5月25日台湾省新增1例监测；中国大陆无本土新增。」"
     "不要写「台湾新增」或「中国无新增」。\n\n"
+    "合规配对示例：\n"
+    "shareLine: WHO 5/13 公布累计 11 例（13 天前）；其后西班牙、法国各新增 1 例确诊输入，"
+    "待 WHO 复核；中国大陆无相关病例，国内 HFRS 基线正常。\n"
+    "situation: WHO 数据每 1–2 周更新，期间由各国卫生部公告与 ArcGIS 监测补足；"
+    "西班牙新增暂待 WHO 复核，多国维持监测，国内基线未变。\n\n"
     "数据：\n{payload}"
 )
 
@@ -168,15 +178,125 @@ def _has_who_lag_indicator(text: str) -> bool:
     return any(re.search(p, text) for p in lag_patterns)
 
 
+def _normalize_for_jaccard(text: str) -> str:
+    return "".join(
+        ch for ch in text
+        if not ch.isspace() and ch not in _JACCARD_STRIP_CHARS
+    )
+
+
+def _char_ngrams(text: str, n: int) -> set[str]:
+    if len(text) < n:
+        return set()
+    return {text[i : i + n] for i in range(len(text) - n + 1)}
+
+
+def _jaccard_char_bigrams(
+    a: str,
+    b: str,
+    n: int = SHARE_SITUATION_NGRAM_SIZE,
+) -> float:
+    """Whitespace- and ASCII-punctuation-stripped char n-gram Jaccard.
+
+    Returns 0.0 if either input is empty after normalization or shorter than n.
+    """
+    na = _normalize_for_jaccard(a)
+    nb = _normalize_for_jaccard(b)
+    if len(na) < n or len(nb) < n:
+        return 0.0
+    sa = _char_ngrams(na, n)
+    sb = _char_ngrams(nb, n)
+    if not sa or not sb:
+        return 0.0
+    union = sa | sb
+    if not union:
+        return 0.0
+    return len(sa & sb) / len(union)
+
+
+def _news_tier_country_names_zh(
+    outbreak_status: list[dict[str, Any]] | None,
+) -> list[str]:
+    if not outbreak_status or not isinstance(outbreak_status[0], dict):
+        return []
+    names: list[str] = []
+    for pc in outbreak_status[0].get("perCountry") or []:
+        if not isinstance(pc, dict):
+            continue
+        evidence = pc.get("evidence") or []
+        if not any(
+            isinstance(ev, dict) and ev.get("tier") == "news" for ev in evidence
+        ):
+            continue
+        name_zh = pc.get("nameZh")
+        if isinstance(name_zh, str) and name_zh.strip():
+            names.append(name_zh.strip())
+    return names
+
+
+def _build_situation_fallback(
+    outbreak_status: list[dict[str, Any]] | None,
+) -> str:
+    """Deterministic situation sentence when shareLine/situation overlap (P5.d)."""
+    if not outbreak_status or not isinstance(outbreak_status[0], dict):
+        return (
+            "WHO 数据每 1–2 周更新；当前依据各国卫生部公告与监测面板补足，国内基线未变。"
+        )
+    news_countries = _news_tier_country_names_zh(outbreak_status)
+    prefix = "WHO 数据每 1–2 周更新，期间由各国卫生部公告与监测面板补足；"
+    if news_countries:
+        mid = f"{'、'.join(news_countries)} 新增暂待 WHO 复核"
+    else:
+        mid = "近期暂无新增待复核"
+    return f"{prefix}{mid}，多国维持监测，国内基线未变。"
+
+
+def _share_situation_overlap_score(a: str, b: str) -> float:
+    """Max char n-gram Jaccard (n=1..SHARE_SITUATION_NGRAM_SIZE) for overlap detection."""
+    scores = [
+        _jaccard_char_bigrams(a, b, n)
+        for n in range(1, SHARE_SITUATION_NGRAM_SIZE + 1)
+    ]
+    return max(scores) if scores else 0.0
+
+
+def _dedupe_share_situation(
+    brief: dict[str, Any],
+    outbreak_status: list[dict[str, Any]] | None,
+) -> tuple[dict[str, Any], list[str]]:
+    """P5.d: shareLine carries digits; situation explains context without repeating them.
+
+    When char-bigram Jaccard between shareLine and situation meets
+    SHARE_SITUATION_JACCARD_THRESHOLD, replace situation with a ledger-derived fallback.
+    Idempotent: a deduped pair is not re-triggered.
+    """
+    share = brief.get("shareLine") or ""
+    sit = brief.get("situation") or ""
+    if not isinstance(share, str) or not isinstance(sit, str):
+        return brief, []
+    if not share.strip() or not sit.strip():
+        return brief, []
+
+    jaccard_raw = _share_situation_overlap_score(share, sit)
+    jaccard = round(jaccard_raw, 2)
+    if jaccard < SHARE_SITUATION_JACCARD_THRESHOLD:
+        return brief, []
+
+    out = dict(brief)
+    out["situation"] = _build_situation_fallback(outbreak_status)
+    warning = f"share_situation_overlap: replaced (jaccard={jaccard_raw:.2f})"
+    return out, [warning]
+
+
 def _enforce_who_lag_disclosure(
     brief: dict[str, Any],
     outbreak_status: list[dict[str, Any]] | dict[str, Any] | None,
 ) -> tuple[dict[str, Any], list[str]]:
     """If WHO lastUpdate.asOfDate is > 7 days before brief.date,
-    prepend 'WHO {M}/{D} 公布累计 {N} 例（{lag} 天前）；' to shareLine
-    and situation when missing.
+    prepend 'WHO {M}/{D} 公布累计 {N} 例（{lag} 天前）；' to shareLine when missing.
 
-    Idempotent: skips fields already containing the indicator.
+    situation is not auto-prefixed (P5.d); qualitative lag wording only.
+    Idempotent: skips shareLine already containing the indicator.
     """
     obs = outbreak_status or []
     if isinstance(obs, dict):
@@ -207,7 +327,7 @@ def _enforce_who_lag_disclosure(
 
     out = dict(brief)
     warnings: list[str] = []
-    for field in ("shareLine", "situation"):
+    for field in ("shareLine",):
         text = out.get(field)
         if not isinstance(text, str) or not text.strip():
             continue
@@ -466,6 +586,14 @@ def enhance_daily_brief(
         merged.extend(lag_warnings)
         enhanced["_guardrail_warnings"] = merged
         logger.info("brief who-lag enforcement: %s", "; ".join(lag_warnings))
+
+    enhanced, dedup_warnings = _dedupe_share_situation(enhanced, outbreak_status)
+    if dedup_warnings:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(dedup_warnings)
+        enhanced["_guardrail_warnings"] = merged
+        logger.info("brief share/situation dedup: %s", "; ".join(dedup_warnings))
 
     ledger_errors = _validate_brief_against_ledger(enhanced, outbreak_status, risk_snapshot)
     if ledger_errors:
