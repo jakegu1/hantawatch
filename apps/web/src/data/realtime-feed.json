@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T07:51:11.889573+00:00",
+  "__generated_at": "2026-05-27T07:58:15.762472+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T07:51:01.743513+00:00",
+  "last_fetched": "2026-05-27T07:58:14.516870+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -30,7 +30,7 @@
       "key_facts_zh": [
         "WHO",
         "西班牙",
-        "新增 1 例"
+        "新增1例"
       ],
       "signal_strength": "high"
     },
@@ -38,11 +38,11 @@
       "id": "rt-57fa1d115780f78f",
       "time": "2026-05-27T06:45:00Z",
       "title_en": "Deadly Hantavirus Reaches U . S . Soil : Quarantined Patients in Nebraska and Atlanta After Cruise Ship Outbreak Kills Three and Infects Dozens Worldwide",
-      "summary_zh": "致命汉坦病毒抵达美国，内布拉斯加和亚特兰大患者隔离，邮轮疫情致3死数十感染。",
+      "summary_zh": "致命汉坦病毒抵达美国，内布拉斯加和亚特兰大患者隔离。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "3 死"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -68,7 +68,7 @@
       "key_facts_zh": [
         "非洲",
         "实验室",
-        "破解"
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -89,10 +89,22 @@
       "id": "rt-1af1e6d0f684ae21",
       "time": "2026-05-27T03:30:00Z",
       "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak",
-      "summary_zh": "皮特金县确认本地汉坦病毒毒株与邮轮不同。",
+      "summary_zh": "PitCo 确认当地汉坦病毒毒株与邮轮不同。",
       "key_facts_zh": [
-        "皮特金县",
+        "PitCo",
         "毒株差异"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-dc8c0988894de8f5",
+      "time": "2026-05-27T03:00:00Z",
+      "title_en": "MAHA activists arent happy with RFK Jr ., and the fallout is over HHS Secretary decision on legal protections for hantavirus treatment drugmakers",
+      "summary_zh": "MAHA 活动人士不满 RFK Jr. 关于汉坦病毒药物法律保护决定。",
+      "key_facts_zh": [
+        "MAHA",
+        "RFK Jr.",
+        "法律保护"
       ],
       "signal_strength": "medium"
     },
@@ -100,7 +112,7 @@
       "id": "rt-1a40cd8d65fe5ca2",
       "time": "2026-05-27T01:30:00Z",
       "title_en": "Brit hospitalised with hantavirus in the Netherlands after cruise ship outbreak returns to united kingdom",
-      "summary_zh": "英国公民在荷兰感染汉坦病毒住院后返回英国。",
+      "summary_zh": "英国公民在荷兰感染汉坦病毒住院，邮轮爆发后返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
@@ -112,10 +124,11 @@
       "id": "rt-1d01158e5d544769",
       "time": "2026-05-27T01:00:00Z",
       "title_en": "Three people released from Kansas hospital after hantavirus exposure",
-      "summary_zh": "美国堪萨斯州三人因汉坦病毒暴露后出院。",
+      "summary_zh": "美国堪萨斯州3人因汉坦病毒暴露后出院。",
       "key_facts_zh": [
         "美国",
-        "出院"
+        "出院",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -126,8 +139,8 @@
       "summary_zh": "美国科罗拉多州汉坦病毒病例引发卫生官员担忧。",
       "key_facts_zh": [
         "美国",
-        "病例",
-        "担忧"
+        "科罗拉多",
+        "病例"
       ],
       "signal_strength": "medium"
     },
@@ -135,10 +148,11 @@
       "id": "rt-71fe648af1f78a86",
       "time": "2026-05-27T01:00:00Z",
       "title_en": "Cruise ship at center of hantavirus outbreak to undergo extra cleaning",
-      "summary_zh": "汉坦病毒暴发中心的邮轮将进行额外清洁。",
+      "summary_zh": "汉坦病毒暴发邮轮将接受额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "清洁"
+        "清洁",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -146,11 +160,11 @@
       "id": "rt-64163f801643e372",
       "time": "2026-05-27T00:45:00Z",
       "title_en": "Spain confirms second hantavirus case from MV Hondius",
-      "summary_zh": "西班牙确认来自MV Hondius的第二例汉坦病毒病例。",
+      "summary_zh": "西班牙确认MV Hondius邮轮第二例汉坦病毒病例。",
       "key_facts_zh": [
         "西班牙",
-        "第二例",
-        "邮轮"
+        "邮轮",
+        "新增1例"
       ],
       "signal_strength": "high"
     },
@@ -159,7 +173,7 @@
       "time": "2026-05-27T00:34:41.000Z",
       "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
       "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
-      "summary_zh": "加拿大萨斯卡通研究人员对汉坦病毒疫苗进行动物试验早期阶段。",
+      "summary_zh": "加拿大萨斯卡通研究人员进行汉坦病毒疫苗动物试验早期阶段。",
       "key_facts_zh": [
         "加拿大",
         "疫苗",
