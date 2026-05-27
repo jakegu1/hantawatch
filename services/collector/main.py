@@ -555,7 +555,6 @@ def main(argv: list[str] | None = None) -> int:
                 risk_snapshot=risk_snapshot,
                 realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
                 realtime_extracted=realtime_extracted,
-                recent_cases_intl=recent_intl,
                 meta=meta,
             )
         except Exception as e:
@@ -606,7 +605,6 @@ def main(argv: list[str] | None = None) -> int:
                 risk_snapshot=risk_snapshot,
                 realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
                 realtime_extracted=realtime_extracted,
-                recent_cases_intl=recent_intl,
                 meta=meta,
             )
         except Exception as e:

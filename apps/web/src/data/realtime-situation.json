@@ -32,37 +32,13 @@
       },
       {
         "km": 8400,
-        "countryZh": "荷兰",
-        "label": "已确诊 2 例",
-        "tier": "tertiary"
-      },
-      {
-        "km": 8400,
         "countryZh": "西班牙",
         "label": "已确诊 1 例",
         "tier": "tertiary"
       },
       {
         "km": 8400,
-        "countryZh": "南非",
-        "label": "已确诊 1 例",
-        "tier": "tertiary"
-      },
-      {
-        "km": 8400,
-        "countryZh": "瑞士",
-        "label": "已确诊 1 例",
-        "tier": "tertiary"
-      },
-      {
-        "km": 8400,
         "countryZh": "美国",
-        "label": "监测信号",
-        "tier": "tertiary"
-      },
-      {
-        "km": 8400,
-        "countryZh": "比利时",
         "label": "监测信号",
         "tier": "tertiary"
       }
@@ -80,9 +56,49 @@
       "source": "es_isciii"
     },
     {
-      "at": "2026-05-27T00:45:00Z",
+      "at": "2026-05-26T20:34:33Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 3,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T18:39:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T15:04:23Z",
       "kind": "detection",
       "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T23:45:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T23:30:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
       "delta": 1,
       "type": "confirmed",
       "shortContext": "新增确诊输入",
@@ -134,23 +150,11 @@
   },
   "confirmedCountries": [
     {
-      "zh": "荷兰",
-      "count": 2
-    },
-    {
       "zh": "西班牙",
       "count": 1
     },
     {
       "zh": "法国",
-      "count": 1
-    },
-    {
-      "zh": "南非",
-      "count": 1
-    },
-    {
-      "zh": "瑞士",
       "count": 1
     }
   ],
@@ -158,53 +162,25 @@
     {
       "zh": "美国",
       "count": 41
-    },
-    {
-      "zh": "英国",
-      "count": 28
-    },
-    {
-      "zh": "加拿大",
-      "count": 7
-    },
-    {
-      "zh": "德国",
-      "count": 4
-    },
-    {
-      "zh": "比利时",
-      "count": 2
-    },
-    {
-      "zh": "爱尔兰",
-      "count": 2
-    },
-    {
-      "zh": "土耳其",
-      "count": 2
-    },
-    {
-      "zh": "希腊",
-      "count": 1
     }
   ],
   "sources": [
     {
       "name": "WHO DON",
-      "updatedRel": "14 天前"
+      "updatedAt": "2026-05-13T12:00:00Z"
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedRel": "刚刚"
+      "updatedAt": "2026-05-13T12:00:00Z"
     },
     {
       "name": "ECDC Surveillance",
-      "updatedRel": "14 天前"
+      "updatedAt": "2026-05-13T12:00:00Z"
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedRel": "4 小时前"
+      "updatedAt": "2026-05-27T12:00:00Z"
     }
   ],
-  "realtimeUpdatedRel": "刚刚"
+  "realtimeUpdatedAt": "2026-05-27T07:19:01.368132+00:00"
 }

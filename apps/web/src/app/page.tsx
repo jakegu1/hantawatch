@@ -21,7 +21,8 @@ import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
-import { DailyBriefSection } from '@/components/daily-brief-section';
+import { RealtimeSituationSection } from '@/components/realtime-situation-section';
+import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { FeedLegend } from '@/components/feed-legend';
 import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
 import { SubscribeForm } from '@/components/subscribe-form';
@@ -326,15 +327,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <DailyBriefSection
-        briefDate={todayBrief.date}
-        hpiTotal={hpi.total}
-        hpiGradeZh={hpi.gradeZh}
-        hpiColor={hpi.color}
-        content={briefContent}
-        highRiskDistanceText={highRiskDistanceText}
-        highRiskDistanceContext={highRiskDistanceContext}
-      />
+      <RealtimeSituationSection data={loadRealtimeSituation()} />
 
       {/* ================================================================ */}
       {/* SECTION 2: Serotype status — ranked by concern level             */}

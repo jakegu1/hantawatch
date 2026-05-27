@@ -46,27 +46,6 @@ def _parse_iso_date(iso_date: str) -> date | None:
         return None
 
 
-def _relative_from_iso(iso_str: str | None, *, now: datetime) -> str:
-    dt = _parse_iso_datetime(iso_str or "")
-    if not dt:
-        return "未知"
-    diff = now - dt
-    if diff.total_seconds() < 0:
-        diff = -diff
-    minutes = int(diff.total_seconds() // 60)
-    if minutes < 5:
-        return "刚刚"
-    if minutes < 60:
-        return f"{minutes} 分钟前"
-    hours = minutes // 60
-    if hours < 24:
-        return f"{hours} 小时前"
-    days = hours // 24
-    if days < 30:
-        return f"{days} 天前"
-    return f"{dt.month}月{dt.day}日"
-
-
 def _km_to_tier(km: int) -> str:
     if km < 3000:
         return "primary"
@@ -459,6 +438,20 @@ def build_events(
 
     baselines = [e for e in events if e.get("kind") == "who_baseline"]
     detections = [e for e in events if e.get("kind") != "who_baseline"]
+
+    # Collapse duplicate news reports for the same country / day / signal type.
+    deduped: dict[tuple[Any, ...], dict[str, Any]] = {}
+    for e in detections:
+        if e.get("kind") != "detection":
+            continue
+        dt = _parse_iso_datetime(str(e.get("at") or ""))
+        day = dt.date().isoformat() if dt else ""
+        key = (e.get("countryZh"), day, e.get("type"))
+        prev = deduped.get(key)
+        if prev is None or _event_dt(e) > _event_dt(prev):
+            deduped[key] = e
+    detections = list(deduped.values())
+
     detections.sort(key=_event_dt, reverse=True)
     cap = max(0, MAX_EVENTS - len(baselines))
     detections = detections[:cap]
@@ -500,7 +493,6 @@ def build_realtime_situation(
     realtime_feed: dict[str, Any] | None,
     realtime_extracted: list[dict[str, Any]] | None,
     meta: dict[str, Any] | None,
-    recent_cases_intl: list[dict[str, Any]] | None,
     existing_situation: dict[str, Any] | None = None,
     today: date | None = None,
     now: datetime | None = None,
@@ -584,8 +576,7 @@ def build_realtime_situation(
     if outbreak_status and outbreak_status[0] and isinstance(outbreak_status[0].get("lastUpdate"), dict):
         who_asof = outbreak_status[0]["lastUpdate"].get("asOfDate")
     who_date = _parse_iso_date(who_asof) or today
-    who_days_ago = (today - who_date).days
-    who_updated_rel = "刚刚" if who_days_ago <= 0 else f"{who_days_ago} 天前"
+    who_updated_at = f"{who_date.isoformat()}T12:00:00Z"
 
     arcgis_updated_iso: str | None = None
     if outbreak_status and outbreak_status[0] and isinstance(outbreak_status[0].get("perCountry"), list):
@@ -601,26 +592,26 @@ def build_realtime_situation(
         if arcgis_times:
             arcgis_updated_iso = max(arcgis_times).isoformat()
 
-    arcgis_updated_rel = _relative_from_iso(arcgis_updated_iso, now=now) if arcgis_updated_iso else who_updated_rel
+    arcgis_updated_at = arcgis_updated_iso if arcgis_updated_iso else who_updated_at
 
-    # Detection source updated rel: use the newest event.
     newest_event_at: str | None = None
     if events:
         newest_event_at = str(events[0].get("at") or "")
-    realtime_updated_rel = _relative_from_iso(
-        (meta or {}).get("lastCollectedAt") if meta else None, now=now
-    )
-    if newest_event_at and (meta or {}).get("lastCollectedAt"):
-        realtime_updated_rel = _relative_from_iso((meta or {}).get("lastCollectedAt"), now=now)
+
+    collected_at = (meta or {}).get("lastCollectedAt") if meta else None
+    if isinstance(collected_at, str) and collected_at.strip():
+        realtime_updated_at = collected_at.strip()
+    else:
+        realtime_updated_at = now.isoformat()
 
     has_any_detection = any(e.get("kind") == "detection" for e in events)
     sources: list[dict[str, Any]] = [
-        {"name": "WHO DON", "updatedRel": who_updated_rel},
-        {"name": "ArcGIS ANDV", "updatedRel": arcgis_updated_rel},
-        {"name": "ECDC Surveillance", "updatedRel": who_updated_rel},
+        {"name": "WHO DON", "updatedAt": who_updated_at},
+        {"name": "ArcGIS ANDV", "updatedAt": arcgis_updated_at},
+        {"name": "ECDC Surveillance", "updatedAt": who_updated_at},
     ]
-    if has_any_detection:
-        sources.append({"name": "各国 CDC + 实时新闻", "updatedRel": _relative_from_iso(newest_event_at, now=now)})
+    if has_any_detection and newest_event_at:
+        sources.append({"name": "各国 CDC + 实时新闻", "updatedAt": newest_event_at})
 
     out: dict[str, Any] = {
         "state": state,
@@ -632,7 +623,7 @@ def build_realtime_situation(
         "confirmedCountries": confirmed_countries,
         "monitoringCountries": monitoring_countries,
         "sources": sources,
-        "realtimeUpdatedRel": realtime_updated_rel,
+        "realtimeUpdatedAt": realtime_updated_at,
     }
     if state_code == "calm" and days_without_any_news is not None:
         out["daysWithoutAnyNews"] = days_without_any_news
@@ -646,7 +637,6 @@ def build_and_write_realtime_situation(
     risk_snapshot: dict[str, Any],
     realtime_feed: dict[str, Any] | None,
     realtime_extracted: list[dict[str, Any]] | None,
-    recent_cases_intl: list[dict[str, Any]] | None,
     meta: dict[str, Any] | None,
 ) -> dict[str, Any]:
     """
@@ -660,7 +650,6 @@ def build_and_write_realtime_situation(
         realtime_feed=realtime_feed,
         realtime_extracted=realtime_extracted,
         meta=meta,
-        recent_cases_intl=recent_cases_intl,
         existing_situation=existing,
     )
     # Phase A contract: output must 1:1 match SAMPLE_DATA payload shape
