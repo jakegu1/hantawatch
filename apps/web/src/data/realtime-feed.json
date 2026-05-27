@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T04:01:10.959687+00:00",
+  "__generated_at": "2026-05-27T05:10:20.552410+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T04:01:09.745756+00:00",
+  "last_fetched": "2026-05-27T05:10:14.199720+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -22,15 +22,15 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-cbacdb8aa469e51b",
-      "time": "2026-05-26T23:30:00.000Z",
-      "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak - AspenTimes.com",
-      "body_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak AspenTimes.com",
-      "summary_zh": "美国皮特金县确认当地汉坦病毒毒株与邮轮疫情不同。",
+      "id": "rt-12ff637cf7940ec5",
+      "time": "2026-05-26T23:28:12.000Z",
+      "title_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine - Yahoo News Canada",
+      "body_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine Yahoo News Canada",
+      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
       "key_facts_zh": [
-        "美国",
-        "皮特金县",
-        "毒株差异"
+        "加拿大",
+        "疫苗",
+        "动物试验"
       ],
       "signal_strength": "medium"
     },
@@ -39,11 +39,10 @@
       "time": "2026-05-26T22:40:00.000Z",
       "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
       "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
-      "summary_zh": "致命汉坦病毒疫情中心邮轮需额外清洁。",
+      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "额外清洁",
-        "疫情中心"
+        "额外清洁"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +51,11 @@
       "time": "2026-05-26T21:53:58.000Z",
       "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
       "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
-      "summary_zh": "一名在荷兰治疗汉坦病毒的英国人返回英国。",
+      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "返回"
+        "患者返回"
       ],
       "signal_strength": "high"
     },
@@ -69,7 +68,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "出院"
+        "三人出院"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +77,11 @@
       "time": "2026-05-26T21:50:16.000Z",
       "title_en": "After hantavirus exposure, three Kansans discharged from hospital - The Topeka Capital-Journal",
       "body_en": "After hantavirus exposure, three Kansans discharged from hospital The Topeka Capital-Journal",
-      "summary_zh": "美国堪萨斯州三名汉坦病毒接触者已出院。",
+      "summary_zh": "美国堪萨斯州三名汉坦病毒接触者出院。",
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "出院"
+        "三人出院"
       ],
       "signal_strength": "high"
     },
@@ -91,26 +90,13 @@
       "time": "2026-05-26T21:45:00.000Z",
       "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
       "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
-      "summary_zh": "一名在荷兰治疗汉坦病毒的英国人返回英国。",
+      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "返回"
+        "患者返回"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-69b44b0c5e6e20e7",
-      "time": "2026-05-26T21:22:24.000Z",
-      "title_en": "How our immune cells combat Andes hantavirus - La Jolla Institute",
-      "body_en": "How our immune cells combat Andes hantavirus La Jolla Institute",
-      "summary_zh": "拉霍亚研究所研究免疫细胞如何对抗安第斯汉坦病毒。",
-      "key_facts_zh": [
-        "拉霍亚研究所",
-        "免疫细胞",
-        "安第斯汉坦病毒"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-63cc3c4e36c8152a",
@@ -120,7 +106,7 @@
       "summary_zh": "美国堪萨斯州堪萨斯城三人接触汉坦病毒后出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯城",
+        "堪萨斯",
         "3人出院"
       ],
       "signal_strength": "high"
@@ -130,10 +116,10 @@
       "time": "2026-05-26T20:34:33.000Z",
       "title_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus - Kansas Reflector",
       "body_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus Kansas Reflector",
-      "summary_zh": "堪萨斯州立法领袖批准延长对三名接触汉坦病毒居民的监测。",
+      "summary_zh": "堪萨斯州立法领导人批准延长对三名接触汉坦病毒居民的监测。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯州",
+        "堪萨斯",
         "延长监测"
       ],
       "signal_strength": "high"
@@ -156,24 +142,10 @@
       "time": "2026-05-26T19:37:00.000Z",
       "title_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say - KMBC",
       "body_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say KMBC",
-      "summary_zh": "美国堪萨斯大学医院3名汉坦病毒接触者已出院。",
+      "summary_zh": "美国堪萨斯大学医院释放3名汉坦病毒暴露者。",
       "key_facts_zh": [
         "美国",
-        "3人出院",
-        "堪萨斯大学医院"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f4062d4c1088e070",
-      "time": "2026-05-26T19:13:32.000Z",
-      "title_en": "Three people under observation at KU Hospital for hantavirus released - FOX4KC.com",
-      "body_en": "Three people under observation at KU Hospital for hantavirus released FOX4KC.com",
-      "summary_zh": "美国堪萨斯大学医院3名汉坦病毒观察者已解除隔离。",
-      "key_facts_zh": [
-        "美国",
-        "3人解除观察",
-        "堪萨斯大学医院"
+        "3人出院"
       ],
       "signal_strength": "high"
     },
@@ -185,23 +157,9 @@
       "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多",
         "新增1例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-aca17af7a4692d72",
-      "time": "2026-05-26T17:43:00.000Z",
-      "title_en": "Kennedy faces anti-vaccine anger over hantavirus treatment legal protections - The Hill",
-      "body_en": "Kennedy faces anti-vaccine anger over hantavirus treatment legal protections The Hill",
-      "summary_zh": "肯尼迪因汉坦病毒治疗法律保护面临反疫苗者愤怒。",
-      "key_facts_zh": [
-        "美国",
-        "肯尼迪",
-        "反疫苗争议"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-b576321041d96b2e",
@@ -211,8 +169,7 @@
       "summary_zh": "致命汉坦病毒暴发邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "暴发",
-        "额外清洁"
+        "清洁"
       ],
       "signal_strength": "high"
     },
@@ -224,10 +181,22 @@
       "summary_zh": "非洲实验室协助破解汉坦病毒暴发。",
       "key_facts_zh": [
         "非洲",
-        "实验室",
-        "协助破解"
+        "实验室"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-0dee688f7191450f",
+      "time": "2026-05-26T15:04:23.000Z",
+      "title_en": "Spanish government confirms new case of hantavirus linked to cruise ship - Global News",
+      "body_en": "Spanish government confirms new case of hantavirus linked to cruise ship Global News",
+      "summary_zh": "西班牙政府确认邮轮相关汉坦病毒新病例。",
+      "key_facts_zh": [
+        "西班牙",
+        "邮轮",
+        "新增1例"
+      ],
+      "signal_strength": "high"
     }
   ]
 }
