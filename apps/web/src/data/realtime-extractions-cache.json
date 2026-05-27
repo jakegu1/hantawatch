@@ -1455,6 +1455,90 @@
         "source_url": "",
         "time": "2026-05-26T21:56:01.000Z"
       }
+    ],
+    "rt-50364f173a103fa7": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮将恢复航行，未提供具体国家或病例变化数字。",
+        "update_id": "rt-50364f173a103fa7",
+        "source_url": "",
+        "time": "2026-05-27T15:21:27.000Z"
+      }
+    ],
+    "rt-ac08f3096f316af0": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提到英国监测汉坦病毒病例，但未给出具体新增数字。",
+        "update_id": "rt-ac08f3096f316af0",
+        "source_url": "",
+        "time": "2026-05-27T14:09:41.000Z"
+      }
+    ],
+    "rt-6a97a23a2012d827": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例，累计13例，情况稳定。",
+        "update_id": "rt-6a97a23a2012d827",
+        "source_url": "",
+        "time": "2026-05-27T13:50:42.000Z"
+      }
+    ],
+    "rt-5d0cdb189416250a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮相关病例升至13例，未明确国家或新增数字。",
+        "update_id": "rt-5d0cdb189416250a",
+        "source_url": "",
+        "time": "2026-05-27T12:34:22.000Z"
+      }
+    ],
+    "rt-eae1b88129a7d38d": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例，累计13例。",
+        "update_id": "rt-eae1b88129a7d38d",
+        "source_url": "",
+        "time": "2026-05-27T11:26:56.000Z"
+      }
+    ],
+    "rt-9be8adc8248fd1ea": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮病例升至13例，未提供国家或新增数字。",
+        "update_id": "rt-9be8adc8248fd1ea",
+        "source_url": "",
+        "time": "2026-05-27T09:22:44.000Z"
+      }
     ]
   }
 }
