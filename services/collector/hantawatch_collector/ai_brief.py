@@ -408,7 +408,26 @@ def _validate_brief_against_structural(
 
 
 def _extract_ledger_check_integers(text: str) -> list[int]:
-    """Pull integers from brief copy for ledger validation, skipping dates and context noise."""
+    """Pull integers from brief copy for ledger validation, skipping context noise.
+
+    Strips, in execution order:
+      1. 千分位分隔符（8,400 → 8400）
+      2. ISO 日期 2026-05-13
+      3. 斜杠日期 5/13
+      4. 中文日期 5月13日
+      5. 年份 2026年
+      6. HPI 括号严格形式（当前 N）
+      7. HPI 括号宽松后备（含“，一般关注”等尾巴）
+      8. 裸 HPI 数字 HPI N
+      9. 孤立括号 （当前 N）
+      10. 滞后后缀 N 天前
+      11. （本 PR 新增）滞后前缀 至今 N 天
+      12. 距离滞后从句 距 ... N 天
+      13. 近 N 小时窗口 近 24 小时 / 近 24h
+
+    原则：不要修改 `_validate_brief_against_ledger` 的 allowed set 逻辑；
+    仅通过“剥离不应被当作计数的上下文字段”来修正 false positives。
+    """
     t = re.sub(
         r"\d{1,3}(?:,\d{3})+",
         lambda m: m.group(0).replace(",", ""),
@@ -428,6 +447,7 @@ def _extract_ledger_check_integers(text: str) -> list[int]:
     t = re.sub(r"\bHPI\s+\d+\b", " ", t, flags=re.IGNORECASE)
     t = re.sub(r"（当前\s*\d+）", " ", t)
     t = re.sub(r"\d+\s*天前", " ", t)
+    t = re.sub(r"至今\s*\d+\s*天", " ", t)
     t = re.sub(r"距[^。；\n]{0,40}\d+\s*天", " ", t)
     t = re.sub(r"近\s*\d+\s*(?:小时|h|H)\b", " ", t, flags=re.IGNORECASE)
     return [int(m) for m in re.findall(r"\d+", t)]
