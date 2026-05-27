@@ -81,6 +81,7 @@ from hantawatch_collector.news_leads import fetch_news_leads
 from hantawatch_collector.official_sources import check_official_sources
 from hantawatch_collector.realtime_feed import build_realtime_feed
 from hantawatch_collector.surveillance_leads import fetch_surveillance_leads
+from hantawatch_collector.situation_builder import build_and_write_realtime_situation
 from hantawatch_collector.andv_dashboard import fetch_andv_data
 from hantawatch_collector.who_don import fetch_who_don_entries
 
@@ -454,6 +455,25 @@ def main(argv: list[str] | None = None) -> int:
             cache_path=out_dir / "realtime-extractions-cache.json",
         )
 
+    # Phase A (realtime-situation): when --no-network, realtime_extracted is
+    # empty because P3 is skipped. We still want to build the situation from
+    # cached structured deltas if available.
+    if not realtime_extracted:
+        cache_path = out_dir / "realtime-extractions-cache.json"
+        cache = read_json(cache_path, default=None)
+        if (
+            cache
+            and isinstance(cache, dict)
+            and isinstance(cache.get("entries"), dict)
+        ):
+            flattened: list[dict] = []
+            for _, rows in cache["entries"].items():
+                if isinstance(rows, list):
+                    for r in rows:
+                        if isinstance(r, dict):
+                            flattened.append(r)
+            realtime_extracted = flattened
+
     # ---- Build outbreak-status ledger (P1) ----
     outbreak_status = build_outbreak_status(
         active_clusters=clusters,
@@ -526,6 +546,20 @@ def main(argv: list[str] | None = None) -> int:
             logger.info("  %d realtime updates", len(realtime_feed.updates))
         if country_signals:
             logger.info("  %d country signals", len(country_signals["countries"]))
+        # Phase A acceptance expects this new JSON to be written even in
+        # --dry-run mode.
+        try:
+            build_and_write_realtime_situation(
+                out_dir=out_dir,
+                outbreak_status=outbreak_status,
+                risk_snapshot=risk_snapshot,
+                realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
+                realtime_extracted=realtime_extracted,
+                recent_cases_intl=recent_intl,
+                meta=meta,
+            )
+        except Exception as e:
+            logger.warning("realtime-situation: build failed in dry-run (%s)", e)
     else:
         write_all_outputs(
             out_dir,
@@ -562,6 +596,21 @@ def main(argv: list[str] | None = None) -> int:
                 "outbreaks": outbreak_status,
             },
         )
+
+        # Phase A: new structured data source for "实时态势" frontend.
+        # Must run after daily-brief.json write_all_outputs above.
+        try:
+            build_and_write_realtime_situation(
+                out_dir=out_dir,
+                outbreak_status=outbreak_status,
+                risk_snapshot=risk_snapshot,
+                realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
+                realtime_extracted=realtime_extracted,
+                recent_cases_intl=recent_intl,
+                meta=meta,
+            )
+        except Exception as e:
+            logger.warning("realtime-situation: build failed (%s)", e)
 
     compliance_rc = run_compliance_gate(out_dir, dry_run=args.dry_run)
     if compliance_rc != 0:
