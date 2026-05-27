@@ -1413,6 +1413,48 @@
         "source_url": "",
         "time": "2026-05-27T04:38:01.000Z"
       }
+    ],
+    "rt-ac3246002486cee0": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "medium",
+        "reasoning_zh": "WHO负责人称西班牙新增1例，累计13例。来源为Deccan Herald，可信媒体，有具体数字。",
+        "update_id": "rt-ac3246002486cee0",
+        "source_url": "",
+        "time": "2026-05-27T09:07:29.000Z"
+      }
+    ],
+    "rt-1d8ba03c7399b433": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道仅提及邮轮需额外清洁，无具体国家或新增病例数字。",
+        "update_id": "rt-1d8ba03c7399b433",
+        "source_url": "",
+        "time": "2026-05-26T22:40:00.000Z"
+      }
+    ],
+    "rt-35d170547de33ac4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-26",
+        "confidence": "low",
+        "reasoning_zh": "报道称疫情迫使乘客在圣赫勒拿岛下船，但未提及具体国家或新增病例。",
+        "update_id": "rt-35d170547de33ac4",
+        "source_url": "",
+        "time": "2026-05-26T21:56:01.000Z"
+      }
     ]
   }
 }
