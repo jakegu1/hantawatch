@@ -1,0 +1,386 @@
+{
+  "state": {
+    "code": "remote_watch",
+    "labelZh": "远端关注",
+    "icon": "🟡",
+    "since": "2026-05-27",
+    "daysAtState": 0
+  },
+  "headline": {
+    "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
+    "totalCases": 11,
+    "whoLastUpdateZh": "5/13",
+    "whoDaysAgo": 14,
+    "domesticStatus": "safe",
+    "nearestSignalKm": 8400,
+    "nearestSignalCountry": "法国"
+  },
+  "ruler": {
+    "maxKm": 20000,
+    "markers": [
+      {
+        "km": 16500,
+        "countryZh": "南美洲海域（始发乌斯怀亚）",
+        "label": "主线疫情",
+        "tier": "far"
+      },
+      {
+        "km": 8400,
+        "countryZh": "法国",
+        "label": "监测信号",
+        "tier": "tertiary"
+      },
+      {
+        "km": 8400,
+        "countryZh": "西班牙",
+        "label": "已确诊 1 例",
+        "tier": "tertiary"
+      },
+      {
+        "km": 8400,
+        "countryZh": "美国",
+        "label": "监测信号",
+        "tier": "tertiary"
+      }
+    ]
+  },
+  "events": [
+    {
+      "at": "2026-05-26T20:34:33Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 3,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T18:39:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T15:53:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T15:04:23Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T14:40:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T14:08:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "es_isciii"
+    },
+    {
+      "at": "2026-05-26T10:53:16Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T09:43:36Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T07:54:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T07:39:35Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T06:38:42Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T06:29:29Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T04:55:01Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T04:37:29Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T23:45:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T23:30:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T23:00:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T22:47:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T22:25:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T22:00:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T21:42:21Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T21:21:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T21:01:15Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T21:01:01Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T20:45:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T20:30:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T20:04:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-25T19:55:05Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO DON 最近一次公布（已 14 天无新事件）",
+      "source": "who_don"
+    }
+  ],
+  "daysWithoutNewConfirmed": 1,
+  "totals": {
+    "confirmed": 8,
+    "indeterminate": 3,
+    "deaths": 3
+  },
+  "confirmedCountries": [
+    {
+      "zh": "西班牙",
+      "count": 1
+    },
+    {
+      "zh": "法国",
+      "count": 1
+    }
+  ],
+  "monitoringCountries": [
+    {
+      "zh": "美国",
+      "count": 41
+    }
+  ],
+  "sources": [
+    {
+      "name": "WHO DON",
+      "updatedRel": "14 天前"
+    },
+    {
+      "name": "ArcGIS ANDV",
+      "updatedRel": "14 天前"
+    },
+    {
+      "name": "ECDC Surveillance",
+      "updatedRel": "14 天前"
+    },
+    {
+      "name": "各国 CDC + 实时新闻",
+      "updatedRel": "10 小时前"
+    }
+  ],
+  "realtimeUpdatedRel": "刚刚"
+}
