@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T03:31:33.326987+00:00",
+  "__generated_at": "2026-05-27T04:01:10.959687+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T03:31:17.996923+00:00",
+  "last_fetched": "2026-05-27T04:01:09.745756+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -29,8 +29,8 @@
       "summary_zh": "美国皮特金县确认当地汉坦病毒毒株与邮轮疫情不同。",
       "key_facts_zh": [
         "美国",
-        "毒株差异",
-        "邮轮疫情"
+        "皮特金县",
+        "毒株差异"
       ],
       "signal_strength": "medium"
     },
@@ -39,11 +39,11 @@
       "time": "2026-05-26T22:40:00.000Z",
       "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
       "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
-      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
+      "summary_zh": "致命汉坦病毒疫情中心邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
         "额外清洁",
-        "疫情"
+        "疫情中心"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +52,11 @@
       "time": "2026-05-26T21:53:58.000Z",
       "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
       "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
-      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
+      "summary_zh": "一名在荷兰治疗汉坦病毒的英国人返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "患者返回"
+        "返回"
       ],
       "signal_strength": "high"
     },
@@ -69,7 +69,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "接触者出院"
+        "出院"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +78,11 @@
       "time": "2026-05-26T21:50:16.000Z",
       "title_en": "After hantavirus exposure, three Kansans discharged from hospital - The Topeka Capital-Journal",
       "body_en": "After hantavirus exposure, three Kansans discharged from hospital The Topeka Capital-Journal",
-      "summary_zh": "美国堪萨斯州三名汉坦病毒接触者出院。",
+      "summary_zh": "美国堪萨斯州三名汉坦病毒接触者已出院。",
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "接触者出院"
+        "出院"
       ],
       "signal_strength": "high"
     },
@@ -91,11 +91,11 @@
       "time": "2026-05-26T21:45:00.000Z",
       "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
       "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
-      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
+      "summary_zh": "一名在荷兰治疗汉坦病毒的英国人返回英国。",
       "key_facts_zh": [
         "英国",
         "荷兰",
-        "患者返回"
+        "返回"
       ],
       "signal_strength": "high"
     },
@@ -107,7 +107,8 @@
       "summary_zh": "拉霍亚研究所研究免疫细胞如何对抗安第斯汉坦病毒。",
       "key_facts_zh": [
         "拉霍亚研究所",
-        "免疫研究"
+        "免疫细胞",
+        "安第斯汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -119,7 +120,7 @@
       "summary_zh": "美国堪萨斯州堪萨斯城三人接触汉坦病毒后出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯",
+        "堪萨斯城",
         "3人出院"
       ],
       "signal_strength": "high"
@@ -129,10 +130,10 @@
       "time": "2026-05-26T20:34:33.000Z",
       "title_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus - Kansas Reflector",
       "body_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus Kansas Reflector",
-      "summary_zh": "堪萨斯州立法领导人批准延长对三名接触汉坦病毒居民的监测。",
+      "summary_zh": "堪萨斯州立法领袖批准延长对三名接触汉坦病毒居民的监测。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯",
+        "堪萨斯州",
         "延长监测"
       ],
       "signal_strength": "high"
@@ -179,13 +180,13 @@
     {
       "id": "rt-c2411828a66a8a61",
       "time": "2026-05-26T18:39:00.000Z",
-      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - 9News.com",
-      "body_en": "Latest headlines | Coloradan tests positive for hantavirus 9News.com",
+      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - KUSA.com",
+      "body_en": "Latest headlines | Coloradan tests positive for hantavirus KUSA.com",
       "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
       "key_facts_zh": [
         "美国",
         "科罗拉多",
-        "确诊1例"
+        "新增1例"
       ],
       "signal_strength": "high"
     },
@@ -207,10 +208,10 @@
       "time": "2026-05-26T16:27:19.000Z",
       "title_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning - Toronto Star",
       "body_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning Toronto Star",
-      "summary_zh": "加拿大邮轮因汉坦病毒爆发需额外清洁。",
+      "summary_zh": "致命汉坦病毒暴发邮轮需额外清洁。",
       "key_facts_zh": [
-        "加拿大",
         "邮轮",
+        "暴发",
         "额外清洁"
       ],
       "signal_strength": "high"
@@ -220,11 +221,11 @@
       "time": "2026-05-26T16:00:03.000Z",
       "title_en": "Inside an African lab that helped crack the hantavirus outbreak - ThePrint",
       "body_en": "Inside an African lab that helped crack the hantavirus outbreak ThePrint",
-      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
+      "summary_zh": "非洲实验室协助破解汉坦病毒暴发。",
       "key_facts_zh": [
         "非洲",
         "实验室",
-        "病毒破解"
+        "协助破解"
       ],
       "signal_strength": "medium"
     }
