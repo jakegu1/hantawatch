@@ -1,19 +1,19 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-27T09:41:40.206331+00:00",
+  "__generated_at": "2026-05-27T12:14:58.499736+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-27T09:41:30.785427+00:00",
+  "last_fetched": "2026-05-27T12:14:57.352615+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-ac3246002486cee0",
-      "time": "2026-05-27T09:07:29.000Z",
-      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, says WHO chief - Deccan Herald",
-      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, says WHO chief Deccan Herald",
-      "summary_zh": "WHO 称西班牙邮轮疫情病例增至 13 例。",
+      "id": "rt-eae1b88129a7d38d",
+      "time": "2026-05-27T11:26:56.000Z",
+      "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says - NBC News",
+      "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says NBC News",
+      "summary_zh": "WHO 称西班牙邮轮汉坦病毒疫情病例升至13例。",
       "key_facts_zh": [
         "WHO",
         "西班牙",
@@ -22,15 +22,40 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-3338a027169d4e0a",
-      "time": "2026-05-27T07:33:42.000Z",
-      "title_en": "Hantavirus cruise ship kept in Rotterdam for extra cleaning - DutchNews.nl",
-      "body_en": "Hantavirus cruise ship kept in Rotterdam for extra cleaning DutchNews.nl",
-      "summary_zh": "荷兰鹿特丹邮轮因汉坦病毒滞留进行额外清洁。",
+      "id": "rt-44dab43454ef0140",
+      "time": "2026-05-27T10:38:58.000Z",
+      "title_en": "Lilly wheels and deals, Moderna gets boost on hantavirus scare, ASCO excitement builds - BioSpace",
+      "body_en": "Lilly wheels and deals, Moderna gets boost on hantavirus scare, ASCO excitement builds BioSpace",
+      "summary_zh": "Moderna 因汉坦病毒恐慌获提振，ASCO 临近。",
       "key_facts_zh": [
-        "荷兰",
-        "鹿特丹",
-        "邮轮"
+        "Moderna",
+        "汉坦病毒",
+        "股市"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-e4764e331a17f6ba",
+      "time": "2026-05-27T10:05:05.000Z",
+      "title_en": "WHO Says Hantavirus Cases Linked to Cruise Ship Rise to 13 - وكالة الأنباء القطرية",
+      "body_en": "WHO Says Hantavirus Cases Linked to Cruise Ship Rise to 13 وكالة الأنباء القطرية",
+      "summary_zh": "WHO 称邮轮汉坦病毒病例升至13例。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "13例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9be8adc8248fd1ea",
+      "time": "2026-05-27T09:22:44.000Z",
+      "title_en": "Hantavirus cases from cruise ship outbreak rise to 13 - Türkiye Today",
+      "body_en": "Hantavirus cases from cruise ship outbreak rise to 13 Türkiye Today",
+      "summary_zh": "邮轮汉坦病毒疫情病例升至13例。",
+      "key_facts_zh": [
+        "邮轮",
+        "13例"
       ],
       "signal_strength": "high"
     },
@@ -39,10 +64,10 @@
       "time": "2026-05-27T06:36:00.000Z",
       "title_en": "Captain of Hantavirus cruise horror quarantined in Poland - TVP World",
       "body_en": "Captain of Hantavirus cruise horror quarantined in Poland TVP World",
-      "summary_zh": "汉坦病毒邮轮船长在波兰隔离。",
+      "summary_zh": "汉坦病毒邮轮船长在波兰被隔离。",
       "key_facts_zh": [
         "波兰",
-        "船长",
+        "邮轮",
         "隔离"
       ],
       "signal_strength": "high"
@@ -56,7 +81,7 @@
       "key_facts_zh": [
         "非洲",
         "实验室",
-        "疫情"
+        "疫情破解"
       ],
       "signal_strength": "medium"
     },
@@ -68,6 +93,7 @@
       "summary_zh": "邮轮汉坦病毒疫情引发强化清洁措施。",
       "key_facts_zh": [
         "邮轮",
+        "疫情",
         "清洁措施"
       ],
       "signal_strength": "high"
@@ -77,11 +103,11 @@
       "time": "2026-05-27T00:34:41.000Z",
       "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
       "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
-      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
+      "summary_zh": "萨斯卡通研究人员进行汉坦病毒疫苗动物试验。",
       "key_facts_zh": [
         "加拿大",
-        "疫苗",
-        "动物试验"
+        "萨斯卡通",
+        "疫苗试验"
       ],
       "signal_strength": "medium"
     },
@@ -90,9 +116,10 @@
       "time": "2026-05-26T23:30:00.000Z",
       "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak - AspenTimes.com",
       "body_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak AspenTimes.com",
-      "summary_zh": "美国皮特金县确认当地汉坦病毒株与邮轮疫情不同。",
+      "summary_zh": "皮特金县确认本地汉坦病毒株与邮轮不同。",
       "key_facts_zh": [
         "美国",
+        "皮特金县",
         "病毒株差异"
       ],
       "signal_strength": "medium"
@@ -102,36 +129,24 @@
       "time": "2026-05-26T23:28:12.000Z",
       "title_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine - Yahoo News Canada",
       "body_en": "Saskatoon researchers in 'very early stages' of animal testing hantavirus vaccine Yahoo News Canada",
-      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
+      "summary_zh": "萨斯卡通研究人员进行汉坦病毒疫苗动物试验。",
       "key_facts_zh": [
         "加拿大",
-        "疫苗",
-        "动物试验"
+        "萨斯卡通",
+        "疫苗试验"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-1d8ba03c7399b433",
+      "id": "rt-32d05a6b256f1e45",
       "time": "2026-05-26T22:40:00.000Z",
-      "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - KGNS",
-      "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning KGNS",
-      "summary_zh": "致命汉坦病毒疫情中心邮轮需额外清洁。",
+      "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
+      "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
+      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "额外清洁"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-35d170547de33ac4",
-      "time": "2026-05-26T21:56:01.000Z",
-      "title_en": "Hantavirus outbreak forces cruise passengers to leave ship at St Helena - News On AIR",
-      "body_en": "Hantavirus outbreak forces cruise passengers to leave ship at St Helena News On AIR",
-      "summary_zh": "汉坦病毒疫情迫使邮轮乘客在圣赫勒拿岛下船。",
-      "key_facts_zh": [
-        "圣赫勒拿",
-        "邮轮",
-        "乘客下船"
+        "疫情",
+        "清洁"
       ],
       "signal_strength": "high"
     },
@@ -140,32 +155,6 @@
       "time": "2026-05-26T21:53:58.000Z",
       "title_en": "Briton treated in Netherlands for hantavirus returns to UK - lbc.co.uk",
       "body_en": "Briton treated in Netherlands for hantavirus returns to UK lbc.co.uk",
-      "summary_zh": "一名在荷兰治疗的英国汉坦病毒患者返回英国。",
-      "key_facts_zh": [
-        "英国",
-        "荷兰",
-        "患者返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-9ae924243155e680",
-      "time": "2026-05-26T21:51:00.000Z",
-      "title_en": "Three Kansans discharged after exposure to hantavirus patient who died - The Topeka Capital-Journal",
-      "body_en": "Three Kansans discharged after exposure to hantavirus patient who died The Topeka Capital-Journal",
-      "summary_zh": "三名接触过死亡汉坦病毒患者的堪萨斯人出院。",
-      "key_facts_zh": [
-        "美国",
-        "堪萨斯",
-        "接触者出院"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-155c27ba53813267",
-      "time": "2026-05-26T21:45:00.000Z",
-      "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
-      "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
       "summary_zh": "一名在荷兰接受汉坦病毒治疗的英国人返回英国。",
       "key_facts_zh": [
         "英国",
@@ -175,30 +164,56 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-69b44b0c5e6e20e7",
-      "time": "2026-05-26T21:22:24.000Z",
-      "title_en": "How our immune cells combat Andes hantavirus - La Jolla Institute",
-      "body_en": "How our immune cells combat Andes hantavirus La Jolla Institute",
-      "summary_zh": "拉霍亚研究所研究免疫细胞如何对抗安第斯汉坦病毒。",
+      "id": "rt-9ae924243155e680",
+      "time": "2026-05-26T21:51:00.000Z",
+      "title_en": "Three Kansans discharged after exposure to hantavirus patient who died - The Topeka Capital-Journal",
+      "body_en": "Three Kansans discharged after exposure to hantavirus patient who died The Topeka Capital-Journal",
+      "summary_zh": "三名接触汉坦病毒患者的堪萨斯居民出院，患者已死亡。",
       "key_facts_zh": [
         "美国",
-        "研究",
-        "免疫细胞"
+        "堪萨斯",
+        "出院"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-155c27ba53813267",
+      "time": "2026-05-26T21:45:00.000Z",
+      "title_en": "Briton treated for Hantavirus in Netherlands returns to UK - The Independent",
+      "body_en": "Briton treated for Hantavirus in Netherlands returns to UK The Independent",
+      "summary_zh": "一名在荷兰治疗汉坦病毒的英国人返回英国。",
+      "key_facts_zh": [
+        "英国",
+        "荷兰",
+        "返回"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-63cc3c4e36c8152a",
       "time": "2026-05-26T21:21:00.000Z",
       "title_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure - KCTV",
       "body_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure KCTV",
-      "summary_zh": "美国堪萨斯城三人接触汉坦病毒后出院。",
+      "summary_zh": "三名接触汉坦病毒的人员从堪萨斯城医院出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯",
-        "3人出院"
+        "堪萨斯城",
+        "出院"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-ad6d83b8c8090c20",
+      "time": "2026-05-26T20:48:06.000Z",
+      "title_en": "The MV Hondius Hantavirus Outbreak—Lessons for Pandemic Preparedness - Florida Hospital News and Healthcare Report",
+      "body_en": "The MV Hondius Hantavirus Outbreak—Lessons for Pandemic Preparedness Florida Hospital News and Healthcare Report",
+      "summary_zh": "MV Hondius 号汉坦病毒疫情为疫情防范提供教训。",
+      "key_facts_zh": [
+        "MV Hondius",
+        "疫情",
+        "教训"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-ce00b0f73a1d9fba",
@@ -209,20 +224,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "延长监测"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c2411828a66a8a61",
-      "time": "2026-05-26T18:39:00.000Z",
-      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - KUSA.com",
-      "body_en": "Latest headlines | Coloradan tests positive for hantavirus KUSA.com",
-      "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
-      "key_facts_zh": [
-        "美国",
-        "科罗拉多",
-        "确诊"
+        "监测"
       ],
       "signal_strength": "high"
     }
