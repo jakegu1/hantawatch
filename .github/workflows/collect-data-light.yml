@@ -76,5 +76,33 @@ jobs:
             echo "No light-feed changes."
             exit 0
           fi
-          git commit -m "chore(data): light feeds update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push || (git fetch origin main && git rebase origin/main && git push)
+          COMMIT_MSG="chore(data): light feeds update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          LIGHT_PATHS=(
+            apps/web/src/data/recent-cases-intl.json
+            apps/web/src/data/realtime-feed.json
+            apps/web/src/data/country-signals.json
+            apps/web/src/data/meta.json
+            apps/web/src/data/daily-brief.json
+            apps/web/src/data/arcgis-andv-tracking.json
+          )
+          git commit -m "$COMMIT_MSG"
+
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "::warning title=Push race::Attempt $attempt failed. Replaying light-feed files on latest main."
+            git fetch origin main
+            BOT_TREE=$(git rev-parse 'HEAD^{tree}')
+            git reset --hard origin/main
+            git checkout "$BOT_TREE" -- "${LIGHT_PATHS[@]}"
+            git add "${LIGHT_PATHS[@]}"
+            if git diff --cached --quiet; then
+              echo "Light feeds match origin/main after replay; nothing to push."
+              exit 0
+            fi
+            git commit -m "$COMMIT_MSG"
+          done
+          echo "::error title=Push failed::Could not push after 3 attempts."
+          exit 1

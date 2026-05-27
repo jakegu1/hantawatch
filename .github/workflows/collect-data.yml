@@ -134,24 +134,28 @@ jobs:
             echo "Nothing staged after add; skipping commit."
             exit 0
           fi
-          git commit -m "chore(data): auto-update from WHO/ECDC $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          COMMIT_MSG="chore(data): auto-update from WHO/ECDC $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git commit -m "$COMMIT_MSG"
 
           for attempt in 1 2 3; do
             if git push; then
               echo "Pushed on attempt $attempt."
               exit 0
             fi
-            echo "::warning title=Push race::Attempt $attempt failed (non-fast-forward). Rebasing and retrying."
-            # Drop and re-fetch in case the local main ref drifted.
+            echo "::warning title=Push race::Attempt $attempt failed (non-fast-forward). Replaying data on latest main."
+            # Another data job (e.g. collect-data-light) may have landed while
+            # we ran the collector. Rebase merges two data commits and conflicts;
+            # instead replay our collected tree on top of origin/main.
             git fetch origin main
-            # The bot's commit only touches apps/web/src/data — code commits
-            # touch other paths. `rebase` here is essentially equivalent to
-            # a fast-forward + replay of one commit, no conflicts expected.
-            if ! git rebase origin/main; then
-              echo "::error title=Rebase failed::Unexpected conflict during rebase. Aborting."
-              git rebase --abort || true
-              exit 1
+            BOT_TREE=$(git rev-parse 'HEAD^{tree}')
+            git reset --hard origin/main
+            git checkout "$BOT_TREE" -- apps/web/src/data
+            git add apps/web/src/data
+            if git diff --cached --quiet; then
+              echo "Data matches origin/main after replay; nothing to push."
+              exit 0
             fi
+            git commit -m "$COMMIT_MSG"
           done
           echo "::error title=Push failed::Could not push after 3 attempts."
           exit 1
