@@ -10,6 +10,7 @@ import pytest
 from hantawatch_collector.ai_brief import (
     SYSTEM_PROMPT,
     _has_who_lag_indicator,
+    _validate_brief_against_ledger,
     enhance_daily_brief,
 )
 
@@ -138,6 +139,42 @@ def test_no_double_who_prefix_in_share_line(monkeypatch: pytest.MonkeyPatch) -> 
     )
     assert out["shareLine"].count("WHO") == 1
     assert out["shareLine"].startswith(share_line)
+
+
+def _ledger_validator_fixtures() -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    outbreak_status = [{
+        "totals": {"all": 11, "confirmed": 8, "deaths": 3, "indeterminate": 3},
+        "perCountry": [{"confirmed": 1, "monitoring": 91}],
+    }]
+    risk_snapshot = {
+        "currentHpi": {"total": 24},
+        "displayedDistanceKm": 8400,
+        "sourceDistanceKm": 16500,
+    }
+    return outbreak_status, risk_snapshot
+
+
+def test_validator_ignores_thousand_separators_and_dates() -> None:
+    outbreak_status, risk_snapshot = _ledger_validator_fixtures()
+    brief = {
+        "oneLine": "距中国大陆约 8,400 km；HPI 指数持平（当前 24）",
+        "shareLine": "WHO 5/13 公布累计 11 例（13 天前）",
+        "latestChange": "5月25日新增 1 例（5/26 凌晨）",
+    }
+    violations = _validate_brief_against_ledger(
+        brief, outbreak_status, risk_snapshot,
+    )
+    assert violations == []
+
+
+def test_validator_still_catches_real_violations() -> None:
+    outbreak_status, risk_snapshot = _ledger_validator_fixtures()
+    brief = {"shareLine": "累计 999 例"}
+    violations = _validate_brief_against_ledger(
+        brief, outbreak_status, risk_snapshot,
+    )
+    assert len(violations) >= 1
+    assert any("999" in v for v in violations)
 
 
 def test_who_lag_disclosure_prepends_when_above_7_days() -> None:
