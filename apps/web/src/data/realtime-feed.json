@@ -1,23 +1,36 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-26T23:59:00.003082+00:00",
+  "__generated_at": "2026-05-27T03:31:33.326987+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-26T23:58:58.886891+00:00",
+  "last_fetched": "2026-05-27T03:31:17.996923+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-3d889b087ef9e6c9",
+      "time": "2026-05-27T00:34:41.000Z",
+      "title_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine - Global News",
+      "body_en": "Saskatoon researchers in ‘very early stages’ of animal testing for hantavirus vaccine Global News",
+      "summary_zh": "加拿大萨斯卡通研究人员开始汉坦病毒疫苗动物试验。",
+      "key_facts_zh": [
+        "加拿大",
+        "疫苗",
+        "动物试验"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-cbacdb8aa469e51b",
       "time": "2026-05-26T23:30:00.000Z",
       "title_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak - AspenTimes.com",
       "body_en": "PitCo confirms local hantavirus risk differs from strain linked to cruise ship outbreak AspenTimes.com",
-      "summary_zh": "美国皮特金县确认当地汉坦病毒与邮轮爆发毒株不同。",
+      "summary_zh": "美国皮特金县确认当地汉坦病毒毒株与邮轮疫情不同。",
       "key_facts_zh": [
         "美国",
-        "皮特金县",
-        "毒株不同"
+        "毒株差异",
+        "邮轮疫情"
       ],
       "signal_strength": "medium"
     },
@@ -26,10 +39,11 @@
       "time": "2026-05-26T22:40:00.000Z",
       "title_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning - WDBJ7",
       "body_en": "Cruise ship at center of deadly hantavirus outbreak has to undergo extra cleaning WDBJ7",
-      "summary_zh": "爆发致命汉坦病毒的邮轮需额外清洁。",
+      "summary_zh": "致命汉坦病毒疫情邮轮需额外清洁。",
       "key_facts_zh": [
         "邮轮",
-        "额外清洁"
+        "额外清洁",
+        "疫情"
       ],
       "signal_strength": "high"
     },
@@ -47,6 +61,19 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-9ae924243155e680",
+      "time": "2026-05-26T21:51:00.000Z",
+      "title_en": "Three Kansans discharged after exposure to hantavirus patient who died - The Topeka Capital-Journal",
+      "body_en": "Three Kansans discharged after exposure to hantavirus patient who died The Topeka Capital-Journal",
+      "summary_zh": "美国堪萨斯州三名接触汉坦病毒死者的人员出院。",
+      "key_facts_zh": [
+        "美国",
+        "堪萨斯",
+        "接触者出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-e20e8f9b7e54d8a1",
       "time": "2026-05-26T21:50:16.000Z",
       "title_en": "After hantavirus exposure, three Kansans discharged from hospital - The Topeka Capital-Journal",
@@ -55,7 +82,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "3人出院"
+        "接触者出院"
       ],
       "signal_strength": "high"
     },
@@ -69,19 +96,6 @@
         "英国",
         "荷兰",
         "患者返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-9839407bd7856a9b",
-      "time": "2026-05-26T21:37:52.000Z",
-      "title_en": "Brit hospitalised with hantavirus in the Netherlands after cruise ship outbreak returns to UK - AOL.com",
-      "body_en": "Brit hospitalised with hantavirus in the Netherlands after cruise ship outbreak returns to UK AOL.com",
-      "summary_zh": "邮轮爆发后，一名英国汉坦病毒患者从荷兰返回英国。",
-      "key_facts_zh": [
-        "英国",
-        "荷兰",
-        "邮轮爆发"
       ],
       "signal_strength": "high"
     },
@@ -102,10 +116,10 @@
       "time": "2026-05-26T21:21:00.000Z",
       "title_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure - KCTV",
       "body_en": "Three people released from Kansas City, Kansas hospital after hantavirus exposure KCTV",
-      "summary_zh": "美国堪萨斯城三名汉坦病毒接触者出院。",
+      "summary_zh": "美国堪萨斯州堪萨斯城三人接触汉坦病毒后出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯城",
+        "堪萨斯",
         "3人出院"
       ],
       "signal_strength": "high"
@@ -115,24 +129,24 @@
       "time": "2026-05-26T20:34:33.000Z",
       "title_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus - Kansas Reflector",
       "body_en": "Kansas legislative leaders approve extended monitoring of three residents exposed to hantavirus Kansas Reflector",
-      "summary_zh": "堪萨斯州立法领袖批准延长对三名接触汉坦病毒居民的监测。",
+      "summary_zh": "堪萨斯州立法领导人批准延长对三名接触汉坦病毒居民的监测。",
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "监测中"
+        "延长监测"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-9ae924243155e680",
-      "time": "2026-05-26T20:01:00.000Z",
-      "title_en": "Three Kansans discharged after exposure to hantavirus patient who died - The Topeka Capital-Journal",
-      "body_en": "Three Kansans discharged after exposure to hantavirus patient who died The Topeka Capital-Journal",
-      "summary_zh": "三名接触汉坦病毒患者的堪萨斯居民已出院。",
+      "id": "rt-01606514ff012fda",
+      "time": "2026-05-26T20:30:40.000Z",
+      "title_en": "3 Kansans with exposure to Andes hantavirus released from University of Kansas Health System - KSHB 41 Kansas City",
+      "body_en": "3 Kansans with exposure to Andes hantavirus released from University of Kansas Health System KSHB 41 Kansas City",
+      "summary_zh": "三名接触安第斯汉坦病毒的堪萨斯人从堪萨斯大学卫生系统出院。",
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "已出院"
+        "3人出院"
       ],
       "signal_strength": "high"
     },
@@ -141,11 +155,11 @@
       "time": "2026-05-26T19:37:00.000Z",
       "title_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say - KMBC",
       "body_en": "3 people exposed to hantavirus released from University of Kansas Health System, officials say KMBC",
-      "summary_zh": "三名接触汉坦病毒者从堪萨斯大学卫生系统出院。",
+      "summary_zh": "美国堪萨斯大学医院3名汉坦病毒接触者已出院。",
       "key_facts_zh": [
         "美国",
-        "堪萨斯",
-        "已出院"
+        "3人出院",
+        "堪萨斯大学医院"
       ],
       "signal_strength": "high"
     },
@@ -157,21 +171,21 @@
       "summary_zh": "美国堪萨斯大学医院3名汉坦病毒观察者已解除隔离。",
       "key_facts_zh": [
         "美国",
-        "解除隔离",
-        "3人"
+        "3人解除观察",
+        "堪萨斯大学医院"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-c2411828a66a8a61",
       "time": "2026-05-26T18:39:00.000Z",
-      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - KUSA.com",
-      "body_en": "Latest headlines | Coloradan tests positive for hantavirus KUSA.com",
+      "title_en": "Latest headlines | Coloradan tests positive for hantavirus - 9News.com",
+      "body_en": "Latest headlines | Coloradan tests positive for hantavirus 9News.com",
       "summary_zh": "美国科罗拉多州一人汉坦病毒检测阳性。",
       "key_facts_zh": [
         "美国",
-        "新增1例",
-        "科罗拉多"
+        "科罗拉多",
+        "确诊1例"
       ],
       "signal_strength": "high"
     },
@@ -184,7 +198,7 @@
       "key_facts_zh": [
         "美国",
         "肯尼迪",
-        "反疫苗"
+        "反疫苗争议"
       ],
       "signal_strength": "medium"
     },
@@ -193,13 +207,26 @@
       "time": "2026-05-26T16:27:19.000Z",
       "title_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning - Toronto Star",
       "body_en": "The cruise ship at center of a deadly hantavirus outbreak has to undergo extra cleaning Toronto Star",
-      "summary_zh": "致命汉坦病毒爆发邮轮需额外清洁。",
+      "summary_zh": "加拿大邮轮因汉坦病毒爆发需额外清洁。",
       "key_facts_zh": [
+        "加拿大",
         "邮轮",
-        "汉坦病毒",
-        "清洁"
+        "额外清洁"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-677048ef655fb920",
+      "time": "2026-05-26T16:00:03.000Z",
+      "title_en": "Inside an African lab that helped crack the hantavirus outbreak - ThePrint",
+      "body_en": "Inside an African lab that helped crack the hantavirus outbreak ThePrint",
+      "summary_zh": "非洲实验室协助破解汉坦病毒爆发。",
+      "key_facts_zh": [
+        "非洲",
+        "实验室",
+        "病毒破解"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
