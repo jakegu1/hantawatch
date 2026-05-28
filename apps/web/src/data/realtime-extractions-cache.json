@@ -1791,6 +1791,188 @@
         "source_url": "",
         "time": "2026-05-27T09:00:00.000Z"
       }
+    ],
+    "rt-ff8cf6b7151c434b": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例汉坦病毒病例，总病例升至13例。",
+        "update_id": "rt-ff8cf6b7151c434b",
+        "source_url": "",
+        "time": "2026-05-28T04:32:56.000Z"
+      }
+    ],
+    "rt-786d24c383104169": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "澳大利亚延长受汉坦病毒影响的邮轮乘客隔离期，未报告新增病例。",
+        "update_id": "rt-786d24c383104169",
+        "source_url": "",
+        "time": "2026-05-28T04:02:00.000Z"
+      }
+    ],
+    "rt-c63878a0ac83a00d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮乘客因汉坦病毒警报延长隔离，但未明确国家及具体数字。",
+        "update_id": "rt-c63878a0ac83a00d",
+        "source_url": "",
+        "time": "2026-05-28T03:55:44.000Z"
+      }
+    ],
+    "rt-3c08277963980a4d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "medium",
+        "reasoning_zh": "内布拉斯加大学医学中心称邮轮暴发增至13例确诊，但未指明国家。",
+        "update_id": "rt-3c08277963980a4d",
+        "source_url": "",
+        "time": "2026-05-27T22:38:04.000Z"
+      }
+    ],
+    "rt-2cf4ccede3d7f834": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "加拿大不列颠哥伦比亚省教师言论事件，未涉及病例数据。",
+        "update_id": "rt-2cf4ccede3d7f834",
+        "source_url": "",
+        "time": "2026-05-27T16:29:57.000Z"
+      }
+    ],
+    "rt-dc9fd150b1e72da8": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "澳大利亚延长6名与汉坦病毒疫情相关的邮轮乘客隔离期，无新增病例数字。",
+        "update_id": "rt-dc9fd150b1e72da8",
+        "source_url": "",
+        "time": "2026-05-28T08:38:00.000Z"
+      }
+    ],
+    "rt-f1093d99d5eff4b4": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "澳大利亚延长6名汉坦病毒邮轮乘客隔离至6月底，无新增病例。",
+        "update_id": "rt-f1093d99d5eff4b4",
+        "source_url": "",
+        "time": "2026-05-28T08:23:01.000Z"
+      }
+    ],
+    "rt-37096e02bd000474": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "WHO报告邮轮疫情汉坦病毒病例数升至13例，但未指明具体国家。",
+        "update_id": "rt-37096e02bd000474",
+        "source_url": "",
+        "time": "2026-05-28T08:07:15.000Z"
+      }
+    ],
+    "rt-34d13d2cbe8cabe1": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "Physiomics展示汉坦病毒转化建模能力，不涉及疫情数字。",
+        "update_id": "rt-34d13d2cbe8cabe1",
+        "source_url": "",
+        "time": "2026-05-28T07:01:29.000Z"
+      }
+    ],
+    "rt-5d9582caf39bf59a": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "澳大利亚广播公司报道西澳邮轮乘客隔离期延长，无新增病例。",
+        "update_id": "rt-5d9582caf39bf59a",
+        "source_url": "",
+        "time": "2026-05-28T06:34:16.000Z"
+      }
+    ],
+    "rt-056e5520fb729394": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "ndtv报道澳大利亚延长邮轮乘客隔离，无新增病例。",
+        "update_id": "rt-056e5520fb729394",
+        "source_url": "",
+        "time": "2026-05-28T06:31:05.000Z"
+      }
+    ],
+    "rt-e606454d9300871f": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例汉坦病毒病例，总病例升至13例。",
+        "update_id": "rt-e606454d9300871f",
+        "source_url": "",
+        "time": "2026-05-28T06:22:25.000Z"
+      }
+    ],
+    "rt-95931d3545a0875f": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "News.com.au报道汉坦病毒疫情对澳大利亚人的重大更新，无具体数字。",
+        "update_id": "rt-95931d3545a0875f",
+        "source_url": "",
+        "time": "2026-05-28T04:34:55.000Z"
+      }
     ]
   }
 }
