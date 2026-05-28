@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-28T20:16:28.288947+00:00",
+  "__generated_at": "2026-05-28T20:29:13.029978+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-28T20:16:15.234943+00:00",
+  "last_fetched": "2026-05-28T20:29:11.252218+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -31,17 +31,17 @@
         "安第斯株",
         "治疗"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-6e74a24a5b7258a1",
       "time": "2026-05-28T17:30:00Z",
       "title_en": "Trump Admin Bars Key US Researchers From Global Virus Response Talk",
-      "summary_zh": "特朗普政府阻止美国关键研究人员参与全球病毒应对讨论。",
+      "summary_zh": "特朗普政府禁止美国关键研究人员参与全球病毒应对讨论。",
       "key_facts_zh": [
         "美国",
-        "特朗普政府",
-        "限制研究"
+        "研究人员",
+        "禁令"
       ],
       "signal_strength": "medium"
     },
@@ -49,11 +49,11 @@
       "id": "rt-4f8eb99d78fbb31f",
       "time": "2026-05-28T15:45:00Z",
       "title_en": "Vanderbilt Health researchers call for pandemic prevention",
-      "summary_zh": "范德比尔特健康研究人员呼吁预防大流行。",
+      "summary_zh": "范德堡健康研究人员呼吁预防大流行。",
       "key_facts_zh": [
         "美国",
-        "研究",
-        "预防"
+        "范德堡",
+        "呼吁预防"
       ],
       "signal_strength": "medium"
     },
@@ -66,7 +66,7 @@
       "key_facts_zh": [
         "WHO",
         "13例",
-        "稳定"
+        "疫情稳定"
       ],
       "signal_strength": "high"
     },
@@ -100,10 +100,10 @@
       "time": "2026-05-28T15:08:46.000Z",
       "title_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread - Arise News",
       "body_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread Arise News",
-      "summary_zh": "欧盟因汉坦病毒扩散紧急采购抗病毒物资。",
+      "summary_zh": "欧盟紧急采购抗病毒药物应对汉坦病毒扩散。",
       "key_facts_zh": [
         "欧盟",
-        "抗病毒物资",
+        "抗病毒药物",
         "紧急采购"
       ],
       "signal_strength": "high"
@@ -126,11 +126,10 @@
       "time": "2026-05-28T12:56:14.000Z",
       "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - CNBC TV18",
       "body_en": "EU secures emergency deliveries of potential treatment against hantavirus CNBC TV18",
-      "summary_zh": "欧盟紧急采购汉坦病毒潜在治疗药物。",
+      "summary_zh": "欧盟确保紧急交付汉坦病毒潜在治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "紧急采购",
-        "治疗"
+        "治疗药物"
       ],
       "signal_strength": "high"
     },
@@ -141,7 +140,7 @@
       "summary_zh": "澳大利亚延长6名汉坦病毒邮轮乘客隔离至6月底。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离",
+        "隔离",
         "邮轮"
       ],
       "signal_strength": "high"
@@ -152,9 +151,9 @@
       "title_en": "Dyadic and Scripps Research Collaborate on Rapid - Response Hantavirus Antibody and Vaccine Development",
       "summary_zh": "Dyadic与斯克里普斯研究所合作开发汉坦病毒抗体和疫苗。",
       "key_facts_zh": [
-        "美国",
-        "抗体研发",
-        "疫苗合作"
+        "抗体",
+        "疫苗",
+        "合作"
       ],
       "signal_strength": "medium"
     },
@@ -162,7 +161,7 @@
       "id": "rt-463c82668fab0771",
       "time": "2026-05-28T12:00:00Z",
       "title_en": "Dyadic International , Inc .: Dyadic and Scripps Research Collaborate on Rapid - Response Hantavirus Antibody and Vaccine Development",
-      "summary_zh": "Dyadic与Scripps研究所合作开发汉坦病毒快速响应抗体和疫苗。",
+      "summary_zh": "Dyadic与Scripps研究所合作开发快速响应汉坦病毒抗体和疫苗。",
       "key_facts_zh": [
         "美国",
         "抗体研发",
