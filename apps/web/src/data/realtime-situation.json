@@ -80,7 +80,7 @@
       "source": "who_don"
     },
     {
-      "at": "2026-05-28T12:00:00Z",
+      "at": "2026-05-15T12:00:00Z",
       "kind": "detection",
       "countryZh": "西班牙",
       "delta": 1,
@@ -120,7 +120,7 @@
       "source": "official_cdc"
     }
   ],
-  "daysWithoutNewConfirmed": 0,
+  "daysWithoutNewConfirmed": 13,
   "totals": {
     "confirmed": 8,
     "indeterminate": 3,
@@ -189,7 +189,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-28T15:45:33.680961+00:00"
+      "updatedAt": "2026-05-28T20:16:24.904135+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -201,8 +201,8 @@
     }
   ],
   "intake": {
-    "last24hCount": 17,
+    "last24hCount": 13,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-05-28T15:45:38.756483+00:00"
+  "realtimeUpdatedAt": "2026-05-28T20:16:28.285063+00:00"
 }

@@ -2071,6 +2071,132 @@
         "source_url": "",
         "time": "2026-05-28T04:44:26.000Z"
       }
+    ],
+    "rt-a2d6aa997629cff3": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道称欧盟接收实验性治疗药物，但未提及具体国家或病例数变化。",
+        "update_id": "rt-a2d6aa997629cff3",
+        "source_url": "",
+        "time": "2026-05-28T18:33:09.000Z"
+      }
+    ],
+    "rt-e924153e9faccdf2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "讨论治疗安第斯病毒株，但未提供新增病例数据。",
+        "update_id": "rt-e924153e9faccdf2",
+        "source_url": "",
+        "time": "2026-05-28T18:32:07.000Z"
+      }
+    ],
+    "rt-6e74a24a5b7258a1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道特朗普政府禁止美国研究人员参与全球病毒应对讨论，无病例数据。",
+        "update_id": "rt-6e74a24a5b7258a1",
+        "source_url": "",
+        "time": "2026-05-28T17:30:00Z"
+      }
+    ],
+    "rt-4f8eb99d78fbb31f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "范德比尔特健康研究人员呼吁大流行预防，无病例数据。",
+        "update_id": "rt-4f8eb99d78fbb31f",
+        "source_url": "",
+        "time": "2026-05-28T15:45:00Z"
+      }
+    ],
+    "rt-6ddbf5d01af74119": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "WHO称汉坦病毒疫情稳定在13例，但未说明新增病例，故delta为0。",
+        "update_id": "rt-6ddbf5d01af74119",
+        "source_url": "",
+        "time": "2026-05-28T15:39:53.000Z"
+      }
+    ],
+    "rt-0261cfd8585e4405": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道乘客在澳大利亚隔离42天，但未提供新增病例数。",
+        "update_id": "rt-0261cfd8585e4405",
+        "source_url": "",
+        "time": "2026-05-28T15:15:00Z"
+      }
+    ],
+    "rt-d022934b0a513406": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "澳大利亚延长6名乘客隔离至6月底，无新增病例数据。",
+        "update_id": "rt-d022934b0a513406",
+        "source_url": "",
+        "time": "2026-05-28T12:30:00Z"
+      }
+    ],
+    "rt-8a6096ac4fd6624b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "Dyadic与Scripps研究合作开发抗体和疫苗，无病例数据。",
+        "update_id": "rt-8a6096ac4fd6624b",
+        "source_url": "",
+        "time": "2026-05-28T12:15:00Z"
+      }
+    ],
+    "rt-463c82668fab0771": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "新闻为研发合作，未提及任何国家疫情变化数据",
+        "update_id": "rt-463c82668fab0771",
+        "source_url": "",
+        "time": "2026-05-28T12:00:00Z"
+      }
     ]
   }
 }

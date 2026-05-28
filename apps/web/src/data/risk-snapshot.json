@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-28T15:45:38.758622+00:00",
-  "date": "2026-05-28",
+  "__generated_at": "2026-05-28T20:16:28.287027+00:00",
+  "date": "2026-05-29",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-28T15:45:05.670667+00:00"
+    "updatedAt": "2026-05-28T20:15:56.594480+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-05-28T15:45:05.670667+00:00"
+    "updatedAt": "2026-05-28T20:15:56.594480+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,33 +101,33 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-05-28",
+    "date": "2026-05-29",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 8,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 0,
-    "whoDaysSinceOfficialUpdate": 0,
+    "daysSinceLastIntlAlert": 1,
+    "whoDaysSinceOfficialUpdate": 1,
     "cluesLast24h": 8,
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "5月28日WHO称邮轮病例增至13例；澳大利亚延长6名乘客隔离期至6月23日。",
-    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；西班牙新增暂待WHO复核，多国维持监测，国内基线未变。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内基线未变。",
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，公众无需担忧。",
     "newCases": "5月28日无新增确诊；西班牙1例待WHO复核。",
-    "sourceSummary": "WHO DON、ArcGIS监测、实时新闻",
+    "sourceSummary": "WHO官方通报及ArcGIS监测",
     "shareLine": "WHO 5/13公布累计11例（15天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "西班牙新增复核",
+      "WHO数据更新",
       "澳大利亚隔离延长",
-      "欧盟抗病毒采购"
+      "西班牙待复核"
     ],
     "evidence": [
       "WHO DON 5/13",
       "ArcGIS ANDV Dashboard",
-      "Realtime LLM Extractor"
+      "澳大利亚卫生部"
     ],
     "_guardrail_warnings": [
       "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
