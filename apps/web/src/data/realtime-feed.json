@@ -1,76 +1,86 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-28T15:45:38.760787+00:00",
+  "__generated_at": "2026-05-28T17:59:49.727057+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-28T15:45:25.717757+00:00",
+  "last_fetched": "2026-05-28T17:59:48.617180+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-6ddbf5d01af74119",
+      "time": "2026-05-28T15:39:53.000Z",
+      "title_en": "Hantavirus outbreak stable at 13 cases: WHO - NewsNation",
+      "body_en": "Hantavirus outbreak stable at 13 cases: WHO NewsNation",
+      "summary_zh": "WHO 通报汉坦病毒疫情稳定在 13 例。",
+      "key_facts_zh": [
+        "WHO",
+        "13 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-216441d1e23804e4",
       "time": "2026-05-28T15:22:00.000Z",
       "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
       "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚将汉坦病毒邮轮乘客隔离延长至6月23日。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-77cbabbf5af33aee",
       "time": "2026-05-28T15:08:46.000Z",
       "title_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread - Arise News",
       "body_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread Arise News",
-      "summary_zh": "欧盟在汉坦病毒病例扩散之际确保紧急抗病毒供应。",
-      "key_facts_zh": [
-        "欧盟",
-        "抗病毒供应",
-        "病例扩散"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-a33070599a29118f",
       "time": "2026-05-28T14:47:36.000Z",
       "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
       "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
-      "summary_zh": "WHO称邮轮汉坦病毒爆发对公众风险仍低。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "风险低"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-43b573ddf3ba39e3",
+      "time": "2026-05-28T14:38:10.000Z",
+      "title_en": "Ebola, Hantavirus, and the Garden Grove chemical crisis - Substack",
+      "body_en": "Ebola, Hantavirus, and the Garden Grove chemical crisis Substack",
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-8eff47d5dfcb50b5",
+      "time": "2026-05-28T14:09:28.000Z",
+      "title_en": "Planes, trains and pandemics: Lessons from COVID‑19 about travel risks posed by hantavirus and Ebola - Gavi, the Vaccine Alliance",
+      "body_en": "Planes, trains and pandemics: Lessons from COVID‑19 about travel risks posed by hantavirus and Ebola Gavi, the Vaccine Alliance",
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f18b604c85968ebe",
       "time": "2026-05-28T12:56:14.000Z",
       "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - CNBC TV18",
       "body_en": "EU secures emergency deliveries of potential treatment against hantavirus CNBC TV18",
-      "summary_zh": "欧盟确保紧急交付汉坦病毒潜在治疗方法。",
-      "key_facts_zh": [
-        "欧盟",
-        "治疗方法",
-        "紧急交付"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-423aa83a63fd81b0",
-      "time": "2026-05-28T11:25:00.000Z",
-      "title_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development - GlobeNewswire",
-      "body_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development GlobeNewswire",
-      "summary_zh": "Dyadic与Scripps研究合作开发快速响应汉坦病毒抗体和疫苗。",
-      "key_facts_zh": [
-        "抗体",
-        "疫苗",
-        "合作"
-      ],
+      "id": "rt-d4814c4b3a5d7245",
+      "time": "2026-05-28T12:00:00.000Z",
+      "title_en": "Hantavirus Outbreak Revives COVID-Era False Health Claims — The Monitor - KFF",
+      "body_en": "Hantavirus Outbreak Revives COVID-Era False Health Claims — The Monitor KFF",
+      "summary_zh": "[翻译为空]",
+      "key_facts_zh": [],
       "signal_strength": "medium"
     },
     {
@@ -93,7 +103,8 @@
       "summary_zh": "澳大利亚延长6名汉坦病毒邮轮乘客隔离。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离"
+        "延长隔离",
+        "6人"
       ],
       "signal_strength": "high"
     },
@@ -105,7 +116,8 @@
       "summary_zh": "澳大利亚延长6名汉坦病毒邮轮乘客隔离至6月底。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离"
+        "延长隔离",
+        "6人"
       ],
       "signal_strength": "high"
     },
@@ -114,9 +126,10 @@
       "time": "2026-05-28T06:34:16.000Z",
       "title_en": "Hantavirus cruise ship passengers have WA quarantine period extended - Australian Broadcasting Corporation",
       "body_en": "Hantavirus cruise ship passengers have WA quarantine period extended Australian Broadcasting Corporation",
-      "summary_zh": "澳大利亚延长汉坦病毒邮轮乘客在西澳的隔离期。",
+      "summary_zh": "澳大利亚西澳州延长汉坦病毒邮轮乘客隔离期。",
       "key_facts_zh": [
         "澳大利亚",
+        "西澳州",
         "延长隔离"
       ],
       "signal_strength": "high"
@@ -147,19 +160,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-a5999cd439c3c883",
-      "time": "2026-05-28T04:44:26.000Z",
-      "title_en": "Old Taiwan hantavirus death falsely shared as recent - AFP Fact Check",
-      "body_en": "Old Taiwan hantavirus death falsely shared as recent AFP Fact Check",
-      "summary_zh": "法新社辟谣：台湾省旧汉坦病毒死亡案例被误传为近期。",
-      "key_facts_zh": [
-        "台湾省",
-        "辟谣",
-        "旧案例"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-786d24c383104169",
       "time": "2026-05-28T04:02:00.000Z",
       "title_en": "Australia extends quarantine for hantavirus-hit cruise ship passengers - Reuters",
@@ -177,7 +177,7 @@
       "time": "2026-05-28T03:55:44.000Z",
       "title_en": "Extended Quarantine for Cruise Ship Passengers amid Hantavirus Alert - Devdiscourse",
       "body_en": "Extended Quarantine for Cruise Ship Passengers amid Hantavirus Alert Devdiscourse",
-      "summary_zh": "汉坦病毒警报下邮轮乘客隔离延长。",
+      "summary_zh": "汉坦病毒警报下邮轮乘客隔离期延长。",
       "key_facts_zh": [
         "邮轮",
         "延长隔离"
@@ -193,7 +193,7 @@
       "key_facts_zh": [
         "加拿大",
         "确诊",
-        "情况稳定"
+        "稳定"
       ],
       "signal_strength": "high"
     },
@@ -202,11 +202,11 @@
       "time": "2026-05-27T22:48:06.000Z",
       "title_en": "Cruise Ship Undergoes Additional Cleaning Following Deadly Hantavirus Outbreak - University of Nebraska Medical Center",
       "body_en": "Cruise Ship Undergoes Additional Cleaning Following Deadly Hantavirus Outbreak University of Nebraska Medical Center",
-      "summary_zh": "内布拉斯加医学中心：邮轮在致命汉坦病毒爆发后额外清洁。",
+      "summary_zh": "内布拉斯加医学中心：邮轮在致命汉坦病毒爆发后加强清洁。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
         "邮轮",
-        "额外清洁"
+        "清洁"
       ],
       "signal_strength": "high"
     },
