@@ -1693,6 +1693,104 @@
         "source_url": "",
         "time": "2026-05-27T10:45:00Z"
       }
+    ],
+    "rt-4992eadf8a3eafe7": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "加拿大不列颠哥伦比亚省一人汉坦病毒检测阳性，但未提供新增病例数。",
+        "update_id": "rt-4992eadf8a3eafe7",
+        "source_url": "",
+        "time": "2026-05-28T01:38:51.000Z"
+      }
+    ],
+    "rt-3e2b868f54eb793c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮暴发汉坦病毒，但未提供具体国家或新增病例数。",
+        "update_id": "rt-3e2b868f54eb793c",
+        "source_url": "",
+        "time": "2026-05-27T23:33:53.000Z"
+      }
+    ],
+    "rt-43cacaf234530f9e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "邮轮进行额外清洁，但未提供新增病例数或具体国家。",
+        "update_id": "rt-43cacaf234530f9e",
+        "source_url": "",
+        "time": "2026-05-27T22:48:06.000Z"
+      }
+    ],
+    "rt-71dfd1d2fb17907b": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "high",
+        "reasoning_zh": "WHO报告西班牙新增1例汉坦病毒病例，总病例数升至13例。",
+        "update_id": "rt-71dfd1d2fb17907b",
+        "source_url": "",
+        "time": "2026-05-27T20:05:00.000Z"
+      }
+    ],
+    "rt-909569d19ee91acb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "美国西南部部落关注辛诺柏病毒，但未提供新增病例数。",
+        "update_id": "rt-909569d19ee91acb",
+        "source_url": "",
+        "time": "2026-05-27T16:20:28.000Z"
+      }
+    ],
+    "rt-719a31fff3c6082e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "制药公司宣布抗病毒项目，但未涉及具体国家或新增病例。",
+        "update_id": "rt-719a31fff3c6082e",
+        "source_url": "",
+        "time": "2026-05-27T12:45:00.000Z"
+      }
+    ],
+    "rt-bac635ee3abc744c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "medium",
+        "reasoning_zh": "美国堪萨斯州3人接触汉坦病毒，延长紧急状态，但未报告新增确诊病例。",
+        "update_id": "rt-bac635ee3abc744c",
+        "source_url": "",
+        "time": "2026-05-27T09:00:00.000Z"
+      }
     ]
   }
 }
