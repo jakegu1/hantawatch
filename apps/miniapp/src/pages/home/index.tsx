@@ -3,6 +3,7 @@ import { View, Text } from '@tarojs/components';
 import Taro, { useLoad, useShareAppMessage, useShareTimeline } from '@tarojs/taro';
 import { useEffect, useMemo, useState } from 'react';
 import { SEROTYPES } from '@hantawatch/shared';
+import { filterOfficialTimelineCases } from '@hantawatch/shared/timeline';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import {
@@ -14,14 +15,14 @@ import {
   chinaHfrsHistory,
   chinaHfrsMonthly2026,
   dataMeta,
+  hondiusImports,
   hondiusImportSummaries,
   outbreakStatus,
   realtimeFeed,
-  riskSnapshot,
 } from '@/lib/data';
-import { findNearestAndes } from '@/lib/nearest-cluster';
-import type { ImportProximity } from '@/lib/nearest-cluster';
-import { fetchClusters, trackPageView } from '@/utils/api';
+import { findNearestAndes, findNearestImport } from '@/lib/nearest-cluster';
+import { fetchClusters, fetchHondiusImports, trackPageView } from '@/utils/api';
+import type { MvHondiusImport } from '@hantawatch/shared/types';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
@@ -53,6 +54,28 @@ export default function HomePage() {
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(baselineClusters);
   const liveRecentCases = useLiveRecentCases();
 
+  // 口径 B intake values for the DailyBriefBanner — derived from the bundled
+  // realtime-situation snapshot. Miniapp can't refetch arbitrary URLs at
+  // runtime, so the data is whatever the latest deploy embedded.
+  const situationSnapshot = useMemo(() => loadRealtimeSituation(), []);
+  const intakeStats = useMemo(() => {
+    const head = situationSnapshot.headline as Record<string, unknown>;
+    const intake = (situationSnapshot as { intake?: { last24hCount?: number; highConfidencePicks?: number } }).intake;
+    return {
+      whoDaysAgo: typeof head.whoDaysAgo === 'number' ? head.whoDaysAgo : undefined,
+      intake24hCount: intake?.last24hCount,
+      highConfidencePicks: intake?.highConfidencePicks,
+      currentReportedCases:
+        typeof head.currentReportedCases === 'number' ? head.currentReportedCases : undefined,
+    };
+  }, [situationSnapshot]);
+
+  // RecentCasesList: filter to authoritative sources only (audit #13).
+  const officialRecentCases = useMemo(
+    () => filterOfficialTimelineCases(liveRecentCases),
+    [liveRecentCases],
+  );
+
   useLoad(() => {
     trackPageView('pages/home/index');
   });
@@ -76,7 +99,7 @@ export default function HomePage() {
   useShareAppMessage(() => {
     if (hasImportDistance) {
       return {
-        title: `汉坦距中国大陆 ${fmt(displayedDistanceKm)} km（${nearestImport!.nameZh}输入）· 病毒观察`,
+        title: `汉坦距中国大陆 ${fmt(displayedDistanceKm)} km（${importLocZh}输入）· 病毒观察`,
         path: '/pages/home/index',
       };
     }
@@ -90,7 +113,31 @@ export default function HomePage() {
     title: '病毒观察 BingDuGuanCha · 第一时间看清风险',
   }));
 
-  const nearestImport = riskSnapshot.nearestImport as ImportProximity | null | undefined;
+  // Live overlay: fetch baseline ∪ approved Supabase additions from
+  // /api/hondius-imports. Initial render uses the bundled JSON for instant
+  // paint; after mount we swap in the merged list so editor-added events
+  // (e.g. US-LA new monitoring case) reflect without redeploying the
+  // miniapp. Mirror of web page.tsx.
+  const [liveImports, setLiveImports] = useState<MvHondiusImport[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    fetchHondiusImports()
+      .then((payload) => {
+        if (cancelled) return;
+        if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
+      })
+      .catch(() => {/* fall back silently to bundled baseline */});
+    return () => { cancelled = true; };
+  }, []);
+
+  // Compute the nearest import frontend-side so cityZh / lat / lon edits in
+  // mv-hondius-imports.json (and Supabase-added rows) reflect immediately.
+  // Memoised so the heavy filter doesn't run on every state tick.
+  const mergedHondiusImports = liveImports ?? hondiusImports;
+  const nearestImport = useMemo(
+    () => findNearestImport(mergedHondiusImports),
+    [mergedHondiusImports],
+  );
   const hpi = currentHpi;
   const dynamicHpi7DayHistory = useMemo(() => {
     if (hpi7DayHistory.length === 0) return hpi7DayHistory;
@@ -104,15 +151,24 @@ export default function HomePage() {
 
   // When a confirmed/quarantined import is closer than the outbreak source,
   // we show the import distance (e.g. France ~8,400 km) instead of the source
-  // distance (Ushuaia ~16,500 km). Mirrors web page.tsx L200-201.
-  const hasImportDistance = riskSnapshot.hasImportDistance === true;
-  const displayedDistanceKm = riskSnapshot.displayedDistanceKm ?? cluster?.distanceFromChinaKm ?? 0;
+  // distance (Ushuaia ~16,500 km). Mirrors web page.tsx with the new
+  // frontend-computed nearestImport.
+  const sourceDistanceKm = cluster?.distanceFromChinaKm ?? 0;
+  const hasImportDistance = nearestImport != null && nearestImport.distanceKm < sourceDistanceKm;
+  const displayedDistanceKm = hasImportDistance ? nearestImport!.distanceKm : sourceDistanceKm;
   const distTone = distanceRingBg(displayedDistanceKm);
+
+  // City-precise label: "法国 尼斯" when cityZh present, else just "法国".
+  const importLocZh = nearestImport
+    ? nearestImport.cityZh
+      ? `${nearestImport.nameZh} ${nearestImport.cityZh}`
+      : nearestImport.nameZh
+    : '';
   const highRiskDistanceText = hasImportDistance && nearestImport
-    ? `约 ${fmt(displayedDistanceKm)} km（${nearestImport.nameZh}，${nearestImport.statusZh}）`
+    ? `约 ${fmt(displayedDistanceKm)} km（${importLocZh}，${nearestImport.statusZh}）`
     : `约 ${fmt(displayedDistanceKm)} km（${cluster?.location?.name ?? '当前重点疫情'}）`;
   const highRiskDistanceContext = hasImportDistance && nearestImport
-    ? `源头疫情距中国大陆约 ${fmt(riskSnapshot.sourceDistanceKm ?? cluster?.distanceFromChinaKm ?? 0)} km；当前按地理距离最近的输入病例展示。`
+    ? `源头疫情距中国大陆约 ${fmt(sourceDistanceKm)} km；当前按地理距离最近的输入病例展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
 
   const briefContent = useMemo(
@@ -171,51 +227,15 @@ export default function HomePage() {
           brief={todayBrief}
           headline24h={briefContent.metrics.headline24h}
           alertLabel={briefContent.metrics.alertLabel}
+          whoDaysAgo={intakeStats.whoDaysAgo}
+          intake24hCount={intakeStats.intake24hCount}
+          highConfidencePicks={intakeStats.highConfidencePicks}
         />
 
-        {/* Andes warning strip */}
-        <View
-          style={{
-            background: 'rgba(239,68,68,0.18)',
-            border: '1rpx solid rgba(252,165,165,0.4)',
-            borderRadius: '16rpx',
-            padding: '20rpx 24rpx',
-            marginBottom: '16rpx',
-          }}
-        >
-          <View className="flex items-start gap-3">
-            <Text style={{ fontSize: '48rpx', lineHeight: 1, flexShrink: 0 }}>⚠️</Text>
-            <View className="flex-1 min-w-0">
-              <Text
-                className="uppercase tracking-wider"
-                style={{ color: '#fecaca', fontSize: '20rpx', fontWeight: 500, display: 'block' }}
-              >
-                当前最受关注
-              </Text>
-              <Text style={{ fontSize: '36rpx', fontWeight: 800, color: '#fff', display: 'block' }}>
-                安第斯型汉坦病毒（Andes）
-              </Text>
-              <Text style={{ fontSize: '22rpx', color: '#fecaca', marginTop: '6rpx', lineHeight: 1.5, display: 'block' }}>
-                唯一已确认可人际传播的汉坦病毒 · 病死率 30-40% · 2026年5月南美洲邮轮聚集疫情
-              </Text>
-              {cluster && (
-                <View className="flex flex-wrap gap-2 mt-2">
-                  <Text
-                    style={{
-                      background: 'rgba(248,113,113,0.25)',
-                      color: '#fee2e2',
-                      borderRadius: '100rpx',
-                      padding: '4rpx 16rpx',
-                      fontSize: '20rpx',
-                    }}
-                  >
-                    {cluster.confirmedCases}例确诊 · {cluster.deaths}例死亡
-                  </Text>
-                </View>
-              )}
-            </View>
-          </View>
-        </View>
+        {/* (DELETED 2026-05-27 audit) — Andes 警告条 (red strip) was an
+            identical-information duplicate of RealtimeSituationSection's
+            outbreakName + state label; its red 30-40% 病死率 framing
+            violated the "warn without panic" principle. */}
 
         {/* Distance + HPI 2-column grid */}
         {cluster && (
@@ -239,7 +259,7 @@ export default function HomePage() {
                 <Text style={{ fontSize: '32rpx', fontWeight: 700, color: '#9ca3af' }}>km</Text>
               </View>
               <Text style={{ fontSize: '22rpx', color: '#6b7280', marginTop: '6rpx', display: 'block' }} className="truncate">
-                {hasImportDistance ? `${nearestImport!.flag} ${nearestImport!.nameZh} · ${nearestImport!.statusZh}` : cluster?.location?.name ?? ''}
+                {hasImportDistance ? `${nearestImport!.flag} ${importLocZh} · ${nearestImport!.statusZh}` : cluster?.location?.name ?? ''}
               </Text>
               {hasImportDistance && (
                 <Text style={{ fontSize: '18rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
@@ -295,12 +315,14 @@ export default function HomePage() {
         <View className="flex gap-2 mb-3">
           {[
             {
-              v: nearestAndes.totalConfirmed,
-              label: `Andes 全球确诊${nearestAndes.count > 1 ? ` · ${nearestAndes.count} 起` : ''}`,
+              // Connected to realtime situation: prefer 口径 B currentReported
+              // so this card and the RealtimeSituationSection headline match.
+              v: intakeStats.currentReportedCases ?? nearestAndes.totalConfirmed,
+              label: `Andes 现报全球${nearestAndes.count > 1 ? ` · ${nearestAndes.count} 起` : ''}`,
               color: '#fff',
             },
             { v: 0, label: '中国大陆社区传播', color: '#86efac' },
-            { v: fmt(displayedDistanceKm), label: hasImportDistance ? `距最近输入 ${nearestImport!.nameZh} (km)` : '距中国大陆 (km)', color: '#fff' },
+            { v: fmt(displayedDistanceKm), label: hasImportDistance ? `距最近输入 ${importLocZh} (km)` : '距中国大陆 (km)', color: '#fff' },
           ].map((m, i) => (
             <View
               key={i}
@@ -414,45 +436,47 @@ export default function HomePage() {
           <Text style={{ fontSize: '26rpx', fontWeight: 600, color: '#374151' }}>各血清型关注等级</Text>
           <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginLeft: 'auto' }}>按威胁程度排序</Text>
         </View>
+        {/* Compressed (audit #11): smaller circle, tighter padding, single-row
+            description. All 5 stay visible but take ~half the vertical space. */}
         {ranking.map((r, i) => {
           const s = SEROTYPES[r.id];
           return (
             <View
               key={r.id}
-              className="flex items-center gap-3"
+              className="flex items-center"
               style={{
                 background: r.bg,
                 border: `1rpx solid ${r.border}`,
-                borderRadius: '12rpx',
-                padding: '16rpx 18rpx',
-                marginBottom: '8rpx',
+                borderRadius: '10rpx',
+                padding: '10rpx 14rpx',
+                marginBottom: '6rpx',
               }}
             >
               <View
                 style={{
-                  width: '48rpx',
-                  height: '48rpx',
-                  borderRadius: '24rpx',
+                  width: '32rpx',
+                  height: '32rpx',
+                  borderRadius: '16rpx',
                   background: s.color + '22',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0,
+                  marginRight: '16rpx',
                 }}
               >
-                <Text style={{ fontSize: '22rpx', fontWeight: 700, color: s.color }}>{i + 1}</Text>
+                <Text style={{ fontSize: '18rpx', fontWeight: 700, color: s.color }}>{i + 1}</Text>
               </View>
               <View className="flex-1 min-w-0">
-                <View className="flex items-center gap-2 flex-wrap">
-                  <Text style={{ fontSize: '26rpx', fontWeight: 600, color: '#111827' }}>{s.nameZh}</Text>
-                  <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>{s.nameEn}</Text>
-                  <Text style={{ fontSize: '20rpx', color: s.color, fontWeight: 500 }}>{r.label}</Text>
+                <View className="flex items-center flex-wrap" style={{ gap: '8rpx' }}>
+                  <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#111827' }}>{s.nameZh}</Text>
+                  <Text style={{ fontSize: '18rpx', color: s.color, fontWeight: 500 }}>{r.label}</Text>
                 </View>
                 <Text
-                  style={{ fontSize: '20rpx', color: '#6b7280', marginTop: '4rpx', display: 'block', lineHeight: 1.4 }}
+                  style={{ fontSize: '18rpx', color: '#6b7280', marginTop: '2rpx', display: 'block', lineHeight: 1.3 }}
                   className="truncate"
                 >
-                  {s.humanToHuman ? '⚠ 可人际传播 · ' : ''}宿主: {s.primaryHost.split('(')[0].trim()} · 病死率 {s.fatalityRate}
+                  {s.humanToHuman ? '⚠ 可人传 · ' : ''}{s.primaryHost.split('(')[0].trim()} · 病死率 {s.fatalityRate}
                 </Text>
               </View>
             </View>
@@ -524,8 +548,9 @@ export default function HomePage() {
             <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>国际 + 国内 · 按日期倒序</Text>
           </View>
           <FeedLegend feedId="recent-cases" />
+          {/* Filtered to official sources only per audit — see web mirror. */}
           <RecentCasesList
-            cases={liveRecentCases}
+            cases={officialRecentCases}
             monitoringLeads={briefContent.metrics.monitoringLeads}
             maxRows={12}
           />
@@ -549,7 +574,7 @@ export default function HomePage() {
             </View>
           </View>
           <FeedLegend feedId="realtime" />
-          <RealtimeFeedSection feed={realtimeFeed} previewCount={2} />
+          <RealtimeFeedSection feed={realtimeFeed} previewCount={10} />
         </View>
       </View>
 
@@ -567,42 +592,37 @@ export default function HomePage() {
       </View>
 
       {/* ============================================================ */}
-      {/* SECTION 6 · 订阅 + 反馈 CTA                                    */}
+      {/* SECTION 6 · 反馈/导航 footer                                   */}
+      {/*                                                                */}
+      {/* The full subscribe-alerts CTA was REMOVED from miniapp on      */}
+      {/* 2026-05-27 (audit #16): WeChat reviewers reject email-capture  */}
+      {/* flows as PII collection, blocking app-store listing. Web users */}
+      {/* still get the subscribe surface; miniapp users link out for    */}
+      {/* email alerts on the web at bingduguancha.com.                  */}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx', marginBottom: '32rpx' }}>
         <View
-          className="card"
-          style={{ background: 'linear-gradient(to right, #eff6ff, #dbeafe)', border: '1rpx solid #bfdbfe' }}
+          className="flex items-center"
+          style={{
+            justifyContent: 'center',
+            gap: '12rpx',
+            padding: '20rpx 0',
+            borderTop: '1rpx solid #e5e7eb',
+          }}
         >
-          <View className="flex items-center gap-2">
-            <Text style={{ fontSize: '24rpx', color: '#1e40af' }}>🔔</Text>
-            <Text style={{ fontSize: '28rpx', fontWeight: 600 }}>订阅预警通知</Text>
-          </View>
-          <Text style={{ fontSize: '22rpx', color: '#4b5563', marginTop: '6rpx', marginBottom: '12rpx', display: 'block', lineHeight: 1.5 }}>
-            只在以下情况通知你：聚集地距离跨圈层 / HPI 跨阈值 / 官方发布新通报。<Text style={{ color: '#374151', fontWeight: 600 }}>不会发送日常推送。</Text>
-          </Text>
-          <Text style={{ fontSize: '20rpx', color: '#6b7280', display: 'block', marginTop: '8rpx' }}>
-            风险等级变化时，可通过病毒观察 Web 版订阅邮件通知（bingduguancha.com）。
-          </Text>
-
-          <View
-            className="flex items-center gap-3 mt-3 pt-3"
-            style={{ borderTop: '1rpx solid #bfdbfe' }}
+          <Text
+            style={{ fontSize: '22rpx', color: '#6b7280' }}
+            onClick={() => Taro.navigateTo({ url: '/pages/feedback/index' })}
           >
-            <Text
-              style={{ fontSize: '22rpx', color: '#6b7280' }}
-              onClick={() => Taro.navigateTo({ url: '/pages/feedback/index' })}
-            >
-              反馈建议 →
-            </Text>
-            <Text style={{ color: '#d1d5db', fontSize: '22rpx' }}>·</Text>
-            <Text
-              style={{ fontSize: '22rpx', color: '#6b7280' }}
-              onClick={() => Taro.switchTab({ url: '/pages/data/index' })}
-            >
-              查看完整数据 →
-            </Text>
-          </View>
+            反馈建议 →
+          </Text>
+          <Text style={{ color: '#d1d5db', fontSize: '22rpx' }}>·</Text>
+          <Text
+            style={{ fontSize: '22rpx', color: '#6b7280' }}
+            onClick={() => Taro.switchTab({ url: '/pages/data/index' })}
+          >
+            查看完整数据 →
+          </Text>
         </View>
       </View>
     </View>

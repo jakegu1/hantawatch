@@ -131,7 +131,17 @@ export interface ImportProximity {
   iso2: string;
   flag: string;
   nameZh: string;
+  /** Optional city name in Chinese — when present, the UI shows e.g.
+   *  "🇫🇷 法国 尼斯" instead of just "🇫🇷 法国". Driven by the cityZh
+   *  field on the import record. */
+  cityZh?: string;
   distanceKm: number;
+  /** Whether the displayed `distanceKm` was computed from precise lat/lon
+   *  (true) or fell back to the country-capital lookup table (false). The
+   *  hero card adds a tiny "(精确至城市)" hint when this is true so the
+   *  user knows why the number changed from yesterday's country-level
+   *  estimate. */
+  distanceIsCityPrecise: boolean;
   status: ImportStatus;
   statusZh: string;
   /** HPI discount weight for this status */
@@ -146,7 +156,13 @@ export interface ImportProximity {
 
 /** Lightweight import record — matches the shape in mv-hondius-imports.json.
  *  We don't import the full MvHondiusImport type here to keep the module
- *  leaf-level (no Supabase / heavy type deps). */
+ *  leaf-level (no Supabase / heavy type deps).
+ *
+ *  City-level fields (cityZh / lat / lon) are optional. When lat+lon are
+ *  supplied, findNearestImport uses haversine for distance; otherwise it
+ *  falls back to the country-capital lookup table. cityZh alone (no lat/lon)
+ *  is still useful — it improves the display label without changing the
+ *  distance number. */
 export interface ImportRecord {
   iso2: string;
   status: string;
@@ -154,6 +170,10 @@ export interface ImportRecord {
   confirmedImports?: number;
   quarantineCount?: number;
   monitoringCount?: number;
+  cityZh?: string;
+  city?: string;
+  lat?: number;
+  lon?: number;
 }
 
 /** Simple distance-ring scoring matching lib/hpi.ts#distanceScore. */
@@ -162,6 +182,33 @@ function distScore(km: number): number {
   if (km > 3_000) return 20;
   if (km > 500) return 50;
   return 100;
+}
+
+/** Beijing reference point (city centre, Tiananmen) for haversine
+ *  computations against event lat/lon. Picked because:
+ *    1. It's the political/transit capital — the most "available" target
+ *       for "how far is this from China?" framing.
+ *    2. The earlier ISO2_DISTANCE_KM table is also Beijing-centric
+ *       (e.g. Paris → Beijing = 8,400 km, which we keep as the FR fallback).
+ *    3. Switching reference would create a step-jump in displayed numbers
+ *       between events with vs. without lat/lon. Stay consistent. */
+const BEIJING_LAT = 39.9042;
+const BEIJING_LON = 116.4074;
+
+/** Great-circle distance via haversine, rounded to nearest 10 km so casual
+ *  drift in source coordinates (e.g. switching from city centroid to
+ *  airport) doesn't produce visible churn. */
+function haversineKmToBeijing(lat: number, lon: number): number {
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const R = 6371; // earth radius in km
+  const dLat = toRad(lat - BEIJING_LAT);
+  const dLon = toRad(lon - BEIJING_LON);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(BEIJING_LAT)) * Math.cos(toRad(lat)) * Math.sin(dLon / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const km = R * c;
+  return Math.round(km / 10) * 10;
 }
 
 const DIRECT_FLIGHT_TO_CHINA = new Set([
@@ -179,14 +226,32 @@ function travelConnectivityZh(level: ImportProximity['travelConnectivity']): str
 }
 
 /** Find the nearest import with the highest effective HPI contribution.
- *  Returns null when there are no active imports, or all have status=closed. */
+ *  Returns null when there are no active imports, or all have status=closed.
+ *
+ *  Distance source priority (highest to lowest):
+ *    1. haversine(lat, lon) — when both lat & lon are present on the record.
+ *       Sets distanceIsCityPrecise = true, populates cityZh for display.
+ *    2. ISO2_DISTANCE_KM[iso2] — country-capital fallback. Older / less-
+ *       detailed records hit this path and look exactly like before. */
 export function findNearestImport(imports: ImportRecord[]): ImportProximity | null {
   let best: ImportProximity | null = null;
 
   for (const imp of imports) {
     const iso = imp.iso2.toUpperCase();
-    const km = ISO2_DISTANCE_KM[iso];
-    if (!km) continue; // country not in distance table — skip
+
+    // Distance: prefer per-event lat/lon when both present, else fall back
+    // to the country-capital lookup table.
+    let km: number;
+    let cityPrecise = false;
+    if (typeof imp.lat === 'number' && typeof imp.lon === 'number') {
+      km = haversineKmToBeijing(imp.lat, imp.lon);
+      cityPrecise = true;
+    } else {
+      const lookup = ISO2_DISTANCE_KM[iso];
+      if (!lookup) continue; // country not in distance table — skip
+      km = lookup;
+    }
+
     const status = (imp.status as ImportStatus) ?? 'monitoring';
     const w = STATUS_WEIGHT[status] ?? 0;
     if (w === 0) continue; // closed — not relevant
@@ -197,7 +262,9 @@ export function findNearestImport(imports: ImportRecord[]): ImportProximity | nu
       iso2: iso,
       flag: ISO2_FLAG[iso] ?? '🌐',
       nameZh: ISO2_NAME_ZH[iso] ?? iso,
+      cityZh: imp.cityZh,
       distanceKm: km,
+      distanceIsCityPrecise: cityPrecise,
       status,
       statusZh: STATUS_LABEL_ZH[status] ?? status,
       weight: w,

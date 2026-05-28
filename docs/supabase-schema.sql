@@ -156,6 +156,104 @@ create index if not exists idx_imports_overrides_status
   on imports_overrides (status, proposed_at desc);
 
 -- ---------------------------------------------------------------------
+-- Table 6: mv_hondius_imports_additions
+--   Editor-driven NEW import events for the MV Hondius outbreak, added
+--   from the /admin "🛬 输入事件" tab without touching
+--   apps/web/src/data/mv-hondius-imports.json.
+--
+--   Why a new table instead of reusing imports_overrides?
+--   - imports_overrides is keyed by (outbreak_id, iso2) — one row per
+--     country. It models "merge counts into the WHO ledger for country X."
+--   - This table is for *individual* events with optional city precision:
+--     "France → Nice → 1 case confirmed", "USA → LA → monitoring",
+--     "USA → NYC → quarantine" (two separate rows, same country).
+--   - Each row therefore needs its own `id`.
+--
+--   Geocoding pipeline:
+--   - On insert, the API geocodes (iso2, city_zh) via Nominatim and
+--     stores lat/lon directly here. No re-geocoding on read.
+--   - geocode_cache (Table 7) is the cross-row dedupe layer.
+--
+--   Merge at runtime (apps/web/src/lib/mv-hondius-overrides.ts):
+--   - GET /api/hondius-imports returns baseline JSON ∪ approved additions.
+--   - Homepage useMemo on the merged list recomputes nearest import.
+--
+--   Workflow:
+--   - 'proposed' — saved but not visible on the homepage
+--   - 'approved' — visible on the homepage (default for admin-added rows)
+--   - 'rejected' — explicit dismiss; hidden indefinitely
+-- ---------------------------------------------------------------------
+create table if not exists mv_hondius_imports_additions (
+  id                  text primary key,
+  outbreak_id         text not null,
+  iso2                text not null,
+  city_zh             text,
+  city_en             text,
+  -- WGS84 coords from geocoder (Nominatim) or manual override.
+  lat                 double precision,
+  lon                 double precision,
+  status              text not null check (status in (
+                        'monitoring',
+                        'presumptive_positive',
+                        'quarantine_active',
+                        'imports_confirmed',
+                        'closed'
+                      )),
+  confirmed_imports   int,
+  monitoring_count    int,
+  quarantine_count    int,
+  deaths              int default 0,
+  as_of               date not null,
+  summary_zh          text,
+  source_name         text,
+  source_url          text,
+  source_confidence   text default 'official' check (source_confidence in ('official','news')),
+  -- Workflow & audit
+  proposal_status     text not null default 'approved' check (proposal_status in ('proposed','approved','rejected')),
+  proposed_by         text,
+  proposed_at         timestamptz not null default now(),
+  decided_by          text,
+  decided_at          timestamptz,
+  deleted_at          timestamptz
+);
+
+create index if not exists idx_mv_hondius_additions_active
+  on mv_hondius_imports_additions (proposal_status, as_of desc)
+  where deleted_at is null;
+
+create index if not exists idx_mv_hondius_additions_outbreak_iso
+  on mv_hondius_imports_additions (outbreak_id, iso2)
+  where deleted_at is null;
+
+-- ---------------------------------------------------------------------
+-- Table 7: geocode_cache
+--   Caches Nominatim (OpenStreetMap) responses so we don't re-query for
+--   the same (city, country) pair. Nominatim's free tier requires
+--   <=1 req/sec and a real User-Agent — this table is the rate-limit
+--   safety net.
+--
+--   Cache key normalization:
+--     cache_key = lower(iso2) || ':' || lower(trim(city_input))
+--   so "Nice", "nice", "  Nice  " all hit the same row.
+--
+--   `not_found = true` rows are *also* cached (90-day TTL via app logic)
+--   to prevent retry storms when admin types a misspelling.
+-- ---------------------------------------------------------------------
+create table if not exists geocode_cache (
+  cache_key       text primary key,
+  city_input      text not null,
+  iso2            text not null,
+  lat             double precision,
+  lon             double precision,
+  display_name    text,
+  not_found       boolean not null default false,
+  resolved_at     timestamptz not null default now()
+);
+
+create index if not exists idx_geocode_cache_resolved_at
+  on geocode_cache (resolved_at desc);
+
+-- ---------------------------------------------------------------------
 -- Row-Level Security:
 --   We access these tables ONLY from the Next.js server side, using the
 --   service_role key. RLS therefore doesn't matter for our app, but
@@ -167,14 +265,18 @@ alter table cluster_overrides     enable row level security;
 alter table manual_news_entries   enable row level security;
 alter table feedback              enable row level security;
 alter table imports_overrides     enable row level security;
+alter table mv_hondius_imports_additions enable row level security;
+alter table geocode_cache         enable row level security;
 
 -- No policies created → all anon/auth requests blocked. Service-role
 -- bypasses RLS automatically.
 
 -- ---------------------------------------------------------------------
 -- Verification (paste into SQL editor after running the above):
---   select count(*) from alert_subscriptions;     -- should work
---   select * from cluster_overrides limit 5;      -- empty initially
---   select * from manual_news_entries limit 5;    -- empty initially
---   select * from imports_overrides limit 5;      -- empty initially
+--   select count(*) from alert_subscriptions;            -- should work
+--   select * from cluster_overrides limit 5;             -- empty initially
+--   select * from manual_news_entries limit 5;           -- empty initially
+--   select * from imports_overrides limit 5;             -- empty initially
+--   select * from mv_hondius_imports_additions limit 5;  -- empty initially
+--   select * from geocode_cache limit 5;                 -- empty initially
 -- ---------------------------------------------------------------------

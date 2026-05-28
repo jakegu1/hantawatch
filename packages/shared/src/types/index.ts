@@ -186,6 +186,17 @@ export interface MvHondiusImport {
   status: MvHondiusStatus;
   summary_zh: string;           // ≤ 80 chars: latest situation in Chinese
   source: DataSource;
+  /** Optional city-level fields. When `lat`/`lon` are provided, the homepage
+   *  computes the Beijing→event-city great-circle distance via haversine
+   *  instead of falling back to country-capital distance. This matters for
+   *  large countries (US east-vs-west coast diff ≈ 1,500 km) and for events
+   *  in cities far from the capital (e.g. France—Nice is ~140 km closer to
+   *  Beijing than Paris). All three fields are optional; supply at least
+   *  cityZh for display, plus lat+lon for accurate distance. */
+  cityZh?: string;              // 中文城市名，例如 "尼斯"
+  city?: string;                // English city, optional
+  lat?: number;                 // decimal degrees, e.g. 43.7034
+  lon?: number;                 // decimal degrees, e.g. 7.2663
 }
 
 export interface MvHondiusImportsFile {

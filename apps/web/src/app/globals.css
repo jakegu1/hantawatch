@@ -11,6 +11,44 @@
     --color-risk-elevated: #ca8a04;
     --color-risk-high: #ea580c;
     --color-risk-severe: #dc2626;
+
+    /* "清冷医疗仪表盘" tokens (2026-05-28 visual upgrade, revised iteration 2)
+       Inspired by Linear / Vercel: soft surfaces, hairline borders, layered
+       low-opacity shadows. Numbers always tabular for that "instrument
+       cluster" feel.
+
+       Iteration 2 (Jake feedback): the original surface-base #f8fafc was
+       too close to white-on-white. We now run a 3-track contrast bump:
+         (a) base shifts to #eef2f7 (cooler, 3% darker than slate-50),
+         (b) body adds a dot-grid texture (4% opacity, 18px lattice) so the
+             negative space has "fabric" and white cards visibly float,
+         (c) hairline border bumped 6% → 8% so card edges read on the new
+             surface without needing an obvious shadow. */
+    --hw-surface-base: #eef2f7;          /* cool slate-100/50 hybrid */
+    --hw-surface-card: #ffffff;           /* card body — full white */
+    --hw-surface-subtle: #e2e8f0;        /* slate-200 — quiet zones */
+    --hw-border-hairline: rgba(15, 23, 42, 0.08);  /* slate-900 @ 8% */
+    --hw-border-soft: rgba(15, 23, 42, 0.12);
+    --hw-text-strong: #0f172a;            /* slate-900 */
+    --hw-text-body: #334155;              /* slate-700 */
+    --hw-text-muted: #64748b;             /* slate-500 */
+    --hw-text-faint: #94a3b8;             /* slate-400 */
+    --hw-accent-teal: #0d9488;            /* teal-600 — calm trust */
+    --hw-accent-blue: #0284c7;            /* sky-600 — info */
+    --hw-accent-amber: #d97706;           /* amber-600 — pending */
+    --hw-accent-coral: #e11d48;           /* rose-600 — danger (sparingly) */
+
+    /* Dot-grid texture used by body — kept here so it can also be reused
+       on hero/section backgrounds via `background: var(--hw-dot-pattern)`. */
+    --hw-dot-pattern: radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+
+    /* Layered shadows — Linear's signature recipe: tiny crisp + diffuse glow.
+       Bumped slightly in iter 2 to compensate for the more textured surface. */
+    --hw-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05), 0 1px 1px rgba(15, 23, 42, 0.03);
+    --hw-shadow-md: 0 1px 2px rgba(15, 23, 42, 0.05), 0 4px 16px rgba(15, 23, 42, 0.07);
+    --hw-shadow-lg: 0 2px 4px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.08);
+    --hw-shadow-glow-emerald: 0 0 0 1px rgba(16, 185, 129, 0.12), 0 8px 24px rgba(16, 185, 129, 0.10);
+    --hw-shadow-glow-amber: 0 0 0 1px rgba(217, 119, 6, 0.12), 0 8px 24px rgba(217, 119, 6, 0.10);
   }
 
   html {
@@ -23,10 +61,19 @@
   }
 
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply text-slate-900 antialiased;
+    /* Iteration 2: dot-grid texture on top of the cool base.
+       The texture is barely visible but gives the page surface "fabric",
+       so the all-white cards on top now feel like they're floating instead
+       of bleeding into the background. */
+    background-color: var(--hw-surface-base);
+    background-image: var(--hw-dot-pattern);
+    background-size: 18px 18px;
+    background-attachment: fixed;
     font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
     /* Make sure long ASCII strings (URLs in feed cards etc.) don't push layouts wider than viewport */
     word-wrap: break-word;
+    font-feature-settings: "tnum" on, "lnum" on;  /* tabular numerals for stability */
   }
 
   /* Tap-friendly: links + buttons get faster feedback than the default 300ms tap delay */
@@ -47,17 +94,80 @@
     @apply mx-auto max-w-4xl px-4 sm:px-6;
   }
 
+  /* Default card — upgraded to layered hairline + soft shadow. */
   .card {
-    @apply rounded-xl border border-gray-100 bg-white p-4 shadow-sm sm:p-6;
+    @apply rounded-2xl bg-white p-4 sm:p-6;
+    border: 1px solid var(--hw-border-hairline);
+    box-shadow: var(--hw-shadow-sm);
+  }
+
+  /* Premium card — used by hero metric cards (HPI, Distance) where the
+     surface needs to feel substantial against the soft background. */
+  .card-premium {
+    @apply rounded-2xl bg-white p-4 sm:p-5;
+    border: 1px solid var(--hw-border-hairline);
+    box-shadow: var(--hw-shadow-md);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card-premium:hover {
+    box-shadow: var(--hw-shadow-lg);
+  }
+
+  /* Spotlight card — for the single most important number on the page.
+     Subtle accent ring, no border, slightly elevated. */
+  .card-spotlight {
+    @apply rounded-2xl bg-white p-4 sm:p-5;
+    border: 1px solid var(--hw-border-hairline);
+    box-shadow: var(--hw-shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    position: relative;
+  }
+
+  /* Quiet zone — barely-there panel for grouped content (recent cases etc) */
+  .card-quiet {
+    @apply rounded-2xl p-4 sm:p-5;
+    background: var(--hw-surface-subtle);
+    border: 1px solid var(--hw-border-hairline);
+  }
+
+  /* Accent bar — used by DailyBriefBanner to mark the "today" lede. */
+  .hw-accent-bar {
+    position: relative;
+  }
+  .hw-accent-bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12%;
+    bottom: 12%;
+    width: 3px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, var(--hw-accent-teal) 0%, var(--hw-accent-blue) 100%);
+  }
+
+  /* Form input — slate-themed, sized to match the rest of the admin UI. */
+  .input {
+    @apply block w-full rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-sm text-slate-800
+           placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/40 focus:border-sky-500
+           disabled:bg-slate-50 disabled:text-slate-400 transition-colors;
+  }
+  textarea.input {
+    @apply leading-relaxed resize-y;
   }
 
   .badge {
     @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
   }
 
-  .badge-low { @apply bg-green-100 text-green-800; }
-  .badge-moderate { @apply bg-blue-100 text-blue-800; }
-  .badge-elevated { @apply bg-yellow-100 text-yellow-800; }
-  .badge-high { @apply bg-orange-100 text-orange-800; }
-  .badge-severe { @apply bg-red-100 text-red-800; }
+  .badge-low { @apply bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200/60; }
+  .badge-moderate { @apply bg-sky-50 text-sky-700 ring-1 ring-sky-200/60; }
+  .badge-elevated { @apply bg-amber-50 text-amber-700 ring-1 ring-amber-200/60; }
+  .badge-high { @apply bg-orange-50 text-orange-700 ring-1 ring-orange-200/60; }
+  .badge-severe { @apply bg-rose-50 text-rose-700 ring-1 ring-rose-200/60; }
+
+  /* Headline-grade big number (used by hero "现报 N 例" zone) */
+  .hw-num-hero {
+    font-feature-settings: "tnum" on;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
 }

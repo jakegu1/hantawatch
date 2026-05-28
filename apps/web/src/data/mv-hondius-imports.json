@@ -52,11 +52,15 @@
     },
     {
       "iso2": "FR",
+      "cityZh": "尼斯",
+      "city": "Nice",
+      "lat": 43.7034,
+      "lon": 7.2663,
       "date": "2026-05-15",
       "confirmedImports": 1,
       "deaths": 0,
       "status": "imports_confirmed",
-      "summary_zh": "WHO 5 月 15 日更新通报中包含法国 1 例新确诊输入；初步接触者监测中未发症状。",
+      "summary_zh": "WHO 5 月 15 日更新通报中包含法国尼斯 1 例新确诊输入；初步接触者监测中未发症状。",
       "source": {
         "name": "WHO Disease Outbreak News / Santé publique France",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",

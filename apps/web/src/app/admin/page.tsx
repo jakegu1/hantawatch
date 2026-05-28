@@ -8,9 +8,11 @@ import { ClusterReviewQueue } from '@/components/cluster-review-queue';
 import { ManualDataPanel } from '@/components/manual-data-panel';
 import { NewsCmsPanel } from '@/components/news-cms-panel';
 import { ImportsReviewQueue } from '@/components/imports-review-queue';
+import { MvImportsEditor } from '@/components/mv-imports-editor';
 import {
   CheckCircle, BarChart3, MessageSquare, Settings, Globe,
   Mail, Download, RefreshCw, LogOut, FileEdit, Newspaper,
+  Plane,
 } from 'lucide-react';
 
 interface AnalyticsStats {
@@ -49,7 +51,7 @@ interface SubscribersResponse {
   error?: string;
 }
 
-type TabId = 'review' | 'imports' | 'news' | 'manual' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
+type TabId = 'review' | 'imports' | 'mvimports' | 'news' | 'manual' | 'hpi' | 'analytics' | 'feedback' | 'subs' | 'data';
 
 /**
  * NOTE on auth (changed 2026-05-13):
@@ -159,6 +161,7 @@ export default function AdminPage() {
   const tabs = [
     { id: 'review' as const, label: '审核队列', icon: CheckCircle },
     { id: 'imports' as const, label: '进出口审核', icon: Globe },
+    { id: 'mvimports' as const, label: '输入事件', icon: Plane },
     { id: 'news' as const, label: '通报管理', icon: Newspaper },
     { id: 'manual' as const, label: '手工数据', icon: FileEdit },
     { id: 'hpi' as const, label: 'HPI因子', icon: Settings },
@@ -208,6 +211,13 @@ export default function AdminPage() {
       {/* Imports Review — approve/reject auto-detected country import proposals
           from ArcGIS + realtime feed. Backed by Supabase (imports_overrides table). */}
       {activeTab === 'imports' && <ImportsReviewQueue />}
+
+      {/* MV Hondius import event editor — add new country+city events with
+          auto-geocoding (Nominatim) and impact preview. Backed by
+          Supabase (mv_hondius_imports_additions table); merged with
+          baseline mv-hondius-imports.json at runtime via
+          GET /api/hondius-imports. */}
+      {activeTab === 'mvimports' && <MvImportsEditor />}
 
       {/* News CMS — add/delete "最新通报" timeline entries. Backed by
           Supabase (manual_news_entries table); homepage merges these on top

@@ -170,7 +170,13 @@ export interface ImportProximity {
   iso2: string;
   flag: string;
   nameZh: string;
+  /** Optional Chinese city name. When present, the UI shows e.g.
+   *  "🇫🇷 法国 尼斯" instead of just "🇫🇷 法国". */
+  cityZh?: string;
   distanceKm: number;
+  /** True when distance was computed from per-event lat/lon (haversine);
+   *  false when it fell back to the country-capital lookup table. */
+  distanceIsCityPrecise: boolean;
   status: ImportStatus;
   statusZh: string;
   weight: number;
@@ -187,6 +193,10 @@ export interface ImportRecord {
   confirmedImports?: number;
   quarantineCount?: number;
   monitoringCount?: number;
+  cityZh?: string;
+  city?: string;
+  lat?: number;
+  lon?: number;
 }
 
 function distScore(km: number): number {
@@ -194,6 +204,24 @@ function distScore(km: number): number {
   if (km > 3_000) return 20;
   if (km > 500) return 50;
   return 100;
+}
+
+/** Beijing reference for haversine. Same as apps/web/src/lib/nearest-cluster.ts.
+ *  Switching reference would create a step-jump between events with vs.
+ *  without lat/lon — stay consistent with the country-capital table. */
+const BEIJING_LAT = 39.9042;
+const BEIJING_LON = 116.4074;
+
+function haversineKmToBeijing(lat: number, lon: number): number {
+  const toRad = (deg: number) => (deg * Math.PI) / 180;
+  const R = 6371;
+  const dLat = toRad(lat - BEIJING_LAT);
+  const dLon = toRad(lon - BEIJING_LON);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(BEIJING_LAT)) * Math.cos(toRad(lat)) * Math.sin(dLon / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return Math.round((R * c) / 10) * 10;
 }
 
 const DIRECT_FLIGHT_TO_CHINA = new Set([
@@ -215,8 +243,20 @@ export function findNearestImport(imports: ImportRecord[]): ImportProximity | nu
 
   for (const imp of imports) {
     const iso = imp.iso2.toUpperCase();
-    const km = ISO2_DISTANCE_KM[iso];
-    if (!km) continue;
+
+    // Prefer per-event lat/lon (haversine) when available; else fall back
+    // to the country-capital lookup table.
+    let km: number;
+    let cityPrecise = false;
+    if (typeof imp.lat === 'number' && typeof imp.lon === 'number') {
+      km = haversineKmToBeijing(imp.lat, imp.lon);
+      cityPrecise = true;
+    } else {
+      const lookup = ISO2_DISTANCE_KM[iso];
+      if (!lookup) continue;
+      km = lookup;
+    }
+
     const status = (imp.status as ImportStatus) ?? 'monitoring';
     const w = STATUS_WEIGHT[status] ?? 0;
     if (w === 0) continue;
@@ -227,7 +267,9 @@ export function findNearestImport(imports: ImportRecord[]): ImportProximity | nu
       iso2: iso,
       flag: ISO2_FLAG[iso] ?? '🌐',
       nameZh: ISO2_NAME_ZH[iso] ?? iso,
+      cityZh: imp.cityZh,
       distanceKm: km,
+      distanceIsCityPrecise: cityPrecise,
       status,
       statusZh: STATUS_LABEL_ZH[status] ?? status,
       weight: w,

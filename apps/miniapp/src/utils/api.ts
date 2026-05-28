@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro';
-import type { HpiResult, ActiveCluster, CaseRecord, SerotypeId } from '@hantawatch/shared/types';
+import type { HpiResult, ActiveCluster, CaseRecord, MvHondiusImport, SerotypeId } from '@hantawatch/shared/types';
 
 const API_BASE = 'https://bingduguancha.com/api';
 
@@ -57,6 +57,22 @@ export function fetchClusters(): Promise<ActiveCluster[]> {
 
 export function fetchNewsEntries(): Promise<NewsEntriesPayload> {
   return request<NewsEntriesPayload>('/news-entries');
+}
+
+export interface HondiusImportsPayload {
+  outbreakName: string;
+  outbreakClusterId: string;
+  imports: MvHondiusImport[];
+  additionsCount: number;
+  supabaseReady: boolean;
+}
+
+/** Fetch the merged MV Hondius import list (baseline JSON ∪ approved
+ *  Supabase additions). Used by the home page to reflect editor-added
+ *  events without redeploying the miniapp. Falls back gracefully (caller
+ *  catches and uses the locally bundled baseline). */
+export function fetchHondiusImports(): Promise<HondiusImportsPayload> {
+  return request<HondiusImportsPayload>('/hondius-imports');
 }
 
 /** Submit feedback */
