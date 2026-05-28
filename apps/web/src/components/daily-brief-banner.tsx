@@ -1,135 +1,89 @@
 'use client';
 
-import { Calendar, TrendingUp, Activity, ShieldCheck, ArrowDown, ArrowUp, Minus } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import type { DailyBrief } from '@/lib/mock-data';
 
 interface DailyBriefBannerProps {
   brief: DailyBrief;
   /** 24h event headline — primary message for returning users */
   headline24h: string;
-  /** Honest status: WHO days + clue count */
+  /** Honest status (legacy): used only when the structural intake numbers below
+   *  are not supplied. */
   alertLabel: string;
+  /** Days since WHO's latest DON (from realtime-situation headline). */
+  whoDaysAgo?: number;
+  /** Number of realtime-feed updates ingested in the last 24h (from intake). */
+  intake24hCount?: number;
+  /** Number of high-confidence picks (= sinceWhoNewCases, from intake). */
+  highConfidencePicks?: number;
 }
 
-function formatDelta(n: number, unit = ''): {
-  sign: 'flat' | 'up' | 'down';
-  abs: string;
-} {
-  if (n === 0) return { sign: 'flat', abs: '持平' };
-  const magnitude = Math.abs(n).toLocaleString('zh-CN');
-  return { sign: n > 0 ? 'up' : 'down', abs: `${magnitude}${unit}` };
+const WEEKDAY_ZH = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+
+/** Build "5月27日 周三" from an ISO date "YYYY-MM-DD" — timezone-invariant. */
+function formatDateLong(iso: string): { headline: string; aria: string } {
+  if (!iso || iso.length < 10) return { headline: iso, aria: iso };
+  const y = Number(iso.slice(0, 4));
+  const m = Number(iso.slice(5, 7));
+  const d = Number(iso.slice(8, 10));
+  if (!y || !m || !d) return { headline: iso, aria: iso };
+  // Construct in UTC at noon — local-tz-invariant weekday since UTC noon
+  // never crosses midnight in any earthly timezone.
+  const dt = new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
+  const weekday = WEEKDAY_ZH[dt.getUTCDay()];
+  return {
+    headline: `${m}月${d}日 ${weekday}`,
+    aria: `${y}年${m}月${d}日 ${weekday}`,
+  };
 }
 
-const baselineLabel: Record<DailyBrief['domesticBaselineStatus'], { text: string; cls: string }> = {
-  normal: { text: '基线正常', cls: 'text-green-300' },
-  elevated: { text: '高于基线', cls: 'text-orange-300' },
-  below: { text: '低于基线', cls: 'text-blue-300' },
-};
+export function DailyBriefBanner({
+  brief,
+  headline24h,
+  alertLabel,
+  whoDaysAgo,
+  intake24hCount,
+  highConfidencePicks,
+}: DailyBriefBannerProps) {
+  const dateLabel = formatDateLong(brief.date);
 
-export function DailyBriefBanner({ brief, headline24h, alertLabel }: DailyBriefBannerProps) {
-  const distDelta = formatDelta(brief.distanceDeltaKm, ' km');
-  const hpiDelta = formatDelta(brief.hpiDelta);
-  const baseline = baselineLabel[brief.domesticBaselineStatus];
+  // 口径 B intake summary — replaces the legacy 结构指标 (距/HPI/基线 delta
+  // pills) which Jake's audit flagged as opaque. Renders only when collector
+  // supplies the numeric inputs; falls back to alertLabel otherwise.
+  const hasIntakeNumbers =
+    typeof whoDaysAgo === 'number' &&
+    typeof intake24hCount === 'number' &&
+    typeof highConfidencePicks === 'number';
 
-  const distToneCls =
-    distDelta.sign === 'flat'
-      ? 'text-blue-100'
-      : distDelta.sign === 'up'
-        ? 'text-green-300'
-        : 'text-red-300';
-  const hpiToneCls =
-    hpiDelta.sign === 'flat'
-      ? 'text-blue-100'
-      : hpiDelta.sign === 'up'
-        ? 'text-red-300'
-        : 'text-green-300';
-
-  const DeltaArrow = ({ sign }: { sign: 'flat' | 'up' | 'down' }) =>
-    sign === 'up' ? (
-      <ArrowUp className="h-3 w-3 flex-shrink-0" aria-hidden />
-    ) : sign === 'down' ? (
-      <ArrowDown className="h-3 w-3 flex-shrink-0" aria-hidden />
-    ) : (
-      <Minus className="h-3 w-3 flex-shrink-0" aria-hidden />
-    );
-
-  const DeltaPill = ({
-    icon: Icon,
-    label,
-    sign,
-    abs,
-    valueCls,
-    ariaLabel,
-  }: {
-    icon: typeof Activity;
-    label: string;
-    sign: 'flat' | 'up' | 'down';
-    abs: string;
-    valueCls: string;
-    ariaLabel: string;
-  }) => (
-    <div className="inline-flex items-center gap-1 whitespace-nowrap" role="group" aria-label={ariaLabel}>
-      <Icon className="h-3 w-3 opacity-70 flex-shrink-0" />
-      <span className="opacity-70">{label}</span>
-      <span className={`inline-flex items-center gap-0.5 font-semibold ${valueCls}`}>
-        <DeltaArrow sign={sign} />
-        {abs}
-      </span>
-    </div>
-  );
-
-  const distAria =
-    distDelta.sign === 'flat'
-      ? '距离较昨日持平'
-      : distDelta.sign === 'up'
-        ? `距离较昨日远离 ${distDelta.abs}`
-        : `距离较昨日逼近 ${distDelta.abs}`;
-  const hpiAria =
-    hpiDelta.sign === 'flat'
-      ? 'HPI 较昨日持平'
-      : hpiDelta.sign === 'up'
-        ? `HPI 较昨日上升 ${hpiDelta.abs}`
-        : `HPI 较昨日下降 ${hpiDelta.abs}`;
+  const intakeLine = hasIntakeNumbers
+    ? `距上次 WHO 官方更新 ${whoDaysAgo} 天 · 近 24h 抓取 ${intake24hCount} 条相关信息，精选 ${highConfidencePicks} 条高可信信号`
+    : alertLabel;
 
   return (
-    <div className="rounded-xl bg-white/10 backdrop-blur border border-white/15 px-3 py-2.5 mb-4">
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] sm:text-xs mb-1.5">
-        <div className="inline-flex items-center gap-1 font-medium whitespace-nowrap">
-          <Calendar className="h-3.5 w-3.5 opacity-80 flex-shrink-0" />
-          <span>今日 {brief.date.slice(5)}</span>
-        </div>
-        <span className="text-[10px] opacity-60 uppercase tracking-wide">24h 要点</span>
+    <div className="card-premium hw-accent-bar mb-4 !pl-4 sm:!pl-5">
+      {/* Row 1 — prominent date so the visitor sees the tool is tracking time. */}
+      <div className="flex items-center gap-2 mb-2">
+        <Calendar className="h-4 w-4 text-teal-600 flex-shrink-0" aria-hidden />
+        <span
+          className="text-sm sm:text-base font-semibold tracking-tight text-slate-900"
+          aria-label={dateLabel.aria}
+        >
+          {dateLabel.headline}
+        </span>
+        <span className="ml-auto text-[10px] font-medium uppercase tracking-wider text-slate-400">
+          24H 要点
+        </span>
       </div>
 
-      <p className="text-xs sm:text-sm text-white font-semibold leading-relaxed mb-2">{headline24h}</p>
+      {/* Row 2 — single high-signal headline (machine-deduped earlier). */}
+      <p className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed mb-2.5">
+        {headline24h}
+      </p>
 
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] sm:text-[11px] opacity-90">
-        <span className="opacity-50 mr-0.5">结构指标</span>
-        <DeltaPill
-          icon={Activity}
-          label="距"
-          sign={distDelta.sign}
-          abs={distDelta.abs}
-          valueCls={distToneCls}
-          ariaLabel={distAria}
-        />
-        <span className="opacity-30">·</span>
-        <DeltaPill
-          icon={TrendingUp}
-          label="HPI"
-          sign={hpiDelta.sign}
-          abs={hpiDelta.abs}
-          valueCls={hpiToneCls}
-          ariaLabel={hpiAria}
-        />
-        <span className="opacity-30 hidden sm:inline">·</span>
-        <div className="hidden sm:inline-flex items-center gap-1 whitespace-nowrap">
-          <ShieldCheck className="h-3 w-3 opacity-70" />
-          <span className={`font-semibold ${baseline.cls}`}>{baseline.text}</span>
-        </div>
-      </div>
-
-      <p className="mt-1.5 text-[10px] sm:text-[11px] text-white/90 leading-relaxed">{alertLabel}</p>
+      {/* Row 3 — intake summary: WHO age + 24h抓取 + 精选 picks. */}
+      <p className="text-[10px] sm:text-[11px] text-slate-500 leading-relaxed">
+        {intakeLine}
+      </p>
     </div>
   );
 }

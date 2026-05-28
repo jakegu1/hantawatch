@@ -78,16 +78,18 @@ export function DataFreshness({ meta, variant = 'pill' }: DataFreshnessProps) {
   const tone: 'ok' | 'warn' | 'err' =
     staleHours > 48 || !allOk ? 'err' : staleHours > 12 ? 'warn' : 'ok';
 
+  // Pulse dot — slightly darker shades than the original (green/yellow/red-300)
+  // since we now sit on a light hero rather than dark gradient.
   const dotCls =
     tone === 'ok'
-      ? 'bg-green-300'
+      ? 'bg-emerald-500'
       : tone === 'warn'
-        ? 'bg-yellow-300'
-        : 'bg-red-300';
+        ? 'bg-amber-500'
+        : 'bg-rose-500';
 
   if (variant === 'pill') {
     return (
-      <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 backdrop-blur border border-white/15 px-2.5 py-1 text-[10px] sm:text-[11px] text-white/90">
+      <div className="inline-flex items-center gap-1.5 rounded-full bg-white/70 backdrop-blur border border-slate-200/60 px-2.5 py-1 text-[10px] sm:text-[11px] text-slate-600 shadow-sm">
         <span className={`relative flex h-1.5 w-1.5 ${tone === 'ok' ? '' : ''}`}>
           <span className={`absolute inline-flex h-full w-full rounded-full ${dotCls} opacity-75 animate-ping`} />
           <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${dotCls}`} />

@@ -323,3 +323,183 @@ def test_ruler_markers_empty_when_calm() -> None:
     assert out["state"]["code"] == "calm"
     assert out["ruler"]["markers"] == []
 
+
+# ---------------------------------------------------------------------------
+# 口径 B (decided 2026-05-27) — headline must reflect "since WHO" news delta.
+#
+# When WHO's last DON is older than the freshest news signal we have, the
+# headline cannot just say "11 累计" — users will read "13 cases" in the news
+# the next moment and lose trust. The collector must compute and surface
+# `currentReportedCases = whoConfirmedCases + sinceWhoNewCases` so the
+# frontend can render "现报 13（WHO 已确认 11 · 待复核 2）".
+# ---------------------------------------------------------------------------
+
+
+def test_kojb_headline_when_news_adds_new_country_since_who() -> None:
+    """Tier-3 news of a *new* country (not yet in ledger) bumps current count."""
+    today = date(2026, 5, 27)
+    # Ledger: WHO 5/13, FR official post-WHO 5/26, ES official post-WHO 5/26.
+    # Realtime news: ZA (南非) delta_confirmed=1 on 5/27 — a 3rd country.
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 11, "confirmed": 8, "indeterminate": 3, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-13"},
+            "perCountry": [
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "monitoring": 0,
+                    "asOf": "2026-05-26",
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                },
+                {
+                    "iso2": "ZA",
+                    "nameZh": "南非",
+                    "confirmed": 0,
+                    "monitoring": 0,
+                    "asOf": "2026-05-13",
+                    "evidence": [],
+                },
+            ],
+        }
+    ]
+    news_entries = [
+        {
+            "iso2": "ZA",
+            "delta_confirmed": 1,
+            "delta_monitoring": 0,
+            "delta_deaths": 0,
+            "time": "2026-05-27T08:00:00Z",
+            "confidence": "high",
+            "reasoning_zh": "",
+        },
+    ]
+    out = build_realtime_situation(
+        outbreak_status=outbreak,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries(news_entries),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-27T08:30:00Z"},
+        today=today,
+    )
+    h = out["headline"]
+    assert h["whoConfirmedCases"] == 11
+    assert h["sinceWhoNewCases"] == 2, f"expected FR + ZA, got {h['sinceWhoNewCountries']}"
+    assert set(h["sinceWhoNewCountries"]) == {"法国", "南非"}
+    assert h["currentReportedCases"] == 13
+    # Backwards compat: totalCases remains WHO authoritative.
+    assert h["totalCases"] == 11
+
+
+def test_kojb_headline_when_no_news_delta_current_equals_who() -> None:
+    """No detection events newer than WHO → current = WHO, since-WHO = 0."""
+    today = date(2026, 5, 14)  # 1 day after WHO 5/13 — no news yet.
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 11, "confirmed": 8, "indeterminate": 3, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-13"},
+            # All perCountry asOf == WHO date → no since-WHO delta.
+            "perCountry": [
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "monitoring": 0,
+                    "asOf": "2026-05-13",
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+    out = build_realtime_situation(
+        outbreak_status=outbreak,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-14T08:30:00Z"},
+        today=today,
+    )
+    h = out["headline"]
+    assert h["whoConfirmedCases"] == 11
+    assert h["sinceWhoNewCases"] == 0
+    assert h["sinceWhoNewCountries"] == []
+    assert h["currentReportedCases"] == 11
+
+
+def test_kojb_headline_dedupes_same_country_multiple_news_events() -> None:
+    """Multiple news entries for the same country count as ONE since-WHO addition."""
+    today = date(2026, 5, 27)
+    news_entries = [
+        # Three news entries all naming Spain on different days post-WHO.
+        {
+            "iso2": "ES",
+            "delta_confirmed": 1,
+            "delta_monitoring": 0,
+            "delta_deaths": 0,
+            "time": f"2026-05-26T{hour:02d}:00:00Z",
+            "confidence": "high",
+            "reasoning_zh": "",
+        }
+        for hour in (10, 14, 22)
+    ]
+    out = build_realtime_situation(
+        outbreak_status=_outbreak_status(11),  # FR + ES with asOf 5/26
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries(news_entries),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-27T05:10:20Z"},
+        today=today,
+    )
+    h = out["headline"]
+    # FR is post-WHO official; ES adds via realtime news. Should be 2, not 4.
+    assert h["sinceWhoNewCases"] == 2
+    assert set(h["sinceWhoNewCountries"]) == {"法国", "西班牙"}
+    assert h["currentReportedCases"] == 13
+
+
+def test_kojb_intake_24h_counts_only_recent_updates() -> None:
+    """intake.last24hCount only counts realtime-feed `updates` within 24h of `now`."""
+    today = date(2026, 5, 27)
+    now = __import__("datetime").datetime(2026, 5, 27, 12, 0, 0, tzinfo=__import__("datetime").timezone.utc)
+    # 3 updates within 24h (5/26 13:00, 5/27 00:00, 5/27 11:59) + 2 outside.
+    realtime_feed = {
+        "updates": [
+            {"id": "a", "time": "2026-05-26T13:00:00Z", "summary_zh": "1"},
+            {"id": "b", "time": "2026-05-27T00:00:00Z", "summary_zh": "2"},
+            {"id": "c", "time": "2026-05-27T11:59:00Z", "summary_zh": "3"},
+            {"id": "d", "time": "2026-05-26T11:59:00Z", "summary_zh": "outside"},
+            {"id": "e", "time": "2026-05-25T12:00:00Z", "summary_zh": "way outside"},
+        ],
+        "entries": [],  # no extractions feeding events
+    }
+    out = build_realtime_situation(
+        outbreak_status=_outbreak_status(11),
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=realtime_feed,
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-27T12:00:00Z"},
+        today=today,
+        now=now,
+    )
+    assert out["intake"]["last24hCount"] == 3
+    # highConfidencePicks mirrors sinceWhoNewCases: FR (ledger official asOf 5/26) = 1.
+    assert out["intake"]["highConfidencePicks"] == out["headline"]["sinceWhoNewCases"]
+
+
+def test_kojb_intake_missing_updates_field_is_zero() -> None:
+    """If realtime_feed lacks `updates`, intake.last24hCount falls back to 0."""
+    today = date(2026, 5, 27)
+    out = build_realtime_situation(
+        outbreak_status=_outbreak_status(11),
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed={"entries": []},  # no `updates` key
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-27T05:10:20Z"},
+        today=today,
+    )
+    assert out["intake"]["last24hCount"] == 0
+    assert "highConfidencePicks" in out["intake"]
+

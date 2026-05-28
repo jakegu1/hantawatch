@@ -61,7 +61,7 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
   // "无活跃疫情" state. This is good news for the user!
   if (!nearest) {
     return (
-      <div className="rounded-xl bg-white text-gray-900 shadow-md p-4 sm:p-5">
+      <div className="card-premium">
         <div className="flex items-center gap-2 mb-1">
           <MapPin className="h-4 w-4 text-green-600" />
           <h3 className="font-semibold text-sm">最近 Andes 型疫情</h3>
@@ -86,14 +86,22 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
   const hasCloserImport = nearestImport != null && nearestImport.distanceKm < (sourceKm ?? Infinity);
   const displayKm = hasCloserImport ? nearestImport!.distanceKm : sourceKm;
   const displayFlag = hasCloserImport ? nearestImport!.flag : sourceFlag;
+  // City-precise location label when cityZh is present on the import record.
+  // E.g. "🇫🇷 法国 尼斯（确诊输入）" instead of "🇫🇷 法国（确诊输入）".
+  const importLocZh = hasCloserImport
+    ? nearestImport!.cityZh
+      ? `${nearestImport!.nameZh} ${nearestImport!.cityZh}`
+      : nearestImport!.nameZh
+    : '';
   const displayLocation = hasCloserImport
-    ? `${nearestImport!.flag} ${nearestImport!.nameZh}（${nearestImport!.statusZh}）`
+    ? `${nearestImport!.flag} ${importLocZh}（${nearestImport!.statusZh}）`
     : nearest.location?.name || '位置待定位';
 
   return (
-    <div className="rounded-xl bg-white text-gray-900 shadow-md overflow-hidden">
-      {/* Header strip */}
-      <div className="px-4 sm:px-5 py-3 bg-gradient-to-r from-red-50 to-orange-50 border-b border-orange-100">
+    <div className="card-premium !p-0 overflow-hidden">
+      {/* Header strip — softened from red/orange wash to amber tint
+          to match the new clinical-dashboard aesthetic. */}
+      <div className="px-4 sm:px-5 py-3 bg-gradient-to-r from-amber-50/70 to-rose-50/40 border-b border-slate-200/60">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-base sm:text-lg" aria-hidden>
@@ -170,7 +178,7 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
             <DistanceBar
               distanceKm={displayKm}
               markerColor={hasCloserImport ? '#d97706' : markerColor}
-              clusterLabel={hasCloserImport ? nearestImport!.nameZh : nearest.location?.name}
+              clusterLabel={hasCloserImport ? importLocZh : nearest.location?.name}
             />
           </div>
         )}

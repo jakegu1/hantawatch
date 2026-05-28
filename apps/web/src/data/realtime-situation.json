@@ -9,6 +9,10 @@
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 11,
+    "whoConfirmedCases": 11,
+    "sinceWhoNewCases": 2,
+    "sinceWhoNewCountries": ["西班牙", "法国"],
+    "currentReportedCases": 13,
     "whoLastUpdateZh": "5/13",
     "whoDaysAgo": 14,
     "domesticStatus": "safe",
@@ -196,5 +200,9 @@
       "updatedAt": "2026-05-27T13:50:42Z"
     }
   ],
+  "intake": {
+    "last24hCount": 16,
+    "highConfidencePicks": 2
+  },
   "realtimeUpdatedAt": "2026-05-27T15:35:00.282318+00:00"
 }

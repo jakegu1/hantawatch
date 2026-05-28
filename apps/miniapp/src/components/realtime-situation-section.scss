@@ -142,6 +142,81 @@
   font-size: 13px;
 }
 
+/* 口径 B headline blocks (mirror web realtime-situation-section.css) */
+
+.rs-card-hero-current {
+  display: flex;
+  align-items: baseline;
+  margin: 4px 0 6px;
+}
+
+.rs-card-hero-current-prefix {
+  font-size: 22rpx;
+  color: #6b7280;
+  font-weight: 500;
+  margin-right: 8rpx;
+}
+
+.rs-card-hero-current-num {
+  font-size: 68rpx;
+  font-weight: 800;
+  line-height: 1;
+  color: #b91c1c;
+}
+
+.rs-card-hero-current-suffix {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #374151;
+  margin-left: 6rpx;
+}
+
+.rs-card-hero-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 22rpx;
+  color: #4b5563;
+  margin-bottom: 8rpx;
+  line-height: 1.5;
+}
+
+.rs-card-hero-breakdown-confirmed,
+.rs-card-hero-breakdown-pending {
+  margin-right: 12rpx;
+}
+
+.rs-card-hero-breakdown-strong--confirmed {
+  color: #1e3a8a;
+  font-weight: 700;
+  margin: 0 4rpx;
+}
+
+.rs-card-hero-breakdown-strong--pending {
+  color: #b45309;
+  font-weight: 700;
+  margin: 0 4rpx;
+}
+
+.rs-card-hero-breakdown-sep {
+  color: #9ca3af;
+  font-weight: 500;
+  margin: 0 8rpx;
+}
+
+.rs-card-hero-breakdown-where {
+  color: #6b7280;
+  font-size: 20rpx;
+  margin-left: 2rpx;
+}
+
+.rs-card-hero-who {
+  font-size: 20rpx;
+  color: #9ca3af;
+  margin-bottom: 8rpx;
+  letter-spacing: 0.02em;
+}
+
 .rs-card-hero-domestic {
   display: flex;
   align-items: center;

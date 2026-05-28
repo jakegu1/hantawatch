@@ -259,17 +259,23 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
       ? headline.domesticDetails
       : '检测到本土相关信号，请关注官方通报';
 
-  const totalCasesLine =
-    headline.totalCases > 0 ? (
-      <>
-        <Text className="rs-num">{headline.totalCases}</Text> 例累计 · WHO{' '}
-        <Text className="rs-muted">{headline.whoDaysAgo} 天前公布</Text>
-      </>
-    ) : (
-      <Text className="rs-muted">
-        无活跃聚集疫情 · WHO {headline.whoDaysAgo} 天前最近一次公布
-      </Text>
-    );
+  // 口径 B (2026-05-27): mirror web — show "现报 N 例（WHO 已确认 X · 待复核 Y）".
+  const whoConfirmed =
+    'whoConfirmedCases' in headline && typeof headline.whoConfirmedCases === 'number'
+      ? headline.whoConfirmedCases
+      : headline.totalCases;
+  const sinceWho =
+    'sinceWhoNewCases' in headline && typeof headline.sinceWhoNewCases === 'number'
+      ? headline.sinceWhoNewCases
+      : 0;
+  const currentReported =
+    'currentReportedCases' in headline && typeof headline.currentReportedCases === 'number'
+      ? headline.currentReportedCases
+      : whoConfirmed + sinceWho;
+  const sinceCountries =
+    'sinceWhoNewCountries' in headline && Array.isArray(headline.sinceWhoNewCountries)
+      ? (headline.sinceWhoNewCountries as string[])
+      : [];
 
   const daysWithoutAnyNews =
     'daysWithoutAnyNews' in data ? (data as { daysWithoutAnyNews?: number }).daysWithoutAnyNews : undefined;
@@ -303,7 +309,42 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
         <View className="rs-card-hero">
           <View className="rs-card-hero-title">{headline.outbreakName}</View>
-          <View className="rs-card-hero-stats">{totalCasesLine}</View>
+          {whoConfirmed > 0 || currentReported > 0 ? (
+            <>
+              <View className="rs-card-hero-current">
+                <Text className="rs-card-hero-current-prefix">现报</Text>
+                <Text className="rs-card-hero-current-num">{currentReported}</Text>
+                <Text className="rs-card-hero-current-suffix">例</Text>
+              </View>
+              <View className="rs-card-hero-breakdown">
+                <Text className="rs-card-hero-breakdown-confirmed">
+                  WHO 已确认 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--confirmed">{whoConfirmed}</Text>
+                </Text>
+                {sinceWho > 0 && (
+                  <>
+                    <Text className="rs-card-hero-breakdown-sep">+</Text>
+                    <Text className="rs-card-hero-breakdown-pending">
+                      待复核 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--pending">{sinceWho}</Text>
+                      {sinceCountries.length > 0 && (
+                        <Text className="rs-card-hero-breakdown-where">
+                          （{sinceCountries.slice(0, 3).join('、')}）
+                        </Text>
+                      )}
+                    </Text>
+                  </>
+                )}
+              </View>
+              <View className="rs-card-hero-who">
+                WHO {headline.whoLastUpdateZh} 公布 · {headline.whoDaysAgo} 天前
+              </View>
+            </>
+          ) : (
+            <View className="rs-card-hero-stats">
+              <Text className="rs-muted">
+                无活跃聚集疫情 · WHO {headline.whoDaysAgo} 天前最近一次公布
+              </Text>
+            </View>
+          )}
           <View className="rs-card-hero-domestic">
             <Text className={`rs-dot ${headline.domesticStatus === 'safe' ? 'rs-dot--green' : 'rs-dot--red'}`} />
             <Text>

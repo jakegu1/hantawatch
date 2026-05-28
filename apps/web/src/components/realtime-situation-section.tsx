@@ -254,17 +254,26 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
       ? headline.domesticDetails
       : '检测到本土相关信号，请关注官方通报';
 
-  const totalCasesLine =
-    headline.totalCases > 0 ? (
-      <>
-        <span className="rs-num">{headline.totalCases}</span> 例累计 · WHO{' '}
-        <span className="rs-muted">{headline.whoDaysAgo} 天前公布</span>
-      </>
-    ) : (
-      <span className="rs-muted">
-        无活跃聚集疫情 · WHO {headline.whoDaysAgo} 天前最近一次公布
-      </span>
-    );
+  // 口径 B (2026-05-27): show "现报 N 例（WHO 已确认 X · 待复核 Y）" so the
+  // displayed number matches what the user reads in the news the next moment.
+  // Fall back gracefully to legacy `totalCases` if the collector hasn't
+  // populated the new fields yet.
+  const whoConfirmed =
+    'whoConfirmedCases' in headline && typeof headline.whoConfirmedCases === 'number'
+      ? headline.whoConfirmedCases
+      : headline.totalCases;
+  const sinceWho =
+    'sinceWhoNewCases' in headline && typeof headline.sinceWhoNewCases === 'number'
+      ? headline.sinceWhoNewCases
+      : 0;
+  const currentReported =
+    'currentReportedCases' in headline && typeof headline.currentReportedCases === 'number'
+      ? headline.currentReportedCases
+      : whoConfirmed + sinceWho;
+  const sinceCountries =
+    'sinceWhoNewCountries' in headline && Array.isArray(headline.sinceWhoNewCountries)
+      ? (headline.sinceWhoNewCountries as string[])
+      : [];
 
   const daysWithoutAnyNews =
     'daysWithoutAnyNews' in data ? (data as { daysWithoutAnyNews?: number }).daysWithoutAnyNews : undefined;
@@ -298,7 +307,42 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
         <div className="rs-card-hero">
           <div className="rs-card-hero-title">{headline.outbreakName}</div>
-          <div className="rs-card-hero-stats">{totalCasesLine}</div>
+          {whoConfirmed > 0 || currentReported > 0 ? (
+            <>
+              <div className="rs-card-hero-current">
+                <span className="rs-card-hero-current-prefix">现报</span>
+                <span className="rs-card-hero-current-num">{currentReported}</span>
+                <span className="rs-card-hero-current-suffix">例</span>
+              </div>
+              <div className="rs-card-hero-breakdown">
+                <span className="rs-card-hero-breakdown-confirmed">
+                  WHO 已确认 <strong>{whoConfirmed}</strong>
+                </span>
+                {sinceWho > 0 && (
+                  <>
+                    <span className="rs-card-hero-breakdown-sep">+</span>
+                    <span className="rs-card-hero-breakdown-pending">
+                      待复核 <strong>{sinceWho}</strong>
+                      {sinceCountries.length > 0 && (
+                        <span className="rs-card-hero-breakdown-where">
+                          （{sinceCountries.slice(0, 3).join('、')}）
+                        </span>
+                      )}
+                    </span>
+                  </>
+                )}
+              </div>
+              <div className="rs-card-hero-who">
+                WHO {headline.whoLastUpdateZh} 公布 · {headline.whoDaysAgo} 天前
+              </div>
+            </>
+          ) : (
+            <div className="rs-card-hero-stats">
+              <span className="rs-muted">
+                无活跃聚集疫情 · WHO {headline.whoDaysAgo} 天前最近一次公布
+              </span>
+            </div>
+          )}
           <div className="rs-card-hero-domestic">
             <span className={`rs-dot ${headline.domesticStatus === 'safe' ? 'rs-dot--green' : 'rs-dot--red'}`} />
             <span>

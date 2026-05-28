@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 import json
 from pathlib import Path
 from typing import Any
@@ -182,6 +182,91 @@ def _headline_for(
         "nearestSignalKm": nearest_km,
         "nearestSignalCountry": nearest_country,
     }
+
+
+def _enrich_headline_with_since_who(
+    headline: dict[str, Any],
+    events: list[dict[str, Any]],
+    outbreak_status: list[dict[str, Any]] | None,
+) -> None:
+    """Mutate headline in-place with 口径 B fields.
+
+    口径 B (decided 2026-05-27): "现报 N 例（WHO 已确认 X · 待复核 Y）".
+
+    - ``whoConfirmedCases`` mirrors ``totalCases`` (WHO authoritative ledger).
+    - ``sinceWhoNewCases`` counts distinct countries that have confirmed-type
+      detection events newer than WHO's last DON date. These are signals our
+      collector has picked up but WHO hasn't formally folded into a DON yet.
+    - ``sinceWhoNewCountries`` is the ordered country list (for narration).
+    - ``currentReportedCases`` = WHO confirmed + since-WHO new = the number
+      users will read in mainstream news (e.g. "13 cases" today).
+    """
+    who_confirmed = int(headline.get("totalCases") or 0)
+    headline["whoConfirmedCases"] = who_confirmed
+
+    who_date: date | None = None
+    if outbreak_status and isinstance(outbreak_status[0], dict):
+        last_update = outbreak_status[0].get("lastUpdate")
+        if isinstance(last_update, dict):
+            asof = last_update.get("asOfDate")
+            if isinstance(asof, str):
+                who_date = _parse_iso_date(asof)
+
+    if who_date is None:
+        headline["sinceWhoNewCases"] = 0
+        headline["sinceWhoNewCountries"] = []
+        headline["currentReportedCases"] = who_confirmed
+        return
+
+    seen: set[str] = set()
+    countries: list[str] = []
+    for e in events:
+        if not isinstance(e, dict):
+            continue
+        if e.get("kind") != "detection":
+            continue
+        if e.get("type") != "confirmed":
+            continue
+        country = e.get("countryZh")
+        if not country or country in seen:
+            continue
+        ev_at = _parse_iso_datetime(str(e.get("at") or ""))
+        if ev_at is None or ev_at.date() <= who_date:
+            continue
+        seen.add(country)
+        countries.append(country)
+
+    headline["sinceWhoNewCases"] = len(countries)
+    headline["sinceWhoNewCountries"] = countries
+    headline["currentReportedCases"] = who_confirmed + len(countries)
+
+
+def _compute_intake_stats(
+    realtime_feed: dict[str, Any] | None,
+    headline: dict[str, Any],
+    *,
+    now: datetime,
+) -> dict[str, int]:
+    """Compute 24h intake count + high-confidence picks for the daily-brief banner.
+
+    "近 24h 抓取 N 条相关信息，精选 M 条高可信信号" — `N` is the raw count of
+    realtime-feed updates within the 24h window; `M` is the number of distinct
+    countries that produced confirmed-type detections newer than WHO (i.e.
+    ``sinceWhoNewCases``). M ≤ N by construction.
+    """
+    last24h_count = 0
+    if realtime_feed and isinstance(realtime_feed, dict):
+        updates = realtime_feed.get("updates")
+        if isinstance(updates, list):
+            cutoff = now - timedelta(hours=24)
+            for u in updates:
+                if not isinstance(u, dict):
+                    continue
+                t = _parse_iso_datetime(str(u.get("time") or ""))
+                if t and t > cutoff:
+                    last24h_count += 1
+    picks = int(headline.get("sinceWhoNewCases") or 0)
+    return {"last24hCount": last24h_count, "highConfidencePicks": picks}
 
 
 def build_ruler(
@@ -538,6 +623,16 @@ def build_realtime_situation(
         realtime_feed=realtime_payload,
     )
 
+    # 口径 B: enrich headline with since-WHO delta + current reported count.
+    # MUST run after events are built since the delta is derived from events.
+    _enrich_headline_with_since_who(headline, events, outbreak_status)
+
+    # Intake stats for the daily-brief banner ("24h 抓取 N 条 · 精选 M 条高可信").
+    # The raw `realtime_feed` (not `realtime_payload`) is intentional — `updates`
+    # is the user-facing list of news headlines; `realtime_payload.entries` is
+    # the processed/extracted form used by build_events.
+    intake = _compute_intake_stats(realtime_feed, headline, now=now)
+
     # Totals + country chips from outbreak ledger
     totals = {"confirmed": 0, "indeterminate": 0, "deaths": 0}
     confirmed_countries: list[dict[str, Any]] = []
@@ -623,6 +718,7 @@ def build_realtime_situation(
         "confirmedCountries": confirmed_countries,
         "monitoringCountries": monitoring_countries,
         "sources": sources,
+        "intake": intake,
         "realtimeUpdatedAt": realtime_updated_at,
     }
     if state_code == "calm" and days_without_any_news is not None:
