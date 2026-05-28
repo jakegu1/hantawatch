@@ -54,6 +54,11 @@ import officialSourcesJson from '@/data/official-sources.json';
 export const activeClusters: ActiveCluster[] = activeClustersJson.clusters as ActiveCluster[];
 export const riskSnapshot = riskSnapshotJson as {
   currentHpi?: HpiResult;
+  /** Pre-import-adjustment HPI (cluster-source distance only). The frontend
+   *  uses this as the input to `buildRiskSnapshot()` so it can recompute on
+   *  the live (Supabase-merged) imports list without double-counting the
+   *  collector's own import adjustment. */
+  baseHpi?: HpiResult;
   nearestImport?: unknown;
   displayedDistanceKm?: number;
   sourceDistanceKm?: number;
@@ -63,6 +68,14 @@ export const riskSnapshot = riskSnapshotJson as {
   dailyBrief?: Partial<DailyBrief>;
 };
 export const currentHpi: HpiResult = (riskSnapshot.currentHpi ?? activeClustersJson.currentHpi) as HpiResult;
+/** Cluster-source-only HPI snapshot (no import bump applied). Use this —
+ *  NOT `currentHpi` — as the input to `buildRiskSnapshot()` on the frontend,
+ *  otherwise the import distance bump is counted twice (once by the Python
+ *  collector when emitting `currentHpi`, again by the TS builder). When the
+ *  collector hasn't produced `baseHpi` yet (old data files), fall back to
+ *  `currentHpi`; in steady state this just means the live overlay can't
+ *  diverge from the collector. */
+export const baseHpi: HpiResult = (riskSnapshot.baseHpi ?? riskSnapshot.currentHpi ?? activeClustersJson.currentHpi) as HpiResult;
 
 // ---- HPI history (7-day sparkline) ---------------------------------------
 

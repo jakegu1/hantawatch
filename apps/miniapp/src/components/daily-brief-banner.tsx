@@ -58,27 +58,27 @@ export function DailyBriefBanner({
         background: 'rgba(255,255,255,0.10)',
         border: '1rpx solid rgba(255,255,255,0.15)',
         borderRadius: '16rpx',
-        padding: '20rpx 24rpx',
+        padding: '28rpx 28rpx',
         marginBottom: '16rpx',
       }}
     >
-      <View className="flex items-center" style={{ justifyContent: 'space-between', marginBottom: '12rpx' }}>
-        <Text style={{ fontSize: '28rpx', color: '#fff', fontWeight: 600, letterSpacing: '0.5rpx' }}>
+      <View className="flex items-center" style={{ justifyContent: 'space-between', marginBottom: '16rpx' }}>
+        <Text style={{ fontSize: '34rpx', color: '#fff', fontWeight: 700, letterSpacing: '0.5rpx' }}>
           📅 {dateLabel}
         </Text>
-        <Text style={{ fontSize: '18rpx', color: 'rgba(255,255,255,0.55)', letterSpacing: '1rpx' }}>
+        <Text style={{ fontSize: '24rpx', color: 'rgba(255,255,255,0.7)', letterSpacing: '1rpx' }}>
           24H 要点
         </Text>
       </View>
 
       <Text
         style={{
-          fontSize: '26rpx',
+          fontSize: '32rpx',
           color: '#fff',
           fontWeight: 600,
           lineHeight: 1.5,
           display: 'block',
-          marginBottom: '14rpx',
+          marginBottom: '18rpx',
         }}
       >
         {headline24h}
@@ -86,8 +86,8 @@ export function DailyBriefBanner({
 
       <Text
         style={{
-          fontSize: '20rpx',
-          color: 'rgba(219,234,254,0.85)',
+          fontSize: '26rpx',
+          color: 'rgba(226,232,240,0.95)',
           display: 'block',
           lineHeight: 1.6,
         }}

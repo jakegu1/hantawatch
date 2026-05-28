@@ -44,6 +44,11 @@ import countryRiskSnapshotJson from '@web-data/country-risk-snapshot.json';
 export const activeClusters: ActiveCluster[] = activeClustersJson.clusters as ActiveCluster[];
 export const riskSnapshot = riskSnapshotJson as {
   currentHpi?: HpiResult;
+  /** Pre-import-adjustment HPI. See apps/web/src/lib/data.ts for full
+   *  explanation. Both apps must use baseHpi (not currentHpi) when feeding
+   *  buildRiskSnapshot() on live imports, otherwise the import bump is
+   *  applied twice. */
+  baseHpi?: HpiResult;
   nearestImport?: unknown;
   displayedDistanceKm?: number;
   sourceDistanceKm?: number;
@@ -53,6 +58,7 @@ export const riskSnapshot = riskSnapshotJson as {
   dailyBrief?: Partial<DailyBrief>;
 };
 export const currentHpi: HpiResult = (riskSnapshot.currentHpi ?? activeClustersJson.currentHpi) as HpiResult;
+export const baseHpi: HpiResult = (riskSnapshot.baseHpi ?? riskSnapshot.currentHpi ?? activeClustersJson.currentHpi) as HpiResult;
 
 // ---- HPI history ---------------------------------------------------------
 

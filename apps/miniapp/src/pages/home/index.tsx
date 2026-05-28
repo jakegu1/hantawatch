@@ -9,7 +9,7 @@ import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display
 import {
   activeClusters as baselineClusters,
   arcgisCases,
-  currentHpi,
+  baseHpi,
   hpi7DayHistory,
   todayBrief,
   chinaHfrsHistory,
@@ -20,7 +20,8 @@ import {
   outbreakStatus,
   realtimeFeed,
 } from '@/lib/data';
-import { findNearestAndes, findNearestImport } from '@/lib/nearest-cluster';
+import { findNearestAndes } from '@/lib/nearest-cluster';
+import { buildRiskSnapshot } from '@/lib/risk-snapshot';
 import { fetchClusters, fetchHondiusImports, trackPageView } from '@/utils/api';
 import type { MvHondiusImport } from '@hantawatch/shared/types';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
@@ -130,15 +131,17 @@ export default function HomePage() {
     return () => { cancelled = true; };
   }, []);
 
-  // Compute the nearest import frontend-side so cityZh / lat / lon edits in
-  // mv-hondius-imports.json (and Supabase-added rows) reflect immediately.
-  // Memoised so the heavy filter doesn't run on every state tick.
+  // Compute the nearest import + import-aware HPI frontend-side so cityZh /
+  // lat / lon edits in mv-hondius-imports.json (and Supabase-added rows)
+  // reflect immediately. Mirror of web page.tsx — passes `baseHpi` (NOT
+  // `currentHpi`) so the collector's import bump isn't double-applied.
   const mergedHondiusImports = liveImports ?? hondiusImports;
-  const nearestImport = useMemo(
-    () => findNearestImport(mergedHondiusImports),
+  const liveRiskSnapshot = useMemo(
+    () => buildRiskSnapshot(baseHpi, mergedHondiusImports),
     [mergedHondiusImports],
   );
-  const hpi = currentHpi;
+  const nearestImport = liveRiskSnapshot.nearestImport;
+  const hpi = liveRiskSnapshot.hpi;
   const dynamicHpi7DayHistory = useMemo(() => {
     if (hpi7DayHistory.length === 0) return hpi7DayHistory;
     return hpi7DayHistory.map((point, index) =>

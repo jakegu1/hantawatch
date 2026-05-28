@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
-import { currentHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
+import { currentHpi, baseHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import {
   dataMeta,
   hondiusImports,
@@ -153,8 +153,12 @@ export default function HomePage() {
   // (精确至城市)". Falls through to country-capital distance when records
   // lack lat/lon, identical to the previous behaviour. */
   const mergedHondiusImports = liveImports ?? hondiusImports;
+  // Feed the *pre-import-adjustment* baseHpi into buildRiskSnapshot — the
+  // collector's `currentHpi` already bakes in the import distance bump for
+  // the imports it saw, so passing `currentHpi` here would double-count the
+  // bump (e.g. 31 → 34 for France 8400 km × 0.5 status × 0.3 weight = 3).
   const liveRiskSnapshot = useMemo(
-    () => buildRiskSnapshot(currentHpi, mergedHondiusImports),
+    () => buildRiskSnapshot(baseHpi, mergedHondiusImports),
     [mergedHondiusImports],
   );
   const nearestImport = liveRiskSnapshot.nearestImport;

@@ -12,6 +12,7 @@
 export {
   activeClusters,
   currentHpi,
+  baseHpi,
   hpi7DayHistory,
   todayBrief,
   chinaHfrsHistory,
