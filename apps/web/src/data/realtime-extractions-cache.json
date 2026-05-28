@@ -1791,6 +1791,76 @@
         "source_url": "",
         "time": "2026-05-27T09:00:00.000Z"
       }
+    ],
+    "rt-ff8cf6b7151c434b": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例汉坦病毒病例，总病例升至13例。",
+        "update_id": "rt-ff8cf6b7151c434b",
+        "source_url": "",
+        "time": "2026-05-28T04:32:56.000Z"
+      }
+    ],
+    "rt-786d24c383104169": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "澳大利亚延长受汉坦病毒影响的邮轮乘客隔离期，未报告新增病例。",
+        "update_id": "rt-786d24c383104169",
+        "source_url": "",
+        "time": "2026-05-28T04:02:00.000Z"
+      }
+    ],
+    "rt-c63878a0ac83a00d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮乘客因汉坦病毒警报延长隔离，但未明确国家及具体数字。",
+        "update_id": "rt-c63878a0ac83a00d",
+        "source_url": "",
+        "time": "2026-05-28T03:55:44.000Z"
+      }
+    ],
+    "rt-3c08277963980a4d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "medium",
+        "reasoning_zh": "内布拉斯加大学医学中心称邮轮暴发增至13例确诊，但未指明国家。",
+        "update_id": "rt-3c08277963980a4d",
+        "source_url": "",
+        "time": "2026-05-27T22:38:04.000Z"
+      }
+    ],
+    "rt-2cf4ccede3d7f834": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-27",
+        "confidence": "low",
+        "reasoning_zh": "加拿大不列颠哥伦比亚省教师言论事件，未涉及病例数据。",
+        "update_id": "rt-2cf4ccede3d7f834",
+        "source_url": "",
+        "time": "2026-05-27T16:29:57.000Z"
+      }
     ]
   }
 }

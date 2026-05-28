@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-28T02:51:53.768991+00:00",
+  "__generated_at": "2026-05-28T05:41:08.478455+00:00",
   "date": "2026-05-28",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,18 +11,18 @@
   "daysSinceLastIntlAlert": 15,
   "whoDaysSinceOfficialUpdate": 15,
   "cluesLast24h": 10,
-  "headline24h": "WHO称邮轮汉坦病毒疫情增至13例，西班牙新增1例。",
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "5月27日西班牙新增1例邮轮相关确诊，WHO称累计13例；美国科罗拉多州1例初筛阳性待确认。",
-  "situation": "WHO数据每1-2周更新，期间由ArcGIS监测及新闻线索补足；西班牙新增待WHO复核，多国维持监测，国内HFRS基线正常。",
-  "riskJudgment": "中国大陆无相关病例，HFRS基线正常；邮轮疫情距中国超1.6万公里，输入风险极低。",
+  "situation": "WHO数据每1-2周更新，期间由各国卫生部、ArcGIS监测及新闻线索补足；西班牙新增待WHO复核，多国维持监测，国内基线未变。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；输入风险极低，无需额外关注。",
   "newCases": "5月27日西班牙新增1例确诊；美国科罗拉多州1例初筛阳性待确认。",
-  "sourceSummary": "WHO DON、ArcGIS监测、新闻线索",
-  "shareLine": "WHO 5/13公布累计11例（15天前）；其后西班牙新增1例确诊，待WHO复核；美国1例初筛阳性；中国大陆无相关病例，国内HFRS基线正常。",
+  "sourceSummary": "WHO官方通报、ArcGIS监测、新闻线索",
+  "shareLine": "WHO 5/13公布累计11例（15天前）；其后西班牙新增1例确诊，待WHO复核；美国科罗拉多州1例初筛阳性；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "西班牙新增复核",
-    "美国初筛确认",
-    "邮轮接触者随访"
+    "西班牙新增确诊",
+    "美国初筛阳性",
+    "WHO数据更新"
   ],
   "evidence": [
     "WHO DON 5/13",
@@ -30,7 +30,6 @@
     "Realtime LLM Extractor"
   ],
   "_guardrail_warnings": [
-    "brief contains \"6\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]",
     "brief contains \"13\" which is not in allowed set [0, 1, 2, 3, 4, 7, 8, 11, 28, 31, 41, 8400, 16500]"
   ]
 }
