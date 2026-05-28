@@ -1973,6 +1973,104 @@
         "source_url": "",
         "time": "2026-05-28T04:34:55.000Z"
       }
+    ],
+    "rt-216441d1e23804e4": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "澳大利亚延长邮轮乘客隔离至6月23日，无新增病例数字。",
+        "update_id": "rt-216441d1e23804e4",
+        "source_url": "",
+        "time": "2026-05-28T15:22:00.000Z"
+      }
+    ],
+    "rt-77cbabbf5af33aee": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "欧盟确保紧急抗病毒供应，无具体国家病例变化。",
+        "update_id": "rt-77cbabbf5af33aee",
+        "source_url": "",
+        "time": "2026-05-28T15:08:46.000Z"
+      }
+    ],
+    "rt-a33070599a29118f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称邮轮疫情公众风险仍低，无新增病例。",
+        "update_id": "rt-a33070599a29118f",
+        "source_url": "",
+        "time": "2026-05-28T14:47:36.000Z"
+      }
+    ],
+    "rt-f18b604c85968ebe": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "欧盟确保紧急治疗交付，无具体国家病例变化。",
+        "update_id": "rt-f18b604c85968ebe",
+        "source_url": "",
+        "time": "2026-05-28T12:56:14.000Z"
+      }
+    ],
+    "rt-423aa83a63fd81b0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "Dyadic与Scripps合作研发抗体疫苗，无病例变化。",
+        "update_id": "rt-423aa83a63fd81b0",
+        "source_url": "",
+        "time": "2026-05-28T11:25:00.000Z"
+      }
+    ],
+    "rt-92cbb3a521e1cf6e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "邮轮乘客隔离42天，未提及具体国家病例变化。",
+        "update_id": "rt-92cbb3a521e1cf6e",
+        "source_url": "",
+        "time": "2026-05-28T10:44:00.000Z"
+      }
+    ],
+    "rt-a5999cd439c3c883": [
+      {
+        "iso2": "TW",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "台湾省旧汉坦病毒死亡被误传为近期，无新增病例。",
+        "update_id": "rt-a5999cd439c3c883",
+        "source_url": "",
+        "time": "2026-05-28T04:44:26.000Z"
+      }
     ]
   }
 }

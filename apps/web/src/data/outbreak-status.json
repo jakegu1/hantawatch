@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-05-28T09:58:13.111648+00:00",
+  "__generated_at": "2026-05-28T15:45:38.762109+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -34,7 +34,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608048+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680905+00:00"
             }
           ]
         },
@@ -43,7 +43,7 @@
           "nameZh": "西班牙",
           "status": "imports_confirmed",
           "confirmed": 1,
-          "monitoring": 0,
+          "monitoring": 1,
           "quarantine": 0,
           "deaths": 0,
           "newConfirmedToday": 0,
@@ -59,17 +59,9 @@
               "tier": "news",
               "url": "",
               "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-28T09:58:08.608111+00:00",
+              "retrievedAt": "2026-05-28T15:45:33.680966+00:00",
               "asOf": "2026-05-28",
               "reasoningZh": "WHO称西班牙新增1例汉坦病毒病例，总病例升至13例。"
-            },
-            {
-              "tier": "news",
-              "url": "",
-              "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-05-28T09:58:08.608111+00:00",
-              "asOf": "2026-05-27",
-              "reasoningZh": "WHO称西班牙新增1例，累计13例。"
             }
           ],
           "note": ""
@@ -109,7 +101,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608073+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680928+00:00"
             }
           ]
         },
@@ -128,7 +120,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608088+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680940+00:00"
             }
           ]
         },
@@ -187,7 +179,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.607970+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680827+00:00"
             }
           ]
         },
@@ -206,7 +198,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.607998+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680856+00:00"
             }
           ]
         },
@@ -225,7 +217,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608013+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680871+00:00"
             }
           ]
         },
@@ -244,7 +236,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608025+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680883+00:00"
             }
           ]
         },
@@ -263,7 +255,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608037+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680895+00:00"
             }
           ]
         },
@@ -282,7 +274,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608060+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680917+00:00"
             }
           ]
         },
@@ -301,7 +293,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608100+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680950+00:00"
             }
           ]
         },
@@ -320,23 +312,23 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-05-28T09:58:08.608107+00:00"
+              "retrievedAt": "2026-05-28T15:45:33.680961+00:00"
             }
           ]
         }
       ],
       "lastUpdate": {
-        "asOfDate": "2026-05-13",
+        "asOfDate": "2026-05-28",
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-          "retrievedAt": "2026-05-28T09:57:41.733191+00:00",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
+          "retrievedAt": "2026-05-28T15:45:05.670337+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-05-28T09:58:08.608158+00:00",
+        "generatedAt": "2026-05-28T15:45:33.681034+00:00",
         "contributors": [
           "who_don",
           "arcgis",
