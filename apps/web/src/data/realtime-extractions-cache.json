@@ -2197,6 +2197,62 @@
         "source_url": "",
         "time": "2026-05-28T12:00:00Z"
       }
+    ],
+    "rt-559ebf44169df114": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "标题提及ADPH关注汉坦病毒，但无具体数字或新增病例。",
+        "update_id": "rt-559ebf44169df114",
+        "source_url": "",
+        "time": "2026-05-28T22:58:49.000Z"
+      }
+    ],
+    "rt-83076df4a8479621": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道保险业应对埃博拉和安第斯汉坦病毒，未提供具体病例数据。",
+        "update_id": "rt-83076df4a8479621",
+        "source_url": "",
+        "time": "2026-05-28T21:00:00.000Z"
+      }
+    ],
+    "rt-a7d07c3fdc6a1471": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "福布斯报道实验性治疗可能用于游轮乘客，无新增病例数字。",
+        "update_id": "rt-a7d07c3fdc6a1471",
+        "source_url": "",
+        "time": "2026-05-28T20:32:00.000Z"
+      }
+    ],
+    "rt-41cf0b8111bd6df0": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例，游轮疫情总数升至13例。",
+        "update_id": "rt-41cf0b8111bd6df0",
+        "source_url": "",
+        "time": "2026-05-28T02:39:03.000Z"
+      }
     ]
   }
 }
