@@ -2253,6 +2253,76 @@
         "source_url": "",
         "time": "2026-05-28T02:39:03.000Z"
       }
+    ],
+    "rt-88dea601cb721498": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "WHO更新提及汉坦病毒爆发与邮轮旅行相关，但未提供具体国家或数字。",
+        "update_id": "rt-88dea601cb721498",
+        "source_url": "",
+        "time": "2026-05-29T09:32:00.000Z"
+      }
+    ],
+    "rt-8cf9f6f73bb0e034": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "华盛顿州立大学研究显示汉坦病毒高流行率，但未提供新增病例数。",
+        "update_id": "rt-8cf9f6f73bb0e034",
+        "source_url": "",
+        "time": "2026-05-29T07:11:25.000Z"
+      }
+    ],
+    "rt-50ae3c392e1a205b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "欧盟确保紧急交付潜在治疗药物，未提及具体国家或病例变化。",
+        "update_id": "rt-50ae3c392e1a205b",
+        "source_url": "",
+        "time": "2026-05-29T06:24:02.000Z"
+      }
+    ],
+    "rt-575c5c69e0f97e83": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "邮轮乘客可能被允许回家，但未提供国家或病例数字。",
+        "update_id": "rt-575c5c69e0f97e83",
+        "source_url": "",
+        "time": "2026-05-29T05:01:00.000Z"
+      }
+    ],
+    "rt-12153a8b73dcac41": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "路透社报道欧盟确保紧急交付治疗药物，未提及具体国家或病例变化。",
+        "update_id": "rt-12153a8b73dcac41",
+        "source_url": "",
+        "time": "2026-05-28T12:41:36.000Z"
+      }
     ]
   }
 }
