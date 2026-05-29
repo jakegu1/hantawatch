@@ -1,13 +1,39 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-29T12:44:50.060755+00:00",
+  "__generated_at": "2026-05-29T14:57:14.585897+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-29T12:44:48.746340+00:00",
+  "last_fetched": "2026-05-29T14:57:06.020616+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-447af0cdbdb213a9",
+      "time": "2026-05-29T13:23:00.000Z",
+      "title_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) - Forbes",
+      "body_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) Forbes",
+      "summary_zh": "美国汉坦病毒暴露者可回家，但需接受24/7监控。",
+      "key_facts_zh": [
+        "美国",
+        "暴露者",
+        "监控"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-bc17286a4181bb74",
+      "time": "2026-05-29T12:21:00.000Z",
+      "title_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare - theweek.in",
+      "body_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare theweek.in",
+      "summary_zh": "内布拉斯加大学负责人强调快速有效应对汉坦病毒疫情。",
+      "key_facts_zh": [
+        "内布拉斯加",
+        "大学负责人",
+        "声明"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-b891b2fb3f56c942",
       "time": "2026-05-29T10:45:46.000Z",
@@ -19,14 +45,14 @@
         "日本",
         "实验性治疗"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-a5637edefb1d670d",
       "time": "2026-05-29T10:04:15.000Z",
       "title_en": "Inside the Nebraska quarantine facility responding to hantavirus - Science Friday",
       "body_en": "Inside the Nebraska quarantine facility responding to hantavirus Science Friday",
-      "summary_zh": "探访内布拉斯加应对汉坦病毒的隔离设施。",
+      "summary_zh": "Science Friday介绍内布拉斯加隔离设施应对汉坦病毒。",
       "key_facts_zh": [
         "内布拉斯加",
         "隔离设施"
@@ -38,7 +64,7 @@
       "time": "2026-05-29T09:32:00.000Z",
       "title_en": "WHO DON Update: Hantavirus outbreak linked to cruise ship travel, Multi-locations - Avian Flu Diary",
       "body_en": "WHO DON Update: Hantavirus outbreak linked to cruise ship travel, Multi-locations Avian Flu Diary",
-      "summary_zh": "WHO 更新：汉坦病毒疫情与邮轮旅行相关，多地点。",
+      "summary_zh": "WHO通报汉坦病毒疫情与邮轮旅行相关，涉及多地。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -54,6 +80,7 @@
       "summary_zh": "华盛顿州立大学研究发现部分地区汉坦病毒高流行。",
       "key_facts_zh": [
         "华盛顿州立大学",
+        "汉坦病毒",
         "高流行"
       ],
       "signal_strength": "medium"
@@ -66,7 +93,8 @@
       "summary_zh": "欧盟紧急采购汉坦病毒潜在治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "采购治疗药物"
+        "紧急采购",
+        "治疗药物"
       ],
       "signal_strength": "high"
     },
@@ -75,11 +103,11 @@
       "time": "2026-05-29T03:27:00.000Z",
       "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
       "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "接触汉坦病毒的邮轮乘客或可回家但需24小时监控。",
+      "summary_zh": "接触汉坦病毒的邮轮乘客或可返家但需24小时监控。",
       "key_facts_zh": [
         "邮轮",
         "乘客",
-        "24小时监控"
+        "返家监控"
       ],
       "signal_strength": "high"
     },
@@ -88,22 +116,24 @@
       "time": "2026-05-28T21:00:00.000Z",
       "title_en": "Insurers forced to rethink cover amidst Ebola, Andes hantavirus outbreak - Insurance Asia",
       "body_en": "Insurers forced to rethink cover amidst Ebola, Andes hantavirus outbreak Insurance Asia",
-      "summary_zh": "保险公司因埃博拉和汉坦病毒疫情重新考虑承保。",
+      "summary_zh": "埃博拉和汉坦病毒爆发迫使保险公司重新考虑承保。",
       "key_facts_zh": [
         "保险公司",
-        "重新承保"
+        "承保",
+        "埃博拉"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-a7d07c3fdc6a1471",
-      "time": "2026-05-28T20:32:00.000Z",
+      "time": "2026-05-28T20:32:28.000Z",
       "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
       "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
       "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
       "key_facts_zh": [
         "实验性治疗",
-        "邮轮乘客"
+        "邮轮乘客",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -112,32 +142,20 @@
       "time": "2026-05-28T18:32:07.000Z",
       "title_en": "Treating the Andes Strain of the Hantavirus Associated With the Cruise Ship Cluster - Contagion Live",
       "body_en": "Treating the Andes Strain of the Hantavirus Associated With the Cruise Ship Cluster Contagion Live",
-      "summary_zh": "治疗与邮轮集群相关的安第斯汉坦病毒株。",
+      "summary_zh": "文章讨论与邮轮聚集相关的安第斯汉坦病毒株治疗。",
       "key_facts_zh": [
-        "安第斯病毒株",
-        "邮轮集群"
+        "安第斯毒株",
+        "邮轮",
+        "治疗"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-216441d1e23804e4",
-      "time": "2026-05-28T15:22:00.000Z",
-      "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
-      "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚将汉坦病毒邮轮乘客隔离延长至6月23日。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-a33070599a29118f",
       "time": "2026-05-28T14:47:36.000Z",
       "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
       "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
-      "summary_zh": "WHO称邮轮汉坦病毒疫情对公众风险仍低。",
+      "summary_zh": "WHO称邮轮汉坦病毒暴发对公众风险仍低。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -150,10 +168,11 @@
       "time": "2026-05-28T12:41:36.000Z",
       "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - Reuters",
       "body_en": "EU secures emergency deliveries of potential treatment against hantavirus Reuters",
-      "summary_zh": "欧盟紧急采购汉坦病毒潜在治疗药物。",
+      "summary_zh": "欧盟确保紧急交付汉坦病毒潜在治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "治疗药物"
+        "治疗药物",
+        "紧急交付"
       ],
       "signal_strength": "high"
     },
@@ -162,36 +181,24 @@
       "time": "2026-05-28T11:25:00.000Z",
       "title_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development - GlobeNewswire",
       "body_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development GlobeNewswire",
-      "summary_zh": "Dyadic与斯克里普斯研究所合作开发汉坦病毒抗体和疫苗。",
+      "summary_zh": "Dyadic与Scripps研究合作开发快速响应汉坦病毒抗体和疫苗。",
       "key_facts_zh": [
-        "疫苗研发",
-        "抗体"
+        "抗体",
+        "疫苗",
+        "合作"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-056e5520fb729394",
+      "id": "rt-ee7a7c67f5daebad",
       "time": "2026-05-28T06:31:05.000Z",
       "title_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine - NDTV",
       "body_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine NDTV",
-      "summary_zh": "澳大利亚延长邮轮乘客隔离。",
+      "summary_zh": "澳大利亚延长邮轮乘客隔离期以应对汉坦病毒疫情。",
       "key_facts_zh": [
         "澳大利亚",
         "邮轮",
-        "隔离延长"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-5d9582caf39bf59a",
-      "time": "2026-05-28T05:01:39.000Z",
-      "title_en": "Hantavirus cruise ship passengers have WA quarantine period extended - Australian Broadcasting Corporation",
-      "body_en": "Hantavirus cruise ship passengers have WA quarantine period extended Australian Broadcasting Corporation",
-      "summary_zh": "澳大利亚西澳州延长汉坦病毒邮轮乘客隔离期。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
+        "延长隔离"
       ],
       "signal_strength": "high"
     }

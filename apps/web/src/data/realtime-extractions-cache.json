@@ -2323,6 +2323,90 @@
         "source_url": "",
         "time": "2026-05-28T12:41:36.000Z"
       }
+    ],
+    "rt-447af0cdbdb213a9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道提及汉坦病毒暴露患者可能回家，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-447af0cdbdb213a9",
+        "source_url": "",
+        "time": "2026-05-29T13:23:00.000Z"
+      }
+    ],
+    "rt-bc17286a4181bb74": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "内布拉斯加大学负责人评论疫情，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-bc17286a4181bb74",
+        "source_url": "",
+        "time": "2026-05-29T12:21:00.000Z"
+      }
+    ],
+    "rt-b891b2fb3f56c942": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "欧盟从日本接收实验性治疗，但未涉及病例数字变化，无法提取变化量。",
+        "update_id": "rt-b891b2fb3f56c942",
+        "source_url": "",
+        "time": "2026-05-29T10:45:46.000Z"
+      }
+    ],
+    "rt-a5637edefb1d670d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "介绍内布拉斯加隔离设施，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-a5637edefb1d670d",
+        "source_url": "",
+        "time": "2026-05-29T10:04:15.000Z"
+      }
+    ],
+    "rt-7e5edd33411d1c38": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道暴露乘客可能回家但需监控，未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-7e5edd33411d1c38",
+        "source_url": "",
+        "time": "2026-05-29T03:27:00.000Z"
+      }
+    ],
+    "rt-ee7a7c67f5daebad": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "澳大利亚延长邮轮乘客隔离，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-ee7a7c67f5daebad",
+        "source_url": "",
+        "time": "2026-05-28T06:31:05.000Z"
+      }
     ]
   }
 }

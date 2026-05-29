@@ -80,16 +80,6 @@
       "source": "who_don"
     },
     {
-      "at": "2026-05-28T02:39:03Z",
-      "kind": "detection",
-      "countryZh": "西班牙",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
-    {
       "at": "2026-05-15T12:00:00Z",
       "kind": "detection",
       "countryZh": "西班牙",
@@ -130,7 +120,7 @@
       "source": "official_cdc"
     }
   ],
-  "daysWithoutNewConfirmed": 1,
+  "daysWithoutNewConfirmed": 14,
   "totals": {
     "confirmed": 8,
     "indeterminate": 3,
@@ -199,7 +189,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-29T09:49:34.694295+00:00"
+      "updatedAt": "2026-05-29T14:57:11.645686+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -214,5 +204,5 @@
     "last24hCount": 11,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-05-29T09:49:37.921796+00:00"
+  "realtimeUpdatedAt": "2026-05-29T14:57:14.581831+00:00"
 }
