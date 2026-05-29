@@ -2407,6 +2407,48 @@
         "source_url": "",
         "time": "2026-05-28T06:31:05.000Z"
       }
+    ],
+    "rt-b9eb98c001314999": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道提及美国邮轮乘客隔离，但未提供新增病例数字，仅描述可能解除隔离措施。",
+        "update_id": "rt-b9eb98c001314999",
+        "source_url": "",
+        "time": "2026-05-29T17:01:28.000Z"
+      }
+    ],
+    "rt-8ab3b1d1357f81a2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称美国汉坦病毒邮轮乘客可能提前结束隔离，但未提及新增病例数。",
+        "update_id": "rt-8ab3b1d1357f81a2",
+        "source_url": "",
+        "time": "2026-05-29T16:15:00.000Z"
+      }
+    ],
+    "rt-a07432c35b12d2a5": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称阿根廷病例激增与气候变化有关，但未提供具体新增数字。",
+        "update_id": "rt-a07432c35b12d2a5",
+        "source_url": "",
+        "time": "2026-05-29T15:49:28.000Z"
+      }
     ]
   }
 }
