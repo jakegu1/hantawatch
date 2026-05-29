@@ -1,7 +1,11 @@
 import Taro from '@tarojs/taro';
 import type { HpiResult, ActiveCluster, CaseRecord, MvHondiusImport, SerotypeId } from '@hantawatch/shared/types';
 
-const API_BASE = 'https://bingduguancha.com/api';
+// Use the canonical www host directly. The apex bingduguancha.com 301-redirects
+// to www, and WeChat wx.request + the request 合法域名 whitelist are fragile with
+// redirects (the redirect target must also be whitelisted), so hitting www
+// directly avoids live-fetch failures on real devices.
+const API_BASE = 'https://www.bingduguancha.com/api';
 
 interface ClustersPayload {
   clusters: ActiveCluster[];

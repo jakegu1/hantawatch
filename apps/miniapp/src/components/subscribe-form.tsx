@@ -7,7 +7,7 @@ import { View, Text, Input, Button } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import { useState } from 'react';
 
-const API_BASE = 'https://bingduguancha.com/api';
+const API_BASE = 'https://www.bingduguancha.com/api';
 
 export function SubscribeForm() {
   const [email, setEmail] = useState('');
