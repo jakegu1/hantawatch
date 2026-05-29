@@ -1,62 +1,62 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-29T05:09:10.107572+00:00",
+  "__generated_at": "2026-05-29T09:41:19.285998+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-29T05:09:08.928049+00:00",
+  "last_fetched": "2026-05-29T09:41:17.638763+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-7e5edd33411d1c38",
-      "time": "2026-05-29T03:27:00.000Z",
-      "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
-      "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "美国邮轮接触汉坦病毒的乘客或可回家但需24小时监控。",
+      "id": "rt-8cf9f6f73bb0e034",
+      "time": "2026-05-29T07:11:25.000Z",
+      "title_en": "WSU study finds high prevalence of the hantavirus in parts o... - The Lewiston Tribune",
+      "body_en": "WSU study finds high prevalence of the hantavirus in parts o... The Lewiston Tribune",
+      "summary_zh": "华盛顿州立大学研究发现部分地区汉坦病毒高流行率。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "监控"
+        "研究",
+        "高流行率"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-50ae3c392e1a205b",
+      "time": "2026-05-29T06:24:02.000Z",
+      "title_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus - NDTV",
+      "body_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus NDTV",
+      "summary_zh": "欧盟紧急采购潜在汉坦病毒治疗药物。",
+      "key_facts_zh": [
+        "欧盟",
+        "紧急采购",
+        "治疗"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-559ebf44169df114",
-      "time": "2026-05-28T22:58:49.000Z",
-      "title_en": "ADPH addresses Hantavirus concerns - WSFA",
-      "body_en": "ADPH addresses Hantavirus concerns WSFA",
-      "summary_zh": "美国阿拉巴马州公共卫生部回应汉坦病毒关切。",
+      "id": "rt-575c5c69e0f97e83",
+      "time": "2026-05-29T05:01:00.000Z",
+      "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home - WAPT",
+      "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home WAPT",
+      "summary_zh": "接触汉坦病毒的邮轮乘客或很快获准回家。",
       "key_facts_zh": [
-        "美国",
-        "阿拉巴马",
-        "官方回应"
+        "邮轮",
+        "乘客",
+        "返家"
       ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-83076df4a8479621",
-      "time": "2026-05-28T21:00:00.000Z",
-      "title_en": "Insurers forced to rethink cover amidst Ebola, Andes hantavirus outbreak - Insurance Asia",
-      "body_en": "Insurers forced to rethink cover amidst Ebola, Andes hantavirus outbreak Insurance Asia",
-      "summary_zh": "保险公司因埃博拉和安第斯汉坦病毒疫情被迫重新考虑承保。",
-      "key_facts_zh": [
-        "保险",
-        "埃博拉",
-        "安第斯汉坦"
-      ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-a7d07c3fdc6a1471",
       "time": "2026-05-28T20:32:00.000Z",
       "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
       "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
-      "summary_zh": "实验性汉坦病毒治疗或用于邮轮患病乘客。",
+      "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
       "key_facts_zh": [
-        "美国",
+        "实验性治疗",
         "邮轮",
-        "实验治疗"
+        "乘客"
       ],
       "signal_strength": "high"
     },
@@ -68,60 +68,33 @@
       "summary_zh": "欧盟接收实验性汉坦病毒治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "实验治疗",
-        "接收"
+        "实验性治疗"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e924153e9faccdf2",
       "time": "2026-05-28T18:32:07.000Z",
       "title_en": "Treating the Andes Strain of the Hantavirus Associated With the Cruise Ship Cluster - Contagion Live",
       "body_en": "Treating the Andes Strain of the Hantavirus Associated With the Cruise Ship Cluster Contagion Live",
-      "summary_zh": "专家讨论治疗与邮轮群聚相关的安第斯汉坦病毒株。",
+      "summary_zh": "治疗与邮轮聚集病例相关的安第斯汉坦病毒株。",
       "key_facts_zh": [
         "邮轮",
-        "安第斯汉坦",
+        "安第斯株",
         "治疗"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6ddbf5d01af74119",
-      "time": "2026-05-28T15:39:53.000Z",
-      "title_en": "Hantavirus outbreak stable at 13 cases: WHO - NewsNation",
-      "body_en": "Hantavirus outbreak stable at 13 cases: WHO NewsNation",
-      "summary_zh": "WHO 称汉坦病毒疫情稳定，共13例。",
-      "key_facts_zh": [
-        "WHO",
-        "13例",
-        "疫情稳定"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-216441d1e23804e4",
       "time": "2026-05-28T15:22:00.000Z",
       "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
       "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚延长邮轮乘客隔离至6月23日。",
+      "summary_zh": "澳大利亚延长汉坦病毒邮轮乘客隔离至6月23日。",
       "key_facts_zh": [
         "澳大利亚",
         "邮轮",
-        "隔离延长"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-77cbabbf5af33aee",
-      "time": "2026-05-28T15:08:48.000Z",
-      "title_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread - Arise News",
-      "body_en": "EU Moves To Secure Emergency Antiviral Supplies As Hantavirus Cases Spread Arise News",
-      "summary_zh": "欧盟紧急采购抗病毒物资应对汉坦病毒扩散。",
-      "key_facts_zh": [
-        "欧盟",
-        "紧急采购",
-        "抗病毒物资"
+        "延长隔离"
       ],
       "signal_strength": "high"
     },
@@ -130,7 +103,7 @@
       "time": "2026-05-28T14:47:36.000Z",
       "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
       "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
-      "summary_zh": "WHO 称邮轮汉坦病毒疫情对公众风险仍低。",
+      "summary_zh": "WHO称邮轮汉坦病毒暴发对公众风险仍低。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -139,39 +112,41 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-f18b604c85968ebe",
-      "time": "2026-05-28T12:56:14.000Z",
-      "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - CNBC TV18",
-      "body_en": "EU secures emergency deliveries of potential treatment against hantavirus CNBC TV18",
-      "summary_zh": "欧盟确保紧急交付汉坦病毒潜在治疗药物。",
+      "id": "rt-12153a8b73dcac41",
+      "time": "2026-05-28T12:41:36.000Z",
+      "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - Reuters",
+      "body_en": "EU secures emergency deliveries of potential treatment against hantavirus Reuters",
+      "summary_zh": "欧盟确保紧急交付潜在汉坦病毒治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "治疗药物",
-        "紧急交付"
+        "紧急交付",
+        "治疗"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-92cbb3a521e1cf6e",
-      "time": "2026-05-28T10:44:00.000Z",
-      "title_en": "Passengers evacuated from hantavirus-hit cruise ship must now spend 42 days in quarantine - The Independent",
-      "body_en": "Passengers evacuated from hantavirus-hit cruise ship must now spend 42 days in quarantine The Independent",
-      "summary_zh": "汉坦病毒邮轮乘客撤离后需隔离42天。",
+      "id": "rt-423aa83a63fd81b0",
+      "time": "2026-05-28T11:25:00.000Z",
+      "title_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development - GlobeNewswire",
+      "body_en": "Dyadic and Scripps Research Collaborate on Rapid-Response Hantavirus Antibody and Vaccine Development GlobeNewswire",
+      "summary_zh": "Dyadic与Scripps研究所合作开发快速应对汉坦病毒抗体和疫苗。",
       "key_facts_zh": [
-        "邮轮",
-        "隔离42天"
+        "美国",
+        "疫苗研发",
+        "合作"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-dc9fd150b1e72da8",
       "time": "2026-05-28T08:38:00.000Z",
       "title_en": "Australia extends quarantine for 6 cruise passengers linked to hantavirus outbreak - Mid-day",
       "body_en": "Australia extends quarantine for 6 cruise passengers linked to hantavirus outbreak Mid-day",
-      "summary_zh": "澳大利亚延长6名邮轮乘客隔离期。",
+      "summary_zh": "澳大利亚延长6名邮轮乘客隔离期，与汉坦病毒暴发相关。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离"
+        "延长隔离",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -180,10 +155,11 @@
       "time": "2026-05-28T06:31:05.000Z",
       "title_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine - NDTV",
       "body_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine NDTV",
-      "summary_zh": "澳大利亚延长邮轮乘客隔离期。",
+      "summary_zh": "汉坦病毒暴发：澳大利亚延长邮轮乘客隔离。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离"
+        "延长隔离",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -192,10 +168,11 @@
       "time": "2026-05-28T05:01:39.000Z",
       "title_en": "Hantavirus cruise ship passengers have WA quarantine period extended - Australian Broadcasting Corporation",
       "body_en": "Hantavirus cruise ship passengers have WA quarantine period extended Australian Broadcasting Corporation",
-      "summary_zh": "西澳延长汉坦病毒邮轮乘客隔离期。",
+      "summary_zh": "西澳大利亚州延长汉坦病毒邮轮乘客隔离期。",
       "key_facts_zh": [
         "澳大利亚",
-        "延长隔离"
+        "延长隔离",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -204,7 +181,7 @@
       "time": "2026-05-28T02:39:03.000Z",
       "title_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says - ET HealthWorld",
       "body_en": "Hantavirus cases from cruise outbreak rise to 13 following new case in Spain, WHO says ET HealthWorld",
-      "summary_zh": "WHO称邮轮疫情病例升至13例，西班牙新增1例。",
+      "summary_zh": "WHO称邮轮暴发汉坦病毒病例升至13例，西班牙新增1例。",
       "key_facts_zh": [
         "WHO",
         "西班牙",
@@ -217,10 +194,11 @@
       "time": "2026-05-28T01:38:51.000Z",
       "title_en": "‘Stabilized’: Update on person who tested positive for Hantavirus strain in Island Health - CHEK News",
       "body_en": "‘Stabilized’: Update on person who tested positive for Hantavirus strain in Island Health CHEK News",
-      "summary_zh": "加拿大岛卫生局称汉坦病毒患者情况稳定。",
+      "summary_zh": "加拿大岛健康局更新：汉坦病毒阳性患者情况稳定。",
       "key_facts_zh": [
         "加拿大",
-        "患者稳定"
+        "患者稳定",
+        "监测中"
       ],
       "signal_strength": "high"
     },
