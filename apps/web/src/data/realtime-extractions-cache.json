@@ -1973,6 +1973,440 @@
         "source_url": "",
         "time": "2026-05-28T04:34:55.000Z"
       }
+    ],
+    "rt-216441d1e23804e4": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "澳大利亚延长邮轮乘客隔离至6月23日，无新增病例数字。",
+        "update_id": "rt-216441d1e23804e4",
+        "source_url": "",
+        "time": "2026-05-28T15:22:00.000Z"
+      }
+    ],
+    "rt-77cbabbf5af33aee": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "欧盟确保紧急抗病毒供应，无具体国家病例变化。",
+        "update_id": "rt-77cbabbf5af33aee",
+        "source_url": "",
+        "time": "2026-05-28T15:08:46.000Z"
+      }
+    ],
+    "rt-a33070599a29118f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称邮轮疫情公众风险仍低，无新增病例。",
+        "update_id": "rt-a33070599a29118f",
+        "source_url": "",
+        "time": "2026-05-28T14:47:36.000Z"
+      }
+    ],
+    "rt-f18b604c85968ebe": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "欧盟确保紧急治疗交付，无具体国家病例变化。",
+        "update_id": "rt-f18b604c85968ebe",
+        "source_url": "",
+        "time": "2026-05-28T12:56:14.000Z"
+      }
+    ],
+    "rt-423aa83a63fd81b0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "Dyadic与Scripps合作研发抗体疫苗，无病例变化。",
+        "update_id": "rt-423aa83a63fd81b0",
+        "source_url": "",
+        "time": "2026-05-28T11:25:00.000Z"
+      }
+    ],
+    "rt-92cbb3a521e1cf6e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "邮轮乘客隔离42天，未提及具体国家病例变化。",
+        "update_id": "rt-92cbb3a521e1cf6e",
+        "source_url": "",
+        "time": "2026-05-28T10:44:00.000Z"
+      }
+    ],
+    "rt-a5999cd439c3c883": [
+      {
+        "iso2": "TW",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "台湾省旧汉坦病毒死亡被误传为近期，无新增病例。",
+        "update_id": "rt-a5999cd439c3c883",
+        "source_url": "",
+        "time": "2026-05-28T04:44:26.000Z"
+      }
+    ],
+    "rt-a2d6aa997629cff3": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道称欧盟接收实验性治疗药物，但未提及具体国家或病例数变化。",
+        "update_id": "rt-a2d6aa997629cff3",
+        "source_url": "",
+        "time": "2026-05-28T18:33:09.000Z"
+      }
+    ],
+    "rt-e924153e9faccdf2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "讨论治疗安第斯病毒株，但未提供新增病例数据。",
+        "update_id": "rt-e924153e9faccdf2",
+        "source_url": "",
+        "time": "2026-05-28T18:32:07.000Z"
+      }
+    ],
+    "rt-6e74a24a5b7258a1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道特朗普政府禁止美国研究人员参与全球病毒应对讨论，无病例数据。",
+        "update_id": "rt-6e74a24a5b7258a1",
+        "source_url": "",
+        "time": "2026-05-28T17:30:00Z"
+      }
+    ],
+    "rt-4f8eb99d78fbb31f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "范德比尔特健康研究人员呼吁大流行预防，无病例数据。",
+        "update_id": "rt-4f8eb99d78fbb31f",
+        "source_url": "",
+        "time": "2026-05-28T15:45:00Z"
+      }
+    ],
+    "rt-6ddbf5d01af74119": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "medium",
+        "reasoning_zh": "WHO称汉坦病毒疫情稳定在13例，但未说明新增病例，故delta为0。",
+        "update_id": "rt-6ddbf5d01af74119",
+        "source_url": "",
+        "time": "2026-05-28T15:39:53.000Z"
+      }
+    ],
+    "rt-0261cfd8585e4405": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道乘客在澳大利亚隔离42天，但未提供新增病例数。",
+        "update_id": "rt-0261cfd8585e4405",
+        "source_url": "",
+        "time": "2026-05-28T15:15:00Z"
+      }
+    ],
+    "rt-d022934b0a513406": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "澳大利亚延长6名乘客隔离至6月底，无新增病例数据。",
+        "update_id": "rt-d022934b0a513406",
+        "source_url": "",
+        "time": "2026-05-28T12:30:00Z"
+      }
+    ],
+    "rt-8a6096ac4fd6624b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "Dyadic与Scripps研究合作开发抗体和疫苗，无病例数据。",
+        "update_id": "rt-8a6096ac4fd6624b",
+        "source_url": "",
+        "time": "2026-05-28T12:15:00Z"
+      }
+    ],
+    "rt-463c82668fab0771": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "新闻为研发合作，未提及任何国家疫情变化数据",
+        "update_id": "rt-463c82668fab0771",
+        "source_url": "",
+        "time": "2026-05-28T12:00:00Z"
+      }
+    ],
+    "rt-559ebf44169df114": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "标题提及ADPH关注汉坦病毒，但无具体数字或新增病例。",
+        "update_id": "rt-559ebf44169df114",
+        "source_url": "",
+        "time": "2026-05-28T22:58:49.000Z"
+      }
+    ],
+    "rt-83076df4a8479621": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "报道保险业应对埃博拉和安第斯汉坦病毒，未提供具体病例数据。",
+        "update_id": "rt-83076df4a8479621",
+        "source_url": "",
+        "time": "2026-05-28T21:00:00.000Z"
+      }
+    ],
+    "rt-a7d07c3fdc6a1471": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "福布斯报道实验性治疗可能用于游轮乘客，无新增病例数字。",
+        "update_id": "rt-a7d07c3fdc6a1471",
+        "source_url": "",
+        "time": "2026-05-28T20:32:00.000Z"
+      }
+    ],
+    "rt-41cf0b8111bd6df0": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "high",
+        "reasoning_zh": "WHO称西班牙新增1例，游轮疫情总数升至13例。",
+        "update_id": "rt-41cf0b8111bd6df0",
+        "source_url": "",
+        "time": "2026-05-28T02:39:03.000Z"
+      }
+    ],
+    "rt-88dea601cb721498": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "WHO更新提及汉坦病毒爆发与邮轮旅行相关，但未提供具体国家或数字。",
+        "update_id": "rt-88dea601cb721498",
+        "source_url": "",
+        "time": "2026-05-29T09:32:00.000Z"
+      }
+    ],
+    "rt-8cf9f6f73bb0e034": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "华盛顿州立大学研究显示汉坦病毒高流行率，但未提供新增病例数。",
+        "update_id": "rt-8cf9f6f73bb0e034",
+        "source_url": "",
+        "time": "2026-05-29T07:11:25.000Z"
+      }
+    ],
+    "rt-50ae3c392e1a205b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "欧盟确保紧急交付潜在治疗药物，未提及具体国家或病例变化。",
+        "update_id": "rt-50ae3c392e1a205b",
+        "source_url": "",
+        "time": "2026-05-29T06:24:02.000Z"
+      }
+    ],
+    "rt-575c5c69e0f97e83": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "邮轮乘客可能被允许回家，但未提供国家或病例数字。",
+        "update_id": "rt-575c5c69e0f97e83",
+        "source_url": "",
+        "time": "2026-05-29T05:01:00.000Z"
+      }
+    ],
+    "rt-12153a8b73dcac41": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "路透社报道欧盟确保紧急交付治疗药物，未提及具体国家或病例变化。",
+        "update_id": "rt-12153a8b73dcac41",
+        "source_url": "",
+        "time": "2026-05-28T12:41:36.000Z"
+      }
+    ],
+    "rt-447af0cdbdb213a9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道提及汉坦病毒暴露患者可能回家，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-447af0cdbdb213a9",
+        "source_url": "",
+        "time": "2026-05-29T13:23:00.000Z"
+      }
+    ],
+    "rt-bc17286a4181bb74": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "内布拉斯加大学负责人评论疫情，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-bc17286a4181bb74",
+        "source_url": "",
+        "time": "2026-05-29T12:21:00.000Z"
+      }
+    ],
+    "rt-b891b2fb3f56c942": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "欧盟从日本接收实验性治疗，但未涉及病例数字变化，无法提取变化量。",
+        "update_id": "rt-b891b2fb3f56c942",
+        "source_url": "",
+        "time": "2026-05-29T10:45:46.000Z"
+      }
+    ],
+    "rt-a5637edefb1d670d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "介绍内布拉斯加隔离设施，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-a5637edefb1d670d",
+        "source_url": "",
+        "time": "2026-05-29T10:04:15.000Z"
+      }
+    ],
+    "rt-7e5edd33411d1c38": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道暴露乘客可能回家但需监控，未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-7e5edd33411d1c38",
+        "source_url": "",
+        "time": "2026-05-29T03:27:00.000Z"
+      }
+    ],
+    "rt-ee7a7c67f5daebad": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-28",
+        "confidence": "low",
+        "reasoning_zh": "澳大利亚延长邮轮乘客隔离，但未提供具体病例数字，无法提取变化量。",
+        "update_id": "rt-ee7a7c67f5daebad",
+        "source_url": "",
+        "time": "2026-05-28T06:31:05.000Z"
+      }
     ]
   }
 }

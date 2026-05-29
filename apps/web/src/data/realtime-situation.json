@@ -4,23 +4,20 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 1
+    "daysAtState": 2
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 11,
-    "whoLastUpdateZh": "5/13",
-    "whoDaysAgo": 15,
+    "whoLastUpdateZh": "5/28",
+    "whoDaysAgo": 1,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 11,
-    "sinceWhoNewCases": 2,
-    "sinceWhoNewCountries": [
-      "西班牙",
-      "法国"
-    ],
-    "currentReportedCases": 13
+    "sinceWhoNewCases": 0,
+    "sinceWhoNewCountries": [],
+    "currentReportedCases": 11
   },
   "ruler": {
     "maxKm": 20000,
@@ -78,23 +75,19 @@
   "events": [
     {
       "at": "2026-05-28T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO DON 最近一次公布（已 1 天无新事件）",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-15T12:00:00Z",
       "kind": "detection",
       "countryZh": "西班牙",
       "delta": 1,
       "type": "confirmed",
       "shortContext": "确诊输入",
-      "verdict": "待 WHO 复核",
+      "verdict": "已纳入 WHO",
       "source": "es_isciii"
-    },
-    {
-      "at": "2026-05-27T11:26:56Z",
-      "kind": "detection",
-      "countryZh": "西班牙",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
     },
     {
       "at": "2026-05-15T12:00:00Z",
@@ -103,7 +96,7 @@
       "delta": 1,
       "type": "confirmed",
       "shortContext": "确诊输入",
-      "verdict": "待 WHO 复核",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
     {
@@ -113,7 +106,7 @@
       "delta": 0,
       "type": "monitoring",
       "shortContext": "监测信号",
-      "verdict": "待 WHO 复核",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
     {
@@ -123,17 +116,11 @@
       "delta": 0,
       "type": "monitoring",
       "shortContext": "监测信号",
-      "verdict": "待 WHO 复核",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-13T12:00:00Z",
-      "kind": "who_baseline",
-      "headline": "WHO DON 最近一次公布（已 15 天无新事件）",
-      "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 0,
+  "daysWithoutNewConfirmed": 14,
   "totals": {
     "confirmed": 8,
     "indeterminate": 3,
@@ -198,15 +185,15 @@
   "sources": [
     {
       "name": "WHO DON",
-      "updatedAt": "2026-05-13T12:00:00Z"
+      "updatedAt": "2026-05-28T12:00:00Z"
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-28T09:58:08.608107+00:00"
+      "updatedAt": "2026-05-29T14:57:11.645686+00:00"
     },
     {
       "name": "ECDC Surveillance",
-      "updatedAt": "2026-05-13T12:00:00Z"
+      "updatedAt": "2026-05-28T12:00:00Z"
     },
     {
       "name": "各国 CDC + 实时新闻",
@@ -214,8 +201,8 @@
     }
   ],
   "intake": {
-    "last24hCount": 18,
-    "highConfidencePicks": 2
+    "last24hCount": 11,
+    "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-05-28T09:58:13.106273+00:00"
+  "realtimeUpdatedAt": "2026-05-29T14:57:14.581831+00:00"
 }

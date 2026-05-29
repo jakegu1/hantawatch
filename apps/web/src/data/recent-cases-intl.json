@@ -1,7 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-28T10:50:05.309509+00:00",
+  "__generated_at": "2026-05-29T14:57:14.582284+00:00",
   "cases": [
+    {
+      "id": "who-2026-don604",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-28",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
+        "confidence": "official"
+      }
+    },
     {
       "id": "who-2026-don601",
       "regionCode": "INT",
@@ -14,7 +30,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-05-28T09:57:41.734229+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "official"
       }
     },
@@ -30,7 +46,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-05-28T09:57:41.734229+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "official"
       }
     },
@@ -46,7 +62,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
-        "retrievedAt": "2026-05-28T09:57:41.734229+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "official"
       }
     },
@@ -57,28 +73,28 @@
       "date": "2026-05-27",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 因刚果民主共和国和乌干达埃博拉疫情加剧而加强活动。",
+      "title": "欧洲 CDC 加强活动，刚果民主共和国和乌干达埃博拉疫情加剧。",
       "summary": "欧洲 CDC；刚果民主共和国；乌干达",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMzQyUTNNeHR1b1ZwclZKT09ib0pRejFScHJONV9RVE02NEljel9xWEFBeGQyMHcxOFRPMnVmTFdfNWd4S25tVFBfMVpFVDR3RXZVNmx1VFhxQmFidGQ3YW94NDlBNXFBZm9XU19aR1RoOVlLSFFtVFNocnlqaDdST2NaX2FBRmZCdVhNSGt1LUQzX0xoTlZjSU9nLXBOOTBWY29IUFFTNXZFVjRqeHc?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
     {
       "id": "surv-news-news.google.com-rss-articles-cbmi2afbvv95cuxnedjtrxhps3q0qwznq0j1ekptngnlrklms3ndyv9yc2j5vjlwu0diexblmddnrgdizd",
       "regionCode": "INT",
-      "serotypeId": "other",
+      "serotypeId": "andes",
       "date": "2026-05-26",
       "caseType": "suspected",
       "count": 0,
-      "title": "加拿大公共卫生署发布安第斯病毒病原体安全数据表。",
-      "summary": "加拿大公共卫生署；安第斯病毒",
+      "title": "加拿大发布 Andes 病毒病原体安全数据表。",
+      "summary": "加拿大；Andes 病毒；安全数据表",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeDJtRXhpS3Q0QWZNQ0J1ekptNGNLRklmS3NDYV9Yc2J5VjlWU0dieXBlMDdnRGdiZDdXblk3eF9IYml2TEl3UFJsWldXNWxkRlJZSGRrTVREN3ZEWTR6ekpRTjlDazExVUl6NE4yWGtNWDI0Wk5aR3A1bHloVnNsWFY1X1Q1ZUxiYm80R3o1S1JOVFk0UzU3cTB4T3lUNEFWc2gtVmhWYUN4SHEzUzhNT1ZvdkJZbU1tZzh1bzl4dklHcVdQMm9TTGlkT0tGMi1NSE1DTlVKeFc?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -90,11 +106,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "欧洲 CDC 发布 2026 年 5 月 14-22 日传染病威胁周报。",
-      "summary": "欧洲 CDC；传染病威胁周报",
+      "summary": "欧洲 CDC；传染病威胁；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdElCd3hfZ2R3SzdTbW1QbkxGUGhpOHI2LW5pSURRdEY3Sm4wV1BidmZhMWItcEpObDhmcWI1QU1ydXlqaGpkcmtETml0c1kwVDhLSnJFd1FUeENfaGZIZHlXU2xCdTF3MlR5VmZHaXRlTkt1djVOZnR6ZGVlQmNZM013V0swZHVHc2Jkd1BhZEl3dURDWDlTMGItM1J1QVo5NUNTck8wakkyQQ?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -105,12 +121,12 @@
       "date": "2026-05-21",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 通报刚果民主共和国和乌干达埃博拉疫情。",
-      "summary": "欧洲 CDC；刚果民主共和国；乌干达",
+      "title": "刚果民主共和国和乌干达埃博拉疫情暴发。",
+      "summary": "刚果民主共和国；乌干达；埃博拉",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT0psTk9uZ21BWHlDdl81ek1SYk8tS3QyRkc3ZVkzSlVlUTRaejNhWTdLd2FKem9iMWgtRHVUTHktSXczX0t2UHFMLUNZbzhObHR4dXZzdFBtTWgtY1FrcE5ucTlFMWNVUWFKUDV6c2hnOFR6WXpZVU8zTk5jUk1GWDh2b29RMGwySzZYNFZvd05RdWgxeHNIU0VYaw?oc=5",
-        "retrievedAt": "2026-05-26T15:34:10.215493+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -126,7 +142,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNOWZCVXFUVkxidFhITlJGZGZObldxdWRZc0lfajdqOGlHejNUWk1wWmFSYjNmVWsyZVRKVENXX0NqYnRXckh4TkFEd3ZKLWI0M3k3aUNuR28xaWc5LS1uMXVMck5iMUpxV2x3NEd2WWZybW5aMFpsME1RMHhack05ZzdQemJKY3lYY1VlMFZOSzRaZFJ0X01Rcw?oc=5",
-        "retrievedAt": "2026-05-28T09:57:41.734229+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -142,7 +158,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObS11V1dRMzlvVF9HTk5OQ2RDSVY4Ym1tMElzSm1XSUNHR2c5SzViRDc0cS12d3BsOVdGaDlsU2NKa3RJNnZUX2RpU2MxMVhaSFVHa1pzVTk2Z0p1dkloS1VvSTYzeFA5Q1ZnRzJiZVNoeXlyZGNtTVU4NS1jZndINF9ianY3bHdhRGpGSURlM29vdEdxRmc?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -249,12 +265,12 @@
       "date": "2026-05-19",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 发布刚果民主共和国和乌干达埃博拉疫情警报。",
+      "title": "美国 CDC 发布刚果民主共和国和乌干达埃博拉疫情健康警报。",
       "summary": "美国 CDC；刚果民主共和国；乌干达",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAySUhsald1T2Z1Wk5pcHhHMlhzZExOWHFETW9IQjFBZTlSaXVsYnRrOUVuTEg1UUFLV2dOdks1Z0x2N2xlNXYyeEMzSGtPakhwUjlyLUZVUXpMUDNIbFE?oc=5",
-        "retrievedAt": "2026-05-27T15:34:33.249770+00:00",
+        "retrievedAt": "2026-05-29T09:49:15.061707+00:00",
         "confidence": "surveillance"
       }
     },
@@ -265,12 +281,12 @@
       "date": "2026-05-18",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 发布 2026 年汉坦病毒暴发检测指南。",
-      "summary": "美国 CDC；汉坦病毒；检测指南",
+      "title": "美国 CDC 发布汉坦病毒检测指南。",
+      "summary": "美国 CDC；检测指南",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5QSW9Ib29RUFhsNUh1c1NTXy1BNTE3aFYtM0ZDblROUk8teV96UTU1c0lZTU1vSU44b2J1dm5kZF9jTEJiNUVleVBPQllZMkVFXzA5d2ZNeGZveTkxRHc?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T09:49:15.061707+00:00",
         "confidence": "surveillance"
       }
     },
@@ -473,12 +489,12 @@
       "date": "2026-05-02",
       "caseType": "suspected",
       "count": 0,
-      "title": "研究探讨健康调解在法属圭亚那卡宴地区汉坦病毒调查中的作用。",
+      "title": "研究探讨健康调解在法属圭亚那卡宴地区汉坦病毒病例调查中的作用。",
       "summary": "法属圭亚那；汉坦病毒；健康调解",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQeDRQZ3Uxc1I0X1NGblZKUlZNdk1QeUJCYnlCZ0hXRlZDT0VTaDFyZEN1al82Y3VNSzhqcm5UN0ZjZ2JqVllsbTRmQ2ZWejNqRHNXSlJ6SDRkejZhWjJnbTY5Ym4yZlpTV0pkZ3k2bEVWR2Y3MTg3U01tRlFZeXBVbVBxOXBINmZUVm5wM3BMV3BrWGtqdG5rXzhucThDZmc4ZjBnZVRjRmNqY0FkSC1JME5mM2JvWmlSMjNYMjZUM0x5Tm5MTmcxZEUwaDd0bEUyclEzN3RxRHZnbm5zUm5QcGJZWEg1ZlIzeDgxY0VaWGltUVpKZmR2UVZsb0tTY1d5TGFxX1Rhc1E5MTAwc0hV?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "surveillance"
       }
     },
@@ -494,7 +510,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
-        "retrievedAt": "2026-05-28T10:49:44.614674+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "news"
       }
     },
@@ -510,7 +526,23 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-28T10:49:44.615416+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193877+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmipafbvv95cuxqretaaxhocdnrt0lzzs1mejlmtglqdgk0zhvhazzjcvlncfdqoxneuzq4tuxfsfzcat",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-07",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织就与游轮有关的汉坦病毒病例采取应对行动",
+      "summary": "",
+      "source": {
+        "name": "World Health Organization (WHO)",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
+        "retrievedAt": "2026-05-29T14:56:52.193062+00:00",
         "confidence": "news"
       }
     },
@@ -526,7 +558,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-28T10:49:44.615416+00:00",
+        "retrievedAt": "2026-05-29T14:56:52.193877+00:00",
         "confidence": "news"
       }
     }
