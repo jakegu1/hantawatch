@@ -17,9 +17,9 @@ MAX_RULER_KM = 20000
 
 _STATE_DEFS: dict[str, dict[str, Any]] = {
     "calm": {"code": "calm", "labelZh": "平静", "icon": "🟢"},
-    "remote_watch": {"code": "remote_watch", "labelZh": "远端关注", "icon": "🟡"},
-    "near_watch": {"code": "near_watch", "labelZh": "近端关注", "icon": "🟠"},
-    "domestic_alert": {"code": "domestic_alert", "labelZh": "国内警戒", "icon": "🔴"},
+    "remote_watch": {"code": "remote_watch", "labelZh": "海外关注", "icon": "🟡"},
+    "near_watch": {"code": "near_watch", "labelZh": "邻近警戒", "icon": "🟠"},
+    "domestic_alert": {"code": "domestic_alert", "labelZh": "本土警报", "icon": "🔴"},
 }
 
 

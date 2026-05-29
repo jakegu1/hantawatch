@@ -12,6 +12,7 @@ import {
   arcgisCases,
   arcgisFetchedAt,
   outbreakStatus,
+  officialAssessments,
 } from '@/lib/data';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import { buildRiskSnapshot } from '@/lib/risk-snapshot';
@@ -376,20 +377,21 @@ export default function HomePage() {
             <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-2.5">
               <Shield className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-sky-600" />
               <span className="font-semibold text-xs sm:text-sm text-slate-900">官方风险评估</span>
-              <span className="ml-auto text-[10px] text-slate-400">WHO / 各国 CDC</span>
+              <span className="ml-auto text-[10px] text-slate-400">
+                {officialAssessments.asOf ? `评估于 ${officialAssessments.asOf}` : 'WHO / 各国 CDC'}
+              </span>
             </div>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11px] sm:text-xs">
-              {([
-                ['WHO 全球', '低风险'],
-                ['US CDC', 'L3 最低'],
-                ['ECDC', '低风险'],
-                ['中国 CDC', '未升级'],
-              ] as const).map(([label, value]) => (
-                <div key={label} className="inline-flex items-center gap-1.5">
-                  <span className="text-slate-500">{label}</span>
-                  <span className="badge badge-low !px-2 !py-0">{value}</span>
-                </div>
-              ))}
+              {officialAssessments.assessments.map((a) => {
+                const badgeClass =
+                  a.tone === 'high' ? 'badge-high' : a.tone === 'moderate' ? 'badge-moderate' : 'badge-low';
+                return (
+                  <div key={a.body} className="inline-flex items-center gap-1.5">
+                    <span className="text-slate-500">{a.body}</span>
+                    <span className={`badge ${badgeClass} !px-2 !py-0`}>{a.level}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

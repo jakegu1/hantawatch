@@ -55,10 +55,10 @@ export function DailyBriefBanner({
   return (
     <View
       style={{
-        background: 'rgba(255,255,255,0.10)',
-        border: '1rpx solid rgba(255,255,255,0.15)',
-        borderRadius: '16rpx',
-        padding: '28rpx 28rpx',
+        background: 'rgba(255,255,255,0.18)',
+        border: '1rpx solid rgba(255,255,255,0.28)',
+        borderRadius: '20rpx',
+        padding: '30rpx 30rpx',
         marginBottom: '16rpx',
       }}
     >
@@ -66,14 +66,14 @@ export function DailyBriefBanner({
         <Text style={{ fontSize: '34rpx', color: '#fff', fontWeight: 700, letterSpacing: '0.5rpx' }}>
           📅 {dateLabel}
         </Text>
-        <Text style={{ fontSize: '24rpx', color: 'rgba(255,255,255,0.7)', letterSpacing: '1rpx' }}>
+        <Text style={{ fontSize: '26rpx', color: '#dbeafe', letterSpacing: '1rpx', background: 'rgba(15,23,42,0.18)', padding: '2rpx 12rpx', borderRadius: '999rpx' }}>
           24H 要点
         </Text>
       </View>
 
       <Text
         style={{
-          fontSize: '32rpx',
+          fontSize: '36rpx',
           color: '#fff',
           fontWeight: 600,
           lineHeight: 1.5,
@@ -86,8 +86,8 @@ export function DailyBriefBanner({
 
       <Text
         style={{
-          fontSize: '26rpx',
-          color: 'rgba(226,232,240,0.95)',
+          fontSize: '30rpx',
+          color: '#f1f5f9',
           display: 'block',
           lineHeight: 1.6,
         }}

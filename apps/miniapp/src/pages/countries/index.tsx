@@ -55,7 +55,7 @@ function StatusPill({ imp }: { imp: MvHondiusImport }) {
     <Text
       style={{
         display: 'inline-block',
-        fontSize: '20rpx',
+        fontSize: '22rpx',
         fontWeight: 600,
         color: s.fg,
         background: s.bg,
@@ -81,7 +81,7 @@ function RiskPill({ c }: { c: CountryView }) {
     <Text
       style={{
         display: 'inline-block',
-        fontSize: '20rpx',
+        fontSize: '22rpx',
         fontWeight: 600,
         color: color[1],
         background: color[0],
@@ -119,12 +119,12 @@ function CountryCard({ c }: { c: CountryView }) {
           <Text style={{ fontSize: '30rpx', fontWeight: 700, color: '#111827' }}>
             {c.nameZh}
           </Text>
-          <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>{c.nameEn}</Text>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>{c.nameEn}</Text>
         </View>
         <View style={{ alignItems: 'flex-end' }}>
           <RiskPill c={c} />
           {c.signals && (
-            <Text style={{ fontSize: '20rpx', color: '#6b7280', flexShrink: 0, marginTop: '4rpx' }}>
+            <Text style={{ fontSize: '22rpx', color: '#6b7280', flexShrink: 0, marginTop: '4rpx' }}>
               近 30 天 {c.signals.signalCount30d} 条
               {c.signals.signalCount7d > 0 ? `  · 7 天 ${c.signals.signalCount7d}` : ''}
             </Text>
@@ -148,11 +148,11 @@ function CountryCard({ c }: { c: CountryView }) {
             {c.risk.riskSummaryZh}
           </Text>
           {c.risk.latestEvent && (
-            <Text style={{ display: 'block', fontSize: '20rpx', color: '#64748b', marginTop: '4rpx' }}>
+            <Text style={{ display: 'block', fontSize: '22rpx', color: '#64748b', marginTop: '4rpx' }}>
               最新事件：{c.risk.latestEvent.date} · {c.risk.latestEvent.title}
             </Text>
           )}
-          <Text style={{ display: 'block', fontSize: '20rpx', color: '#94a3b8', marginTop: '4rpx' }}>
+          <Text style={{ display: 'block', fontSize: '22rpx', color: '#94a3b8', marginTop: '4rpx' }}>
             {c.risk.latestSourceRetrievedAt
               ? `来源抓取：约 ${c.risk.sourceFreshnessHours ?? 0} 小时前${c.risk.stale ? ' · 需复核' : ''}`
               : c.risk.lastSignalAt
@@ -173,7 +173,7 @@ function CountryCard({ c }: { c: CountryView }) {
             {c.hasLocalAndes && (
               <Text
                 style={{
-                  fontSize: '18rpx',
+                  fontSize: '22rpx',
                   fontWeight: 700,
                   color: '#b91c1c',
                   background: '#fef2f2',
@@ -211,7 +211,7 @@ function CountryCard({ c }: { c: CountryView }) {
         >
           <View className="flex items-center" style={{ gap: '8rpx', marginBottom: '4rpx' }}>
             <StatusPill imp={c.imports} />
-            <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>· {c.imports.date}</Text>
+            <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>· {c.imports.date}</Text>
           </View>
           <Text style={{ fontSize: '22rpx', color: '#1f2937', lineHeight: 1.6 }}>
             {c.imports.summary_zh}
@@ -237,7 +237,7 @@ function CountryCard({ c }: { c: CountryView }) {
         <Text
           style={{
             display: 'block',
-            fontSize: '20rpx',
+            fontSize: '22rpx',
             color: '#9ca3af',
             fontStyle: 'italic',
             marginTop: '6rpx',
@@ -249,7 +249,7 @@ function CountryCard({ c }: { c: CountryView }) {
 
       {/* Footer: data review date */}
       <Text
-        style={{ display: 'block', fontSize: '20rpx', color: '#9ca3af', marginTop: '8rpx' }}
+        style={{ display: 'block', fontSize: '22rpx', color: '#9ca3af', marginTop: '8rpx' }}
       >
         基线 review 于 {c.lastReviewed}
       </Text>
@@ -278,7 +278,7 @@ function ImportsBanner() {
         <Text style={{ fontSize: '28rpx', fontWeight: 700, color: '#111827' }}>
           ⚠ {hondiusOutbreakName}
         </Text>
-        <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>跨国监测</Text>
+        <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>跨国监测</Text>
       </View>
       {sorted.map((imp) => {
         const country = byIso2.get(imp.iso2.toUpperCase());
@@ -306,7 +306,7 @@ function ImportsBanner() {
       <Text
         style={{
           display: 'block',
-          fontSize: '20rpx',
+          fontSize: '22rpx',
           color: '#9ca3af',
           marginTop: '10rpx',
           lineHeight: 1.6,
@@ -364,7 +364,7 @@ export default function CountriesPage() {
         <Text
           style={{
             display: 'block',
-            fontSize: '20rpx',
+            fontSize: '22rpx',
             color: '#6b7280',
             marginBottom: '8rpx',
           }}
@@ -390,7 +390,7 @@ export default function CountriesPage() {
           <Text
             style={{
               display: 'block',
-              fontSize: '20rpx',
+              fontSize: '22rpx',
               color: '#9ca3af',
               marginTop: '8rpx',
               lineHeight: 1.6,
@@ -437,7 +437,7 @@ export default function CountriesPage() {
                 <Text style={{ fontSize: '32rpx', fontWeight: 700, color: '#111827' }}>
                   {CONTINENT_LABEL_ZH[cont]}
                 </Text>
-                <Text style={{ fontSize: '20rpx', color: '#6b7280' }}>
+                <Text style={{ fontSize: '22rpx', color: '#6b7280' }}>
                   {s.total} 国
                   {s.andes > 0 ? `  · 安第斯本土 ${s.andes}` : ''}
                   {s.imports > 0 ? `  · 输入事件 ${s.imports}` : ''}
@@ -453,7 +453,7 @@ export default function CountriesPage() {
         <Text
           style={{
             display: 'block',
-            fontSize: '20rpx',
+            fontSize: '22rpx',
             color: '#6b7280',
             lineHeight: 1.7,
           }}
@@ -466,7 +466,7 @@ export default function CountriesPage() {
         <Text
           style={{
             display: 'block',
-            fontSize: '20rpx',
+            fontSize: '22rpx',
             color: '#6b7280',
             lineHeight: 1.7,
             marginTop: '10rpx',

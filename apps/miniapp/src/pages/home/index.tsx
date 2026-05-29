@@ -1,6 +1,6 @@
 import './index.scss';
 import { View, Text } from '@tarojs/components';
-import Taro, { useLoad, useShareAppMessage, useShareTimeline } from '@tarojs/taro';
+import Taro, { useLoad, usePullDownRefresh, useShareAppMessage, useShareTimeline } from '@tarojs/taro';
 import { useEffect, useMemo, useState } from 'react';
 import { SEROTYPES } from '@hantawatch/shared';
 import { filterOfficialTimelineCases } from '@hantawatch/shared/timeline';
@@ -17,6 +17,7 @@ import {
   dataMeta,
   hondiusImports,
   hondiusImportSummaries,
+  officialAssessments,
   outbreakStatus,
   realtimeFeed,
 } from '@/lib/data';
@@ -47,6 +48,21 @@ function distanceRingBg(km: number): { bg: string; border: string; color: string
   if (km > 500) return { bg: '#fff7ed', border: '#fdba74', color: '#ea580c' };
   return { bg: '#fef2f2', border: '#fca5a5', color: '#dc2626' };
 }
+
+const ASSESSMENT_TONE: Record<string, { bg: string; color: string }> = {
+  low: { bg: '#dcfce7', color: '#166534' },
+  moderate: { bg: '#fef9c3', color: '#a16207' },
+  high: { bg: '#fee2e2', color: '#b91c1c' },
+};
+
+// Forward-looking watchlist (想法1 Phase 1). The "病毒观察" brand is
+// disease-agnostic; as the current hantavirus outbreak winds down we want a
+// visible placeholder signalling the tool will expand to other emerging
+// diseases. No live data yet — keep copy calm and honest ("暂未纳入实时追踪").
+const OTHER_WATCHLIST: { emoji: string; nameZh: string; note: string }[] = [
+  { emoji: '🦠', nameZh: '埃博拉病毒病', note: '非洲偶发暴发，WHO 持续监测' },
+  { emoji: '🐒', nameZh: 'Mpox（猴痘）', note: 'WHO 关注中，全球散发病例' },
+];
 
 export default function HomePage() {
   // Start from the JSON baked into the bundle (instant paint, no network
@@ -120,16 +136,39 @@ export default function HomePage() {
   // (e.g. US-LA new monitoring case) reflect without redeploying the
   // miniapp. Mirror of web page.tsx.
   const [liveImports, setLiveImports] = useState<MvHondiusImport[] | null>(null);
+  // When the live refresh fails (e.g. no network), we keep showing the bundled
+  // deploy-time snapshot but surface a small "离线 · 显示缓存" pill so the user
+  // knows the numbers may be older than what the web app shows.
+  const [refreshFailed, setRefreshFailed] = useState(false);
   useEffect(() => {
     let cancelled = false;
     fetchHondiusImports()
       .then((payload) => {
         if (cancelled) return;
         if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
+        setRefreshFailed(false);
       })
-      .catch(() => {/* fall back silently to bundled baseline */});
+      .catch(() => { if (!cancelled) setRefreshFailed(true); });
     return () => { cancelled = true; };
   }, []);
+
+  // Pull-to-refresh: re-pull both live feeds, then stop the spinner.
+  // Each promise catches its own error so Promise.all never rejects (avoids
+  // Promise.allSettled, which isn't in the miniapp's TS lib target).
+  usePullDownRefresh(() => {
+    const p1 = fetchClusters()
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) setLiveClusters(data);
+      })
+      .catch(() => {});
+    const p2 = fetchHondiusImports()
+      .then((payload) => {
+        if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
+        setRefreshFailed(false);
+      })
+      .catch(() => setRefreshFailed(true));
+    Promise.all([p1, p2]).then(() => Taro.stopPullDownRefresh());
+  });
 
   // Compute the nearest import + import-aware HPI frontend-side so cityZh /
   // lat / lon edits in mv-hondius-imports.json (and Supabase-added rows)
@@ -216,13 +255,26 @@ export default function HomePage() {
       {/* ============================================================ */}
       <View
         style={{
-          background: 'linear-gradient(180deg, #1e3a8a 0%, #1d4ed8 60%, #2563eb 100%)',
+          background: 'linear-gradient(180deg, #1e3a8a 0%, #1d4ed8 55%, #3b82f6 100%)',
           color: '#fff',
-          padding: '24rpx 24rpx 32rpx 24rpx',
+          padding: '24rpx 24rpx 36rpx 24rpx',
         }}
       >
         {/* Data freshness pill — right aligned */}
-        <View className="flex" style={{ justifyContent: 'flex-end', marginBottom: '8rpx' }}>
+        <View className="flex items-center" style={{ justifyContent: 'flex-end', gap: '8rpx', marginBottom: '8rpx' }}>
+          {refreshFailed && (
+            <Text
+              style={{
+                fontSize: '22rpx',
+                color: '#fff',
+                background: 'rgba(180,83,9,0.9)',
+                borderRadius: '999rpx',
+                padding: '2rpx 14rpx',
+              }}
+            >
+              离线 · 显示缓存
+            </Text>
+          )}
           <DataFreshness meta={dataMeta} />
         </View>
 
@@ -246,10 +298,11 @@ export default function HomePage() {
             <View
               className="flex-1"
               style={{
-                background: distTone.bg,
+                background: '#ffffff',
                 border: `2rpx solid ${distTone.border}`,
-                borderRadius: '16rpx',
-                padding: '20rpx',
+                borderRadius: '20rpx',
+                padding: '22rpx',
+                boxShadow: '0 6rpx 20rpx rgba(15, 23, 42, 0.08)',
               }}
             >
               <Text style={{ color: '#6b7280', fontSize: '22rpx', fontWeight: 500, display: 'block' }}>
@@ -265,16 +318,34 @@ export default function HomePage() {
                 {hasImportDistance ? `${nearestImport!.flag} ${importLocZh} · ${nearestImport!.statusZh}` : cluster?.location?.name ?? ''}
               </Text>
               {hasImportDistance && (
-                <Text style={{ fontSize: '18rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
+                <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
                   疫情源头: {cluster?.location?.name ?? ''}（{fmt(cluster?.distanceFromChinaKm ?? 0)} km）
                 </Text>
               )}
-              {/* Distance ring */}
-              <View className="flex gap-1 mt-2">
-                <View style={{ flex: 1, height: '6rpx', background: '#22c55e', borderRadius: '3rpx' }} />
-                <View style={{ flex: 1, height: '6rpx', background: '#fbbf24', opacity: 0.6, borderRadius: '3rpx' }} />
-                <View style={{ flex: 1, height: '6rpx', background: '#fb923c', opacity: 0.4, borderRadius: '3rpx' }} />
-                <View style={{ width: '12rpx', height: '6rpx', background: '#f87171', opacity: 0.3, borderRadius: '3rpx' }} />
+              {/* Distance position bar — marker shows where the current
+                  distance falls on a 0 → ~16,500 km scale (near = red/危险,
+                  far = green/安全). Replaces the old purely-decorative ring. */}
+              <View style={{ position: 'relative', height: '14rpx', marginTop: '12rpx' }}>
+                <View style={{ display: 'flex', height: '6rpx', borderRadius: '3rpx', overflow: 'hidden', marginTop: '4rpx' }}>
+                  <View style={{ flex: 1, background: '#f87171' }} />
+                  <View style={{ flex: 1, background: '#fb923c' }} />
+                  <View style={{ flex: 1, background: '#fbbf24' }} />
+                  <View style={{ flex: 1, background: '#22c55e' }} />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    top: '0',
+                    left: `${Math.min(100, Math.max(0, (displayedDistanceKm / 16500) * 100))}%`,
+                    width: '14rpx',
+                    height: '14rpx',
+                    borderRadius: '7rpx',
+                    background: distTone.color,
+                    border: '2rpx solid #fff',
+                    boxShadow: '0 1rpx 4rpx rgba(15,23,42,0.35)',
+                    marginLeft: '-7rpx',
+                  }}
+                />
               </View>
             </View>
 
@@ -282,9 +353,10 @@ export default function HomePage() {
               className="flex-1"
               style={{
                 background: '#fff',
-                borderRadius: '16rpx',
-                padding: '20rpx',
-                boxShadow: '0 4rpx 12rpx rgba(0,0,0,0.08)',
+                borderRadius: '20rpx',
+                padding: '22rpx',
+                border: '1rpx solid #e5e7eb',
+                boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
               }}
             >
               <View className="flex items-center gap-1">
@@ -307,7 +379,7 @@ export default function HomePage() {
                   }}
                 />
               </View>
-              <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
+              <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
                 中国大陆视角 · 满分 100
               </Text>
             </View>
@@ -331,16 +403,17 @@ export default function HomePage() {
               key={i}
               className="flex-1"
               style={{
-                background: 'rgba(255,255,255,0.10)',
-                borderRadius: '12rpx',
-                padding: '12rpx 8rpx',
+                background: 'rgba(255,255,255,0.16)',
+                border: '1rpx solid rgba(255,255,255,0.24)',
+                borderRadius: '14rpx',
+                padding: '14rpx 10rpx',
                 textAlign: 'center',
               }}
             >
               <Text style={{ fontSize: '32rpx', fontWeight: 700, color: m.color, lineHeight: 1, display: 'block' }}>
                 {m.v}
               </Text>
-              <Text style={{ fontSize: '20rpx', color: 'rgba(255,255,255,0.7)', marginTop: '4rpx', display: 'block', lineHeight: 1.3 }}>
+              <Text style={{ fontSize: '22rpx', color: 'rgba(255,255,255,0.9)', marginTop: '4rpx', display: 'block', lineHeight: 1.3 }}>
                 {m.label}
               </Text>
             </View>
@@ -351,42 +424,43 @@ export default function HomePage() {
         <View
           style={{
             background: '#fff',
-            borderRadius: '16rpx',
+            borderRadius: '20rpx',
             padding: '20rpx 24rpx',
-            boxShadow: '0 4rpx 12rpx rgba(0,0,0,0.08)',
+            border: '1rpx solid #e5e7eb',
+            boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
             marginBottom: '16rpx',
           }}
         >
           <View className="flex items-center gap-2 mb-2">
             <Text style={{ fontSize: '22rpx', fontWeight: 600, color: '#1e3a8a' }}>🛡️ 官方风险评估</Text>
-            <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginLeft: 'auto' }}>WHO / CDC</Text>
+            <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginLeft: 'auto' }}>
+              {officialAssessments.asOf ? `评估于 ${officialAssessments.asOf}` : 'WHO / CDC'}
+            </Text>
           </View>
-          {[
-            ['WHO 全球', '低风险', '#dcfce7', '#166534'],
-            ['US CDC', 'L3 最低', '#dcfce7', '#166534'],
-            ['ECDC', '低风险', '#dcfce7', '#166534'],
-            ['中国 CDC', '未升级', '#dcfce7', '#166534'],
-          ].map(([label, value, bg, color]) => (
-            <View
-              key={label}
-              className="flex items-center"
-              style={{ justifyContent: 'space-between', padding: '8rpx 0' }}
-            >
-              <Text style={{ fontSize: '24rpx', color: '#4b5563' }}>{label}</Text>
-              <Text
-                style={{
-                  background: bg,
-                  color,
-                  borderRadius: '100rpx',
-                  padding: '2rpx 16rpx',
-                  fontSize: '22rpx',
-                  fontWeight: 500,
-                }}
+          {officialAssessments.assessments.map((a) => {
+            const tone = ASSESSMENT_TONE[a.tone] ?? ASSESSMENT_TONE.low;
+            return (
+              <View
+                key={a.body}
+                className="flex items-center"
+                style={{ justifyContent: 'space-between', padding: '8rpx 0' }}
               >
-                {value}
-              </Text>
-            </View>
-          ))}
+                <Text style={{ fontSize: '24rpx', color: '#4b5563' }}>{a.body}</Text>
+                <Text
+                  style={{
+                    background: tone.bg,
+                    color: tone.color,
+                    borderRadius: '100rpx',
+                    padding: '2rpx 16rpx',
+                    fontSize: '22rpx',
+                    fontWeight: 500,
+                  }}
+                >
+                  {a.level}
+                </Text>
+              </View>
+            );
+          })}
         </View>
 
         {/* Nearest Andes card */}
@@ -402,9 +476,10 @@ export default function HomePage() {
         <View
           style={{
             background: '#fff',
-            borderRadius: '16rpx',
+            borderRadius: '20rpx',
             padding: '20rpx 24rpx',
-            boxShadow: '0 4rpx 12rpx rgba(0,0,0,0.08)',
+            border: '1rpx solid #e5e7eb',
+            boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
           }}
         >
           <View className="flex items-center" style={{ justifyContent: 'space-between' }}>
@@ -421,7 +496,7 @@ export default function HomePage() {
               height={48}
             />
           </View>
-          <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '8rpx', display: 'block', lineHeight: 1.5 }}>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '8rpx', display: 'block', lineHeight: 1.5 }}>
             分数主要来自病毒本身的高危属性、输入监测距离、交通连接和国内基线状态。
           </Text>
         </View>
@@ -437,7 +512,7 @@ export default function HomePage() {
         <View className="flex items-center gap-2 mb-2">
           <Text style={{ fontSize: '22rpx', color: '#ef4444' }}>⚠️</Text>
           <Text style={{ fontSize: '26rpx', fontWeight: 600, color: '#374151' }}>各血清型关注等级</Text>
-          <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginLeft: 'auto' }}>按威胁程度排序</Text>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginLeft: 'auto' }}>按威胁程度排序</Text>
         </View>
         {/* Compressed (audit #11): smaller circle, tighter padding, single-row
             description. All 5 stay visible but take ~half the vertical space. */}
@@ -468,15 +543,15 @@ export default function HomePage() {
                   marginRight: '16rpx',
                 }}
               >
-                <Text style={{ fontSize: '18rpx', fontWeight: 700, color: s.color }}>{i + 1}</Text>
+                <Text style={{ fontSize: '22rpx', fontWeight: 700, color: s.color }}>{i + 1}</Text>
               </View>
               <View className="flex-1 min-w-0">
                 <View className="flex items-center flex-wrap" style={{ gap: '8rpx' }}>
                   <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#111827' }}>{s.nameZh}</Text>
-                  <Text style={{ fontSize: '18rpx', color: s.color, fontWeight: 500 }}>{r.label}</Text>
+                  <Text style={{ fontSize: '22rpx', color: s.color, fontWeight: 500 }}>{r.label}</Text>
                 </View>
                 <Text
-                  style={{ fontSize: '18rpx', color: '#6b7280', marginTop: '2rpx', display: 'block', lineHeight: 1.3 }}
+                  style={{ fontSize: '22rpx', color: '#6b7280', marginTop: '2rpx', display: 'block', lineHeight: 1.3 }}
                   className="truncate"
                 >
                   {s.humanToHuman ? '⚠ 可人传 · ' : ''}{s.primaryHost.split('(')[0].trim()} · 病死率 {s.fatalityRate}
@@ -491,10 +566,7 @@ export default function HomePage() {
       {/* SECTION 3 · 中国 HFRS 地方性流行概况                           */}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
-        <View
-          className="card"
-          style={{ background: '#f9fafb', border: '1rpx solid #e5e7eb' }}
-        >
+        <View className="card" style={{ background: '#f9fafb', border: '1rpx solid #e5e7eb', borderRadius: '20rpx' }}>
           <View className="flex items-center gap-2 mb-1">
             <Text style={{ fontSize: '24rpx' }}>ℹ️</Text>
             <Text style={{ fontSize: '28rpx', fontWeight: 600, color: '#4b5563' }}>
@@ -529,7 +601,7 @@ export default function HomePage() {
             />
           </View>
 
-          <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '12rpx', display: 'block', lineHeight: 1.6 }}>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '12rpx', display: 'block', lineHeight: 1.6 }}>
             数据来源：中国疾控中心传染病月报。HFRS 主要由汉滩型和汉城型引起，均不具备人际传播能力。
             当前发病数处于历史基线正常范围，无异常暴发。
           </Text>
@@ -542,13 +614,13 @@ export default function HomePage() {
       {/* trust source surfaces first (2026-05-15 trust-order fix).     */}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
-        <View className="card">
+        <View className="card" style={{ border: '1rpx solid #e5e7eb', borderRadius: '20rpx', boxShadow: '0 6rpx 18rpx rgba(15,23,42,0.05)' }}>
           <View className="flex items-center mb-3" style={{ justifyContent: 'space-between' }}>
             <View className="flex items-center gap-2">
               <Text style={{ fontSize: '24rpx', color: '#1e40af' }}>🔔</Text>
               <Text style={{ fontSize: '28rpx', fontWeight: 600 }}>最新通报</Text>
             </View>
-            <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>国际 + 国内 · 按日期倒序</Text>
+            <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>国际 + 国内 · 按日期倒序</Text>
           </View>
           <FeedLegend feedId="recent-cases" />
           {/* Filtered to official sources only per audit — see web mirror. */}
@@ -566,7 +638,7 @@ export default function HomePage() {
       {/* keeps it from eating the screen. 4b 各国入口 已撤除（晋升 tabBar）.*/}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
-        <View className="card">
+        <View className="card" style={{ border: '1rpx solid #e5e7eb', borderRadius: '20rpx', boxShadow: '0 6rpx 18rpx rgba(15,23,42,0.05)' }}>
           {/* Compliance: no right-side "境外媒体" / outlet-name tag in the
               header. The disclaimer banner rendered inside the component
               already covers the AI-translation caveat. */}
@@ -585,7 +657,7 @@ export default function HomePage() {
       {/* SECTION 5 · HPI 透明度面板                                    */}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
-        <View className="card">
+        <View className="card" style={{ border: '1rpx solid #e5e7eb', borderRadius: '20rpx', boxShadow: '0 6rpx 18rpx rgba(15,23,42,0.05)' }}>
           <View className="flex items-center gap-2 mb-3">
             <Text style={{ fontSize: '24rpx', color: '#1e40af' }}>ℹ️</Text>
             <Text style={{ fontSize: '28rpx', fontWeight: 600 }}>HPI 指数分解（透明度面板）</Text>
@@ -595,7 +667,52 @@ export default function HomePage() {
       </View>
 
       {/* ============================================================ */}
-      {/* SECTION 6 · 反馈/导航 footer                                   */}
+      {/* SECTION 6 · 其他关注疫情 (forward-looking watchlist, 想法1)     */}
+      {/* Phase 1: static teaser. No live data — signals the disease-    */}
+      {/* agnostic "病毒观察" brand will expand as the current outbreak   */}
+      {/* winds down. Keep copy calm; no panic framing.                  */}
+      {/* ============================================================ */}
+      <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
+        <View className="card" style={{ border: '1rpx solid #e5e7eb', borderRadius: '20rpx', boxShadow: '0 6rpx 18rpx rgba(15,23,42,0.05)' }}>
+          <View className="flex items-center gap-2 mb-1">
+            <Text style={{ fontSize: '24rpx' }}>🌍</Text>
+            <Text style={{ fontSize: '28rpx', fontWeight: 600, color: '#374151' }}>其他关注疫情</Text>
+            <Text
+              style={{
+                fontSize: '22rpx',
+                color: '#6b7280',
+                marginLeft: 'auto',
+                background: '#f3f4f6',
+                borderRadius: '999rpx',
+                padding: '2rpx 14rpx',
+              }}
+            >
+              即将上线
+            </Text>
+          </View>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginBottom: '12rpx', display: 'block', lineHeight: 1.5 }}>
+            病毒观察将逐步覆盖更多新发传染病。以下病种暂未纳入实时追踪，敬请期待。
+          </Text>
+          {OTHER_WATCHLIST.map((d) => (
+            <View
+              key={d.nameZh}
+              className="flex items-center"
+              style={{ padding: '12rpx 0', borderTop: '1rpx solid #f3f4f6' }}
+            >
+              <Text style={{ fontSize: '32rpx', marginRight: '14rpx' }}>{d.emoji}</Text>
+              <View className="flex-1 min-w-0">
+                <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#111827', display: 'block' }}>{d.nameZh}</Text>
+                <Text style={{ fontSize: '22rpx', color: '#6b7280', display: 'block', lineHeight: 1.3 }} className="truncate">
+                  {d.note}
+                </Text>
+              </View>
+            </View>
+          ))}
+        </View>
+      </View>
+
+      {/* ============================================================ */}
+      {/* SECTION 7 · 反馈/导航 footer                                   */}
       {/*                                                                */}
       {/* The full subscribe-alerts CTA was REMOVED from miniapp on      */}
       {/* 2026-05-27 (audit #16): WeChat reviewers reject email-capture  */}

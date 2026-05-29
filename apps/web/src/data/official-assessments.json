@@ -1,0 +1,10 @@
+{
+  "_comment": "Manually maintained — official body risk levels change rarely. When you review/update these, bump `asOf` to today so the UI shows an honest 'assessed on' date. Consumed by apps/web (page.tsx) and apps/miniapp (home) via the official-assessments export in each data.ts.",
+  "asOf": "2026-05-28",
+  "assessments": [
+    { "body": "WHO 全球", "level": "低风险", "tone": "low" },
+    { "body": "US CDC", "level": "L3 最低", "tone": "low" },
+    { "body": "ECDC", "level": "低风险", "tone": "low" },
+    { "body": "中国 CDC", "level": "未升级", "tone": "low" }
+  ]
+}

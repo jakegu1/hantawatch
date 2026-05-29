@@ -85,6 +85,7 @@ export interface DailyBrief {
   watchFocus?: string[];
   shareLine?: string;
   evidence?: string[];
+  structuralLine?: string;
 }
 
 const riskSnapshotDailyBrief = riskSnapshot.dailyBrief as Partial<DailyBrief> | undefined;
@@ -242,6 +243,17 @@ const _COUNTRY_NAMES_ZH: Record<string, string> = {
 import arcgisAndvTrackingJson from '@web-data/arcgis-andv-tracking.json';
 import type { OutbreakStatus } from '@hantawatch/shared/types/outbreak-status';
 import outbreakStatusJson from '@web-data/outbreak-status.json';
+import officialAssessmentsJson from '@web-data/official-assessments.json';
+
+export interface OfficialAssessment {
+  body: string;
+  level: string;
+  tone: 'low' | 'moderate' | 'high';
+}
+export const officialAssessments: { asOf: string; assessments: OfficialAssessment[] } = {
+  asOf: (officialAssessmentsJson as { asOf?: string }).asOf ?? '',
+  assessments: (officialAssessmentsJson as { assessments?: OfficialAssessment[] }).assessments ?? [],
+};
 
 export const outbreakStatus: OutbreakStatus[] =
   (outbreakStatusJson as unknown as { outbreaks?: OutbreakStatus[] }).outbreaks ?? [];

@@ -10,13 +10,13 @@
 }
 
 .rs-live-strip {
-  padding: 10px 18px;
+  padding: 14rpx 24rpx;
   background: #fafafa;
   border-bottom: 1px solid #f3f4f6;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 22rpx;
   color: #6b7280;
 }
 
@@ -42,8 +42,8 @@
 .rs-card-status {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 18px;
+  gap: 16rpx;
+  padding: 20rpx 24rpx;
   border-bottom: 1px solid #f3f4f6;
 }
 
@@ -64,16 +64,23 @@
 }
 
 .rs-card-status-label {
-  font-size: 18px;
+  font-size: 30rpx;
   font-weight: 700;
   color: #111827;
   letter-spacing: 0.02em;
 }
 
+.rs-card-status-hint {
+  font-size: 22rpx;
+  color: #4b5563;
+  margin-top: 4rpx;
+  line-height: 1.4;
+}
+
 .rs-card-status-meta {
-  font-size: 11px;
+  font-size: 22rpx;
   color: #6b7280;
-  margin-top: 2px;
+  margin-top: 4rpx;
 }
 
 .rs-card--calm .rs-card-status {
@@ -112,11 +119,11 @@
 }
 
 .rs-card-hero {
-  padding: 14px 18px;
+  padding: 20rpx 24rpx;
 }
 
 .rs-card-hero-title {
-  font-size: 13px;
+  font-size: 24rpx;
   color: #6b7280;
   font-weight: 500;
   margin-bottom: 4px;
@@ -220,8 +227,8 @@
 .rs-card-hero-domestic {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 8rpx;
+  font-size: 24rpx;
   color: #374151;
   line-height: 1.5;
 }
@@ -246,18 +253,18 @@
 }
 
 .rs-ruler {
-  padding: 16px 18px 14px;
+  padding: 20rpx 24rpx 18rpx;
   background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
   border-top: 1px solid #f3f4f6;
   border-bottom: 1px solid #f3f4f6;
 }
 
 .rs-ruler-label {
-  font-size: 11px;
+  font-size: 22rpx;
   font-weight: 600;
   color: #6b7280;
   letter-spacing: 0.05em;
-  margin-bottom: 14px;
+  margin-bottom: 20rpx;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -267,7 +274,7 @@
   margin-left: auto;
   font-weight: 400;
   color: #9ca3af;
-  font-size: 10px;
+  font-size: 20rpx;
 }
 
 .rs-ruler-track-wrap {
@@ -290,7 +297,7 @@
   position: absolute;
   top: 32px;
   transform: translateX(-50%);
-  font-size: 10px;
+  font-size: 18rpx;
   color: #9ca3af;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
@@ -355,7 +362,7 @@
 }
 
 .rs-ruler-legend-item {
-  font-size: 12px;
+  font-size: 22rpx;
   color: #374151;
   display: flex;
   align-items: center;
@@ -391,16 +398,16 @@
   background: #f9fafb;
   border-radius: 8px;
   text-align: center;
-  font-size: 12px;
+  font-size: 22rpx;
   color: #6b7280;
 }
 
 .rs-card-section {
-  padding: 14px 18px;
+  padding: 20rpx 24rpx;
 }
 
 .rs-card-section-label {
-  font-size: 11px;
+  font-size: 22rpx;
   font-weight: 600;
   color: #6b7280;
   letter-spacing: 0.05em;
@@ -414,7 +421,7 @@
   margin-left: auto;
   font-weight: 400;
   color: #9ca3af;
-  font-size: 10px;
+  font-size: 20rpx;
 }
 
 .rs-event-row {
@@ -430,10 +437,10 @@
 }
 
 .rs-event-time {
-  font-size: 11px;
+  font-size: 20rpx;
   flex-shrink: 0;
-  width: 56px;
-  padding-top: 1px;
+  width: 92rpx;
+  padding-top: 2rpx;
   font-variant-numeric: tabular-nums;
   line-height: 1.35;
 }
@@ -445,7 +452,7 @@
 
 .rs-event-time-clock {
   color: #9ca3af;
-  font-size: 10px;
+  font-size: 18rpx;
 }
 
 .rs-event-body {
@@ -454,7 +461,7 @@
 }
 
 .rs-event-headline {
-  font-size: 13px;
+  font-size: 24rpx;
   color: #111827;
   font-weight: 500;
   margin-bottom: 2px;
@@ -481,7 +488,7 @@
 }
 
 .rs-event-meta {
-  font-size: 11px;
+  font-size: 20rpx;
   color: #6b7280;
   display: flex;
   gap: 6px;
@@ -490,8 +497,8 @@
 }
 
 .rs-event-tag {
-  font-size: 10px;
-  padding: 1px 6px;
+  font-size: 18rpx;
+  padding: 2rpx 10rpx;
   border-radius: 3px;
   background: #fef3c7;
   color: #92400e;
@@ -521,7 +528,7 @@
 .rs-event-empty {
   text-align: center;
   color: #9ca3af;
-  font-size: 13px;
+  font-size: 24rpx;
   padding: 20px 0;
 }
 
@@ -538,7 +545,7 @@
   padding-top: 8px;
   border-top: 1px dashed #e5e7eb;
   color: #9ca3af;
-  font-size: 11px;
+  font-size: 20rpx;
 }
 
 .rs-totals-row {
@@ -564,7 +571,7 @@
 }
 
 .rs-totals-row .rs-item .rs-lbl {
-  font-size: 10px;
+  font-size: 20rpx;
   color: #6b7280;
   margin-top: 4px;
 }
@@ -577,7 +584,7 @@
 }
 
 .rs-chip {
-  font-size: 11px;
+  font-size: 20rpx;
   background: #f3f4f6;
   color: #374151;
   padding: 4px 8px;
@@ -598,7 +605,7 @@
 }
 
 .rs-chips-sublabel {
-  font-size: 10px;
+  font-size: 20rpx;
   color: #9ca3af;
   margin-bottom: 6px;
   margin-top: 4px;
@@ -610,14 +617,14 @@
   border-radius: 8px;
   border: 1px solid #e5e7eb;
   background: #f9fafb;
-  font-size: 11px;
+  font-size: 20rpx;
   color: #6b7280;
   line-height: 1.55;
 }
 
 .rs-card-footer {
   padding: 10px 18px 14px;
-  font-size: 10px;
+  font-size: 18rpx;
   color: #9ca3af;
   text-align: center;
   border-top: 1px solid #f3f4f6;
@@ -635,7 +642,7 @@
   padding: 10px 14px;
   margin: 0 18px 14px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 22rpx;
   color: #991b1b;
   line-height: 1.5;
 }

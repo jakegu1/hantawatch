@@ -67,11 +67,11 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
           marginBottom: '14rpx',
         }}
       >
-        <Text style={{ fontSize: '20rpx', color: '#6b7280', lineHeight: 1.6, display: 'block' }}>
+        <Text style={{ fontSize: '22rpx', color: '#6b7280', lineHeight: 1.6, display: 'block' }}>
           {feed.disclaimer_zh}
         </Text>
         {feed.last_fetched && (
-          <Text style={{ fontSize: '18rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
+          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block' }}>
             上次更新：{fmtTime(feed.last_fetched)}
           </Text>
         )}
@@ -95,7 +95,7 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
             暂无实时动态
           </Text>
           <Text
-            style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block', lineHeight: 1.6 }}
+            style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '4rpx', display: 'block', lineHeight: 1.6 }}
           >
             等待首次同步。如需立即抓取，运维侧配置 LLM_API_KEY 后运行 collector。
           </Text>
@@ -130,7 +130,7 @@ export function RealtimeFeedSection({ feed, previewCount }: Props) {
               <Text
                 key={i}
                 style={{
-                  fontSize: '20rpx',
+                  fontSize: '22rpx',
                   background: '#e5e7eb',
                   color: '#374151',
                   padding: '2rpx 10rpx',

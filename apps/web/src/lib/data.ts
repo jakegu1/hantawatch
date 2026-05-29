@@ -48,6 +48,17 @@ import mvHondiusImportsJson from '@/data/mv-hondius-imports.json';
 import countrySignalsJson from '@/data/country-signals.json';
 import countryRiskSnapshotJson from '@/data/country-risk-snapshot.json';
 import officialSourcesJson from '@/data/official-sources.json';
+import officialAssessmentsJson from '@/data/official-assessments.json';
+
+export interface OfficialAssessment {
+  body: string;
+  level: string;
+  tone: 'low' | 'moderate' | 'high';
+}
+export const officialAssessments: { asOf: string; assessments: OfficialAssessment[] } = {
+  asOf: (officialAssessmentsJson as { asOf?: string }).asOf ?? '',
+  assessments: (officialAssessmentsJson as { assessments?: OfficialAssessment[] }).assessments ?? [],
+};
 
 // ---- Active clusters & current HPI ---------------------------------------
 

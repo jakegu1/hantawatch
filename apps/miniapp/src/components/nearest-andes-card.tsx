@@ -79,7 +79,7 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
             <View className="min-w-0 flex-1">
               <Text
                 className="uppercase tracking-wider"
-                style={{ color: '#c2410c', fontSize: '20rpx', fontWeight: 500, display: 'block' }}
+                style={{ color: '#c2410c', fontSize: '22rpx', fontWeight: 500, display: 'block' }}
               >
                 最近 Andes 型疫情
               </Text>
@@ -102,7 +102,7 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
               className="badge"
               style={{ background: '#ffedd5', color: '#9a3412', flexShrink: 0 }}
             >
-              <Text style={{ color: '#9a3412', fontSize: '20rpx' }}>全球 {count} 起活跃</Text>
+              <Text style={{ color: '#9a3412', fontSize: '22rpx' }}>全球 {count} 起活跃</Text>
             </View>
           )}
         </View>
@@ -137,7 +137,7 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
           </Text>
         </View>
         {hasCloserImport && sourceKm && (
-          <Text style={{ color: '#9ca3af', fontSize: '20rpx', marginBottom: '8rpx', display: 'block' }}>
+          <Text style={{ color: '#9ca3af', fontSize: '22rpx', marginBottom: '8rpx', display: 'block' }}>
             疫情源头：{flag} {nearest.location?.name} {fmt(sourceKm)} km
           </Text>
         )}
@@ -149,14 +149,14 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
           className="flex items-center flex-wrap"
           style={{ gap: '8rpx', marginBottom: '18rpx' }}
         >
-          <Text style={{ color: '#6b7280', fontSize: '20rpx' }}>
+          <Text style={{ color: '#6b7280', fontSize: '22rpx' }}>
             🗓 WHO 通报 <Text style={{ color: '#374151', fontWeight: 600 }}>{ago}</Text>
           </Text>
           {lastCheckedAt && (
             <>
-              <Text style={{ color: '#d1d5db', fontSize: '20rpx' }}>·</Text>
-              <Text style={{ color: '#6b7280', fontSize: '20rpx' }}>
-                � 系统核查 <Text style={{ color: '#374151', fontWeight: 600 }}>{relativeTimeZh(lastCheckedAt)}</Text>
+              <Text style={{ color: '#d1d5db', fontSize: '22rpx' }}>·</Text>
+              <Text style={{ color: '#6b7280', fontSize: '22rpx' }}>
+                🔍 系统核查 <Text style={{ color: '#374151', fontWeight: 600 }}>{relativeTimeZh(lastCheckedAt)}</Text>
               </Text>
             </>
           )}
@@ -197,7 +197,7 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
             }}
           >
             <Text style={{ color: '#b91c1c', fontSize: '22rpx', fontWeight: 500 }}>
-              💀 病死率 30-40%
+              💀 病死率 {SEROTYPES[nearest.serotypeId]?.fatalityRate ?? '偏高'}
             </Text>
           </View>
           <View
@@ -255,7 +255,7 @@ function Stat({ label, value, color }: { label: string; value: number; color: st
       >
         {value}
       </Text>
-      <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginTop: '4rpx' }}>{label}</Text>
+      <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '4rpx' }}>{label}</Text>
     </View>
   );
 }
@@ -265,7 +265,7 @@ function OtherClustersList({ clusters }: { clusters: ActiveCluster[] }) {
     <View className="mt-3 pt-3" style={{ borderTop: '1rpx solid #f3f4f6' }}>
       <Text
         className="uppercase tracking-wider"
-        style={{ color: '#9ca3af', fontSize: '20rpx', fontWeight: 500, display: 'block', marginBottom: '6rpx' }}
+        style={{ color: '#9ca3af', fontSize: '22rpx', fontWeight: 500, display: 'block', marginBottom: '6rpx' }}
       >
         其他活跃 Andes 聚集
       </Text>

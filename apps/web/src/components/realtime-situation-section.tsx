@@ -27,6 +27,14 @@ const OFFICIAL_SOURCE_ZH: Record<string, string> = {
 
 type StateCode = 'calm' | 'remote_watch' | 'near_watch' | 'domestic_alert';
 
+/** One-line plain-language meaning for each state, so the label isn't cryptic. */
+const STATE_HINT: Record<StateCode, string> = {
+  calm: '全球暂无活跃聚集疫情',
+  remote_watch: '全球有活跃疫情，但距中国大陆较远',
+  near_watch: '疫情信号已逼近中国大陆周边（约 5000 km 内）',
+  domestic_alert: '国内 HFRS 监测出现异常，请留意官方通报',
+};
+
 type SituationEvent = RealtimeSituation['events'][number];
 
 function relativeFromIso(isoStr: string, now = new Date()): string {
@@ -40,7 +48,8 @@ function relativeFromIso(isoStr: string, now = new Date()): string {
   if (minutes < 60) return `${minutes} 分钟前`;
   if (hours < 24) return `${hours} 小时前`;
   if (days < 30) return `${days} 天前`;
-  return `${t.getMonth() + 1}月${t.getDate()}日`;
+  const cn = new Date(t.getTime() + 8 * 3600_000);
+  return `${cn.getUTCMonth() + 1}月${cn.getUTCDate()}日`;
 }
 
 /** Beijing wall-clock from ISO — must match server and client (see realtime-feed-section fmtTime). */
@@ -293,6 +302,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
           <div className="rs-card-status-icon">{data.state.icon}</div>
           <div className="rs-card-status-text">
             <div className="rs-card-status-label">{data.state.labelZh}</div>
+            <div className="rs-card-status-hint">{STATE_HINT[code]}</div>
             <div className="rs-card-status-meta">
               已连续 {data.state.daysAtState} 天 · 升档于 {formatDate(data.state.since)}
             </div>
