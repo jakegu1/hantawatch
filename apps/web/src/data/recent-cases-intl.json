@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-29T16:39:21.926826+00:00",
+  "__generated_at": "2026-05-29T19:29:57.761515+00:00",
   "cases": [
     {
       "id": "who-2026-don604",
@@ -265,12 +265,12 @@
       "date": "2026-05-19",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 发布刚果（金）和乌干达埃博拉疫情健康警报。",
-      "summary": "美国 CDC；刚果（金）；乌干达",
+      "title": "美国 CDC 通报刚果民主共和国和乌干达埃博拉疫情。",
+      "summary": "美国 CDC；刚果民主共和国；乌干达",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFAySUhsald1T2Z1Wk5pcHhHMlhzZExOWHFETW9IQjFBZTlSaXVsYnRrOUVuTEg1UUFLV2dOdks1Z0x2N2xlNXYyeEMzSGtPakhwUjlyLUZVUXpMUDNIbFE?oc=5",
-        "retrievedAt": "2026-05-29T16:39:06.422228+00:00",
+        "retrievedAt": "2026-05-29T19:29:40.974582+00:00",
         "confidence": "surveillance"
       }
     },
@@ -510,23 +510,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
-        "retrievedAt": "2026-05-29T16:39:06.422228+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-12",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束”",
-      "summary": "",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-05-29T16:39:06.422228+00:00",
+        "retrievedAt": "2026-05-29T19:29:40.974582+00:00",
         "confidence": "news"
       }
     },
@@ -542,7 +526,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-05-29T16:39:06.423249+00:00",
+        "retrievedAt": "2026-05-29T19:29:40.975494+00:00",
         "confidence": "news"
       }
     },
@@ -558,7 +542,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-05-29T16:39:06.422228+00:00",
+        "retrievedAt": "2026-05-29T19:29:40.974582+00:00",
         "confidence": "news"
       }
     },
@@ -574,7 +558,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-05-29T16:39:06.423249+00:00",
+        "retrievedAt": "2026-05-29T19:29:40.975494+00:00",
         "confidence": "news"
       }
     }
