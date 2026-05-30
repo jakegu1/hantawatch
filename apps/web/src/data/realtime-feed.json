@@ -1,22 +1,34 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-30T15:01:25.774605+00:00",
+  "__generated_at": "2026-05-30T16:54:52.538059+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-30T15:01:24.626808+00:00",
+  "last_fetched": "2026-05-30T16:54:50.743950+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-0bbfbe1b5f85e288",
-      "time": "2026-05-30T14:32:39.000Z",
-      "title_en": "Officials divided over monitoring of hantavirus passengers who could soon return home - The Washington Post",
-      "body_en": "Officials divided over monitoring of hantavirus passengers who could soon return home The Washington Post",
-      "summary_zh": "华盛顿邮报：官员对汉坦病毒乘客监测意见分歧。",
+      "time": "2026-05-30T16:02:39.000Z",
+      "title_en": "Dispute grows over monitoring of hantavirus passengers who could soon return home - The Washington Post",
+      "body_en": "Dispute grows over monitoring of hantavirus passengers who could soon return home The Washington Post",
+      "summary_zh": "华盛顿邮报：汉坦病毒乘客监测争议升级。",
       "key_facts_zh": [
         "美国",
-        "监测分歧"
+        "监测争议"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7605dcd00afb2429",
+      "time": "2026-05-30T15:06:34.000Z",
+      "title_en": "Confusion and controversy surround government response to hantavirus - Scot Scoop News",
+      "body_en": "Confusion and controversy surround government response to hantavirus Scot Scoop News",
+      "summary_zh": "政府应对汉坦病毒引发困惑与争议。",
+      "key_facts_zh": [
+        "美国",
+        "政府应对"
       ],
       "signal_strength": "medium"
     },
@@ -25,84 +37,24 @@
       "time": "2026-05-30T11:33:45.000Z",
       "title_en": "Hantavirus case reported in Arapahoe County, Colorado - Outbreak News Today",
       "body_en": "Hantavirus case reported in Arapahoe County, Colorado Outbreak News Today",
-      "summary_zh": "美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例。",
+      "summary_zh": "美国科罗拉多州阿拉帕霍县报告汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
         "科罗拉多",
-        "新增 1 例"
+        "新增病例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-f741fa1c7f6e8c04",
-      "time": "2026-05-30T10:45:00Z",
-      "title_en": "Surveillance ordered for hantavirus ship passengers who go home",
-      "summary_zh": "对汉坦病毒邮轮乘客回家后实施监测。",
-      "key_facts_zh": [
-        "邮轮",
-        "监测"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b25eb658e7b65085",
-      "time": "2026-05-30T07:15:00Z",
-      "title_en": "Vanderbilt health researchers call for pandemic prevention",
-      "summary_zh": "范德堡健康研究人员呼吁预防大流行。",
-      "key_facts_zh": [
-        "美国",
-        "研究",
-        "预防"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-7e01802cd15e3c3e",
       "time": "2026-05-30T04:25:11.000Z",
       "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
       "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
-      "summary_zh": "两名接触汉坦病毒的邮轮乘客隔离后将于下周返回纽约。",
+      "summary_zh": "两名邮轮乘客接触汉坦病毒后隔离，预计下周返回纽约。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "2人隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-e77cc1760fde38d4",
-      "time": "2026-05-30T04:00:00Z",
-      "title_en": "Surveillance ordered for US hantavirus ship passengers who go home",
-      "summary_zh": "美国汉坦病毒邮轮乘客回家后需接受监测。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "监测"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1f2add1ab78ef381",
-      "time": "2026-05-30T02:15:00Z",
-      "title_en": "Hantavirus - exposed cruise passengers may soon be allowed to return home but must remain under 24 / 7 watch - WSVN 7News | Miami News , Weather , Sports",
-      "summary_zh": "接触汉坦病毒的邮轮乘客或可回家但需24小时监控。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "24小时监控"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-987c4bcb2973a6b1",
-      "time": "2026-05-30T01:33:00.000Z",
-      "title_en": "Passengers From Hantavirus Ship Might Soon Be Allowed to Leave Nebraska Facility - WSJ",
-      "body_en": "Passengers From Hantavirus Ship Might Soon Be Allowed to Leave Nebraska Facility WSJ",
-      "summary_zh": "汉坦病毒邮轮乘客或很快获准离开内布拉斯加设施。",
-      "key_facts_zh": [
-        "美国",
-        "内布拉斯加",
-        "邮轮"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -111,46 +63,153 @@
       "time": "2026-05-29T23:36:55.000Z",
       "title_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes - FOX 5 New York",
       "body_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes FOX 5 New York",
-      "summary_zh": "两名纽约汉坦病毒监测者将在自家完成隔离。",
+      "summary_zh": "两名纽约居民汉坦病毒监测中，将居家完成隔离。",
       "key_facts_zh": [
         "美国",
         "纽约",
-        "2人居家隔离"
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-8dea372fca7501fa",
-      "time": "2026-05-29T23:00:00Z",
-      "title_en": "WHO warns of hantavirus on cruise ship , with 3 dead , 3 others sickened",
-      "summary_zh": "WHO 警告邮轮汉坦疫情，3 死 3 病。",
+      "id": "rt-ce276908eeedb46a",
+      "time": "2026-05-29T21:14:11.000Z",
+      "title_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home - The New York Times",
+      "body_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home The New York Times",
+      "summary_zh": "纽约时报：汉坦病毒邮轮乘客回家后需接受监测。",
       "key_facts_zh": [
-        "WHO",
+        "美国",
         "邮轮",
-        "3 死"
+        "监测"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-5aba83e3554d2d8f",
-      "time": "2026-05-29T23:00:00Z",
-      "title_en": "More details emerge on hantavirus patients on cruise ship",
-      "summary_zh": "邮轮汉坦患者更多细节披露。",
+      "id": "rt-6040f94c70c29cd0",
+      "time": "2026-05-29T19:09:00.000Z",
+      "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
+      "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
+      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客获居家隔离。",
       "key_facts_zh": [
+        "美国",
+        "欧洲",
+        "实验药物"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-8b447554ae2ec1e6",
+      "time": "2026-05-29T17:01:28.000Z",
+      "title_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report - Yahoo News Canada",
+      "body_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report Yahoo News Canada",
+      "summary_zh": "美国邮轮乘客隔离中或可24小时监控下返家。",
+      "key_facts_zh": [
+        "美国",
         "邮轮",
-        "患者细节"
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a07432c35b12d2a5",
+      "time": "2026-05-29T15:49:28.000Z",
+      "title_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina - Le Monde.fr",
+      "body_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina Le Monde.fr",
+      "summary_zh": "阿根廷汉坦病毒病例激增，气候变化被疑为诱因。",
+      "key_facts_zh": [
+        "阿根廷",
+        "病例激增",
+        "气候变化"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-2004b4b961691f76",
-      "time": "2026-05-29T23:00:00Z",
-      "title_en": "Cruise ship at center of hantavirus outbreak to dock in Spain Sunday",
-      "summary_zh": "涉疫邮轮周日将停靠西班牙。",
+      "id": "rt-bc17286a4181bb74",
+      "time": "2026-05-29T12:21:00.000Z",
+      "title_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare - theweek.in",
+      "body_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare theweek.in",
+      "summary_zh": "内布拉斯加大学负责人强调需快速有效应对疫情。",
       "key_facts_zh": [
-        "西班牙",
+        "内布拉斯加",
+        "大学",
+        "疫情应对"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-50ae3c392e1a205b",
+      "time": "2026-05-29T06:24:02.000Z",
+      "title_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus - NDTV",
+      "body_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus NDTV",
+      "summary_zh": "欧盟紧急采购潜在汉坦病毒治疗药物。",
+      "key_facts_zh": [
+        "欧盟",
+        "紧急采购",
+        "治疗药物"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-7e5edd33411d1c38",
+      "time": "2026-05-29T03:27:00.000Z",
+      "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
+      "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
+      "summary_zh": "邮轮接触汉坦病毒乘客或可回家，但需24小时监控。",
+      "key_facts_zh": [
         "邮轮",
-        "停靠"
+        "乘客",
+        "24小时监控"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a7d07c3fdc6a1471",
+      "time": "2026-05-28T20:32:00.000Z",
+      "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
+      "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
+      "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
+      "key_facts_zh": [
+        "实验性治疗",
+        "邮轮乘客"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a33070599a29118f",
+      "time": "2026-05-28T14:47:36.000Z",
+      "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
+      "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
+      "summary_zh": "WHO称邮轮汉坦病毒疫情对公众风险仍低。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "风险低"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-12153a8b73dcac41",
+      "time": "2026-05-28T12:41:36.000Z",
+      "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - Reuters",
+      "body_en": "EU secures emergency deliveries of potential treatment against hantavirus Reuters",
+      "summary_zh": "欧盟确保紧急交付潜在汉坦病毒治疗药物。",
+      "key_facts_zh": [
+        "欧盟",
+        "紧急交付",
+        "治疗药物"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ee7a7c67f5daebad",
+      "time": "2026-05-28T06:31:05.000Z",
+      "title_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine - NDTV",
+      "body_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine NDTV",
+      "summary_zh": "澳大利亚延长邮轮乘客隔离期。",
+      "key_facts_zh": [
+        "澳大利亚",
+        "邮轮",
+        "隔离延长"
       ],
       "signal_strength": "high"
     }
