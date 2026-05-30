@@ -1,22 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-30T16:54:52.538059+00:00",
+  "__generated_at": "2026-05-30T17:59:57.357571+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-30T16:54:50.743950+00:00",
+  "last_fetched": "2026-05-30T17:59:56.224252+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-0bbfbe1b5f85e288",
-      "time": "2026-05-30T16:02:39.000Z",
-      "title_en": "Dispute grows over monitoring of hantavirus passengers who could soon return home - The Washington Post",
-      "body_en": "Dispute grows over monitoring of hantavirus passengers who could soon return home The Washington Post",
-      "summary_zh": "华盛顿邮报：汉坦病毒乘客监测争议升级。",
+      "time": "2026-05-30T17:00:01.000Z",
+      "title_en": "Dispute grows over home monitoring of hantavirus passengers - The Washington Post",
+      "body_en": "Dispute grows over home monitoring of hantavirus passengers The Washington Post",
+      "summary_zh": "华盛顿邮报报道汉坦病毒乘客居家监测争议。",
       "key_facts_zh": [
         "美国",
-        "监测争议"
+        "居家监测",
+        "争议"
       ],
       "signal_strength": "medium"
     },
@@ -28,7 +29,8 @@
       "summary_zh": "政府应对汉坦病毒引发困惑与争议。",
       "key_facts_zh": [
         "美国",
-        "政府应对"
+        "政府应对",
+        "争议"
       ],
       "signal_strength": "medium"
     },
@@ -40,7 +42,7 @@
       "summary_zh": "美国科罗拉多州阿拉帕霍县报告汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多",
+        "科罗拉多州",
         "新增病例"
       ],
       "signal_strength": "high"
@@ -50,7 +52,7 @@
       "time": "2026-05-30T04:25:11.000Z",
       "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
       "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
-      "summary_zh": "两名邮轮乘客接触汉坦病毒后隔离，预计下周返回纽约。",
+      "summary_zh": "两名隔离邮轮乘客接触汉坦病毒，预计下周返回纽约。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -59,11 +61,24 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-987c4bcb2973a6b1",
+      "time": "2026-05-30T01:33:00.000Z",
+      "title_en": "Passengers From Hantavirus Ship Might Soon Be Allowed to Leave Nebraska Facility - WSJ",
+      "body_en": "Passengers From Hantavirus Ship Might Soon Be Allowed to Leave Nebraska Facility WSJ",
+      "summary_zh": "汉坦病毒邮轮乘客或很快获准离开内布拉斯加设施。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-9df6d347fb5e31e8",
       "time": "2026-05-29T23:36:55.000Z",
       "title_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes - FOX 5 New York",
       "body_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes FOX 5 New York",
-      "summary_zh": "两名纽约居民汉坦病毒监测中，将居家完成隔离。",
+      "summary_zh": "两名纽约汉坦病毒监测者将在自家完成隔离。",
       "key_facts_zh": [
         "美国",
         "纽约",
@@ -89,7 +104,7 @@
       "time": "2026-05-29T19:09:00.000Z",
       "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
       "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
-      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客获居家隔离。",
+      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客可居家隔离。",
       "key_facts_zh": [
         "美国",
         "欧洲",
@@ -102,11 +117,11 @@
       "time": "2026-05-29T17:01:28.000Z",
       "title_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report - Yahoo News Canada",
       "body_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report Yahoo News Canada",
-      "summary_zh": "美国邮轮乘客隔离中或可24小时监控下返家。",
+      "summary_zh": "加拿大雅虎：美国隔离邮轮乘客或可24小时监控下回家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "隔离"
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
@@ -115,11 +130,11 @@
       "time": "2026-05-29T15:49:28.000Z",
       "title_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina - Le Monde.fr",
       "body_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina Le Monde.fr",
-      "summary_zh": "阿根廷汉坦病毒病例激增，气候变化被疑为诱因。",
+      "summary_zh": "世界报：气候变化被疑导致阿根廷汉坦病毒病例激增。",
       "key_facts_zh": [
         "阿根廷",
-        "病例激增",
-        "气候变化"
+        "气候变化",
+        "病例激增"
       ],
       "signal_strength": "medium"
     },
@@ -128,7 +143,7 @@
       "time": "2026-05-29T12:21:00.000Z",
       "title_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare - theweek.in",
       "body_en": "‘Outbreaks of this nature must be addressed quickly and effectively’: University of Nebraska chief on hantavirus scare theweek.in",
-      "summary_zh": "内布拉斯加大学负责人强调需快速有效应对疫情。",
+      "summary_zh": "内布拉斯加大学负责人称需快速有效应对汉坦病毒疫情。",
       "key_facts_zh": [
         "内布拉斯加",
         "大学",
@@ -141,11 +156,11 @@
       "time": "2026-05-29T06:24:02.000Z",
       "title_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus - NDTV",
       "body_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus NDTV",
-      "summary_zh": "欧盟紧急采购潜在汉坦病毒治疗药物。",
+      "summary_zh": "欧盟紧急采购汉坦病毒潜在治疗药物。",
       "key_facts_zh": [
         "欧盟",
         "紧急采购",
-        "治疗药物"
+        "潜在治疗"
       ],
       "signal_strength": "high"
     },
@@ -154,7 +169,7 @@
       "time": "2026-05-29T03:27:00.000Z",
       "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
       "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "邮轮接触汉坦病毒乘客或可回家，但需24小时监控。",
+      "summary_zh": "接触汉坦病毒的邮轮乘客或可回家但需24小时监控。",
       "key_facts_zh": [
         "邮轮",
         "乘客",
@@ -182,8 +197,21 @@
       "summary_zh": "WHO称邮轮汉坦病毒疫情对公众风险仍低。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
+        "邮轮疫情",
         "风险低"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ef6fd60f33fe2499",
+      "time": "2026-05-28T13:50:50.000Z",
+      "title_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak - Yahoo",
+      "body_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak Yahoo",
+      "summary_zh": "西班牙新增1例汉坦病毒，邮轮疫情总数达13例。",
+      "key_facts_zh": [
+        "西班牙",
+        "新增1例",
+        "总数13例"
       ],
       "signal_strength": "high"
     },
@@ -192,24 +220,11 @@
       "time": "2026-05-28T12:41:36.000Z",
       "title_en": "EU secures emergency deliveries of potential treatment against hantavirus - Reuters",
       "body_en": "EU secures emergency deliveries of potential treatment against hantavirus Reuters",
-      "summary_zh": "欧盟确保紧急交付潜在汉坦病毒治疗药物。",
+      "summary_zh": "欧盟紧急采购汉坦病毒潜在治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "紧急交付",
-        "治疗药物"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ee7a7c67f5daebad",
-      "time": "2026-05-28T06:31:05.000Z",
-      "title_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine - NDTV",
-      "body_en": "Hantavirus Outbreak: Australia Extends Cruise Passenger Quarantine NDTV",
-      "summary_zh": "澳大利亚延长邮轮乘客隔离期。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
+        "紧急采购",
+        "潜在治疗"
       ],
       "signal_strength": "high"
     }
