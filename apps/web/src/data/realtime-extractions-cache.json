@@ -2687,6 +2687,48 @@
         "source_url": "",
         "time": "2026-05-29T23:00:00Z"
       }
+    ],
+    "rt-45eb886ad24e0b53": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰卫生官员宣布汉坦病毒船只可再次航行，未提及新增病例数。",
+        "update_id": "rt-45eb886ad24e0b53",
+        "source_url": "",
+        "time": "2026-05-30T18:43:32.000Z"
+      }
+    ],
+    "rt-7605dcd00afb2429": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道关于政府应对汉坦病毒的混乱和争议，未提及具体国家或新增病例数。",
+        "update_id": "rt-7605dcd00afb2429",
+        "source_url": "",
+        "time": "2026-05-30T15:06:34.000Z"
+      }
+    ],
+    "rt-8b447554ae2ec1e6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "报道美国隔离的汉坦病毒邮轮乘客可能获准回家，未提及新增病例数。",
+        "update_id": "rt-8b447554ae2ec1e6",
+        "source_url": "",
+        "time": "2026-05-29T17:01:28.000Z"
+      }
     ]
   }
 }
