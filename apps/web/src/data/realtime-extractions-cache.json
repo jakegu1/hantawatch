@@ -2533,6 +2533,34 @@
         "source_url": "",
         "time": "2026-05-29T06:24:02.000Z"
       }
+    ],
+    "rt-7e01802cd15e3c3e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "两名乘客因接触汉坦病毒被隔离，预计返回纽约，属于监测中病例。",
+        "update_id": "rt-7e01802cd15e3c3e",
+        "source_url": "",
+        "time": "2026-05-30T04:25:11.000Z"
+      }
+    ],
+    "rt-18235f1dd496eed7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道提及纽约居民从汉坦病毒邮轮返回，但未提供具体数字。",
+        "update_id": "rt-18235f1dd496eed7",
+        "source_url": "",
+        "time": "2026-05-30T01:54:00.000Z"
+      }
     ]
   }
 }

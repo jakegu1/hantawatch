@@ -76,6 +76,16 @@
   },
   "events": [
     {
+      "at": "2026-05-30T04:25:11Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 2,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-05-29T23:36:55Z",
       "kind": "detection",
       "countryZh": "美国",
@@ -211,7 +221,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-30T02:48:30.525384+00:00"
+      "updatedAt": "2026-05-30T08:25:55.162803+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -219,12 +229,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-05-29T23:36:55Z"
+      "updatedAt": "2026-05-30T04:25:11Z"
     }
   ],
   "intake": {
-    "last24hCount": 10,
+    "last24hCount": 11,
     "highConfidencePicks": 1
   },
-  "realtimeUpdatedAt": "2026-05-30T02:48:33.210513+00:00"
+  "realtimeUpdatedAt": "2026-05-30T08:25:58.495972+00:00"
 }
