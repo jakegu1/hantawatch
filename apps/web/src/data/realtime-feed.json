@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-30T22:53:18.682703+00:00",
+  "__generated_at": "2026-05-30T23:56:31.068051+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-30T22:53:16.903689+00:00",
+  "last_fetched": "2026-05-30T23:56:29.183322+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-05-30T20:47:42.000Z",
       "title_en": "Hantavirus Quarantine to End for Some US Cruise Passengers - Mint",
       "body_en": "Hantavirus Quarantine to End for Some US Cruise Passengers Mint",
-      "summary_zh": "美国部分邮轮乘客汉坦病毒隔离将结束。",
+      "summary_zh": "美国邮轮部分乘客汉坦病毒隔离将结束。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -23,14 +23,14 @@
     },
     {
       "id": "rt-45eb886ad24e0b53",
-      "time": "2026-05-30T18:43:32.000Z",
+      "time": "2026-05-30T18:44:57.000Z",
       "title_en": "Dutch health officials clear hantavirus ship to sail again - CTV News",
       "body_en": "Dutch health officials clear hantavirus ship to sail again CTV News",
-      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮再次航行。",
+      "summary_zh": "荷兰卫生官员批准汉坦病毒涉疫船只再次航行。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "获准航行"
+        "解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +52,10 @@
       "time": "2026-05-30T15:06:34.000Z",
       "title_en": "Confusion and controversy surround government response to hantavirus - Scot Scoop News",
       "body_en": "Confusion and controversy surround government response to hantavirus Scot Scoop News",
-      "summary_zh": "政府对汉坦病毒的反应引发困惑和争议。",
+      "summary_zh": "政府应对汉坦病毒引发困惑与争议。",
       "key_facts_zh": [
         "美国",
-        "政府反应",
+        "政府应对",
         "争议"
       ],
       "signal_strength": "medium"
@@ -65,11 +65,11 @@
       "time": "2026-05-30T11:33:45.000Z",
       "title_en": "Hantavirus case reported in Arapahoe County, Colorado - Outbreak News Today",
       "body_en": "Hantavirus case reported in Arapahoe County, Colorado Outbreak News Today",
-      "summary_zh": "美国科罗拉多州阿拉帕霍县报告汉坦病毒病例。",
+      "summary_zh": "美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多州",
-        "新增病例"
+        "科罗拉多",
+        "新增 1 例"
       ],
       "signal_strength": "high"
     },
@@ -82,20 +82,20 @@
       "key_facts_zh": [
         "美国",
         "居家监测",
-        "人数增加"
+        "增加"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-7e01802cd15e3c3e",
       "time": "2026-05-30T04:25:11.000Z",
       "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
       "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
-      "summary_zh": "两名接触汉坦病毒的邮轮乘客下周返回纽约。",
+      "summary_zh": "两名隔离邮轮乘客接触汉坦病毒，预计下周返回纽约。",
       "key_facts_zh": [
         "美国",
         "纽约",
-        "邮轮"
+        "2 例"
       ],
       "signal_strength": "high"
     },
@@ -113,11 +113,24 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-9df6d347fb5e31e8",
+      "time": "2026-05-29T23:36:55.000Z",
+      "title_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes - FOX 5 New York",
+      "body_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes FOX 5 New York",
+      "summary_zh": "纽约两名汉坦病毒监测者将在家中完成隔离。",
+      "key_facts_zh": [
+        "美国",
+        "纽约",
+        "居家隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-6040f94c70c29cd0",
       "time": "2026-05-29T19:09:00.000Z",
       "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
       "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
-      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客可居家隔离。",
+      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客获准居家隔离。",
       "key_facts_zh": [
         "美国",
         "欧洲",
@@ -130,7 +143,7 @@
       "time": "2026-05-29T17:01:28.000Z",
       "title_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report - Yahoo News Canada",
       "body_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report Yahoo News Canada",
-      "summary_zh": "美国邮轮乘客或可在24小时监控下返家。",
+      "summary_zh": "美国邮轮乘客或可在24小时监控下回家隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -143,11 +156,11 @@
       "time": "2026-05-29T16:15:00.000Z",
       "title_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why - The Independent",
       "body_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why The Independent",
-      "summary_zh": "美国汉坦病毒邮轮乘客或提前结束42天隔离返家。",
+      "summary_zh": "美国汉坦病毒邮轮乘客或提前结束42天观察期回家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "隔离期"
+        "提前回家"
       ],
       "signal_strength": "medium"
     },
@@ -169,10 +182,9 @@
       "time": "2026-05-29T06:24:02.000Z",
       "title_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus - NDTV",
       "body_en": "EU Secures Emergency Deliveries Of Potential Treatment Against Hantavirus NDTV",
-      "summary_zh": "欧盟紧急采购潜在汉坦病毒治疗药物。",
+      "summary_zh": "欧盟确保紧急交付潜在汉坦病毒治疗药物。",
       "key_facts_zh": [
         "欧盟",
-        "紧急采购",
         "治疗药物"
       ],
       "signal_strength": "high"
@@ -186,7 +198,7 @@
       "key_facts_zh": [
         "邮轮",
         "乘客",
-        "24小时监控"
+        "监控"
       ],
       "signal_strength": "high"
     },
@@ -198,29 +210,16 @@
       "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
       "key_facts_zh": [
         "实验性治疗",
-        "邮轮乘客"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-216441d1e23804e4",
-      "time": "2026-05-28T15:22:00.000Z",
-      "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
-      "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚延长汉坦病毒邮轮乘客隔离至6月23日。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "延长隔离",
         "邮轮"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-a33070599a29118f",
       "time": "2026-05-28T14:47:36.000Z",
       "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
       "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
-      "summary_zh": "WHO称邮轮汉坦病毒疫情对公众风险仍低。",
+      "summary_zh": "WHO 称邮轮汉坦病毒疫情对公众风险仍低。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -236,8 +235,8 @@
       "summary_zh": "西班牙邮轮疫情后新增1例，累计13例。",
       "key_facts_zh": [
         "西班牙",
-        "邮轮",
-        "新增1例"
+        "新增1例",
+        "邮轮"
       ],
       "signal_strength": "high"
     }
