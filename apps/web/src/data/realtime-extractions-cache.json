@@ -2449,6 +2449,90 @@
         "source_url": "",
         "time": "2026-05-29T15:49:28.000Z"
       }
+    ],
+    "rt-987c4bcb2973a6b1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到乘客可能被允许离开内布拉斯加州的设施，但未提供具体病例数字变化。",
+        "update_id": "rt-987c4bcb2973a6b1",
+        "source_url": "",
+        "time": "2026-05-30T01:33:00.000Z"
+      }
+    ],
+    "rt-ce276908eeedb46a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到对回家乘客进行监测，但未提供具体数字变化。",
+        "update_id": "rt-ce276908eeedb46a",
+        "source_url": "",
+        "time": "2026-05-30T01:09:46.000Z"
+      }
+    ],
+    "rt-9df6d347fb5e31e8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "FOX 5报道2名纽约人正在接受汉坦病毒监测，将在自家完成隔离。",
+        "update_id": "rt-9df6d347fb5e31e8",
+        "source_url": "",
+        "time": "2026-05-29T23:36:55.000Z"
+      }
+    ],
+    "rt-ef6fd60f33fe2499": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "雅虎报道西班牙新增1例，累计13例，delta_confirmed为1。",
+        "update_id": "rt-ef6fd60f33fe2499",
+        "source_url": "",
+        "time": "2026-05-29T22:49:30.000Z"
+      }
+    ],
+    "rt-6040f94c70c29cd0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "CIDRAP报道实验性药物运往欧洲，美国乘客提供居家隔离，无具体数字变化。",
+        "update_id": "rt-6040f94c70c29cd0",
+        "source_url": "",
+        "time": "2026-05-29T19:09:00.000Z"
+      }
+    ],
+    "rt-4bfa219147af7ead": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "NDTV报道欧盟确保紧急交付潜在治疗药物，未提及具体国家病例变化。",
+        "update_id": "rt-4bfa219147af7ead",
+        "source_url": "",
+        "time": "2026-05-29T06:24:02.000Z"
+      }
     ]
   }
 }

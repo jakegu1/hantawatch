@@ -4,20 +4,22 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 2
+    "daysAtState": 3
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 11,
     "whoLastUpdateZh": "5/28",
-    "whoDaysAgo": 1,
+    "whoDaysAgo": 2,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 11,
-    "sinceWhoNewCases": 0,
-    "sinceWhoNewCountries": [],
-    "currentReportedCases": 11
+    "sinceWhoNewCases": 1,
+    "sinceWhoNewCountries": [
+      "西班牙"
+    ],
+    "currentReportedCases": 12
   },
   "ruler": {
     "maxKm": 20000,
@@ -74,9 +76,29 @@
   },
   "events": [
     {
+      "at": "2026-05-29T23:36:55Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 2,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-29T22:49:30Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
-      "headline": "WHO DON 最近一次公布（已 1 天无新事件）",
+      "headline": "WHO DON 最近一次公布（已 2 天无新事件）",
       "source": "who_don"
     },
     {
@@ -120,7 +142,7 @@
       "source": "official_cdc"
     }
   ],
-  "daysWithoutNewConfirmed": 14,
+  "daysWithoutNewConfirmed": 1,
   "totals": {
     "confirmed": 8,
     "indeterminate": 3,
@@ -189,7 +211,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-29T20:22:11.998795+00:00"
+      "updatedAt": "2026-05-30T02:48:30.525384+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -197,12 +219,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-05-28T12:00:00Z"
+      "updatedAt": "2026-05-29T23:36:55Z"
     }
   ],
   "intake": {
-    "last24hCount": 9,
-    "highConfidencePicks": 0
+    "last24hCount": 10,
+    "highConfidencePicks": 1
   },
-  "realtimeUpdatedAt": "2026-05-29T20:22:14.834043+00:00"
+  "realtimeUpdatedAt": "2026-05-30T02:48:33.210513+00:00"
 }
