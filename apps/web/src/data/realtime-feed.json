@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-31T13:40:23.709190+00:00",
+  "__generated_at": "2026-05-31T15:15:17.986068+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-31T13:40:17.836232+00:00",
+  "last_fetched": "2026-05-31T15:15:16.727876+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-05-31T00:35:00.000Z",
       "title_en": "Hantavirus cruise ship MV Hondius given green light to sail again after disinfection - Liverpool Echo",
       "body_en": "Hantavirus cruise ship MV Hondius given green light to sail again after disinfection Liverpool Echo",
-      "summary_zh": "英国报道：汉坦病毒邮轮MV Hondius消毒后复航。",
+      "summary_zh": "英国报道：MV Hondius邮轮消毒后获准复航。",
       "key_facts_zh": [
         "英国",
         "邮轮",
@@ -39,7 +39,7 @@
       "time": "2026-05-31T00:21:00.000Z",
       "title_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak - Manchester Evening News",
       "body_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak Manchester Evening News",
-      "summary_zh": "英国报道：MV Hondius邮轮获准复航。",
+      "summary_zh": "英国报道：MV Hondius邮轮致命疫情后获准复航。",
       "key_facts_zh": [
         "英国",
         "邮轮",
@@ -52,7 +52,7 @@
       "time": "2026-05-30T23:18:00.000Z",
       "title_en": "MV Hondius is cleared to sail again just weeks after hantavirus outbreak and huge disinfection - The Mirror",
       "body_en": "MV Hondius is cleared to sail again just weeks after hantavirus outbreak and huge disinfection The Mirror",
-      "summary_zh": "英国报道：MV Hondius消毒后复航。",
+      "summary_zh": "英国报道：MV Hondius消毒数周后获准复航。",
       "key_facts_zh": [
         "英国",
         "邮轮",
@@ -78,11 +78,11 @@
       "time": "2026-05-30T18:43:32.000Z",
       "title_en": "Dutch health officials clear hantavirus ship to sail again - CTV News",
       "body_en": "Dutch health officials clear hantavirus ship to sail again CTV News",
-      "summary_zh": "荷兰卫生部门批准汉坦病毒邮轮再次出航。",
+      "summary_zh": "荷兰卫生部门批准汉坦病毒涉疫邮轮再次启航。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "解除隔离"
+        "解禁"
       ],
       "signal_strength": "high"
     },
@@ -91,23 +91,36 @@
       "time": "2026-05-30T17:00:01.000Z",
       "title_en": "Dispute grows over home monitoring of hantavirus passengers - The Washington Post",
       "body_en": "Dispute grows over home monitoring of hantavirus passengers The Washington Post",
-      "summary_zh": "关于汉坦病毒乘客居家监测的争议升级。",
+      "summary_zh": "关于汉坦病毒乘客居家监测的争议加剧。",
       "key_facts_zh": [
         "美国",
         "居家监测",
         "争议"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-7e01802cd15e3c3e",
+      "time": "2026-05-30T04:25:11.000Z",
+      "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
+      "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
+      "summary_zh": "两名接触汉坦病毒的邮轮乘客下周将返回纽约。",
+      "key_facts_zh": [
+        "纽约",
+        "2名乘客",
+        "返回"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-9df6d347fb5e31e8",
       "time": "2026-05-29T23:36:55.000Z",
       "title_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes - FOX 5 New York",
       "body_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes FOX 5 New York",
-      "summary_zh": "纽约两名汉坦病毒监测者将在自家完成隔离。",
+      "summary_zh": "两名纽约汉坦病毒监测者将在自家完成隔离。",
       "key_facts_zh": [
-        "美国",
         "纽约",
+        "2人",
         "居家隔离"
       ],
       "signal_strength": "high"
@@ -120,7 +133,7 @@
       "summary_zh": "纽约时报：汉坦病毒邮轮乘客回家后需接受监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
+        "邮轮乘客",
         "监测"
       ],
       "signal_strength": "high"
@@ -130,11 +143,11 @@
       "time": "2026-05-29T19:09:00.000Z",
       "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
       "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
-      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客可居家隔离。",
+      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客获居家隔离。",
       "key_facts_zh": [
-        "美国",
         "欧洲",
-        "实验药物"
+        "实验药物",
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
@@ -143,11 +156,11 @@
       "time": "2026-05-29T17:01:28.000Z",
       "title_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report - Yahoo News Canada",
       "body_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report Yahoo News Canada",
-      "summary_zh": "美国隔离的汉坦病毒邮轮乘客或可24小时监控下回家。",
+      "summary_zh": "美国邮轮汉坦病毒隔离乘客或可在24小时监控下返家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "居家隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -156,24 +169,37 @@
       "time": "2026-05-29T15:49:28.000Z",
       "title_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina - Le Monde.fr",
       "body_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina Le Monde.fr",
-      "summary_zh": "气候变化被怀疑导致阿根廷汉坦病毒病例激增。",
+      "summary_zh": "阿根廷汉坦病毒病例激增，气候变化被疑为诱因。",
       "key_facts_zh": [
         "阿根廷",
-        "气候变化",
-        "病例激增"
+        "病例激增",
+        "气候变化"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-447af0cdbdb213a9",
+      "time": "2026-05-29T13:23:00.000Z",
+      "title_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) - Forbes",
+      "body_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) Forbes",
+      "summary_zh": "暴露汉坦病毒患者可返家但需接受24小时监控。",
+      "key_facts_zh": [
+        "美国",
+        "患者",
+        "监控"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-7e5edd33411d1c38",
       "time": "2026-05-29T03:27:00.000Z",
       "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
       "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "美国邮轮接触汉坦病毒的乘客或可回家但需24小时监控。",
+      "summary_zh": "暴露汉坦病毒的邮轮乘客或可返家但需24小时监控。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "24小时监控"
+        "监控"
       ],
       "signal_strength": "high"
     },
@@ -182,11 +208,11 @@
       "time": "2026-05-28T20:32:00.000Z",
       "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
       "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
-      "summary_zh": "实验性汉坦病毒治疗可能用于患病邮轮乘客。",
+      "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
       "key_facts_zh": [
+        "美国",
         "实验性治疗",
-        "邮轮",
-        "乘客"
+        "邮轮"
       ],
       "signal_strength": "medium"
     },
