@@ -2827,6 +2827,20 @@
         "source_url": "",
         "time": "2026-05-31T08:35:00.000Z"
       }
+    ],
+    "rt-1b06d9fd74c9af26": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "报道未提及具体国家及新增病例数，仅泛泛警告可能更多病例。",
+        "update_id": "rt-1b06d9fd74c9af26",
+        "source_url": "",
+        "time": "2026-05-31T12:04:43.000Z"
+      }
     ]
   }
 }
