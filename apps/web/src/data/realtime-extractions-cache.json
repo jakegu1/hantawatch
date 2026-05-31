@@ -2729,6 +2729,90 @@
         "source_url": "",
         "time": "2026-05-29T17:01:28.000Z"
       }
+    ],
+    "rt-7c01519a7ec2a0e8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准再次航行，未提供任何国家或新增病例数据。",
+        "update_id": "rt-7c01519a7ec2a0e8",
+        "source_url": "",
+        "time": "2026-05-31T00:35:00.000Z"
+      }
+    ],
+    "rt-383edce9e11b5cdd": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准航行，未提供国家或新增病例数据。",
+        "update_id": "rt-383edce9e11b5cdd",
+        "source_url": "",
+        "time": "2026-05-31T00:21:00.000Z"
+      }
+    ],
+    "rt-5faadcbfa1774bf6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准航行，未提供国家或新增病例数据。",
+        "update_id": "rt-5faadcbfa1774bf6",
+        "source_url": "",
+        "time": "2026-05-30T23:18:00.000Z"
+      }
+    ],
+    "rt-d31a9d1d0dbcaa35": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "新闻提及美国邮轮乘客隔离即将结束，但未提供新增病例数字。",
+        "update_id": "rt-d31a9d1d0dbcaa35",
+        "source_url": "",
+        "time": "2026-05-30T20:47:42.000Z"
+      }
+    ],
+    "rt-860119c936939785": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰卫生官员宣布邮轮可再次航行，但未提供新增病例数据。",
+        "update_id": "rt-860119c936939785",
+        "source_url": "",
+        "time": "2026-05-30T18:43:32.000Z"
+      }
+    ],
+    "rt-0c4525edc1099c0c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "新闻讨论疫情与政策，未提供具体新增病例数字。",
+        "update_id": "rt-0c4525edc1099c0c",
+        "source_url": "",
+        "time": "2026-05-29T09:00:12.000Z"
+      }
     ]
   }
 }
