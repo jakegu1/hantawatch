@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-31T06:55:39.711694+00:00",
+  "__generated_at": "2026-05-31T08:42:29.441416+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-05-31T06:55:38.560282+00:00",
+  "last_fetched": "2026-05-31T08:42:24.682082+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-05-31T00:35:00.000Z",
       "title_en": "Hantavirus cruise ship MV Hondius given green light to sail again after disinfection - Liverpool Echo",
       "body_en": "Hantavirus cruise ship MV Hondius given green light to sail again after disinfection Liverpool Echo",
-      "summary_zh": "汉坦病毒疫情邮轮MV Hondius经消毒后获准复航。",
+      "summary_zh": "汉坦病毒邮轮MV Hondius消毒后获准复航。",
       "key_facts_zh": [
         "邮轮",
         "复航",
@@ -26,11 +26,11 @@
       "time": "2026-05-31T00:21:00.000Z",
       "title_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak - Manchester Evening News",
       "body_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak Manchester Evening News",
-      "summary_zh": "MV Hondius邮轮在致命汉坦病毒爆发后获准复航。",
+      "summary_zh": "MV Hondius邮轮在汉坦病毒爆发后获准复航。",
       "key_facts_zh": [
         "邮轮",
         "复航",
-        "疫情"
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -39,11 +39,11 @@
       "time": "2026-05-30T23:18:00.000Z",
       "title_en": "MV Hondius is cleared to sail again just weeks after hantavirus outbreak and huge disinfection - The Mirror",
       "body_en": "MV Hondius is cleared to sail again just weeks after hantavirus outbreak and huge disinfection The Mirror",
-      "summary_zh": "MV Hondius在汉坦病毒爆发及大规模消毒后数周获准复航。",
+      "summary_zh": "MV Hondius邮轮在汉坦病毒爆发数周后获准复航。",
       "key_facts_zh": [
         "邮轮",
         "复航",
-        "消毒"
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +52,11 @@
       "time": "2026-05-30T20:47:42.000Z",
       "title_en": "Hantavirus Quarantine to End for Some US Cruise Passengers - Mint",
       "body_en": "Hantavirus Quarantine to End for Some US Cruise Passengers Mint",
-      "summary_zh": "美国部分邮轮乘客的汉坦病毒隔离即将结束。",
+      "summary_zh": "美国部分邮轮乘客汉坦病毒隔离将结束。",
       "key_facts_zh": [
         "美国",
-        "隔离结束",
-        "邮轮"
+        "邮轮",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-05-30T18:43:32.000Z",
       "title_en": "Dutch health officials clear hantavirus ship to sail again - CTV News",
       "body_en": "Dutch health officials clear hantavirus ship to sail again CTV News",
-      "summary_zh": "荷兰卫生官员批准汉坦病毒疫情邮轮复航。",
+      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮复航。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
@@ -80,9 +80,8 @@
       "body_en": "Dispute grows over home monitoring of hantavirus passengers The Washington Post",
       "summary_zh": "关于汉坦病毒乘客居家监测的争议加剧。",
       "key_facts_zh": [
-        "争议",
         "居家监测",
-        "乘客"
+        "争议"
       ],
       "signal_strength": "medium"
     },
@@ -91,10 +90,9 @@
       "time": "2026-05-30T15:06:34.000Z",
       "title_en": "Confusion and controversy surround government response to hantavirus - Scot Scoop News",
       "body_en": "Confusion and controversy surround government response to hantavirus Scot Scoop News",
-      "summary_zh": "汉坦病毒政府应对措施引发困惑和争议。",
+      "summary_zh": "汉坦病毒政府应对引发困惑和争议。",
       "key_facts_zh": [
         "政府应对",
-        "困惑",
         "争议"
       ],
       "signal_strength": "medium"
@@ -104,11 +102,11 @@
       "time": "2026-05-30T11:33:45.000Z",
       "title_en": "Hantavirus case reported in Arapahoe County, Colorado - Outbreak News Today",
       "body_en": "Hantavirus case reported in Arapahoe County, Colorado Outbreak News Today",
-      "summary_zh": "美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例。",
+      "summary_zh": "美国科罗拉多州阿拉帕霍县报告汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
         "科罗拉多",
-        "新增 1 例"
+        "新增病例"
       ],
       "signal_strength": "high"
     },
@@ -121,7 +119,7 @@
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "2人隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -143,7 +141,7 @@
       "time": "2026-05-29T21:14:11.000Z",
       "title_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home - The New York Times",
       "body_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home The New York Times",
-      "summary_zh": "汉坦病毒邮轮乘客回家后需接受监测。",
+      "summary_zh": "纽约时报：汉坦病毒邮轮乘客回家后需接受监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -169,11 +167,11 @@
       "time": "2026-05-29T17:01:28.000Z",
       "title_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report - Yahoo News Canada",
       "body_en": "Hantavirus Cruise Ship“ ”Passengers in U.S. Quarantine Could Be Allowed to Return Home Under 24/7 Watch: Report Yahoo News Canada",
-      "summary_zh": "美国邮轮汉坦病毒乘客或可24小时监控下回家。",
+      "summary_zh": "美国邮轮汉坦病毒隔离乘客或可24小时监控下回家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "居家隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -185,8 +183,7 @@
       "summary_zh": "CBS 报道埃博拉和汉坦病毒疫情引发对特朗普卫生机构裁员的质疑。",
       "key_facts_zh": [
         "美国",
-        "疫情",
-        "政治"
+        "质疑"
       ],
       "signal_strength": "medium"
     },
@@ -211,23 +208,9 @@
       "summary_zh": "福布斯报道实验性汉坦病毒治疗或用于患病邮轮乘客。",
       "key_facts_zh": [
         "实验性治疗",
-        "邮轮",
-        "乘客"
+        "邮轮"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-216441d1e23804e4",
-      "time": "2026-05-28T15:22:00.000Z",
-      "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
-      "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚将汉坦病毒邮轮乘客隔离延长至 6 月 23 日。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-a33070599a29118f",
