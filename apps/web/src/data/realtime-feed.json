@@ -1,22 +1,47 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T05:55:35.912728+00:00",
+  "__generated_at": "2026-06-01T11:15:30.515886+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-01T05:55:34.682739+00:00",
+  "last_fetched": "2026-06-01T11:15:29.418488+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-459e4c5d5f1e2598",
+      "time": "2026-06-01T09:00:45.000Z",
+      "title_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump’s Health Cuts - KFF Health News",
+      "body_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump’s Health Cuts KFF Health News",
+      "summary_zh": "美国民主党批评特朗普削减卫生预算，正值埃博拉和汉坦病毒疫情。",
+      "key_facts_zh": [
+        "美国",
+        "民主党",
+        "削减预算"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5cd4b592d337cc6f",
+      "time": "2026-06-01T02:00:00.000Z",
+      "title_en": "Ebola, hantavirus: UAE residents urged to follow travel advisories amid global outbreaks - Khaleej Times",
+      "body_en": "Ebola, hantavirus: UAE residents urged to follow travel advisories amid global outbreaks Khaleej Times",
+      "summary_zh": "阿联酋居民被敦促在全球疫情中遵守旅行建议。",
+      "key_facts_zh": [
+        "阿联酋",
+        "旅行建议"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-6b6eabaa4c3bba71",
       "time": "2026-05-31T23:57:00.000Z",
       "title_en": "Hantavirus-hit cruise ship cleared to resume service - CGTN Radio",
       "body_en": "Hantavirus-hit cruise ship cleared to resume service CGTN Radio",
-      "summary_zh": "受汉坦病毒影响的邮轮获准恢复运营。",
+      "summary_zh": "受汉坦病毒影响的邮轮获准恢复服务。",
       "key_facts_zh": [
         "邮轮",
-        "恢复运营"
+        "恢复服务"
       ],
       "signal_strength": "high"
     },
@@ -25,12 +50,13 @@
       "time": "2026-05-31T12:27:00.000Z",
       "title_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea - The Mirror",
       "body_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea The Mirror",
-      "summary_zh": "MV Hondius 邮轮复航前需通过四项检查。",
+      "summary_zh": "汉坦病毒邮轮MV Hondius经四项检查后获准重返海上。",
       "key_facts_zh": [
+        "邮轮",
         "MV Hondius",
-        "复航检查"
+        "检查"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-eee24a3a78ff284d",
@@ -42,18 +68,18 @@
         "圣文森特",
         "辟谣"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-8f4565d620e95be3",
       "time": "2026-05-31T08:35:00.000Z",
       "title_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages - NL Times",
       "body_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages NL Times",
-      "summary_zh": "MV Hondius 邮轮消毒后获准复航。",
+      "summary_zh": "MV Hondius 号邮轮消毒后获准复航。",
       "key_facts_zh": [
-        "MV Hondius",
-        "消毒",
-        "复航"
+        "荷兰",
+        "邮轮",
+        "消毒复航"
       ],
       "signal_strength": "high"
     },
@@ -62,9 +88,10 @@
       "time": "2026-05-31T00:21:00.000Z",
       "title_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak - Manchester Evening News",
       "body_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak Manchester Evening News",
-      "summary_zh": "MV Hondius 邮轮获准在疫情后复航。",
+      "summary_zh": "MV Hondius 号邮轮获准复航。",
       "key_facts_zh": [
-        "MV Hondius",
+        "荷兰",
+        "邮轮",
         "复航"
       ],
       "signal_strength": "high"
@@ -77,6 +104,7 @@
       "summary_zh": "部分美国邮轮乘客汉坦病毒隔离将结束。",
       "key_facts_zh": [
         "美国",
+        "邮轮",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -86,11 +114,11 @@
       "time": "2026-05-30T18:43:32.000Z",
       "title_en": "Dutch health officials clear hantavirus ship to sail again - CTV News",
       "body_en": "Dutch health officials clear hantavirus ship to sail again CTV News",
-      "summary_zh": "荷兰卫生部门批准汉坦病毒涉疫邮轮再次起航。",
+      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮复航。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "解除隔离"
+        "复航"
       ],
       "signal_strength": "high"
     },
@@ -99,11 +127,24 @@
       "time": "2026-05-30T17:00:01.000Z",
       "title_en": "Dispute grows over home monitoring of hantavirus passengers - The Washington Post",
       "body_en": "Dispute grows over home monitoring of hantavirus passengers The Washington Post",
-      "summary_zh": "关于汉坦病毒乘客居家监测的争议加剧。",
+      "summary_zh": "汉坦病毒乘客居家监测引发争议。",
       "key_facts_zh": [
         "美国",
         "居家监测",
         "争议"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-714d869ba911644a",
+      "time": "2026-05-30T11:33:45.000Z",
+      "title_en": "Hantavirus case reported in Arapahoe County, Colorado - Outbreak News Today",
+      "body_en": "Hantavirus case reported in Arapahoe County, Colorado Outbreak News Today",
+      "summary_zh": "美国科罗拉多州阿拉帕霍县报告汉坦病毒病例。",
+      "key_facts_zh": [
+        "美国",
+        "科罗拉多",
+        "新增病例"
       ],
       "signal_strength": "high"
     },
@@ -112,11 +153,11 @@
       "time": "2026-05-30T04:25:11.000Z",
       "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
       "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
-      "summary_zh": "两名接触汉坦病毒的邮轮乘客下周将返回纽约。",
+      "summary_zh": "两名接触汉坦病毒的邮轮隔离乘客下周返回纽约。",
       "key_facts_zh": [
         "纽约",
         "邮轮",
-        "2名乘客"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -128,8 +169,8 @@
       "summary_zh": "两名纽约汉坦病毒监测者将在自家完成隔离。",
       "key_facts_zh": [
         "纽约",
-        "居家隔离",
-        "2人"
+        "监测",
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
@@ -138,10 +179,10 @@
       "time": "2026-05-29T21:14:11.000Z",
       "title_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home - The New York Times",
       "body_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home The New York Times",
-      "summary_zh": "纽约时报：汉坦病毒邮轮乘客回家后需接受监测。",
+      "summary_zh": "汉坦病毒邮轮乘客回家后需接受监测。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
+        "乘客",
         "监测"
       ],
       "signal_strength": "high"
@@ -151,65 +192,52 @@
       "time": "2026-05-29T19:09:00.000Z",
       "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
       "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
-      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客获居家隔离。",
+      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客可居家隔离。",
       "key_facts_zh": [
-        "欧洲",
         "实验药物",
+        "欧洲",
         "居家隔离"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-8ab3b1d1357f81a2",
+      "time": "2026-05-29T16:15:00.000Z",
+      "title_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why - The Independent",
+      "body_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why The Independent",
+      "summary_zh": "美国汉坦病毒邮轮乘客或提前结束42天观察期回家。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "提前回家"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a07432c35b12d2a5",
+      "time": "2026-05-29T15:49:28.000Z",
+      "title_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina - Le Monde.fr",
+      "body_en": "Hantavirus: Climate change suspected of contributing to recent surge in cases in Argentina Le Monde.fr",
+      "summary_zh": "气候变化被疑导致阿根廷汉坦病毒病例激增。",
+      "key_facts_zh": [
+        "阿根廷",
+        "气候变化",
+        "病例激增"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-447af0cdbdb213a9",
       "time": "2026-05-29T13:23:00.000Z",
       "title_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) - Forbes",
       "body_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) Forbes",
-      "summary_zh": "暴露汉坦病毒的乘客若同意24/7监控可回家。",
+      "summary_zh": "福布斯报道：暴露汉坦病毒患者可回家，但需接受24/7监控。",
       "key_facts_zh": [
         "美国",
-        "监控",
-        "乘客"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7e5edd33411d1c38",
-      "time": "2026-05-29T03:27:00.000Z",
-      "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
-      "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "暴露汉坦病毒的邮轮乘客或可回家但需24/7监控。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
+        "暴露患者",
         "监控"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a7d07c3fdc6a1471",
-      "time": "2026-05-28T20:32:00.000Z",
-      "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
-      "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
-      "summary_zh": "实验性汉坦病毒治疗或用于患病邮轮乘客。",
-      "key_facts_zh": [
-        "美国",
-        "实验性治疗",
-        "邮轮"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a33070599a29118f",
-      "time": "2026-05-28T14:47:36.000Z",
-      "title_en": "WHO says public risk remains low in cruise ship hantavirus outbreak - Telangana Today",
-      "body_en": "WHO says public risk remains low in cruise ship hantavirus outbreak Telangana Today",
-      "summary_zh": "WHO称邮轮汉坦病毒疫情对公众风险仍低。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "风险低"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
