@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T17:26:53.845845+00:00",
+  "__generated_at": "2026-06-01T17:34:10.626187+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-01T17:26:52.357650+00:00",
+  "last_fetched": "2026-06-01T17:33:56.336950+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,8 +13,9 @@
       "time": "2026-06-01T16:14:00.000Z",
       "title_en": "Cruise ship linked to hantavirus outbreak cleared to return to service - KVUE",
       "body_en": "Cruise ship linked to hantavirus outbreak cleared to return to service KVUE",
-      "summary_zh": "与汉坦病毒暴发相关的邮轮获准恢复运营。",
+      "summary_zh": "美国一艘与汉坦病毒疫情相关的邮轮获准恢复运营。",
       "key_facts_zh": [
+        "美国",
         "邮轮",
         "恢复运营"
       ],
@@ -25,11 +26,11 @@
       "time": "2026-06-01T16:02:18.000Z",
       "title_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility - Scripps News",
       "body_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility Scripps News",
-      "summary_zh": "汉坦病毒暴发后隔离的邮轮乘客获准离开隔离设施。",
+      "summary_zh": "美国汉坦病毒疫情邮轮乘客结束隔离，获准离开隔离设施。",
       "key_facts_zh": [
-        "邮轮",
+        "美国",
         "乘客",
-        "解除隔离"
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -38,11 +39,11 @@
       "time": "2026-06-01T15:14:09.000Z",
       "title_en": "US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days - ABC News - Breaking News, Latest News and Videos",
       "body_en": "US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国邮轮乘客因汉坦病毒在内布拉斯加州隔离42天。",
+      "summary_zh": "美国一名汉坦病毒隔离乘客表示将在内布拉斯加州完成42天隔离。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "隔离42天"
+        "42天隔离"
       ],
       "signal_strength": "high"
     },
@@ -51,11 +52,11 @@
       "time": "2026-06-01T14:34:00.000Z",
       "title_en": "Ship tied to hantavirus outbreak cleared to resume cruises - USA Today",
       "body_en": "Ship tied to hantavirus outbreak cleared to resume cruises USA Today",
-      "summary_zh": "与汉坦病毒暴发相关的邮轮获准恢复航行。",
+      "summary_zh": "美国一艘与汉坦病毒疫情相关的邮轮获准恢复航行。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "恢复运营"
+        "恢复航行"
       ],
       "signal_strength": "high"
     },
@@ -64,10 +65,11 @@
       "time": "2026-06-01T14:10:34.000Z",
       "title_en": "Hondius cruise ship ready to sail again after hantavirus outbreak - Yahoo",
       "body_en": "Hondius cruise ship ready to sail again after hantavirus outbreak Yahoo",
-      "summary_zh": "Hondius 邮轮在汉坦病毒暴发后准备再次航行。",
+      "summary_zh": "Hondius号邮轮在汉坦病毒疫情后准备再次启航。",
       "key_facts_zh": [
+        "Hondius号",
         "邮轮",
-        "恢复运营"
+        "准备启航"
       ],
       "signal_strength": "high"
     },
@@ -76,20 +78,33 @@
       "time": "2026-06-01T13:50:41.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from a Border Health and Point of Entry perspective - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from a Border Health and Point of Entry perspective World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦边境卫生与入境点视角。",
+      "summary_zh": "WHO举办汉坦病毒网络研讨会，聚焦边境卫生与入境点视角。",
       "key_facts_zh": [
         "WHO",
-        "研讨会",
+        "网络研讨会",
         "边境卫生"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5f09033c5a9a5c90",
+      "time": "2026-06-01T13:43:00.000Z",
+      "title_en": "Hantavirus ship re-opens for bookings - including birdwatching tours - Metro.co.uk",
+      "body_en": "Hantavirus ship re-opens for bookings - including birdwatching tours Metro.co.uk",
+      "summary_zh": "英国汉坦病毒疫情邮轮重新开放预订，包括观鸟之旅。",
+      "key_facts_zh": [
+        "英国",
+        "邮轮",
+        "重新预订"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-3e821904ad466589",
       "time": "2026-06-01T13:11:56.000Z",
       "title_en": "The MV Hondius has been cleared for voyages following a hantavirus outbreak that claimed the lives of three passengers - Українські Національні Новини (УНН)",
       "body_en": "The MV Hondius has been cleared for voyages following a hantavirus outbreak that claimed the lives of three passengers Українські Національні Новини (УНН)",
-      "summary_zh": "MV Hondius 号邮轮在汉坦病毒疫情致3人死亡后获准复航。",
+      "summary_zh": "MV Hondius号邮轮在汉坦病毒疫情致3人死亡后获准复航。",
       "key_facts_zh": [
         "邮轮",
         "3人死亡",
@@ -102,7 +117,7 @@
       "time": "2026-06-01T12:47:30.000Z",
       "title_en": "Hantavirus cruise ship passed to resume sailing after deep clean - DutchNews.nl",
       "body_en": "Hantavirus cruise ship passed to resume sailing after deep clean DutchNews.nl",
-      "summary_zh": "荷兰新闻称汉坦病毒邮轮经深度清洁后获准复航。",
+      "summary_zh": "荷兰新闻：汉坦病毒邮轮经深度清洁后获准复航。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
@@ -115,7 +130,7 @@
       "time": "2026-06-01T11:55:00.000Z",
       "title_en": "Hantavirus cruise ship to resume sailing after deadly outbreak - The Independent",
       "body_en": "Hantavirus cruise ship to resume sailing after deadly outbreak The Independent",
-      "summary_zh": "独立报报道汉坦病毒邮轮在致命疫情后复航。",
+      "summary_zh": "独立报：汉坦病毒邮轮在致命疫情后恢复航行。",
       "key_facts_zh": [
         "邮轮",
         "致命疫情",
@@ -128,11 +143,11 @@
       "time": "2026-06-01T11:49:00.000Z",
       "title_en": "18 Americans exposed to Hantavirus to go home - WTHR",
       "body_en": "18 Americans exposed to Hantavirus to go home WTHR",
-      "summary_zh": "18名接触汉坦病毒的美国人获准回家。",
+      "summary_zh": "18名接触汉坦病毒的美国人将回国。",
       "key_facts_zh": [
         "美国",
         "18人",
-        "接触后回家"
+        "接触汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -141,7 +156,7 @@
       "time": "2026-06-01T11:06:00.000Z",
       "title_en": "Dutch Health Officials Clear Hantavirus Ship To Sail Again - Kıbrıs Postası",
       "body_en": "Dutch Health Officials Clear Hantavirus Ship To Sail Again Kıbrıs Postası",
-      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮复航。",
+      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮再次航行。",
       "key_facts_zh": [
         "荷兰",
         "卫生官员",
@@ -154,11 +169,11 @@
       "time": "2026-06-01T09:02:11.000Z",
       "title_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump’s Health Cuts - KFF Health News",
       "body_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump’s Health Cuts KFF Health News",
-      "summary_zh": "民主党批评特朗普在埃博拉和汉坦病毒疫情期间削减卫生经费。",
+      "summary_zh": "埃博拉和汉坦疫情中，民主党批评特朗普削减卫生预算。",
       "key_facts_zh": [
         "美国",
         "民主党",
-        "卫生经费削减"
+        "卫生预算削减"
       ],
       "signal_strength": "medium"
     },
@@ -167,7 +182,7 @@
       "time": "2026-06-01T02:00:00.000Z",
       "title_en": "Ebola, hantavirus: UAE residents urged to follow travel advisories amid global outbreaks - Khaleej Times",
       "body_en": "Ebola, hantavirus: UAE residents urged to follow travel advisories amid global outbreaks Khaleej Times",
-      "summary_zh": "阿联酋：全球疫情下敦促居民遵守旅行建议。",
+      "summary_zh": "阿联酋居民被敦促在全球疫情中遵循旅行建议。",
       "key_facts_zh": [
         "阿联酋",
         "旅行建议"
@@ -179,10 +194,10 @@
       "time": "2026-05-31T12:27:00.000Z",
       "title_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea - The Mirror",
       "body_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea The Mirror",
-      "summary_zh": "荷兰：汉坦病毒邮轮MV Hondius经四项检查后获准重返海上。",
+      "summary_zh": "汉坦病毒邮轮 MV Hondius 获准返航前需通过四项检查。",
       "key_facts_zh": [
-        "荷兰",
         "邮轮",
+        "MV Hondius",
         "获准返航"
       ],
       "signal_strength": "high"
@@ -192,9 +207,9 @@
       "time": "2026-05-31T12:10:30.000Z",
       "title_en": "MOH refutes Hantavirus rumors circulating in SVG - St Vincent Times",
       "body_en": "MOH refutes Hantavirus rumors circulating in SVG St Vincent Times",
-      "summary_zh": "圣文森特和格林纳丁斯：卫生部辟谣汉坦病毒谣言。",
+      "summary_zh": "圣文森特卫生部辟谣汉坦病毒谣言。",
       "key_facts_zh": [
-        "圣文森特和格林纳丁斯",
+        "圣文森特",
         "辟谣"
       ],
       "signal_strength": "medium"
@@ -204,10 +219,10 @@
       "time": "2026-05-31T08:35:00.000Z",
       "title_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages - NL Times",
       "body_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages NL Times",
-      "summary_zh": "荷兰：MV Hondius邮轮经彻底消毒后获准航行。",
+      "summary_zh": "MV Hondius 邮轮消毒后获准航行。",
       "key_facts_zh": [
-        "荷兰",
         "邮轮",
+        "MV Hondius",
         "消毒后获准"
       ],
       "signal_strength": "high"
@@ -217,11 +232,24 @@
       "time": "2026-05-31T00:21:00.000Z",
       "title_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak - Manchester Evening News",
       "body_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak Manchester Evening News",
-      "summary_zh": "MV Hondius邮轮在致命汉坦病毒爆发后获准航行。",
+      "summary_zh": "MV Hondius 邮轮在汉坦病毒疫情后获准航行。",
       "key_facts_zh": [
         "邮轮",
-        "获准航行",
-        "汉坦病毒"
+        "MV Hondius",
+        "获准航行"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d31a9d1d0dbcaa35",
+      "time": "2026-05-30T20:47:42.000Z",
+      "title_en": "Hantavirus Quarantine to End for Some US Cruise Passengers - Mint",
+      "body_en": "Hantavirus Quarantine to End for Some US Cruise Passengers Mint",
+      "summary_zh": "美国部分邮轮乘客汉坦病毒隔离即将结束。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离结束"
       ],
       "signal_strength": "high"
     }
