@@ -1,47 +1,164 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T21:30:18.681124+00:00",
+  "__generated_at": "2026-06-01T23:22:54.443212+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-01T21:30:07.347467+00:00",
+  "last_fetched": "2026-06-01T23:22:52.536513+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-6a41899560267202",
-      "time": "2026-06-01T20:45:00Z",
-      "title_en": "Canada warns of hantavirus travel risk in Chile",
-      "summary_zh": "加拿大警告前往智利有汉坦病毒旅行风险。",
+      "id": "rt-251cf6d56a21951b",
+      "time": "2026-06-01T23:08:40.000Z",
+      "title_en": "5 American cruise ship passengers exposed to hantavirus leave Nebraska quarantine facility - Chicago Tribune",
+      "body_en": "5 American cruise ship passengers exposed to hantavirus leave Nebraska quarantine facility Chicago Tribune",
+      "summary_zh": "5名美国邮轮乘客结束汉坦病毒隔离离开内布拉斯加。",
       "key_facts_zh": [
-        "加拿大",
-        "智利",
-        "旅行警告"
+        "美国",
+        "5人解除隔离",
+        "内布拉斯加"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-7a08a89f14142b6c",
-      "time": "2026-06-01T20:45:00Z",
-      "title_en": "American who was exposed to hantavirus says he will remain in quarantine",
-      "summary_zh": "一名接触汉坦病毒的美国人称将继续隔离。",
+      "id": "rt-bf0a1931588a2560",
+      "time": "2026-06-01T22:39:30.000Z",
+      "title_en": "Arizona: Hantavirus death reported in Mohave County - Outbreak News Today",
+      "body_en": "Arizona: Hantavirus death reported in Mohave County Outbreak News Today",
+      "summary_zh": "亚利桑那州莫哈维县报告汉坦病毒死亡病例。",
       "key_facts_zh": [
         "美国",
-        "接触者",
-        "隔离"
+        "亚利桑那",
+        "死亡"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
-      "id": "rt-4bd4074e32e6b579",
-      "time": "2026-06-01T20:28:00.000Z",
-      "title_en": "Mohave County health officials report first hantavirus death in Kingman - FOX5 Vegas",
-      "body_en": "Mohave County health officials report first hantavirus death in Kingman FOX5 Vegas",
-      "summary_zh": "莫哈维县报告金曼首例汉坦病毒死亡病例。",
+      "id": "rt-0a5655c5d8d40e1d",
+      "time": "2026-06-01T22:36:00.000Z",
+      "title_en": "Cruise ship linked to hantavirus outbreak cleared to return to service - WDRB",
+      "body_en": "Cruise ship linked to hantavirus outbreak cleared to return to service WDRB",
+      "summary_zh": "涉汉坦病毒邮轮获准恢复运营。",
+      "key_facts_zh": [
+        "邮轮",
+        "恢复运营"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e3d2b241e3635f96",
+      "time": "2026-06-01T22:28:57.000Z",
+      "title_en": "State trooper guards and daily fever checks: Some hantavirus cruise ship passengers go home - NBC News",
+      "body_en": "State trooper guards and daily fever checks: Some hantavirus cruise ship passengers go home NBC News",
+      "summary_zh": "部分汉坦病毒邮轮乘客在警卫和体温监测下回家。",
       "key_facts_zh": [
         "美国",
-        "首例死亡",
-        "金曼"
+        "邮轮乘客",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d3dfa1ae40946c7c",
+      "time": "2026-06-01T22:25:00.000Z",
+      "title_en": "Mohave County reports hantavirus death unrelated to recent cruise ship cases - KJZZ",
+      "body_en": "Mohave County reports hantavirus death unrelated to recent cruise ship cases KJZZ",
+      "summary_zh": "莫哈维县报告汉坦病毒死亡，与近期邮轮病例无关。",
+      "key_facts_zh": [
+        "美国",
+        "莫哈维县",
+        "死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-574d55043c2d21c2",
+      "time": "2026-06-01T22:12:34.000Z",
+      "title_en": "5 People Leave Hantavirus Quarantine in Omaha - The New York Times",
+      "body_en": "5 People Leave Hantavirus Quarantine in Omaha The New York Times State trooper guards and daily fever checks: Some hantavirus cruise ship passengers go home NBC News US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "5人离开奥马哈汉坦病毒隔离设施。",
+      "key_facts_zh": [
+        "美国",
+        "奥马哈",
+        "5人解除隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-da96974720682bfa",
+      "time": "2026-06-01T22:10:13.000Z",
+      "title_en": "Mohave County health officials report first hantavirus death in Kingman - FOX5 Vegas",
+      "body_en": "Mohave County health officials report first hantavirus death in Kingman FOX5 Vegas",
+      "summary_zh": "莫哈维县卫生官员报告金曼首例汉坦病毒死亡。",
+      "key_facts_zh": [
+        "美国",
+        "莫哈维县",
+        "首例死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-fd4a1fd5cda4ad54",
+      "time": "2026-06-01T22:10:00.000Z",
+      "title_en": "5 American cruise ship passengers leave Nebraska quarantine facility - The Independent",
+      "body_en": "5 American cruise ship passengers leave Nebraska quarantine facility The Independent",
+      "summary_zh": "5名美国邮轮乘客离开内布拉斯加隔离设施。",
+      "key_facts_zh": [
+        "美国",
+        "5人",
+        "离开隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e342d1b3210f2101",
+      "time": "2026-06-01T21:56:00.000Z",
+      "title_en": "Ship from hantavirus outbreak cleared to return to service - newscentermaine.com",
+      "body_en": "Ship from hantavirus outbreak cleared to return to service newscentermaine.com",
+      "summary_zh": "汉坦病毒疫情相关邮轮获准恢复服务。",
+      "key_facts_zh": [
+        "邮轮",
+        "恢复服务"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6b8a216c83261af3",
+      "time": "2026-06-01T21:44:16.000Z",
+      "title_en": "Western Arizona resident dies from Hantavirus - KSNV",
+      "body_en": "Western Arizona resident dies from Hantavirus KSNV",
+      "summary_zh": "亚利桑那州西部居民死于汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "亚利桑那",
+        "死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-83b79d2cd3bf9012",
+      "time": "2026-06-01T21:44:00.000Z",
+      "title_en": "Arizona resident dies from hantavirus - azcentral.com and The Arizona Republic",
+      "body_en": "Arizona resident dies from hantavirus azcentral.com and The Arizona Republic",
+      "summary_zh": "亚利桑那州居民死于汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "亚利桑那",
+        "死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-96f59127c4a1a2d5",
+      "time": "2026-06-01T20:50:57.000Z",
+      "title_en": "Travel advisory for hantavirus and Ebola - Government of Nunavut",
+      "body_en": "Travel advisory for hantavirus and Ebola Government of Nunavut",
+      "summary_zh": "努纳武特政府发布汉坦病毒和埃博拉旅行建议。",
+      "key_facts_zh": [
+        "加拿大",
+        "努纳武特",
+        "旅行建议"
       ],
       "signal_strength": "high"
     },
@@ -50,24 +167,11 @@
       "time": "2026-06-01T20:25:00.000Z",
       "title_en": "Cruise ship tied to hantavirus cleared to sail: Where it’s headed - USA Today",
       "body_en": "Cruise ship tied to hantavirus cleared to sail: Where it’s headed USA Today",
-      "summary_zh": "涉汉坦病毒邮轮获准启航，公布目的地。",
+      "summary_zh": "与汉坦病毒相关的邮轮获准航行，公布目的地。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "获准启航"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f83f613f284540c8",
-      "time": "2026-06-01T20:20:00.000Z",
-      "title_en": "Hondius Cruise Ship Cleared for Service After Hantavirus Outbreak – June 2026 Update - News and Statistics - IndexBox",
-      "body_en": "Hondius Cruise Ship Cleared for Service After Hantavirus Outbreak – June 2026 Update - News and Statistics IndexBox",
-      "summary_zh": "Hondius 邮轮在汉坦病毒暴发后获准恢复服务。",
-      "key_facts_zh": [
-        "邮轮",
-        "获准恢复",
-        "汉坦病毒"
+        "恢复服务"
       ],
       "signal_strength": "high"
     },
@@ -76,30 +180,20 @@
       "time": "2026-06-01T20:09:00.000Z",
       "title_en": "2 people exposed to hantavirus have returned to New York state - Gothamist",
       "body_en": "2 people exposed to hantavirus have returned to New York state Gothamist",
-      "summary_zh": "两名接触汉坦病毒者已返回纽约州。",
+      "summary_zh": "2名接触汉坦病毒者返回纽约州。",
       "key_facts_zh": [
         "美国",
-        "纽约州",
-        "接触者返回"
+        "纽约",
+        "2人"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-e38d0658d1d27633",
-      "time": "2026-06-01T20:00:00Z",
-      "title_en": "Cruise passengers isolated after hantavirus scare can leave quarantine facility",
-      "summary_zh": "邮轮乘客因汉坦病毒警报隔离后获准离开。",
-      "key_facts_zh": [
-        "邮轮",
-        "隔离结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-405fc429530cf74d",
-      "time": "2026-06-01T20:00:00Z",
-      "title_en": "Cruise ready to sail again after hantavirus outbreak",
-      "summary_zh": "汉坦病毒爆发后邮轮准备再次启航。",
+      "id": "rt-1538171553ecedba",
+      "time": "2026-06-01T19:57:00.000Z",
+      "title_en": "Hantavirus cruise ship Hondius takes bookings again after rat bug outbreak on board caused global pandemic scare - The Sun",
+      "body_en": "Hantavirus cruise ship Hondius takes bookings again after rat bug outbreak on board caused global pandemic scare The Sun",
+      "summary_zh": "汉坦病毒暴发邮轮Hondius号恢复预订。",
       "key_facts_zh": [
         "邮轮",
         "恢复运营"
@@ -111,22 +205,10 @@
       "time": "2026-06-01T19:34:26.000Z",
       "title_en": "Hondius Cruise Ship Cleared for Return to Service After Hantavirus Outbreak - The Maritime Executive",
       "body_en": "Hondius Cruise Ship Cleared for Return to Service After Hantavirus Outbreak The Maritime Executive",
-      "summary_zh": "Hondius邮轮汉坦病毒爆发后获准恢复服务。",
-      "key_facts_zh": [
-        "Hondius邮轮",
-        "恢复运营"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-29c2f7d5d51379c8",
-      "time": "2026-06-01T18:44:00.000Z",
-      "title_en": "Cruise ship tied to hantavirus outbreak cleared to resume service - cbs19.tv",
-      "body_en": "Cruise ship tied to hantavirus outbreak cleared to resume service cbs19.tv",
-      "summary_zh": "与汉坦病毒爆发相关的邮轮获准恢复服务。",
+      "summary_zh": "Hondius号邮轮获准重返服务。",
       "key_facts_zh": [
         "邮轮",
-        "恢复运营"
+        "获准复航"
       ],
       "signal_strength": "high"
     },
@@ -135,11 +217,48 @@
       "time": "2026-06-01T17:45:00.000Z",
       "title_en": "‘Higher than expected number of hantavirus cases’: Canada issues new travel advice for Chile - Inside Halton",
       "body_en": "‘Higher than expected number of hantavirus cases’: Canada issues new travel advice for Chile Inside Halton",
-      "summary_zh": "加拿大因智利汉坦病例超预期发布旅行建议。",
+      "summary_zh": "加拿大发布针对智利的汉坦病毒旅行建议。",
       "key_facts_zh": [
         "加拿大",
         "智利",
         "旅行建议"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-98717f4d8de26e48",
+      "time": "2026-06-01T16:05:30.000Z",
+      "title_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility - Scripps News",
+      "body_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility Scripps News",
+      "summary_zh": "邮轮汉坦病毒暴发后隔离乘客获准离开。",
+      "key_facts_zh": [
+        "邮轮",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-1ef020bc62a2f443",
+      "time": "2026-06-01T15:14:09.000Z",
+      "title_en": "US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国邮轮乘客在内布拉斯加州隔离42天。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "隔离42天"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-fe52d8a5756f84fc",
+      "time": "2026-06-01T13:50:41.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective World Health Organization (WHO)",
+      "summary_zh": "WHO举办汉坦病毒边境卫生网络研讨会。",
+      "key_facts_zh": [
+        "WHO",
+        "边境卫生"
       ],
       "signal_strength": "high"
     }
