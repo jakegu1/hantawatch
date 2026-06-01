@@ -667,14 +667,28 @@ def build_events(
     baselines = [e for e in events if e.get("kind") == "who_baseline"]
     detections = [e for e in events if e.get("kind") != "who_baseline"]
 
-    # Collapse duplicate news reports for the same country / day / signal type.
+    # Collapse duplicate news reports. Bucket the day in Beijing time (the
+    # audience timezone) so two reports that straddle UTC-midnight on the same
+    # local day fold together instead of showing as two stacked "+N" lines.
+    # Unverified realtime screening signals (初筛阳性 · 待 WHO 复核) are a rolling
+    # state — not dated additive cases — so they collapse to a single latest
+    # line per country regardless of day.
+    _BEIJING = timezone(timedelta(hours=8))
     deduped: dict[tuple[Any, ...], dict[str, Any]] = {}
     for e in detections:
         if e.get("kind") != "detection":
             continue
         dt = _parse_iso_datetime(str(e.get("at") or ""))
-        day = dt.date().isoformat() if dt else ""
-        key = (e.get("countryZh"), day, e.get("type"))
+        if e.get("type") == "screening" and e.get("source") == "realtime_news":
+            key = (e.get("countryZh"), "screening-pending", "screening")
+        else:
+            if dt is not None:
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                day = dt.astimezone(_BEIJING).date().isoformat()
+            else:
+                day = ""
+            key = (e.get("countryZh"), day, e.get("type"))
         prev = deduped.get(key)
         if prev is None or _event_dt(e) > _event_dt(prev):
             deduped[key] = e

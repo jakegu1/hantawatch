@@ -503,3 +503,48 @@ def test_kojb_intake_missing_updates_field_is_zero() -> None:
     assert out["intake"]["last24hCount"] == 0
     assert "highConfidencePicks" in out["intake"]
 
+
+def test_build_events_collapses_same_country_pending_screening_across_utc_midnight() -> None:
+    """Two 初筛阳性 (delta_monitoring) reports for the same country that straddle
+    UTC-midnight but fall on the SAME Beijing day must collapse to ONE rolling
+    screening line — not two stacked "+N" — and keep the latest delta (never
+    summed, since unverified screening is a rolling state, not additive cases)."""
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 11, "confirmed": 8, "indeterminate": 3, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-13"},
+            "perCountry": [
+                {
+                    "iso2": "US",
+                    "nameZh": "美国",
+                    "confirmed": 0,
+                    "monitoring": 41,
+                    "asOf": "2026-05-15",
+                    "evidence": [{"tier": "official", "sourceName": "official_cdc", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+    entries = [
+        # 2026-05-29T23:36Z == 2026-05-30 07:36 Beijing
+        {"iso2": "US", "delta_confirmed": 0, "delta_monitoring": 2, "delta_deaths": 0, "time": "2026-05-29T23:36:55Z", "confidence": "medium", "reasoning_zh": ""},
+        # 2026-05-30T04:25Z == 2026-05-30 12:25 Beijing (later, same Beijing day)
+        {"iso2": "US", "delta_confirmed": 0, "delta_monitoring": 2, "delta_deaths": 0, "time": "2026-05-30T04:25:11Z", "confidence": "medium", "reasoning_zh": ""},
+    ]
+    events, _, _ = build_events(
+        outbreak,
+        realtime_feed={"entries": entries, "__today": "2026-05-31"},
+    )
+    us_screening = [
+        e
+        for e in events
+        if e.get("kind") == "detection"
+        and e.get("countryZh") == "美国"
+        and e.get("type") == "screening"
+    ]
+    assert len(us_screening) == 1, f"expected one collapsed screening line, got {us_screening}"
+    assert us_screening[0]["at"] == "2026-05-30T04:25:11Z"  # keep the latest report
+    assert us_screening[0]["delta"] == 2  # latest delta, NOT summed to 4
+    assert us_screening[0]["source"] == "realtime_news"
+

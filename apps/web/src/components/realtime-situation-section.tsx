@@ -284,6 +284,14 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
     'sinceWhoNewCountries' in headline && Array.isArray(headline.sinceWhoNewCountries)
       ? (headline.sinceWhoNewCountries as string[])
       : [];
+  const hasPendingScreening =
+    Array.isArray(data.events) &&
+    data.events.some((e) => (e as { type?: string }).type === 'screening');
+  const reconcileText =
+    `现报 ${currentReported} 例 = WHO ${headline.whoLastUpdateZh} 通报 ${whoConfirmed} 例` +
+    `（确诊 ${data.totals.confirmed} · 疑似 ${data.totals.indeterminate}` +
+    `${data.totals.deaths > 0 ? `，含 ${data.totals.deaths} 死亡` : ''}）` +
+    `${sinceWho > 0 ? ` ＋ 待复核 ${sinceWho} 例${sinceCountries.length > 0 ? `（${sinceCountries.slice(0, 3).join('、')}）` : ''}` : ''}。`;
 
   const daysWithoutAnyNews =
     'daysWithoutAnyNews' in data ? (data as { daysWithoutAnyNews?: number }).daysWithoutAnyNews : undefined;
@@ -392,6 +400,19 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
         </div>
 
         <RulerBlock ruler={data.ruler} />
+
+        {(whoConfirmed > 0 || currentReported > 0) && (
+          <div className="mt-3 mb-1 rounded-lg bg-gray-50 px-3 py-2 text-[12px] leading-relaxed text-gray-600">
+            <strong className="text-gray-700">口径说明：</strong>
+            {reconcileText}
+            {hasPendingScreening && (
+              <>
+                时间线中「初筛阳性」为待 WHO 核实的实时信号，可能为同批次重复报道或后续转为确诊，
+                <strong className="text-gray-700">不计入上述累计</strong>。
+              </>
+            )}
+          </div>
+        )}
 
         <EventsBlock
           events={data.events}
