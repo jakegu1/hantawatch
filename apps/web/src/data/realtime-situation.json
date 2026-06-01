@@ -74,6 +74,26 @@
   },
   "events": [
     {
+      "at": "2026-06-01T20:28:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "deaths",
+      "shortContext": "死亡",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-06-01T20:09:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 2,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
@@ -251,7 +271,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-01T17:34:07.501414+00:00"
+      "updatedAt": "2026-06-01T21:30:15.483390+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -259,12 +279,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-05-28T12:00:00Z"
+      "updatedAt": "2026-06-01T20:28:00Z"
     }
   ],
   "intake": {
-    "last24hCount": 14,
+    "last24hCount": 11,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-01T17:34:10.622477+00:00"
+  "realtimeUpdatedAt": "2026-06-01T21:30:18.676579+00:00"
 }

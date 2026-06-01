@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T17:34:10.624472+00:00",
+  "__generated_at": "2026-06-01T21:30:18.678987+00:00",
   "date": "2026-06-02",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-01T17:33:41.305182+00:00"
+    "updatedAt": "2026-06-01T21:29:57.967066+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-01T17:33:41.305182+00:00"
+    "updatedAt": "2026-06-01T21:29:57.967066+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -114,20 +114,20 @@
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月1日荷兰批准MV Hondius邮轮复航；美国部分乘客隔离将结束；中国大陆无相关病例。",
-    "situation": "WHO数据每1-2周更新，期间由ArcGIS监测补足；多国维持监测，国内HFRS基线未变。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内HFRS基线未变。",
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，公众无需担忧。",
     "newCases": "5月28日WHO通报累计13例（11确诊、2疑似），无新增确诊。",
-    "sourceSummary": "WHO DON、ArcGIS监测、官方通报",
-    "shareLine": "WHO 5/28公布累计13例（5天前）；多国监测中，无新增确诊；中国大陆无相关病例，国内HFRS基线正常。",
+    "sourceSummary": "WHO官方通报及ArcGIS监测",
+    "shareLine": "WHO 5/28公布累计13例（5天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
       "邮轮复航后监测",
-      "美国乘客隔离结束",
-      "WHO数据更新"
+      "美国接触者隔离",
+      "加拿大旅行警告"
     ],
     "evidence": [
       "WHO DON 5/28",
       "ArcGIS ANDV Dashboard",
-      "US CDC官方通报"
+      "加拿大旅行警告"
     ]
   }
 }

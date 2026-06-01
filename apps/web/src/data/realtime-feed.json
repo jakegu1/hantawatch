@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T21:23:54.559375+00:00",
+  "__generated_at": "2026-06-01T21:30:18.681124+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-01T21:23:53.406393+00:00",
+  "last_fetched": "2026-06-01T21:30:07.347467+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -12,7 +12,7 @@
       "id": "rt-6a41899560267202",
       "time": "2026-06-01T20:45:00Z",
       "title_en": "Canada warns of hantavirus travel risk in Chile",
-      "summary_zh": "加拿大警告赴智利旅行者注意汉坦病毒风险。",
+      "summary_zh": "加拿大警告前往智利有汉坦病毒旅行风险。",
       "key_facts_zh": [
         "加拿大",
         "智利",
@@ -39,7 +39,7 @@
       "body_en": "Mohave County health officials report first hantavirus death in Kingman FOX5 Vegas",
       "summary_zh": "莫哈维县报告金曼首例汉坦病毒死亡病例。",
       "key_facts_zh": [
-        "莫哈维县",
+        "美国",
         "首例死亡",
         "金曼"
       ],
@@ -50,7 +50,7 @@
       "time": "2026-06-01T20:25:00.000Z",
       "title_en": "Cruise ship tied to hantavirus cleared to sail: Where it’s headed - USA Today",
       "body_en": "Cruise ship tied to hantavirus cleared to sail: Where it’s headed USA Today",
-      "summary_zh": "与汉坦病毒相关的邮轮获准启航，公布目的地。",
+      "summary_zh": "涉汉坦病毒邮轮获准启航，公布目的地。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -63,11 +63,11 @@
       "time": "2026-06-01T20:20:00.000Z",
       "title_en": "Hondius Cruise Ship Cleared for Service After Hantavirus Outbreak – June 2026 Update - News and Statistics - IndexBox",
       "body_en": "Hondius Cruise Ship Cleared for Service After Hantavirus Outbreak – June 2026 Update - News and Statistics IndexBox",
-      "summary_zh": "Hondius号邮轮在汉坦病毒爆发后获准恢复服务。",
+      "summary_zh": "Hondius 邮轮在汉坦病毒暴发后获准恢复服务。",
       "key_facts_zh": [
-        "Hondius号",
         "邮轮",
-        "恢复服务"
+        "获准恢复",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -78,9 +78,9 @@
       "body_en": "2 people exposed to hantavirus have returned to New York state Gothamist",
       "summary_zh": "两名接触汉坦病毒者已返回纽约州。",
       "key_facts_zh": [
+        "美国",
         "纽约州",
-        "接触者",
-        "返回"
+        "接触者返回"
       ],
       "signal_strength": "high"
     },
@@ -88,7 +88,7 @@
       "id": "rt-e38d0658d1d27633",
       "time": "2026-06-01T20:00:00Z",
       "title_en": "Cruise passengers isolated after hantavirus scare can leave quarantine facility",
-      "summary_zh": "邮轮乘客因汉坦病毒恐慌隔离后获准离开。",
+      "summary_zh": "邮轮乘客因汉坦病毒警报隔离后获准离开。",
       "key_facts_zh": [
         "邮轮",
         "隔离结束"
@@ -113,8 +113,8 @@
       "body_en": "Hondius Cruise Ship Cleared for Return to Service After Hantavirus Outbreak The Maritime Executive",
       "summary_zh": "Hondius邮轮汉坦病毒爆发后获准恢复服务。",
       "key_facts_zh": [
-        "邮轮",
-        "恢复服务"
+        "Hondius邮轮",
+        "恢复运营"
       ],
       "signal_strength": "high"
     },
@@ -126,7 +126,7 @@
       "summary_zh": "与汉坦病毒爆发相关的邮轮获准恢复服务。",
       "key_facts_zh": [
         "邮轮",
-        "恢复服务"
+        "恢复运营"
       ],
       "signal_strength": "high"
     },
@@ -135,7 +135,7 @@
       "time": "2026-06-01T17:45:00.000Z",
       "title_en": "‘Higher than expected number of hantavirus cases’: Canada issues new travel advice for Chile - Inside Halton",
       "body_en": "‘Higher than expected number of hantavirus cases’: Canada issues new travel advice for Chile Inside Halton",
-      "summary_zh": "加拿大发布针对智利的汉坦病毒旅行建议。",
+      "summary_zh": "加拿大因智利汉坦病例超预期发布旅行建议。",
       "key_facts_zh": [
         "加拿大",
         "智利",

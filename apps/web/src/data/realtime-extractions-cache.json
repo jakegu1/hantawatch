@@ -3079,6 +3079,146 @@
         "source_url": "",
         "time": "2026-06-01T02:00:00.000Z"
       }
+    ],
+    "rt-6a41899560267202": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "high",
+        "reasoning_zh": "加拿大警告赴智利旅行者注意汉坦病毒风险，无新增病例数据。",
+        "update_id": "rt-6a41899560267202",
+        "source_url": "",
+        "time": "2026-06-01T20:45:00Z"
+      }
+    ],
+    "rt-7a08a89f14142b6c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "一名暴露于汉坦病毒的美国人表示将继续隔离，无具体数字。",
+        "update_id": "rt-7a08a89f14142b6c",
+        "source_url": "",
+        "time": "2026-06-01T20:45:00Z"
+      }
+    ],
+    "rt-4bd4074e32e6b579": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "high",
+        "reasoning_zh": "莫哈维县卫生官员报告金曼首例汉坦病毒死亡病例，新增死亡1例。",
+        "update_id": "rt-4bd4074e32e6b579",
+        "source_url": "",
+        "time": "2026-06-01T20:28:00.000Z"
+      }
+    ],
+    "rt-f83f613f284540c8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "Hondius号邮轮在汉坦病毒爆发后获准恢复服务，无具体国家及病例数。",
+        "update_id": "rt-f83f613f284540c8",
+        "source_url": "",
+        "time": "2026-06-01T20:20:00.000Z"
+      }
+    ],
+    "rt-a2d4097b2b1be80d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "high",
+        "reasoning_zh": "2名暴露于汉坦病毒的人员已返回纽约州，新增监测2例。",
+        "update_id": "rt-a2d4097b2b1be80d",
+        "source_url": "",
+        "time": "2026-06-01T20:09:00.000Z"
+      }
+    ],
+    "rt-e38d0658d1d27633": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "因汉坦病毒恐慌被隔离的邮轮乘客获准离开隔离设施，无具体国家及数字。",
+        "update_id": "rt-e38d0658d1d27633",
+        "source_url": "",
+        "time": "2026-06-01T20:00:00Z"
+      }
+    ],
+    "rt-405fc429530cf74d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "邮轮在汉坦病毒爆发后准备再次启航，无具体国家及病例数。",
+        "update_id": "rt-405fc429530cf74d",
+        "source_url": "",
+        "time": "2026-06-01T20:00:00Z"
+      }
+    ],
+    "rt-c14540be93253f07": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "Hondius号邮轮在汉坦病毒爆发后获准恢复服务，无具体国家及病例数。",
+        "update_id": "rt-c14540be93253f07",
+        "source_url": "",
+        "time": "2026-06-01T19:34:26.000Z"
+      }
+    ],
+    "rt-29c2f7d5d51379c8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及邮轮与汉坦病毒爆发，但未提供具体国家或新增病例数字。",
+        "update_id": "rt-29c2f7d5d51379c8",
+        "source_url": "",
+        "time": "2026-06-01T18:44:00.000Z"
+      }
+    ],
+    "rt-8c4e9aed2a2963cc": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大对智利发布旅行建议，提及病例数高于预期，但未给出具体新增数字。",
+        "update_id": "rt-8c4e9aed2a2963cc",
+        "source_url": "",
+        "time": "2026-06-01T17:45:00.000Z"
+      }
     ]
   }
 }
