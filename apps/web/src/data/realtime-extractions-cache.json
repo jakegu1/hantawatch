@@ -2841,6 +2841,34 @@
         "source_url": "",
         "time": "2026-05-31T12:04:43.000Z"
       }
+    ],
+    "rt-6b6eabaa4c3bba71": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及汉坦病毒疫情游轮恢复服务，未提供具体病例数字或国家信息。",
+        "update_id": "rt-6b6eabaa4c3bba71",
+        "source_url": "",
+        "time": "2026-05-31T23:57:00.000Z"
+      }
+    ],
+    "rt-081a58260da44c14": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及汉坦病毒疫情游轮MV Hondius恢复航行，未提供具体病例数字或国家信息。",
+        "update_id": "rt-081a58260da44c14",
+        "source_url": "",
+        "time": "2026-05-31T12:27:00.000Z"
+      }
     ]
   }
 }

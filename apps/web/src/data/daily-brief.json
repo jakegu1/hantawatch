@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-05-31T19:13:55.754097+00:00",
+  "__generated_at": "2026-06-01T03:43:33.843719+00:00",
   "date": "2026-06-01",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,22 +11,22 @@
   "daysSinceLastIntlAlert": 4,
   "whoDaysSinceOfficialUpdate": 4,
   "cluesLast24h": 9,
-  "headline24h": "南非追踪MV Hondius号汉坦病毒接触者。",
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "5月28日WHO通报邮轮病例增至13例；澳大利亚延长6名乘客隔离期至6月23日。",
-  "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内基线未变。",
-  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，公众无需担忧。",
-  "newCases": "WHO 5/28 通报累计 13 例（11 确诊、2 疑似），含 3 死亡。",
-  "sourceSummary": "WHO官方通报及ArcGIS监测",
-  "shareLine": "WHO 5/28 公布累计 13 例（11 确诊、2 疑似，含 3 死亡）；中国大陆无相关病例，国内 HFRS 基线正常。",
+  "latestChange": "5月31日荷兰批准MV Hondius邮轮复航；美国部分乘客隔离将结束；中国大陆无相关病例。",
+  "situation": "WHO数据每1-2周更新，期间由ArcGIS监测补足；多国维持接触者随访，邮轮已获准恢复服务，国内HFRS基线正常。",
+  "riskJudgment": "中国大陆无输入风险；邮轮疫情已获控制，多国监测中，公众无需担忧。",
+  "newCases": "5月28日WHO通报累计13例（11确诊、2疑似），无新增确诊。",
+  "sourceSummary": "WHO DON、ArcGIS监测、官方通报",
+  "shareLine": "WHO 5/28公布累计13例（4天前）；多国监测中，无新增确诊；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "美国初筛阳性确认",
     "邮轮复航后监测",
-    "WHO数据更新"
+    "多国接触者随访",
+    "国内HFRS基线"
   ],
   "evidence": [
     "WHO DON 5/28",
     "ArcGIS ANDV Dashboard",
-    "各国卫生部公告"
+    "荷兰卫生官员公告"
   ]
 }

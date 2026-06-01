@@ -4,20 +4,22 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 4
+    "daysAtState": 5
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "5/28",
-    "whoDaysAgo": 3,
+    "whoDaysAgo": 4,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
-    "whoConfirmedCases": 11,
-    "sinceWhoNewCases": 0,
-    "sinceWhoNewCountries": [],
-    "currentReportedCases": 13
+    "whoConfirmedCases": 13,
+    "sinceWhoNewCases": 1,
+    "sinceWhoNewCountries": [
+      "美国"
+    ],
+    "currentReportedCases": 14
   },
   "ruler": {
     "maxKm": 20000,
@@ -74,6 +76,16 @@
   },
   "events": [
     {
+      "at": "2026-05-30T11:33:45Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-05-30T04:25:11Z",
       "kind": "detection",
       "countryZh": "美国",
@@ -98,6 +110,36 @@
       "kind": "who_baseline",
       "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
       "source": "who_don"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "荷兰",
+      "delta": 2,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "南非",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "瑞士",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
     },
     {
       "at": "2026-05-15T12:00:00Z",
@@ -146,46 +188,6 @@
       "source": "who_don"
     },
     {
-      "at": "2026-05-13T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "荷兰",
-      "delta": 2,
-      "type": "confirmed",
-      "shortContext": "确诊输入",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-13T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "南非",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "确诊输入",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-13T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "瑞士",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "确诊输入",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-08T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "源头·邮轮",
-      "delta": 5,
-      "type": "confirmed",
-      "shortContext": "航程中确诊（源头聚集）",
-      "verdict": "已纳入 WHO",
-      "source": "who_don"
-    },
-    {
       "at": "2026-05-08T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 8 例（含 3 死亡）",
@@ -196,9 +198,19 @@
       "kind": "who_baseline",
       "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
       "source": "who_don"
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "源头·邮轮",
+      "delta": 5,
+      "type": "confirmed",
+      "shortContext": "航程中确诊（源头聚集）",
+      "verdict": "已纳入 WHO",
+      "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 16,
+  "daysWithoutNewConfirmed": 2,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -262,10 +274,6 @@
     {
       "zh": "希腊",
       "count": 1
-    },
-    {
-      "zh": "新加坡",
-      "count": 1
     }
   ],
   "sources": [
@@ -275,7 +283,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-05-31T19:13:53.099434+00:00"
+      "updatedAt": "2026-06-01T03:43:30.569105+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -283,12 +291,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-05-30T04:25:11Z"
+      "updatedAt": "2026-05-30T11:33:45Z"
     }
   ],
   "intake": {
-    "last24hCount": 6,
-    "highConfidencePicks": 0
+    "last24hCount": 3,
+    "highConfidencePicks": 1
   },
-  "realtimeUpdatedAt": "2026-05-31T19:13:55.752670+00:00"
+  "realtimeUpdatedAt": "2026-06-01T03:43:33.841889+00:00"
 }
