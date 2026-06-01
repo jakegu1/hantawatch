@@ -31,6 +31,10 @@ export interface NearestAndesResult {
   all: ActiveCluster[];
   /** Aggregate confirmed cases across all Andes clusters. */
   totalConfirmed: number;
+  /** Aggregate reported cases (确诊 + 疑似) across all Andes clusters.
+   *  This is the "现报/累计"口径 — use this (not totalConfirmed) wherever a
+   *  headline total is shown, so it never silently drops the suspected tail. */
+  totalReported: number;
   /** Aggregate deaths across all Andes clusters. */
   totalDeaths: number;
 }
@@ -61,6 +65,7 @@ export function findNearestBySerotype(
     km: nearest && nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : -1,
     all: sorted,
     totalConfirmed: filtered.reduce((s, c) => s + (c.confirmedCases ?? 0), 0),
+    totalReported: filtered.reduce((s, c) => s + (c.confirmedCases ?? 0) + (c.suspectedCases ?? 0), 0),
     totalDeaths: filtered.reduce((s, c) => s + (c.deaths ?? 0), 0),
   };
 }

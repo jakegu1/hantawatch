@@ -52,8 +52,8 @@ export default function MvHondiusEventPage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
         {[
-          { label: '聚集确诊（官方）', value: summary.confirmedCases, sub: `+ 可能 ${summary.suspectedCases}` },
-          { label: '死亡', value: summary.deaths, sub: 'WHO 通报口径' },
+          { label: '累计病例', value: summary.confirmedCases + summary.suspectedCases, sub: `${summary.confirmedCases} 确诊 + ${summary.suspectedCases} 疑似` },
+          { label: '其中死亡', value: summary.deaths, sub: '计入累计病例' },
           { label: '距中国大陆', value: `${summary.distanceFromChinaKm.toLocaleString('zh-CN')} km`, sub: '疫情源头' },
           { label: 'WHO 更新', value: summary.whoUpdates, sub: `最近 ${summary.lastOfficialUpdate}` },
         ].map((s) => (

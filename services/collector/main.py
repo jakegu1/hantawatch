@@ -556,6 +556,7 @@ def main(argv: list[str] | None = None) -> int:
                 realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
                 realtime_extracted=realtime_extracted,
                 meta=meta,
+                recent_cases_intl=recent_intl,
             )
         except Exception as e:
             logger.warning("realtime-situation: build failed in dry-run (%s)", e)
@@ -606,6 +607,7 @@ def main(argv: list[str] | None = None) -> int:
                 realtime_feed=realtime_feed.to_payload() if realtime_feed else None,
                 realtime_extracted=realtime_extracted,
                 meta=meta,
+                recent_cases_intl=recent_intl,
             )
         except Exception as e:
             logger.warning("realtime-situation: build failed (%s)", e)

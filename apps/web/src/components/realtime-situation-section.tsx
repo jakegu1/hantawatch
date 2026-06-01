@@ -184,7 +184,7 @@ function EventRow({ e }: { e: SituationEvent }) {
         <div className="rs-event-body">
           <div className="rs-event-headline">{e.headline}</div>
           <div className="rs-event-meta">
-            <span className="rs-event-tag rs-event-tag--baseline">WHO 基线</span>
+            <span className="rs-event-tag rs-event-tag--baseline">WHO 通报</span>
           </div>
         </div>
       </div>
@@ -263,10 +263,11 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
       ? headline.domesticDetails
       : '检测到本土相关信号，请关注官方通报';
 
-  // 口径 B (2026-05-27): show "现报 N 例（WHO 已确认 X · 待复核 Y）" so the
-  // displayed number matches what the user reads in the news the next moment.
-  // Fall back gracefully to legacy `totalCases` if the collector hasn't
-  // populated the new fields yet.
+  // 口径统一 (2026-05-30): hero shows "现报 N 例" then the WHO-ledger split
+  // "确诊 X · 疑似 Y（含 Z 死亡）" from data.totals, plus an optional "待复核"
+  // chip for since-WHO signals. 现报 = 确诊 + 疑似 (+ 待复核); deaths are a
+  // SUBSET of the total. Fall back to legacy `totalCases` if the collector
+  // hasn't populated the new headline fields yet.
   const whoConfirmed =
     'whoConfirmedCases' in headline && typeof headline.whoConfirmedCases === 'number'
       ? headline.whoConfirmedCases
@@ -278,7 +279,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
   const currentReported =
     'currentReportedCases' in headline && typeof headline.currentReportedCases === 'number'
       ? headline.currentReportedCases
-      : whoConfirmed + sinceWho;
+      : data.totals.confirmed + data.totals.indeterminate + sinceWho;
   const sinceCountries =
     'sinceWhoNewCountries' in headline && Array.isArray(headline.sinceWhoNewCountries)
       ? (headline.sinceWhoNewCountries as string[])
@@ -324,13 +325,24 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
                 <span className="rs-card-hero-current-num">{currentReported}</span>
                 <span className="rs-card-hero-current-suffix">例</span>
               </div>
+              {/* 口径统一: 现报 = 确诊 + 疑似 (+ 待复核 since-WHO signals);
+                  deaths are a SUBSET of the total, shown as "含 N 死亡" so the
+                  number is never read as additive. */}
               <div className="rs-card-hero-breakdown">
                 <span className="rs-card-hero-breakdown-confirmed">
-                  WHO 已确认 <strong>{whoConfirmed}</strong>
+                  确诊 <strong>{data.totals.confirmed}</strong>
                 </span>
+                {data.totals.indeterminate > 0 && (
+                  <>
+                    <span className="rs-card-hero-breakdown-sep">·</span>
+                    <span className="rs-card-hero-breakdown-pending">
+                      疑似 <strong>{data.totals.indeterminate}</strong>
+                    </span>
+                  </>
+                )}
                 {sinceWho > 0 && (
                   <>
-                    <span className="rs-card-hero-breakdown-sep">+</span>
+                    <span className="rs-card-hero-breakdown-sep">·</span>
                     <span className="rs-card-hero-breakdown-pending">
                       待复核 <strong>{sinceWho}</strong>
                       {sinceCountries.length > 0 && (
@@ -340,6 +352,11 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
                       )}
                     </span>
                   </>
+                )}
+                {data.totals.deaths > 0 && (
+                  <span className="rs-card-hero-breakdown-where">
+                    （含 {data.totals.deaths} 死亡）
+                  </span>
                 )}
               </div>
               <div className="rs-card-hero-who">
@@ -395,11 +412,11 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
               </div>
               <div className="rs-item">
                 <div className="rs-num">{data.totals.indeterminate}</div>
-                <div className="rs-lbl">待定</div>
+                <div className="rs-lbl">疑似</div>
               </div>
               <div className="rs-item">
                 <div className="rs-num">{data.totals.deaths}</div>
-                <div className="rs-lbl">死亡</div>
+                <div className="rs-lbl">其中死亡</div>
               </div>
             </div>
             <div className="rs-chips">

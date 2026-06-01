@@ -209,11 +209,23 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
           />
         </div>
 
-        {/* Case count strip */}
-        <div className="grid grid-cols-3 gap-2 pt-3 border-t border-gray-100">
-          <Stat label="确诊" value={nearest.confirmedCases ?? 0} tone="text-gray-900" />
-          <Stat label="疑似" value={nearest.suspectedCases ?? 0} tone="text-yellow-700" />
-          <Stat label="死亡" value={nearest.deaths ?? 0} tone="text-red-700" />
+        {/* Case count strip — single 口径: 累计 = 确诊 + 疑似; 死亡 is a SUBSET
+            of 累计 (not additive). The "其中死亡" label + "含死亡" note keep the
+            three numbers from being misread as 确诊 + 疑似 + 死亡. */}
+        <div className="pt-3 border-t border-gray-100">
+          <div className="flex items-baseline gap-1.5 mb-2">
+            <span className="text-[11px] text-gray-500">累计</span>
+            <span className="text-lg font-bold text-gray-900 leading-none">
+              {(nearest.confirmedCases ?? 0) + (nearest.suspectedCases ?? 0)}
+            </span>
+            <span className="text-[11px] text-gray-500">例</span>
+            <span className="text-[10px] text-gray-400 ml-1">= 确诊 + 疑似，含死亡</span>
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            <Stat label="确诊" value={nearest.confirmedCases ?? 0} tone="text-gray-900" />
+            <Stat label="疑似" value={nearest.suspectedCases ?? 0} tone="text-yellow-700" />
+            <Stat label="其中死亡" value={nearest.deaths ?? 0} tone="text-red-700" />
+          </div>
         </div>
 
         {/* Source attribution */}

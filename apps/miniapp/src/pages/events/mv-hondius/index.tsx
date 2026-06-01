@@ -40,8 +40,8 @@ export default function MvHondiusEventPage() {
 
       <View className="flex flex-wrap gap-2 mt-4">
         {[
-          ['确诊', summary.confirmedCases],
-          ['死亡', summary.deaths],
+          ['累计病例', summary.confirmedCases + summary.suspectedCases],
+          ['其中死亡', summary.deaths],
           ['距中国 km', summary.distanceFromChinaKm],
           ['WHO 更新', summary.whoUpdates],
         ].map(([label, val]) => (

@@ -138,6 +138,25 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         "suspectedCases": 3,
         "deaths": 3,
     },
+    "2026-DON604": {
+        # Current canonical figures (口径统一 2026-05-28): total = confirmed +
+        # probable, deaths are a SUBSET of the total (not additive). The whole
+        # app reads these three fields; outbreak_status derives all = confirmed
+        # + indeterminate(=suspectedCases) = 13. Keep summaryZh consistent so
+        # the displayed number never contradicts the structured ledger.
+        "name": "MV Hondius 邮轮安第斯型聚集疫情",
+        "summaryZh": "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+        "lat": -54.8,
+        "lng": -68.3,
+        "locationName": "南美洲海域（始发乌斯怀亚）",
+        "humanToHuman": True,
+        "whoRiskLevel": "对公众风险：低（WHO 2026-05-28）",
+        "stableClusterId": "mv-hondius-2026",
+        "serotypeId": "andes",
+        "confirmedCases": 11,
+        "suspectedCases": 2,
+        "deaths": 3,
+    },
 }
 
 
@@ -151,9 +170,12 @@ def _is_mv_hondius_outbreak(title: str, summary: str) -> bool:
 
 
 def _mv_hondius_summary_zh(summary: str) -> str:
+    # Inferred (non-registry) MV Hondius entries default to the CURRENT
+    # canonical summary (DON604) so a brand-new DON shows today's figures
+    # rather than a stale 5/13 count before an operator curates it.
     lower = summary.lower()
-    if "11 cases" in lower or "13 may" in lower:
-        return CLUSTER_REGISTRY["2026-DON601"]["summaryZh"]
+    if any(k in lower for k in ("13 cases", "28 may", "11 cases", "13 may")):
+        return CLUSTER_REGISTRY["2026-DON604"]["summaryZh"]
     return "WHO 更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。该事件与南美洲航程和邮轮暴露相关，需重点关注乘客、船员及密切接触者的健康随访；普通公众风险仍按官方通报评估为较低。"
 
 
@@ -174,8 +196,8 @@ def _inferred_registry(
             "whoRiskLevel": "对公众风险：低（WHO 2026-05）",
             "stableClusterId": "mv-hondius-2026",
             "serotypeId": "andes",
-            "confirmedCases": 8,
-            "suspectedCases": 3,
+            "confirmedCases": 11,
+            "suspectedCases": 2,
             "deaths": 3,
         }
     return {}

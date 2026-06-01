@@ -278,7 +278,7 @@ export default function HomePage() {
               below carries the same factual signal in a calmer surface. */}
 
           {/* ─── Above-the-fold metrics: Distance + HPI on one row ─── */}
-          <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <div className="grid grid-cols-5 gap-2 sm:gap-3 mb-3 sm:mb-4">
             {/* Distance card — uses nearest import distance when a confirmed/
                 quarantined import is closer than the outbreak source. */}
             {(() => {
@@ -290,12 +290,12 @@ export default function HomePage() {
                 ? `${nearestImport!.flag} ${nearestImport!.cityZh ? `${nearestImport!.nameZh} ${nearestImport!.cityZh}` : nearestImport!.nameZh}（${nearestImport!.statusZh}）`
                 : cluster.location.name;
               return (
-                <div className={`card-premium !p-3 sm:!p-4 ${distanceRingBg(dKm)}`}>
+                <div className={`card-premium col-span-3 !p-3 sm:!p-4 ${distanceRingBg(dKm)}`}>
                   <p className="text-[10px] sm:text-xs font-medium text-slate-500 leading-tight">
                     {hasImport ? '最近 Andes 型活动距中国' : '最近 Andes 疫情距中国大陆'}
                   </p>
                   <div className="flex items-baseline gap-1 mt-1.5">
-                    <span className={`hw-num-hero text-3xl sm:text-5xl font-bold ${distanceRingColor(dKm)}`}>
+                    <span className={`hw-num-hero text-4xl sm:text-6xl font-bold ${distanceRingColor(dKm)}`}>
                       {hasImport ? '~' : ''}{fmt(dKm)}
                     </span>
                     <span className="text-sm sm:text-lg font-semibold text-slate-400">km</span>
@@ -315,7 +315,7 @@ export default function HomePage() {
             })()}
 
             {/* HPI card — premium surface with coloured progress bar. */}
-            <div className="card-premium !p-3 sm:!p-4">
+            <div className="card-premium col-span-2 !p-3 sm:!p-4">
               <div className="flex items-center gap-1.5">
                 <TrendingUp className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-sky-600 flex-shrink-0" />
                 <span className="font-semibold text-[10px] sm:text-xs leading-tight text-slate-900">
@@ -323,7 +323,7 @@ export default function HomePage() {
                 </span>
               </div>
               <div className="flex items-baseline gap-1.5 mt-1.5">
-                <span className="hw-num-hero text-3xl sm:text-5xl font-bold" style={{ color: hpi.color }}>
+                <span className="hw-num-hero text-2xl sm:text-4xl font-bold" style={{ color: hpi.color }}>
                   {hpi.total}
                 </span>
                 <span className="text-xs sm:text-sm font-semibold" style={{ color: hpi.color }}>
@@ -347,7 +347,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="card-premium text-center !p-3 sm:!p-3.5">
               <div className="hw-num-hero text-2xl sm:text-3xl font-bold text-sky-700">
-                {intakeStats.currentReportedCases ?? nearestAndes.totalConfirmed}
+                {intakeStats.currentReportedCases ?? nearestAndes.totalReported}
               </div>
               <div className="mt-1.5 text-[10px] sm:text-[11px] text-slate-500 leading-tight">
                 Andes 现报全球

@@ -100,9 +100,18 @@ export default function DataPage() {
                 <Text style={{ fontSize: '20rpx', color: '#9ca3af' }}>({s.nameEn})</Text>
               </View>
               <Text
-                style={{ fontSize: '22rpx', color: '#6b7280', marginTop: '4rpx', display: 'block', lineHeight: 1.5 }}
+                style={{
+                  fontSize: '22rpx',
+                  color: '#6b7280',
+                  marginTop: '4rpx',
+                  lineHeight: 1.5,
+                  display: '-webkit-box',
+                  WebkitBoxOrient: 'vertical',
+                  WebkitLineClamp: 2,
+                  overflow: 'hidden',
+                }}
               >
-                {s.description.slice(0, 100)}...
+                {s.description}
               </Text>
               <View className="flex flex-wrap gap-2 mt-2">
                 <Text

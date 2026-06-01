@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import re
 from datetime import date, datetime, timedelta, timezone
 import json
 from pathlib import Path
@@ -269,6 +270,15 @@ def _compute_intake_stats(
     return {"last24hCount": last24h_count, "highConfidencePicks": picks}
 
 
+def _ruler_label(confirmed: int, monitoring: int, quarantine: int, status: str) -> str:
+    """Status-aware label (口径: 确诊 / 隔离监测中 / 监测中)."""
+    if confirmed > 0:
+        return f"已确诊 {confirmed} 例"
+    if quarantine > 0 or status == "quarantine_active":
+        return "隔离监测中"
+    return "监测中"
+
+
 def build_ruler(
     outbreak_status: list[dict[str, Any]] | None,
     risk_snapshot: dict[str, Any],
@@ -312,11 +322,23 @@ def build_ruler(
     except (TypeError, ValueError):
         nearest_km_int = None
     if nearest_km_int is not None and nearest_country:
+        # Derive the label from the country's actual status so a *confirmed*
+        # nearest import (e.g. 法国) isn't mislabelled "监测信号".
+        n_iso2 = str(nearest_import.get("iso2") or "").upper()
+        n_conf = n_mon = n_quar = 0
+        n_status = ""
+        for pc in (o0.get("perCountry") or []):
+            if isinstance(pc, dict) and str(pc.get("iso2") or "").upper() == n_iso2:
+                n_conf = int(pc.get("confirmed") or 0)
+                n_mon = int(pc.get("monitoring") or 0)
+                n_quar = int(pc.get("quarantine") or 0)
+                n_status = str(pc.get("status") or "")
+                break
         markers.append(
             {
                 "km": nearest_km_int,
                 "countryZh": nearest_country,
-                "label": "监测信号",
+                "label": _ruler_label(n_conf, n_mon, n_quar, n_status),
                 "tier": _km_to_tier(nearest_km_int),
             }
         )
@@ -341,7 +363,7 @@ def build_ruler(
             # Distance per active country is not present in the input ledger;
             # we reuse nearest distance as a visual proxy.
             km = nearest_km_int if nearest_km_int is not None else origin_km_int
-            label = f"已确诊 {confirmed} 例" if confirmed > 0 else "监测信号"
+            label = _ruler_label(confirmed, monitoring, int(pc.get("quarantine") or 0), str(pc.get("status") or ""))
             markers.append(
                 {
                     "km": int(km or origin_km_int or 0),
@@ -377,10 +399,84 @@ def _official_source_short_id(source_name: str | None, country_zh: str | None) -
     return "official_cdc"
 
 
+def _milestone_headline(summary: str, iso_date: str, o0: dict[str, Any] | None) -> str:
+    """Headline for a WHO DON milestone row. Uses authoritative totals for the
+    latest DON (matches lastUpdate.asOfDate); otherwise parses the cumulative
+    count from the localized summary, with a first-report fallback."""
+    if o0 and isinstance(o0.get("lastUpdate"), dict) and o0["lastUpdate"].get("asOfDate") == iso_date:
+        t = o0.get("totals") or {}
+        total = int(t.get("all") or 0)
+        conf = int(t.get("confirmed") or 0)
+        ind = int(t.get("indeterminate") or 0)
+        deaths = int(t.get("deaths") or 0)
+        if total > 0:
+            parts: list[str] = []
+            if conf > 0:
+                parts.append(f"{conf} 确诊")
+            if ind > 0:
+                parts.append(f"{ind} 疑似")
+            if deaths > 0:
+                parts.append(f"含 {deaths} 死亡")
+            suffix = f"（{' · '.join(parts)}）" if parts else ""
+            return f"WHO 累计 {total} 例{suffix}"
+    m_total = re.search(r"报告\s*(\d+)\s*例", summary)
+    m_deaths = re.search(r"(\d+)\s*例死亡", summary)
+    if m_total:
+        if m_deaths:
+            return f"WHO 累计 {m_total.group(1)} 例（含 {m_deaths.group(1)} 死亡）"
+        return f"WHO 累计 {m_total.group(1)} 例"
+    if "接获" in summary or "首次" in summary:
+        return "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）"
+    return "WHO 通报更新"
+
+
+def _who_milestones(
+    recent_cases_intl: list[dict[str, Any]] | None,
+    o0: dict[str, Any] | None,
+    *,
+    who_last_at: str,
+    who_days_ago: int,
+) -> list[dict[str, Any]]:
+    """One who_baseline event per WHO DON publication for the active cluster
+    (newest first). Falls back to a single recency anchor when no DON history
+    is available."""
+    fallback = [{
+        "at": who_last_at,
+        "kind": "who_baseline",
+        "headline": f"WHO DON 最近一次公布（已 {who_days_ago} 天无新事件）",
+        "source": "who_don",
+    }]
+    if not recent_cases_intl or not isinstance(recent_cases_intl, list):
+        return fallback
+    by_date: dict[str, str] = {}
+    for c in recent_cases_intl:
+        if not isinstance(c, dict):
+            continue
+        src = c.get("source") if isinstance(c.get("source"), dict) else {}
+        url = str(src.get("url") or "")
+        cid = str(c.get("id") or "")
+        is_don = "disease-outbreak-news" in url or (cid.startswith("who-") and "don" in cid.lower())
+        if not is_don:
+            continue
+        if c.get("serotypeId") not in (None, "andes"):
+            continue
+        d = str(c.get("date") or "")
+        if not d or d in by_date:
+            continue
+        by_date[d] = _milestone_headline(str(c.get("summary") or ""), d, o0)
+    if not by_date:
+        return fallback
+    return [
+        {"at": f"{d}T12:00:00Z", "kind": "who_baseline", "headline": h, "source": "who_don"}
+        for d, h in sorted(by_date.items(), key=lambda kv: kv[0], reverse=True)
+    ]
+
+
 def build_events(
     outbreak_status: list[dict[str, Any]] | None,
     *,
     realtime_feed: dict[str, Any] | None,
+    recent_cases_intl: list[dict[str, Any]] | None = None,
 ) -> tuple[list[dict[str, Any]], int, int | None]:
     """
     Returns (events, daysWithoutNewConfirmed, daysWithoutAnyNews_opt).
@@ -404,13 +500,14 @@ def build_events(
 
     events: list[dict[str, Any]] = []
     if o0:
-        events.append(
-            {
-                "at": who_last_at,
-                "kind": "who_baseline",
-                "headline": f"WHO DON 最近一次公布（已 {who_days_ago} 天无新事件）",
-                "source": "who_don",
-            }
+        # WHO DON milestone backbone (5/4 → 5/8 → 5/13 → 5/28 …), newest first.
+        events.extend(
+            _who_milestones(
+                recent_cases_intl,
+                o0,
+                who_last_at=who_last_at,
+                who_days_ago=who_days_ago,
+            )
         )
 
     # Official detections (tier == "official") from outbreak ledger
@@ -423,23 +520,44 @@ def build_events(
                 continue
             asof_str = pc.get("asOf") or who_date.isoformat()
             asof = _parse_iso_date(asof_str) or who_date
-            at = f"{asof.isoformat()}T12:00:00Z"
             evidence = pc.get("evidence") or []
             if not isinstance(evidence, list):
                 evidence = []
             has_official = any(
                 isinstance(ev, dict) and ev.get("tier") == "official" for ev in evidence
             )
-            if not has_official:
-                continue
+            has_arcgis = any(
+                isinstance(ev, dict) and ev.get("tier") == "arcgis" for ev in evidence
+            )
+            # Clamp ArcGIS dashboard *scrape* dates (no real event date) to the
+            # WHO update date — a scrape later than the latest DON isn't a real
+            # confirmation date. Official/news real dates (incl. post-WHO, which
+            # the since-WHO delta relies on) are kept as-is.
+            if asof > who_date and has_arcgis and not has_official:
+                asof = who_date
+            at = f"{asof.isoformat()}T12:00:00Z"
             confirmed = int(pc.get("confirmed") or 0)
             monitoring = int(pc.get("monitoring") or 0)
+            quarantine = int(pc.get("quarantine") or 0)
+            status = str(pc.get("status") or "")
+            # Always surface confirmed countries (even ArcGIS-only: 荷兰/南非/
+            # 瑞士). Monitoring/quarantine-only rows still require an official
+            # source so we don't spam the timeline with every dashboard dash.
+            if not has_official and confirmed <= 0:
+                continue
             delta = int(pc.get("newConfirmedToday") or 0)
             if delta == 0:
                 delta = confirmed if confirmed > 0 else 0
 
-            type_ = "confirmed" if confirmed > 0 else "monitoring"
-            short_context = "确诊输入" if type_ == "confirmed" else "监测信号"
+            if confirmed > 0:
+                type_ = "confirmed"
+                short_context = "确诊输入"
+            elif quarantine > 0 or status == "quarantine_active":
+                type_ = "quarantine"
+                short_context = f"隔离监测中（{quarantine} 人）" if quarantine > 0 else "隔离监测中"
+            else:
+                type_ = "monitoring"
+                short_context = f"监测中（{monitoring} 人接触者）" if monitoring > 0 else "监测中"
 
             verdict = "已纳入 WHO" if asof <= who_date else "待 WHO 复核"
             # Source ID: qualitative mapping, only used as a short audit code.
@@ -460,6 +578,31 @@ def build_events(
                     "shortContext": short_context,
                     "verdict": verdict,
                     "source": source,
+                }
+            )
+
+        # 口径 reconciliation: the WHO confirmed total can exceed the sum
+        # attributed to destination countries (the original cruise-ship/source
+        # cluster). Surface that remainder as a single "源头·邮轮" confirmed
+        # event so the timeline + 全球分布 reconcile to the headline total.
+        _t0 = o0.get("totals") or {}
+        _source_conf = int(_t0.get("confirmed") or 0) - sum(
+            int(pc.get("confirmed") or 0)
+            for pc in o0["perCountry"]
+            if isinstance(pc, dict)
+        )
+        if _source_conf > 0:
+            _ms_ats = [e.get("at") for e in events if e.get("kind") == "who_baseline" and e.get("at")]
+            events.append(
+                {
+                    "at": min(_ms_ats) if _ms_ats else who_last_at,
+                    "kind": "detection",
+                    "countryZh": "源头·邮轮",
+                    "delta": _source_conf,
+                    "type": "confirmed",
+                    "shortContext": "航程中确诊（源头聚集）",
+                    "verdict": "已纳入 WHO",
+                    "source": "who_don",
                 }
             )
 
@@ -579,6 +722,7 @@ def build_realtime_situation(
     realtime_extracted: list[dict[str, Any]] | None,
     meta: dict[str, Any] | None,
     existing_situation: dict[str, Any] | None = None,
+    recent_cases_intl: list[dict[str, Any]] | None = None,
     today: date | None = None,
     now: datetime | None = None,
 ) -> dict[str, Any]:
@@ -621,6 +765,7 @@ def build_realtime_situation(
     events, days_without_new_confirmed, days_without_any_news = build_events(
         outbreak_status,
         realtime_feed=realtime_payload,
+        recent_cases_intl=recent_cases_intl,
     )
 
     # 口径 B: enrich headline with since-WHO delta + current reported count.
@@ -664,6 +809,14 @@ def build_realtime_situation(
     monitoring_countries.sort(key=lambda x: int(x.get("count") or 0), reverse=True)
     confirmed_countries = confirmed_countries[:8]
     monitoring_countries = monitoring_countries[:8]
+
+    # 口径 reconciliation: if the WHO confirmed total exceeds the sum attributed
+    # to destination countries, surface the remainder as a "源头·邮轮" chip so the
+    # 全球分布 cards add up to totals.confirmed (the source-cluster cases).
+    _country_conf_sum = sum(int(c.get("count") or 0) for c in confirmed_countries)
+    _source_conf = int(totals.get("confirmed") or 0) - _country_conf_sum
+    if _source_conf > 0:
+        confirmed_countries.append({"zh": "源头·邮轮", "count": _source_conf})
 
     # Sources footer: relative times for UI (keep mockup field names).
     # WHO: always from baseline.
@@ -734,6 +887,7 @@ def build_and_write_realtime_situation(
     realtime_feed: dict[str, Any] | None,
     realtime_extracted: list[dict[str, Any]] | None,
     meta: dict[str, Any] | None,
+    recent_cases_intl: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """
     Thin IO wrapper for main.py.
@@ -747,6 +901,7 @@ def build_and_write_realtime_situation(
         realtime_extracted=realtime_extracted,
         meta=meta,
         existing_situation=existing,
+        recent_cases_intl=recent_cases_intl,
     )
     # Phase A contract: output must 1:1 match SAMPLE_DATA payload shape
     # (no `__generated_by` / `__generated_at` metadata wrapper).

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>实时态势 · Mockup</title>
+<!--
+  实时态势 (Realtime Situation) — Mockup v3
+
+  框架转变: "每日简报" → "实时态势"
+    - 数据每小时多次更新（WHO 1-2周/次、ECDC 周报、ArcGIS 实时、News 每小时）
+    - 用 "X 小时前" / "X 天前" 相对时间戳代替"今日新增"
+    - 地图尺作为核心视觉差异化（产品独有，竞品没有）
+
+  模块结构（mobile-first，自上而下优先级）:
+    1. 状态指示  - 1 秒判断处境（4 档色 + 中文）
+    2. Hero      - 主线疫情 + 累计 + 国内安全状态
+    3. 地图尺    - 距中国地理距离的视觉化（核心功能）
+    4. 事件流    - 时间倒序，无"today"边界，含 WHO 基线点
+    5. 全球分布  - 累计数字 + 国家 chips
+    6. 数据来源  - 多源时间戳
+
+  自动化数据流:
+    /apps/web/src/data/realtime-situation.json   (新文件名)
+    fetch('/data/realtime-situation.json')
+    小程序: wx.request({url: 'https://www.bingduguancha.com/data/realtime-situation.json'})
+
+  状态机（4 档，由结构化数据 if/else 推出，无 LLM 判断）:
+    🟢 平静     无活跃疫情 + 国内基线正常
+    🟡 远端关注 有活跃疫情 但 >5000km + 国内安全          ← 当前实际
+    🟠 近端关注 <5000km 或 有未复核新增 + 国内安全
+    🔴 国内警戒 检测到本土病例
+-->
+<style>
+  /* ───── reset & base ───── */
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    font-size: 14px; line-height: 1.5; color: #1f2937; background: #f3f4f6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ───── desktop phone-frame wrapper ───── */
+  .page { min-height: 100vh; padding: 24px 16px 80px; display: flex; flex-direction: column; align-items: center; }
+  .page-title-block { text-align: center; margin-bottom: 18px; }
+  .page-title { font-size: 13px; font-weight: 600; color: #6b7280; letter-spacing: 0.05em; }
+  .page-subtitle { font-size: 11px; color: #9ca3af; margin-top: 4px; }
+
+  .switcher { display: flex; gap: 8px; margin-bottom: 22px; flex-wrap: wrap; justify-content: center; max-width: 420px; }
+  .switcher button {
+    border: 1px solid #d1d5db; background: #fff; border-radius: 9999px;
+    padding: 6px 14px; font-size: 12px; font-family: inherit; cursor: pointer; color: #374151;
+  }
+  .switcher button:hover { background: #f9fafb; }
+  .switcher button.active { background: #1f2937; color: #fff; border-color: #1f2937; }
+
+  .frame {
+    width: 100%; max-width: 420px; background: #fff; border-radius: 20px;
+    overflow: hidden; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ───── card structure ───── */
+  .card { display: flex; flex-direction: column; }
+
+  /* ── live header strip ── */
+  .live-strip {
+    padding: 10px 18px; background: #fafafa;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; color: #6b7280;
+  }
+  .live-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: livePulse 2s infinite;
+  }
+  @keyframes livePulse {
+    0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.7); }
+    70% { box-shadow: 0 0 0 6px rgba(16,185,129,0); }
+    100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
+  }
+  .live-strip .right { margin-left: auto; }
+
+  /* ── state header (tinted) ── */
+  .card-status { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid #f3f4f6; }
+  .card-status-icon {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .card-status-text { flex: 1; min-width: 0; }
+  .card-status-label { font-size: 18px; font-weight: 700; color: #111827; letter-spacing: 0.02em; }
+  .card-status-meta { font-size: 11px; color: #6b7280; margin-top: 2px; }
+
+  .card--calm     .card-status { background: #ecfdf5; }
+  .card--calm     .card-status-icon { background: #10b981; color: #fff; }
+  .card--remote   .card-status { background: #fffbeb; }
+  .card--remote   .card-status-icon { background: #f59e0b; color: #fff; }
+  .card--near     .card-status { background: #fff7ed; }
+  .card--near     .card-status-icon { background: #f97316; color: #fff; }
+  .card--domestic .card-status { background: #fef2f2; }
+  .card--domestic .card-status-icon { background: #ef4444; color: #fff; }
+  .card--domestic .card-status-label { color: #b91c1c; }
+
+  /* ── hero ── */
+  .card-hero { padding: 14px 18px 14px; }
+  .card-hero-title { font-size: 13px; color: #6b7280; font-weight: 500; margin-bottom: 4px; }
+  .card-hero-stats { font-size: 16px; font-weight: 600; color: #111827; margin-bottom: 8px; }
+  .card-hero-stats .num { font-size: 24px; font-weight: 800; color: #111827; margin-right: 2px; }
+  .card-hero-stats .muted { color: #6b7280; font-weight: 400; font-size: 13px; }
+  .card-hero-domestic {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: #374151; line-height: 1.5;
+  }
+  .card-hero-domestic .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .card-hero-domestic .dot--green { background: #10b981; }
+  .card-hero-domestic .dot--red   { background: #ef4444; }
+  .card-hero-domestic .bold { font-weight: 600; color: #111827; }
+
+  /* ───── MAP RULER (核心功能) ───── */
+  .ruler {
+    padding: 16px 18px 14px;
+    background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .ruler-label {
+    font-size: 11px; font-weight: 600; color: #6b7280;
+    letter-spacing: 0.05em; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .ruler-label .right { margin-left: auto; font-weight: 400; color: #9ca3af; font-size: 10px; }
+
+  .ruler-track-wrap {
+    position: relative; height: 56px; margin: 0 6px;
+  }
+  .ruler-track {
+    position: absolute; top: 22px; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg,
+      #fecaca 0%, #fed7aa 30%, #fef3c7 60%, #d1fae5 100%);
+    border-radius: 3px;
+  }
+  .ruler-tick {
+    position: absolute; top: 32px; transform: translateX(-50%);
+    font-size: 10px; color: #9ca3af; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .ruler-tick::before {
+    content: ''; position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 4px; background: #d1d5db;
+  }
+  .ruler-marker { position: absolute; top: 16px; transform: translateX(-50%); }
+  .ruler-marker-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.15);
+  }
+  .ruler-marker--home .ruler-marker-dot { background: #1f2937; }
+  .ruler-marker--home .ruler-marker-flag {
+    position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+    font-size: 14px; line-height: 1;
+  }
+  .ruler-marker[data-tier="primary"]   .ruler-marker-dot { background: #ef4444; }
+  .ruler-marker[data-tier="secondary"] .ruler-marker-dot { background: #f97316; }
+  .ruler-marker[data-tier="tertiary"]  .ruler-marker-dot { background: #f59e0b; }
+  .ruler-marker[data-tier="far"]       .ruler-marker-dot { background: #10b981; }
+
+  .ruler-legend {
+    margin-top: 12px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .ruler-legend-item {
+    font-size: 12px; color: #374151;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ruler-legend-item .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .ruler-legend-item .km {
+    margin-left: auto; font-weight: 600; color: #111827;
+    font-variant-numeric: tabular-nums;
+  }
+  .ruler-legend-item .label { color: #6b7280; }
+  .ruler-legend-item strong { font-weight: 600; color: #111827; }
+
+  .ruler-empty {
+    margin-top: 8px; padding: 12px; background: #f9fafb;
+    border-radius: 8px; text-align: center; font-size: 12px; color: #6b7280;
+  }
+
+  /* ── section ── */
+  .card-section { padding: 14px 18px; }
+  .card-section-label {
+    font-size: 11px; font-weight: 600; color: #6b7280;
+    letter-spacing: 0.05em; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .card-section-label .right { margin-left: auto; font-weight: 400; color: #9ca3af; font-size: 10px; }
+
+  /* ── event feed (replaces 今日变化) ── */
+  .event-row {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 0; border-bottom: 1px solid #f9fafb;
+  }
+  .event-row:last-child { border-bottom: none; }
+  .event-time {
+    font-size: 11px; flex-shrink: 0;
+    width: 56px; padding-top: 1px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.35;
+  }
+  .event-time-date { color: #6b7280; font-weight: 500; }
+  .event-time-clock { color: #9ca3af; font-size: 10px; }
+  .event-body { flex: 1; min-width: 0; }
+  .event-headline {
+    font-size: 13px; color: #111827; font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .event-headline .delta {
+    font-weight: 700; color: #f97316; margin-right: 4px;
+  }
+  .event-headline .delta--baseline { color: #6b7280; font-weight: 600; }
+  .event-headline .country { font-weight: 600; }
+  .event-meta {
+    font-size: 11px; color: #6b7280;
+    display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+  }
+  .event-tag {
+    font-size: 10px; padding: 1px 6px; border-radius: 3px;
+    background: #fef3c7; color: #92400e;
+  }
+  .event-tag--baseline { background: #dbeafe; color: #1e40af; }
+  .event-tag--official { background: #dcfce7; color: #166534; }
+
+  .event-baseline-row { background: #fafbff; border-radius: 6px; padding: 8px 10px !important; }
+  .event-baseline-row .event-time { color: #6366f1; font-weight: 500; }
+
+  .event-empty {
+    text-align: center; color: #9ca3af; font-size: 13px; padding: 20px 0;
+  }
+  .event-empty .big {
+    font-size: 28px; font-weight: 800; color: #10b981;
+    display: block; margin-bottom: 4px;
+  }
+
+  /* ── totals + chips ── */
+  .totals-row {
+    display: flex; gap: 12px; margin-bottom: 12px;
+    padding: 10px 12px; background: #f9fafb; border-radius: 8px;
+  }
+  .totals-row .item { flex: 1; text-align: center; }
+  .totals-row .item .num {
+    font-size: 20px; font-weight: 800; color: #111827; line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .totals-row .item .lbl { font-size: 10px; color: #6b7280; margin-top: 4px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .chip {
+    font-size: 11px; background: #f3f4f6; color: #374151;
+    padding: 4px 8px; border-radius: 6px; white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .chip strong { font-weight: 700; color: #111827; margin-right: 2px; }
+  .chips--mute .chip { background: #f9fafb; color: #6b7280; }
+  .chips-sublabel { font-size: 10px; color: #9ca3af; margin-bottom: 6px; margin-top: 4px; }
+
+  /* ── footer ── */
+  .card-footer {
+    padding: 10px 18px 14px; font-size: 10px; color: #9ca3af;
+    text-align: center; border-top: 1px solid #f3f4f6; margin-top: 4px;
+    line-height: 1.6;
+  }
+  .card-footer .sources { color: #6b7280; }
+
+  /* ── alert banner ── */
+  .alert-banner {
+    background: #fef2f2; border-left: 3px solid #ef4444;
+    padding: 10px 14px; margin: 0 18px 14px; border-radius: 6px;
+    font-size: 12px; color: #991b1b; line-height: 1.5;
+  }
+  .alert-banner strong { color: #b91c1c; }
+
+  /* ── notes block ── */
+  .notes {
+    max-width: 420px; margin: 24px 0 0; padding: 16px; background: #fff;
+    border-radius: 12px; font-size: 12px; color: #6b7280; line-height: 1.65;
+    border: 1px dashed #d1d5db;
+  }
+  .notes h3 { font-size: 12px; color: #111827; margin-bottom: 6px; }
+  .notes code { font-family: 'Menlo', monospace; background: #f3f4f6; padding: 1px 4px; border-radius: 3px; font-size: 11px; }
+  .notes ul { padding-left: 18px; margin-top: 4px; }
+  .notes li { margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-title-block">
+    <div class="page-title">实时态势 · MOCKUP</div>
+    <div class="page-subtitle">数据每小时多次刷新 · 不是每日简报</div>
+  </div>
+
+  <div class="switcher" id="switcher">
+    <button data-state="remote_watch" class="active">🟡 远端关注（实际）</button>
+    <button data-state="calm">🟢 平静</button>
+    <button data-state="near_watch">🟠 近端关注</button>
+    <button data-state="domestic_alert">🔴 国内警戒</button>
+  </div>
+
+  <div class="frame" id="frame"></div>
+
+  <div class="notes">
+    <h3>最新一轮修正（2026-05-27）</h3>
+    <ul>
+      <li><strong>地图尺颜色反转</strong>: 距离越近越红（0-3000km 红 / 3000-7000 橙 / 7000-12000 黄 / 12000+ 绿）</li>
+      <li><strong>地图尺只显示最近一个点</strong>: 避免多点杂乱，其他国家看下面 "全球分布" chips</li>
+      <li><strong>事件流用绝对时间戳</strong>: "5/27 19:30" 两行格式（日期上、时间下）。顶部 live 条仍保留相对时间（“X 分钟前更新”）作为鲜度信号</li>
+      <li><strong>保留</strong>: 状态机 4 档 / live 脉冲指示 / 国内警戒 banner / 多源 footer</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+const NOW = new Date('2026-05-27T13:30:00Z');
+
+const SAMPLE_DATA = {
+  remote_watch: {
+    state: { code: 'remote_watch', labelZh: '远端关注', icon: '🟡', since: '2026-05-13', daysAtState: 14 },
+    headline: {
+      outbreakName: 'MV Hondius 邮轮 · 安第斯型聚集疫情',
+      totalCases: 11,
+      whoLastUpdateZh: '5/13', whoDaysAgo: 14,
+      domesticStatus: 'safe',
+      nearestSignalKm: 8400, nearestSignalCountry: '法国',
+    },
+    ruler: {
+      maxKm: 20000,
+      markers: [
+        { km: 8400,  countryZh: '法国',     label: '监测信号',     tier: 'secondary' },
+        { km: 10200, countryZh: '荷兰',     label: '已确诊 2 例',  tier: 'far' },
+        { km: 14800, countryZh: '南非',     label: '已确诊 1 例',  tier: 'far' },
+        { km: 16500, countryZh: 'MV Hondius 邮轮源头', label: '主线疫情', tier: 'primary' },
+      ],
+    },
+    events: [
+      { at: '2026-05-27T11:30:00Z', kind: 'detection', countryZh: '美国科罗拉多', delta: 1, type: 'screening', shortContext: '初筛阳性', verdict: '待确认', source: 'us_cdph' },
+      { at: '2026-05-26T19:00:00Z', kind: 'detection', countryZh: '西班牙',     delta: 1, type: 'confirmed', shortContext: '邮轮接触者', verdict: '待 WHO 复核', source: 'es_isciii' },
+      { at: '2026-05-24T08:00:00Z', kind: 'detection', countryZh: '法国',       delta: 0, type: 'monitoring', shortContext: '监测信号确认（无新增）', verdict: '已纳入 WHO', source: 'fr_spf' },
+      { at: '2026-05-13T12:00:00Z', kind: 'who_baseline', headline: 'WHO DON 公布 MV Hondius 邮轮聚集疫情累计 11 例（8 确诊·3 待定·3 死亡）', source: 'who_don' },
+    ],
+    daysWithoutNewConfirmed: 0,
+    totals: { confirmed: 8, indeterminate: 3, deaths: 3 },
+    confirmedCountries: [
+      { zh: '荷兰', count: 2 }, { zh: '西班牙', count: 1 }, { zh: '法国', count: 1 },
+      { zh: '瑞士', count: 1 }, { zh: '南非', count: 1 },
+    ],
+    monitoringCountries: [
+      { zh: '美国', count: 41 }, { zh: '英国', count: 28 }, { zh: '加拿大', count: 7 },
+      { zh: '德国', count: 4 },  { zh: '比利时', count: 2 }, { zh: '爱尔兰', count: 2 },
+      { zh: '土耳其', count: 2 }, { zh: '希腊', count: 1 },  { zh: '新加坡', count: 1 },
+    ],
+    sources: [
+      { name: 'WHO DON',          updatedRel: '14 天前' },
+      { name: 'ArcGIS ANDV',      updatedRel: '4 小时前' },
+      { name: 'ECDC Surveillance', updatedRel: '2 天前' },
+      { name: '各国 CDC + 实时新闻', updatedRel: '38 分钟前' },
+    ],
+    realtimeUpdatedRel: '4 分钟前',
+  },
+
+  calm: {
+    state: { code: 'calm', labelZh: '平静', icon: '🟢', since: '2026-02-17', daysAtState: 90 },
+    headline: {
+      outbreakName: '暂无活跃聚集疫情',
+      totalCases: 0,
+      whoLastUpdateZh: '5/13', whoDaysAgo: 94,
+      domesticStatus: 'safe',
+      nearestSignalKm: null, nearestSignalCountry: null,
+    },
+    ruler: { maxKm: 20000, markers: [] },
+    events: [
+      { at: '2026-05-13T12:00:00Z', kind: 'who_baseline', headline: 'WHO DON 最近一次公布（已 94 天无新事件）', source: 'who_don' },
+    ],
+    daysWithoutAnyNews: 38,
+    totals: { confirmed: 0, indeterminate: 0, deaths: 0 },
+    confirmedCountries: [], monitoringCountries: [],
+    sources: [
+      { name: 'WHO DON', updatedRel: '94 天前' },
+      { name: 'ArcGIS ANDV', updatedRel: '6 小时前' },
+      { name: 'ECDC Surveillance', updatedRel: '3 天前' },
+    ],
+    realtimeUpdatedRel: '6 分钟前',
+  },
+
+  near_watch: {
+    state: { code: 'near_watch', labelZh: '近端关注', icon: '🟠', since: '2026-05-26', daysAtState: 1 },
+    headline: {
+      outbreakName: 'MV Hondius 邮轮 · 安第斯型聚集疫情',
+      totalCases: 13,
+      whoLastUpdateZh: '5/13', whoDaysAgo: 14,
+      domesticStatus: 'safe',
+      nearestSignalKm: 3200, nearestSignalCountry: '泰国',
+    },
+    ruler: {
+      maxKm: 20000,
+      markers: [
+        { km: 3200,  countryZh: '泰国',  label: '入境检疫确诊',     tier: 'primary' },
+        { km: 4100,  countryZh: '日本',  label: '邮轮邻舱接触者',   tier: 'secondary' },
+        { km: 8400,  countryZh: '法国',  label: '监测信号',         tier: 'secondary' },
+        { km: 16500, countryZh: 'MV Hondius 邮轮源头', label: '主线疫情', tier: 'far' },
+      ],
+    },
+    events: [
+      { at: '2026-05-27T03:00:00Z', kind: 'detection', countryZh: '泰国',     delta: 1, type: 'confirmed',  shortContext: '入境检疫发现', verdict: '待 WHO 复核', source: 'th_moph' },
+      { at: '2026-05-26T18:00:00Z', kind: 'detection', countryZh: '日本',     delta: 1, type: 'screening',  shortContext: '邮轮邻舱接触者', verdict: '待确认', source: 'jp_mhlw' },
+      { at: '2026-05-13T12:00:00Z', kind: 'who_baseline', headline: 'WHO DON 公布 MV Hondius 邮轮聚集疫情累计 11 例', source: 'who_don' },
+    ],
+    daysWithoutNewConfirmed: 0,
+    totals: { confirmed: 9, indeterminate: 4, deaths: 3 },
+    confirmedCountries: [
+      { zh: '荷兰', count: 2 }, { zh: '西班牙', count: 1 }, { zh: '法国', count: 1 },
+      { zh: '瑞士', count: 1 }, { zh: '南非', count: 1 }, { zh: '泰国', count: 1 },
+    ],
+    monitoringCountries: [
+      { zh: '日本', count: 3 }, { zh: '美国', count: 41 }, { zh: '英国', count: 28 },
+    ],
+    sources: [
+      { name: 'WHO DON', updatedRel: '14 天前' },
+      { name: 'ArcGIS ANDV', updatedRel: '2 小时前' },
+      { name: '各国 CDC + 实时新闻', updatedRel: '12 分钟前' },
+    ],
+    realtimeUpdatedRel: '2 分钟前',
+  },
+
+  domestic_alert: {
+    state: { code: 'domestic_alert', labelZh: '国内警戒', icon: '🔴', since: '2026-06-02', daysAtState: 1 },
+    headline: {
+      outbreakName: '国内 HFRS 监测异常 · 全球 MV Hondius 持续',
+      totalCases: 14,
+      whoLastUpdateZh: '5/13', whoDaysAgo: 20,
+      domesticStatus: 'alert',
+      nearestSignalKm: 0, nearestSignalCountry: '国内',
+      domesticDetails: '某省检测到 1 例疑似输入病例（基线偏离 +12%），正在流调',
+    },
+    ruler: {
+      maxKm: 20000,
+      markers: [
+        { km: 0,     countryZh: '国内',  label: '疑似输入',  tier: 'primary' },
+        { km: 8400,  countryZh: '法国',  label: '监测信号',  tier: 'secondary' },
+        { km: 16500, countryZh: 'MV Hondius 邮轮源头', label: '主线疫情', tier: 'far' },
+      ],
+    },
+    events: [
+      { at: '2026-06-02T08:00:00Z', kind: 'detection', countryZh: '中国（待确认）', delta: 1, type: 'screening',  shortContext: '入境后发病', verdict: '正在流调', source: 'cn_cdc' },
+      { at: '2026-06-01T20:00:00Z', kind: 'detection', countryZh: '西班牙',         delta: 1, type: 'confirmed',  shortContext: '邮轮接触者',     verdict: '待 WHO 复核', source: 'es_isciii' },
+      { at: '2026-05-13T12:00:00Z', kind: 'who_baseline', headline: 'WHO DON 公布 MV Hondius 邮轮聚集疫情累计 11 例', source: 'who_don' },
+    ],
+    daysWithoutNewConfirmed: 0,
+    totals: { confirmed: 9, indeterminate: 4, deaths: 3 },
+    confirmedCountries: [
+      { zh: '荷兰', count: 2 }, { zh: '西班牙', count: 1 }, { zh: '法国', count: 1 },
+      { zh: '瑞士', count: 1 }, { zh: '南非', count: 1 },
+    ],
+    monitoringCountries: [
+      { zh: '美国', count: 41 }, { zh: '英国', count: 28 },
+    ],
+    sources: [
+      { name: '中国 CDC', updatedRel: '刚刚' },
+      { name: 'WHO DON', updatedRel: '20 天前' },
+      { name: '各国 CDC + 实时新闻', updatedRel: '8 分钟前' },
+    ],
+    realtimeUpdatedRel: '刚刚',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────
+// helpers
+// ─────────────────────────────────────────────────────────────────────
+function relativeFromIso(isoStr, now = NOW) {
+  const t = new Date(isoStr);
+  const diffMs = now - t;
+  const minutes = Math.floor(diffMs / 60000);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  if (minutes < 5) return '刚刚';
+  if (minutes < 60) return `${minutes} 分钟前`;
+  if (hours < 24) return `${hours} 小时前`;
+  if (days < 30) return `${days} 天前`;
+  const m = t.getUTCMonth() + 1;
+  const d = t.getUTCDate();
+  return `${m}月${d}日`;
+}
+
+function formatEventTime(isoStr) {
+  // 使用本地时区（中国用户 = 北京时间）
+  const t = new Date(isoStr);
+  const m = t.getMonth() + 1;
+  const d = t.getDate();
+  const hh = String(t.getHours()).padStart(2, '0');
+  const mm = String(t.getMinutes()).padStart(2, '0');
+  return { date: `${m}/${d}`, clock: `${hh}:${mm}` };
+}
+
+function kmToTier(km) {
+  if (km < 3000) return 'primary';
+  if (km < 7000) return 'secondary';
+  if (km < 12000) return 'tertiary';
+  return 'far';
+}
+
+function tierToColor(tier) {
+  return ({
+    primary:   '#ef4444',
+    secondary: '#f97316',
+    tertiary:  '#f59e0b',
+    far:       '#10b981',
+  })[tier] || '#6b7280';
+}
+
+function formatDate(iso) {
+  if (!iso) return '';
+  const [, m, d] = iso.split('-');
+  return `${parseInt(m, 10)}/${parseInt(d, 10)}`;
+}
+
+function fmtKm(n) {
+  return n.toLocaleString();
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// renderers
+// ─────────────────────────────────────────────────────────────────────
+function renderRuler(ruler) {
+  if (!ruler.markers || ruler.markers.length === 0) {
+    return `
+      <div class="ruler">
+        <div class="ruler-label">📏 距中国大陆距离</div>
+        <div class="ruler-empty">暂无活跃威胁信号</div>
+      </div>
+    `;
+  }
+
+  const max = ruler.maxKm;
+  // 只取最近的一个威胁点
+  const closest = ruler.markers.slice().sort((a, b) => a.km - b.km)[0];
+  const closestPct = Math.min(100, Math.max(0, (closest.km / max) * 100));
+  const closestTier = kmToTier(closest.km);
+  const closestColor = tierToColor(closestTier);
+
+  // home marker (中国大陆)
+  const homeMarker = `
+    <div class="ruler-marker ruler-marker--home" style="left:0%">
+      <div class="ruler-marker-flag">🇨🇳</div>
+      <div class="ruler-marker-dot"></div>
+    </div>
+  `;
+
+  // 单个威胁点（距离太近时与 home 重叠，只保留 home 并染色）
+  const overlapsHome = closest.km < 200;
+  const threatMarker = overlapsHome ? '' : `
+    <div class="ruler-marker" data-tier="${closestTier}" style="left:${closestPct}%">
+      <div class="ruler-marker-dot"></div>
+    </div>
+  `;
+
+  const ticks = [
+    { pct: 0,   label: '0' },
+    { pct: 25,  label: '5,000' },
+    { pct: 50,  label: '10,000' },
+    { pct: 75,  label: '15,000' },
+    { pct: 100, label: '20,000 km' },
+  ].map(t => `<div class="ruler-tick" style="left:${t.pct}%">${t.label}</div>`).join('');
+
+  const legend = `
+    <div class="ruler-legend-item">
+      <span class="dot" style="background:${closestColor}"></span>
+      <strong>${closest.countryZh}</strong>
+      <span class="label">${closest.label}</span>
+      <span class="km">${fmtKm(closest.km)} km</span>
+    </div>
+  `;
+
+  return `
+    <div class="ruler">
+      <div class="ruler-label">
+        📏 距中国大陆距离
+        <span class="right">最近威胁信号</span>
+      </div>
+      <div class="ruler-track-wrap">
+        <div class="ruler-track"></div>
+        ${ticks}
+        ${homeMarker}
+        ${threatMarker}
+      </div>
+      <div class="ruler-legend">${legend}</div>
+    </div>
+  `;
+}
+
+function renderEvent(e) {
+  const t = formatEventTime(e.at);
+  const timeBlock = `
+    <div class="event-time">
+      <div class="event-time-date">${t.date}</div>
+      <div class="event-time-clock">${t.clock}</div>
+    </div>
+  `;
+  if (e.kind === 'who_baseline') {
+    return `
+      <div class="event-row event-baseline-row">
+        ${timeBlock}
+        <div class="event-body">
+          <div class="event-headline">${e.headline}</div>
+          <div class="event-meta"><span class="event-tag event-tag--baseline">WHO 基线</span></div>
+        </div>
+      </div>
+    `;
+  }
+  // detection
+  const isPositiveDelta = e.delta > 0;
+  const deltaClass = isPositiveDelta ? '' : 'delta--baseline';
+  const deltaText = e.delta > 0 ? `+${e.delta}` : '·';
+  const verdictClass = e.verdict.includes('已纳入') ? 'event-tag--official' : '';
+  return `
+    <div class="event-row">
+      ${timeBlock}
+      <div class="event-body">
+        <div class="event-headline">
+          <span class="delta ${deltaClass}">${deltaText}</span>
+          <span class="country">${e.countryZh}</span>
+          <span class="muted">· ${e.shortContext}</span>
+        </div>
+        <div class="event-meta">
+          <span class="event-tag ${verdictClass}">${e.verdict}</span>
+          <span>来源: ${e.source}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderEvents(events, daysWithoutNewConfirmed, daysWithoutAnyNews) {
+  if (!events || events.length === 0) {
+    return `
+      <div class="card-section">
+        <div class="card-section-label">📡 最近事件</div>
+        <div class="event-empty">
+          <span class="big">${daysWithoutAnyNews || 0}</span>
+          天内全球无相关事件
+        </div>
+      </div>
+    `;
+  }
+  const rows = events.map(renderEvent).join('');
+  const streak = daysWithoutNewConfirmed !== undefined && daysWithoutNewConfirmed > 0
+    ? `<div class="event-meta" style="margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb;color:#9ca3af;font-size:11px;">已连续 ${daysWithoutNewConfirmed} 天无 WHO 已确认新增</div>`
+    : '';
+  return `
+    <div class="card-section">
+      <div class="card-section-label">
+        📡 最近事件
+        <span class="right">时间倒序</span>
+      </div>
+      ${rows}
+      ${streak}
+    </div>
+  `;
+}
+
+function renderCard(d) {
+  const stateClass =
+    d.state.code === 'calm' ? 'card--calm' :
+    d.state.code === 'remote_watch' ? 'card--remote' :
+    d.state.code === 'near_watch' ? 'card--near' :
+    'card--domestic';
+
+  const liveStrip = `
+    <div class="live-strip">
+      <span class="live-dot"></span>
+      <span>实时</span>
+      <span class="right">${d.realtimeUpdatedRel}更新</span>
+    </div>
+  `;
+
+  const stateBlock = `
+    <div class="card-status">
+      <div class="card-status-icon">${d.state.icon}</div>
+      <div class="card-status-text">
+        <div class="card-status-label">${d.state.labelZh}</div>
+        <div class="card-status-meta">已连续 ${d.state.daysAtState} 天 · 升档于 ${formatDate(d.state.since)}</div>
+      </div>
+    </div>
+  `;
+
+  const alertBanner = d.state.code === 'domestic_alert' ? `
+    <div class="alert-banner">
+      <strong>⚠ 国内基线异常</strong>
+      ${d.headline.domesticDetails || '检测到本土相关信号，请关注官方通报'}
+    </div>
+  ` : '';
+
+  const totalCasesLine = d.headline.totalCases > 0
+    ? `<span class="num">${d.headline.totalCases}</span> 例累计 · WHO <span class="muted">${d.headline.whoDaysAgo} 天前公布</span>`
+    : `<span class="muted">无活跃聚集疫情 · WHO ${d.headline.whoDaysAgo} 天前最近一次公布</span>`;
+
+  const domesticDot = d.headline.domesticStatus === 'safe' ? 'dot--green' : 'dot--red';
+  const domesticText = d.headline.domesticStatus === 'safe'
+    ? `中国大陆安全${d.headline.nearestSignalKm ? ` · 最近信号 <span class="bold">${fmtKm(d.headline.nearestSignalKm)} km</span>（${d.headline.nearestSignalCountry}）` : ''}`
+    : `国内 HFRS 监测异常 · 详见上方提示`;
+
+  const heroBlock = `
+    <div class="card-hero">
+      <div class="card-hero-title">${d.headline.outbreakName}</div>
+      <div class="card-hero-stats">${totalCasesLine}</div>
+      <div class="card-hero-domestic">
+        <span class="dot ${domesticDot}"></span>
+        <span>${domesticText}</span>
+      </div>
+    </div>
+  `;
+
+  const rulerBlock = renderRuler(d.ruler);
+  const eventsBlock = renderEvents(d.events, d.daysWithoutNewConfirmed, d.daysWithoutAnyNews);
+
+  // 全球分布
+  let distributionBlock = '';
+  if (d.confirmedCountries && d.confirmedCountries.length > 0) {
+    const totalsHtml = `
+      <div class="totals-row">
+        <div class="item"><div class="num">${d.totals.confirmed}</div><div class="lbl">确诊</div></div>
+        <div class="item"><div class="num">${d.totals.indeterminate}</div><div class="lbl">待定</div></div>
+        <div class="item"><div class="num">${d.totals.deaths}</div><div class="lbl">死亡</div></div>
+      </div>
+    `;
+    const confirmedChips = d.confirmedCountries.map(c =>
+      `<span class="chip"><strong>${c.zh}</strong>${c.count}</span>`).join('');
+    let monitoringHtml = '';
+    if (d.monitoringCountries && d.monitoringCountries.length > 0) {
+      const monitorChips = d.monitoringCountries.map(c =>
+        `<span class="chip"><strong>${c.zh}</strong>${c.count}</span>`).join('');
+      monitoringHtml = `
+        <div class="chips-sublabel">监测中（无确诊）</div>
+        <div class="chips chips--mute">${monitorChips}</div>
+      `;
+    }
+    distributionBlock = `
+      <div class="card-section">
+        <div class="card-section-label">
+          🌍 全球分布
+          <span class="right">WHO ${d.headline.whoLastUpdateZh} 更新</span>
+        </div>
+        ${totalsHtml}
+        <div class="chips">${confirmedChips}</div>
+        ${monitoringHtml}
+      </div>
+    `;
+  }
+
+  // footer
+  const sourcesLine = d.sources
+    .map(s => `<strong>${s.name}</strong> ${s.updatedRel}`)
+    .join(' · ');
+  const footer = `
+    <div class="card-footer">
+      <div class="sources">${sourcesLine}</div>
+    </div>
+  `;
+
+  return `
+    <div class="card ${stateClass}">
+      ${liveStrip}
+      ${stateBlock}
+      ${alertBanner}
+      ${heroBlock}
+      ${rulerBlock}
+      ${eventsBlock}
+      ${distributionBlock}
+      ${footer}
+    </div>
+  `;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// state switcher
+// ─────────────────────────────────────────────────────────────────────
+const frame = document.getElementById('frame');
+const switcher = document.getElementById('switcher');
+
+function show(code) {
+  frame.innerHTML = renderCard(SAMPLE_DATA[code]);
+  switcher.querySelectorAll('button').forEach(b => {
+    b.classList.toggle('active', b.dataset.state === code);
+  });
+}
+
+switcher.addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if (btn) show(btn.dataset.state);
+});
+
+show('remote_watch');
+
+// ─────────────────────────────────────────────────────────────────────
+// 生产环境数据接入示例（注释）
+// ─────────────────────────────────────────────────────────────────────
+// async function loadLive() {
+//   const res = await fetch('/data/realtime-situation.json');
+//   const data = await res.json();
+//   frame.innerHTML = renderCard(data);
+// }
+// // 每 60 秒自动刷新（不刷新整页，仅刷新数据）
+// setInterval(loadLive, 60_000);
+//
+// 微信小程序版（WXML/WXSS）:
+//   onLoad() {
+//     this.refreshSituation();
+//     this.timer = setInterval(() => this.refreshSituation(), 60000);
+//   }
+//   refreshSituation() {
+//     wx.request({
+//       url: 'https://www.bingduguancha.com/data/realtime-situation.json',
+//       success: (res) => this.setData({ situation: res.data })
+//     });
+//   }
+</script>
+
+</body>
+</html>

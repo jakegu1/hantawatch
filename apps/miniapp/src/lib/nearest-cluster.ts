@@ -13,6 +13,8 @@ export interface NearestAndesResult {
   km: number;
   all: ActiveCluster[];
   totalConfirmed: number;
+  /** Aggregate reported cases (确诊 + 疑似). 现报/累计 口径. */
+  totalReported: number;
   totalDeaths: number;
 }
 
@@ -33,6 +35,7 @@ export function findNearestBySerotype(
     km: nearest && nearest.distanceFromChinaKm > 0 ? nearest.distanceFromChinaKm : -1,
     all: sorted,
     totalConfirmed: filtered.reduce((s, c) => s + (c.confirmedCases ?? 0), 0),
+    totalReported: filtered.reduce((s, c) => s + (c.confirmedCases ?? 0) + (c.suspectedCases ?? 0), 0),
     totalDeaths: filtered.reduce((s, c) => s + (c.deaths ?? 0), 0),
   };
 }

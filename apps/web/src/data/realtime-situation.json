@@ -8,7 +8,7 @@
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
-    "totalCases": 11,
+    "totalCases": 13,
     "whoLastUpdateZh": "5/28",
     "whoDaysAgo": 1,
     "domesticStatus": "safe",
@@ -17,7 +17,7 @@
     "whoConfirmedCases": 11,
     "sinceWhoNewCases": 0,
     "sinceWhoNewCountries": [],
-    "currentReportedCases": 11
+    "currentReportedCases": 13
   },
   "ruler": {
     "maxKm": 20000,
@@ -31,7 +31,7 @@
       {
         "km": 8400,
         "countryZh": "法国",
-        "label": "监测信号",
+        "label": "已确诊 1 例",
         "tier": "tertiary"
       },
       {
@@ -61,13 +61,13 @@
       {
         "km": 8400,
         "countryZh": "美国",
-        "label": "监测信号",
+        "label": "监测中",
         "tier": "tertiary"
       },
       {
         "km": 8400,
         "countryZh": "比利时",
-        "label": "监测信号",
+        "label": "监测中",
         "tier": "tertiary"
       }
     ]
@@ -76,7 +76,7 @@
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
-      "headline": "WHO DON 最近一次公布（已 1 天无新事件）",
+      "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
       "source": "who_don"
     },
     {
@@ -105,7 +105,7 @@
       "countryZh": "美国",
       "delta": 0,
       "type": "monitoring",
-      "shortContext": "监测信号",
+      "shortContext": "监测中（41 人接触者）",
       "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
@@ -114,16 +114,74 @@
       "kind": "detection",
       "countryZh": "澳大利亚",
       "delta": 0,
-      "type": "monitoring",
-      "shortContext": "监测信号",
+      "type": "quarantine",
+      "shortContext": "隔离监测中（6 人）",
       "verdict": "已纳入 WHO",
       "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 11 例（含 3 死亡）",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "荷兰",
+      "delta": 2,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "南非",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "瑞士",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-08T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "源头·邮轮",
+      "delta": 5,
+      "type": "confirmed",
+      "shortContext": "航程中确诊（源头聚集）",
+      "verdict": "已纳入 WHO",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-08T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 8 例（含 3 死亡）",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
+      "source": "who_don"
     }
   ],
   "daysWithoutNewConfirmed": 14,
   "totals": {
-    "confirmed": 8,
-    "indeterminate": 3,
+    "confirmed": 11,
+    "indeterminate": 2,
     "deaths": 3
   },
   "confirmedCountries": [
@@ -146,6 +204,10 @@
     {
       "zh": "瑞士",
       "count": 1
+    },
+    {
+      "zh": "源头·邮轮",
+      "count": 5
     }
   ],
   "monitoringCountries": [
@@ -179,6 +241,10 @@
     },
     {
       "zh": "希腊",
+      "count": 1
+    },
+    {
+      "zh": "新加坡",
       "count": 1
     }
   ],

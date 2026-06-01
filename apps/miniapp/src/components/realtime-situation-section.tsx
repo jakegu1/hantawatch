@@ -186,7 +186,7 @@ function EventRow({ e }: { e: SituationEvent }) {
         <View className="rs-event-body">
           <View className="rs-event-headline">{e.headline}</View>
           <View className="rs-event-meta">
-            <Text className="rs-event-tag rs-event-tag--baseline">WHO 基线</Text>
+            <Text className="rs-event-tag rs-event-tag--baseline">WHO 通报</Text>
           </View>
         </View>
       </View>
@@ -268,7 +268,9 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
       ? headline.domesticDetails
       : '检测到本土相关信号，请关注官方通报';
 
-  // 口径 B (2026-05-27): mirror web — show "现报 N 例（WHO 已确认 X · 待复核 Y）".
+  // 口径统一 (2026-05-30): mirror web — 现报 N 例 + WHO-ledger split
+  // "确诊 X · 疑似 Y（含 Z 死亡）" from data.totals (现报 = 确诊 + 疑似 + 待复核;
+  // deaths are a SUBSET of the total).
   const whoConfirmed =
     'whoConfirmedCases' in headline && typeof headline.whoConfirmedCases === 'number'
       ? headline.whoConfirmedCases
@@ -280,7 +282,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
   const currentReported =
     'currentReportedCases' in headline && typeof headline.currentReportedCases === 'number'
       ? headline.currentReportedCases
-      : whoConfirmed + sinceWho;
+      : data.totals.confirmed + data.totals.indeterminate + sinceWho;
   const sinceCountries =
     'sinceWhoNewCountries' in headline && Array.isArray(headline.sinceWhoNewCountries)
       ? (headline.sinceWhoNewCountries as string[])
@@ -326,13 +328,23 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
                 <Text className="rs-card-hero-current-num">{currentReported}</Text>
                 <Text className="rs-card-hero-current-suffix">例</Text>
               </View>
+              {/* 口径统一: 现报 = 确诊 + 疑似 (+ 待复核 since-WHO signals);
+                  deaths are a SUBSET of the total, shown as "含 N 死亡". */}
               <View className="rs-card-hero-breakdown">
                 <Text className="rs-card-hero-breakdown-confirmed">
-                  WHO 已确认 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--confirmed">{whoConfirmed}</Text>
+                  确诊 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--confirmed">{data.totals.confirmed}</Text>
                 </Text>
+                {data.totals.indeterminate > 0 && (
+                  <>
+                    <Text className="rs-card-hero-breakdown-sep">·</Text>
+                    <Text className="rs-card-hero-breakdown-pending">
+                      疑似 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--pending">{data.totals.indeterminate}</Text>
+                    </Text>
+                  </>
+                )}
                 {sinceWho > 0 && (
                   <>
-                    <Text className="rs-card-hero-breakdown-sep">+</Text>
+                    <Text className="rs-card-hero-breakdown-sep">·</Text>
                     <Text className="rs-card-hero-breakdown-pending">
                       待复核 <Text className="rs-card-hero-breakdown-strong rs-card-hero-breakdown-strong--pending">{sinceWho}</Text>
                       {sinceCountries.length > 0 && (
@@ -342,6 +354,11 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
                       )}
                     </Text>
                   </>
+                )}
+                {data.totals.deaths > 0 && (
+                  <Text className="rs-card-hero-breakdown-where">
+                    （含 {data.totals.deaths} 死亡）
+                  </Text>
                 )}
               </View>
               <View className="rs-card-hero-who">
@@ -397,11 +414,11 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
               </View>
               <View className="rs-item">
                 <View className="rs-num">{data.totals.indeterminate}</View>
-                <View className="rs-lbl">待定</View>
+                <View className="rs-lbl">疑似</View>
               </View>
               <View className="rs-item">
                 <View className="rs-num">{data.totals.deaths}</View>
-                <View className="rs-lbl">死亡</View>
+                <View className="rs-lbl">其中死亡</View>
               </View>
             </View>
             <View className="rs-chips">

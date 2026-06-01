@@ -4,12 +4,11 @@
  * The web version uses lucide-react icons + outbound anchor tags. In
  * miniapp:
  *   - Icons are replaced with emoji.
- *   - URLs are shown as plain text (miniapps cannot open arbitrary
- *     external URLs; tapping copies to clipboard).
+ *   - The source is shown as plain-text attribution only (no copy /
+ *     external-link affordance, per WeChat 合规).
  */
 
 import { View, Text } from '@tarojs/components';
-import Taro from '@tarojs/taro';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
 import { type ImportProximity, type NearestAndesResult, flagForLocation, relativeDateZh, relativeTimeZh } from '@/lib/nearest-cluster';
@@ -17,10 +16,6 @@ import { DistanceBar } from './distance-bar';
 
 function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
-}
-
-function copyUrl(url: string) {
-  Taro.setClipboardData({ data: url }).catch(() => {});
 }
 
 interface Props {
@@ -63,7 +58,13 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
   return (
     <View
       className="card"
-      style={{ padding: 0, overflow: 'hidden' }}
+      style={{
+        padding: 0,
+        overflow: 'hidden',
+        margin: 0,
+        borderRadius: '24rpx',
+        boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
+      }}
     >
       {/* Header strip */}
       <View
@@ -213,29 +214,31 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
           </View>
         </View>
 
-        {/* Stats */}
-        <View
-          className="pt-3"
-          style={{
-            borderTop: '1rpx solid #f3f4f6',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '8rpx',
-          }}
-        >
-          <Stat label="确诊" value={nearest.confirmedCases ?? 0} color="#111827" />
-          <Stat label="疑似" value={nearest.suspectedCases ?? 0} color="#a16207" />
-          <Stat label="死亡" value={nearest.deaths ?? 0} color="#b91c1c" />
+        {/* Stats — single 口径: 累计 = 确诊 + 疑似; 死亡 is a SUBSET of 累计
+            (not additive). "其中死亡" + "含死亡" note prevent the 确诊/疑似/死亡
+            trio from being misread as additive. */}
+        <View className="pt-3" style={{ borderTop: '1rpx solid #f3f4f6' }}>
+          <View className="flex items-baseline" style={{ gap: '6rpx', marginBottom: '10rpx' }}>
+            <Text style={{ fontSize: '22rpx', color: '#6b7280' }}>累计</Text>
+            <Text style={{ fontSize: '36rpx', fontWeight: 700, color: '#111827', lineHeight: 1 }}>
+              {(nearest.confirmedCases ?? 0) + (nearest.suspectedCases ?? 0)}
+            </Text>
+            <Text style={{ fontSize: '22rpx', color: '#6b7280' }}>例</Text>
+            <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginLeft: '6rpx' }}>= 确诊 + 疑似，含死亡</Text>
+          </View>
+          <View style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8rpx' }}>
+            <Stat label="确诊" value={nearest.confirmedCases ?? 0} color="#111827" />
+            <Stat label="疑似" value={nearest.suspectedCases ?? 0} color="#a16207" />
+            <Stat label="其中死亡" value={nearest.deaths ?? 0} color="#b91c1c" />
+          </View>
         </View>
 
-        {/* Source */}
+        {/* Source — plain-text attribution only (copy-link affordance
+            removed for WeChat 合规). */}
         {nearest.source?.url && (
-          <View
-            className="mt-3"
-            onClick={() => copyUrl(nearest.source.url)}
-          >
-            <Text style={{ color: '#1d4ed8', fontSize: '22rpx' }}>
-              📋 来源：{nearest.source.name || 'WHO Disease Outbreak News'}（点击复制链接）
+          <View className="mt-3">
+            <Text style={{ color: '#6b7280', fontSize: '22rpx' }}>
+              📋 来源：{nearest.source.name || 'WHO 疾病暴发新闻（DON）'}
             </Text>
           </View>
         )}

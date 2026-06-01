@@ -473,6 +473,10 @@ def _validate_brief_against_ledger(
         for pc in ob.get("perCountry", []):
             allowed.add(int(pc.get("confirmed", 0) or 0))
             allowed.add(int(pc.get("monitoring", 0) or 0))
+            # quarantine is a legitimate ledger figure too (e.g. AU 6 passengers);
+            # without it the brief can't reference quarantine counts that are in
+            # the structured ledger without tripping a false-positive warning.
+            allowed.add(int(pc.get("quarantine", 0) or 0))
 
     if risk_snapshot:
         current_hpi = risk_snapshot.get("currentHpi") if isinstance(risk_snapshot, dict) else {}

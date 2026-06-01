@@ -73,7 +73,7 @@ export default function DataPage() {
               <div className="h-4 w-4 mt-1 rounded-full flex-shrink-0" style={{ backgroundColor: s.color }} />
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold">{s.nameZh} <span className="text-gray-400 font-normal text-xs">({s.nameEn})</span></h3>
-                <p className="text-xs text-gray-500 mt-1">{s.description.slice(0, 80)}...</p>
+                <p className="text-xs text-gray-500 mt-1 line-clamp-2">{s.description}</p>
                 <div className="flex flex-wrap gap-2 mt-2">
                   <span className={`badge text-[10px] ${s.humanToHuman ? 'badge-severe' : 'badge-low'}`}>
                     {s.humanToHuman ? '⚠ 可人际传播' : '无人际传播'}

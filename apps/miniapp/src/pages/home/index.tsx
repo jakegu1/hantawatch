@@ -136,19 +136,18 @@ export default function HomePage() {
   // (e.g. US-LA new monitoring case) reflect without redeploying the
   // miniapp. Mirror of web page.tsx.
   const [liveImports, setLiveImports] = useState<MvHondiusImport[] | null>(null);
-  // When the live refresh fails (e.g. no network), we keep showing the bundled
-  // deploy-time snapshot but surface a small "离线 · 显示缓存" pill so the user
-  // knows the numbers may be older than what the web app shows.
-  const [refreshFailed, setRefreshFailed] = useState(false);
+  // Live overlay is a silent best-effort enhancement: on failure we keep the
+  // bundled deploy-time snapshot (the miniapp's real source of truth). The
+  // honest freshness signal is the DataFreshness pill (collected-at), so we no
+  // longer surface a separate "离线" pill that only reflected this optional fetch.
   useEffect(() => {
     let cancelled = false;
     fetchHondiusImports()
       .then((payload) => {
         if (cancelled) return;
         if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
-        setRefreshFailed(false);
       })
-      .catch(() => { if (!cancelled) setRefreshFailed(true); });
+      .catch(() => {});
     return () => { cancelled = true; };
   }, []);
 
@@ -164,9 +163,8 @@ export default function HomePage() {
     const p2 = fetchHondiusImports()
       .then((payload) => {
         if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
-        setRefreshFailed(false);
       })
-      .catch(() => setRefreshFailed(true));
+      .catch(() => {});
     Promise.all([p1, p2]).then(() => Taro.stopPullDownRefresh());
   });
 
@@ -255,26 +253,13 @@ export default function HomePage() {
       {/* ============================================================ */}
       <View
         style={{
-          background: 'linear-gradient(180deg, #1e3a8a 0%, #1d4ed8 55%, #3b82f6 100%)',
+          background: 'radial-gradient(130% 78% at 50% -12%, rgba(96,165,250,0.42) 0%, rgba(96,165,250,0) 55%), linear-gradient(180deg, #163b80 0%, #0f2a5e 52%, #0a1e47 100%)',
           color: '#fff',
           padding: '24rpx 24rpx 36rpx 24rpx',
         }}
       >
         {/* Data freshness pill — right aligned */}
         <View className="flex items-center" style={{ justifyContent: 'flex-end', gap: '8rpx', marginBottom: '8rpx' }}>
-          {refreshFailed && (
-            <Text
-              style={{
-                fontSize: '22rpx',
-                color: '#fff',
-                background: 'rgba(180,83,9,0.9)',
-                borderRadius: '999rpx',
-                padding: '2rpx 14rpx',
-              }}
-            >
-              离线 · 显示缓存
-            </Text>
-          )}
           <DataFreshness meta={dataMeta} />
         </View>
 
@@ -296,20 +281,22 @@ export default function HomePage() {
         {cluster && (
           <View className="flex gap-3 mb-3" style={{ alignItems: 'stretch' }}>
             <View
-              className="flex-1"
               style={{
-                background: '#ffffff',
-                border: `2rpx solid ${distTone.border}`,
-                borderRadius: '20rpx',
-                padding: '22rpx',
-                boxShadow: '0 6rpx 20rpx rgba(15, 23, 42, 0.08)',
+                flexGrow: 1.5,
+                flexShrink: 1,
+                flexBasis: '0%',
+                minWidth: 0,
+                background: '#fff',
+                borderRadius: '24rpx',
+                padding: '24rpx 22rpx',
+                boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
               }}
             >
               <Text style={{ color: '#6b7280', fontSize: '22rpx', fontWeight: 500, display: 'block' }}>
                 {hasImportDistance ? '最近已确认输入距中国大陆' : '最近 Andes 疫情距中国大陆'}
               </Text>
               <View className="flex items-baseline gap-1 mt-1">
-                <Text style={{ fontSize: '72rpx', fontWeight: 800, color: distTone.color, lineHeight: 1 }}>
+                <Text style={{ fontSize: '80rpx', fontWeight: 800, color: distTone.color, lineHeight: 1 }}>
                   {fmt(displayedDistanceKm)}
                 </Text>
                 <Text style={{ fontSize: '32rpx', fontWeight: 700, color: '#9ca3af' }}>km</Text>
@@ -350,20 +337,22 @@ export default function HomePage() {
             </View>
 
             <View
-              className="flex-1"
               style={{
+                flexGrow: 1,
+                flexShrink: 1,
+                flexBasis: '0%',
+                minWidth: 0,
                 background: '#fff',
-                borderRadius: '20rpx',
-                padding: '22rpx',
-                border: '1rpx solid #e5e7eb',
-                boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
+                borderRadius: '24rpx',
+                padding: '24rpx 22rpx',
+                boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
               }}
             >
               <View className="flex items-center gap-1">
                 <Text style={{ fontSize: '22rpx', fontWeight: 600, color: '#111827' }}>📈 HPI 逼近指数</Text>
               </View>
               <View className="flex items-baseline gap-2 mt-1">
-                <Text style={{ fontSize: '72rpx', fontWeight: 800, color: hpi.color, lineHeight: 1 }}>{hpi.total}</Text>
+                <Text style={{ fontSize: '56rpx', fontWeight: 800, color: hpi.color, lineHeight: 1 }}>{hpi.total}</Text>
                 <Text style={{ fontSize: '24rpx', fontWeight: 600, color: hpi.color }}>{hpi.gradeZh}</Text>
               </View>
               <View
@@ -386,34 +375,42 @@ export default function HomePage() {
           </View>
         )}
 
-        {/* 3 atomic numbers */}
-        <View className="flex gap-2 mb-3">
+        {/* Atomic stats — unified into one white strip (3 columns) to match
+            the white-card system; replaces the old translucent glass tiles. */}
+        <View
+          className="flex"
+          style={{
+            background: '#fff',
+            borderRadius: '24rpx',
+            padding: '18rpx 6rpx',
+            marginBottom: '16rpx',
+            boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
+          }}
+        >
           {[
             {
               // Connected to realtime situation: prefer 口径 B currentReported
               // so this card and the RealtimeSituationSection headline match.
-              v: intakeStats.currentReportedCases ?? nearestAndes.totalConfirmed,
+              v: intakeStats.currentReportedCases ?? nearestAndes.totalReported,
               label: `Andes 现报全球${nearestAndes.count > 1 ? ` · ${nearestAndes.count} 起` : ''}`,
-              color: '#fff',
+              color: '#1e3a8a',
             },
-            { v: 0, label: '中国大陆社区传播', color: '#86efac' },
-            { v: fmt(displayedDistanceKm), label: hasImportDistance ? `距最近输入 ${importLocZh} (km)` : '距中国大陆 (km)', color: '#fff' },
+            { v: 0, label: '中国大陆社区传播', color: '#16a34a' },
+            { v: fmt(displayedDistanceKm), label: hasImportDistance ? `距最近输入 ${importLocZh} (km)` : '距中国大陆 (km)', color: '#1e3a8a' },
           ].map((m, i) => (
             <View
               key={i}
               className="flex-1"
               style={{
-                background: 'rgba(255,255,255,0.16)',
-                border: '1rpx solid rgba(255,255,255,0.24)',
-                borderRadius: '14rpx',
-                padding: '14rpx 10rpx',
                 textAlign: 'center',
+                padding: '0 8rpx',
+                borderLeft: i > 0 ? '1rpx solid #eef2f7' : 'none',
               }}
             >
-              <Text style={{ fontSize: '32rpx', fontWeight: 700, color: m.color, lineHeight: 1, display: 'block' }}>
+              <Text style={{ fontSize: '34rpx', fontWeight: 700, color: m.color, lineHeight: 1, display: 'block' }}>
                 {m.v}
               </Text>
-              <Text style={{ fontSize: '22rpx', color: 'rgba(255,255,255,0.9)', marginTop: '4rpx', display: 'block', lineHeight: 1.3 }}>
+              <Text style={{ fontSize: '22rpx', color: '#6b7280', marginTop: '6rpx', display: 'block', lineHeight: 1.3 }}>
                 {m.label}
               </Text>
             </View>
@@ -424,10 +421,9 @@ export default function HomePage() {
         <View
           style={{
             background: '#fff',
-            borderRadius: '20rpx',
-            padding: '20rpx 24rpx',
-            border: '1rpx solid #e5e7eb',
-            boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
+            borderRadius: '24rpx',
+            padding: '24rpx',
+            boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
             marginBottom: '16rpx',
           }}
         >
@@ -476,10 +472,9 @@ export default function HomePage() {
         <View
           style={{
             background: '#fff',
-            borderRadius: '20rpx',
-            padding: '20rpx 24rpx',
-            border: '1rpx solid #e5e7eb',
-            boxShadow: '0 6rpx 20rpx rgba(15,23,42,0.08)',
+            borderRadius: '24rpx',
+            padding: '24rpx',
+            boxShadow: '0 8rpx 28rpx rgba(3, 12, 38, 0.20)',
           }}
         >
           <View className="flex items-center" style={{ justifyContent: 'space-between' }}>
