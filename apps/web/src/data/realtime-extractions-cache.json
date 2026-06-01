@@ -2407,6 +2407,440 @@
         "source_url": "",
         "time": "2026-05-28T06:31:05.000Z"
       }
+    ],
+    "rt-b9eb98c001314999": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道提及美国邮轮乘客隔离，但未提供新增病例数字，仅描述可能解除隔离措施。",
+        "update_id": "rt-b9eb98c001314999",
+        "source_url": "",
+        "time": "2026-05-29T17:01:28.000Z"
+      }
+    ],
+    "rt-8ab3b1d1357f81a2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称美国汉坦病毒邮轮乘客可能提前结束隔离，但未提及新增病例数。",
+        "update_id": "rt-8ab3b1d1357f81a2",
+        "source_url": "",
+        "time": "2026-05-29T16:15:00.000Z"
+      }
+    ],
+    "rt-a07432c35b12d2a5": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称阿根廷病例激增与气候变化有关，但未提供具体新增数字。",
+        "update_id": "rt-a07432c35b12d2a5",
+        "source_url": "",
+        "time": "2026-05-29T15:49:28.000Z"
+      }
+    ],
+    "rt-987c4bcb2973a6b1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到乘客可能被允许离开内布拉斯加州的设施，但未提供具体病例数字变化。",
+        "update_id": "rt-987c4bcb2973a6b1",
+        "source_url": "",
+        "time": "2026-05-30T01:33:00.000Z"
+      }
+    ],
+    "rt-ce276908eeedb46a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到对回家乘客进行监测，但未提供具体数字变化。",
+        "update_id": "rt-ce276908eeedb46a",
+        "source_url": "",
+        "time": "2026-05-30T01:09:46.000Z"
+      }
+    ],
+    "rt-9df6d347fb5e31e8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "FOX 5报道2名纽约人正在接受汉坦病毒监测，将在自家完成隔离。",
+        "update_id": "rt-9df6d347fb5e31e8",
+        "source_url": "",
+        "time": "2026-05-29T23:36:55.000Z"
+      }
+    ],
+    "rt-ef6fd60f33fe2499": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "雅虎报道西班牙新增1例，累计13例，delta_confirmed为1。",
+        "update_id": "rt-ef6fd60f33fe2499",
+        "source_url": "",
+        "time": "2026-05-29T22:49:30.000Z"
+      }
+    ],
+    "rt-6040f94c70c29cd0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "CIDRAP报道实验性药物运往欧洲，美国乘客提供居家隔离，无具体数字变化。",
+        "update_id": "rt-6040f94c70c29cd0",
+        "source_url": "",
+        "time": "2026-05-29T19:09:00.000Z"
+      }
+    ],
+    "rt-4bfa219147af7ead": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "NDTV报道欧盟确保紧急交付潜在治疗药物，未提及具体国家病例变化。",
+        "update_id": "rt-4bfa219147af7ead",
+        "source_url": "",
+        "time": "2026-05-29T06:24:02.000Z"
+      }
+    ],
+    "rt-7e01802cd15e3c3e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "两名乘客因接触汉坦病毒被隔离，预计返回纽约，属于监测中病例。",
+        "update_id": "rt-7e01802cd15e3c3e",
+        "source_url": "",
+        "time": "2026-05-30T04:25:11.000Z"
+      }
+    ],
+    "rt-18235f1dd496eed7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道提及纽约居民从汉坦病毒邮轮返回，但未提供具体数字。",
+        "update_id": "rt-18235f1dd496eed7",
+        "source_url": "",
+        "time": "2026-05-30T01:54:00.000Z"
+      }
+    ],
+    "rt-0bbfbe1b5f85e288": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道提及官员对汉坦病毒乘客监测意见分歧，但未提供具体病例数字。",
+        "update_id": "rt-0bbfbe1b5f85e288",
+        "source_url": "",
+        "time": "2026-05-30T13:02:39.000Z"
+      }
+    ],
+    "rt-714d869ba911644a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "报道称科罗拉多州阿拉帕霍县报告一例汉坦病毒病例，可信媒体，具体数字。",
+        "update_id": "rt-714d869ba911644a",
+        "source_url": "",
+        "time": "2026-05-30T11:33:45.000Z"
+      }
+    ],
+    "rt-f741fa1c7f6e8c04": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "标题提及对汉坦病毒船乘客回家后监测，但未指明国家或具体数字。",
+        "update_id": "rt-f741fa1c7f6e8c04",
+        "source_url": "",
+        "time": "2026-05-30T10:45:00Z"
+      }
+    ],
+    "rt-b25eb658e7b65085": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道关于范德堡健康研究人员呼吁大流行预防，与汉坦病毒无关。",
+        "update_id": "rt-b25eb658e7b65085",
+        "source_url": "",
+        "time": "2026-05-30T07:15:00Z"
+      }
+    ],
+    "rt-e77cc1760fde38d4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "标题提及美国汉坦病毒船乘客回家后监测，但无具体病例数字。",
+        "update_id": "rt-e77cc1760fde38d4",
+        "source_url": "",
+        "time": "2026-05-30T04:00:00Z"
+      }
+    ],
+    "rt-1f2add1ab78ef381": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道称暴露于汉坦病毒的游轮乘客可能被允许回家但需24/7监控，无新增病例。",
+        "update_id": "rt-1f2add1ab78ef381",
+        "source_url": "",
+        "time": "2026-05-30T02:15:00Z"
+      }
+    ],
+    "rt-8dea372fca7501fa": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "WHO警告游轮汉坦病毒，3死3病，但未指明国家，累计数字非新增。",
+        "update_id": "rt-8dea372fca7501fa",
+        "source_url": "",
+        "time": "2026-05-29T23:00:00Z"
+      }
+    ],
+    "rt-5aba83e3554d2d8f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称更多细节浮现，但未提供具体新增病例数字或国家。",
+        "update_id": "rt-5aba83e3554d2d8f",
+        "source_url": "",
+        "time": "2026-05-29T23:00:00Z"
+      }
+    ],
+    "rt-2004b4b961691f76": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到汉坦病毒暴发中心邮轮将于周日停靠西班牙，但未提供具体新增病例数字。",
+        "update_id": "rt-2004b4b961691f76",
+        "source_url": "",
+        "time": "2026-05-29T23:00:00Z"
+      }
+    ],
+    "rt-45eb886ad24e0b53": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰卫生官员宣布汉坦病毒船只可再次航行，未提及新增病例数。",
+        "update_id": "rt-45eb886ad24e0b53",
+        "source_url": "",
+        "time": "2026-05-30T18:43:32.000Z"
+      }
+    ],
+    "rt-7605dcd00afb2429": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "报道关于政府应对汉坦病毒的混乱和争议，未提及具体国家或新增病例数。",
+        "update_id": "rt-7605dcd00afb2429",
+        "source_url": "",
+        "time": "2026-05-30T15:06:34.000Z"
+      }
+    ],
+    "rt-8b447554ae2ec1e6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "medium",
+        "reasoning_zh": "报道美国隔离的汉坦病毒邮轮乘客可能获准回家，未提及新增病例数。",
+        "update_id": "rt-8b447554ae2ec1e6",
+        "source_url": "",
+        "time": "2026-05-29T17:01:28.000Z"
+      }
+    ],
+    "rt-7c01519a7ec2a0e8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准再次航行，未提供任何国家或新增病例数据。",
+        "update_id": "rt-7c01519a7ec2a0e8",
+        "source_url": "",
+        "time": "2026-05-31T00:35:00.000Z"
+      }
+    ],
+    "rt-383edce9e11b5cdd": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准航行，未提供国家或新增病例数据。",
+        "update_id": "rt-383edce9e11b5cdd",
+        "source_url": "",
+        "time": "2026-05-31T00:21:00.000Z"
+      }
+    ],
+    "rt-5faadcbfa1774bf6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及邮轮获准航行，未提供国家或新增病例数据。",
+        "update_id": "rt-5faadcbfa1774bf6",
+        "source_url": "",
+        "time": "2026-05-30T23:18:00.000Z"
+      }
+    ],
+    "rt-d31a9d1d0dbcaa35": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "新闻提及美国邮轮乘客隔离即将结束，但未提供新增病例数字。",
+        "update_id": "rt-d31a9d1d0dbcaa35",
+        "source_url": "",
+        "time": "2026-05-30T20:47:42.000Z"
+      }
+    ],
+    "rt-860119c936939785": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-30",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰卫生官员宣布邮轮可再次航行，但未提供新增病例数据。",
+        "update_id": "rt-860119c936939785",
+        "source_url": "",
+        "time": "2026-05-30T18:43:32.000Z"
+      }
+    ],
+    "rt-0c4525edc1099c0c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-29",
+        "confidence": "low",
+        "reasoning_zh": "新闻讨论疫情与政策，未提供具体新增病例数字。",
+        "update_id": "rt-0c4525edc1099c0c",
+        "source_url": "",
+        "time": "2026-05-29T09:00:12.000Z"
+      }
+    ],
+    "rt-8f4565d620e95be3": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "medium",
+        "reasoning_zh": "报道称MV Hondius号邮轮在汉坦病毒爆发后完成消毒，但未提供新增病例数，故delta均为0。",
+        "update_id": "rt-8f4565d620e95be3",
+        "source_url": "",
+        "time": "2026-05-31T08:35:00.000Z"
+      }
+    ],
+    "rt-1b06d9fd74c9af26": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-05-31",
+        "confidence": "low",
+        "reasoning_zh": "报道未提及具体国家及新增病例数，仅泛泛警告可能更多病例。",
+        "update_id": "rt-1b06d9fd74c9af26",
+        "source_url": "",
+        "time": "2026-05-31T12:04:43.000Z"
+      }
     ]
   }
 }
