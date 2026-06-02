@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T21:30:18.678987+00:00",
+  "__generated_at": "2026-06-02T03:39:50.060373+00:00",
   "date": "2026-06-02",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-01T21:29:57.967066+00:00"
+    "updatedAt": "2026-06-02T03:39:36.371245+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-01T21:29:57.967066+00:00"
+    "updatedAt": "2026-06-02T03:39:36.371245+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -110,24 +110,27 @@
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "daysSinceLastIntlAlert": 5,
     "whoDaysSinceOfficialUpdate": 5,
-    "cluesLast24h": 11,
+    "cluesLast24h": 10,
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
-    "latestChange": "6月1日荷兰批准MV Hondius邮轮复航；美国部分乘客隔离将结束；中国大陆无相关病例。",
-    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内HFRS基线未变。",
-    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，公众无需担忧。",
-    "newCases": "5月28日WHO通报累计13例（11确诊、2疑似），无新增确诊。",
-    "sourceSummary": "WHO官方通报及ArcGIS监测",
-    "shareLine": "WHO 5/28公布累计13例（5天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
+    "latestChange": "6月2日美国亚利桑那州报告1例汉坦病毒死亡；5名邮轮乘客离开内布拉斯加隔离；中国大陆无相关病例。",
+    "situation": "WHO数据每1-2周更新，期间由ArcGIS监测及各国卫生部公告补足；多国维持接触者监测，美国新增死亡待WHO复核；国内HFRS基线正常。",
+    "riskJudgment": "中国大陆无相关输入风险；邮轮聚集疫情距中国超1.6万公里，HPI指数31（一般关注）",
+    "newCases": "6月2日美国亚利桑那州报告1例死亡，非邮轮相关；WHO累计13例无新增。",
+    "sourceSummary": "WHO DON、ArcGIS监测、美国CDC",
+    "shareLine": "WHO 5/28公布累计13例（5天前）；美国亚利桑那新增1例死亡（非邮轮），待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "邮轮复航后监测",
-      "美国接触者隔离",
-      "加拿大旅行警告"
+      "美国亚利桑那死亡病例",
+      "邮轮乘客隔离结束",
+      "WHO数据更新"
     ],
     "evidence": [
       "WHO DON 5/28",
       "ArcGIS ANDV Dashboard",
-      "加拿大旅行警告"
+      "美国CDC"
+    ],
+    "_guardrail_warnings": [
+      "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 41, 8400, 16500]"
     ]
   }
 }

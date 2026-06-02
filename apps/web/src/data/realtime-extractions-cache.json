@@ -3219,6 +3219,90 @@
         "source_url": "",
         "time": "2026-06-01T17:45:00.000Z"
       }
+    ],
+    "rt-2c6d7af8e11b0b5d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题提及美国邮轮乘客离开内布拉斯加州隔离设施，但无新增病例或死亡数字。",
+        "update_id": "rt-2c6d7af8e11b0b5d",
+        "source_url": "",
+        "time": "2026-06-02T03:00:00Z"
+      }
+    ],
+    "rt-dc3e0acb0729e685": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题与上一条相同，无新增病例或死亡数字。",
+        "update_id": "rt-dc3e0acb0729e685",
+        "source_url": "",
+        "time": "2026-06-02T02:45:00Z"
+      }
+    ],
+    "rt-f3baf0d4ec8d90ca": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州报告一例汉坦病毒死亡，来源为12News，可信媒体。",
+        "update_id": "rt-f3baf0d4ec8d90ca",
+        "source_url": "",
+        "time": "2026-06-02T02:45:00.000Z"
+      }
+    ],
+    "rt-6a527671a1064b7c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题提及接触汉坦病毒的邮轮乘客回家隔离，无新增病例或死亡数字。",
+        "update_id": "rt-6a527671a1064b7c",
+        "source_url": "",
+        "time": "2026-06-02T02:30:00Z"
+      }
+    ],
+    "rt-bb65dcd92057d712": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "金曼、莫哈维县卫生部门报告汉坦病毒死亡，来源可信。",
+        "update_id": "rt-bb65dcd92057d712",
+        "source_url": "",
+        "time": "2026-06-02T02:30:00Z"
+      }
+    ],
+    "rt-1a16b8d8f373fb2d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题提及5名乘客离开内布拉斯加州隔离单元，无新增病例或死亡数字。",
+        "update_id": "rt-1a16b8d8f373fb2d",
+        "source_url": "",
+        "time": "2026-06-02T02:00:00Z"
+      }
     ]
   }
 }
