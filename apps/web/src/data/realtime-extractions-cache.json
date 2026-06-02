@@ -3303,6 +3303,286 @@
         "source_url": "",
         "time": "2026-06-02T02:00:00Z"
       }
+    ],
+    "rt-59488d9cf7c5fd92": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及两人从隔离返回，无新增病例或死亡数字。",
+        "update_id": "rt-59488d9cf7c5fd92",
+        "source_url": "",
+        "time": "2026-06-02T09:30:00.000Z"
+      }
+    ],
+    "rt-e50b01b1a53c3a3e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻为政治评论，未提供具体疫情数字。",
+        "update_id": "rt-e50b01b1a53c3a3e",
+        "source_url": "",
+        "time": "2026-06-02T09:30:00.000Z"
+      }
+    ],
+    "rt-6b8a216c83261af3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州西部居民死于汉坦病毒，新增1死亡。",
+        "update_id": "rt-6b8a216c83261af3",
+        "source_url": "",
+        "time": "2026-06-02T04:23:38.000Z"
+      }
+    ],
+    "rt-7c6cdb94d98a0944": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国游轮乘客离开隔离设施，无新增病例或死亡。",
+        "update_id": "rt-7c6cdb94d98a0944",
+        "source_url": "",
+        "time": "2026-06-02T04:05:20.000Z"
+      }
+    ],
+    "rt-35c474388bb6201f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州致命汉坦病毒病例，新增1死亡。",
+        "update_id": "rt-35c474388bb6201f",
+        "source_url": "",
+        "time": "2026-06-02T01:45:10.000Z"
+      }
+    ],
+    "rt-2cf0b9df35b50f83": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州西北部确认一例Sin Nombre汉坦病毒死亡。",
+        "update_id": "rt-2cf0b9df35b50f83",
+        "source_url": "",
+        "time": "2026-06-02T01:43:06.000Z"
+      }
+    ],
+    "rt-e3c0052fc5196572": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "汉坦病毒导致莫哈维县一名居民死亡。",
+        "update_id": "rt-e3c0052fc5196572",
+        "source_url": "",
+        "time": "2026-06-02T01:09:54.000Z"
+      }
+    ],
+    "rt-574d55043c2d21c2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5人离开奥马哈汉坦病毒隔离，无新增病例或死亡。",
+        "update_id": "rt-574d55043c2d21c2",
+        "source_url": "",
+        "time": "2026-06-02T01:06:32.000Z"
+      }
+    ],
+    "rt-076dd8fdb4dd6613": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题提及纽约居民接触汉坦病毒，但无具体数字，仅为更新通报。",
+        "update_id": "rt-076dd8fdb4dd6613",
+        "source_url": "",
+        "time": "2026-06-02T01:06:00.000Z"
+      }
+    ],
+    "rt-29adca9c7a48022e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "报道称部分接触汉坦病毒的邮轮乘客回家隔离，无新增病例数字。",
+        "update_id": "rt-29adca9c7a48022e",
+        "source_url": "",
+        "time": "2026-06-02T00:10:00.000Z"
+      }
+    ],
+    "rt-88d3a4d2aa21a057": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "WHO更新汉坦病毒疫情，但未提供具体国家或数字。",
+        "update_id": "rt-88d3a4d2aa21a057",
+        "source_url": "",
+        "time": "2026-06-01T23:38:31.000Z"
+      }
+    ],
+    "rt-c0e5c2f13af15669": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "5名邮轮乘客离开隔离设施，但无新增病例或死亡数字。",
+        "update_id": "rt-c0e5c2f13af15669",
+        "source_url": "",
+        "time": "2026-06-01T23:21:00.000Z"
+      }
+    ],
+    "rt-bf0a1931588a2560": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州莫哈维县报告1例汉坦病毒死亡，可信媒体来源。",
+        "update_id": "rt-bf0a1931588a2560",
+        "source_url": "",
+        "time": "2026-06-01T22:39:30.000Z"
+      }
+    ],
+    "rt-e3d2b241e3635f96": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "报道部分邮轮乘客回家，无新增病例数字。",
+        "update_id": "rt-e3d2b241e3635f96",
+        "source_url": "",
+        "time": "2026-06-01T22:28:57.000Z"
+      }
+    ],
+    "rt-d3dfa1ae40946c7c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "medium",
+        "reasoning_zh": "莫哈维县报告1例汉坦病毒死亡，与邮轮无关，可信媒体。",
+        "update_id": "rt-d3dfa1ae40946c7c",
+        "source_url": "",
+        "time": "2026-06-01T22:25:00.000Z"
+      }
+    ],
+    "rt-fd4a1fd5cda4ad54": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "5名美国邮轮乘客离开内布拉斯加隔离设施，无新增病例。",
+        "update_id": "rt-fd4a1fd5cda4ad54",
+        "source_url": "",
+        "time": "2026-06-01T22:10:00.000Z"
+      }
+    ],
+    "rt-62069aa88505ad14": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "high",
+        "reasoning_zh": "美国亚利桑那州卫生官员报告莫哈维县一名居民死于汉坦病毒，新增死亡1例。",
+        "update_id": "rt-62069aa88505ad14",
+        "source_url": "",
+        "time": "2026-06-01T22:01:06.000Z"
+      }
+    ],
+    "rt-e342d1b3210f2101": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "low",
+        "reasoning_zh": "报道称一艘曾暴发汉坦病毒的船只获准返回服务，但未指明国家，无法确定具体变化。",
+        "update_id": "rt-e342d1b3210f2101",
+        "source_url": "",
+        "time": "2026-06-01T21:56:00.000Z"
+      }
+    ],
+    "rt-96f59127c4a1a2d5": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-01",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大努纳武特政府发布汉坦病毒和埃博拉旅行建议，未报告新增病例或死亡。",
+        "update_id": "rt-96f59127c4a1a2d5",
+        "source_url": "",
+        "time": "2026-06-01T20:50:57.000Z"
+      }
+    ],
+    "rt-dbc9837f6167c420": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "high",
+        "reasoning_zh": "美国莫哈维县卫生官员报告金曼首例汉坦病毒死亡，新增死亡1例。",
+        "update_id": "rt-dbc9837f6167c420",
+        "source_url": "",
+        "time": "2026-06-01T20:28:00.000Z"
+      }
     ]
   }
 }

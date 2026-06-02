@@ -74,7 +74,7 @@
   },
   "events": [
     {
-      "at": "2026-06-02T02:45:00Z",
+      "at": "2026-06-02T04:23:38Z",
       "kind": "detection",
       "countryZh": "美国",
       "delta": 1,
@@ -261,7 +261,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-02T03:39:46.913819+00:00"
+      "updatedAt": "2026-06-02T10:19:18.352777+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -269,12 +269,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-02T02:45:00Z"
+      "updatedAt": "2026-06-02T04:23:38Z"
     }
   ],
   "intake": {
-    "last24hCount": 6,
+    "last24hCount": 21,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-02T03:39:50.058049+00:00"
+  "realtimeUpdatedAt": "2026-06-02T10:19:21.163232+00:00"
 }
