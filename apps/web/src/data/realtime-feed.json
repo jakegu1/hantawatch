@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-02T16:19:04.591037+00:00",
+  "__generated_at": "2026-06-02T16:38:52.187765+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-02T16:18:53.496388+00:00",
+  "last_fetched": "2026-06-02T16:38:50.961552+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -39,11 +39,11 @@
       "time": "2026-06-02T14:51:24.000Z",
       "title_en": "VIDEO: American cruise ship passengers exposed to hantavirus can go home today - KIRO 7 News Seattle",
       "body_en": "VIDEO: American cruise ship passengers exposed to hantavirus can go home today KIRO 7 News Seattle",
-      "summary_zh": "视频：接触汉坦病毒的美国邮轮乘客今日可回家。",
+      "summary_zh": "美国邮轮汉坦病毒接触乘客今日可回家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "可回家"
+        "乘客回家"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +52,7 @@
       "time": "2026-06-02T14:39:56.000Z",
       "title_en": "Five quarantined cruise passengers facing hantavirus risk head home from Nebraska; 13 remain - Nebraska Examiner",
       "body_en": "Five quarantined cruise passengers facing hantavirus risk head home from Nebraska; 13 remain Nebraska Examiner",
-      "summary_zh": "5名隔离邮轮乘客离开内布拉斯加，13人仍留。",
+      "summary_zh": "5名隔离乘客离开内布拉斯加，13人仍留。",
       "key_facts_zh": [
         "内布拉斯加",
         "5人离开",
@@ -65,10 +65,24 @@
       "time": "2026-06-02T14:19:43.000Z",
       "title_en": "Hantavirus update: five cruise passengers leave Omaha quarantine unit - WOWT",
       "body_en": "Hantavirus update: five cruise passengers leave Omaha quarantine unit WOWT",
-      "summary_zh": "汉坦病毒更新：5名邮轮乘客离开奥马哈隔离区。",
+      "summary_zh": "5名邮轮汉坦病毒接触者离开奥马哈隔离区。",
       "key_facts_zh": [
         "奥马哈",
-        "5人离开"
+        "5人",
+        "离开隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-41109e4fc0055589",
+      "time": "2026-06-02T14:11:26.000Z",
+      "title_en": "Five US passengers from hantavirus-hit ship return to home states - Reuters",
+      "body_en": "Five US passengers from hantavirus-hit ship return to home states Reuters",
+      "summary_zh": "5名美国乘客从汉坦病毒邮轮返回各州。",
+      "key_facts_zh": [
+        "美国",
+        "5人",
+        "返回各州"
       ],
       "signal_strength": "high"
     },
@@ -77,11 +91,11 @@
       "time": "2026-06-02T13:44:47.000Z",
       "title_en": "Gov. Pillen Issues Statement Upon Departure of Hantavirus-Exposed Guests from UNMC - Nebraska Governor's Office (.gov)",
       "body_en": "Gov. Pillen Issues Statement Upon Departure of Hantavirus-Exposed Guests from UNMC Nebraska Governor's Office (.gov)",
-      "summary_zh": "内布拉斯加州长就汉坦病毒接触者离开内布拉斯加医学中心发表声明。",
+      "summary_zh": "内布拉斯加州长就汉坦病毒暴露者离开医学中心发表声明。",
       "key_facts_zh": [
         "内布拉斯加",
         "州长声明",
-        "内布拉斯加医学中心"
+        "UNMC"
       ],
       "signal_strength": "high"
     },
@@ -94,20 +108,7 @@
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "5名乘客返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-41109e4fc0055589",
-      "time": "2026-06-02T13:23:39.000Z",
-      "title_en": "Five US passengers from hantavirus-hit ship return to home states - Reuters",
-      "body_en": "Five US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "路透社报道五名美国乘客从汉坦病毒邮轮返回各州。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "5名乘客返回"
+        "5人返回"
       ],
       "signal_strength": "high"
     },
@@ -116,7 +117,7 @@
       "time": "2026-06-02T10:59:00.000Z",
       "title_en": "Hantavirus-struck ship cleared to sail again - Travel Gossip",
       "body_en": "Hantavirus-struck ship cleared to sail again Travel Gossip",
-      "summary_zh": "汉坦病毒感染的邮轮获准再次航行。",
+      "summary_zh": "受汉坦病毒影响的邮轮获准再次航行。",
       "key_facts_zh": [
         "邮轮",
         "获准航行"
@@ -124,15 +125,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-863dc958e02f0aba",
+      "time": "2026-06-02T10:43:51.000Z",
+      "title_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump's Health Cuts - U.S. News & World Report",
+      "body_en": "Amid Ebola, Hantavirus Outbreaks, Democrats Decry Trump's Health Cuts U.S. News & World Report",
+      "summary_zh": "民主党批评特朗普削减卫生支出，正值埃博拉和汉坦病毒爆发。",
+      "key_facts_zh": [
+        "美国",
+        "民主党",
+        "卫生削减"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-59488d9cf7c5fd92",
       "time": "2026-06-02T09:30:00.000Z",
       "title_en": "Two New Yorkers return from Nebraska hantavirus quarantine - Crain's New York",
       "body_en": "Two New Yorkers return from Nebraska hantavirus quarantine Crain's New York",
-      "summary_zh": "两名纽约人从内布拉斯加州汉坦病毒隔离区返回。",
+      "summary_zh": "两名纽约人从内布拉斯加汉坦病毒隔离区返回。",
       "key_facts_zh": [
-        "美国",
         "纽约",
-        "隔离返回"
+        "内布拉斯加",
+        "2人返回"
       ],
       "signal_strength": "high"
     },
@@ -143,9 +157,21 @@
       "body_en": "Western Arizona resident dies from Hantavirus KSNV",
       "summary_zh": "亚利桑那州西部居民死于汉坦病毒。",
       "key_facts_zh": [
+        "亚利桑那",
+        "死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f3baf0d4ec8d90ca",
+      "time": "2026-06-02T02:45:00.000Z",
+      "title_en": "One person has died in Arizona following hantavirus infection - 12News",
+      "body_en": "One person has died in Arizona following hantavirus infection 12News",
+      "summary_zh": "美国亚利桑那州一人因汉坦病毒感染死亡。",
+      "key_facts_zh": [
         "美国",
         "亚利桑那",
-        "1例死亡"
+        "死亡"
       ],
       "signal_strength": "high"
     },
@@ -154,7 +180,7 @@
       "time": "2026-06-02T01:43:06.000Z",
       "title_en": "Hantavirus ‘Sin Nombre’ death confirmed in northwest Arizona - KLAS 8 News Now",
       "body_en": "Hantavirus ‘Sin Nombre’ death confirmed in northwest Arizona KLAS 8 News Now",
-      "summary_zh": "美国亚利桑那州西北部确认一例汉坦病毒“无名”死亡。",
+      "summary_zh": "美国亚利桑那州西北部确认汉坦病毒“无名”死亡病例。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
@@ -167,24 +193,11 @@
       "time": "2026-06-02T01:09:54.000Z",
       "title_en": "Hantavirus kills Mohave County resident - FOX 10 Phoenix",
       "body_en": "Hantavirus kills Mohave County resident FOX 10 Phoenix",
-      "summary_zh": "美国亚利桑那州莫哈维县一名居民死于汉坦病毒。",
+      "summary_zh": "汉坦病毒导致美国莫哈维县一名居民死亡。",
       "key_facts_zh": [
         "美国",
         "莫哈维县",
         "死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-574d55043c2d21c2",
-      "time": "2026-06-02T01:06:32.000Z",
-      "title_en": "5 People Leave Hantavirus Quarantine in Omaha - The New York Times",
-      "body_en": "5 People Leave Hantavirus Quarantine in Omaha The New York Times",
-      "summary_zh": "美国内布拉斯加州奥马哈5人结束汉坦病毒隔离离开。",
-      "key_facts_zh": [
-        "美国",
-        "奥马哈",
-        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -197,7 +210,7 @@
       "key_facts_zh": [
         "邮轮",
         "乘客",
-        "居家隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -219,11 +232,11 @@
       "time": "2026-06-01T23:21:00.000Z",
       "title_en": "5 hantavirus cruise ship passengers leave quarantine facility as transparency concerns grow - Healthbeat",
       "body_en": "5 hantavirus cruise ship passengers leave quarantine facility as transparency concerns grow Healthbeat",
-      "summary_zh": "5名汉坦病毒邮轮乘客离开隔离设施，透明度受质疑。",
+      "summary_zh": "5名汉坦病毒邮轮乘客离开隔离设施，透明度问题引发关注。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
-        "隔离结束"
+        "乘客",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -232,7 +245,7 @@
       "time": "2026-06-01T22:28:57.000Z",
       "title_en": "State trooper guards and daily fever checks: Some hantavirus cruise ship passengers go home - NBC News",
       "body_en": "State trooper guards and daily fever checks: Some hantavirus cruise ship passengers go home NBC News Hantavirus update: five cruise passengers leave Omaha quarantine unit WOWT US cruise passenger quarantining for hantavirus says he will remain in Nebraska for full 42 days ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国内布拉斯加州：部分汉坦病毒邮轮乘客结束隔离回家。",
+      "summary_zh": "美国内布拉斯加州汉坦病毒邮轮部分乘客结束隔离回家。",
       "key_facts_zh": [
         "美国",
         "邮轮",
