@@ -3583,6 +3583,132 @@
         "source_url": "",
         "time": "2026-06-01T20:28:00.000Z"
       }
+    ],
+    "rt-027a239b6d9061a0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国人接触汉坦病毒后结束隔离回家，无新增病例数字。",
+        "update_id": "rt-027a239b6d9061a0",
+        "source_url": "",
+        "time": "2026-06-02T14:57:00.000Z"
+      }
+    ],
+    "rt-63cc83110dc02788": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国人因游轮接触汉坦病毒后解除隔离，无新增病例。",
+        "update_id": "rt-63cc83110dc02788",
+        "source_url": "",
+        "time": "2026-06-02T14:56:50.000Z"
+      }
+    ],
+    "rt-87ad88cb3893c5c5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "视频报道美国游轮乘客接触汉坦病毒后可回家，无具体数字。",
+        "update_id": "rt-87ad88cb3893c5c5",
+        "source_url": "",
+        "time": "2026-06-02T14:51:24.000Z"
+      }
+    ],
+    "rt-65e137241b4a0b1c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名隔离乘客回家，13人仍留，无新增病例。",
+        "update_id": "rt-65e137241b4a0b1c",
+        "source_url": "",
+        "time": "2026-06-02T14:39:56.000Z"
+      }
+    ],
+    "rt-39367b9fcdd6acd2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名游轮乘客离开奥马哈隔离区，无新增病例。",
+        "update_id": "rt-39367b9fcdd6acd2",
+        "source_url": "",
+        "time": "2026-06-02T14:19:43.000Z"
+      }
+    ],
+    "rt-3493fb7e07ef4682": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "内布拉斯加州长声明汉坦病毒暴露者离开UNMC，无新增病例。",
+        "update_id": "rt-3493fb7e07ef4682",
+        "source_url": "",
+        "time": "2026-06-02T13:44:47.000Z"
+      }
+    ],
+    "rt-0428fa069327aad8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "5名美国汉坦病毒游轮乘客安全返回家乡，无新增病例。",
+        "update_id": "rt-0428fa069327aad8",
+        "source_url": "",
+        "time": "2026-06-02T13:30:05.000Z"
+      }
+    ],
+    "rt-41109e4fc0055589": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "路透报道5名美国乘客从汉坦病毒游轮返回家乡，无新增病例。",
+        "update_id": "rt-41109e4fc0055589",
+        "source_url": "",
+        "time": "2026-06-02T13:23:39.000Z"
+      }
+    ],
+    "rt-afd8bc52fdf68ac6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提到汉坦病毒影响船只，但未提及具体国家或新增病例数，无法提取有效变化量。",
+        "update_id": "rt-afd8bc52fdf68ac6",
+        "source_url": "",
+        "time": "2026-06-02T10:59:00.000Z"
+      }
     ]
   }
 }
