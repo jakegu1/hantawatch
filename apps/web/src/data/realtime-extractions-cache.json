@@ -3709,6 +3709,174 @@
         "source_url": "",
         "time": "2026-06-02T10:59:00.000Z"
       }
+    ],
+    "rt-d67f613cc38f7f99": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "加拿大马尼托巴省卫生官员称自2016年以来无汉坦病毒病例，无新增变化。",
+        "update_id": "rt-d67f613cc38f7f99",
+        "source_url": "",
+        "time": "2026-06-02T19:46:26.000Z"
+      }
+    ],
+    "rt-2289eb62d98193c6": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "加拿大马尼托巴省称汉坦病毒风险仍低，无新增病例。",
+        "update_id": "rt-2289eb62d98193c6",
+        "source_url": "",
+        "time": "2026-06-02T19:28:11.000Z"
+      }
+    ],
+    "rt-a99420607e8eb173": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国内布拉斯加州5名MV Hondius邮轮乘客解除汉坦病毒隔离，无新增病例。",
+        "update_id": "rt-a99420607e8eb173",
+        "source_url": "",
+        "time": "2026-06-02T19:23:00.000Z"
+      }
+    ],
+    "rt-5ef87592fe0fdfdc": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国内布拉斯加州长称邮轮乘客解除隔离为积极进展，无新增病例。",
+        "update_id": "rt-5ef87592fe0fdfdc",
+        "source_url": "",
+        "time": "2026-06-02T19:12:00.000Z"
+      }
+    ],
+    "rt-e35f0b8b0e6ed378": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国俄勒冈州一名接触汉坦病毒的邮轮乘客正在隔离，无新增病例。",
+        "update_id": "rt-e35f0b8b0e6ed378",
+        "source_url": "",
+        "time": "2026-06-02T18:40:00.000Z"
+      }
+    ],
+    "rt-ef3f23fa8dad9e79": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国俄勒冈州居民在邮轮接触汉坦病毒后隔离20余天回家，无新增病例。",
+        "update_id": "rt-ef3f23fa8dad9e79",
+        "source_url": "",
+        "time": "2026-06-02T18:19:00.000Z"
+      }
+    ],
+    "rt-32a7c93fd44b5aae": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国俄勒冈州医生在邮轮汉坦病毒暴发后返回，无新增病例。",
+        "update_id": "rt-32a7c93fd44b5aae",
+        "source_url": "",
+        "time": "2026-06-02T18:15:04.000Z"
+      }
+    ],
+    "rt-b82b6a82d9a56dd5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "美国内布拉斯加州5名前汉坦病毒邮轮乘客选择离开隔离，无新增病例。",
+        "update_id": "rt-b82b6a82d9a56dd5",
+        "source_url": "",
+        "time": "2026-06-02T17:57:00.000Z"
+      }
+    ],
+    "rt-01f4155200a06470": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 1,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "俄勒冈州卫生局监测一名返回的邮轮乘客，无新增确诊或死亡，仅监测状态。",
+        "update_id": "rt-01f4155200a06470",
+        "source_url": "",
+        "time": "2026-06-02T17:11:02.000Z"
+      }
+    ],
+    "rt-99a51718b9084255": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "莫哈维县报告一例汉坦病毒死亡病例，新增死亡1例。",
+        "update_id": "rt-99a51718b9084255",
+        "source_url": "",
+        "time": "2026-06-02T16:18:10.000Z"
+      }
+    ],
+    "rt-a0707cae6ffc2aab": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "报道称邮轮乘客结束隔离回家，未提及具体国家或新增病例数。",
+        "update_id": "rt-a0707cae6ffc2aab",
+        "source_url": "",
+        "time": "2026-06-02T15:32:23.000Z"
+      }
+    ],
+    "rt-f7c0b1c4f0fa2ad6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "报道称邮轮乘客回家，未提及具体国家或新增病例数。",
+        "update_id": "rt-f7c0b1c4f0fa2ad6",
+        "source_url": "",
+        "time": "2026-06-02T13:03:43.000Z"
+      }
     ]
   }
 }
