@@ -1,230 +1,225 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-01T03:43:33.845899+00:00",
+  "__generated_at": "2026-06-03T00:24:52.670332+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-01T03:43:27.256461+00:00",
+  "last_fetched": "2026-06-03T00:24:50.852950+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-6b6eabaa4c3bba71",
-      "time": "2026-05-31T23:57:00.000Z",
-      "title_en": "Hantavirus-hit cruise ship cleared to resume service - CGTN Radio",
-      "body_en": "Hantavirus-hit cruise ship cleared to resume service CGTN Radio",
-      "summary_zh": "汉坦病毒疫情邮轮获准恢复服务。",
+      "id": "rt-3f22930063e93c7d",
+      "time": "2026-06-02T22:49:51.000Z",
+      "title_en": "Province Provides Hantavirus Update - DiscoverWestman",
+      "body_en": "Province Provides Hantavirus Update DiscoverWestman",
+      "summary_zh": "加拿大曼尼托巴省发布汉坦病毒最新情况。",
       "key_facts_zh": [
-        "邮轮",
-        "恢复服务"
+        "加拿大",
+        "曼尼托巴省",
+        "疫情更新"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-081a58260da44c14",
-      "time": "2026-05-31T12:27:00.000Z",
-      "title_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea - The Mirror",
-      "body_en": "Four key checks before infamous hantavirus cruise ship MV Hondius was allowed to finally return to sea The Mirror",
-      "summary_zh": "邮轮MV Hondius经四项检查后获准返航。",
-      "key_facts_zh": [
-        "邮轮",
-        "检查",
-        "返航"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-8f4565d620e95be3",
-      "time": "2026-05-31T08:35:00.000Z",
-      "title_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages - NL Times",
-      "body_en": "MV Hondius fully disinfected after deadly hantavirus outbreak; Cleared for voyages NL Times",
-      "summary_zh": "MV Hondius消毒后获准航行。",
-      "key_facts_zh": [
-        "邮轮",
-        "消毒",
-        "获准"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-383edce9e11b5cdd",
-      "time": "2026-05-31T00:21:00.000Z",
-      "title_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak - Manchester Evening News",
-      "body_en": "MV Hondius cruise ship given all-clear to sail after deadly hantavirus outbreak Manchester Evening News",
-      "summary_zh": "MV Hondius邮轮获准在疫情后航行。",
-      "key_facts_zh": [
-        "邮轮",
-        "获准",
-        "疫情后"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-d31a9d1d0dbcaa35",
-      "time": "2026-05-30T20:47:42.000Z",
-      "title_en": "Hantavirus Quarantine to End for Some US Cruise Passengers - Mint",
-      "body_en": "Hantavirus Quarantine to End for Some US Cruise Passengers Mint",
-      "summary_zh": "部分美国邮轮乘客汉坦病毒隔离将结束。",
+      "id": "rt-2aa9ef2a2976885c",
+      "time": "2026-06-02T22:06:46.000Z",
+      "title_en": "Five U.S. passengers from hantavirus-hit cruise ship depart quarantine in Omaha - KLKN-TV",
+      "body_en": "Five U.S. passengers from hantavirus-hit cruise ship depart quarantine in Omaha KLKN-TV",
+      "summary_zh": "五名美国乘客从汉坦病毒邮轮隔离中离开奥马哈。",
       "key_facts_zh": [
         "美国",
-        "隔离结束",
+        "奥马哈",
+        "5人解除隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-84eea42656c51be0",
+      "time": "2026-06-02T21:55:00.000Z",
+      "title_en": "Oregonian exposed to hantavirus returns home, goes into quarantine - Statesman Journal",
+      "body_en": "Oregonian exposed to hantavirus returns home, goes into quarantine Statesman Journal",
+      "summary_zh": "俄勒冈州一名接触汉坦病毒者回家隔离。",
+      "key_facts_zh": [
+        "俄勒冈州",
+        "接触者",
+        "居家隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e7ec37375dad3418",
+      "time": "2026-06-02T21:49:19.000Z",
+      "title_en": "MV Hondius To Resume Sailing 34 Days After Hantavirus Outbreak Passengers Disembarked - Travel Noire",
+      "body_en": "MV Hondius To Resume Sailing 34 Days After Hantavirus Outbreak Passengers Disembarked Travel Noire",
+      "summary_zh": "MV Hondius 号邮轮在汉坦病毒爆发34天后恢复航行。",
+      "key_facts_zh": [
+        "邮轮",
+        "MV Hondius",
+        "恢复航行"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f118271eee388009",
+      "time": "2026-06-02T21:17:00.000Z",
+      "title_en": "Five Americans from hantavirus ship homebound after Nebraska quarantine - Washington Examiner",
+      "body_en": "Five Americans from hantavirus ship homebound after Nebraska quarantine Washington Examiner",
+      "summary_zh": "五名美国乘客在内布拉斯加隔离后返回家园。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "5人返家"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-5ef87592fe0fdfdc",
+      "time": "2026-06-02T19:12:00.000Z",
+      "title_en": "Nebraska governor: Cruise ship passengers’ release from quarantine facility a ‘positive development’ - The Hill",
+      "body_en": "Nebraska governor: Cruise ship passengers’ release from quarantine facility a ‘positive development’ The Hill",
+      "summary_zh": "内布拉斯加州长称邮轮乘客解除隔离是积极进展。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
         "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-45eb886ad24e0b53",
-      "time": "2026-05-30T18:43:32.000Z",
-      "title_en": "Dutch health officials clear hantavirus ship to sail again - CTV News",
-      "body_en": "Dutch health officials clear hantavirus ship to sail again CTV News",
-      "summary_zh": "荷兰卫生官员批准汉坦病毒邮轮复航。",
+      "id": "rt-e35f0b8b0e6ed378",
+      "time": "2026-06-02T18:40:00.000Z",
+      "title_en": "Cruise ship passenger exposed to hantavirus now under quarantine in Oregon - KPTV",
+      "body_en": "Cruise ship passenger exposed to hantavirus now under quarantine in Oregon KPTV",
+      "summary_zh": "俄勒冈州一邮轮乘客因接触汉坦病毒被隔离。",
       "key_facts_zh": [
-        "荷兰",
-        "卫生官员",
-        "复航"
+        "美国",
+        "俄勒冈",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-0bbfbe1b5f85e288",
-      "time": "2026-05-30T17:00:01.000Z",
-      "title_en": "Dispute grows over home monitoring of hantavirus passengers - The Washington Post",
-      "body_en": "Dispute grows over home monitoring of hantavirus passengers The Washington Post",
-      "summary_zh": "华盛顿邮报报道汉坦病毒乘客居家监测争议。",
+      "id": "rt-ef3f23fa8dad9e79",
+      "time": "2026-06-02T18:19:00.000Z",
+      "title_en": "Oregon resident returns home after over 20 days in quarantine following hantavirus exposure on cruise ship - KGW",
+      "body_en": "Oregon resident returns home after over 20 days in quarantine following hantavirus exposure on cruise ship KGW",
+      "summary_zh": "俄勒冈居民在邮轮接触汉坦病毒后隔离20余天返家。",
       "key_facts_zh": [
         "美国",
-        "居家监测",
-        "争议"
+        "俄勒冈",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-714d869ba911644a",
-      "time": "2026-05-30T11:33:45.000Z",
-      "title_en": "Hantavirus case reported in Arapahoe County, Colorado - Outbreak News Today",
-      "body_en": "Hantavirus case reported in Arapahoe County, Colorado Outbreak News Today",
-      "summary_zh": "美国科罗拉多州阿拉帕霍县报告一例汉坦病毒病例。",
+      "id": "rt-4df95836a9d330bb",
+      "time": "2026-06-02T18:01:09.000Z",
+      "title_en": "Oregon Health Authority monitors returning MV Hondius passenger after hantavirus outbreak - KATU",
+      "body_en": "Oregon Health Authority monitors returning MV Hondius passenger after hantavirus outbreak KATU",
+      "summary_zh": "俄勒冈卫生局监测MV Hondius邮轮返程乘客。",
       "key_facts_zh": [
         "美国",
-        "科罗拉多",
-        "新增 1 例"
+        "俄勒冈",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-7e01802cd15e3c3e",
-      "time": "2026-05-30T04:25:11.000Z",
-      "title_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week - ABC7 Eyewitness News",
-      "body_en": "2 quarantined cruise ship passengers exposed to hantavirus expected to return to New York next week ABC7 Eyewitness News",
-      "summary_zh": "两名隔离邮轮乘客下周将返回纽约。",
+      "id": "rt-b82b6a82d9a56dd5",
+      "time": "2026-06-02T17:57:00.000Z",
+      "title_en": "Five former hantavirus cruise passengers choose to leave UNMC quarantine in Nebraska - KETV",
+      "body_en": "Five former hantavirus cruise passengers choose to leave UNMC quarantine in Nebraska KETV",
+      "summary_zh": "五名前汉坦病毒邮轮乘客选择离开内布拉斯加医学中心隔离。",
       "key_facts_zh": [
         "美国",
+        "内布拉斯加",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c5bec035cb9e78ea",
+      "time": "2026-06-02T17:45:23.000Z",
+      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
+      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
+      "summary_zh": "美国 CDC 通报邮轮汉坦病毒疫情现状。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "邮轮疫情"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-98717f4d8de26e48",
+      "time": "2026-06-02T17:10:23.000Z",
+      "title_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility - Scripps News",
+      "body_en": "Cruise passengers isolated after hantavirus outbreak allowed to leave quarantine facility Scripps News",
+      "summary_zh": "邮轮汉坦病毒疫情后隔离乘客获准离开隔离设施。",
+      "key_facts_zh": [
         "邮轮",
-        "2 人"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-9df6d347fb5e31e8",
-      "time": "2026-05-29T23:36:55.000Z",
-      "title_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes - FOX 5 New York",
-      "body_en": "2 New Yorkers being monitored for hantavirus will finish quarantine in their homes FOX 5 New York",
-      "summary_zh": "两名纽约汉坦病毒监测者将居家完成隔离。",
+      "id": "rt-99a51718b9084255",
+      "time": "2026-06-02T16:18:10.000Z",
+      "title_en": "Hantavirus death reported in Mohave County - KTAR News 92.3 FM",
+      "body_en": "Hantavirus death reported in Mohave County KTAR News 92.3 FM",
+      "summary_zh": "美国莫哈维县报告汉坦病毒死亡病例。",
       "key_facts_zh": [
         "美国",
-        "纽约",
-        "2 人"
+        "死亡病例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-ce276908eeedb46a",
-      "time": "2026-05-29T21:14:11.000Z",
-      "title_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home - The New York Times",
-      "body_en": "Surveillance Ordered for Hantavirus Ship Passengers Who Go Home The New York Times",
-      "summary_zh": "纽约时报报道汉坦病毒邮轮乘客回家后需接受监测。",
+      "id": "rt-0ed15f5d23693d7b",
+      "time": "2026-06-02T15:40:33.000Z",
+      "title_en": "France confirms hantavirus in cruise outbreak is not new or more transmissible - Scripps News",
+      "body_en": "France confirms hantavirus in cruise outbreak is not new or more transmissible Scripps News",
+      "summary_zh": "法国确认邮轮疫情中的汉坦病毒并非新型或更具传染性。",
       "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "乘客"
+        "法国",
+        "病毒特性"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-6040f94c70c29cd0",
-      "time": "2026-05-29T19:09:00.000Z",
-      "title_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine - CIDRAP",
-      "body_en": "Experimental hantavirus drug ships to Europe as US passengers offered home quarantine CIDRAP",
-      "summary_zh": "实验性汉坦病毒药物运往欧洲，美国乘客可居家隔离。",
+      "id": "rt-63cc83110dc02788",
+      "time": "2026-06-02T15:31:24.000Z",
+      "title_en": "5 Americans released from quarantine after cruise ship hantavirus exposure - Scripps News",
+      "body_en": "5 Americans released from quarantine after cruise ship hantavirus exposure Scripps News",
+      "summary_zh": "5名美国人在邮轮汉坦病毒暴露后解除隔离。",
       "key_facts_zh": [
         "美国",
-        "欧洲",
-        "实验药物"
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-8ab3b1d1357f81a2",
-      "time": "2026-05-29T16:15:00.000Z",
-      "title_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why - The Independent",
-      "body_en": "The US hantavirus cruise passengers may soon go home ahead of the 42-day symptom period. Here’s why The Independent",
-      "summary_zh": "美国汉坦病毒邮轮乘客可能提前结束隔离回家。",
+      "id": "rt-027a239b6d9061a0",
+      "time": "2026-06-02T14:57:00.000Z",
+      "title_en": "5 Americans exposed to hantavirus return home after weeks in quarantine - USA Today",
+      "body_en": "5 Americans exposed to hantavirus return home after weeks in quarantine USA Today",
+      "summary_zh": "5名接触汉坦病毒的美国人隔离数周后返家。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "隔离"
+        "5人返家"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
-      "id": "rt-447af0cdbdb213a9",
-      "time": "2026-05-29T13:23:00.000Z",
-      "title_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) - Forbes",
-      "body_en": "Exposed Hantavirus Patients Could Go Home—If They Agree To 24/7 Surveillance (Latest Updates) Forbes",
-      "summary_zh": "暴露汉坦病毒患者若同意24/7监控可回家。",
+      "id": "rt-65e137241b4a0b1c",
+      "time": "2026-06-02T14:40:56.000Z",
+      "title_en": "Five quarantined cruise passengers facing hantavirus risk head home from Nebraska; 13 remain - Nebraska Examiner",
+      "body_en": "Five quarantined cruise passengers facing hantavirus risk head home from Nebraska; 13 remain Nebraska Examiner",
+      "summary_zh": "内布拉斯加州5名隔离邮轮乘客返家，13人仍留观。",
       "key_facts_zh": [
-        "美国",
-        "患者",
-        "监控"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7e5edd33411d1c38",
-      "time": "2026-05-29T03:27:00.000Z",
-      "title_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch - CNN",
-      "body_en": "Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "暴露汉坦病毒的邮轮乘客或可回家但需24/7监控。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "监控"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-a7d07c3fdc6a1471",
-      "time": "2026-05-28T20:32:00.000Z",
-      "title_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) - Forbes",
-      "body_en": "Experimental Hantavirus Treatment Could Be Used On Sick Cruise Ship Passengers (Latest Updates) Forbes",
-      "summary_zh": "实验性汉坦病毒治疗可能用于患病邮轮乘客。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "实验性治疗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-216441d1e23804e4",
-      "time": "2026-05-28T15:22:00.000Z",
-      "title_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 - The Independent",
-      "body_en": "Australia extends quarantine for hantavirus cruise ship passengers until June 23 The Independent",
-      "summary_zh": "澳大利亚将汉坦病毒邮轮乘客隔离期延长至6月23日。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "邮轮",
-        "隔离延长"
+        "内布拉斯加",
+        "5人返家",
+        "13人留观"
       ],
       "signal_strength": "high"
     }
