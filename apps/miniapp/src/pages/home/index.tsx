@@ -6,21 +6,7 @@ import { SEROTYPES } from '@hantawatch/shared';
 import { filterOfficialTimelineCases } from '@hantawatch/shared/timeline';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
-import {
-  activeClusters as baselineClusters,
-  arcgisCases,
-  baseHpi,
-  hpi7DayHistory,
-  todayBrief,
-  chinaHfrsHistory,
-  chinaHfrsMonthly2026,
-  dataMeta,
-  hondiusImports,
-  hondiusImportSummaries,
-  officialAssessments,
-  outbreakStatus,
-  realtimeFeed,
-} from '@/lib/data';
+import { useAppData, useRefreshAppData } from '@/lib/data-provider';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import { buildRiskSnapshot } from '@/lib/risk-snapshot';
 import { fetchClusters, fetchHondiusImports, trackPageView } from '@/utils/api';
@@ -28,7 +14,6 @@ import type { MvHondiusImport } from '@hantawatch/shared/types';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
-import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { FeedLegend } from '@/components/feed-legend';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
@@ -65,16 +50,34 @@ const OTHER_WATCHLIST: { emoji: string; nameZh: string; note: string }[] = [
 ];
 
 export default function HomePage() {
+  const {
+    activeClusters: baselineClusters,
+    arcgisCases,
+    baseHpi,
+    hpi7DayHistory,
+    todayBrief,
+    chinaHfrsHistory,
+    chinaHfrsMonthly2026,
+    dataMeta,
+    hondiusImports,
+    hondiusImportSummaries,
+    officialAssessments,
+    outbreakStatus,
+    realtimeFeed,
+    realtimeSituation,
+  } = useAppData();
+  const refreshAppData = useRefreshAppData();
+
   // Start from the JSON baked into the bundle (instant paint, no network
   // dependency). After mount, optionally refresh from /api/clusters so
   // editorial overrides (saved via the web /admin queue) take effect.
   const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(baselineClusters);
   const liveRecentCases = useLiveRecentCases();
 
-  // 口径 B intake values for the DailyBriefBanner — derived from the bundled
-  // realtime-situation snapshot. Miniapp can't refetch arbitrary URLs at
-  // runtime, so the data is whatever the latest deploy embedded.
-  const situationSnapshot = useMemo(() => loadRealtimeSituation(), []);
+  // 口径 B intake values for the DailyBriefBanner — derived from the live
+  // realtime-situation snapshot. DataProvider refreshes it at runtime from
+  // /api/miniapp-snapshot; falls back to the build-time bundle until then.
+  const situationSnapshot = realtimeSituation;
   const intakeStats = useMemo(() => {
     const head = situationSnapshot.headline as Record<string, unknown>;
     const intake = (situationSnapshot as { intake?: { last24hCount?: number; highConfidencePicks?: number } }).intake;
@@ -165,7 +168,8 @@ export default function HomePage() {
         if (payload && Array.isArray(payload.imports)) setLiveImports(payload.imports);
       })
       .catch(() => {});
-    Promise.all([p1, p2]).then(() => Taro.stopPullDownRefresh());
+    const p3 = refreshAppData();
+    Promise.all([p1, p2, p3]).then(() => Taro.stopPullDownRefresh());
   });
 
   // Compute the nearest import + import-aware HPI frontend-side so cityZh /
@@ -175,16 +179,19 @@ export default function HomePage() {
   const mergedHondiusImports = liveImports ?? hondiusImports;
   const liveRiskSnapshot = useMemo(
     () => buildRiskSnapshot(baseHpi, mergedHondiusImports),
-    [mergedHondiusImports],
+    [baseHpi, mergedHondiusImports],
   );
   const nearestImport = liveRiskSnapshot.nearestImport;
   const hpi = liveRiskSnapshot.hpi;
   const dynamicHpi7DayHistory = useMemo(() => {
     if (hpi7DayHistory.length === 0) return hpi7DayHistory;
-    return hpi7DayHistory.map((point, index) =>
-      index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
-    );
-  }, [hpi.total]);
+    const importBump = hpi.total - baseHpi.total;
+    if (importBump === 0) return hpi7DayHistory;
+    return hpi7DayHistory.map((point) => ({
+      ...point,
+      value: Math.max(0, Math.min(100, point.value + importBump)),
+    }));
+  }, [hpi.total, baseHpi.total]);
 
   const nearestAndes = useMemo(() => findNearestAndes(liveClusters), [liveClusters]);
   const cluster = nearestAndes.nearest ?? liveClusters[0];
@@ -498,7 +505,7 @@ export default function HomePage() {
 
       </View>
 
-      <RealtimeSituationSection data={loadRealtimeSituation()} />
+      <RealtimeSituationSection data={realtimeSituation} />
 
       {/* ============================================================ */}
       {/* SECTION 2 · 各血清型关注等级                                   */}

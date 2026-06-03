@@ -3,12 +3,7 @@ import { View, Text } from '@tarojs/components';
 import { useLoad } from '@tarojs/taro';
 import { SEROTYPES } from '@hantawatch/shared';
 import { trackPageView } from '@/utils/api';
-import {
-  chinaHfrsHistory,
-  currentHpi,
-  recentCases,
-  dataMeta,
-} from '@/lib/data';
+import { useAppData } from '@/lib/data-provider';
 import { TrendBar } from '@/components/trend-bar';
 import { RecentCasesList } from '@/components/recent-cases-list';
 
@@ -16,6 +11,8 @@ export default function DataPage() {
   useLoad(() => {
     trackPageView('pages/data/index');
   });
+
+  const { chinaHfrsHistory, currentHpi, recentCases, dataMeta } = useAppData();
 
   const hpi = currentHpi;
   const updatedAt = dataMeta.lastCollectedAtCn

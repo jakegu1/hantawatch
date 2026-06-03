@@ -1,12 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { sortRecentCasesByDate } from '@hantawatch/shared/timeline';
 import { fetchNewsEntries } from '@/utils/api';
 import type { ManualNewsEntryPayload } from '@/utils/api';
-import { recentCases, type RecentCase } from '@/lib/data';
+import type { RecentCase } from '@/lib/data';
+import { useAppData } from '@/lib/data-provider';
 
-/** Merge bundled JSON with admin overlay — mirrors apps/web use-live-recent-cases.ts */
+interface NewsOverlay {
+  additions: RecentCase[];
+  hiddenIds: string[];
+}
+
+/** Merge the live (snapshot) recentCases with the /api/news-entries admin
+ *  overlay — mirrors apps/web use-live-recent-cases.ts. */
 export function useLiveRecentCases(): RecentCase[] {
-  const [live, setLive] = useState<RecentCase[]>(recentCases);
+  const { recentCases } = useAppData();
+  const [overlay, setOverlay] = useState<NewsOverlay | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -15,7 +23,10 @@ export function useLiveRecentCases(): RecentCase[] {
         if (cancelled) return;
         const hiddenIds = Array.isArray(data.hiddenIds) ? data.hiddenIds : [];
         const rawAdditions = Array.isArray(data.additions) ? data.additions : [];
-        if (hiddenIds.length === 0 && rawAdditions.length === 0) return;
+        if (hiddenIds.length === 0 && rawAdditions.length === 0) {
+          setOverlay(null);
+          return;
+        }
 
         const additions: RecentCase[] = rawAdditions.map((a: ManualNewsEntryPayload) => ({
           id: a.id,
@@ -36,13 +47,7 @@ export function useLiveRecentCases(): RecentCase[] {
           scope: a.scope ?? 'international',
         }));
 
-        const hideSet = new Set(hiddenIds);
-        setLive(
-          sortRecentCasesByDate([
-            ...recentCases.filter((c) => !hideSet.has(c.id)),
-            ...additions,
-          ]),
-        );
+        setOverlay({ additions, hiddenIds });
       })
       .catch(() => {});
     return () => {
@@ -50,5 +55,12 @@ export function useLiveRecentCases(): RecentCase[] {
     };
   }, []);
 
-  return live;
+  return useMemo(() => {
+    if (!overlay) return recentCases;
+    const hideSet = new Set(overlay.hiddenIds);
+    return sortRecentCasesByDate([
+      ...recentCases.filter((c) => !hideSet.has(c.id)),
+      ...overlay.additions,
+    ]);
+  }, [recentCases, overlay]);
 }

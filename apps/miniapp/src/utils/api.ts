@@ -1,5 +1,6 @@
 import Taro from '@tarojs/taro';
 import type { HpiResult, ActiveCluster, CaseRecord, MvHondiusImport, SerotypeId } from '@hantawatch/shared/types';
+import type { RawBundle } from '@/lib/data';
 
 // Use the canonical www host directly. The apex bingduguancha.com 301-redirects
 // to www, and WeChat wx.request + the request 合法域名 whitelist are fragile with
@@ -50,6 +51,15 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 /** Fetch current HPI score */
 export function fetchHpi(): Promise<HpiResult> {
   return request<HpiResult>('/hpi');
+}
+
+/**
+ * Fetch the consolidated collector snapshot — every bundled JSON, fresh from
+ * the latest CI commit. The DataProvider re-derives the whole app view-model
+ * from this so a published miniapp tracks daily updates without a republish.
+ */
+export function fetchSnapshot(): Promise<RawBundle> {
+  return request<RawBundle>('/miniapp-snapshot');
 }
 
 /** Fetch active clusters */

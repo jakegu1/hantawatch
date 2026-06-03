@@ -2,15 +2,8 @@ import './index.scss';
 import { View, Text, Input } from '@tarojs/components';
 import { useLoad } from '@tarojs/taro';
 import { useMemo, useState } from 'react';
-import {
-  CONTINENT_LABEL_ZH,
-  CONTINENT_ORDER,
-  countryViews,
-  countryViewsByContinent,
-  hondiusImports,
-  hondiusOutbreakName,
-  searchCountries,
-} from '@/lib/data';
+import { CONTINENT_LABEL_ZH, CONTINENT_ORDER } from '@/lib/data';
+import { useAppData } from '@/lib/data-provider';
 import type { CountryView, MvHondiusImport } from '@hantawatch/shared/types';
 import { trackPageView } from '@/utils/api';
 
@@ -258,6 +251,7 @@ function CountryCard({ c }: { c: CountryView }) {
 }
 
 function ImportsBanner() {
+  const { hondiusImports, hondiusOutbreakName, countryViews } = useAppData();
   if (hondiusImports.length === 0) return null;
   const order: Record<MvHondiusImport['status'], number> = {
     imports_confirmed: 0,
@@ -323,8 +317,9 @@ export default function CountriesPage() {
     trackPageView('pages/countries/index');
   });
 
+  const { searchCountries, countryViewsByContinent } = useAppData();
   const [query, setQuery] = useState('');
-  const searchResults = useMemo(() => searchCountries(query), [query]);
+  const searchResults = useMemo(() => searchCountries(query), [query, searchCountries]);
   const isSearching = query.trim().length > 0;
 
   const continentSummary = useMemo(() => {
@@ -338,7 +333,7 @@ export default function CountriesPage() {
       };
     }
     return out;
-  }, []);
+  }, [countryViewsByContinent]);
 
   return (
     <View className="page">

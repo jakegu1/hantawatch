@@ -6,19 +6,15 @@ import {
   buildOutbreakSummary,
   buildWhoTimeline,
 } from '@hantawatch/shared/mv-hondius-event';
-import {
-  activeClusters,
-  dataMeta,
-  hondiusImports,
-  hondiusOutbreakName,
-  recentCases,
-} from '@/lib/data';
+import { useAppData } from '@/lib/data-provider';
 import { trackPageView } from '@/utils/api';
 
 export default function MvHondiusEventPage() {
   useLoad(() => {
     trackPageView('pages/events/mv-hondius/index');
   });
+
+  const { activeClusters, dataMeta, hondiusImports, hondiusOutbreakName, recentCases } = useAppData();
 
   const cluster = activeClusters.find((c) => c.id === 'mv-hondius-2026') ?? activeClusters[0];
   const whoTimeline = buildWhoTimeline(recentCases);

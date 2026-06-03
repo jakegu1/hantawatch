@@ -175,10 +175,13 @@ export default function HomePage() {
   const displayedDistanceKm = liveRiskSnapshot.displayedDistanceKm ?? cluster.distanceFromChinaKm;
   const dynamicHpi7DayHistory = useMemo(() => {
     if (hpi7DayHistory.length === 0) return hpi7DayHistory;
-    return hpi7DayHistory.map((point, index) =>
-      index === hpi7DayHistory.length - 1 ? { ...point, value: hpi.total } : point,
-    );
-  }, [hpi.total]);
+    const importBump = hpi.total - baseHpi.total;
+    if (importBump === 0) return hpi7DayHistory;
+    return hpi7DayHistory.map((point) => ({
+      ...point,
+      value: Math.max(0, Math.min(100, point.value + importBump)),
+    }));
+  }, [hpi.total, baseHpi.total]);
   const briefContent = useMemo(
     () =>
       buildBriefSectionContent({
