@@ -4227,6 +4227,48 @@
         "source_url": "",
         "time": "2026-06-02T13:00:03.000Z"
       }
+    ],
+    "rt-adbb60ceebbeaddc": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒游轮乘客被监控，但未明确国家及具体数字，无法提取变化量。",
+        "update_id": "rt-adbb60ceebbeaddc",
+        "source_url": "",
+        "time": "2026-06-03T20:41:56.000Z"
+      }
+    ],
+    "rt-a5880e3a57993c5a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "五名美国人接触汉坦病毒后解除隔离，但未提及新增病例或死亡，delta均为0。",
+        "update_id": "rt-a5880e3a57993c5a",
+        "source_url": "",
+        "time": "2026-06-02T22:01:16.000Z"
+      }
+    ],
+    "rt-83b79d2cd3bf9012": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-01",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州居民死于汉坦病毒，新增1例死亡，但未提新增确诊病例。",
+        "update_id": "rt-83b79d2cd3bf9012",
+        "source_url": "",
+        "time": "2026-06-01T22:50:38.000Z"
+      }
     ]
   }
 }
