@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-03T10:54:55.898100+00:00",
+  "__generated_at": "2026-06-03T11:00:50.069816+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-03T10:54:44.506331+00:00",
+  "last_fetched": "2026-06-03T11:00:48.903345+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -12,11 +12,11 @@
       "id": "rt-c33f592ea8cf8fc9",
       "time": "2026-06-03T07:00:00Z",
       "title_en": "2 Spore residents who were on board MV Hondius still hantavirus - free , allowed to quarantine at home",
-      "summary_zh": "两名斯波坎居民曾乘MV Hondius邮轮，汉坦病毒检测阴性，获准居家隔离。",
+      "summary_zh": "两名曾乘坐MV Hondius的斯波坎居民汉坦病毒检测阴性，获准居家隔离。",
       "key_facts_zh": [
         "斯波坎",
-        "邮轮",
-        "阴性"
+        "MV Hondius",
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
@@ -40,7 +40,8 @@
       "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡病例。",
       "key_facts_zh": [
         "亚利桑那",
-        "首例死亡"
+        "首例死亡",
+        "2026"
       ],
       "signal_strength": "high"
     },
@@ -48,7 +49,7 @@
       "id": "rt-206544f5409666f7",
       "time": "2026-06-03T04:45:00Z",
       "title_en": "5 Quarantined Cruise Passengers Facing Hantavirus Risk Head Home From Nebraska ; 13 Remain",
-      "summary_zh": "5名隔离邮轮乘客面临汉坦病毒风险，从内布拉斯加返家，13人仍留。",
+      "summary_zh": "5名隔离邮轮乘客离开内布拉斯加州回家，13人仍留。",
       "key_facts_zh": [
         "内布拉斯加",
         "邮轮",
@@ -64,7 +65,8 @@
       "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡病例。",
       "key_facts_zh": [
         "亚利桑那",
-        "首例死亡"
+        "首例死亡",
+        "2026"
       ],
       "signal_strength": "high"
     },
@@ -89,7 +91,7 @@
       "key_facts_zh": [
         "美国",
         "俄勒冈",
-        "医生隔离"
+        "医生"
       ],
       "signal_strength": "high"
     },
@@ -102,7 +104,7 @@
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "五人离开"
+        "5人"
       ],
       "signal_strength": "high"
     },
@@ -115,7 +117,7 @@
       "key_facts_zh": [
         "美国",
         "俄勒冈",
-        "接触者隔离"
+        "接触者"
       ],
       "signal_strength": "high"
     },
@@ -123,11 +125,11 @@
       "id": "rt-37fa224de6b2b39a",
       "time": "2026-06-03T00:30:00Z",
       "title_en": "Five U . S . passengers from hantavirus - hit cruise ship depart quarantine in Omaha",
-      "summary_zh": "五名美国乘客从汉坦病毒邮轮隔离区离开。",
+      "summary_zh": "五名美国邮轮汉坦病毒乘客离开奥马哈隔离区。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "五人离开"
+        "奥马哈",
+        "5人"
       ],
       "signal_strength": "high"
     },
@@ -135,11 +137,11 @@
       "id": "rt-a77c53bb41a263f4",
       "time": "2026-06-02T23:45:00Z",
       "title_en": "Arizona hantavirus case known as Sin Nombre kills 1",
-      "summary_zh": "亚利桑那州一例辛诺柏汉坦病毒病例致死。",
+      "summary_zh": "亚利桑那州一例辛诺柏汉坦病毒病例致1人死亡。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
-        "死亡1例"
+        "1例死亡"
       ],
       "signal_strength": "high"
     },
@@ -147,11 +149,11 @@
       "id": "rt-28e2e8f27aa97486",
       "time": "2026-06-02T23:45:00Z",
       "title_en": "Cruise ship passenger exposed to hantavirus now under quarantine in Oregon",
-      "summary_zh": "俄勒冈州一名邮轮乘客接触汉坦病毒后隔离。",
+      "summary_zh": "一名接触汉坦病毒的邮轮乘客在俄勒冈州隔离。",
       "key_facts_zh": [
         "美国",
         "俄勒冈",
-        "乘客隔离"
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -173,10 +175,10 @@
       "time": "2026-06-02T22:44:31.000Z",
       "title_en": "Dr. Stephen Kornfeld could be back in Oregon after hantavirus outbreak on cruise ship - KTVZ",
       "body_en": "Dr. Stephen Kornfeld could be back in Oregon after hantavirus outbreak on cruise ship KTVZ",
-      "summary_zh": "邮轮汉坦疫情后，医生可能返回俄勒冈州。",
+      "summary_zh": "医生可能从邮轮汉坦疫情后返回俄勒冈州。",
       "key_facts_zh": [
+        "美国",
         "邮轮",
-        "俄勒冈州",
         "医生返回"
       ],
       "signal_strength": "medium"
@@ -185,7 +187,7 @@
       "id": "rt-828877c516bd64bd",
       "time": "2026-06-02T22:15:00Z",
       "title_en": "Oregon Health Authority monitors returning MV Hondius passenger after hantavirus outbreak",
-      "summary_zh": "俄勒冈州卫生局监测邮轮汉坦疫情返程乘客。",
+      "summary_zh": "俄勒冈州卫生局监测邮轮汉坦疫情后返程乘客。",
       "key_facts_zh": [
         "美国",
         "俄勒冈州",
@@ -198,11 +200,11 @@
       "time": "2026-06-02T22:10:09.000Z",
       "title_en": "Five U.S. passengers from hantavirus-hit cruise ship depart quarantine in Omaha - KLKN-TV",
       "body_en": "Five U.S. passengers from hantavirus-hit cruise ship depart quarantine in Omaha KLKN-TV",
-      "summary_zh": "五名美国邮轮乘客结束内布拉斯加州隔离。",
+      "summary_zh": "五名美国邮轮乘客结束在奥马哈的隔离。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "结束隔离"
+        "奥马哈",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -211,11 +213,11 @@
       "time": "2026-06-02T21:17:00.000Z",
       "title_en": "Five Americans from hantavirus ship homebound after Nebraska quarantine - Washington Examiner",
       "body_en": "Five Americans from hantavirus ship homebound after Nebraska quarantine Washington Examiner",
-      "summary_zh": "五名美国乘客结束内布拉斯加隔离后返家。",
+      "summary_zh": "五名美国乘客结束内布拉斯加州隔离后返家。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "返家"
+        "隔离结束"
       ],
       "signal_strength": "high"
     }
