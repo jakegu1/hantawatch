@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-03T16:23:06.279169+00:00",
+  "__generated_at": "2026-06-03T16:43:51.492334+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-03T16:23:04.729323+00:00",
+  "last_fetched": "2026-06-03T16:43:42.423205+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -52,11 +52,11 @@
       "time": "2026-06-03T01:44:00.000Z",
       "title_en": "Five people have left hantavirus quarantine facility in Nebraska - The Washington Post",
       "body_en": "Five people have left hantavirus quarantine facility in Nebraska The Washington Post",
-      "summary_zh": "美国内布拉斯加州五人离开汉坦病毒隔离设施。",
+      "summary_zh": "美国内布拉斯加州汉坦病毒隔离设施中五人已离开。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "5人离开隔离"
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-06-03T00:39:00.000Z",
       "title_en": "Oregonian exposed to hantavirus returns home, goes into quarantine - Statesman Journal",
       "body_en": "Oregonian exposed to hantavirus returns home, goes into quarantine Statesman Journal",
-      "summary_zh": "美国俄勒冈州一接触汉坦病毒者回家隔离。",
+      "summary_zh": "美国俄勒冈州一名接触汉坦病毒者返家后隔离。",
       "key_facts_zh": [
         "美国",
         "俄勒冈",
@@ -81,7 +81,7 @@
       "summary_zh": "加拿大一省发布汉坦病毒最新情况。",
       "key_facts_zh": [
         "加拿大",
-        "省级更新"
+        "省级通报"
       ],
       "signal_strength": "medium"
     },
@@ -103,11 +103,11 @@
       "time": "2026-06-02T21:41:00.000Z",
       "title_en": "5 Americans exposed to hantavirus on a cruise ship are leaving quarantine - WUSA9",
       "body_en": "5 Americans exposed to hantavirus on a cruise ship are leaving quarantine WUSA9",
-      "summary_zh": "5名美国邮轮接触者结束隔离。",
+      "summary_zh": "5名美国邮轮汉坦病毒接触者结束隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "结束隔离"
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -116,7 +116,7 @@
       "time": "2026-06-02T20:30:00.000Z",
       "title_en": "Manitoba Hantavirus not the same as the cruise ship strain - Winnipeg Sun",
       "body_en": "Manitoba Hantavirus not the same as the cruise ship strain Winnipeg Sun",
-      "summary_zh": "马尼托巴汉坦病毒与邮轮毒株不同。",
+      "summary_zh": "马尼托巴省汉坦病毒与邮轮毒株不同。",
       "key_facts_zh": [
         "加拿大",
         "马尼托巴",
@@ -129,11 +129,11 @@
       "time": "2026-06-02T19:46:26.000Z",
       "title_en": "No cases of hantavirus in Manitoba since 2016: health officials say - CityNews Winnipeg",
       "body_en": "No cases of hantavirus in Manitoba since 2016: health officials say CityNews Winnipeg",
-      "summary_zh": "马尼托巴自2016年无汉坦病例。",
+      "summary_zh": "马尼托巴省卫生官员称2016年以来无汉坦病例。",
       "key_facts_zh": [
         "加拿大",
         "马尼托巴",
-        "无病例"
+        "2016年至今无病例"
       ],
       "signal_strength": "high"
     },
@@ -142,7 +142,7 @@
       "time": "2026-06-02T19:28:11.000Z",
       "title_en": "Province says risk of hantavirus in Manitoba remains low - Q Country 91.5FM",
       "body_en": "Province says risk of hantavirus in Manitoba remains low Q Country 91.5FM",
-      "summary_zh": "马尼托巴省称汉坦风险仍低。",
+      "summary_zh": "马尼托巴省称汉坦病毒风险仍低。",
       "key_facts_zh": [
         "加拿大",
         "马尼托巴",
@@ -151,11 +151,24 @@
       "signal_strength": "medium"
     },
     {
+      "id": "rt-e35f0b8b0e6ed378",
+      "time": "2026-06-02T18:40:00.000Z",
+      "title_en": "Cruise ship passenger exposed to hantavirus now under quarantine in Oregon - KPTV",
+      "body_en": "Cruise ship passenger exposed to hantavirus now under quarantine in Oregon KPTV",
+      "summary_zh": "俄勒冈州一名邮轮汉坦病毒接触者隔离。",
+      "key_facts_zh": [
+        "美国",
+        "俄勒冈",
+        "邮轮接触者隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-0ed15f5d23693d7b",
       "time": "2026-06-02T15:40:33.000Z",
       "title_en": "France confirms hantavirus in cruise outbreak is not new or more transmissible - Scripps News",
       "body_en": "France confirms hantavirus in cruise outbreak is not new or more transmissible Scripps News",
-      "summary_zh": "法国确认邮轮汉坦病毒非新型。",
+      "summary_zh": "法国确认邮轮汉坦病毒并非新型或更易传播。",
       "key_facts_zh": [
         "法国",
         "邮轮",
@@ -168,7 +181,7 @@
       "time": "2026-06-02T14:57:00.000Z",
       "title_en": "5 Americans exposed to hantavirus return home after weeks in quarantine - USA Today",
       "body_en": "5 Americans exposed to hantavirus return home after weeks in quarantine USA Today",
-      "summary_zh": "5名美国人接触汉坦病毒后结束隔离回家。",
+      "summary_zh": "5名美国汉坦病毒接触者结束隔离返家。",
       "key_facts_zh": [
         "美国",
         "5人",
@@ -194,11 +207,11 @@
       "time": "2026-06-02T13:00:03.000Z",
       "title_en": "Five US passengers from hantavirus-hit ship return to home states - ThePrint",
       "body_en": "Five US passengers from hantavirus-hit ship return to home states ThePrint",
-      "summary_zh": "5名美国乘客从汉坦病毒邮轮返回家乡。",
+      "summary_zh": "5名美国乘客从汉坦病毒邮轮返回原籍州。",
       "key_facts_zh": [
         "美国",
         "5人",
-        "返回家乡"
+        "返回原籍"
       ],
       "signal_strength": "high"
     },

@@ -4157,6 +4157,76 @@
         "source_url": "",
         "time": "2026-06-02T22:15:00Z"
       }
+    ],
+    "rt-5107cddfa2b83190": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-03",
+        "confidence": "high",
+        "reasoning_zh": "福布斯报道亚利桑那州1例死亡，来源可靠，数字明确。",
+        "update_id": "rt-5107cddfa2b83190",
+        "source_url": "",
+        "time": "2026-06-03T14:05:07.000Z"
+      }
+    ],
+    "rt-2ad83fdb7519a1ab": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-03",
+        "confidence": "high",
+        "reasoning_zh": "AZ Family报道亚利桑那州2026年首例汉坦病毒死亡，数字明确。",
+        "update_id": "rt-2ad83fdb7519a1ab",
+        "source_url": "",
+        "time": "2026-06-03T04:33:00.000Z"
+      }
+    ],
+    "rt-e6e607ca9d1d892a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-03",
+        "confidence": "high",
+        "reasoning_zh": "WDBJ7报道亚利桑那州2026年首例死亡，数字明确。",
+        "update_id": "rt-e6e607ca9d1d892a",
+        "source_url": "",
+        "time": "2026-06-03T04:32:00.000Z"
+      }
+    ],
+    "rt-c7fe95f7a72751bb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "WOWT报道5名邮轮乘客离开奥马哈隔离区，无新增病例或死亡。",
+        "update_id": "rt-c7fe95f7a72751bb",
+        "source_url": "",
+        "time": "2026-06-02T13:50:00.000Z"
+      }
+    ],
+    "rt-07ba16e0abf84a2e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "ThePrint报道5名美国乘客从受汉坦病毒影响的邮轮返回家乡，无新增病例或死亡。",
+        "update_id": "rt-07ba16e0abf84a2e",
+        "source_url": "",
+        "time": "2026-06-02T13:00:03.000Z"
+      }
     ]
   }
 }
