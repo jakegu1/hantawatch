@@ -3877,6 +3877,160 @@
         "source_url": "",
         "time": "2026-06-02T13:03:43.000Z"
       }
+    ],
+    "rt-173f30d1ef1eded8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "内布拉斯加州5人离开汉坦病毒隔离设施，无新增病例数字。",
+        "update_id": "rt-173f30d1ef1eded8",
+        "source_url": "",
+        "time": "2026-06-03T01:44:00.000Z"
+      }
+    ],
+    "rt-d632d6883634a41f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "俄勒冈州医生结束游轮疫情隔离回家，无新增病例数字。",
+        "update_id": "rt-d632d6883634a41f",
+        "source_url": "",
+        "time": "2026-06-03T00:10:00.000Z"
+      }
+    ],
+    "rt-2392b2eb851a01df": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "内华达州南部确认一例汉坦病毒病例，新增1例确诊。",
+        "update_id": "rt-2392b2eb851a01df",
+        "source_url": "",
+        "time": "2026-06-02T23:22:06.000Z"
+      }
+    ],
+    "rt-3f22930063e93c7d": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "加拿大省份提供汉坦病毒更新，无具体数字。",
+        "update_id": "rt-3f22930063e93c7d",
+        "source_url": "",
+        "time": "2026-06-02T22:49:51.000Z"
+      }
+    ],
+    "rt-2aa9ef2a2976885c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国乘客离开奥马哈隔离，无新增病例数字。",
+        "update_id": "rt-2aa9ef2a2976885c",
+        "source_url": "",
+        "time": "2026-06-02T22:06:46.000Z"
+      }
+    ],
+    "rt-84eea42656c51be0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "俄勒冈州一人接触汉坦病毒后回家隔离，无新增病例数字。",
+        "update_id": "rt-84eea42656c51be0",
+        "source_url": "",
+        "time": "2026-06-02T21:55:00.000Z"
+      }
+    ],
+    "rt-2d00d6cdc5ac49ea": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国人在游轮上接触汉坦病毒后离开隔离，无新增病例数字。",
+        "update_id": "rt-2d00d6cdc5ac49ea",
+        "source_url": "",
+        "time": "2026-06-02T21:41:00.000Z"
+      }
+    ],
+    "rt-f118271eee388009": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国人从内布拉斯加隔离后回家，无新增病例数字。",
+        "update_id": "rt-f118271eee388009",
+        "source_url": "",
+        "time": "2026-06-02T21:17:00.000Z"
+      }
+    ],
+    "rt-c5bec035cb9e78ea": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "标题提及CDC但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-c5bec035cb9e78ea",
+        "source_url": "",
+        "time": "2026-06-02T20:46:17.000Z"
+      }
+    ],
+    "rt-202d714824dddfb1": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "low",
+        "reasoning_zh": "提及加拿大马尼托巴省汉坦病毒，但无具体数字，仅说明与邮轮毒株不同。",
+        "update_id": "rt-202d714824dddfb1",
+        "source_url": "",
+        "time": "2026-06-02T20:30:00.000Z"
+      }
+    ],
+    "rt-0ed15f5d23693d7b": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "法国确认邮轮疫情中的汉坦病毒并非新型或更具传染性，但未报告新增病例。",
+        "update_id": "rt-0ed15f5d23693d7b",
+        "source_url": "",
+        "time": "2026-06-02T15:40:33.000Z"
+      }
     ]
   }
 }
