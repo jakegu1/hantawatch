@@ -4031,6 +4031,132 @@
         "source_url": "",
         "time": "2026-06-02T15:40:33.000Z"
       }
+    ],
+    "rt-c33f592ea8cf8fc9": [
+      {
+        "iso2": "SG",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "新加坡2名居民检测阴性，无新增病例或死亡。",
+        "update_id": "rt-c33f592ea8cf8fc9",
+        "source_url": "",
+        "time": "2026-06-03T07:00:00Z"
+      }
+    ],
+    "rt-e659bed605c81380": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州报告2026年首例汉坦病毒死亡，新增1例死亡。",
+        "update_id": "rt-e659bed605c81380",
+        "source_url": "",
+        "time": "2026-06-03T05:00:00Z"
+      }
+    ],
+    "rt-206544f5409666f7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "5名隔离乘客离开内布拉斯加州，13人仍留，无新增病例。",
+        "update_id": "rt-206544f5409666f7",
+        "source_url": "",
+        "time": "2026-06-03T04:45:00Z"
+      }
+    ],
+    "rt-8a292739d408d42a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州2026年首例汉坦病毒死亡，新增1例死亡。",
+        "update_id": "rt-8a292739d408d42a",
+        "source_url": "",
+        "time": "2026-06-03T04:32:00.000Z"
+      }
+    ],
+    "rt-5739c3f8171e840b": [
+      {
+        "iso2": "SG",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "新加坡2名居民检测阴性，无新增病例或死亡。",
+        "update_id": "rt-5739c3f8171e840b",
+        "source_url": "",
+        "time": "2026-06-03T04:00:00Z"
+      }
+    ],
+    "rt-37fa224de6b2b39a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "5名美国乘客离开奥马哈隔离，无新增病例或死亡。",
+        "update_id": "rt-37fa224de6b2b39a",
+        "source_url": "",
+        "time": "2026-06-03T00:30:00Z"
+      }
+    ],
+    "rt-a77c53bb41a263f4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州Sin Nombre汉坦病毒病例导致1人死亡，新增1例死亡。",
+        "update_id": "rt-a77c53bb41a263f4",
+        "source_url": "",
+        "time": "2026-06-02T23:45:00Z"
+      }
+    ],
+    "rt-28e2e8f27aa97486": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 1,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "medium",
+        "reasoning_zh": "一名接触汉坦病毒的游轮乘客在俄勒冈州隔离，新增1例监测。",
+        "update_id": "rt-28e2e8f27aa97486",
+        "source_url": "",
+        "time": "2026-06-02T23:45:00Z"
+      }
+    ],
+    "rt-828877c516bd64bd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 1,
+        "delta_deaths": 0,
+        "as_of": "2026-06-02",
+        "confidence": "high",
+        "reasoning_zh": "俄勒冈州卫生局监测一名从MV Hondius返回的乘客，因汉坦病毒爆发，监测人数增加1例。",
+        "update_id": "rt-828877c516bd64bd",
+        "source_url": "",
+        "time": "2026-06-02T22:15:00Z"
+      }
     ]
   }
 }

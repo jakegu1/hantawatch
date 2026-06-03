@@ -15,11 +15,9 @@
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 13,
-    "sinceWhoNewCases": 1,
-    "sinceWhoNewCountries": [
-      "美国"
-    ],
-    "currentReportedCases": 14
+    "sinceWhoNewCases": 0,
+    "sinceWhoNewCountries": [],
+    "currentReportedCases": 13
   },
   "ruler": {
     "maxKm": 20000,
@@ -76,22 +74,22 @@
   },
   "events": [
     {
-      "at": "2026-06-02T23:22:06Z",
-      "kind": "detection",
-      "countryZh": "美国",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
-    {
-      "at": "2026-06-02T16:18:10Z",
+      "at": "2026-06-03T05:00:00Z",
       "kind": "detection",
       "countryZh": "美国",
       "delta": 1,
       "type": "deaths",
       "shortContext": "死亡",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-06-02T23:45:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "screening",
+      "shortContext": "初筛阳性",
       "verdict": "待 WHO 复核",
       "source": "realtime_news"
     },
@@ -200,7 +198,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 1,
+  "daysWithoutNewConfirmed": 6,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -273,7 +271,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-03T03:46:53.292909+00:00"
+      "updatedAt": "2026-06-03T10:54:52.620247+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -281,12 +279,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-02T23:22:06Z"
+      "updatedAt": "2026-06-03T05:00:00Z"
     }
   ],
   "intake": {
-    "last24hCount": 21,
-    "highConfidencePicks": 1
+    "last24hCount": 17,
+    "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-03T03:46:56.151037+00:00"
+  "realtimeUpdatedAt": "2026-06-03T10:54:55.894076+00:00"
 }
