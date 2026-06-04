@@ -4269,6 +4269,76 @@
         "source_url": "",
         "time": "2026-06-01T22:50:38.000Z"
       }
+    ],
+    "rt-92ccb87138eef5b8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道提及抗汉坦病毒工具研究进展，但未涉及具体国家或病例数字。",
+        "update_id": "rt-92ccb87138eef5b8",
+        "source_url": "",
+        "time": "2026-06-04T02:06:36.000Z"
+      }
+    ],
+    "rt-9a70b03ddf464d58": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道称游轮爆发后药物研究取得进展，但未提供具体国家或病例变化。",
+        "update_id": "rt-9a70b03ddf464d58",
+        "source_url": "",
+        "time": "2026-06-04T01:39:40.000Z"
+      }
+    ],
+    "rt-11ca3d4948011def": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "亚利桑那州数据显示少量汉坦病毒病例不罕见，但未提及新增病例数。",
+        "update_id": "rt-11ca3d4948011def",
+        "source_url": "",
+        "time": "2026-06-03T23:09:00.000Z"
+      }
+    ],
+    "rt-8d7b81cb041fb74f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "low",
+        "reasoning_zh": "报道内容与第一条相同，无国家或病例数字信息。",
+        "update_id": "rt-8d7b81cb041fb74f",
+        "source_url": "",
+        "time": "2026-06-03T22:49:22.000Z"
+      }
+    ],
+    "rt-57dc4c041e2bde76": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "low",
+        "reasoning_zh": "俄勒冈州居民因游轮汉坦病毒暴露返家，但未提供病例变化数字。",
+        "update_id": "rt-57dc4c041e2bde76",
+        "source_url": "",
+        "time": "2026-06-03T15:38:48.000Z"
+      }
     ]
   }
 }
