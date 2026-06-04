@@ -4437,6 +4437,62 @@
         "source_url": "",
         "time": "2026-06-03T22:31:14.000Z"
       }
+    ],
+    "rt-aa7f6d06c6c7e9c6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道称医生回家但仍在隔离，未提及新增病例数。",
+        "update_id": "rt-aa7f6d06c6c7e9c6",
+        "source_url": "",
+        "time": "2026-06-04T18:53:03.000Z"
+      }
+    ],
+    "rt-c487b737d229a104": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道关于研究工具和资金，未涉及具体国家或新增病例。",
+        "update_id": "rt-c487b737d229a104",
+        "source_url": "",
+        "time": "2026-06-04T18:08:41.000Z"
+      }
+    ],
+    "rt-a822aeb2afb62f04": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道关于免疫疗法研究，未提及具体国家或新增病例。",
+        "update_id": "rt-a822aeb2afb62f04",
+        "source_url": "",
+        "time": "2026-06-04T14:30:00.000Z"
+      }
+    ],
+    "rt-cf15545508b2f409": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道称当地无立即风险，未提及新增病例。",
+        "update_id": "rt-cf15545508b2f409",
+        "source_url": "",
+        "time": "2026-06-04T13:31:32.000Z"
+      }
     ]
   }
 }
