@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-04T09:53:19.245078+00:00",
+  "__generated_at": "2026-06-04T10:36:01.755723+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-04T09:53:11.044179+00:00",
+  "last_fetched": "2026-06-04T10:36:00.109571+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-06-04T03:25:00.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - AP News",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue AP News",
-      "summary_zh": "对抗汉坦病毒的工具前景可期，但资金有限。",
+      "summary_zh": "对抗汉坦病毒的工具显示前景，但资金有限。",
       "key_facts_zh": [
         "研究进展",
         "资金有限"
@@ -49,10 +49,10 @@
       "time": "2026-06-04T01:39:40.000Z",
       "title_en": "Researchers announce promising developments in hantavirus drugs following cruise ship outbreak - Українські Національні Новини (УНН)",
       "body_en": "Researchers announce promising developments in hantavirus drugs following cruise ship outbreak Українські Національні Новини (УНН)",
-      "summary_zh": "邮轮疫情后，研究人员宣布汉坦病毒药物取得进展。",
+      "summary_zh": "研究人员宣布邮轮疫情后汉坦病毒药物取得进展。",
       "key_facts_zh": [
-        "药物进展",
-        "邮轮疫情"
+        "邮轮",
+        "药物进展"
       ],
       "signal_strength": "medium"
     },
@@ -61,7 +61,7 @@
       "time": "2026-06-04T00:01:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
       "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "俄勒冈州医生结束邮轮汉坦疫情隔离返家。",
+      "summary_zh": "俄勒冈州一名医生在邮轮疫情后回家完成隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -74,10 +74,23 @@
       "time": "2026-06-03T23:48:06.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "汉坦病毒防治工具前景可期，但资金有限。",
+      "summary_zh": "对抗汉坦病毒的工具在资金有限下显示前景，研究人员希望继续。",
       "key_facts_zh": [
         "研究进展",
         "资金有限"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-11ca3d4948011def",
+      "time": "2026-06-03T23:09:00.000Z",
+      "title_en": "Small number of hantavirus cases not uncommon in Arizona, data shows - azcentral.com and The Arizona Republic",
+      "body_en": "Small number of hantavirus cases not uncommon in Arizona, data shows azcentral.com and The Arizona Republic",
+      "summary_zh": "亚利桑那州数据显示少量汉坦病毒病例并不罕见。",
+      "key_facts_zh": [
+        "美国",
+        "亚利桑那",
+        "病例数据"
       ],
       "signal_strength": "medium"
     },
@@ -86,10 +99,11 @@
       "time": "2026-06-03T20:43:26.000Z",
       "title_en": "Hantavirus Cruise Passengers Being Surveilled at Home Around the Clock - MedPage Today",
       "body_en": "Hantavirus Cruise Passengers Being Surveilled at Home Around the Clock MedPage Today",
-      "summary_zh": "邮轮汉坦病毒乘客居家接受全天候监控。",
+      "summary_zh": "汉坦病毒邮轮乘客在家接受全天候监测。",
       "key_facts_zh": [
         "邮轮",
-        "居家监控"
+        "监测",
+        "乘客"
       ],
       "signal_strength": "high"
     },
@@ -100,6 +114,7 @@
       "body_en": "Sin Nombre Hantavirus Strain Kills One In Arizona Forbes",
       "summary_zh": "亚利桑那州一人死于辛诺柏汉坦病毒。",
       "key_facts_zh": [
+        "美国",
         "亚利桑那",
         "死亡1例"
       ],
@@ -110,8 +125,9 @@
       "time": "2026-06-03T04:33:00.000Z",
       "title_en": "First hantavirus death reported in Arizona in 2026 - AZ Family",
       "body_en": "First hantavirus death reported in Arizona in 2026 AZ Family",
-      "summary_zh": "亚利桑那州报告2026年首例汉坦死亡。",
+      "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡病例。",
       "key_facts_zh": [
+        "美国",
         "亚利桑那",
         "首例死亡"
       ],
@@ -122,9 +138,9 @@
       "time": "2026-06-03T04:32:00.000Z",
       "title_en": "First hantavirus death in 2026 reported in Arizona - WDBJ7",
       "body_en": "First hantavirus death in 2026 reported in Arizona WDBJ7",
-      "summary_zh": "亚利桑那州报告2026年首例汉坦死亡。",
+      "summary_zh": "美国亚利桑那州报告2026年首例汉坦病毒死亡。",
       "key_facts_zh": [
-        "亚利桑那",
+        "美国",
         "首例死亡"
       ],
       "signal_strength": "high"
@@ -134,10 +150,10 @@
       "time": "2026-06-03T01:44:00.000Z",
       "title_en": "Five people have left hantavirus quarantine facility in Nebraska - The Washington Post",
       "body_en": "Five people have left hantavirus quarantine facility in Nebraska The Washington Post 5 People Leave Hantavirus Quarantine in Omaha The New York Times Hantavirus-exposed cruise passengers may soon be allowed to return home but must remain under 24/7 watch CNN",
-      "summary_zh": "内布拉斯加州5人离开汉坦隔离设施。",
+      "summary_zh": "美国内布拉斯加州5人离开汉坦病毒隔离设施。",
       "key_facts_zh": [
-        "内布拉斯加",
-        "5人离开隔离"
+        "美国",
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -146,11 +162,10 @@
       "time": "2026-06-02T23:41:47.000Z",
       "title_en": "Province Provides Hantavirus Update - DiscoverWestman",
       "body_en": "Province Provides Hantavirus Update DiscoverWestman",
-      "summary_zh": "加拿大曼尼托巴省发布汉坦病毒最新情况。",
+      "summary_zh": "加拿大曼尼托巴省发布汉坦病毒更新。",
       "key_facts_zh": [
         "加拿大",
-        "曼尼托巴省",
-        "疫情更新"
+        "曼尼托巴"
       ],
       "signal_strength": "medium"
     },
@@ -159,11 +174,10 @@
       "time": "2026-06-02T22:01:16.000Z",
       "title_en": "Five Americans exposed to hantavirus released from quarantine - NBC26",
       "body_en": "Five Americans exposed to hantavirus released from quarantine NBC26",
-      "summary_zh": "五名接触汉坦病毒的美国人解除隔离。",
+      "summary_zh": "5名接触汉坦病毒的美国人解除隔离。",
       "key_facts_zh": [
         "美国",
-        "5人",
-        "解除隔离"
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -172,10 +186,9 @@
       "time": "2026-06-02T19:46:26.000Z",
       "title_en": "No cases of hantavirus in Manitoba since 2016: health officials say - CityNews Winnipeg",
       "body_en": "No cases of hantavirus in Manitoba since 2016: health officials say CityNews Winnipeg",
-      "summary_zh": "曼尼托巴省自2016年无汉坦病毒病例。",
+      "summary_zh": "加拿大曼尼托巴省自2016年无汉坦病毒病例。",
       "key_facts_zh": [
         "加拿大",
-        "曼尼托巴",
         "零病例"
       ],
       "signal_strength": "high"
@@ -185,11 +198,10 @@
       "time": "2026-06-02T14:57:00.000Z",
       "title_en": "5 Americans exposed to hantavirus return home after weeks in quarantine - USA Today",
       "body_en": "5 Americans exposed to hantavirus return home after weeks in quarantine USA Today",
-      "summary_zh": "五名接触汉坦病毒的美国人结束隔离回家。",
+      "summary_zh": "5名接触汉坦病毒的美国人隔离数周后回家。",
       "key_facts_zh": [
         "美国",
-        "5人",
-        "结束隔离"
+        "5人回家"
       ],
       "signal_strength": "high"
     },
@@ -198,24 +210,11 @@
       "time": "2026-06-02T14:11:26.000Z",
       "title_en": "Five US passengers from hantavirus-hit ship return to home states - Reuters",
       "body_en": "Five US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "五名美国乘客从汉坦病毒邮轮返回各州。",
+      "summary_zh": "五名美国乘客从汉坦病毒感染的邮轮返回各州。",
       "key_facts_zh": [
         "美国",
-        "5人",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c5bec035cb9e78ea",
-      "time": "2026-06-02T07:00:00.000Z",
-      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
-      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国 CDC 通报邮轮上 Andes 病毒疫情现状。",
-      "key_facts_zh": [
-        "美国 CDC",
         "邮轮",
-        "Andes 病毒"
+        "返回"
       ],
       "signal_strength": "high"
     }

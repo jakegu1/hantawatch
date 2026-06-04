@@ -1,19 +1,19 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-04T09:53:19.245500+00:00",
+  "__generated_at": "2026-06-04T10:36:01.756075+00:00",
   "windowDays": 30,
   "source": "https://hantaflow.com/api/signals.json",
   "countries": {
     "ES": {
       "iso2": "ES",
-      "signalCount30d": 24,
-      "signalCount7d": 7,
-      "lastSignalAt": "2026-06-04T09:38:31+00:00"
+      "signalCount30d": 29,
+      "signalCount7d": 12,
+      "lastSignalAt": "2026-06-04T10:00:32+00:00"
     },
     "RU": {
       "iso2": "RU",
-      "signalCount30d": 8,
-      "signalCount7d": 8,
+      "signalCount30d": 6,
+      "signalCount7d": 6,
       "lastSignalAt": "2026-06-04T09:08:19+00:00"
     },
     "AU": {
@@ -36,7 +36,7 @@
     },
     "CL": {
       "iso2": "CL",
-      "signalCount30d": 5,
+      "signalCount30d": 4,
       "signalCount7d": 3,
       "lastSignalAt": "2026-06-04T03:13:00+00:00"
     },
@@ -54,20 +54,20 @@
     },
     "NL": {
       "iso2": "NL",
-      "signalCount30d": 10,
+      "signalCount30d": 8,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-04T00:55:27+00:00"
     },
     "AR": {
       "iso2": "AR",
-      "signalCount30d": 21,
-      "signalCount7d": 9,
+      "signalCount30d": 17,
+      "signalCount7d": 7,
       "lastSignalAt": "2026-06-04T00:09:23+00:00"
     },
     "FR": {
       "iso2": "FR",
-      "signalCount30d": 15,
-      "signalCount7d": 4,
+      "signalCount30d": 13,
+      "signalCount7d": 3,
       "lastSignalAt": "2026-06-03T17:03:00+00:00"
     },
     "MX": {
@@ -82,12 +82,6 @@
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-03T07:38:27+00:00"
     },
-    "PA": {
-      "iso2": "PA",
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-02T23:34:00+00:00"
-    },
     "US": {
       "iso2": "US",
       "signalCount30d": 4,
@@ -99,12 +93,6 @@
       "signalCount30d": 4,
       "signalCount7d": 2,
       "lastSignalAt": "2026-06-02T06:22:09+00:00"
-    },
-    "GB": {
-      "iso2": "GB",
-      "signalCount30d": 3,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-01T13:43:00+00:00"
     },
     "TR": {
       "iso2": "TR",
@@ -124,21 +112,21 @@
       "signalCount7d": 1,
       "lastSignalAt": "2026-05-28T14:47:19+00:00"
     },
+    "BR": {
+      "iso2": "BR",
+      "signalCount30d": 11,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-05-27T16:49:18+00:00"
+    },
     "CN": {
       "iso2": "CN",
       "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-24T07:00:00+00:00"
     },
-    "BR": {
-      "iso2": "BR",
-      "signalCount30d": 9,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-20T07:00:00+00:00"
-    },
     "PT": {
       "iso2": "PT",
-      "signalCount30d": 5,
+      "signalCount30d": 6,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-20T07:00:00+00:00"
     },
@@ -159,6 +147,18 @@
       "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-13T07:00:00+00:00"
+    },
+    "GB": {
+      "iso2": "GB",
+      "signalCount30d": 4,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-05-12T07:00:00+00:00"
+    },
+    "IN": {
+      "iso2": "IN",
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-05-08T07:00:00+00:00"
     },
     "UY": {
       "iso2": "UY",
