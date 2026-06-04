@@ -1,13 +1,38 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-04T16:48:46.354638+00:00",
+  "__generated_at": "2026-06-04T19:16:51.598816+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-04T16:48:44.966352+00:00",
+  "last_fetched": "2026-06-04T19:16:50.167588+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-aa7f6d06c6c7e9c6",
+      "time": "2026-06-04T18:53:03.000Z",
+      "title_en": "Bend doctor at center of hantavirus outbreak back home — but still in quarantine - Rogue Valley Times",
+      "body_en": "Bend doctor at center of hantavirus outbreak back home — but still in quarantine Rogue Valley Times",
+      "summary_zh": "美国本德医生返家但仍隔离，该医生为汉坦病毒疫情中心人物。",
+      "key_facts_zh": [
+        "美国",
+        "医生",
+        "隔离中"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c487b737d229a104",
+      "time": "2026-06-04T18:08:41.000Z",
+      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - Phys.org",
+      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue Phys.org",
+      "summary_zh": "汉坦病毒防治工具研究有进展，但资金有限，研究者希望继续。",
+      "key_facts_zh": [
+        "研究进展",
+        "资金有限"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-a822aeb2afb62f04",
       "time": "2026-06-04T14:30:00.000Z",
@@ -16,19 +41,44 @@
       "summary_zh": "研究显示免疫疗法对重症汉坦病毒肺病早期有效。",
       "key_facts_zh": [
         "免疫疗法",
-        "汉坦病毒肺病"
+        "早期有效"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-cf15545508b2f409",
+      "time": "2026-06-04T13:31:32.000Z",
+      "title_en": "County health officials: No ‘immediate risk’ locally from hantavirus, Ebola - Olean Times Herald",
+      "body_en": "County health officials: No ‘immediate risk’ locally from hantavirus, Ebola Olean Times Herald",
+      "summary_zh": "美国县卫生官员称当地无汉坦病毒和埃博拉直接风险。",
+      "key_facts_zh": [
+        "美国",
+        "无直接风险"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-fe52d8a5756f84fc",
+      "time": "2026-06-04T11:26:43.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective World Health Organization (WHO)",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦边境卫生与入境点。",
+      "key_facts_zh": [
+        "WHO",
+        "边境卫生",
+        "研讨会"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-2e80a2c63ad895ad",
       "time": "2026-06-04T06:52:51.000Z",
       "title_en": "Breakthrough Antiviral for Hantavirus Debuts in Europe - Devdiscourse",
       "body_en": "Breakthrough Antiviral for Hantavirus Debuts in Europe Devdiscourse",
-      "summary_zh": "欧洲推出突破性汉坦病毒抗病毒药物。",
+      "summary_zh": "欧洲推出汉坦病毒突破性抗病毒药物。",
       "key_facts_zh": [
         "欧洲",
-        "抗病毒药物"
+        "新药"
       ],
       "signal_strength": "medium"
     },
@@ -37,22 +87,10 @@
       "time": "2026-06-04T03:32:00.000Z",
       "title_en": "Researchers in Chile hope for further funding for their hantavirus treatment trials - thecanadianpressnews.ca",
       "body_en": "Researchers in Chile hope for further funding for their hantavirus treatment trials thecanadianpressnews.ca",
-      "summary_zh": "智利研究人员寻求更多资金用于汉坦病毒治疗试验。",
+      "summary_zh": "智利研究人员希望获得更多资金用于汉坦病毒治疗试验。",
       "key_facts_zh": [
         "智利",
         "治疗试验"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-86ac2287e8893609",
-      "time": "2026-06-04T03:25:00.000Z",
-      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - AP News",
-      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue AP News",
-      "summary_zh": "研究显示汉坦病毒治疗工具在有限资金下取得进展。",
-      "key_facts_zh": [
-        "研究进展",
-        "汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -61,10 +99,10 @@
       "time": "2026-06-04T01:39:40.000Z",
       "title_en": "Researchers announce promising developments in hantavirus drugs following cruise ship outbreak - Українські Національні Новини (УНН)",
       "body_en": "Researchers announce promising developments in hantavirus drugs following cruise ship outbreak Українські Національні Новини (УНН)",
-      "summary_zh": "研究人员宣布邮轮疫情后汉坦病毒药物取得进展。",
+      "summary_zh": "邮轮疫情后，研究人员宣布汉坦病毒药物取得进展。",
       "key_facts_zh": [
-        "研究进展",
-        "邮轮疫情"
+        "药物进展",
+        "邮轮"
       ],
       "signal_strength": "medium"
     },
@@ -72,24 +110,24 @@
       "id": "rt-d632d6883634a41f",
       "time": "2026-06-04T00:01:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
-      "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "俄勒冈州本德医生结束邮轮疫情隔离后返家。",
+      "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com Five people have left hantavirus quarantine facility in Nebraska The Washington Post 5 People Leave Hantavirus Quarantine in Omaha The New York Times",
+      "summary_zh": "俄勒冈州医生结束邮轮疫情隔离返家；内布拉斯加5人离开隔离设施。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "隔离结束"
+        "医生",
+        "5人解除隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-8d7b81cb041fb74f",
-      "time": "2026-06-03T22:49:22.000Z",
-      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - CityNews Halifax",
-      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue CityNews Halifax",
-      "summary_zh": "研究显示汉坦病毒治疗工具在有限资金下取得进展。",
+      "id": "rt-23a3695213d4e5f7",
+      "time": "2026-06-03T22:31:14.000Z",
+      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - Toronto Star",
+      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue Toronto Star",
+      "summary_zh": "多伦多星报报道汉坦病毒研究工具前景可期但资金有限。",
       "key_facts_zh": [
-        "研究进展",
-        "汉坦病毒"
+        "加拿大",
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -98,11 +136,10 @@
       "time": "2026-06-03T20:43:26.000Z",
       "title_en": "Hantavirus Cruise Passengers Being Surveilled at Home Around the Clock - MedPage Today",
       "body_en": "Hantavirus Cruise Passengers Being Surveilled at Home Around the Clock MedPage Today",
-      "summary_zh": "汉坦病毒邮轮乘客在家接受全天候监测。",
+      "summary_zh": "邮轮汉坦病毒乘客在家接受全天候监测。",
       "key_facts_zh": [
         "邮轮",
-        "乘客监测",
-        "美国"
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -113,9 +150,9 @@
       "body_en": "Sin Nombre Hantavirus Strain Kills One In Arizona Forbes",
       "summary_zh": "亚利桑那州一人死于辛诺柏汉坦病毒。",
       "key_facts_zh": [
+        "美国",
         "亚利桑那",
-        "死亡1例",
-        "辛诺柏病毒"
+        "死亡1例"
       ],
       "signal_strength": "high"
     },
@@ -124,7 +161,7 @@
       "time": "2026-06-03T04:33:00.000Z",
       "title_en": "First hantavirus death reported in Arizona in 2026 - AZ Family",
       "body_en": "First hantavirus death reported in Arizona in 2026 AZ Family",
-      "summary_zh": "美国亚利桑那州报告2026年首例汉坦病毒死亡病例。",
+      "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
@@ -137,7 +174,7 @@
       "time": "2026-06-03T04:32:00.000Z",
       "title_en": "First hantavirus death in 2026 reported in Arizona - WDBJ7",
       "body_en": "First hantavirus death in 2026 reported in Arizona WDBJ7",
-      "summary_zh": "美国亚利桑那州报告2026年首例汉坦病毒死亡病例。",
+      "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
@@ -146,80 +183,27 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-173f30d1ef1eded8",
-      "time": "2026-06-03T01:44:00.000Z",
-      "title_en": "Five people have left hantavirus quarantine facility in Nebraska - The Washington Post",
-      "body_en": "Five people have left hantavirus quarantine facility in Nebraska The Washington Post 5 People Leave Hantavirus Quarantine in Omaha The New York Times 5 American cruise ship passengers leave Nebraska quarantine facility AP News",
-      "summary_zh": "美国内布拉斯加州5人离开汉坦病毒隔离设施。",
-      "key_facts_zh": [
-        "美国",
-        "内布拉斯加",
-        "5人解除隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-3f22930063e93c7d",
       "time": "2026-06-02T23:41:47.000Z",
       "title_en": "Province Provides Hantavirus Update - DiscoverWestman",
       "body_en": "Province Provides Hantavirus Update DiscoverWestman",
-      "summary_zh": "加拿大曼尼托巴省发布汉坦病毒最新情况。",
+      "summary_zh": "加拿大一省发布汉坦病毒最新情况。",
       "key_facts_zh": [
         "加拿大",
-        "曼尼托巴",
-        "官方更新"
+        "省级通报"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-a5880e3a57993c5a",
-      "time": "2026-06-02T22:01:16.000Z",
-      "title_en": "Five Americans exposed to hantavirus released from quarantine - NBC26",
-      "body_en": "Five Americans exposed to hantavirus released from quarantine NBC26",
-      "summary_zh": "5名接触汉坦病毒的美国人解除隔离。",
+      "id": "rt-84eea42656c51be0",
+      "time": "2026-06-02T22:00:18.000Z",
+      "title_en": "Oregonian exposed to hantavirus returns home, goes into quarantine - Statesman Journal",
+      "body_en": "Oregonian exposed to hantavirus returns home, goes into quarantine Statesman Journal",
+      "summary_zh": "俄勒冈州一接触汉坦病毒者返家后隔离。",
       "key_facts_zh": [
         "美国",
-        "5人",
-        "解除隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-d67f613cc38f7f99",
-      "time": "2026-06-02T19:46:26.000Z",
-      "title_en": "No cases of hantavirus in Manitoba since 2016: health officials say - CityNews Winnipeg",
-      "body_en": "No cases of hantavirus in Manitoba since 2016: health officials say CityNews Winnipeg",
-      "summary_zh": "加拿大曼尼托巴省自2016年无汉坦病毒病例。",
-      "key_facts_zh": [
-        "加拿大",
-        "曼尼托巴",
-        "无病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-027a239b6d9061a0",
-      "time": "2026-06-02T14:57:00.000Z",
-      "title_en": "5 Americans exposed to hantavirus return home after weeks in quarantine - USA Today",
-      "body_en": "5 Americans exposed to hantavirus return home after weeks in quarantine USA Today",
-      "summary_zh": "5名接触汉坦病毒的美国人隔离数周后回家。",
-      "key_facts_zh": [
-        "美国",
-        "5人",
-        "解除隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-41109e4fc0055589",
-      "time": "2026-06-02T14:11:26.000Z",
-      "title_en": "Five US passengers from hantavirus-hit ship return to home states - Reuters",
-      "body_en": "Five US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "五名美国乘客从汉坦病毒感染的邮轮返回各州。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "返回"
+        "俄勒冈",
+        "隔离"
       ],
       "signal_strength": "high"
     }
