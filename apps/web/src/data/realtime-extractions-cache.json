@@ -4395,6 +4395,48 @@
         "source_url": "",
         "time": "2026-06-03T23:48:06.000Z"
       }
+    ],
+    "rt-445bf5c9e2bb8aab": [
+      {
+        "iso2": "EU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "欧盟紧急采购潜在治疗药物，未提及具体病例数或新增变化。",
+        "update_id": "rt-445bf5c9e2bb8aab",
+        "source_url": "",
+        "time": "2026-06-04T09:11:31.000Z"
+      }
+    ],
+    "rt-afc6a8ad686e34ac": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "智利研究人员希望获得更多资金进行汉坦病毒治疗试验，未提及病例变化。",
+        "update_id": "rt-afc6a8ad686e34ac",
+        "source_url": "",
+        "time": "2026-06-04T03:32:00.000Z"
+      }
+    ],
+    "rt-23a3695213d4e5f7": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "low",
+        "reasoning_zh": "报道提及抗汉坦病毒工具前景但资金有限，未指定国家或病例变化。",
+        "update_id": "rt-23a3695213d4e5f7",
+        "source_url": "",
+        "time": "2026-06-03T22:31:14.000Z"
+      }
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-04T09:53:19.243603+00:00",
+  "__generated_at": "2026-06-04T14:54:14.324691+00:00",
   "date": "2026-06-04",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -11,12 +11,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-18T12:00:00+00:00"
+      "signalCount30d": 2,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-04T11:25:18+00:00"
     },
     "FI": {
       "iso2": "FI",
@@ -64,8 +64,8 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "WHO 5 月 15 日更新通报中包含法国尼斯 1 例新确诊输入；初步接触者监测中未发症状。",
       "stale": false,
-      "signalCount30d": 15,
-      "signalCount7d": 4,
+      "signalCount30d": 13,
+      "signalCount7d": 3,
       "lastSignalAt": "2026-06-03T17:03:00+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-05-15"
@@ -88,25 +88,24 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 10 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 10 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 9 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 9 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 10,
+      "signalCount30d": 9,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-04T00:55:27+00:00"
     },
     "CH": {
       "iso2": "CH",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "整体风险低；西北侏罗山地区林业从业者注意防护。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-05-29T13:31:21+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "AT": {
       "iso2": "AT",
@@ -139,11 +138,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 5 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 5 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 6 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 5,
-      "signalCount7d": 1,
+      "signalCount30d": 6,
+      "signalCount7d": 0,
       "lastSignalAt": "2026-05-28T14:47:19+00:00"
     },
     "RU": {
@@ -152,12 +151,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 8 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 8 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 6 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 8,
-      "signalCount7d": 8,
-      "lastSignalAt": "2026-06-04T09:08:19+00:00"
+      "signalCount30d": 6,
+      "signalCount7d": 6,
+      "lastSignalAt": "2026-06-04T08:57:47+00:00"
     },
     "EE": {
       "iso2": "EE",
@@ -225,12 +224,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 6 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 5 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 5 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 6,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-03T07:38:27+00:00"
+      "signalCount30d": 5,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-04T14:18:00+00:00"
     },
     "ES": {
       "iso2": "ES",
@@ -241,9 +240,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "WHO 5 月 15 日更新通报中包含西班牙 1 例新确诊输入。",
       "stale": false,
-      "signalCount30d": 24,
-      "signalCount7d": 7,
-      "lastSignalAt": "2026-06-04T09:38:31+00:00",
+      "signalCount30d": 29,
+      "signalCount7d": 12,
+      "lastSignalAt": "2026-06-04T11:25:18+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-05-15"
     },
@@ -266,12 +265,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 21 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 21 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 16 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 16 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 21,
-      "signalCount7d": 9,
-      "lastSignalAt": "2026-06-04T00:09:23+00:00"
+      "signalCount30d": 16,
+      "signalCount7d": 7,
+      "lastSignalAt": "2026-06-04T10:27:56+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -279,12 +278,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 5 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 5 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 4 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 5,
+      "signalCount30d": 4,
       "signalCount7d": 3,
-      "lastSignalAt": "2026-06-04T03:13:00+00:00"
+      "lastSignalAt": "2026-06-04T03:32:00+00:00"
     },
     "BR": {
       "iso2": "BR",
@@ -292,12 +291,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 9 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 9 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 12 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 12 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 9,
+      "signalCount30d": 12,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-05-20T07:00:00+00:00"
+      "lastSignalAt": "2026-05-27T16:49:18+00:00"
     },
     "UY": {
       "iso2": "UY",
@@ -333,11 +332,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 4 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 4,
-      "signalCount7d": 2,
+      "signalCount30d": 3,
+      "signalCount7d": 1,
       "lastSignalAt": "2026-06-04T03:13:00+00:00"
     },
     "CN": {
@@ -396,10 +395,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-04T02:12:53+00:00"
     },
@@ -425,8 +424,8 @@
       "riskSummaryZh": "近 30 天自动捕捉到 5 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 5,
-      "signalCount7d": 3,
-      "lastSignalAt": "2026-06-04T07:35:59+00:00"
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-04T06:25:00+00:00"
     },
     "AU": {
       "iso2": "AU",
@@ -437,9 +436,9 @@
       "statusZh": "隔离中",
       "riskSummaryZh": "6 名邮轮乘客抵达澳大利亚，开始为期 3 周的隔离观察。",
       "stale": false,
-      "signalCount30d": 3,
-      "signalCount7d": 3,
-      "lastSignalAt": "2026-06-04T08:13:53+00:00",
+      "signalCount30d": 2,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-05-29T06:08:38+00:00",
       "importStatus": "quarantine_active",
       "importDate": "2026-05-15"
     },
