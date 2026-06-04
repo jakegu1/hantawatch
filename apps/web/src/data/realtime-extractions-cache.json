@@ -4339,6 +4339,62 @@
         "source_url": "",
         "time": "2026-06-03T15:38:48.000Z"
       }
+    ],
+    "rt-2e80a2c63ad895ad": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及欧洲出现抗病毒药物，但无具体国家或病例数字。",
+        "update_id": "rt-2e80a2c63ad895ad",
+        "source_url": "",
+        "time": "2026-06-04T06:52:51.000Z"
+      }
+    ],
+    "rt-86ac2287e8893609": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "新闻讨论汉坦病毒研究工具，无具体国家或病例数字。",
+        "update_id": "rt-86ac2287e8893609",
+        "source_url": "",
+        "time": "2026-06-04T03:25:00.000Z"
+      }
+    ],
+    "rt-3a1c4f4e132eafa1": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及智利研究人员寻求资金，无新增病例数字。",
+        "update_id": "rt-3a1c4f4e132eafa1",
+        "source_url": "",
+        "time": "2026-06-04T03:13:00.000Z"
+      }
+    ],
+    "rt-b1a63539b9812c4d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "low",
+        "reasoning_zh": "新闻讨论汉坦病毒研究工具，无具体国家或病例数字。",
+        "update_id": "rt-b1a63539b9812c4d",
+        "source_url": "",
+        "time": "2026-06-03T23:48:06.000Z"
+      }
     ]
   }
 }
