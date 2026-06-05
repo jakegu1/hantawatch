@@ -1,13 +1,25 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-05T21:19:32.038005+00:00",
+  "__generated_at": "2026-06-05T23:01:07.945492+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-05T21:19:30.650675+00:00",
+  "last_fetched": "2026-06-05T23:01:06.167007+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-30bec086a091e34a",
+      "time": "2026-06-05T22:19:17.000Z",
+      "title_en": "Argentina to expand hantavirus search to a second province - Macau Business",
+      "body_en": "Argentina to expand hantavirus search to a second province Macau Business",
+      "summary_zh": "阿根廷将汉坦病毒搜索扩大至第二个省份。",
+      "key_facts_zh": [
+        "阿根廷",
+        "扩大搜索"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-5188efc3d5207ba9",
       "time": "2026-06-05T18:20:04.000Z",
@@ -16,7 +28,7 @@
       "summary_zh": "新测序工具可绘制汉坦病毒全基因组。",
       "key_facts_zh": [
         "新工具",
-        "全基因组测序"
+        "基因组测序"
       ],
       "signal_strength": "medium"
     },
@@ -25,7 +37,7 @@
       "time": "2026-06-05T15:39:07.000Z",
       "title_en": "New Tool Quickly Sequences Hantavirus Genome - American Society for Microbiology",
       "body_en": "New Tool Quickly Sequences Hantavirus Genome American Society for Microbiology",
-      "summary_zh": "美国微生物学会发布快速测序汉坦病毒基因组新工具。",
+      "summary_zh": "美国微生物学会报道快速测序汉坦病毒基因组的新工具。",
       "key_facts_zh": [
         "美国微生物学会",
         "快速测序"
@@ -37,10 +49,10 @@
       "time": "2026-06-05T12:47:00.000Z",
       "title_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home - KTVB",
       "body_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home KTVB",
-      "summary_zh": "自称在邮轮上治疗汉坦病毒患者的医生返家。",
+      "summary_zh": "自称在邮轮上治疗汉坦病毒患者的医生返回家中。",
       "key_facts_zh": [
         "邮轮",
-        "医生返家"
+        "医生返回"
       ],
       "signal_strength": "high"
     },
@@ -49,10 +61,11 @@
       "time": "2026-06-05T07:12:38.000Z",
       "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
       "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
-      "summary_zh": "邮轮汉坦病毒疫情亲历者：18人隔离中。",
+      "summary_zh": "汉坦病毒邮轮事件：18人隔离，亲历者讲述。",
       "key_facts_zh": [
         "邮轮",
-        "18人隔离"
+        "18人隔离",
+        "亲历者"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +78,7 @@
       "key_facts_zh": [
         "西班牙",
         "首例出院",
-        "邮轮"
+        "邮轮关联"
       ],
       "signal_strength": "high"
     },
@@ -74,10 +87,11 @@
       "time": "2026-06-04T23:32:05.000Z",
       "title_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home - KTVZ",
       "body_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home KTVZ",
-      "summary_zh": "美国本德医生在汉坦病毒疫情中负责后返家。",
+      "summary_zh": "美国本德医生在汉坦病毒爆发期间负责救治后返家。",
       "key_facts_zh": [
         "美国",
-        "医生返家"
+        "医生返家",
+        "疫情应对"
       ],
       "signal_strength": "medium"
     },
@@ -86,11 +100,11 @@
       "time": "2026-06-04T19:07:23.000Z",
       "title_en": "Mohave County resident dies of hantavirus, Arizona health officials say - ktnv.com",
       "body_en": "Mohave County resident dies of hantavirus, Arizona health officials say ktnv.com",
-      "summary_zh": "美国亚利桑那州莫哈维县居民死于汉坦病毒。",
+      "summary_zh": "亚利桑那州莫哈维县居民死于汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
-        "1例死亡"
+        "死亡病例"
       ],
       "signal_strength": "high"
     },
@@ -99,10 +113,11 @@
       "time": "2026-06-04T14:30:00.000Z",
       "title_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study - Health and Me",
       "body_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study Health and Me",
-      "summary_zh": "研究：免疫疗法对重症汉坦病毒肺病显示早期希望。",
+      "summary_zh": "研究显示免疫疗法对重症汉坦病毒肺病有早期希望。",
       "key_facts_zh": [
         "免疫疗法",
-        "早期希望"
+        "早期希望",
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -114,8 +129,8 @@
       "summary_zh": "WHO举办汉坦病毒网络研讨会，聚焦边境卫生与入境点。",
       "key_facts_zh": [
         "WHO",
-        "边境卫生",
-        "网络研讨会"
+        "网络研讨会",
+        "边境卫生"
       ],
       "signal_strength": "high"
     },
@@ -124,11 +139,11 @@
       "time": "2026-06-04T00:01:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
       "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "俄勒冈州医生结束邮轮汉坦疫情隔离返家。",
+      "summary_zh": "俄勒冈州医生结束邮轮疫情隔离后返家。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "隔离结束"
+        "俄勒冈",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -137,7 +152,7 @@
       "time": "2026-06-03T23:48:06.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "汉坦病毒防治工具前景看好，但资金有限。",
+      "summary_zh": "汉坦病毒防治工具显示前景，研究资金有限。",
       "key_facts_zh": [
         "研究进展",
         "资金有限"
@@ -162,20 +177,7 @@
       "time": "2026-06-03T04:33:00.000Z",
       "title_en": "First hantavirus death reported in Arizona in 2026 - AZ Family",
       "body_en": "First hantavirus death reported in Arizona in 2026 AZ Family",
-      "summary_zh": "亚利桑那州报告2026年首例汉坦死亡。",
-      "key_facts_zh": [
-        "美国",
-        "亚利桑那",
-        "首例死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-8a292739d408d42a",
-      "time": "2026-06-03T04:32:00.000Z",
-      "title_en": "First hantavirus death in 2026 reported in Arizona - KPTV",
-      "body_en": "First hantavirus death in 2026 reported in Arizona KPTV",
-      "summary_zh": "亚利桑那州报告2026年首例汉坦死亡。",
+      "summary_zh": "亚利桑那州报告2026年首例汉坦病毒死亡。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
@@ -188,7 +190,7 @@
       "time": "2026-06-03T01:44:00.000Z",
       "title_en": "Five people have left hantavirus quarantine facility in Nebraska - The Washington Post",
       "body_en": "Five people have left hantavirus quarantine facility in Nebraska The Washington Post",
-      "summary_zh": "内布拉斯加州五人离开汉坦隔离设施。",
+      "summary_zh": "内布拉斯加州五人离开汉坦病毒隔离设施。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
@@ -201,24 +203,11 @@
       "time": "2026-06-02T22:44:31.000Z",
       "title_en": "Dr. Stephen Kornfeld could be back in Oregon after hantavirus outbreak on cruise ship - KTVZ",
       "body_en": "Dr. Stephen Kornfeld could be back in Oregon after hantavirus outbreak on cruise ship KTVZ",
-      "summary_zh": "医生可能从邮轮汉坦疫情后返回俄勒冈。",
+      "summary_zh": "医生科恩菲尔德或从邮轮疫情后返回俄勒冈。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "医生返程"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-d67f613cc38f7f99",
-      "time": "2026-06-02T19:46:26.000Z",
-      "title_en": "No cases of hantavirus in Manitoba since 2016: health officials say - CityNews Winnipeg",
-      "body_en": "No cases of hantavirus in Manitoba since 2016: health officials say CityNews Winnipeg",
-      "summary_zh": "马尼托巴省自2016年无汉坦病例。",
-      "key_facts_zh": [
-        "加拿大",
-        "马尼托巴",
-        "无病例"
+        "俄勒冈",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -227,11 +216,24 @@
       "time": "2026-06-02T14:57:00.000Z",
       "title_en": "5 Americans exposed to hantavirus return home after weeks in quarantine - USA Today",
       "body_en": "5 Americans exposed to hantavirus return home after weeks in quarantine USA Today",
-      "summary_zh": "美国5名接触汉坦病毒者结束隔离回家。",
+      "summary_zh": "五名接触汉坦病毒的美国人结束隔离返家。",
       "key_facts_zh": [
         "美国",
         "5人",
         "结束隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-c7fe95f7a72751bb",
+      "time": "2026-06-02T13:50:00.000Z",
+      "title_en": "Hantavirus update: five cruise passengers leave Omaha quarantine unit - WOWT",
+      "body_en": "Hantavirus update: five cruise passengers leave Omaha quarantine unit WOWT",
+      "summary_zh": "美国奥马哈隔离区5名邮轮乘客解除隔离。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "解除隔离"
       ],
       "signal_strength": "high"
     }
