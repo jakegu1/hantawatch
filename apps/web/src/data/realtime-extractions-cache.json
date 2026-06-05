@@ -4563,6 +4563,34 @@
         "source_url": "",
         "time": "2026-06-03T01:44:00.000Z"
       }
+    ],
+    "rt-999b6a689627bf9b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到医生在游轮上治疗汉坦病毒患者，但未提供具体国家、病例数或新增变化。",
+        "update_id": "rt-999b6a689627bf9b",
+        "source_url": "",
+        "time": "2026-06-05T12:47:00.000Z"
+      }
+    ],
+    "rt-555018bb71745bf4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "新闻讨论抗汉坦病毒工具的研究进展，未提及具体国家或病例变化。",
+        "update_id": "rt-555018bb71745bf4",
+        "source_url": "",
+        "time": "2026-06-04T21:01:43.000Z"
+      }
     ]
   }
 }
