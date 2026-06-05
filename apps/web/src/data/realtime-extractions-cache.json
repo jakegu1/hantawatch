@@ -4591,6 +4591,48 @@
         "source_url": "",
         "time": "2026-06-04T21:01:43.000Z"
       }
+    ],
+    "rt-5188efc3d5207ba9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "新闻介绍测序工具，未提及任何国家或病例变化。",
+        "update_id": "rt-5188efc3d5207ba9",
+        "source_url": "",
+        "time": "2026-06-05T18:20:04.000Z"
+      }
+    ],
+    "rt-c72669f5b45cb787": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "新闻介绍测序工具，未提及任何国家或病例变化。",
+        "update_id": "rt-c72669f5b45cb787",
+        "source_url": "",
+        "time": "2026-06-05T15:39:07.000Z"
+      }
+    ],
+    "rt-9c5b1a4bdc31f386": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "标题提及纽约汉坦病毒患者离开隔离，但未提供具体新增病例数。",
+        "update_id": "rt-9c5b1a4bdc31f386",
+        "source_url": "",
+        "time": "2026-06-05T14:00:00Z"
+      }
     ]
   }
 }
