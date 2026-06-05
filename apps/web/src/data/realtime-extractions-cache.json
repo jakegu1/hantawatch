@@ -4507,6 +4507,62 @@
         "source_url": "",
         "time": "2026-06-05T00:45:21.000Z"
       }
+    ],
+    "rt-ca5acd030470118d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "报道提及18人隔离，但未明确国家，无法提取国家级变化量。",
+        "update_id": "rt-ca5acd030470118d",
+        "source_url": "",
+        "time": "2026-06-05T07:12:38.000Z"
+      }
+    ],
+    "rt-e6125b96af5ca0c7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "low",
+        "reasoning_zh": "报道医生回家，未提供新增病例数字，无法提取delta。",
+        "update_id": "rt-e6125b96af5ca0c7",
+        "source_url": "",
+        "time": "2026-06-05T03:00:03.000Z"
+      }
+    ],
+    "rt-b4e9f4e147eb69e8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-04",
+        "confidence": "low",
+        "reasoning_zh": "报道医生返回，无新增病例数字。",
+        "update_id": "rt-b4e9f4e147eb69e8",
+        "source_url": "",
+        "time": "2026-06-04T23:32:05.000Z"
+      }
+    ],
+    "rt-eebadabaaf5aabc5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-03",
+        "confidence": "medium",
+        "reasoning_zh": "报道5人离开隔离设施，但未提及新增病例，delta为0。",
+        "update_id": "rt-eebadabaaf5aabc5",
+        "source_url": "",
+        "time": "2026-06-03T01:44:00.000Z"
+      }
     ]
   }
 }

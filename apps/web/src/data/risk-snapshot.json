@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-05T03:29:53.708864+00:00",
+  "__generated_at": "2026-06-05T09:42:11.840149+00:00",
   "date": "2026-06-05",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-05T03:29:29.738130+00:00"
+    "updatedAt": "2026-06-05T09:41:47.345558+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-05T03:29:29.738130+00:00"
+    "updatedAt": "2026-06-05T09:41:47.345558+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -114,20 +114,20 @@
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月4日美国亚利桑那州报告2026年首例汉坦病毒死亡；西班牙出院首例邮轮相关患者；法国尼斯1例确诊输入仍在监测；中国大陆无相关病例。",
-    "situation": "WHO数据每1-2周更新，期间由ArcGIS监测及各国卫生部公告补足；多国维持接触者随访，西班牙新增出院病例，美国出现本土死亡，国内HFRS基线正常。",
-    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；输入风险极低，无需改变日常行为。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持接触者监测，国内HFRS基线未变。",
+    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "6月4日无新增确诊；美国亚利桑那州报告1例死亡（非新增确诊）。",
-    "sourceSummary": "WHO DON、ArcGIS监测、各国卫生部公告",
-    "shareLine": "WHO 5/28公布累计13例（11确诊，3死）（8天前）；其后西班牙、法国各1例确诊输入，待WHO复核；美国亚利桑那州1例死亡；中国大陆无相关病例，国内HFRS基线正常。",
+    "sourceSummary": "WHO DON、ArcGIS监测、新闻线索",
+    "shareLine": "WHO 5/28公布累计13例（8天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "美国本土死亡病例",
-      "西班牙患者出院",
-      "邮轮接触者随访"
+      "邮轮接触者随访",
+      "美国死亡病例",
+      "法国输入监测"
     ],
     "evidence": [
       "WHO DON 5/28",
       "ArcGIS ANDV Dashboard",
-      "US CDC公告"
+      "新闻线索6/4"
     ]
   }
 }
