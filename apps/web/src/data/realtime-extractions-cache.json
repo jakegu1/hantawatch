@@ -4675,6 +4675,34 @@
         "source_url": "",
         "time": "2026-06-05T22:13:41.000Z"
       }
+    ],
+    "rt-424a8899cc661f9a": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查，派团队检测老鼠，但未提及具体新增病例数。",
+        "update_id": "rt-424a8899cc661f9a",
+        "source_url": "",
+        "time": "2026-06-06T06:45:51.000Z"
+      }
+    ],
+    "rt-c8b084bc7c7e3a95": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查以追踪疫情源头，但未报告新增病例数。",
+        "update_id": "rt-c8b084bc7c7e3a95",
+        "source_url": "",
+        "time": "2026-06-06T03:50:12.000Z"
+      }
     ]
   }
 }

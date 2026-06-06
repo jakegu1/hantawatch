@@ -1,42 +1,45 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-06T06:23:37.970769+00:00",
+  "__generated_at": "2026-06-06T08:31:08.141430+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-06T06:23:36.704480+00:00",
+  "last_fetched": "2026-06-06T08:31:00.220470+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-433cd339075e06e3",
-      "time": "2026-06-06T05:45:00Z",
-      "title_en": "Hantavirus : Argentina Expands Probe to Trace Outbreak Source",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，追踪疫情源头。",
+      "id": "rt-424a8899cc661f9a",
+      "time": "2026-06-06T06:45:51.000Z",
+      "title_en": "Argentina expands hantavirus probe; sends teams to test rats in Mendoza - The Hindu",
+      "body_en": "Argentina expands hantavirus probe; sends teams to test rats in Mendoza The Hindu",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，派团队在门多萨检测老鼠。",
       "key_facts_zh": [
         "阿根廷",
+        "门多萨",
         "扩大调查"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-45d6460332f337b4",
-      "time": "2026-06-06T05:37:28.000Z",
-      "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - The Washington Post",
-      "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza The Washington Post",
-      "summary_zh": "阿根廷派团队在门多萨捕鼠检测，扩大汉坦病毒调查。",
+      "id": "rt-c8b084bc7c7e3a95",
+      "time": "2026-06-06T03:50:12.000Z",
+      "title_en": "Hantavirus: Argentina expands probe to trace outbreak source - DW.com",
+      "body_en": "Hantavirus: Argentina expands probe to trace outbreak source DW.com",
+      "summary_zh": "阿根廷扩大汉坦病毒调查以追踪疫情源头。",
       "key_facts_zh": [
         "阿根廷",
-        "门多萨",
-        "捕鼠检测"
+        "扩大调查",
+        "追踪源头"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-d76c54bdcbda4477",
-      "time": "2026-06-06T05:00:00Z",
-      "title_en": "Hantavirus : Argentina expands probe , sends tests rats in Mendoza",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，在门多萨检测老鼠。",
+      "id": "rt-3117322d54f8fcc0",
+      "time": "2026-06-05T23:43:48.000Z",
+      "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - CityNews Halifax",
+      "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza CityNews Halifax",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，在门多萨诱捕检测老鼠。",
       "key_facts_zh": [
         "阿根廷",
         "门多萨",
@@ -45,50 +48,158 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-c675b76d5a1376bf",
-      "time": "2026-06-06T04:00:00Z",
-      "title_en": "Argentina traps , tests rats as hantavirus probe expands",
-      "summary_zh": "阿根廷捕鼠检测，汉坦病毒调查扩大。",
+      "id": "rt-6aa4245c265933f7",
+      "time": "2026-06-05T22:13:41.000Z",
+      "title_en": "Argentina to expand hantavirus search to a second province - CTV News",
+      "body_en": "Argentina to expand hantavirus search to a second province CTV News",
+      "summary_zh": "阿根廷将汉坦病毒搜索扩大至第二个省份。",
       "key_facts_zh": [
         "阿根廷",
-        "捕鼠检测"
+        "扩大搜索",
+        "第二省"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-037a93563c06d389",
-      "time": "2026-06-06T02:15:00Z",
-      "title_en": "Scientist warns of possible climate link to hantavirus outbreaks",
-      "summary_zh": "科学家警告汉坦病毒爆发可能与气候有关。",
+      "id": "rt-c72669f5b45cb787",
+      "time": "2026-06-05T15:39:07.000Z",
+      "title_en": "New Tool Quickly Sequences Hantavirus Genome - American Society for Microbiology",
+      "body_en": "New Tool Quickly Sequences Hantavirus Genome American Society for Microbiology",
+      "summary_zh": "新工具可快速测序汉坦病毒基因组。",
       "key_facts_zh": [
-        "科学家",
-        "气候关联"
+        "新工具",
+        "快速测序",
+        "基因组"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-3117322d54f8fcc0",
-      "time": "2026-06-05T23:43:48.000Z",
-      "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - CityNews Halifax",
-      "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza CityNews Halifax",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，派团队在门多萨诱捕并检测老鼠。",
+      "id": "rt-999b6a689627bf9b",
+      "time": "2026-06-05T12:47:00.000Z",
+      "title_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home - KTVB",
+      "body_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home KTVB",
+      "summary_zh": "自称在邮轮上治疗汉坦病毒患者的医生返家。",
       "key_facts_zh": [
-        "阿根廷",
-        "扩大调查",
-        "门多萨"
+        "美国",
+        "医生",
+        "邮轮"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-ca5acd030470118d",
+      "time": "2026-06-05T07:12:38.000Z",
+      "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
+      "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
+      "summary_zh": "邮轮汉坦病毒疫情亲历者：18人隔离中。",
+      "key_facts_zh": [
+        "邮轮",
+        "18人隔离",
+        "亲历者"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-2476392d02b3c020",
-      "time": "2026-06-05T23:30:00Z",
-      "title_en": "Argentina expands search for hantavirus - carrying rodents",
-      "summary_zh": "阿根廷扩大对携带汉坦病毒啮齿动物的搜索。",
+      "id": "rt-b4e9f4e147eb69e8",
+      "time": "2026-06-04T23:32:05.000Z",
+      "title_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home - KTVZ",
+      "body_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home KTVZ",
+      "summary_zh": "本德医生在汉坦病毒爆发中负责救治后返家。",
       "key_facts_zh": [
-        "阿根廷",
-        "扩大搜索"
+        "美国",
+        "医生",
+        "疫情"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-a822aeb2afb62f04",
+      "time": "2026-06-04T14:30:00.000Z",
+      "title_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study - Health and Me",
+      "body_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study Health and Me",
+      "summary_zh": "研究显示免疫疗法对重症汉坦病毒肺病有早期希望。",
+      "key_facts_zh": [
+        "免疫疗法",
+        "汉坦病毒",
+        "研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-fe52d8a5756f84fc",
+      "time": "2026-06-04T11:26:43.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective World Health Organization (WHO)",
+      "summary_zh": "WHO举办汉坦病毒边境卫生与入境点视角网络研讨会。",
+      "key_facts_zh": [
+        "WHO",
+        "边境卫生",
+        "汉坦病毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-86ac2287e8893609",
+      "time": "2026-06-04T03:25:00.000Z",
+      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - AP News",
+      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue AP News",
+      "summary_zh": "对抗汉坦病毒的工具显示前景，尽管资金有限。",
+      "key_facts_zh": [
+        "研究进展",
+        "资金有限"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-d632d6883634a41f",
+      "time": "2026-06-04T00:01:00.000Z",
+      "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
+      "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
+      "summary_zh": "美国本德医生在邮轮疫情后回家完成隔离。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b1a63539b9812c4d",
+      "time": "2026-06-03T23:48:06.000Z",
+      "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "对抗汉坦病毒的工具显示前景，尽管资金有限。",
+      "key_facts_zh": [
+        "研究进展",
+        "资金有限"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5107cddfa2b83190",
+      "time": "2026-06-03T14:05:07.000Z",
+      "title_en": "Sin Nombre Hantavirus Strain Kills One In Arizona - Forbes",
+      "body_en": "Sin Nombre Hantavirus Strain Kills One In Arizona Forbes",
+      "summary_zh": "美国亚利桑那州一人死于辛诺柏汉坦病毒。",
+      "key_facts_zh": [
+        "美国",
+        "亚利桑那",
+        "死亡1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-2ad83fdb7519a1ab",
+      "time": "2026-06-03T04:33:00.000Z",
+      "title_en": "First hantavirus death reported in Arizona in 2026 - AZ Family",
+      "body_en": "First hantavirus death reported in Arizona in 2026 AZ Family",
+      "summary_zh": "美国亚利桑那州报告2026年首例汉坦病毒死亡。",
+      "key_facts_zh": [
+        "美国",
+        "亚利桑那",
+        "首例死亡"
+      ],
+      "signal_strength": "high"
     }
   ]
 }
