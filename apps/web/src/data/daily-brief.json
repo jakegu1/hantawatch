@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-06T08:31:08.139282+00:00",
+  "__generated_at": "2026-06-06T13:26:56.075111+00:00",
   "date": "2026-06-06",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,14 +11,14 @@
   "daysSinceLastIntlAlert": 9,
   "whoDaysSinceOfficialUpdate": 9,
   "cluesLast24h": 9,
-  "headline24h": "阿根廷门多萨地区因邮轮疫情检测啮齿动物汉坦病毒。",
+  "headline24h": "",
   "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "6月6日阿根廷扩大汉坦病毒调查至第二省份；法国尼斯1例确诊输入仍在监测；西班牙首例邮轮相关患者已出院。",
-  "situation": "WHO数据每1-2周更新，期间由各国卫生部、ArcGIS监测及新闻线索补足。多国维持接触者监测，阿根廷扩大调查待WHO复核。国内HFRS基线正常。",
-  "riskJudgment": "中国大陆无相关病例，HFRS基线正常；邮轮疫情距中国约16500km，输入风险极低",
+  "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内基线未变。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
   "newCases": "6月6日无新增确诊；美国亚利桑那州1例死亡（非新增）。",
-  "sourceSummary": "WHO DON、ArcGIS监测、新闻线索",
-  "shareLine": "WHO 5/28公布累计13例（9天前）；其后西班牙、法国各1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
+  "sourceSummary": "WHO官方通报+ArcGIS监测+新闻线索",
+  "shareLine": "WHO 5/28公布累计13例（9天前）；其后法国、西班牙各1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
     "阿根廷扩大调查",
     "法国输入监测",
@@ -27,7 +27,7 @@
   "evidence": [
     "WHO DON 5/28",
     "ArcGIS ANDV Dashboard",
-    "新闻线索：阿根廷调查"
+    "阿根廷新闻线索"
   ],
   "_guardrail_warnings": [
     "brief mentions \"阿根廷\" but it is not in mvHondiusImports or arcgisCases"
