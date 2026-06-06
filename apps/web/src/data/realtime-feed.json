@@ -1,19 +1,45 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-06T22:02:17.516286+00:00",
+  "__generated_at": "2026-06-06T23:58:42.805977+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-06T22:02:16.304608+00:00",
+  "last_fetched": "2026-06-06T23:58:41.576443+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-bd37734813b47dd7",
+      "time": "2026-06-06T23:06:57.000Z",
+      "title_en": "Hantavirus monitoring completed for Texas passengers after cruise ship outbreak - KVIA",
+      "body_en": "Hantavirus monitoring completed for Texas passengers after cruise ship outbreak KVIA",
+      "summary_zh": "美国德州邮轮疫情后结束对乘客的汉坦病毒监测。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "监测结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d17d11d841fab46f",
+      "time": "2026-06-06T22:52:06.000Z",
+      "title_en": "Texas Department of State Health Services ends Hantavirus monitoring for cruise ship passengers - MyHighPlains.com",
+      "body_en": "Texas Department of State Health Services ends Hantavirus monitoring for cruise ship passengers MyHighPlains.com",
+      "summary_zh": "德州卫生局结束对邮轮乘客的汉坦病毒监测。",
+      "key_facts_zh": [
+        "美国",
+        "德州卫生局",
+        "监测结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-dd4f4c4531b99be0",
       "time": "2026-06-06T14:56:01.000Z",
       "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
       "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO 称汉坦病毒病例仍为13例，月余无新增死亡。",
+      "summary_zh": "WHO 称汉坦病毒病例仍为13例，超一月无新增死亡。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -26,13 +52,13 @@
       "time": "2026-06-06T09:31:00.000Z",
       "title_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe - The Independent",
       "body_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe The Independent",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，追踪荷兰游客行踪。",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，追踪荷兰游客行程。",
       "key_facts_zh": [
         "阿根廷",
         "荷兰游客",
         "扩大调查"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-424a8899cc661f9a",
@@ -43,7 +69,7 @@
       "key_facts_zh": [
         "阿根廷",
         "门多萨",
-        "检测老鼠"
+        "老鼠检测"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +78,10 @@
       "time": "2026-06-06T03:56:33.000Z",
       "title_en": "Hantavirus: Argentina expands probe to trace outbreak source - DW.com",
       "body_en": "Hantavirus: Argentina expands probe to trace outbreak source DW.com",
-      "summary_zh": "阿根廷扩大汉坦病毒调查以追踪疫情源头。",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，追踪疫情源头。",
       "key_facts_zh": [
         "阿根廷",
-        "扩大调查",
-        "追踪源头"
+        "扩大调查"
       ],
       "signal_strength": "high"
     },
@@ -65,10 +90,10 @@
       "time": "2026-06-05T23:43:48.000Z",
       "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - CityNews Halifax",
       "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza CityNews Halifax",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，派队赴门多萨捕鼠检测。",
+      "summary_zh": "阿根廷派团队赴门多萨捕鼠检测，扩大汉坦病毒调查。",
       "key_facts_zh": [
         "阿根廷",
-        "扩大调查",
+        "门多萨",
         "捕鼠检测"
       ],
       "signal_strength": "high"
@@ -78,11 +103,10 @@
       "time": "2026-06-05T22:13:41.000Z",
       "title_en": "Argentina to expand hantavirus search to a second province - CTV News",
       "body_en": "Argentina to expand hantavirus search to a second province CTV News",
-      "summary_zh": "阿根廷将汉坦病毒搜索扩大至第二个省份。",
+      "summary_zh": "阿根廷将汉坦病毒搜索范围扩大至第二个省份。",
       "key_facts_zh": [
         "阿根廷",
-        "扩大搜索",
-        "第二省"
+        "扩大搜索"
       ],
       "signal_strength": "high"
     },
@@ -94,8 +118,7 @@
       "summary_zh": "新工具可快速测序汉坦病毒基因组。",
       "key_facts_zh": [
         "新工具",
-        "快速测序",
-        "基因组"
+        "快速测序"
       ],
       "signal_strength": "medium"
     },
@@ -106,8 +129,8 @@
       "body_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home KTVB",
       "summary_zh": "自称在邮轮上治疗汉坦病毒患者的医生返回家中。",
       "key_facts_zh": [
-        "医生",
         "邮轮",
+        "医生",
         "返回"
       ],
       "signal_strength": "high"
@@ -130,11 +153,11 @@
       "time": "2026-06-04T23:32:05.000Z",
       "title_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home - KTVZ",
       "body_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home KTVZ",
-      "summary_zh": "本德医生在致命汉坦病毒爆发期间负责，终返家。",
+      "summary_zh": "在致命汉坦病毒疫情中负责的医生终于返回家中。",
       "key_facts_zh": [
         "医生",
-        "本德",
-        "返回"
+        "返回",
+        "疫情"
       ],
       "signal_strength": "high"
     },
@@ -143,10 +166,10 @@
       "time": "2026-06-04T14:30:00.000Z",
       "title_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study - Health and Me",
       "body_en": "Immunotherapy Shows Early Promise Against Severe Hantavirus Lung Disease: Study Health and Me",
-      "summary_zh": "研究显示免疫疗法对严重汉坦病毒肺病有早期希望。",
+      "summary_zh": "研究显示免疫疗法对重症汉坦病毒肺病早期有效。",
       "key_facts_zh": [
         "免疫疗法",
-        "汉坦病毒肺病"
+        "早期有效"
       ],
       "signal_strength": "medium"
     },
@@ -155,11 +178,11 @@
       "time": "2026-06-04T11:26:43.000Z",
       "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective - World Health Organization (WHO)",
       "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective World Health Organization (WHO)",
-      "summary_zh": "WHO 举办网络研讨会，聚焦汉坦病毒与边境卫生。",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦边境卫生与入境点。",
       "key_facts_zh": [
         "WHO",
         "边境卫生",
-        "网络研讨会"
+        "研讨会"
       ],
       "signal_strength": "high"
     },
@@ -168,7 +191,7 @@
       "time": "2026-06-04T03:25:00.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - AP News",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue AP News",
-      "summary_zh": "对抗汉坦病毒的工具在有限资金下显示希望，研究者盼继续。",
+      "summary_zh": "对抗汉坦病毒的工具在资金有限下显示希望，研究者盼继续。",
       "key_facts_zh": [
         "研究工具",
         "资金有限"
@@ -193,7 +216,7 @@
       "time": "2026-06-03T23:48:06.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "对抗汉坦病毒的工具在有限资金下显示希望，研究者盼继续。",
+      "summary_zh": "对抗汉坦病毒的工具在资金有限下显示希望，研究者盼继续。",
       "key_facts_zh": [
         "研究工具",
         "资金有限"
@@ -209,7 +232,7 @@
       "key_facts_zh": [
         "美国",
         "亚利桑那",
-        "死亡1例"
+        "1 例死亡"
       ],
       "signal_strength": "high"
     }
