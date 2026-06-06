@@ -4633,6 +4633,48 @@
         "source_url": "",
         "time": "2026-06-05T14:00:00Z"
       }
+    ],
+    "rt-45d6460332f337b4": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查，派遣团队在门多萨诱捕和检测老鼠，未提及具体病例数字变化。",
+        "update_id": "rt-45d6460332f337b4",
+        "source_url": "",
+        "time": "2026-06-06T02:37:28.000Z"
+      }
+    ],
+    "rt-3117322d54f8fcc0": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查，派遣团队在门多萨诱捕和检测老鼠，未提及具体病例数字变化。",
+        "update_id": "rt-3117322d54f8fcc0",
+        "source_url": "",
+        "time": "2026-06-05T23:43:48.000Z"
+      }
+    ],
+    "rt-6aa4245c265933f7": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷将汉坦病毒搜索扩大至第二个省份，未提及具体病例数字变化。",
+        "update_id": "rt-6aa4245c265933f7",
+        "source_url": "",
+        "time": "2026-06-05T22:13:41.000Z"
+      }
     ]
   }
 }
