@@ -4731,6 +4731,48 @@
         "source_url": "",
         "time": "2026-06-06T09:31:00.000Z"
       }
+    ],
+    "rt-dd4f4c4531b99be0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "high",
+        "reasoning_zh": "WHO称汉坦病毒病例数仍为13例，无新增死亡，无新增病例。",
+        "update_id": "rt-dd4f4c4531b99be0",
+        "source_url": "",
+        "time": "2026-06-06T14:56:01.000Z"
+      }
+    ],
+    "rt-2c9f3ac1c4abaf10": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查，派团队捕鼠检测，无具体新增数字。",
+        "update_id": "rt-2c9f3ac1c4abaf10",
+        "source_url": "",
+        "time": "2026-06-05T23:28:43.000Z"
+      }
+    ],
+    "rt-64114e243a582be5": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-05",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷将汉坦病毒搜索扩大至第二个省份，无新增病例数字。",
+        "update_id": "rt-64114e243a582be5",
+        "source_url": "",
+        "time": "2026-06-05T22:13:41.000Z"
+      }
     ]
   }
 }
