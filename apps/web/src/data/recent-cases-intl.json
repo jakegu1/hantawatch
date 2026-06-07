@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-07T15:20:50.010693+00:00",
+  "__generated_at": "2026-06-07T17:08:04.224174+00:00",
   "cases": [
     {
       "id": "who-2026-don604",
@@ -35,22 +35,6 @@
       }
     },
     {
-      "id": "who-2026-don600",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-08",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮安第斯型聚集疫情",
-      "summary": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
-      "source": {
-        "name": "WHO 疾病暴发新闻（DON）",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-06-07T13:46:53.450584+00:00",
-        "confidence": "official"
-      }
-    },
-    {
       "id": "surv-news-news.google.com-rss-articles-cbmitwfbvv95cuxnoxg1d1v4m093ckd3y3nkrup4tvjunhpsx2pvmwjxcdjftzlfduvrwgxxs0xhwlddwx",
       "regionCode": "INT",
       "serotypeId": "other",
@@ -62,7 +46,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNOXg1d1V4M093ckd3Y3NKRUp4TVJuNHpSX2pvMWJxcDJfTzlFdUVrWGxXS0xHWldDWXRYUUFfZGMxbnUxcGFOcmZUdGd3Z2xTRko1dER2RDFMeFBiM1BOWWtzMFpUUTJsbk9MMDU2SnRBQ2VsaURvZTNOS1djcU1USFl0YzA2bWNVb3BaS1hmWTMxTURmVnBSTWs4RnZIODBYbUZVMXBWVDBtaGNVV3dCaVhlV2ZUS1k?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "surveillance"
       }
     },
@@ -90,11 +74,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "欧洲 CDC 发布 2026 年 5 月 23-29 日传染病威胁周报。",
-      "summary": "欧洲 CDC；周报",
+      "summary": "欧洲 CDC；传染病威胁；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTDlKOEhEblp0bG5aRGRWTjBWYmE0QjMtVE1tTTh5Z1ZCQ1lya1ZqeWNvcVZEVzJTbjVReHVUNm1QeTJMSnNjNlZIWWhpVFlOUzd2OFNxVUZWOFZJVG9GRFJCZTBBa0UtbUhIY19nUXhaZ3RBNWhWTGwyY2RiZWJnZG1nR0Y1R1pBaWY5ZlJnaVdUVXNRNUhQQkc2WnhZdjZQLVBlcWVoVmNnUQ?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "surveillance"
       }
     },
@@ -110,7 +94,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxORDIzNXVwN3h0bDJTMlFPajZEVnZqcU1qWk5FdzBTUlB6QjEwcWg3UTNrZG1JTldUN3ptNFRYT1JWalpTUGh4T2cyQTZYdUhMYkxTWFRiN1d1UXJ4eEpvMHUwNkxTdzJrWmRscUFhck84TWQ1TkFrWS1SbkdzbkRad2FZSUE0WUFFcmRKNmhFRlZvVnM2WWVxTmlQOGluNE1IeUxkQ2M0R056MEhMeHoydGlDaGhFbzNXV3p2eXc3UFJLN2RhZmZGbXhleF83cXFVUEY2RWcxMnZCZlNLS29BT1pjTjducGY4Z3JHdTRDTm8ycTRUWkhpZ0lxalRqUHVYWWVjQ3dxaUlmYlNobXVsbVJhenNXSUc4N0xDRUppZHo2UEZUZU9ZUHNqMmNXbXlLRHF1RkVOaDJwVmxqLUtVeUR3?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "surveillance"
       }
     },
@@ -142,7 +126,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNeDJtRXhpS3Q0QWZNQ0J1ekptNGNLRklmS3NDYV9Yc2J5VjlWU0dieXBlMDdnRGdiZDdXblk3eF9IYml2TEl3UFJsWldXNWxkRlJZSGRrTVREN3ZEWTR6ekpRTjlDazExVUl6NE4yWGtNWDI0Wk5aR3A1bHloVnNsWFY1X1Q1ZUxiYm80R3o1S1JOVFk0UzU3cTB4T3lUNEFWc2gtVmhWYUN4SHEzUzhNT1ZvdkJZbU1tZzh1bzl4dklHcVdQMm9TTGlkT0tGMi1NSE1DTlVKeFc?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "surveillance"
       }
     },
@@ -499,22 +483,6 @@
       }
     },
     {
-      "id": "surv-news-news.google.com-rss-articles-cbmiuwjbvv95cuxps3huahrvoudxzfzmqwtpre9rym1mtkvmvldetej6dknztuznwhlctk85twhzrktuof",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-08",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "欧洲 CDC 发布国际邮轮汉坦病毒（安第斯病毒）暴发快速风险评估（已归档）。",
-      "summary": "欧洲 CDC；汉坦病毒；邮轮",
-      "source": {
-        "name": "专业监测源",
-        "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPS3hUaHRVOUdxZFZmQWtpRE9rYm1MTkVmVldETEJ6dkNZTUZNWHlCTk85TWhZRktUOFk3cnlLcl9SR3YwSEV5cW1Ia0lrUElIcEJOS1RvOE5seElfa0tMaTU2Uk1RSy15TnpTSnVNcEE4bTJGUEdzVnd3TUJIRnB3dC1pMjRUanVDMjdlRkZsV0kxZ2w4TkVlcXBkN3c1dURJNEs3MDFiVHRoMWhTQnFHU0NMS1duNktCaGZLT0h5dkx3U0xvTmdSdzNLU2dtQXJOdml4eDFsSTRCdm0zWVBlNS1oMU1qNXFDZlloV084dmJiSmxOWDNMemRrYkViODFZZHJGMklZSGU2elZ2eTZCTVdmdjFUYTh6UzNwREsyOUxNdjVqUHBFR0Q5YVFjVFh1Rk1rSE9uRlc2X3c?oc=5",
-        "retrievedAt": "2026-06-07T03:35:45.800770+00:00",
-        "confidence": "surveillance"
-      }
-    },
-    {
       "id": "manual-2026-06-07-texas-monitoring-end",
       "regionCode": "INT",
       "serotypeId": "andes",
@@ -526,7 +494,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-06-07T15:19:49.361197+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.269232+00:00",
         "confidence": "news"
       }
     },
@@ -542,7 +510,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-06-07T15:19:49.361197+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.269232+00:00",
         "confidence": "news"
       }
     },
@@ -558,7 +526,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-06-07T15:19:49.361197+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.269232+00:00",
         "confidence": "news"
       }
     },
@@ -574,7 +542,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "news"
       }
     },
@@ -590,7 +558,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "news"
       }
     },
@@ -606,7 +574,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-06-07T15:19:49.361197+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.269232+00:00",
         "confidence": "news"
       }
     },
@@ -622,7 +590,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-06-07T15:19:49.360241+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.268283+00:00",
         "confidence": "news"
       }
     },
@@ -638,7 +606,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-06-07T15:19:49.361197+00:00",
+        "retrievedAt": "2026-06-07T17:07:44.269232+00:00",
         "confidence": "news"
       }
     }
