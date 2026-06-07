@@ -4843,6 +4843,132 @@
         "source_url": "",
         "time": "2026-06-06T22:52:06.000Z"
       }
+    ],
+    "rt-8715768e85e92a75": [
+      {
+        "iso2": "SG",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "新加坡两名居民完成汉坦病毒隔离，无新增病例。",
+        "update_id": "rt-8715768e85e92a75",
+        "source_url": "",
+        "time": "2026-06-07T07:31:04.000Z"
+      }
+    ],
+    "rt-4fcc825ee3693deb": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "WHO称汉坦病毒病例数稳定在13例，无新增死亡，未提具体国家。",
+        "update_id": "rt-4fcc825ee3693deb",
+        "source_url": "",
+        "time": "2026-06-07T05:58:16.000Z"
+      }
+    ],
+    "rt-cdb890a64b0d360e": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷汉坦病毒搜索扩大至第二省，无具体数字变化。",
+        "update_id": "rt-cdb890a64b0d360e",
+        "source_url": "",
+        "time": "2026-06-07T05:24:44.000Z"
+      }
+    ],
+    "rt-f2f0918b77ceb9df": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "德州游轮乘客完成汉坦病毒监测，无感染。",
+        "update_id": "rt-f2f0918b77ceb9df",
+        "source_url": "",
+        "time": "2026-06-07T04:56:50.000Z"
+      }
+    ],
+    "rt-9259ae6a54bbb27a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "WHO称汉坦病毒病例仍为13例，无新增死亡，未提具体国家。",
+        "update_id": "rt-9259ae6a54bbb27a",
+        "source_url": "",
+        "time": "2026-06-07T03:45:00.000Z"
+      }
+    ],
+    "rt-0d381e66f2e58319": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "low",
+        "reasoning_zh": "报道讨论汉坦病毒研究工具，无具体国家或数字变化。",
+        "update_id": "rt-0d381e66f2e58319",
+        "source_url": "",
+        "time": "2026-06-07T00:53:00.000Z"
+      }
+    ],
+    "rt-73365e18b07f3438": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "high",
+        "reasoning_zh": "德州两名游轮乘客完成汉坦病毒监测，无新增病例。",
+        "update_id": "rt-73365e18b07f3438",
+        "source_url": "",
+        "time": "2026-06-06T22:38:03.000Z"
+      }
+    ],
+    "rt-b8212ba6594e8b40": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "high",
+        "reasoning_zh": "德州乘客完成汉坦病毒监测，无新增病例。",
+        "update_id": "rt-b8212ba6594e8b40",
+        "source_url": "",
+        "time": "2026-06-06T22:11:00.000Z"
+      }
+    ],
+    "rt-a0dc439475d3b248": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "low",
+        "reasoning_zh": "标题和正文仅提及汉坦病毒危险警告，未提供具体国家、新增病例或死亡数字。",
+        "update_id": "rt-a0dc439475d3b248",
+        "source_url": "",
+        "time": "2026-06-06T19:30:39.000Z"
+      }
     ]
   }
 }
