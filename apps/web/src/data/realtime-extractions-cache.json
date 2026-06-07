@@ -4773,6 +4773,76 @@
         "source_url": "",
         "time": "2026-06-05T22:13:41.000Z"
       }
+    ],
+    "rt-a6f4124c77e3d7e7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "medium",
+        "reasoning_zh": "美国德州乘客解除汉坦病毒隔离，无新增病例数字。",
+        "update_id": "rt-a6f4124c77e3d7e7",
+        "source_url": "",
+        "time": "2026-06-07T02:32:43.000Z"
+      }
+    ],
+    "rt-57e65816ca4e3c3d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "low",
+        "reasoning_zh": "报道提及汉坦病毒研究工具，未涉及具体国家或病例变化。",
+        "update_id": "rt-57e65816ca4e3c3d",
+        "source_url": "",
+        "time": "2026-06-07T00:53:00.000Z"
+      }
+    ],
+    "rt-7cd73d9f435658b1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "medium",
+        "reasoning_zh": "德州游轮乘客完成汉坦病毒监测，无感染，无新增病例。",
+        "update_id": "rt-7cd73d9f435658b1",
+        "source_url": "",
+        "time": "2026-06-07T00:08:28.000Z"
+      }
+    ],
+    "rt-bd37734813b47dd7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "德州游轮乘客完成汉坦病毒监测，无新增病例。",
+        "update_id": "rt-bd37734813b47dd7",
+        "source_url": "",
+        "time": "2026-06-06T23:06:57.000Z"
+      }
+    ],
+    "rt-d17d11d841fab46f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "德州卫生部门结束游轮乘客汉坦病毒监测，无新增病例。",
+        "update_id": "rt-d17d11d841fab46f",
+        "source_url": "",
+        "time": "2026-06-06T22:52:06.000Z"
+      }
     ]
   }
 }
