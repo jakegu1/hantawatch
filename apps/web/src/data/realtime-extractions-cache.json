@@ -5025,6 +5025,34 @@
         "source_url": "",
         "time": "2026-06-06T12:20:02.000Z"
       }
+    ],
+    "rt-55f880cfe4d8d6b8": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到荷兰鹿特丹邮轮爆发汉坦病毒，但未提供新增病例数字，无法提取delta。",
+        "update_id": "rt-55f880cfe4d8d6b8",
+        "source_url": "",
+        "time": "2026-06-07T11:55:00.000Z"
+      }
+    ],
+    "rt-ebd7733ec6999ca3": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "low",
+        "reasoning_zh": "新闻介绍汉坦病毒测序技术，未涉及具体国家或病例数字。",
+        "update_id": "rt-ebd7733ec6999ca3",
+        "source_url": "",
+        "time": "2026-06-06T02:36:00.000Z"
+      }
     ]
   }
 }

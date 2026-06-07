@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-07T12:00:31.186460+00:00",
+  "__generated_at": "2026-06-07T13:47:18.561965+00:00",
   "date": "2026-06-07",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-07T12:00:03.849335+00:00"
+    "updatedAt": "2026-06-07T13:46:53.449842+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-07T12:00:03.849335+00:00"
+    "updatedAt": "2026-06-07T13:46:53.449842+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -114,20 +114,20 @@
     "headline24h": "",
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月7日美国得州邮轮乘客结束监测，无人感染；新加坡两名居民结束隔离；法国1例确诊输入仍在ICU。",
-    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持随访，国内HFRS基线正常。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内HFRS基线未变。",
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "6月7日无新增确诊或初筛阳性。",
-    "sourceSummary": "WHO、各国卫生部、ArcGIS监测",
+    "sourceSummary": "主要依据WHO、各国官方及ArcGIS监测。",
     "shareLine": "WHO 5/28公布累计13例（10天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "法国确诊输入监测",
-      "多国邮轮接触者随访",
-      "WHO数据更新"
+      "法国ICU病例",
+      "荷兰邮轮动态",
+      "多国监测进展"
     ],
     "evidence": [
       "WHO DON 5/28",
-      "法国卫生部6/6",
-      "ArcGIS ANDV Dashboard"
+      "ArcGIS ANDV Dashboard",
+      "各国卫生部公告"
     ]
   }
 }
