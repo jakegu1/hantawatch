@@ -5053,6 +5053,34 @@
         "source_url": "",
         "time": "2026-06-06T02:36:00.000Z"
       }
+    ],
+    "rt-c8a3da71c7c84f1c": [
+      {
+        "iso2": "NZ",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "新西兰邮轮乘客汉坦病毒检测阴性，无新增病例。",
+        "update_id": "rt-c8a3da71c7c84f1c",
+        "source_url": "",
+        "time": "2026-06-07T16:00:00.000Z"
+      }
+    ],
+    "rt-4cd51a25b12b5c9f": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷扩大汉坦病毒调查，派队捕鼠检测，无新增病例数据。",
+        "update_id": "rt-4cd51a25b12b5c9f",
+        "source_url": "",
+        "time": "2026-06-06T01:18:39.000Z"
+      }
     ]
   }
 }
