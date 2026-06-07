@@ -68,10 +68,15 @@ export default function HomePage() {
   } = useAppData();
   const refreshAppData = useRefreshAppData();
 
-  // Start from the JSON baked into the bundle (instant paint, no network
-  // dependency). After mount, optionally refresh from /api/clusters so
-  // editorial overrides (saved via the web /admin queue) take effect.
-  const [liveClusters, setLiveClusters] = useState<ActiveCluster[]>(baselineClusters);
+  // Cluster rows for NearestAndesCard: baseline comes from DataProvider
+  // (/api/miniapp-snapshot, updates after upload without republish). Optional
+  // /api/clusters overlay adds Supabase editorial overrides. Do NOT keep a
+  // separate useState seeded only at mount — that was the 12 vs 13 bug.
+  const [apiClusters, setApiClusters] = useState<ActiveCluster[] | null>(null);
+  const liveClusters = useMemo(
+    () => (apiClusters?.length ? apiClusters : baselineClusters),
+    [apiClusters, baselineClusters],
+  );
   const liveRecentCases = useLiveRecentCases();
 
   // 口径 B intake values for the DailyBriefBanner — derived from the live
@@ -90,6 +95,24 @@ export default function HomePage() {
     };
   }, [situationSnapshot]);
 
+  /** Shared 口径 B ledger — keeps NearestAndesCard in sync with RealtimeSituation. */
+  const andesCaseLedger = useMemo(() => {
+    const head = situationSnapshot.headline as Record<string, unknown>;
+    const totals = outbreakStatus[0]?.totals;
+    return {
+      reportedTotal:
+        typeof head.currentReportedCases === 'number'
+          ? head.currentReportedCases
+          : totals?.all,
+      confirmed: totals?.confirmed,
+      suspected: totals?.indeterminate,
+      deaths: totals?.deaths,
+      whoDaysAgo: typeof head.whoDaysAgo === 'number' ? head.whoDaysAgo : undefined,
+      whoLastUpdateZh:
+        typeof head.whoLastUpdateZh === 'string' ? head.whoLastUpdateZh : undefined,
+    };
+  }, [situationSnapshot, outbreakStatus]);
+
   // RecentCasesList: filter to authoritative sources only (audit #13).
   const officialRecentCases = useMemo(
     () => filterOfficialTimelineCases(liveRecentCases),
@@ -105,7 +128,7 @@ export default function HomePage() {
     fetchClusters()
       .then((data) => {
         if (cancelled) return;
-        if (Array.isArray(data) && data.length > 0) setLiveClusters(data);
+        if (Array.isArray(data) && data.length > 0) setApiClusters(data);
       })
       .catch((err) => {
         console.error('[HantaWatch] fetchClusters failed, keeping bundled baseline:', err);
@@ -160,7 +183,7 @@ export default function HomePage() {
   usePullDownRefresh(() => {
     const p1 = fetchClusters()
       .then((data) => {
-        if (Array.isArray(data) && data.length > 0) setLiveClusters(data);
+        if (Array.isArray(data) && data.length > 0) setApiClusters(data);
       })
       .catch(() => {});
     const p2 = fetchHondiusImports()
@@ -472,6 +495,7 @@ export default function HomePage() {
             result={nearestAndes}
             lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
             importProximity={hasImportDistance ? nearestImport : null}
+            caseLedger={andesCaseLedger}
           />
         </View>
 

@@ -18,6 +18,16 @@ function fmt(n: number): string {
   return n.toLocaleString('zh-CN');
 }
 
+/** Authoritative case ledger from realtime-situation / outbreak-status (口径 B). */
+export interface AndesCaseLedger {
+  reportedTotal?: number;
+  confirmed?: number;
+  suspected?: number;
+  deaths?: number;
+  whoDaysAgo?: number;
+  whoLastUpdateZh?: string;
+}
+
 interface Props {
   result: NearestAndesResult;
   /** ISO timestamp of the last collector run (from `meta.json#lastCollectedAt`).
@@ -26,9 +36,11 @@ interface Props {
    *  Without this, those two states look identical from the UI alone. */
   lastCheckedAt?: string;
   importProximity?: ImportProximity | null;
+  /** When set, overrides cluster JSON counts so the card matches RealtimeSituation. */
+  caseLedger?: AndesCaseLedger;
 }
 
-export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Props) {
+export function NearestAndesCard({ result, lastCheckedAt, importProximity, caseLedger }: Props) {
   const { nearest, count, all } = result;
 
   if (!nearest) {
@@ -52,7 +64,17 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
   const displayLocation = hasCloserImport
     ? `${importProximity.flag} ${importProximity.nameZh} · ${importProximity.statusZh}`
     : nearest.location?.name || '位置待定位';
-  const ago = relativeDateZh(nearest.lastUpdate);
+  const clusterConfirmed = nearest.confirmedCases ?? 0;
+  const clusterSuspected = nearest.suspectedCases ?? 0;
+  const clusterTotal = clusterConfirmed + clusterSuspected;
+  const displayConfirmed = caseLedger?.confirmed ?? clusterConfirmed;
+  const displaySuspected = caseLedger?.suspected ?? clusterSuspected;
+  const displayDeaths = caseLedger?.deaths ?? nearest.deaths ?? 0;
+  const displayTotal = caseLedger?.reportedTotal ?? clusterTotal;
+  const whoAgoLabel =
+    caseLedger?.whoDaysAgo != null
+      ? `${caseLedger.whoDaysAgo}天前`
+      : relativeDateZh(nearest.lastUpdate);
   const markerColor = hasCloserImport ? '#d97706' : SEROTYPES[nearest.serotypeId]?.color ?? '#dc2626';
 
   return (
@@ -151,7 +173,9 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
           style={{ gap: '8rpx', marginBottom: '18rpx' }}
         >
           <Text style={{ color: '#6b7280', fontSize: '22rpx' }}>
-            🗓 WHO 通报 <Text style={{ color: '#374151', fontWeight: 600 }}>{ago}</Text>
+            🗓 WHO{' '}
+            {caseLedger?.whoLastUpdateZh ? `${caseLedger.whoLastUpdateZh} 公布 · ` : '通报 '}
+            <Text style={{ color: '#374151', fontWeight: 600 }}>{whoAgoLabel}</Text>
           </Text>
           {lastCheckedAt && (
             <>
@@ -221,15 +245,15 @@ export function NearestAndesCard({ result, lastCheckedAt, importProximity }: Pro
           <View className="flex items-baseline" style={{ gap: '6rpx', marginBottom: '10rpx' }}>
             <Text style={{ fontSize: '22rpx', color: '#6b7280' }}>累计</Text>
             <Text style={{ fontSize: '36rpx', fontWeight: 700, color: '#111827', lineHeight: 1 }}>
-              {(nearest.confirmedCases ?? 0) + (nearest.suspectedCases ?? 0)}
+              {displayTotal}
             </Text>
             <Text style={{ fontSize: '22rpx', color: '#6b7280' }}>例</Text>
             <Text style={{ fontSize: '20rpx', color: '#9ca3af', marginLeft: '6rpx' }}>= 确诊 + 疑似，含死亡</Text>
           </View>
           <View style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8rpx' }}>
-            <Stat label="确诊" value={nearest.confirmedCases ?? 0} color="#111827" />
-            <Stat label="疑似" value={nearest.suspectedCases ?? 0} color="#a16207" />
-            <Stat label="其中死亡" value={nearest.deaths ?? 0} color="#b91c1c" />
+            <Stat label="确诊" value={displayConfirmed} color="#111827" />
+            <Stat label="疑似" value={displaySuspected} color="#a16207" />
+            <Stat label="其中死亡" value={displayDeaths} color="#b91c1c" />
           </View>
         </View>
 
