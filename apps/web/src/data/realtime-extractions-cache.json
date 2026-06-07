@@ -4969,6 +4969,62 @@
         "source_url": "",
         "time": "2026-06-06T19:30:39.000Z"
       }
+    ],
+    "rt-742b9bd08c0d42c5": [
+      {
+        "iso2": "SG",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "新加坡居民完成隔离，无新增病例或死亡。",
+        "update_id": "rt-742b9bd08c0d42c5",
+        "source_url": "",
+        "time": "2026-06-07T08:32:00.000Z"
+      }
+    ],
+    "rt-856628a9fd4b8d7b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "德州游轮乘客完成监测，无感染，无新增。",
+        "update_id": "rt-856628a9fd4b8d7b",
+        "source_url": "",
+        "time": "2026-06-07T08:08:46.000Z"
+      }
+    ],
+    "rt-dd6093d39c10a13c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "high",
+        "reasoning_zh": "WHO报告全球病例仍为13例，无新增死亡。",
+        "update_id": "rt-dd6093d39c10a13c",
+        "source_url": "",
+        "time": "2026-06-07T03:45:00.000Z"
+      }
+    ],
+    "rt-e1fd0edbb211154d": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-06",
+        "confidence": "high",
+        "reasoning_zh": "阿根廷扩大调查，未报告新增病例。",
+        "update_id": "rt-e1fd0edbb211154d",
+        "source_url": "",
+        "time": "2026-06-06T12:20:02.000Z"
+      }
     ]
   }
 }

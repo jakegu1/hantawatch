@@ -12,6 +12,36 @@
   },
   "leads": [
     {
+      "id": "manual-2026-06-07-texas-monitoring-end",
+      "title": "得州邮轮乘客汉坦病毒监测结束，无人感染",
+      "summary": "美国得州卫生部门宣布 MV Hondius 相关邮轮乘客州级监测已于 6 月 7 日完成，未发现感染；CDC 内布拉斯加隔离单元仍有联邦级 42 天监测进行中。",
+      "date": "2026-06-07",
+      "serotypeId": "andes",
+      "countryIso2": "US",
+      "sourceOutlet": "Texas DSHS / ABC13 Houston",
+      "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html"
+    },
+    {
+      "id": "manual-2026-06-06-france-contacts-released",
+      "title": "法国 22 名汉坦病毒接触者解除隔离，确诊患者仍在 ICU",
+      "summary": "法国卫生部确认 22 名航班接触者于 6 月 6 日结束隔离；1 例确诊仍在巴黎 ICU 状态稳定，4 名邮轮直接暴露者隔离至 6 月 21 日。",
+      "date": "2026-06-06",
+      "serotypeId": "andes",
+      "countryIso2": "FR",
+      "sourceOutlet": "Ministère de la Santé / TF1 Info",
+      "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html"
+    },
+    {
+      "id": "manual-2026-06-04-spain-first-discharged",
+      "title": "西班牙首例 MV Hondius 汉坦病毒确诊患者出院",
+      "summary": "西班牙卫生部称首例确诊（70 岁男性）连续三天无症状且两次 PCR 阴性后于 6 月 4 日出院；第 2 例 5 月 25 日阳性、症状轻微仍在院。",
+      "date": "2026-06-04",
+      "serotypeId": "andes",
+      "countryIso2": "ES",
+      "sourceOutlet": "西班牙卫生部 / Xinhua",
+      "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html"
+    },
+    {
       "id": "manual-2026-05-08-taiwan",
       "title": "台湾省 CDC 周报：北部地区出现 1 例汉坦病毒重症病例",
       "summary": "病患为中年男性，疑似职业暴露相关。台湾省 CDC 提醒农林从业者注意防鼠卫生。台湾省每年报告汉坦相关病例约 0-3 例，属于偶发型。",

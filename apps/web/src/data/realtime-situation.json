@@ -15,9 +15,12 @@
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 13,
-    "sinceWhoNewCases": 0,
-    "sinceWhoNewCountries": [],
-    "currentReportedCases": 13
+    "sinceWhoNewCases": 2,
+    "sinceWhoNewCountries": [
+      "法国",
+      "西班牙"
+    ],
+    "currentReportedCases": 15
   },
   "ruler": {
     "maxKm": 20000,
@@ -36,14 +39,14 @@
       },
       {
         "km": 8400,
-        "countryZh": "荷兰",
+        "countryZh": "西班牙",
         "label": "已确诊 2 例",
         "tier": "tertiary"
       },
       {
         "km": 8400,
-        "countryZh": "西班牙",
-        "label": "已确诊 1 例",
+        "countryZh": "荷兰",
+        "label": "已确诊 2 例",
         "tier": "tertiary"
       },
       {
@@ -66,6 +69,12 @@
       },
       {
         "km": 8400,
+        "countryZh": "澳大利亚",
+        "label": "监测中",
+        "tier": "tertiary"
+      },
+      {
+        "km": 8400,
         "countryZh": "比利时",
         "label": "监测中",
         "tier": "tertiary"
@@ -73,6 +82,46 @@
     ]
   },
   "events": [
+    {
+      "at": "2026-06-07T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 0,
+      "type": "monitoring",
+      "shortContext": "监测中（13 人接触者）",
+      "verdict": "待 WHO 复核",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-06-07T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "澳大利亚",
+      "delta": 0,
+      "type": "monitoring",
+      "shortContext": "监测中（6 人接触者）",
+      "verdict": "待 WHO 复核",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-06-06T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "法国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-06-05T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 2,
+      "type": "confirmed",
+      "shortContext": "确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "es_isciii"
+    },
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
@@ -110,46 +159,6 @@
       "source": "official_cdc"
     },
     {
-      "at": "2026-05-15T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "西班牙",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "确诊输入",
-      "verdict": "已纳入 WHO",
-      "source": "es_isciii"
-    },
-    {
-      "at": "2026-05-15T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "法国",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "确诊输入",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-15T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "美国",
-      "delta": 0,
-      "type": "monitoring",
-      "shortContext": "监测中（41 人接触者）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-15T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "澳大利亚",
-      "delta": 0,
-      "type": "quarantine",
-      "shortContext": "隔离监测中（6 人）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
       "at": "2026-05-13T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 11 例（含 3 死亡）",
@@ -171,14 +180,14 @@
       "at": "2026-05-04T12:00:00Z",
       "kind": "detection",
       "countryZh": "源头·邮轮",
-      "delta": 5,
+      "delta": 4,
       "type": "confirmed",
       "shortContext": "航程中确诊（源头聚集）",
       "verdict": "已纳入 WHO",
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 10,
+  "daysWithoutNewConfirmed": 1,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -186,12 +195,12 @@
   },
   "confirmedCountries": [
     {
-      "zh": "荷兰",
+      "zh": "西班牙",
       "count": 2
     },
     {
-      "zh": "西班牙",
-      "count": 1
+      "zh": "荷兰",
+      "count": 2
     },
     {
       "zh": "法国",
@@ -207,21 +216,25 @@
     },
     {
       "zh": "源头·邮轮",
-      "count": 5
+      "count": 4
     }
   ],
   "monitoringCountries": [
-    {
-      "zh": "美国",
-      "count": 41
-    },
     {
       "zh": "英国",
       "count": 28
     },
     {
+      "zh": "美国",
+      "count": 13
+    },
+    {
       "zh": "加拿大",
       "count": 7
+    },
+    {
+      "zh": "澳大利亚",
+      "count": 6
     },
     {
       "zh": "德国",
@@ -238,10 +251,6 @@
     {
       "zh": "土耳其",
       "count": 2
-    },
-    {
-      "zh": "希腊",
-      "count": 1
     }
   ],
   "sources": [
@@ -251,7 +260,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-07T08:53:11.267407+00:00"
+      "updatedAt": "2026-06-07T12:00:26.494347+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -259,12 +268,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-05-28T12:00:00Z"
+      "updatedAt": "2026-06-07T12:00:00Z"
     }
   ],
   "intake": {
     "last24hCount": 13,
-    "highConfidencePicks": 0
+    "highConfidencePicks": 2
   },
-  "realtimeUpdatedAt": "2026-06-07T08:53:14.683473+00:00"
+  "realtimeUpdatedAt": "2026-06-07T12:00:31.182300+00:00"
 }
