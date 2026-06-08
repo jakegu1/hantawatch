@@ -877,6 +877,34 @@ def build_events(
                     "source": "who_don",
                 }
             )
+        _indeterminate = int(_t0.get("indeterminate") or 0)
+        if _indeterminate > 0:
+            events.append(
+                {
+                    "at": who_last_at,
+                    "kind": "detection",
+                    "countryZh": "WHO分类",
+                    "delta": _indeterminate,
+                    "type": "suspected_attribution",
+                    "shortContext": f"疑似病例分类（{_indeterminate} 例）",
+                    "verdict": "WHO 分类",
+                    "source": "who_don",
+                }
+            )
+        _deaths = int(_t0.get("deaths") or 0)
+        if _deaths > 0:
+            events.append(
+                {
+                    "at": who_last_at,
+                    "kind": "detection",
+                    "countryZh": "WHO结局",
+                    "delta": _deaths,
+                    "type": "death_attribution",
+                    "shortContext": f"死亡结局归属（{_deaths} 例）",
+                    "verdict": "WHO 结局",
+                    "source": "who_don",
+                }
+            )
 
     # Tier-3 news detections from realtime extraction cache (no LLM here)
     if realtime_feed and isinstance(realtime_feed.get("entries"), list):

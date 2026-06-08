@@ -204,7 +204,7 @@ function EventRow({ e }: { e: SituationEvent }) {
 
   const delta = 'delta' in e ? Number(e.delta) : 0;
   const eventType = 'type' in e ? String(e.type) : '';
-  const isAttribution = eventType === 'case_attribution';
+  const isAttribution = ['case_attribution', 'suspected_attribution', 'death_attribution'].includes(eventType);
   const isPositiveDelta = delta > 0 && !isAttribution;
   const deltaClass = isPositiveDelta ? 'rs-delta' : 'rs-delta rs-delta--baseline';
   const deltaText = isAttribution ? `${delta}例` : delta > 0 ? `+${delta}` : '·';

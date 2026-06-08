@@ -751,6 +751,18 @@ def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
     assert included_rows
     assert sum(int(e.get("delta") or 0) for e in included_rows) == 11
     assert {e["countryZh"] for e in included_rows} == {"源头·邮轮", "西班牙", "荷兰", "法国", "南非", "瑞士"}
+    suspected_rows = [
+        e
+        for e in out["events"]
+        if e.get("kind") == "detection" and e.get("type") == "suspected_attribution"
+    ]
+    death_rows = [
+        e
+        for e in out["events"]
+        if e.get("kind") == "detection" and e.get("type") == "death_attribution"
+    ]
+    assert [(e["countryZh"], e["delta"], e["verdict"]) for e in suspected_rows] == [("WHO分类", 2, "WHO 分类")]
+    assert [(e["countryZh"], e["delta"], e["verdict"]) for e in death_rows] == [("WHO结局", 3, "WHO 结局")]
 
 
 def test_who_milestones_include_structured_case_deltas() -> None:

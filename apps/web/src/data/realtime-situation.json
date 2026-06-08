@@ -189,6 +189,26 @@
       "source": "official_cdc"
     },
     {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "WHO分类",
+      "delta": 2,
+      "type": "suspected_attribution",
+      "shortContext": "疑似病例分类（2 例）",
+      "verdict": "WHO 分类",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "WHO结局",
+      "delta": 3,
+      "type": "death_attribution",
+      "shortContext": "死亡结局归属（3 例）",
+      "verdict": "WHO 结局",
+      "source": "who_don"
+    },
+    {
       "at": "2026-05-13T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 11 例（含 3 死亡）",
@@ -442,7 +462,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-08T05:50:17.716063+00:00"
+      "updatedAt": "2026-06-08T05:58:45.013841+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -457,5 +477,5 @@
     "last24hCount": 5,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-08T05:50:21.575247+00:00"
+  "realtimeUpdatedAt": "2026-06-08T05:58:49.248273+00:00"
 }
