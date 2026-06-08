@@ -208,6 +208,29 @@ def _since_who_confirmed_delta(
     return confirmed
 
 
+def _has_follow_up_source(pc: dict[str, Any]) -> bool:
+    source = pc.get("followUpSource") if isinstance(pc.get("followUpSource"), dict) else {}
+    if str(source.get("url") or "").strip():
+        return True
+    evidence = pc.get("evidence") or []
+    if not isinstance(evidence, list):
+        return False
+    return any(
+        isinstance(ev, dict)
+        and str(ev.get("url") or "").strip()
+        and ev.get("tier") in ("official", "trusted_media")
+        for ev in evidence
+    )
+
+
+def _follow_up_short_context(pc: dict[str, Any]) -> str:
+    label = str(pc.get("followUpLabelZh") or "").strip()
+    no_new = pc.get("noNewConfirmedSinceWho") is True or pc.get("confirmedSinceWho") == 0
+    if label and no_new and _has_follow_up_source(pc):
+        return label
+    return "病例状态有更新，未报告新增确诊"
+
+
 def _detection_verdict(
     *,
     asof: date,
@@ -788,7 +811,7 @@ def build_events(
                         # confirmed attributions reconcile to totals.confirmed.
                         who_attribution_count = confirmed
                         type_ = "follow_up"
-                        short_context = "已确诊病例后续更新（非新增）"
+                        short_context = _follow_up_short_context(pc)
                         status_for_verdict = "follow_up"
                     else:
                         who_attribution_count = max(0, confirmed - delta)

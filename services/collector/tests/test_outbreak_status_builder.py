@@ -104,3 +104,48 @@ def test_totals_all_computation():
     assert totals["possible"] == 0
     assert totals["all"] == 8 + 3 + 0
     assert totals["deaths"] == 3
+
+
+def test_manual_import_follow_up_fields_are_preserved():
+    """Human-curated follow-up facts must reach the canonical ledger."""
+    cluster = {
+        "id": "mv-hondius-2026",
+        "confirmedCases": 11,
+        "deaths": 3,
+        "suspectedCases": 2,
+        "serotypeId": "andes",
+        "location": {"nameZh": "南美洲海域", "lat": -54.8, "lng": -68.3},
+        "lastUpdate": "2026-05-28",
+    }
+    imports = [
+        {
+            "iso2": "ES",
+            "date": "2026-06-05",
+            "confirmedImports": 2,
+            "confirmedSinceWho": 0,
+            "status": "imports_confirmed",
+            "noNewConfirmedSinceWho": True,
+            "followUpStatuses": ["discharged", "hospitalized_mild", "no_new_confirmed"],
+            "followUpLabelZh": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
+            "source": {
+                "name": "西班牙卫生部 / Xinhua",
+                "url": "https://example.com/es",
+                "retrievedAt": "2026-06-05T03:15:00+00:00",
+                "confidence": "official",
+            },
+        }
+    ]
+
+    result = build_outbreak_status(
+        active_clusters=[cluster],
+        who_entries=[],
+        mv_hondius_imports=imports,
+        arcgis_cases=[],
+    )
+
+    es = result[0]["perCountry"][0]
+    assert es["followUpStatuses"] == ["discharged", "hospitalized_mild", "no_new_confirmed"]
+    assert es["followUpLabelZh"] == "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊"
+    assert es["noNewConfirmedSinceWho"] is True
+    assert es["followUpSource"]["url"] == "https://example.com/es"
+    assert es["evidence"][0]["url"] == "https://example.com/es"

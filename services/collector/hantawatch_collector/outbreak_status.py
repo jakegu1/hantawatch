@@ -248,6 +248,8 @@ def build_outbreak_status(
         for imp in mv_hondius_imports:
             iso2 = imp.get("iso2", "").upper()
             if iso2 and iso2 not in seen_iso2:
+                source = imp.get("source") if isinstance(imp.get("source"), dict) else {}
+                source_conf = str(source.get("confidence") or "manual")
                 seen_iso2.add(iso2)
                 per_country.append({
                     "iso2": iso2,
@@ -267,8 +269,17 @@ def build_outbreak_status(
                     "deaths": int(imp.get("deaths", 0) or 0),
                     "newConfirmedToday": 0,
                     "asOf": imp.get("date", ""),
+                    "noNewConfirmedSinceWho": bool(imp.get("noNewConfirmedSinceWho", False)),
+                    "followUpStatuses": imp.get("followUpStatuses", []),
+                    "followUpLabelZh": imp.get("followUpLabelZh", ""),
+                    "followUpSource": source,
                     "evidence": [
-                        {"tier": "official", "url": "", "sourceName": "手动维护导入数据", "retrievedAt": ""}
+                        {
+                            "tier": "official" if source_conf == "official" else "trusted_media",
+                            "url": source.get("url", ""),
+                            "sourceName": source.get("name", "手动维护导入数据"),
+                            "retrievedAt": source.get("retrievedAt", ""),
+                        }
                     ],
                     "note": imp.get("note", ""),
                 })

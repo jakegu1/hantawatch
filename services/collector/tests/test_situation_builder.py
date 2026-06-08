@@ -670,7 +670,10 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
                     "confirmedSinceWho": 0,
                     "monitoring": 0,
                     "asOf": "2026-06-06",
-                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                    "noNewConfirmedSinceWho": True,
+                    "followUpLabelZh": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
+                    "followUpSource": {"url": "https://example.com/fr", "confidence": "official"},
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "url": "https://example.com/fr", "retrievedAt": ""}],
                 },
                 {
                     "iso2": "ES",
@@ -679,7 +682,10 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
                     "confirmedSinceWho": 0,
                     "monitoring": 0,
                     "asOf": "2026-06-05",
-                    "evidence": [{"tier": "official", "sourceName": "es_isciii", "retrievedAt": ""}],
+                    "noNewConfirmedSinceWho": True,
+                    "followUpLabelZh": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
+                    "followUpSource": {"url": "https://example.com/es", "confidence": "official"},
+                    "evidence": [{"tier": "official", "sourceName": "es_isciii", "url": "https://example.com/es", "retrievedAt": ""}],
                 },
             ],
         }
@@ -704,7 +710,37 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
     assert {e["countryZh"] for e in follow_ups} == {"法国", "西班牙"}
     assert all(e["delta"] == 0 for e in follow_ups)
     assert all(e["verdict"] == "随访更新" for e in follow_ups)
-    assert all(e["shortContext"] == "已确诊病例后续更新（非新增）" for e in follow_ups)
+    assert {e["countryZh"]: e["shortContext"] for e in follow_ups} == {
+        "法国": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
+        "西班牙": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
+    }
+
+
+def test_follow_up_label_requires_trusted_source() -> None:
+    """Specific care-status wording is only published with a traceable source."""
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "confirmedSinceWho": 0,
+                    "noNewConfirmedSinceWho": True,
+                    "followUpLabelZh": "确诊患者已康复",
+                    "asOf": "2026-06-06",
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+
+    events, _, _ = build_events(outbreak, realtime_feed={"__today": "2026-06-07"})
+    fr = next(e for e in events if e.get("countryZh") == "法国" and e.get("type") == "follow_up")
+    assert fr["shortContext"] == "病例状态有更新，未报告新增确诊"
 
 
 def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:

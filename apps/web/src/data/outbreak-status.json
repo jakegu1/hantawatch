@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-06-08T06:34:17.743168+00:00",
+  "__generated_at": "2026-06-08T06:57:15.599954+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -30,12 +30,26 @@
           "deaths": 0,
           "newConfirmedToday": 0,
           "asOf": "2026-06-05",
+          "noNewConfirmedSinceWho": true,
+          "followUpStatuses": [
+            "discharged",
+            "hospitalized_mild",
+            "monitoring_continues",
+            "no_new_confirmed"
+          ],
+          "followUpLabelZh": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
+          "followUpSource": {
+            "name": "西班牙卫生部 / Xinhua",
+            "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
+            "retrievedAt": "2026-06-05T03:15:00+00:00",
+            "confidence": "official"
+          },
           "evidence": [
             {
               "tier": "official",
-              "url": "",
-              "sourceName": "手动维护导入数据",
-              "retrievedAt": ""
+              "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
+              "sourceName": "西班牙卫生部 / Xinhua",
+              "retrievedAt": "2026-06-05T03:15:00+00:00"
             }
           ],
           "note": ""
@@ -55,7 +69,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730833+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611923+00:00"
             }
           ]
         },
@@ -70,12 +84,26 @@
           "deaths": 0,
           "newConfirmedToday": 0,
           "asOf": "2026-06-06",
+          "noNewConfirmedSinceWho": true,
+          "followUpStatuses": [
+            "hospitalized_stable",
+            "contacts_released",
+            "monitoring_continues",
+            "no_new_confirmed"
+          ],
+          "followUpLabelZh": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
+          "followUpSource": {
+            "name": "法国卫生部 / TF1 Info",
+            "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
+            "retrievedAt": "2026-06-06T12:00:00+00:00",
+            "confidence": "official"
+          },
           "evidence": [
             {
               "tier": "official",
-              "url": "",
-              "sourceName": "手动维护导入数据",
-              "retrievedAt": ""
+              "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
+              "sourceName": "法国卫生部 / TF1 Info",
+              "retrievedAt": "2026-06-06T12:00:00+00:00"
             }
           ],
           "note": ""
@@ -95,7 +123,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730855+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611939+00:00"
             }
           ]
         },
@@ -114,7 +142,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730870+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611946+00:00"
             }
           ]
         },
@@ -129,12 +157,21 @@
           "deaths": 0,
           "newConfirmedToday": 0,
           "asOf": "2026-06-07",
+          "noNewConfirmedSinceWho": false,
+          "followUpStatuses": [],
+          "followUpLabelZh": "",
+          "followUpSource": {
+            "name": "US CDC Hantavirus Situation Summary",
+            "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
+            "retrievedAt": "2026-06-07T12:00:00+00:00",
+            "confidence": "official"
+          },
           "evidence": [
             {
               "tier": "official",
-              "url": "",
-              "sourceName": "手动维护导入数据",
-              "retrievedAt": ""
+              "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
+              "sourceName": "US CDC Hantavirus Situation Summary",
+              "retrievedAt": "2026-06-07T12:00:00+00:00"
             }
           ],
           "note": ""
@@ -150,12 +187,21 @@
           "deaths": 0,
           "newConfirmedToday": 0,
           "asOf": "2026-06-07",
+          "noNewConfirmedSinceWho": false,
+          "followUpStatuses": [],
+          "followUpLabelZh": "",
+          "followUpSource": {
+            "name": "ArcGIS ANDV Dashboard / Australian Department of Health",
+            "url": "https://services1.arcgis.com/wb4Og4gH5mvzQAIV/arcgis/rest/services/Tracking_Hantavirus_2026/FeatureServer",
+            "retrievedAt": "2026-06-07T08:53:00+00:00",
+            "confidence": "official"
+          },
           "evidence": [
             {
               "tier": "official",
-              "url": "",
-              "sourceName": "手动维护导入数据",
-              "retrievedAt": ""
+              "url": "https://services1.arcgis.com/wb4Og4gH5mvzQAIV/arcgis/rest/services/Tracking_Hantavirus_2026/FeatureServer",
+              "sourceName": "ArcGIS ANDV Dashboard / Australian Department of Health",
+              "retrievedAt": "2026-06-07T08:53:00+00:00"
             }
           ],
           "note": ""
@@ -175,7 +221,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730758+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611875+00:00"
             }
           ]
         },
@@ -194,7 +240,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730780+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611891+00:00"
             }
           ]
         },
@@ -213,7 +259,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730797+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611902+00:00"
             }
           ]
         },
@@ -232,7 +278,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730810+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611910+00:00"
             }
           ]
         },
@@ -251,7 +297,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730821+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611917+00:00"
             }
           ]
         },
@@ -270,7 +316,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730845+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611931+00:00"
             }
           ]
         },
@@ -289,7 +335,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730882+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611953+00:00"
             }
           ]
         },
@@ -308,7 +354,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-08T06:34:12.730891+00:00"
+              "retrievedAt": "2026-06-08T06:57:10.611959+00:00"
             }
           ]
         }
@@ -318,13 +364,13 @@
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-          "retrievedAt": "2026-06-08T06:33:46.305888+00:00",
+          "retrievedAt": "2026-06-08T06:56:45.100396+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-06-08T06:34:12.730928+00:00",
+        "generatedAt": "2026-06-08T06:57:10.611982+00:00",
         "contributors": [
           "who_don",
           "arcgis",

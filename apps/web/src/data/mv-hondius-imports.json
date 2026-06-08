@@ -47,6 +47,9 @@
       "confirmedSinceWho": 0,
       "deaths": 0,
       "status": "imports_confirmed",
+      "noNewConfirmedSinceWho": true,
+      "followUpStatuses": ["discharged", "hospitalized_mild", "monitoring_continues", "no_new_confirmed"],
+      "followUpLabelZh": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
       "summary_zh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "source": {
         "name": "西班牙卫生部 / Xinhua",
@@ -66,6 +69,9 @@
       "confirmedSinceWho": 0,
       "deaths": 0,
       "status": "imports_confirmed",
+      "noNewConfirmedSinceWho": true,
+      "followUpStatuses": ["hospitalized_stable", "contacts_released", "monitoring_continues", "no_new_confirmed"],
+      "followUpLabelZh": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
       "summary_zh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "source": {
         "name": "法国卫生部 / TF1 Info",
