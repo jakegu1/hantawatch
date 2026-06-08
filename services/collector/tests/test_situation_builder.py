@@ -705,3 +705,91 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
     assert all(e["delta"] == 0 for e in follow_ups)
     assert all(e["verdict"] == "随访更新" for e in follow_ups)
 
+
+def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "possible": 0, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [
+                {"iso2": "ES", "nameZh": "西班牙", "confirmed": 2, "asOf": "2026-06-05", "evidence": [{"tier": "official", "sourceName": "es"}]},
+                {"iso2": "NL", "nameZh": "荷兰", "confirmed": 2, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
+                {"iso2": "FR", "nameZh": "法国", "confirmed": 1, "asOf": "2026-06-06", "evidence": [{"tier": "official", "sourceName": "fr"}]},
+                {"iso2": "ZA", "nameZh": "南非", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
+                {"iso2": "CH", "nameZh": "瑞士", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
+            ],
+        }
+    ]
+    out = build_realtime_situation(
+        outbreak_status=outbreak,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-06-08T04:00:00Z"},
+        today=date(2026, 6, 8),
+    )
+
+    ledger = out["caseLedger"]
+    assert ledger["overallOk"] is True
+    assert ledger["confirmedAttributionTotal"] == 11
+    assert {a["zh"]: a["count"] for a in ledger["confirmedAttribution"]} == {
+        "源头·邮轮": 4,
+        "西班牙": 2,
+        "荷兰": 2,
+        "法国": 1,
+        "南非": 1,
+        "瑞士": 1,
+    }
+    included_rows = [
+        e
+        for e in out["events"]
+        if e.get("kind") == "detection" and e.get("verdict") == "已纳入 WHO"
+    ]
+    assert included_rows
+    assert all(e["type"] == "case_attribution" for e in included_rows)
+
+
+def test_who_milestones_include_structured_case_deltas() -> None:
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "possible": 0, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [],
+        }
+    ]
+    recent_cases = [
+        {
+            "id": "who-2026-don600",
+            "date": "2026-05-08",
+            "serotypeId": "andes",
+            "summary": "截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。",
+            "source": {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600"},
+        },
+        {
+            "id": "who-2026-don601",
+            "date": "2026-05-13",
+            "serotypeId": "andes",
+            "summary": "截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡。",
+            "source": {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601"},
+        },
+        {
+            "id": "who-2026-don604",
+            "date": "2026-05-28",
+            "serotypeId": "andes",
+            "summary": "截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。",
+            "source": {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604"},
+        },
+    ]
+    events, _, _ = build_events(
+        outbreak,
+        realtime_feed={"__today": "2026-06-08"},
+        recent_cases_intl=recent_cases,
+    )
+    baselines = [e for e in events if e.get("kind") == "who_baseline"]
+    latest = next(e for e in baselines if str(e.get("at", "")).startswith("2026-05-28"))
+    assert latest["snapshot"] == {"all": 13, "confirmed": 11, "indeterminate": 2, "deaths": 3}
+    assert latest["delta"] == {"all": 2, "confirmed": 3, "indeterminate": -1, "deaths": 0}
+    assert "疑似 -1（分类重算）" in latest["deltaLabel"]
+

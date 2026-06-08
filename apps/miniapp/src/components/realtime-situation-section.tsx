@@ -39,6 +39,13 @@ const STATE_HINT: Record<StateCode, string> = {
 
 type SituationEvent = RealtimeSituation['events'][number];
 
+interface CaseLedgerLike {
+  summary?: string;
+  overallOk?: boolean;
+  confirmedAttribution?: Array<{ zh?: string; count?: number; kind?: string }>;
+  checks?: Array<{ code?: string; ok?: boolean; lhs?: number; rhs?: number }>;
+}
+
 function relativeFromIso(isoStr: string, now = new Date()): string {
   const t = new Date(isoStr);
   if (Number.isNaN(t.getTime())) return '未知';
@@ -180,11 +187,13 @@ function EventRow({ e }: { e: SituationEvent }) {
   );
 
   if (e.kind === 'who_baseline') {
+    const deltaLabel = 'deltaLabel' in e && typeof e.deltaLabel === 'string' ? e.deltaLabel : '';
     return (
       <View className="rs-event-row rs-event-baseline-row">
         {timeBlock}
         <View className="rs-event-body">
           <View className="rs-event-headline">{e.headline}</View>
+          {deltaLabel && <View className="rs-event-delta-label">{deltaLabel}</View>}
           <View className="rs-event-meta">
             <Text className="rs-event-tag rs-event-tag--baseline">WHO 通报</Text>
           </View>
@@ -194,9 +203,11 @@ function EventRow({ e }: { e: SituationEvent }) {
   }
 
   const delta = 'delta' in e ? Number(e.delta) : 0;
-  const isPositiveDelta = delta > 0;
+  const eventType = 'type' in e ? String(e.type) : '';
+  const isAttribution = eventType === 'case_attribution';
+  const isPositiveDelta = delta > 0 && !isAttribution;
   const deltaClass = isPositiveDelta ? 'rs-delta' : 'rs-delta rs-delta--baseline';
-  const deltaText = delta > 0 ? `+${delta}` : '·';
+  const deltaText = isAttribution ? `${delta}例` : delta > 0 ? `+${delta}` : '·';
   const verdict = 'verdict' in e ? String(e.verdict) : '';
   const verdictClass = verdict.includes('已纳入') ? 'rs-event-tag--official' : '';
 
@@ -218,12 +229,43 @@ function EventRow({ e }: { e: SituationEvent }) {
   );
 }
 
+function CaseLedgerBlock({ ledger }: { ledger?: CaseLedgerLike | null }) {
+  if (!ledger) return null;
+  const attribution = Array.isArray(ledger.confirmedAttribution) ? ledger.confirmedAttribution : [];
+  const attributionText = attribution
+    .map((a) => `${a.zh} ${a.count}`)
+    .filter(Boolean)
+    .join('、');
+  const failedChecks = Array.isArray(ledger.checks) ? ledger.checks.filter((c) => c && c.ok === false) : [];
+
+  return (
+    <View className="rs-case-ledger">
+      <View className="rs-case-ledger-main">
+        <Text className="rs-case-ledger-kicker">病例账本</Text>
+        <Text>{ledger.summary}</Text>
+      </View>
+      {attributionText && (
+        <View className="rs-case-ledger-sub">
+          确诊归属：{attributionText}
+        </View>
+      )}
+      {failedChecks.length > 0 && (
+        <View className="rs-case-ledger-warning">
+          数据校验未通过，请等待下一次核查。
+        </View>
+      )}
+    </View>
+  );
+}
+
 function EventsBlock({
   events,
+  caseLedger,
   daysWithoutNewConfirmed,
   daysWithoutAnyNews,
 }: {
   events: SituationEvent[];
+  caseLedger?: CaseLedgerLike | null;
   daysWithoutNewConfirmed?: number;
   daysWithoutAnyNews?: number;
 }) {
@@ -245,6 +287,7 @@ function EventsBlock({
         📡 最近事件
         <Text className="rs-right">时间倒序</Text>
       </View>
+      <CaseLedgerBlock ledger={caseLedger} />
       {events.map((e, i) => (
         <EventRow key={`${e.kind}-${e.at}-${i}`} e={e} />
       ))}
@@ -298,6 +341,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
   const daysWithoutAnyNews =
     'daysWithoutAnyNews' in data ? (data as { daysWithoutAnyNews?: number }).daysWithoutAnyNews : undefined;
+  const caseLedger = (data as { caseLedger?: CaseLedgerLike | null }).caseLedger;
 
   return (
     <View style={{ padding: "0 24rpx", marginTop: "16rpx" }}>
@@ -420,6 +464,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
         <EventsBlock
           events={data.events}
+          caseLedger={caseLedger}
           daysWithoutNewConfirmed={data.daysWithoutNewConfirmed}
           daysWithoutAnyNews={daysWithoutAnyNews}
         />

@@ -5095,6 +5095,20 @@
         "source_url": "",
         "time": "2026-06-08T03:25:00.000Z"
       }
+    ],
+    "rt-df8d06e467c7ec79": [
+      {
+        "iso2": "SG",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名新加坡人完成隔离，未提及新增病例或死亡，仅描述事件状态。",
+        "update_id": "rt-df8d06e467c7ec79",
+        "source_url": "",
+        "time": "2026-06-08T04:15:00.000Z"
+      }
     ]
   }
 }

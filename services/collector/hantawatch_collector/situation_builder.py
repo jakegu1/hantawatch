@@ -474,6 +474,69 @@ def _milestone_headline(summary: str, iso_date: str, o0: dict[str, Any] | None) 
     return "WHO 通报更新"
 
 
+def _first_int(*patterns: str, text: str) -> int | None:
+    for pattern in patterns:
+        m = re.search(pattern, text)
+        if not m:
+            continue
+        for g in m.groups():
+            if g is not None:
+                return int(g)
+    return None
+
+
+def _who_snapshot_from_summary(summary: str, iso_date: str, o0: dict[str, Any] | None) -> dict[str, int] | None:
+    """Parse a WHO DON cumulative snapshot into structured ledger counts."""
+    if o0 and isinstance(o0.get("lastUpdate"), dict) and o0["lastUpdate"].get("asOfDate") == iso_date:
+        t = o0.get("totals") or {}
+        return {
+            "all": int(t.get("all") or 0),
+            "confirmed": int(t.get("confirmed") or 0),
+            "indeterminate": int(t.get("indeterminate") or 0),
+            "deaths": int(t.get("deaths") or 0),
+        }
+
+    total = _first_int(r"共报告\s*(\d+)\s*例", r"累计\s*(\d+)\s*例", text=summary)
+    confirmed = _first_int(r"(\d+)\s*例确诊", text=summary)
+    deaths = _first_int(r"含\s*(\d+)\s*例死亡", r"其中\s*(\d+)\s*例死亡", r"(\d+)\s*例死亡", text=summary)
+    indeterminate = 0
+    saw_indeterminate = False
+    for pattern in (r"(\d+)\s*例疑似", r"(\d+)\s*例结果未定", r"(\d+)\s*例可能"):
+        m = re.search(pattern, summary)
+        if m:
+            saw_indeterminate = True
+            indeterminate += int(m.group(1))
+
+    if total is None and confirmed is None and not saw_indeterminate and deaths is None:
+        return None
+    confirmed_i = int(confirmed or 0)
+    total_i = int(total if total is not None else confirmed_i + indeterminate)
+    return {
+        "all": total_i,
+        "confirmed": confirmed_i,
+        "indeterminate": indeterminate,
+        "deaths": int(deaths or 0),
+    }
+
+
+def _format_signed_delta(n: int) -> str:
+    return f"+{n}" if n > 0 else str(n)
+
+
+def _who_snapshot_delta_label(delta: dict[str, int] | None) -> str | None:
+    if not delta:
+        return None
+    ind = int(delta.get("indeterminate", 0))
+    ind_suffix = "（分类重算）" if ind < 0 else ""
+    parts = [
+        f"总数 {_format_signed_delta(int(delta.get('all', 0)))}",
+        f"确诊 {_format_signed_delta(int(delta.get('confirmed', 0)))}",
+        f"疑似 {_format_signed_delta(ind)}{ind_suffix}",
+        f"死亡 {_format_signed_delta(int(delta.get('deaths', 0)))}",
+    ]
+    return "较前次：" + " · ".join(parts)
+
+
 def _who_milestones(
     recent_cases_intl: list[dict[str, Any]] | None,
     o0: dict[str, Any] | None,
@@ -492,7 +555,7 @@ def _who_milestones(
     }]
     if not recent_cases_intl or not isinstance(recent_cases_intl, list):
         return fallback
-    by_date: dict[str, str] = {}
+    by_date: dict[str, dict[str, Any]] = {}
     for c in recent_cases_intl:
         if not isinstance(c, dict):
             continue
@@ -507,13 +570,138 @@ def _who_milestones(
         d = str(c.get("date") or "")
         if not d or d in by_date:
             continue
-        by_date[d] = _milestone_headline(str(c.get("summary") or ""), d, o0)
+        summary = str(c.get("summary") or "")
+        by_date[d] = {
+            "headline": _milestone_headline(summary, d, o0),
+            "snapshot": _who_snapshot_from_summary(summary, d, o0),
+        }
     if not by_date:
         return fallback
-    return [
-        {"at": f"{d}T12:00:00Z", "kind": "who_baseline", "headline": h, "source": "who_don"}
-        for d, h in sorted(by_date.items(), key=lambda kv: kv[0], reverse=True)
+    rows: list[dict[str, Any]] = []
+    prev_snapshot: dict[str, int] | None = None
+    for d, item in sorted(by_date.items(), key=lambda kv: kv[0]):
+        snapshot = item.get("snapshot")
+        delta = None
+        if isinstance(snapshot, dict) and isinstance(prev_snapshot, dict):
+            delta = {
+                k: int(snapshot.get(k, 0)) - int(prev_snapshot.get(k, 0))
+                for k in ("all", "confirmed", "indeterminate", "deaths")
+            }
+        row = {
+            "at": f"{d}T12:00:00Z",
+            "kind": "who_baseline",
+            "headline": item["headline"],
+            "source": "who_don",
+        }
+        if isinstance(snapshot, dict):
+            row["snapshot"] = snapshot
+        label = _who_snapshot_delta_label(delta)
+        if label:
+            row["delta"] = delta
+            row["deltaLabel"] = label
+        rows.append(row)
+        if isinstance(snapshot, dict):
+            prev_snapshot = snapshot
+    return list(reversed(rows))
+
+
+def _build_case_ledger(
+    outbreak_status: list[dict[str, Any]] | None,
+    events: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    if not outbreak_status or not isinstance(outbreak_status[0], dict):
+        return None
+    o0 = outbreak_status[0]
+    totals_raw = o0.get("totals") or {}
+    total = int(totals_raw.get("all") or 0)
+    confirmed = int(totals_raw.get("confirmed") or 0)
+    indeterminate = int(totals_raw.get("indeterminate") or 0)
+    possible = int(totals_raw.get("possible") or 0)
+    deaths = int(totals_raw.get("deaths") or 0)
+
+    attribution: list[dict[str, Any]] = []
+    per = o0.get("perCountry") or []
+    if isinstance(per, list):
+        for pc in per:
+            if not isinstance(pc, dict):
+                continue
+            count = int(pc.get("confirmed") or 0)
+            name = str(pc.get("nameZh") or "").strip()
+            if count > 0 and name:
+                attribution.append(
+                    {
+                        "zh": name,
+                        "count": count,
+                        "kind": "destination",
+                        "status": pc.get("status") or "",
+                        "asOf": pc.get("asOf") or "",
+                    }
+                )
+    destination_total = sum(int(a.get("count") or 0) for a in attribution)
+    source_count = confirmed - destination_total
+    if source_count > 0:
+        attribution.append(
+            {
+                "zh": "源头·邮轮",
+                "count": source_count,
+                "kind": "source",
+                "status": "who_baseline",
+                "asOf": (o0.get("lastUpdate") or {}).get("asOfDate") if isinstance(o0.get("lastUpdate"), dict) else "",
+            }
+        )
+    attribution.sort(key=lambda x: int(x.get("count") or 0), reverse=True)
+    attribution_total = sum(int(a.get("count") or 0) for a in attribution)
+
+    milestones = [
+        {
+            "at": e.get("at"),
+            "headline": e.get("headline"),
+            "snapshot": e.get("snapshot"),
+            "delta": e.get("delta"),
+            "deltaLabel": e.get("deltaLabel"),
+        }
+        for e in events
+        if e.get("kind") == "who_baseline"
     ]
+
+    checks = [
+        {
+            "code": "total_formula_matches",
+            "ok": total == confirmed + indeterminate + possible,
+            "lhs": total,
+            "rhs": confirmed + indeterminate + possible,
+        },
+        {
+            "code": "confirmed_attribution_matches",
+            "ok": confirmed == attribution_total,
+            "lhs": confirmed,
+            "rhs": attribution_total,
+        },
+        {
+            "code": "deaths_are_subset",
+            "ok": deaths <= total,
+            "lhs": deaths,
+            "rhs": total,
+        },
+    ]
+
+    return {
+        "schemaVersion": 1,
+        "summary": f"{total} 例 = {confirmed} 确诊 + {indeterminate} 疑似；含 {deaths} 死亡",
+        "formula": {
+            "total": total,
+            "confirmed": confirmed,
+            "indeterminate": indeterminate,
+            "possible": possible,
+            "deaths": deaths,
+        },
+        "confirmedAttribution": attribution,
+        "confirmedAttributionTotal": attribution_total,
+        "unattributedConfirmed": max(0, confirmed - attribution_total),
+        "milestones": milestones,
+        "checks": checks,
+        "overallOk": all(bool(c.get("ok")) for c in checks),
+    }
 
 
 def build_events(
@@ -601,8 +789,8 @@ def build_events(
                         short_context = "确诊输入"
                         status_for_verdict = status
                 else:
-                    type_ = "confirmed"
-                    short_context = "确诊输入"
+                    type_ = "case_attribution"
+                    short_context = f"确诊归属（{confirmed} 例）"
                     delta = int(pc.get("newConfirmedToday") or 0) or confirmed
                     status_for_verdict = status
             elif quarantine > 0 or status == "quarantine_active":
@@ -662,8 +850,8 @@ def build_events(
                     "kind": "detection",
                     "countryZh": "源头·邮轮",
                     "delta": _source_conf,
-                    "type": "confirmed",
-                    "shortContext": "航程中确诊（源头聚集）",
+                    "type": "case_attribution",
+                    "shortContext": f"航程中确诊归属（{_source_conf} 例）",
                     "verdict": "已纳入 WHO",
                     "source": "who_don",
                 }
@@ -744,9 +932,9 @@ def build_events(
         dt = _parse_iso_datetime(str(e.get("at") or ""))
         if e.get("type") == "screening" and e.get("source") == "realtime_news":
             key = (e.get("countryZh"), "screening-pending", "screening")
-        elif e.get("type") == "confirmed":
+        elif e.get("type") in ("confirmed", "case_attribution"):
             # One post-WHO confirmed row per country — ledger + news must not stack.
-            key = (e.get("countryZh"), "confirmed")
+            key = (e.get("countryZh"), e.get("type"))
         else:
             if dt is not None:
                 if dt.tzinfo is None:
@@ -771,7 +959,7 @@ def build_events(
     for ev in events:
         if ev.get("kind") != "detection":
             continue
-        if ev.get("type") != "confirmed":
+        if ev.get("type") not in ("confirmed", "case_attribution"):
             continue
         if int(ev.get("delta") or 0) <= 0:
             continue
@@ -941,6 +1129,8 @@ def build_realtime_situation(
     if has_any_detection and newest_event_at:
         sources.append({"name": "各国 CDC + 实时新闻", "updatedAt": newest_event_at})
 
+    case_ledger = _build_case_ledger(outbreak_status, events)
+
     out: dict[str, Any] = {
         "state": state,
         "headline": headline,
@@ -948,6 +1138,7 @@ def build_realtime_situation(
         "events": events,
         "daysWithoutNewConfirmed": days_without_new_confirmed,
         "totals": totals,
+        "caseLedger": case_ledger,
         "confirmedCountries": confirmed_countries,
         "monitoringCountries": monitoring_countries,
         "sources": sources,

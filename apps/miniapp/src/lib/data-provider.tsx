@@ -26,7 +26,7 @@ import {
   useState,
   type PropsWithChildren,
 } from 'react';
-import { bundledAppData, type AppData, type RawBundle } from './data';
+import { BUNDLED_RAW, bundledAppData, type AppData, type RawBundle } from './data';
 import { deriveAppData } from './app-data';
 import { fetchSnapshot } from '@/utils/api';
 
@@ -43,6 +43,18 @@ const AppDataContext = createContext<AppDataContextValue>({
   refresh: async () => {},
 });
 
+function caseLedgerSchemaVersion(raw: RawBundle): number {
+  const ledger = (raw.realtimeSituation as { caseLedger?: { schemaVersion?: unknown } }).caseLedger;
+  const v = ledger?.schemaVersion;
+  return typeof v === 'number' ? v : 0;
+}
+
+function isRuntimeSnapshotCompatible(raw: RawBundle): boolean {
+  // A newly built miniapp can be ahead of the deployed API snapshot. Do not let
+  // an older runtime payload erase newer structured fields from the bundled JSON.
+  return caseLedgerSchemaVersion(raw) >= caseLedgerSchemaVersion(BUNDLED_RAW as RawBundle);
+}
+
 export function DataProvider({ children }: PropsWithChildren<object>) {
   const [data, setData] = useState<AppData>(bundledAppData);
   const [isLive, setIsLive] = useState(false);
@@ -50,6 +62,10 @@ export function DataProvider({ children }: PropsWithChildren<object>) {
   const refresh = useCallback(async () => {
     try {
       const raw: RawBundle = await fetchSnapshot();
+      if (!isRuntimeSnapshotCompatible(raw)) {
+        console.warn('[HantaWatch] snapshot refresh ignored: runtime schema is older than bundled data');
+        return;
+      }
       setData(deriveAppData(raw));
       setIsLive(true);
     } catch (err) {
@@ -62,6 +78,10 @@ export function DataProvider({ children }: PropsWithChildren<object>) {
     fetchSnapshot()
       .then((raw) => {
         if (cancelled) return;
+        if (!isRuntimeSnapshotCompatible(raw)) {
+          console.warn('[HantaWatch] live snapshot ignored: runtime schema is older than bundled data');
+          return;
+        }
         setData(deriveAppData(raw));
         setIsLive(true);
       })

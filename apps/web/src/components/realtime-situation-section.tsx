@@ -37,6 +37,13 @@ const STATE_HINT: Record<StateCode, string> = {
 
 type SituationEvent = RealtimeSituation['events'][number];
 
+interface CaseLedgerLike {
+  summary?: string;
+  overallOk?: boolean;
+  confirmedAttribution?: Array<{ zh?: string; count?: number; kind?: string }>;
+  checks?: Array<{ code?: string; ok?: boolean; lhs?: number; rhs?: number }>;
+}
+
 function relativeFromIso(isoStr: string, now = new Date()): string {
   const t = new Date(isoStr);
   if (Number.isNaN(t.getTime())) return '未知';
@@ -178,11 +185,13 @@ function EventRow({ e }: { e: SituationEvent }) {
   );
 
   if (e.kind === 'who_baseline') {
+    const deltaLabel = 'deltaLabel' in e && typeof e.deltaLabel === 'string' ? e.deltaLabel : '';
     return (
       <div className="rs-event-row rs-event-baseline-row">
         {timeBlock}
         <div className="rs-event-body">
           <div className="rs-event-headline">{e.headline}</div>
+          {deltaLabel && <div className="rs-event-delta-label">{deltaLabel}</div>}
           <div className="rs-event-meta">
             <span className="rs-event-tag rs-event-tag--baseline">WHO 通报</span>
           </div>
@@ -192,9 +201,11 @@ function EventRow({ e }: { e: SituationEvent }) {
   }
 
   const delta = 'delta' in e ? Number(e.delta) : 0;
-  const isPositiveDelta = delta > 0;
+  const eventType = 'type' in e ? String(e.type) : '';
+  const isAttribution = eventType === 'case_attribution';
+  const isPositiveDelta = delta > 0 && !isAttribution;
   const deltaClass = isPositiveDelta ? 'rs-delta' : 'rs-delta rs-delta--baseline';
-  const deltaText = delta > 0 ? `+${delta}` : '·';
+  const deltaText = isAttribution ? `${delta}例` : delta > 0 ? `+${delta}` : '·';
   const verdict = 'verdict' in e ? String(e.verdict) : '';
   const verdictClass = verdict.includes('已纳入') ? 'rs-event-tag--official' : '';
 
@@ -216,12 +227,43 @@ function EventRow({ e }: { e: SituationEvent }) {
   );
 }
 
+function CaseLedgerBlock({ ledger }: { ledger?: CaseLedgerLike | null }) {
+  if (!ledger) return null;
+  const attribution = Array.isArray(ledger.confirmedAttribution) ? ledger.confirmedAttribution : [];
+  const attributionText = attribution
+    .map((a) => `${a.zh} ${a.count}`)
+    .filter(Boolean)
+    .join('、');
+  const failedChecks = Array.isArray(ledger.checks) ? ledger.checks.filter((c) => c && c.ok === false) : [];
+
+  return (
+    <div className="rs-case-ledger">
+      <div className="rs-case-ledger-main">
+        <span className="rs-case-ledger-kicker">病例账本</span>
+        <span>{ledger.summary}</span>
+      </div>
+      {attributionText && (
+        <div className="rs-case-ledger-sub">
+          确诊归属：{attributionText}
+        </div>
+      )}
+      {failedChecks.length > 0 && (
+        <div className="rs-case-ledger-warning">
+          数据校验未通过，请等待下一次核查。
+        </div>
+      )}
+    </div>
+  );
+}
+
 function EventsBlock({
   events,
+  caseLedger,
   daysWithoutNewConfirmed,
   daysWithoutAnyNews,
 }: {
   events: SituationEvent[];
+  caseLedger?: CaseLedgerLike | null;
   daysWithoutNewConfirmed?: number;
   daysWithoutAnyNews?: number;
 }) {
@@ -243,6 +285,7 @@ function EventsBlock({
         📡 最近事件
         <span className="rs-right">时间倒序</span>
       </div>
+      <CaseLedgerBlock ledger={caseLedger} />
       {events.map((e, i) => (
         <EventRow key={`${e.kind}-${e.at}-${i}`} e={e} />
       ))}
@@ -294,6 +337,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
   const daysWithoutAnyNews =
     'daysWithoutAnyNews' in data ? (data as { daysWithoutAnyNews?: number }).daysWithoutAnyNews : undefined;
+  const caseLedger = (data as { caseLedger?: CaseLedgerLike | null }).caseLedger;
 
   return (
     <section className="container-page mt-4 sm:mt-6">
@@ -415,6 +459,7 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
         <EventsBlock
           events={data.events}
+          caseLedger={caseLedger}
           daysWithoutNewConfirmed={data.daysWithoutNewConfirmed}
           daysWithoutAnyNews={daysWithoutAnyNews}
         />
