@@ -713,9 +713,9 @@ def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
             "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "possible": 0, "deaths": 3},
             "lastUpdate": {"asOfDate": "2026-05-28"},
             "perCountry": [
-                {"iso2": "ES", "nameZh": "西班牙", "confirmed": 2, "asOf": "2026-06-05", "evidence": [{"tier": "official", "sourceName": "es"}]},
+                {"iso2": "ES", "nameZh": "西班牙", "confirmed": 2, "confirmedSinceWho": 0, "asOf": "2026-06-05", "evidence": [{"tier": "official", "sourceName": "es"}]},
                 {"iso2": "NL", "nameZh": "荷兰", "confirmed": 2, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
-                {"iso2": "FR", "nameZh": "法国", "confirmed": 1, "asOf": "2026-06-06", "evidence": [{"tier": "official", "sourceName": "fr"}]},
+                {"iso2": "FR", "nameZh": "法国", "confirmed": 1, "confirmedSinceWho": 0, "asOf": "2026-06-06", "evidence": [{"tier": "official", "sourceName": "fr"}]},
                 {"iso2": "ZA", "nameZh": "南非", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
                 {"iso2": "CH", "nameZh": "瑞士", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
             ],
@@ -744,10 +744,13 @@ def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
     included_rows = [
         e
         for e in out["events"]
-        if e.get("kind") == "detection" and e.get("verdict") == "已纳入 WHO"
+        if e.get("kind") == "detection"
+        and e.get("verdict") == "已纳入 WHO"
+        and e.get("type") == "case_attribution"
     ]
     assert included_rows
-    assert all(e["type"] == "case_attribution" for e in included_rows)
+    assert sum(int(e.get("delta") or 0) for e in included_rows) == 11
+    assert {e["countryZh"] for e in included_rows} == {"源头·邮轮", "西班牙", "荷兰", "法国", "南非", "瑞士"}
 
 
 def test_who_milestones_include_structured_case_deltas() -> None:

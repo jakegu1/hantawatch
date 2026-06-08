@@ -772,6 +772,7 @@ def build_events(
             monitoring = int(pc.get("monitoring") or 0)
             quarantine = int(pc.get("quarantine") or 0)
             status = str(pc.get("status") or "")
+            who_attribution_count = 0
             # Always surface confirmed countries (even ArcGIS-only: 荷兰/南非/
             # 瑞士). Monitoring/quarantine-only rows still require an official
             # source so we don't spam the timeline with every dashboard dash.
@@ -781,10 +782,16 @@ def build_events(
                 if asof > who_date:
                     delta = _since_who_confirmed_delta(pc, who_date=who_date, asof=asof)
                     if delta <= 0:
+                        # The latest country row is a post-WHO care/discharge
+                        # update, not a new confirmation. Still emit a separate
+                        # WHO-date attribution row so the timeline's included
+                        # confirmed attributions reconcile to totals.confirmed.
+                        who_attribution_count = confirmed
                         type_ = "follow_up"
                         short_context = "确诊病例随访"
                         status_for_verdict = "follow_up"
                     else:
+                        who_attribution_count = max(0, confirmed - delta)
                         type_ = "confirmed"
                         short_context = "确诊输入"
                         status_for_verdict = status
@@ -818,6 +825,20 @@ def build_events(
                     src_name = ev.get("sourceName") or ""
                     break
             source = _official_source_short_id(src_name, country_zh)
+
+            if who_attribution_count > 0:
+                events.append(
+                    {
+                        "at": who_last_at,
+                        "kind": "detection",
+                        "countryZh": country_zh,
+                        "delta": who_attribution_count,
+                        "type": "case_attribution",
+                        "shortContext": f"确诊归属（{who_attribution_count} 例）",
+                        "verdict": "已纳入 WHO",
+                        "source": source,
+                    }
+                )
 
             events.append(
                 {

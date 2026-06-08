@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-08T05:41:01.398422+00:00",
+  "__generated_at": "2026-06-08T05:50:21.580446+00:00",
   "date": "2026-06-08",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -114,10 +114,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-16T07:00:00+00:00"
     },
@@ -144,7 +144,7 @@
       "stale": false,
       "signalCount30d": 5,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-05-28T07:00:00+00:00"
+      "lastSignalAt": "2026-05-28T14:47:19+00:00"
     },
     "RU": {
       "iso2": "RU",
@@ -152,11 +152,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 6 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 7 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 7 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 6,
-      "signalCount7d": 6,
+      "signalCount30d": 7,
+      "signalCount7d": 7,
       "lastSignalAt": "2026-06-07T07:16:55+00:00"
     },
     "EE": {
@@ -241,7 +241,7 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 20,
+      "signalCount30d": 19,
       "signalCount7d": 4,
       "lastSignalAt": "2026-06-04T16:52:00+00:00",
       "importStatus": "imports_confirmed",

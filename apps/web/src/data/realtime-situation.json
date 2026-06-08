@@ -141,10 +141,30 @@
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 2,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（2 例）",
+      "verdict": "已纳入 WHO",
+      "source": "es_isciii"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
       "countryZh": "荷兰",
       "delta": 2,
       "type": "case_attribution",
       "shortContext": "确诊归属（2 例）",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "法国",
+      "delta": 1,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（1 例）",
       "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
@@ -422,7 +442,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-08T05:40:56.816518+00:00"
+      "updatedAt": "2026-06-08T05:50:17.716063+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -437,5 +457,5 @@
     "last24hCount": 5,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-08T05:41:01.391472+00:00"
+  "realtimeUpdatedAt": "2026-06-08T05:50:21.575247+00:00"
 }
