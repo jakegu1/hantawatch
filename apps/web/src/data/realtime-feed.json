@@ -1,19 +1,19 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-08T06:57:15.595679+00:00",
+  "__generated_at": "2026-06-08T10:23:24.779486+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-08T06:57:06.338788+00:00",
+  "last_fetched": "2026-06-08T10:23:23.307647+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-df8d06e467c7ec79",
-      "time": "2026-06-08T04:15:00.000Z",
-      "title_en": "Two Singaporeans complete quarantine after returning from cruise with deadly hantavirus outbreak - Yahoo News Malaysia",
-      "body_en": "Two Singaporeans complete quarantine after returning from cruise with deadly hantavirus outbreak Yahoo News Malaysia",
-      "summary_zh": "两名新加坡人完成汉坦病毒邮轮疫情隔离。",
+      "id": "rt-368689ea95cdf247",
+      "time": "2026-06-08T04:41:51.000Z",
+      "title_en": "Two Singaporeans complete quarantine after returning from cruise with deadly hantavirus outbreak - Malay Mail",
+      "body_en": "Two Singaporeans complete quarantine after returning from cruise with deadly hantavirus outbreak Malay Mail",
+      "summary_zh": "两名新加坡人完成邮轮汉坦病毒疫情隔离。",
       "key_facts_zh": [
         "新加坡",
         "完成隔离",
@@ -41,7 +41,8 @@
       "summary_zh": "新西兰邮轮乘客汉坦病毒检测阴性。",
       "key_facts_zh": [
         "新西兰",
-        "检测阴性"
+        "检测阴性",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -50,36 +51,11 @@
       "time": "2026-06-07T11:55:00.000Z",
       "title_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak - NL Times",
       "body_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak NL Times",
-      "summary_zh": "邮轮Hondius在汉坦疫情后从鹿特丹驶往挪威。",
+      "summary_zh": "邮轮Hondius号在致命汉坦病毒暴发后离开鹿特丹前往挪威。",
       "key_facts_zh": [
-        "荷兰",
         "邮轮",
-        "驶往挪威"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-742b9bd08c0d42c5",
-      "time": "2026-06-07T08:32:00.000Z",
-      "title_en": "Two Singapore residents who were on hantavirus-hit cruise ship complete quarantine - CNA",
-      "body_en": "Two Singapore residents who were on hantavirus-hit cruise ship complete quarantine CNA",
-      "summary_zh": "两名新加坡居民完成汉坦病毒邮轮隔离。",
-      "key_facts_zh": [
-        "新加坡",
-        "完成隔离",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-cdb890a64b0d360e",
-      "time": "2026-06-07T05:24:44.000Z",
-      "title_en": "Hantavirus Search Expands To Second Province In Argentina - NDTV",
-      "body_en": "Hantavirus Search Expands To Second Province In Argentina NDTV",
-      "summary_zh": "阿根廷汉坦病毒搜索扩大至第二个省份。",
-      "key_facts_zh": [
-        "阿根廷",
-        "搜索扩大"
+        "荷兰",
+        "挪威"
       ],
       "signal_strength": "high"
     },
@@ -88,11 +64,11 @@
       "time": "2026-06-07T02:32:43.000Z",
       "title_en": "Texans clear hantavirus quarantine following cruise outbreak - Click2Houston",
       "body_en": "Texans clear hantavirus quarantine following cruise outbreak Click2Houston",
-      "summary_zh": "德州居民解除汉坦病毒邮轮疫情隔离。",
+      "summary_zh": "得克萨斯州居民结束邮轮疫情隔离。",
       "key_facts_zh": [
         "美国",
-        "解除隔离",
-        "邮轮"
+        "得克萨斯",
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -101,11 +77,11 @@
       "time": "2026-06-07T00:08:28.000Z",
       "title_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says - FOX 7 Austin",
       "body_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says FOX 7 Austin",
-      "summary_zh": "得克萨斯州邮轮乘客汉坦病毒监测结束，无人感染。",
+      "summary_zh": "得州邮轮乘客完成监测，无感染。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "监测结束"
+        "得克萨斯",
+        "无感染"
       ],
       "signal_strength": "high"
     },
@@ -114,11 +90,11 @@
       "time": "2026-06-06T22:38:03.000Z",
       "title_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say - ABC13 Houston",
       "body_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say ABC13 Houston",
-      "summary_zh": "得克萨斯州两名邮轮乘客汉坦病毒监测完成，无感染。",
+      "summary_zh": "美国德州两名邮轮乘客汉坦病毒监测结束。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "监测完成"
+        "监测结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -127,11 +103,11 @@
       "time": "2026-06-06T22:11:00.000Z",
       "title_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius - KCBD.com",
       "body_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius KCBD.com",
-      "summary_zh": "MV Hondius 邮轮得州乘客汉坦病毒监测完成。",
+      "summary_zh": "美国德州MV Hondius邮轮乘客汉坦病毒监测完成。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "监测完成"
+        "监测完成",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -140,7 +116,7 @@
       "time": "2026-06-06T14:56:01.000Z",
       "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
       "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO 称汉坦病毒病例仍为13例，超一月无新增死亡。",
+      "summary_zh": "WHO称汉坦病毒病例仍为13例，月余无新增死亡。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -153,7 +129,7 @@
       "time": "2026-06-06T12:56:10.000Z",
       "title_en": "Hantavirus: Argentina expands probe to trace outbreak source - DW.com",
       "body_en": "Hantavirus: Argentina expands probe to trace outbreak source DW.com",
-      "summary_zh": "阿根廷扩大汉坦病毒暴发源头调查。",
+      "summary_zh": "阿根廷扩大汉坦病毒溯源调查。",
       "key_facts_zh": [
         "阿根廷",
         "扩大调查"
@@ -165,7 +141,7 @@
       "time": "2026-06-06T09:31:00.000Z",
       "title_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe - The Independent",
       "body_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe The Independent",
-      "summary_zh": "科学家追踪荷兰游客足迹，阿根廷扩大汉坦病毒调查。",
+      "summary_zh": "科学家追踪荷兰游客轨迹，阿根廷扩大汉坦病毒调查。",
       "key_facts_zh": [
         "阿根廷",
         "荷兰游客",
@@ -190,11 +166,11 @@
       "time": "2026-06-06T01:18:39.000Z",
       "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，派团队在门多萨捕鼠检测。",
+      "summary_zh": "阿根廷派团队在门多萨捕鼠检测，扩大汉坦病毒调查。",
       "key_facts_zh": [
         "阿根廷",
-        "门多萨",
-        "捕鼠检测"
+        "捕鼠检测",
+        "扩大调查"
       ],
       "signal_strength": "high"
     },
@@ -212,28 +188,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-999b6a689627bf9b",
-      "time": "2026-06-05T12:47:00.000Z",
-      "title_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home - KTVB",
-      "body_en": "Doctor who said he treated patients with Hantavirus on cruise ship returns home KTVB",
-      "summary_zh": "自称在邮轮上治疗汉坦病毒患者的医生返回家中。",
-      "key_facts_zh": [
-        "医生",
-        "邮轮",
-        "返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-ca5acd030470118d",
       "time": "2026-06-05T07:12:38.000Z",
       "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
       "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
-      "summary_zh": "亲历致命汉坦病毒邮轮，现为18名隔离者之一。",
+      "summary_zh": "亲历者讲述致命汉坦病毒邮轮经历，目前18人隔离。",
       "key_facts_zh": [
         "邮轮",
-        "隔离",
-        "18人"
+        "18人隔离",
+        "亲历者"
       ],
       "signal_strength": "high"
     },
@@ -242,11 +205,24 @@
       "time": "2026-06-04T23:32:05.000Z",
       "title_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home - KTVZ",
       "body_en": "Bend Doctor Who Took Charge During Deadly Hantavirus Outbreak Finally Returns Home KTVZ",
-      "summary_zh": "在致命汉坦病毒爆发期间负责的医生终于返回家中。",
+      "summary_zh": "美国本德医生在致命汉坦疫情中负责指挥后终于回家。",
       "key_facts_zh": [
-        "医生",
-        "返回",
-        "疫情"
+        "美国",
+        "本德",
+        "医生返家"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-fe52d8a5756f84fc",
+      "time": "2026-06-04T12:00:00.000Z",
+      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective - World Health Organization (WHO)",
+      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus III: reflections from the IHR Border Health and Points of Entry perspective World Health Organization (WHO)",
+      "summary_zh": "WHO 举办汉坦病毒网络研讨会，聚焦边境卫生与入境点。",
+      "key_facts_zh": [
+        "WHO",
+        "网络研讨会",
+        "边境卫生"
       ],
       "signal_strength": "high"
     }
