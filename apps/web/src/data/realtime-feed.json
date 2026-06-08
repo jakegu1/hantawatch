@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-08T20:11:36.159930+00:00",
+  "__generated_at": "2026-06-08T22:21:13.970522+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-08T20:11:27.231927+00:00",
+  "last_fetched": "2026-06-08T22:21:11.829297+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-06-08T16:29:36.000Z",
       "title_en": "Two Texans finish 42-day hantavirus quarantine without infection - Austin American-Statesman",
       "body_en": "Two Texans finish 42-day hantavirus quarantine without infection Austin American-Statesman",
-      "summary_zh": "两名得州人结束42天汉坦病毒隔离，未感染。",
+      "summary_zh": "两名得州人完成42天汉坦病毒隔离，未感染。",
       "key_facts_zh": [
         "美国",
         "隔离结束",
@@ -42,8 +42,8 @@
       "summary_zh": "两名得州乘客结束汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
-        "监测结束",
-        "MV Hondius"
+        "邮轮",
+        "监测结束"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +52,10 @@
       "time": "2026-06-08T14:40:50.000Z",
       "title_en": "Manitoba government provides hantavirus update - mySteinbach.ca",
       "body_en": "Manitoba government provides hantavirus update mySteinbach.ca",
-      "summary_zh": "加拿大曼尼托巴省政府更新汉坦病毒信息。",
+      "summary_zh": "加拿大马尼托巴省政府更新汉坦病毒信息。",
       "key_facts_zh": [
         "加拿大",
-        "曼尼托巴",
+        "马尼托巴",
         "政府更新"
       ],
       "signal_strength": "medium"
@@ -65,11 +65,10 @@
       "time": "2026-06-08T13:42:34.000Z",
       "title_en": "Texans Cleared of Hantavirus After Monitoring - Audacy",
       "body_en": "Texans Cleared of Hantavirus After Monitoring Audacy",
-      "summary_zh": "得州人经监测后确认未感染汉坦病毒。",
+      "summary_zh": "得州乘客汉坦病毒监测后解除警报。",
       "key_facts_zh": [
         "美国",
-        "监测",
-        "清除风险"
+        "监测解除"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +77,11 @@
       "time": "2026-06-08T11:22:00.000Z",
       "title_en": "Two Texans cleared of hantavirus risk after period of isolation - KERA News",
       "body_en": "Two Texans cleared of hantavirus risk after period of isolation KERA News",
-      "summary_zh": "两名得州人经隔离后确认无汉坦病毒风险。",
+      "summary_zh": "两名得州人隔离后确认无汉坦病毒风险。",
       "key_facts_zh": [
         "美国",
         "隔离",
-        "清除风险"
+        "无风险"
       ],
       "signal_strength": "high"
     },
@@ -104,11 +103,11 @@
       "time": "2026-06-07T18:16:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
       "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "美国俄勒冈州医生结束邮轮汉坦病毒隔离。",
+      "summary_zh": "俄勒冈州医生回家完成邮轮汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
         "俄勒冈",
-        "结束隔离"
+        "医生"
       ],
       "signal_strength": "high"
     },
@@ -120,6 +119,7 @@
       "summary_zh": "新西兰邮轮乘客汉坦病毒检测阴性。",
       "key_facts_zh": [
         "新西兰",
+        "邮轮",
         "检测阴性"
       ],
       "signal_strength": "high"
@@ -129,7 +129,7 @@
       "time": "2026-06-07T11:55:00.000Z",
       "title_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak - NL Times",
       "body_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak NL Times",
-      "summary_zh": "邮轮Hondius从鹿特丹驶往挪威。",
+      "summary_zh": "邮轮Hondius离开鹿特丹前往挪威。",
       "key_facts_zh": [
         "荷兰",
         "挪威",
@@ -142,10 +142,10 @@
       "time": "2026-06-07T02:32:43.000Z",
       "title_en": "Texans clear hantavirus quarantine following cruise outbreak - Click2Houston",
       "body_en": "Texans clear hantavirus quarantine following cruise outbreak Click2Houston",
-      "summary_zh": "美国得州居民结束邮轮汉坦病毒隔离。",
+      "summary_zh": "得克萨斯州居民结束邮轮汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "得州",
+        "得克萨斯",
         "结束隔离"
       ],
       "signal_strength": "high"
@@ -157,7 +157,8 @@
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue WTAE",
       "summary_zh": "汉坦病毒防治工具研究有进展但资金有限。",
       "key_facts_zh": [
-        "研究进展",
+        "研究",
+        "进展",
         "资金有限"
       ],
       "signal_strength": "medium"
@@ -170,8 +171,8 @@
       "summary_zh": "得州邮轮乘客完成汉坦病毒监测无感染。",
       "key_facts_zh": [
         "美国",
-        "得州",
-        "无感染"
+        "得克萨斯",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -206,7 +207,7 @@
       "time": "2026-06-06T14:56:01.000Z",
       "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
       "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO称汉坦病毒病例仍为13例，超一月无新增死亡。",
+      "summary_zh": "WHO称汉坦病毒病例仍为13例，月余无新增死亡。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -230,9 +231,9 @@
     {
       "id": "rt-c8b084bc7c7e3a95",
       "time": "2026-06-06T03:30:52.000Z",
-      "title_en": "Hantavirus: Argentina expands probe to trace outbreak source - DW.com",
-      "body_en": "Hantavirus: Argentina expands probe to trace outbreak source DW.com",
-      "summary_zh": "阿根廷扩大汉坦病毒调查以追溯疫情源头。",
+      "title_en": "Hantavirus: Argentina expands probe to trace outbreak source - DW",
+      "body_en": "Hantavirus: Argentina expands probe to trace outbreak source DW",
+      "summary_zh": "阿根廷扩大汉坦病毒调查以追查疫情源头。",
       "key_facts_zh": [
         "阿根廷",
         "扩大调查",
@@ -257,7 +258,7 @@
       "time": "2026-06-05T23:28:43.000Z",
       "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - Toronto Star",
       "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza Toronto Star",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，派团队在门多萨捕鼠检测。",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，派队赴门多萨捕鼠检测。",
       "key_facts_zh": [
         "阿根廷",
         "扩大调查",
