@@ -5109,6 +5109,34 @@
         "source_url": "",
         "time": "2026-06-08T04:15:00.000Z"
       }
+    ],
+    "rt-9b871f55bc3eec1a": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "low",
+        "reasoning_zh": "标题提及曼尼托巴省政府提供汉坦病毒更新，但正文无具体数字，无法提取变化量。",
+        "update_id": "rt-9b871f55bc3eec1a",
+        "source_url": "",
+        "time": "2026-06-08T14:40:50.000Z"
+      }
+    ],
+    "rt-b9ef5317230c58f6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-07",
+        "confidence": "low",
+        "reasoning_zh": "报道讨论汉坦病毒研究工具，未提及具体国家或病例变化。",
+        "update_id": "rt-b9ef5317230c58f6",
+        "source_url": "",
+        "time": "2026-06-07T00:53:00.000Z"
+      }
     ]
   }
 }

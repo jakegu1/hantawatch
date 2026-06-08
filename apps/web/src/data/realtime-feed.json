@@ -1,19 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-08T14:44:29.893179+00:00",
+  "__generated_at": "2026-06-08T15:44:45.731481+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-08T14:44:28.256897+00:00",
+  "last_fetched": "2026-06-08T15:44:37.644493+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-9b871f55bc3eec1a",
+      "time": "2026-06-08T14:40:50.000Z",
+      "title_en": "Manitoba government provides hantavirus update - mySteinbach.ca",
+      "body_en": "Manitoba government provides hantavirus update mySteinbach.ca",
+      "summary_zh": "加拿大马尼托巴省政府发布汉坦病毒最新情况。",
+      "key_facts_zh": [
+        "加拿大",
+        "马尼托巴",
+        "政府通报"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-9bc60025617479c8",
       "time": "2026-06-08T13:42:34.000Z",
       "title_en": "Texans Cleared of Hantavirus After Monitoring - Audacy",
       "body_en": "Texans Cleared of Hantavirus After Monitoring Audacy",
-      "summary_zh": "美国德州多人监测后排除汉坦病毒感染。",
+      "summary_zh": "美国德州多人经监测后排除汉坦病毒感染。",
       "key_facts_zh": [
         "美国",
         "德州",
@@ -26,7 +39,7 @@
       "time": "2026-06-08T11:22:00.000Z",
       "title_en": "Two Texans cleared of hantavirus risk after period of isolation - KERA News",
       "body_en": "Two Texans cleared of hantavirus risk after period of isolation KERA News",
-      "summary_zh": "美国德州两人隔离后排除汉坦病毒风险。",
+      "summary_zh": "美国德州两人经隔离后排除汉坦病毒风险。",
       "key_facts_zh": [
         "美国",
         "德州",
@@ -39,7 +52,7 @@
       "time": "2026-06-07T18:16:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
       "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "美国俄勒冈州医生邮轮汉坦疫情后返家隔离。",
+      "summary_zh": "美国俄勒冈州医生因邮轮汉坦病毒疫情返家完成隔离。",
       "key_facts_zh": [
         "美国",
         "俄勒冈",
@@ -65,10 +78,10 @@
       "time": "2026-06-07T11:55:00.000Z",
       "title_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak - NL Times",
       "body_en": "Cruise ship Hondius departs Rotterdam for Norway after deadly hantavirus outbreak NL Times",
-      "summary_zh": "邮轮Hondius致命汉坦疫情后从鹿特丹驶往挪威。",
+      "summary_zh": "荷美邮轮Hondius号致命汉坦疫情后从鹿特丹启航前往挪威。",
       "key_facts_zh": [
         "邮轮",
-        "鹿特丹",
+        "荷兰",
         "挪威"
       ],
       "signal_strength": "high"
@@ -78,10 +91,10 @@
       "time": "2026-06-07T02:32:43.000Z",
       "title_en": "Texans clear hantavirus quarantine following cruise outbreak - Click2Houston",
       "body_en": "Texans clear hantavirus quarantine following cruise outbreak Click2Houston",
-      "summary_zh": "美国得州邮轮疫情接触者解除汉坦病毒隔离。",
+      "summary_zh": "德州乘客结束邮轮疫情汉坦隔离。",
       "key_facts_zh": [
         "美国",
-        "得州",
+        "德州",
         "解除隔离"
       ],
       "signal_strength": "high"
@@ -91,7 +104,7 @@
       "time": "2026-06-07T00:53:00.000Z",
       "title_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue - WTAE",
       "body_en": "Tools to fight hantavirus show promise despite limited funding. Now researchers hope to continue WTAE",
-      "summary_zh": "汉坦病毒防治工具前景看好，但资金有限。",
+      "summary_zh": "汉坦病毒防治工具前景可期，但资金有限，研究者望继续。",
       "key_facts_zh": [
         "研究进展",
         "资金有限"
@@ -103,10 +116,10 @@
       "time": "2026-06-07T00:08:28.000Z",
       "title_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says - FOX 7 Austin",
       "body_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says FOX 7 Austin",
-      "summary_zh": "得州邮轮乘客完成汉坦病毒监测，无人感染。",
+      "summary_zh": "德州邮轮乘客完成汉坦监测，无感染。",
       "key_facts_zh": [
         "美国",
-        "得州",
+        "德州",
         "监测完成"
       ],
       "signal_strength": "high"
@@ -116,10 +129,10 @@
       "time": "2026-06-06T22:38:03.000Z",
       "title_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say - ABC13 Houston",
       "body_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say ABC13 Houston",
-      "summary_zh": "得州两名邮轮乘客完成汉坦病毒监测。",
+      "summary_zh": "卫生官员称2名德州邮轮乘客汉坦监测完成。",
       "key_facts_zh": [
         "美国",
-        "得州",
+        "德州",
         "监测完成"
       ],
       "signal_strength": "high"
@@ -129,10 +142,10 @@
       "time": "2026-06-06T22:11:00.000Z",
       "title_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius - KCBD",
       "body_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius KCBD",
-      "summary_zh": "得州邮轮MV Hondius乘客完成汉坦病毒监测。",
+      "summary_zh": "MV Hondius号德州乘客汉坦监测完成。",
       "key_facts_zh": [
         "美国",
-        "得州",
+        "德州",
         "监测完成"
       ],
       "signal_strength": "high"
@@ -142,7 +155,7 @@
       "time": "2026-06-06T14:56:01.000Z",
       "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
       "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO称汉坦病毒病例仍为13例，月余无新增死亡。",
+      "summary_zh": "WHO称汉坦病例仍为13例，月余无新增死亡。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -155,11 +168,11 @@
       "time": "2026-06-06T09:31:00.000Z",
       "title_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe - The Independent",
       "body_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe The Independent",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，科学家追溯荷兰游客行程。",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，追踪荷兰游客行踪。",
       "key_facts_zh": [
         "阿根廷",
-        "荷兰游客",
-        "扩大调查"
+        "扩大调查",
+        "荷兰游客"
       ],
       "signal_strength": "high"
     },
@@ -171,7 +184,8 @@
       "summary_zh": "阿根廷扩大汉坦病毒调查，追踪疫情源头。",
       "key_facts_zh": [
         "阿根廷",
-        "扩大调查"
+        "扩大调查",
+        "疫情源头"
       ],
       "signal_strength": "high"
     },
@@ -183,7 +197,8 @@
       "summary_zh": "新技术实现罕见汉坦病毒快速测序。",
       "key_facts_zh": [
         "新技术",
-        "快速测序"
+        "快速测序",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -192,11 +207,11 @@
       "time": "2026-06-05T23:28:43.000Z",
       "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - Toronto Star",
       "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza Toronto Star",
-      "summary_zh": "阿根廷派团队赴门多萨诱捕检测老鼠，扩大汉坦病毒调查。",
+      "summary_zh": "阿根廷扩大汉坦病毒调查，在门多萨捕鼠检测。",
       "key_facts_zh": [
         "阿根廷",
         "门多萨",
-        "老鼠检测"
+        "捕鼠检测"
       ],
       "signal_strength": "high"
     },
@@ -205,23 +220,11 @@
       "time": "2026-06-05T07:12:38.000Z",
       "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
       "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
-      "summary_zh": "亲历者讲述致命汉坦病毒邮轮，18人隔离中。",
+      "summary_zh": "汉坦病毒邮轮亲历者：18人隔离中。",
       "key_facts_zh": [
         "邮轮",
-        "18人隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c776a6cd4afcc36f",
-      "time": "2026-06-05T00:45:21.000Z",
-      "title_en": "Spain discharges first Hantavirus patient linked to MV Hondius outbreak - Qazinform",
-      "body_en": "Spain discharges first Hantavirus patient linked to MV Hondius outbreak Qazinform",
-      "summary_zh": "西班牙出院首例与MV Hondius疫情相关的汉坦病毒患者。",
-      "key_facts_zh": [
-        "西班牙",
-        "出院",
-        "MV Hondius"
+        "18人隔离",
+        "亲历者"
       ],
       "signal_strength": "high"
     }
