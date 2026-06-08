@@ -704,6 +704,7 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
     assert {e["countryZh"] for e in follow_ups} == {"法国", "西班牙"}
     assert all(e["delta"] == 0 for e in follow_ups)
     assert all(e["verdict"] == "随访更新" for e in follow_ups)
+    assert all(e["shortContext"] == "已确诊病例后续更新（非新增）" for e in follow_ups)
 
 
 def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:

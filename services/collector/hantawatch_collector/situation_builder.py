@@ -788,7 +788,7 @@ def build_events(
                         # confirmed attributions reconcile to totals.confirmed.
                         who_attribution_count = confirmed
                         type_ = "follow_up"
-                        short_context = "确诊病例随访"
+                        short_context = "已确诊病例后续更新（非新增）"
                         status_for_verdict = "follow_up"
                     else:
                         who_attribution_count = max(0, confirmed - delta)

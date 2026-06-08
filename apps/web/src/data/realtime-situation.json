@@ -105,7 +105,7 @@
       "countryZh": "法国",
       "delta": 0,
       "type": "follow_up",
-      "shortContext": "确诊病例随访",
+      "shortContext": "已确诊病例后续更新（非新增）",
       "verdict": "随访更新",
       "source": "official_cdc"
     },
@@ -115,7 +115,7 @@
       "countryZh": "西班牙",
       "delta": 0,
       "type": "follow_up",
-      "shortContext": "确诊病例随访",
+      "shortContext": "已确诊病例后续更新（非新增）",
       "verdict": "随访更新",
       "source": "es_isciii"
     },
@@ -462,7 +462,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-08T06:12:15.965771+00:00"
+      "updatedAt": "2026-06-08T06:34:12.730891+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -477,5 +477,5 @@
     "last24hCount": 5,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-08T06:12:19.796923+00:00"
+  "realtimeUpdatedAt": "2026-06-08T06:34:17.706226+00:00"
 }
