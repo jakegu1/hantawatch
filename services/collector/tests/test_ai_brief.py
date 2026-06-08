@@ -15,6 +15,7 @@ from hantawatch_collector.ai_brief import (
     _enforce_who_lag_disclosure,
     _has_who_lag_indicator,
     _jaccard_char_bigrams,
+    _sanitize_share_line_against_pending_deltas,
     _share_situation_overlap_score,
     _validate_brief_against_ledger,
     enhance_daily_brief,
@@ -307,6 +308,27 @@ def test_who_lag_disclosure_idempotent_when_already_compliant() -> None:
     assert out["shareLine"].count("WHO") == 1
     assert "WHO" in out["situation"]
     assert warnings == []
+
+
+def test_shareline_sanitizer_removes_pending_claim_when_no_since_who_delta() -> None:
+    brief = {
+        "date": "2026-06-08",
+        "shareLine": "WHO 5/28公布累计13例（11天前）；其后西班牙、法国各新增1例确诊输入，待WHO复核。",
+    }
+    outbreak_status = [{
+        "totals": {"all": 13},
+        "lastUpdate": {"asOfDate": "2026-05-28"},
+        "perCountry": [
+            {"iso2": "ES", "nameZh": "西班牙", "confirmed": 2, "confirmedSinceWho": 0, "asOf": "2026-06-05"},
+            {"iso2": "FR", "nameZh": "法国", "confirmed": 1, "confirmedSinceWho": 0, "asOf": "2026-06-06"},
+        ],
+    }]
+    out, warnings = _sanitize_share_line_against_pending_deltas(brief, outbreak_status)
+    assert "新增1例" not in out["shareLine"]
+    assert "待WHO复核" not in out["shareLine"]
+    assert "暂无新增待复核确诊" in out["shareLine"]
+    assert "西班牙、法国为随访更新" in out["shareLine"]
+    assert warnings
 
 
 @pytest.mark.parametrize(

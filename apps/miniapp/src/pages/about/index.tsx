@@ -171,18 +171,10 @@ export default function AboutPage() {
         </View>
         <View
           className="flex items-center"
-          style={{ padding: '12rpx 0', borderBottom: '1rpx solid #f3f4f6' }}
+          style={{ padding: '12rpx 0' }}
           onClick={() => Taro.navigateTo({ url: '/pages/terms/index' })}
         >
           <Text style={{ fontSize: '24rpx', color: '#111827', flex: 1 }}>服务条款</Text>
-          <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>›</Text>
-        </View>
-        <View
-          className="flex items-center"
-          style={{ padding: '12rpx 0' }}
-          onClick={() => Taro.navigateTo({ url: '/pages/feedback/index' })}
-        >
-          <Text style={{ fontSize: '24rpx', color: '#111827', flex: 1 }}>反馈建议</Text>
           <Text style={{ fontSize: '22rpx', color: '#9ca3af' }}>›</Text>
         </View>
       </View>

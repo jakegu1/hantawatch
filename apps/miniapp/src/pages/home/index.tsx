@@ -738,7 +738,7 @@ export default function HomePage() {
       </View>
 
       {/* ============================================================ */}
-      {/* SECTION 7 · 反馈/导航 footer                                   */}
+      {/* SECTION 7 · 导航 footer                                        */}
       {/*                                                                */}
       {/* The full subscribe-alerts CTA was REMOVED from miniapp on      */}
       {/* 2026-05-27 (audit #16): WeChat reviewers reject email-capture  */}
@@ -756,13 +756,6 @@ export default function HomePage() {
             borderTop: '1rpx solid #e5e7eb',
           }}
         >
-          <Text
-            style={{ fontSize: '22rpx', color: '#6b7280' }}
-            onClick={() => Taro.navigateTo({ url: '/pages/feedback/index' })}
-          >
-            反馈建议 →
-          </Text>
-          <Text style={{ color: '#d1d5db', fontSize: '22rpx' }}>·</Text>
           <Text
             style={{ fontSize: '22rpx', color: '#6b7280' }}
             onClick={() => Taro.switchTab({ url: '/pages/data/index' })}

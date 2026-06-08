@@ -5081,6 +5081,20 @@
         "source_url": "",
         "time": "2026-06-06T01:18:39.000Z"
       }
+    ],
+    "rt-406f82ed9f60d940": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "low",
+        "reasoning_zh": "报道提及汉坦病毒研究工具，但未提供具体病例数字或新增变化。",
+        "update_id": "rt-406f82ed9f60d940",
+        "source_url": "",
+        "time": "2026-06-08T03:25:00.000Z"
+      }
     ]
   }
 }

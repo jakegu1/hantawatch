@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from . import MANUAL_FILES
+from .distances import IMPORT_DISTANCE_KM
 from .ecdc import EcdcAssessment
 from .gazetteer import geocode_from_text
 from .hpi import HpiInputs, calculate_hpi
@@ -16,13 +17,6 @@ from .news_leads import NewsLead
 from .who_don import WhoDonEntry, select_serotype_id
 
 logger = logging.getLogger(__name__)
-
-IMPORT_DISTANCE_KM = {
-    "AR": 19400, "CL": 19200, "BR": 17400, "US": 11000, "CA": 10500, "MX": 12600,
-    "ES": 9200, "FR": 8400, "DE": 7800, "IT": 8100, "UK": 8200, "GB": 8200,
-    "NL": 8100, "PT": 9800, "CH": 8000, "AU": 7500, "NZ": 9700, "JP": 2100,
-    "KR": 950, "TH": 3300, "IN": 3800, "ZA": 11800,
-}
 
 IMPORT_STATUS_WEIGHT = {
     "imports_confirmed": 0.5,
@@ -997,6 +991,7 @@ def build_risk_snapshot(
         "distanceDeltaKm": distance_delta_km,
         "hpiDelta": hpi_delta,
         "oneLine": f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。",
+        "structuralLine": f"{dist_phrase}，{hpi_phrase}，{baseline_phrase}。",
     }
     return {
         "date": _today_cn().isoformat(),

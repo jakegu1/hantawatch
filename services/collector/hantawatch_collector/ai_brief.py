@@ -338,6 +338,106 @@ def _enforce_who_lag_disclosure(
     return out, warnings
 
 
+def _pending_and_followup_countries(
+    outbreak_status: list[dict[str, Any]] | dict[str, Any] | None,
+) -> tuple[int, list[str], list[str], dict[str, Any] | None, bool]:
+    obs = outbreak_status or []
+    if isinstance(obs, dict):
+        obs = obs.get("outbreaks") or []
+    if not obs or not isinstance(obs[0], dict):
+        return 0, [], [], None, False
+
+    o = obs[0]
+    last_update = o.get("lastUpdate") or {}
+    asof_str = (last_update.get("asOfDate") or "").strip()
+    who_date: date | None = None
+    if len(asof_str) >= 10:
+        try:
+            who_date = date.fromisoformat(asof_str[:10])
+        except (ValueError, TypeError):
+            who_date = None
+
+    pending_total = 0
+    pending_countries: list[str] = []
+    follow_up_countries: list[str] = []
+    has_confirmed_since_who_field = False
+    for pc in o.get("perCountry") or []:
+        if not isinstance(pc, dict):
+            continue
+        confirmed = int(pc.get("confirmed") or 0)
+        if confirmed <= 0:
+            continue
+        name = str(pc.get("nameZh") or pc.get("iso2") or "").strip()
+        if not name:
+            continue
+        since_who_raw = pc.get("confirmedSinceWho")
+        if since_who_raw is not None:
+            has_confirmed_since_who_field = True
+        try:
+            since_who = max(0, int(since_who_raw)) if since_who_raw is not None else 0
+        except (TypeError, ValueError):
+            since_who = 0
+        if since_who > 0:
+            pending_total += since_who
+            pending_countries.append(name)
+            continue
+        pc_asof = None
+        asof = pc.get("asOf")
+        if isinstance(asof, str) and len(asof) >= 10:
+            try:
+                pc_asof = date.fromisoformat(asof[:10])
+            except (ValueError, TypeError):
+                pc_asof = None
+        if who_date is not None and pc_asof is not None and pc_asof > who_date:
+            follow_up_countries.append(name)
+
+    return pending_total, pending_countries, follow_up_countries, o, has_confirmed_since_who_field
+
+
+def _sanitize_share_line_against_pending_deltas(
+    brief: dict[str, Any],
+    outbreak_status: list[dict[str, Any]] | dict[str, Any] | None,
+) -> tuple[dict[str, Any], list[str]]:
+    """Make shareLine obey confirmedSinceWho, not LLM wording guesses."""
+    text = brief.get("shareLine")
+    if not isinstance(text, str) or not text.strip():
+        return brief, []
+
+    pending_total, pending_countries, follow_up_countries, o, has_delta_field = _pending_and_followup_countries(outbreak_status)
+    if not o or not has_delta_field:
+        return brief, []
+
+    last_update = o.get("lastUpdate") or {}
+    asof_str = (last_update.get("asOfDate") or "").strip()
+    brief_date_str = (brief.get("date") or "").strip()
+    if len(asof_str) < 10 or len(brief_date_str) < 10:
+        return brief, []
+    try:
+        asof_dt = date.fromisoformat(asof_str[:10])
+        brief_dt = date.fromisoformat(brief_date_str[:10])
+    except (ValueError, TypeError):
+        return brief, []
+
+    totals_all = int((o.get("totals") or {}).get("all") or 0)
+    lag_days = max(0, (brief_dt - asof_dt).days)
+    prefix = f"WHO {asof_dt.month}/{asof_dt.day}公布累计{totals_all}例（{lag_days}天前）；"
+    out = dict(brief)
+
+    if pending_total <= 0:
+        follow = ""
+        if follow_up_countries:
+            follow = f"{'、'.join(follow_up_countries[:3])}为随访更新；"
+        out["shareLine"] = f"{prefix}其后暂无新增待复核确诊，{follow}中国大陆无相关病例，国内HFRS基线正常。"
+        return out, ["shareline_pending_sanitized: no pending confirmed deltas"]
+
+    country_text = "、".join(pending_countries[:3])
+    out["shareLine"] = (
+        f"{prefix}其后{country_text}待复核确诊共{pending_total}例；"
+        "中国大陆无相关病例，国内HFRS基线正常。"
+    )
+    return out, ["shareline_pending_sanitized: rebuilt from confirmedSinceWho"]
+
+
 # Chinese country-name list for validation (must match ARCGIS_COUNTRY_MAP in TS)
 _KNOWN_COUNTRY_NAMES_ZH = [
     '法国', '西班牙', '美国', '英国', '加拿大', '澳大利亚', '德国', '荷兰',
@@ -610,6 +710,14 @@ def enhance_daily_brief(
         merged.extend(lag_warnings)
         enhanced["_guardrail_warnings"] = merged
         logger.info("brief who-lag enforcement: %s", "; ".join(lag_warnings))
+
+    enhanced, pending_warnings = _sanitize_share_line_against_pending_deltas(enhanced, outbreak_status)
+    if pending_warnings:
+        existing = enhanced.get("_guardrail_warnings")
+        merged = list(existing) if isinstance(existing, list) else []
+        merged.extend(pending_warnings)
+        enhanced["_guardrail_warnings"] = merged
+        logger.info("brief pending-delta enforcement: %s", "; ".join(pending_warnings))
 
     enhanced, dedup_warnings = _dedupe_share_situation(enhanced, outbreak_status)
     if dedup_warnings:

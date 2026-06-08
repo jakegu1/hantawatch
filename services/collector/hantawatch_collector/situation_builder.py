@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .distances import IMPORT_DISTANCE_KM
 from .io_utils import read_json
 
 logger = logging.getLogger(__name__)
@@ -217,6 +218,8 @@ def _detection_verdict(
 ) -> str:
     if asof <= who_date:
         return "已纳入 WHO"
+    if status == "follow_up":
+        return "随访更新"
     if confirmed > 0:
         return "待 WHO 复核"
     if quarantine > 0 or status == "quarantine_active":
@@ -292,9 +295,9 @@ def _compute_intake_stats(
     """Compute 24h intake count + high-confidence picks for the daily-brief banner.
 
     "近 24h 抓取 N 条相关信息，精选 M 条高可信信号" — `N` is the raw count of
-    realtime-feed updates within the 24h window; `M` is the number of distinct
-    countries that produced confirmed-type detections newer than WHO (i.e.
-    ``sinceWhoNewCases``). M ≤ N by construction.
+    realtime-feed updates within the 24h window; `M` mirrors pending
+    since-WHO case deltas (``sinceWhoNewCases``). Follow-up/monitoring-only
+    updates do not count as high-confidence new case picks.
     """
     last24h_count = 0
     if realtime_feed and isinstance(realtime_feed, dict):
@@ -401,9 +404,9 @@ def build_ruler(
             if nearest_import and iso2 == str(nearest_import.get("iso2") or "").upper():
                 continue
 
-            # Distance per active country is not present in the input ledger;
-            # we reuse nearest distance as a visual proxy.
-            km = nearest_km_int if nearest_km_int is not None else origin_km_int
+            km = IMPORT_DISTANCE_KM.get(iso2)
+            if km is None:
+                km = nearest_km_int if nearest_km_int is not None else origin_km_int
             label = _ruler_label(confirmed, monitoring, int(pc.get("quarantine") or 0), str(pc.get("status") or ""))
             markers.append(
                 {
@@ -587,29 +590,38 @@ def build_events(
             if not has_official and confirmed <= 0:
                 continue
             if confirmed > 0:
-                type_ = "confirmed"
-                short_context = "确诊输入"
                 if asof > who_date:
                     delta = _since_who_confirmed_delta(pc, who_date=who_date, asof=asof)
                     if delta <= 0:
-                        continue
+                        type_ = "follow_up"
+                        short_context = "确诊病例随访"
+                        status_for_verdict = "follow_up"
+                    else:
+                        type_ = "confirmed"
+                        short_context = "确诊输入"
+                        status_for_verdict = status
                 else:
+                    type_ = "confirmed"
+                    short_context = "确诊输入"
                     delta = int(pc.get("newConfirmedToday") or 0) or confirmed
+                    status_for_verdict = status
             elif quarantine > 0 or status == "quarantine_active":
                 type_ = "quarantine"
                 short_context = f"隔离监测中（{quarantine} 人）" if quarantine > 0 else "隔离监测中"
                 delta = int(pc.get("newConfirmedToday") or 0)
+                status_for_verdict = status
             else:
                 type_ = "monitoring"
                 short_context = f"监测中（{monitoring} 人接触者）" if monitoring > 0 else "监测中"
                 delta = int(pc.get("newConfirmedToday") or 0)
+                status_for_verdict = status
 
             verdict = _detection_verdict(
                 asof=asof,
                 who_date=who_date,
                 confirmed=confirmed,
                 quarantine=quarantine,
-                status=status,
+                status=status_for_verdict,
             )
             # Source ID: qualitative mapping, only used as a short audit code.
             src_name = ""

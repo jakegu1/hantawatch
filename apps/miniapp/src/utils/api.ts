@@ -89,18 +89,6 @@ export function fetchHondiusImports(): Promise<HondiusImportsPayload> {
   return request<HondiusImportsPayload>('/hondius-imports');
 }
 
-/** Submit feedback */
-export function submitFeedback(data: {
-  type: string;
-  message: string;
-  website?: string;
-}): Promise<{ success: boolean }> {
-  return request('/feedback/submit', {
-    method: 'POST',
-    body: JSON.stringify(data),
-  });
-}
-
 /** Track page view */
 export function trackPageView(page: string): void {
   Taro.request({

@@ -113,6 +113,24 @@ export default function HomePage() {
     };
   }, [liveSituation]);
 
+  /** Shared 口径 B ledger — keeps NearestAndesCard in sync with RealtimeSituation. */
+  const andesCaseLedger = useMemo(() => {
+    const head = liveSituation.headline as Record<string, unknown>;
+    const totals = outbreakStatus[0]?.totals;
+    return {
+      reportedTotal:
+        typeof head.currentReportedCases === 'number'
+          ? head.currentReportedCases
+          : totals?.all,
+      confirmed: totals?.confirmed,
+      suspected: totals?.indeterminate,
+      deaths: totals?.deaths,
+      whoDaysAgo: typeof head.whoDaysAgo === 'number' ? head.whoDaysAgo : undefined,
+      whoLastUpdateZh:
+        typeof head.whoLastUpdateZh === 'string' ? head.whoLastUpdateZh : undefined,
+    };
+  }, [liveSituation]);
+
   // RecentCasesTimeline: filter to authoritative sources only (Jake's audit
   // #13 — cut the news-tier noise from the homepage; the realtime feed below
   // is the dedicated surface for non-official signals).
@@ -407,6 +425,7 @@ export default function HomePage() {
               result={nearestAndes}
               nearestImport={nearestImport}
               lastCheckedAt={dataMeta.lastCollectedAtCn ?? dataMeta.lastCollectedAt}
+              caseLedger={andesCaseLedger}
             />
           </div>
 

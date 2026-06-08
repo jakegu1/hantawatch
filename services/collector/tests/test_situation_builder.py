@@ -324,6 +324,24 @@ def test_ruler_markers_empty_when_calm() -> None:
     assert out["ruler"]["markers"] == []
 
 
+def test_ruler_uses_country_specific_distances() -> None:
+    today = date(2026, 5, 27)
+    out = build_realtime_situation(
+        outbreak_status=_outbreak_status(11),
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-05-27T05:10:20Z"},
+        today=today,
+    )
+    distances = {
+        m["countryZh"]: m["km"]
+        for m in out["ruler"]["markers"]
+        if m.get("countryZh") in {"法国", "西班牙"}
+    }
+    assert distances == {"法国": 8400, "西班牙": 9200}
+
+
 # ---------------------------------------------------------------------------
 # 口径 B (decided 2026-05-27) — headline must reflect "since WHO" news delta.
 #
@@ -634,4 +652,56 @@ def test_monitoring_post_who_uses_follow_up_verdict() -> None:
     us = next(e for e in events if e.get("countryZh") == "美国")
     assert us["type"] == "monitoring"
     assert us["verdict"] == "各国监测中"
+
+
+def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
+    """A later care/discharge update for an already-counted case is not a +1."""
+    today = date(2026, 6, 7)
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "confirmedSinceWho": 0,
+                    "monitoring": 0,
+                    "asOf": "2026-06-06",
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                },
+                {
+                    "iso2": "ES",
+                    "nameZh": "西班牙",
+                    "confirmed": 2,
+                    "confirmedSinceWho": 0,
+                    "monitoring": 0,
+                    "asOf": "2026-06-05",
+                    "evidence": [{"tier": "official", "sourceName": "es_isciii", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+
+    out = build_realtime_situation(
+        outbreak_status=outbreak,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-06-07T12:00:00Z"},
+        today=today,
+    )
+
+    assert out["headline"]["sinceWhoNewCases"] == 0
+    assert out["headline"]["currentReportedCases"] == 13
+    follow_ups = [
+        e
+        for e in out["events"]
+        if e.get("kind") == "detection" and e.get("type") == "follow_up"
+    ]
+    assert {e["countryZh"] for e in follow_ups} == {"法国", "西班牙"}
+    assert all(e["delta"] == 0 for e in follow_ups)
+    assert all(e["verdict"] == "随访更新" for e in follow_ups)
 

@@ -52,9 +52,20 @@ interface Props {
    *  updated since 5/13" from "our tool stopped fetching" — these look
    *  identical if only the source date is shown. */
   lastCheckedAt?: string;
+  /** Authoritative case ledger from realtime-situation / outbreak-status (口径 B). */
+  caseLedger?: AndesCaseLedger;
 }
 
-export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props) {
+export interface AndesCaseLedger {
+  reportedTotal?: number;
+  confirmed?: number;
+  suspected?: number;
+  deaths?: number;
+  whoDaysAgo?: number;
+  whoLastUpdateZh?: string;
+}
+
+export function NearestAndesCard({ result, nearestImport, lastCheckedAt, caseLedger }: Props) {
   const { nearest, count, all } = result;
 
   // Defensive: if there are zero Andes clusters worldwide, show a calm
@@ -96,6 +107,14 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
   const displayLocation = hasCloserImport
     ? `${nearestImport!.flag} ${importLocZh}（${nearestImport!.statusZh}）`
     : nearest.location?.name || '位置待定位';
+  const clusterConfirmed = nearest.confirmedCases ?? 0;
+  const clusterSuspected = nearest.suspectedCases ?? 0;
+  const clusterTotal = clusterConfirmed + clusterSuspected;
+  const displayConfirmed = caseLedger?.confirmed ?? clusterConfirmed;
+  const displaySuspected = caseLedger?.suspected ?? clusterSuspected;
+  const displayDeaths = caseLedger?.deaths ?? nearest.deaths ?? 0;
+  const displayTotal = caseLedger?.reportedTotal ?? clusterTotal;
+  const whoAgoLabel = caseLedger?.whoDaysAgo != null ? `${caseLedger.whoDaysAgo}天前` : rawDate;
 
   return (
     <div className="card-premium !p-0 overflow-hidden">
@@ -159,7 +178,8 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
         <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-[11px] text-gray-500 mb-3">
           <span className="inline-flex items-center gap-0.5">
             <Calendar className="h-3 w-3 text-gray-400" />
-            WHO 通报 <span className="text-gray-700 font-medium">{rawDate}</span>
+            WHO {caseLedger?.whoLastUpdateZh ? `${caseLedger.whoLastUpdateZh} 公布` : '通报'}{' '}
+            <span className="text-gray-700 font-medium">{whoAgoLabel}</span>
           </span>
           {lastCheckedAt && (
             <>
@@ -216,15 +236,15 @@ export function NearestAndesCard({ result, nearestImport, lastCheckedAt }: Props
           <div className="flex items-baseline gap-1.5 mb-2">
             <span className="text-[11px] text-gray-500">累计</span>
             <span className="text-lg font-bold text-gray-900 leading-none">
-              {(nearest.confirmedCases ?? 0) + (nearest.suspectedCases ?? 0)}
+              {displayTotal}
             </span>
             <span className="text-[11px] text-gray-500">例</span>
             <span className="text-[10px] text-gray-400 ml-1">= 确诊 + 疑似，含死亡</span>
           </div>
           <div className="grid grid-cols-3 gap-2">
-            <Stat label="确诊" value={nearest.confirmedCases ?? 0} tone="text-gray-900" />
-            <Stat label="疑似" value={nearest.suspectedCases ?? 0} tone="text-yellow-700" />
-            <Stat label="其中死亡" value={nearest.deaths ?? 0} tone="text-red-700" />
+            <Stat label="确诊" value={displayConfirmed} tone="text-gray-900" />
+            <Stat label="疑似" value={displaySuspected} tone="text-yellow-700" />
+            <Stat label="其中死亡" value={displayDeaths} tone="text-red-700" />
           </div>
         </div>
 

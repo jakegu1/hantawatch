@@ -103,7 +103,7 @@ export default function TermsPage() {
         <Bullet>各机构口径不一致</Bullet>
         <Bullet>我们的抓取/解析脚本可能出错</Bullet>
         <Bullet>历史数据可能被来源方撤回或修订</Bullet>
-        <P>如发现数据错误，请通过反馈页告知我们，我们会尽快核查更正。</P>
+        <P>如发现数据错误，可通过关于页列出的项目地址或联系邮箱告知我们，我们会尽快核查更正。</P>
 
         <H2>四、HPI 算法说明</H2>
         <P>
@@ -118,7 +118,7 @@ export default function TermsPage() {
         <H2>五、用户行为规范</H2>
         <P>使用本站时，你同意不会：</P>
         <Bullet>恶意爬取或对本站发起拒绝服务攻击</Bullet>
-        <Bullet>提交虚假反馈、垃圾邮箱订阅信息</Bullet>
+        <Bullet>通过项目渠道提交垃圾信息或恶意请求</Bullet>
         <Bullet>未经书面授权将本站内容用于商业用途</Bullet>
         <Bullet>误导他人本站为官方机构</Bullet>
 

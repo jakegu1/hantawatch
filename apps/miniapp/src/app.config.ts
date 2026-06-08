@@ -7,7 +7,6 @@ export default defineAppConfig({
     'pages/guide/index',
     'pages/countries/index',
     'pages/about/index',
-    'pages/feedback/index',
     'pages/privacy/index',
     'pages/terms/index',
   ],

@@ -101,13 +101,7 @@ export default function PrivacyPage() {
           <Text style={{ fontWeight: 600 }}>本微信小程序版本不提供邮箱订阅功能，不收集任何邮箱地址。</Text>
           邮件预警订阅仅通过 Web 版（bingduguancha.com）提供，相关隐私条款详见 Web 版隐私政策。
         </P>
-        <H3>2.2 反馈内容</H3>
-        <Bullet>
-          <Text style={{ fontWeight: 600 }}>反馈内容</Text>
-          ：当你通过反馈页面提交反馈时，我们会保存你填写的文本内容。提交是<Text style={{ fontWeight: 600 }}>完全匿名</Text>的，不收集邮箱、手机号或任何联系方式。
-        </Bullet>
-
-        <H3>2.3 自动收集的匿名信息</H3>
+        <H3>2.2 自动收集的匿名信息</H3>
         <Bullet>
           <Text style={{ fontWeight: 600 }}>访问统计</Text>
           ：我们记录页面路径、访问时间戳、来源（如有）、设备型号（user agent），用于优化产品。
@@ -119,7 +113,7 @@ export default function PrivacyPage() {
           <Text style={{ fontWeight: 600 }}>不包含任何用户输入</Text>。
         </Bullet>
 
-        <H3>2.4 我们不会收集的信息</H3>
+        <H3>2.3 我们不会收集的信息</H3>
         <Bullet>真实姓名、身份证号、手机号</Bullet>
         <Bullet>身体健康信息、症状描述、就诊记录</Bullet>
         <Bullet>位置信息（GPS）</Bullet>
@@ -132,29 +126,27 @@ export default function PrivacyPage() {
         </P>
 
         <H2>四、信息的使用与共享</H2>
-        <P>收集到的邮箱仅用于发送预警通知。我们不会：</P>
-        <Bullet>把邮箱出售给任何第三方</Bullet>
-        <Bullet>把邮箱用于发送商业广告</Bullet>
-        <Bullet>把邮箱用于发送非汉坦病毒相关内容</Bullet>
-        <P>反馈内容仅本站维护者可见，用于产品改进，不会公开。</P>
+        <P>小程序版本不提供表单、评论、笔记、图片上传、音频上传等用户内容功能，也不收集邮箱或手机号。我们不会：</P>
+        <Bullet>把用户数据出售给任何第三方</Bullet>
+        <Bullet>把访问统计用于商业广告定向</Bullet>
+        <Bullet>把匿名访问统计用于跨站追踪</Bullet>
 
         <H2>五、数据存储与安全</H2>
         <P>
-          邮箱与反馈数据存储在云数据库中，使用 TLS 加密传输。我们采取合理技术措施防止未授权访问，但
+          匿名访问统计和错误日志使用 TLS 加密传输。我们采取合理技术措施防止未授权访问，但
           <Text style={{ fontWeight: 600 }}>互联网环境无法做到绝对安全</Text>
-          。如果你强烈在意隐私，请使用临时邮箱订阅。
+          。
         </P>
 
         <H2>六、你的权利</H2>
         <P>你随时可以：</P>
-        <Bullet>退订邮件预警（通过任意一封通知邮件底部的退订链接）</Bullet>
-        <Bullet>要求删除你的邮箱与反馈记录：发送邮件至 jake.gu@foxmail.com</Bullet>
-        <Bullet>查询我们存储的与你相关的数据：同上邮箱联系</Bullet>
+        <Bullet>查询我们是否保存了与你相关的数据：发送邮件至 jake.gu@foxmail.com</Bullet>
+        <Bullet>要求删除可定位到你的联系记录（如你主动通过邮件联系我们）：同上邮箱联系</Bullet>
         <P>我们将在 30 天内响应你的请求。</P>
 
         <H2>七、未成年人</H2>
         <P>
-          本站不主动向 14 岁以下未成年人提供服务。如果你是未成年人的监护人，发现其未经同意在本站留下了邮箱或反馈，可联系上述邮箱要求删除。
+          本站不主动向 14 岁以下未成年人提供服务。如果你是未成年人的监护人，发现其未经同意通过邮件留下了联系方式，可联系上述邮箱要求删除。
         </P>
 
         <H2>八、变更通知</H2>
@@ -164,7 +156,7 @@ export default function PrivacyPage() {
 
         <H2>九、联系我们</H2>
         <P>
-          如对本政策有任何疑问，请通过反馈页或邮件 jake.gu@foxmail.com 与我们联系。
+          如对本政策有任何疑问，请通过邮件 jake.gu@foxmail.com 与我们联系。
         </P>
       </View>
     </View>
