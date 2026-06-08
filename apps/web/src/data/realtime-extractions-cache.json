@@ -5137,6 +5137,76 @@
         "source_url": "",
         "time": "2026-06-07T00:53:00.000Z"
       }
+    ],
+    "rt-283f7e8146d74897": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "美国德州乘客完成汉坦病毒监测，无新增病例。",
+        "update_id": "rt-283f7e8146d74897",
+        "source_url": "",
+        "time": "2026-06-08T19:23:00.000Z"
+      }
+    ],
+    "rt-016af9667235acff": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名德州人结束42天隔离，未感染，无新增。",
+        "update_id": "rt-016af9667235acff",
+        "source_url": "",
+        "time": "2026-06-08T16:29:36.000Z"
+      }
+    ],
+    "rt-c6f53558a1015c90": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名德州乘客结束汉坦病毒监测，无新增。",
+        "update_id": "rt-c6f53558a1015c90",
+        "source_url": "",
+        "time": "2026-06-08T16:09:37.000Z"
+      }
+    ],
+    "rt-9bc60025617479c8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "德州人经监测后清除汉坦病毒风险，无新增。",
+        "update_id": "rt-9bc60025617479c8",
+        "source_url": "",
+        "time": "2026-06-08T13:42:34.000Z"
+      }
+    ],
+    "rt-49e7c8e9585eb19e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名德州人经隔离后清除汉坦病毒风险，无新增。",
+        "update_id": "rt-49e7c8e9585eb19e",
+        "source_url": "",
+        "time": "2026-06-08T11:22:00.000Z"
+      }
     ]
   }
 }
