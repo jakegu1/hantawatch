@@ -761,8 +761,12 @@ def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
         for e in out["events"]
         if e.get("kind") == "detection" and e.get("type") == "death_attribution"
     ]
-    assert [(e["countryZh"], e["delta"], e["verdict"]) for e in suspected_rows] == [("WHO分类", 2, "WHO 分类")]
-    assert [(e["countryZh"], e["delta"], e["verdict"]) for e in death_rows] == [("WHO结局", 3, "WHO 结局")]
+    assert [(e["countryZh"], e["delta"], e["shortContext"], e["verdict"]) for e in suspected_rows] == [
+        ("疑似病例", 2, "WHO通报列为疑似（2 例）", "WHO通报")
+    ]
+    assert [(e["countryZh"], e["delta"], e["shortContext"], e["verdict"]) for e in death_rows] == [
+        ("死亡病例", 3, "WHO通报含3例死亡", "WHO通报")
+    ]
 
 
 def test_who_milestones_include_structured_case_deltas() -> None:

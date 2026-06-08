@@ -883,11 +883,11 @@ def build_events(
                 {
                     "at": who_last_at,
                     "kind": "detection",
-                    "countryZh": "WHO分类",
+                    "countryZh": "疑似病例",
                     "delta": _indeterminate,
                     "type": "suspected_attribution",
-                    "shortContext": f"疑似病例分类（{_indeterminate} 例）",
-                    "verdict": "WHO 分类",
+                    "shortContext": f"WHO通报列为疑似（{_indeterminate} 例）",
+                    "verdict": "WHO通报",
                     "source": "who_don",
                 }
             )
@@ -897,11 +897,11 @@ def build_events(
                 {
                     "at": who_last_at,
                     "kind": "detection",
-                    "countryZh": "WHO结局",
+                    "countryZh": "死亡病例",
                     "delta": _deaths,
                     "type": "death_attribution",
-                    "shortContext": f"死亡结局归属（{_deaths} 例）",
-                    "verdict": "WHO 结局",
+                    "shortContext": f"WHO通报含{_deaths}例死亡",
+                    "verdict": "WHO通报",
                     "source": "who_don",
                 }
             )

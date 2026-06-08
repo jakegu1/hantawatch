@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-08T05:58:49.256733+00:00",
+  "__generated_at": "2026-06-08T06:12:19.804679+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-08T05:58:40.993514+00:00",
+  "last_fetched": "2026-06-08T06:12:12.176589+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,7 +16,8 @@
       "summary_zh": "两名新加坡人结束汉坦病毒邮轮疫情隔离。",
       "key_facts_zh": [
         "新加坡",
-        "隔离结束"
+        "邮轮",
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -40,6 +41,7 @@
       "summary_zh": "新西兰邮轮乘客汉坦病毒检测阴性。",
       "key_facts_zh": [
         "新西兰",
+        "邮轮",
         "检测阴性"
       ],
       "signal_strength": "high"
@@ -53,7 +55,7 @@
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "挪威"
+        "前往挪威"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +67,8 @@
       "summary_zh": "两名新加坡居民结束汉坦病毒邮轮隔离。",
       "key_facts_zh": [
         "新加坡",
-        "隔离结束"
+        "邮轮",
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -86,10 +89,11 @@
       "time": "2026-06-07T02:32:43.000Z",
       "title_en": "Texans clear hantavirus quarantine following cruise outbreak - Click2Houston",
       "body_en": "Texans clear hantavirus quarantine following cruise outbreak Click2Houston",
-      "summary_zh": "得克萨斯州居民结束汉坦病毒邮轮隔离。",
+      "summary_zh": "德州居民结束汉坦病毒邮轮疫情隔离。",
       "key_facts_zh": [
         "美国",
-        "隔离结束"
+        "德州",
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -162,11 +166,11 @@
       "time": "2026-06-06T09:31:00.000Z",
       "title_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe - The Independent",
       "body_en": "Scientists retrace steps of Dutch tourists as Argentina expands hantavirus probe The Independent",
-      "summary_zh": "科学家追踪荷兰游客行程，阿根廷扩大汉坦病毒调查。",
+      "summary_zh": "科学家追踪荷兰游客足迹，阿根廷扩大汉坦病毒调查。",
       "key_facts_zh": [
         "阿根廷",
         "荷兰游客",
-        "追踪"
+        "扩大调查"
       ],
       "signal_strength": "high"
     },
@@ -226,11 +230,11 @@
       "time": "2026-06-05T07:12:38.000Z",
       "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
       "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
-      "summary_zh": "汉坦病毒邮轮亲历者：我成为18名隔离者之一。",
+      "summary_zh": "汉坦病毒邮轮幸存者自述，目前18人隔离中。",
       "key_facts_zh": [
         "邮轮",
-        "隔离",
-        "18人"
+        "18人隔离",
+        "幸存者"
       ],
       "signal_strength": "high"
     },
@@ -242,7 +246,8 @@
       "summary_zh": "研究显示免疫疗法对重症汉坦病毒肺病早期有效。",
       "key_facts_zh": [
         "免疫疗法",
-        "早期有效"
+        "汉坦病毒肺病",
+        "早期"
       ],
       "signal_strength": "medium"
     }
