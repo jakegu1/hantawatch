@@ -331,7 +331,8 @@ def test_ruler_markers_empty_when_calm() -> None:
 # headline cannot just say "11 累计" — users will read "13 cases" in the news
 # the next moment and lose trust. The collector must compute and surface
 # `currentReportedCases = whoConfirmedCases + sinceWhoNewCases` so the
-# frontend can render "现报 13（WHO 已确认 11 · 待复核 2）".
+# frontend can render "现报 15（WHO 13 · 待复核 2 例）" where 2 is the
+# **sum of post-WHO case deltas**, not a country count.
 # ---------------------------------------------------------------------------
 
 
@@ -547,4 +548,90 @@ def test_build_events_collapses_same_country_pending_screening_across_utc_midnig
     assert us_screening[0]["at"] == "2026-05-30T04:25:11Z"  # keep the latest report
     assert us_screening[0]["delta"] == 2  # latest delta, NOT summed to 4
     assert us_screening[0]["source"] == "realtime_news"
+
+
+def test_since_who_sums_case_deltas_not_country_count() -> None:
+    """Spain can have 2 national confirmed but only 1 since-WHO — headline and timeline must agree."""
+    today = date(2026, 6, 7)
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "confirmedSinceWho": 1,
+                    "monitoring": 0,
+                    "asOf": "2026-06-06",
+                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "retrievedAt": ""}],
+                },
+                {
+                    "iso2": "ES",
+                    "nameZh": "西班牙",
+                    "confirmed": 2,
+                    "confirmedSinceWho": 1,
+                    "monitoring": 0,
+                    "asOf": "2026-06-05",
+                    "evidence": [{"tier": "official", "sourceName": "es_isciii", "retrievedAt": ""}],
+                },
+                {
+                    "iso2": "US",
+                    "nameZh": "美国",
+                    "confirmed": 0,
+                    "monitoring": 13,
+                    "asOf": "2026-06-07",
+                    "evidence": [{"tier": "official", "sourceName": "cdc", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+    out = build_realtime_situation(
+        outbreak_status=outbreak,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta={"lastCollectedAt": "2026-06-07T12:00:00Z"},
+        today=today,
+    )
+    h = out["headline"]
+    assert h["sinceWhoNewCases"] == 2
+    assert h["currentReportedCases"] == 15
+    pending = [
+        e
+        for e in out["events"]
+        if e.get("kind") == "detection"
+        and e.get("type") == "confirmed"
+        and e.get("verdict") == "待 WHO 复核"
+    ]
+    assert sum(int(e.get("delta") or 0) for e in pending) == 2
+    es = next(e for e in pending if e.get("countryZh") == "西班牙")
+    assert es["delta"] == 1
+
+
+def test_monitoring_post_who_uses_follow_up_verdict() -> None:
+    """Contacts under surveillance are not '待 WHO 复核' pending cases."""
+    outbreak = [
+        {
+            "name": "MV Hondius 邮轮安第斯型聚集疫情",
+            "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "deaths": 3},
+            "lastUpdate": {"asOfDate": "2026-05-28"},
+            "perCountry": [
+                {
+                    "iso2": "US",
+                    "nameZh": "美国",
+                    "confirmed": 0,
+                    "monitoring": 13,
+                    "asOf": "2026-06-07",
+                    "evidence": [{"tier": "official", "sourceName": "cdc", "retrievedAt": ""}],
+                },
+            ],
+        }
+    ]
+    events, _, _ = build_events(outbreak, realtime_feed={"__today": "2026-06-07"})
+    us = next(e for e in events if e.get("countryZh") == "美国")
+    assert us["type"] == "monitoring"
+    assert us["verdict"] == "各国监测中"
 

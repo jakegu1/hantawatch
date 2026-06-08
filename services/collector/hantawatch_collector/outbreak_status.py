@@ -257,6 +257,11 @@ def build_outbreak_status(
                     ),
                     "status": imp.get("status", "monitoring"),
                     "confirmed": int(imp.get("confirmedImports", 0) or 0),
+                    "confirmedSinceWho": (
+                        int(imp["confirmedSinceWho"])
+                        if imp.get("confirmedSinceWho") is not None
+                        else None
+                    ),
                     "monitoring": int(imp.get("monitoringCount", 0) or 0),
                     "quarantine": int(imp.get("quarantineCount", 0) or 0),
                     "deaths": int(imp.get("deaths", 0) or 0),

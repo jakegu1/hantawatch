@@ -185,6 +185,45 @@ def _headline_for(
     }
 
 
+def _since_who_confirmed_delta(
+    pc: dict[str, Any],
+    *,
+    who_date: date,
+    asof: date,
+) -> int:
+    """Cases in this country attributed after the latest WHO DON."""
+    if asof <= who_date:
+        return 0
+    explicit = pc.get("confirmedSinceWho")
+    if explicit is not None:
+        try:
+            return max(0, int(explicit))
+        except (TypeError, ValueError):
+            pass
+    confirmed = int(pc.get("confirmed") or 0)
+    if confirmed <= 0:
+        return 0
+    # Legacy fallback when editors only supply national cumulative.
+    return confirmed
+
+
+def _detection_verdict(
+    *,
+    asof: date,
+    who_date: date,
+    confirmed: int,
+    quarantine: int,
+    status: str,
+) -> str:
+    if asof <= who_date:
+        return "已纳入 WHO"
+    if confirmed > 0:
+        return "待 WHO 复核"
+    if quarantine > 0 or status == "quarantine_active":
+        return "隔离随访中"
+    return "各国监测中"
+
+
 def _enrich_headline_with_since_who(
     headline: dict[str, Any],
     events: list[dict[str, Any]],
@@ -192,15 +231,13 @@ def _enrich_headline_with_since_who(
 ) -> None:
     """Mutate headline in-place with 口径 B fields.
 
-    口径 B (decided 2026-05-27): "现报 N 例（WHO 已确认 X · 待复核 Y）".
+    口径 B (decided 2026-05-27, case-sum fix 2026-06-07): "现报 N 例（WHO 已确认 X · 待复核 Y）".
 
     - ``whoConfirmedCases`` mirrors ``totalCases`` (WHO authoritative ledger).
-    - ``sinceWhoNewCases`` counts distinct countries that have confirmed-type
-      detection events newer than WHO's last DON date. These are signals our
-      collector has picked up but WHO hasn't formally folded into a DON yet.
-    - ``sinceWhoNewCountries`` is the ordered country list (for narration).
-    - ``currentReportedCases`` = WHO confirmed + since-WHO new = the number
-      users will read in mainstream news (e.g. "13 cases" today).
+    - ``sinceWhoNewCases`` sums **case deltas** from post-WHO confirmed detections
+      (not distinct countries — one country can contribute +2).
+    - ``sinceWhoNewCountries`` lists countries that contributed any pending delta.
+    - ``currentReportedCases`` = WHO confirmed + since-WHO case sum.
     """
     who_confirmed = int(headline.get("totalCases") or 0)
     headline["whoConfirmedCases"] = who_confirmed
@@ -219,8 +256,9 @@ def _enrich_headline_with_since_who(
         headline["currentReportedCases"] = who_confirmed
         return
 
-    seen: set[str] = set()
+    pending_total = 0
     countries: list[str] = []
+    seen: set[str] = set()
     for e in events:
         if not isinstance(e, dict):
             continue
@@ -228,18 +266,21 @@ def _enrich_headline_with_since_who(
             continue
         if e.get("type") != "confirmed":
             continue
-        country = e.get("countryZh")
-        if not country or country in seen:
+        delta = int(e.get("delta") or 0)
+        if delta <= 0:
             continue
         ev_at = _parse_iso_datetime(str(e.get("at") or ""))
         if ev_at is None or ev_at.date() <= who_date:
             continue
-        seen.add(country)
-        countries.append(country)
+        pending_total += delta
+        country = e.get("countryZh")
+        if country and country not in seen:
+            seen.add(country)
+            countries.append(country)
 
-    headline["sinceWhoNewCases"] = len(countries)
+    headline["sinceWhoNewCases"] = pending_total
     headline["sinceWhoNewCountries"] = countries
-    headline["currentReportedCases"] = who_confirmed + len(countries)
+    headline["currentReportedCases"] = who_confirmed + pending_total
 
 
 def _compute_intake_stats(
@@ -545,21 +586,31 @@ def build_events(
             # source so we don't spam the timeline with every dashboard dash.
             if not has_official and confirmed <= 0:
                 continue
-            delta = int(pc.get("newConfirmedToday") or 0)
-            if delta == 0:
-                delta = confirmed if confirmed > 0 else 0
-
             if confirmed > 0:
                 type_ = "confirmed"
                 short_context = "确诊输入"
+                if asof > who_date:
+                    delta = _since_who_confirmed_delta(pc, who_date=who_date, asof=asof)
+                    if delta <= 0:
+                        continue
+                else:
+                    delta = int(pc.get("newConfirmedToday") or 0) or confirmed
             elif quarantine > 0 or status == "quarantine_active":
                 type_ = "quarantine"
                 short_context = f"隔离监测中（{quarantine} 人）" if quarantine > 0 else "隔离监测中"
+                delta = int(pc.get("newConfirmedToday") or 0)
             else:
                 type_ = "monitoring"
                 short_context = f"监测中（{monitoring} 人接触者）" if monitoring > 0 else "监测中"
+                delta = int(pc.get("newConfirmedToday") or 0)
 
-            verdict = "已纳入 WHO" if asof <= who_date else "待 WHO 复核"
+            verdict = _detection_verdict(
+                asof=asof,
+                who_date=who_date,
+                confirmed=confirmed,
+                quarantine=quarantine,
+                status=status,
+            )
             # Source ID: qualitative mapping, only used as a short audit code.
             src_name = ""
             for ev in evidence:
@@ -681,6 +732,9 @@ def build_events(
         dt = _parse_iso_datetime(str(e.get("at") or ""))
         if e.get("type") == "screening" and e.get("source") == "realtime_news":
             key = (e.get("countryZh"), "screening-pending", "screening")
+        elif e.get("type") == "confirmed":
+            # One post-WHO confirmed row per country — ledger + news must not stack.
+            key = (e.get("countryZh"), "confirmed")
         else:
             if dt is not None:
                 if dt.tzinfo is None:

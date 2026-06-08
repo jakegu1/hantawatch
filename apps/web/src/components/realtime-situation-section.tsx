@@ -265,9 +265,8 @@ export function RealtimeSituationSection({ data }: { data: RealtimeSituation }) 
 
   // 口径统一 (2026-05-30): hero shows "现报 N 例" then the WHO-ledger split
   // "确诊 X · 疑似 Y（含 Z 死亡）" from data.totals, plus an optional "待复核"
-  // chip for since-WHO signals. 现报 = 确诊 + 疑似 (+ 待复核); deaths are a
-  // SUBSET of the total. Fall back to legacy `totalCases` if the collector
-  // hasn't populated the new headline fields yet.
+  // chip for since-WHO case deltas (sum of timeline +N, not country count).
+  // Fall back to legacy `totalCases` if the collector hasn't populated the new fields.
   const whoConfirmed =
     'whoConfirmedCases' in headline && typeof headline.whoConfirmedCases === 'number'
       ? headline.whoConfirmedCases

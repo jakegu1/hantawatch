@@ -181,7 +181,9 @@ export interface MvHondiusImport {
   date: string;                 // YYYY-MM-DD of the latest update
   monitoringCount?: number;     // contacts under surveillance
   quarantineCount?: number;     // people in active quarantine
-  confirmedImports?: number;    // confirmed Andes virus cases imported
+  confirmedImports?: number;    // confirmed Andes virus cases imported (national cumulative)
+  /** Cases first reported after the latest WHO DON — drives 待复核 / timeline +N. */
+  confirmedSinceWho?: number;
   deaths?: number;
   status: MvHondiusStatus;
   summary_zh: string;           // ≤ 80 chars: latest situation in Chinese

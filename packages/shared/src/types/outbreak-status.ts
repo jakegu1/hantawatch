@@ -18,6 +18,8 @@ export interface OutbreakPerCountry {
   nameZh: string;
   status: OutbreakCountryStatus;
   confirmed: number;
+  /** Incremental confirmed cases since last WHO DON (manual imports). */
+  confirmedSinceWho?: number;
   monitoring: number;
   quarantine: number;
   deaths: number;
