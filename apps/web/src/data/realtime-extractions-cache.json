@@ -5403,6 +5403,104 @@
         "source_url": "",
         "time": "2026-06-09T10:51:45.000Z"
       }
+    ],
+    "rt-4433ff40a4bdabc8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "3名美国乘客结束隔离回家，未提及新增病例或死亡。",
+        "update_id": "rt-4433ff40a4bdabc8",
+        "source_url": "",
+        "time": "2026-06-09T18:05:00.000Z"
+      }
+    ],
+    "rt-78c5ad1fd59d6aeb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "3名汉坦病毒患者离开奥马哈隔离区，未提新增病例。",
+        "update_id": "rt-78c5ad1fd59d6aeb",
+        "source_url": "",
+        "time": "2026-06-09T16:45:13.000Z"
+      }
+    ],
+    "rt-c0c06d99fb82327d": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大汉坦病毒阳性患者已康复，未提新增病例。",
+        "update_id": "rt-c0c06d99fb82327d",
+        "source_url": "",
+        "time": "2026-06-09T16:08:56.000Z"
+      }
+    ],
+    "rt-3cd5d7c6aaaa498e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "3名游轮乘客离开奥马哈隔离区，未提新增病例。",
+        "update_id": "rt-3cd5d7c6aaaa498e",
+        "source_url": "",
+        "time": "2026-06-09T15:41:00.000Z"
+      }
+    ],
+    "rt-30545d1e56a37001": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "3名美国乘客返回家乡，未提新增病例。",
+        "update_id": "rt-30545d1e56a37001",
+        "source_url": "",
+        "time": "2026-06-09T14:33:28.000Z"
+      }
+    ],
+    "rt-a92047cd04886f23": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大汉坦病毒阳性患者已康复，未提新增病例。",
+        "update_id": "rt-a92047cd04886f23",
+        "source_url": "",
+        "time": "2026-06-09T12:25:15.000Z"
+      }
+    ],
+    "rt-90f2ebef1a967108": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名德州人解除汉坦病毒隔离，未提新增病例。",
+        "update_id": "rt-90f2ebef1a967108",
+        "source_url": "",
+        "time": "2026-06-08T22:30:00.000Z"
+      }
     ]
   }
 }
