@@ -5207,6 +5207,62 @@
         "source_url": "",
         "time": "2026-06-08T11:22:00.000Z"
       }
+    ],
+    "rt-c1eb70819f8d0bff": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "加拿大邮轮乘客汉坦病毒检测阳性后康复，无新增病例数字。",
+        "update_id": "rt-c1eb70819f8d0bff",
+        "source_url": "",
+        "time": "2026-06-09T01:06:00.000Z"
+      }
+    ],
+    "rt-1713ce74ba2e82b6": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "不列颠哥伦比亚省首例汉坦病毒患者康复出院，无新增病例。",
+        "update_id": "rt-1713ce74ba2e82b6",
+        "source_url": "",
+        "time": "2026-06-09T00:45:22.000Z"
+      }
+    ],
+    "rt-b0ec311dab7ff163": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "奥马哈医生因汉坦病毒监测居家隔离，无新增病例数字。",
+        "update_id": "rt-b0ec311dab7ff163",
+        "source_url": "",
+        "time": "2026-06-08T22:21:00.000Z"
+      }
+    ],
+    "rt-2aaaf8669234fd0c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "medium",
+        "reasoning_zh": "两名德克萨斯乘客结束汉坦病毒监测，无新增病例。",
+        "update_id": "rt-2aaaf8669234fd0c",
+        "source_url": "",
+        "time": "2026-06-08T16:09:00.000Z"
+      }
     ]
   }
 }
