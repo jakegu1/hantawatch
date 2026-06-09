@@ -5263,6 +5263,90 @@
         "source_url": "",
         "time": "2026-06-08T16:09:00.000Z"
       }
+    ],
+    "rt-30d7ef581678551a": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "加拿大不列颠哥伦比亚省卫生官员称一名汉坦病毒阳性患者已康复，无新增病例。",
+        "update_id": "rt-30d7ef581678551a",
+        "source_url": "",
+        "time": "2026-06-09T09:23:58.000Z"
+      }
+    ],
+    "rt-51c60b62f7ea9b27": [
+      {
+        "iso2": "SH",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "英国国防医务人员空降特里斯坦达库尼亚治疗一名汉坦病毒患者，无新增病例数。",
+        "update_id": "rt-51c60b62f7ea9b27",
+        "source_url": "",
+        "time": "2026-06-09T08:00:01.000Z"
+      }
+    ],
+    "rt-94cbc31eacf43f79": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "报道介绍新的测序方法改进汉坦病毒追踪，未涉及具体国家或病例数。",
+        "update_id": "rt-94cbc31eacf43f79",
+        "source_url": "",
+        "time": "2026-06-09T07:40:34.000Z"
+      }
+    ],
+    "rt-495e9aa476b8fd1b": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "加拿大卫生官员称一名邮轮乘客汉坦病毒阳性后康复，无新增病例。",
+        "update_id": "rt-495e9aa476b8fd1b",
+        "source_url": "",
+        "time": "2026-06-09T03:08:05.000Z"
+      }
+    ],
+    "rt-46878d59983091f5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "high",
+        "reasoning_zh": "两名德克萨斯州居民接触安第斯汉坦病毒后完成42天隔离，无新增病例。",
+        "update_id": "rt-46878d59983091f5",
+        "source_url": "",
+        "time": "2026-06-08T17:24:21.000Z"
+      }
+    ],
+    "rt-0f851605cfc8873e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-08",
+        "confidence": "high",
+        "reasoning_zh": "两名德克萨斯州居民隔离后排除汉坦病毒风险，无新增病例。",
+        "update_id": "rt-0f851605cfc8873e",
+        "source_url": "",
+        "time": "2026-06-08T13:18:19.000Z"
+      }
     ]
   }
 }

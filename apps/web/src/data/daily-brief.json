@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-09T02:50:48.009056+00:00",
+  "__generated_at": "2026-06-09T09:38:43.702656+00:00",
   "date": "2026-06-09",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 12,
   "whoDaysSinceOfficialUpdate": 12,
   "cluesLast24h": 10,
-  "headline24h": "新技术改善汉坦病毒追踪。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "6月8日加拿大马尼托巴省更新汉坦病毒信息；美国德州多人经监测后排除感染。",
+  "latestChange": "6月9日加拿大不列颠哥伦比亚省汉坦病毒患者康复；英国空降特里斯坦达库尼亚治疗患者；美国内布拉斯加医生居家隔离。",
   "situation": "WHO数据每1-2周更新，期间由各国卫生部、ArcGIS监测及新闻线索补足；多国维持监测，国内HFRS基线正常。",
-  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
-  "newCases": "6月8日无新增确诊或初筛阳性。",
-  "sourceSummary": "WHO、各国卫生部、ArcGIS监测",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险极低，无需改变日常行为。",
+  "newCases": "6月9日无新增确诊或初筛阳性。",
+  "sourceSummary": "WHO、ArcGIS监测、各国卫生部",
   "shareLine": "WHO 5/28公布累计13例（12天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "法国确诊输入患者状态",
-    "美国监测排除进展",
-    "ArcGIS多国随访数据"
+    "法国ICU患者状态",
+    "加拿大康复病例",
+    "英国远程治疗"
   ],
   "evidence": [
     "WHO DON 5/28",
-    "西班牙卫生部/Xinhua",
-    "ArcGIS ANDV Dashboard"
+    "ArcGIS ANDV Dashboard",
+    "法国卫生部/TF1 Info"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"
