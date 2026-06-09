@@ -1,19 +1,45 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-09T13:41:05.008897+00:00",
+  "__generated_at": "2026-06-09T14:45:33.045614+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-09T13:41:03.399569+00:00",
+  "last_fetched": "2026-06-09T14:45:24.712691+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-05a5b08d13aec87f",
+      "time": "2026-06-09T14:07:00.000Z",
+      "title_en": "UNMC releases three more hantavirus cruise ship passengers - KETV",
+      "body_en": "UNMC releases three more hantavirus cruise ship passengers KETV",
+      "summary_zh": "内布拉斯加医学中心释放三名汉坦病毒邮轮乘客。",
+      "key_facts_zh": [
+        "内布拉斯加医学中心",
+        "邮轮",
+        "释放"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-0d733a4a2126e95c",
+      "time": "2026-06-09T14:06:45.000Z",
+      "title_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered - unpublished.ca",
+      "body_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered unpublished.ca",
+      "summary_zh": "加拿大不列颠哥伦比亚省官员称汉坦病毒阳性患者已康复。",
+      "key_facts_zh": [
+        "加拿大",
+        "康复",
+        "不列颠哥伦比亚省"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-a1d15a588b18e268",
       "time": "2026-06-09T12:55:00.000Z",
       "title_en": "HMS Medway helps prevent Hantavirus outbreak on UK's most remote overseas territory - Forces News",
       "body_en": "HMS Medway helps prevent Hantavirus outbreak on UK's most remote overseas territory Forces News",
-      "summary_zh": "英国皇家海军梅德韦号协助防止汉坦病毒在特里斯坦达库尼亚群岛爆发。",
+      "summary_zh": "英国皇家海军梅德韦号帮助防止汉坦病毒在偏远领土爆发。",
       "key_facts_zh": [
         "英国",
         "海军",
@@ -22,27 +48,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-263731f694bf0c03",
-      "time": "2026-06-09T12:36:22.000Z",
-      "title_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered - Global News",
-      "body_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered Global News",
-      "summary_zh": "加拿大不列颠哥伦比亚省卫生官员称汉坦病毒阳性患者已康复。",
+      "id": "rt-9739d6210a3d75e4",
+      "time": "2026-06-09T10:51:45.000Z",
+      "title_en": "Canadian who tested positive for hantavirus has recovered, B.C. health officials say - The Globe and Mail",
+      "body_en": "Canadian who tested positive for hantavirus has recovered, B.C. health officials say The Globe and Mail",
+      "summary_zh": "加拿大不列颠哥伦比亚省官员称汉坦病毒阳性患者已康复。",
       "key_facts_zh": [
         "加拿大",
-        "康复"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a92047cd04886f23",
-      "time": "2026-06-09T12:25:15.000Z",
-      "title_en": "Canadian who tested positive for hantavirus on cruise ship has recovered - Global News",
-      "body_en": "Canadian who tested positive for hantavirus on cruise ship has recovered Global News",
-      "summary_zh": "邮轮上汉坦病毒阳性加拿大乘客已康复。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "康复"
+        "康复",
+        "不列颠哥伦比亚省"
       ],
       "signal_strength": "high"
     },
@@ -51,11 +65,11 @@
       "time": "2026-06-09T08:00:01.000Z",
       "title_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient - GOV.UK",
       "body_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient GOV.UK",
-      "summary_zh": "英国国防医疗队空降特里斯坦达库尼亚群岛治疗汉坦病毒患者。",
+      "summary_zh": "英国国防医疗队跳伞进入特里斯坦达库尼亚治疗汉坦病毒患者。",
       "key_facts_zh": [
         "英国",
         "特里斯坦达库尼亚",
-        "医疗队"
+        "治疗"
       ],
       "signal_strength": "high"
     },
@@ -64,7 +78,7 @@
       "time": "2026-06-09T07:40:34.000Z",
       "title_en": "New Sequencing Method Improves Hantavirus Tracking - Technology Networks",
       "body_en": "New Sequencing Method Improves Hantavirus Tracking Technology Networks",
-      "summary_zh": "新测序方法改进汉坦病毒追踪。",
+      "summary_zh": "新测序方法改善汉坦病毒追踪。",
       "key_facts_zh": [
         "测序",
         "追踪"
@@ -76,7 +90,7 @@
       "time": "2026-06-09T03:08:05.000Z",
       "title_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say - unpublished.ca",
       "body_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say unpublished.ca",
-      "summary_zh": "加拿大邮轮乘客汉坦病毒阳性后康复。",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性后康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -89,11 +103,11 @@
       "time": "2026-06-09T00:45:22.000Z",
       "title_en": "B.C.'s first hantavirus patient has recovered, discharged from hospital - Vancouver Sun",
       "body_en": "B.C.'s first hantavirus patient has recovered, discharged from hospital Vancouver Sun",
-      "summary_zh": "加拿大不列颠哥伦比亚省首例汉坦病毒患者康复出院。",
+      "summary_zh": "不列颠哥伦比亚省首例汉坦病毒患者康复出院。",
       "key_facts_zh": [
         "加拿大",
-        "首例",
-        "康复出院"
+        "不列颠哥伦比亚",
+        "康复"
       ],
       "signal_strength": "high"
     },
@@ -102,11 +116,11 @@
       "time": "2026-06-08T22:21:00.000Z",
       "title_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha - KETV",
       "body_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha KETV",
-      "summary_zh": "美国内布拉斯加州奥马哈一名医生因汉坦病毒监测后居家隔离。",
+      "summary_zh": "内布拉斯加州奥马哈一名医生居家隔离。",
       "key_facts_zh": [
         "美国",
-        "医生",
-        "居家隔离"
+        "内布拉斯加",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -115,10 +129,10 @@
       "time": "2026-06-08T19:23:00.000Z",
       "title_en": "Texans aboard hantavirus cruise ship complete monitoring - Spectrum News",
       "body_en": "Texans aboard hantavirus cruise ship complete monitoring Spectrum News",
-      "summary_zh": "乘坐汉坦病毒邮轮的得克萨斯州乘客完成监测。",
+      "summary_zh": "得克萨斯州邮轮乘客完成汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
+        "得克萨斯",
         "监测结束"
       ],
       "signal_strength": "high"
@@ -128,11 +142,11 @@
       "time": "2026-06-08T16:30:27.000Z",
       "title_en": "Two Texans finish 42-day hantavirus quarantine without infection - Austin American-Statesman",
       "body_en": "Two Texans finish 42-day hantavirus quarantine without infection Austin American-Statesman",
-      "summary_zh": "两名得克萨斯州乘客结束42天汉坦病毒隔离，未感染。",
+      "summary_zh": "两名得克萨斯人完成42天汉坦病毒隔离未感染。",
       "key_facts_zh": [
         "美国",
-        "隔离结束",
-        "未感染"
+        "得克萨斯",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -141,11 +155,11 @@
       "time": "2026-06-08T16:09:00.000Z",
       "title_en": "Hantavirus monitoring ends for 2 Texas passengers aboard MV Hondius - KVUE",
       "body_en": "Hantavirus monitoring ends for 2 Texas passengers aboard MV Hondius KVUE",
-      "summary_zh": "MV Hondius邮轮两名得克萨斯州乘客结束汉坦病毒监测。",
+      "summary_zh": "MV Hondius邮轮两名得州乘客结束汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "监测结束"
+        "得克萨斯",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -154,11 +168,11 @@
       "time": "2026-06-08T13:18:19.000Z",
       "title_en": "Two Texans cleared of hantavirus risk after period of isolation - Houston Public Media",
       "body_en": "Two Texans cleared of hantavirus risk after period of isolation Houston Public Media",
-      "summary_zh": "两名得克萨斯州乘客经隔离后排除汉坦病毒风险。",
+      "summary_zh": "两名得克萨斯人解除汉坦病毒风险隔离。",
       "key_facts_zh": [
         "美国",
-        "隔离",
-        "排除风险"
+        "得克萨斯",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -206,7 +220,7 @@
       "time": "2026-06-07T00:08:28.000Z",
       "title_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says - FOX 7 Austin",
       "body_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says FOX 7 Austin",
-      "summary_zh": "得克萨斯州邮轮乘客完成汉坦病毒监测无感染。",
+      "summary_zh": "得州邮轮乘客完成汉坦病毒监测，无感染。",
       "key_facts_zh": [
         "美国",
         "得克萨斯",
@@ -219,7 +233,7 @@
       "time": "2026-06-06T22:38:03.000Z",
       "title_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say - ABC13 Houston",
       "body_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say ABC13 Houston",
-      "summary_zh": "得克萨斯州2名邮轮乘客完成汉坦病毒监测。",
+      "summary_zh": "得州2名邮轮乘客完成汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
         "得克萨斯",
@@ -232,37 +246,11 @@
       "time": "2026-06-06T22:11:00.000Z",
       "title_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius - KCBD",
       "body_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius KCBD",
-      "summary_zh": "得克萨斯州MV Hondius号邮轮乘客完成汉坦病毒监测。",
+      "summary_zh": "得州乘客完成MV Hondius邮轮汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
         "得克萨斯",
         "MV Hondius"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a0dc439475d3b248",
-      "time": "2026-06-06T19:30:39.000Z",
-      "title_en": "Local Health Officials Warn Of Hantavirus Dangers - myMotherLode.com",
-      "body_en": "Local Health Officials Warn Of Hantavirus Dangers myMotherLode.com",
-      "summary_zh": "当地卫生官员警告汉坦病毒危险。",
-      "key_facts_zh": [
-        "美国",
-        "卫生官员",
-        "警告"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-dd4f4c4531b99be0",
-      "time": "2026-06-06T14:56:01.000Z",
-      "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
-      "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO称汉坦病毒病例仍为13例，月余无新增死亡。",
-      "key_facts_zh": [
-        "WHO",
-        "13例",
-        "无新增死亡"
       ],
       "signal_strength": "high"
     }

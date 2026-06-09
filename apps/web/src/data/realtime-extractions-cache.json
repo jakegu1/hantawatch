@@ -5347,6 +5347,62 @@
         "source_url": "",
         "time": "2026-06-08T13:18:19.000Z"
       }
+    ],
+    "rt-05a5b08d13aec87f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "新闻提到释放三名汉坦病毒患者，但未说明新增病例数，故delta为0。",
+        "update_id": "rt-05a5b08d13aec87f",
+        "source_url": "",
+        "time": "2026-06-09T14:07:00.000Z"
+      }
+    ],
+    "rt-0d733a4a2126e95c": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "报道称一名加拿大患者已康复，未提及新增病例，故delta为0。",
+        "update_id": "rt-0d733a4a2126e95c",
+        "source_url": "",
+        "time": "2026-06-09T14:06:45.000Z"
+      }
+    ],
+    "rt-a1d15a588b18e268": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "新闻称HMS Medway帮助防止汉坦病毒爆发，但未提供具体病例数字，故delta为0。",
+        "update_id": "rt-a1d15a588b18e268",
+        "source_url": "",
+        "time": "2026-06-09T12:55:00.000Z"
+      }
+    ],
+    "rt-9739d6210a3d75e4": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "medium",
+        "reasoning_zh": "报道称一名加拿大患者已康复，未提及新增病例，故delta为0。",
+        "update_id": "rt-9739d6210a3d75e4",
+        "source_url": "",
+        "time": "2026-06-09T10:51:45.000Z"
+      }
     ]
   }
 }
