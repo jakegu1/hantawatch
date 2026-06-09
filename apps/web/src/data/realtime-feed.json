@@ -1,23 +1,47 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-09T03:58:09.162130+00:00",
+  "__generated_at": "2026-06-09T07:47:03.265534+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-09T03:58:07.373045+00:00",
+  "last_fetched": "2026-06-09T07:47:01.958050+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-0dfd0836dbf93ead",
+      "time": "2026-06-09T07:40:34.000Z",
+      "title_en": "New Sequencing Method Improves Hantavirus Tracking - Technology Networks",
+      "body_en": "New Sequencing Method Improves Hantavirus Tracking Technology Networks",
+      "summary_zh": "新技术改善汉坦病毒追踪。",
+      "key_facts_zh": [
+        "新技术",
+        "汉坦病毒追踪"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-fb5367c546e748ae",
+      "time": "2026-06-09T04:54:53.000Z",
+      "title_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered - CityNews Halifax",
+      "body_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered CityNews Halifax",
+      "summary_zh": "加拿大不列颠哥伦比亚省卫生官员称汉坦病毒阳性患者已康复。",
+      "key_facts_zh": [
+        "加拿大",
+        "患者康复"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-495e9aa476b8fd1b",
       "time": "2026-06-09T03:08:05.000Z",
       "title_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say - unpublished.ca",
       "body_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say unpublished.ca",
-      "summary_zh": "加拿大邮轮汉坦病毒阳性乘客已康复。",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒阳性后康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "康复"
+        "患者康复"
       ],
       "signal_strength": "high"
     },
@@ -29,8 +53,8 @@
       "summary_zh": "不列颠哥伦比亚省首例汉坦病毒患者康复出院。",
       "key_facts_zh": [
         "加拿大",
-        "不列颠哥伦比亚",
-        "康复"
+        "首例",
+        "康复出院"
       ],
       "signal_strength": "high"
     },
@@ -39,10 +63,10 @@
       "time": "2026-06-08T22:21:00.000Z",
       "title_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha - KETV",
       "body_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha KETV",
-      "summary_zh": "内布拉斯加州一名医生因汉坦病毒监测后居家隔离。",
+      "summary_zh": "内布拉斯加州医生因汉坦病毒监测后居家隔离。",
       "key_facts_zh": [
-        "美国",
         "内布拉斯加",
+        "医生",
         "居家隔离"
       ],
       "signal_strength": "high"
@@ -52,24 +76,11 @@
       "time": "2026-06-08T19:23:00.000Z",
       "title_en": "Texans aboard hantavirus cruise ship complete monitoring - Spectrum News",
       "body_en": "Texans aboard hantavirus cruise ship complete monitoring Spectrum News",
-      "summary_zh": "得克萨斯州邮轮乘客完成汉坦病毒监测。",
+      "summary_zh": "德州邮轮乘客完成汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
-        "得克萨斯",
-        "监测结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-856628a9fd4b8d7b",
-      "time": "2026-06-08T18:33:58.000Z",
-      "title_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says - AOL.com",
-      "body_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says AOL.com",
-      "summary_zh": "得克萨斯州邮轮乘客完成监测，无感染。",
-      "key_facts_zh": [
-        "美国",
-        "得克萨斯",
-        "无感染"
+        "邮轮",
+        "监测完成"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +89,11 @@
       "time": "2026-06-08T17:24:21.000Z",
       "title_en": "Two Texans clear 42-day quarantine after exposure to Andes hantavirus - Yahoo",
       "body_en": "Two Texans clear 42-day quarantine after exposure to Andes hantavirus Yahoo",
-      "summary_zh": "两名得克萨斯人结束42天汉坦病毒隔离。",
+      "summary_zh": "两名德州人结束42天汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "得克萨斯",
-        "42天隔离"
+        "隔离结束",
+        "42天"
       ],
       "signal_strength": "high"
     },
@@ -91,11 +102,11 @@
       "time": "2026-06-08T16:30:27.000Z",
       "title_en": "Two Texans finish 42-day hantavirus quarantine without infection - Austin American-Statesman",
       "body_en": "Two Texans finish 42-day hantavirus quarantine without infection Austin American-Statesman",
-      "summary_zh": "两名得克萨斯人完成42天汉坦病毒隔离，无感染。",
+      "summary_zh": "两名德州人完成42天汉坦病毒隔离未感染。",
       "key_facts_zh": [
         "美国",
-        "得克萨斯",
-        "无感染"
+        "隔离结束",
+        "未感染"
       ],
       "signal_strength": "high"
     },
@@ -104,10 +115,10 @@
       "time": "2026-06-08T16:09:00.000Z",
       "title_en": "Hantavirus monitoring ends for 2 Texas passengers aboard MV Hondius - KVUE",
       "body_en": "Hantavirus monitoring ends for 2 Texas passengers aboard MV Hondius KVUE",
-      "summary_zh": "MV Hondius号两名得克萨斯乘客结束汉坦病毒监测。",
+      "summary_zh": "美国德州两名乘客结束汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
-        "得克萨斯",
+        "监测结束",
         "邮轮"
       ],
       "signal_strength": "high"
@@ -117,37 +128,37 @@
       "time": "2026-06-08T14:40:50.000Z",
       "title_en": "Manitoba government provides hantavirus update - mySteinbach.ca",
       "body_en": "Manitoba government provides hantavirus update mySteinbach.ca",
-      "summary_zh": "加拿大马尼托巴省政府发布汉坦病毒最新情况。",
+      "summary_zh": "加拿大曼尼托巴省政府通报汉坦病毒最新情况。",
       "key_facts_zh": [
         "加拿大",
-        "马尼托巴",
+        "曼尼托巴",
         "政府通报"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9bc60025617479c8",
       "time": "2026-06-08T13:42:34.000Z",
       "title_en": "Texans Cleared of Hantavirus After Monitoring - Audacy",
       "body_en": "Texans Cleared of Hantavirus After Monitoring Audacy",
-      "summary_zh": "美国德州多人经监测后排除汉坦病毒感染。",
+      "summary_zh": "美国德州乘客经监测后排除汉坦病毒感染。",
       "key_facts_zh": [
         "美国",
-        "德州",
-        "排除感染"
+        "排除感染",
+        "监测"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-49e7c8e9585eb19e",
-      "time": "2026-06-08T11:22:00.000Z",
-      "title_en": "Two Texans cleared of hantavirus risk after period of isolation - KERA News",
-      "body_en": "Two Texans cleared of hantavirus risk after period of isolation KERA News",
-      "summary_zh": "美国德州两人隔离后排除汉坦病毒风险。",
+      "id": "rt-0f851605cfc8873e",
+      "time": "2026-06-08T13:18:19.000Z",
+      "title_en": "Two Texans cleared of hantavirus risk after period of isolation - Houston Public Media",
+      "body_en": "Two Texans cleared of hantavirus risk after period of isolation Houston Public Media",
+      "summary_zh": "美国德州两人经隔离后排除汉坦病毒风险。",
       "key_facts_zh": [
         "美国",
-        "德州",
-        "排除风险"
+        "排除风险",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -156,11 +167,11 @@
       "time": "2026-06-07T18:16:00.000Z",
       "title_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship - OregonLive.com",
       "body_en": "Bend doctor returns home to finish quarantine after hantavirus outbreak on cruise ship OregonLive.com",
-      "summary_zh": "美国本德医生结束邮轮隔离返回家中。",
+      "summary_zh": "美国俄勒冈州医生回家完成邮轮汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "本德",
-        "医生返家"
+        "医生",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -172,8 +183,8 @@
       "summary_zh": "新西兰邮轮乘客汉坦病毒检测阴性。",
       "key_facts_zh": [
         "新西兰",
-        "邮轮",
-        "检测阴性"
+        "检测阴性",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -182,11 +193,11 @@
       "time": "2026-06-07T02:32:43.000Z",
       "title_en": "Texans clear hantavirus quarantine following cruise outbreak - Click2Houston",
       "body_en": "Texans clear hantavirus quarantine following cruise outbreak Click2Houston",
-      "summary_zh": "美国德州多人结束邮轮疫情相关隔离。",
+      "summary_zh": "美国德州乘客结束邮轮汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "德州",
-        "结束隔离"
+        "隔离结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -195,7 +206,7 @@
       "time": "2026-06-07T00:08:28.000Z",
       "title_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says - FOX 7 Austin",
       "body_en": "Texas cruise passengers complete hantavirus monitoring with no infections, state says FOX 7 Austin",
-      "summary_zh": "德州邮轮乘客汉坦病毒监测结束，无人感染。",
+      "summary_zh": "得州邮轮乘客汉坦病毒监测结束，无人感染。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -208,20 +219,7 @@
       "time": "2026-06-06T22:38:03.000Z",
       "title_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say - ABC13 Houston",
       "body_en": "Hantavirus monitoring complete for 2 Texas passengers from cruise ship outbreak, health officials say ABC13 Houston",
-      "summary_zh": "德州两名邮轮乘客汉坦病毒监测完成，未感染。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "监测完成"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b8212ba6594e8b40",
-      "time": "2026-06-06T22:11:00.000Z",
-      "title_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius - KCBD",
-      "body_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius KCBD",
-      "summary_zh": "MV Hondius 邮轮德州乘客汉坦病毒监测结束。",
+      "summary_zh": "得州两名邮轮乘客汉坦病毒监测结束，无感染。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -230,11 +228,37 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-b8212ba6594e8b40",
+      "time": "2026-06-06T22:11:00.000Z",
+      "title_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius - KCBD",
+      "body_en": "Hantavirus monitoring completed for Texas passengers from the MV Hondius KCBD",
+      "summary_zh": "得州乘客完成MV Hondius邮轮汉坦病毒监测。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "监测结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a0dc439475d3b248",
+      "time": "2026-06-06T19:30:39.000Z",
+      "title_en": "Local Health Officials Warn Of Hantavirus Dangers - myMotherLode.com",
+      "body_en": "Local Health Officials Warn Of Hantavirus Dangers myMotherLode.com",
+      "summary_zh": "当地卫生官员警告汉坦病毒危险。",
+      "key_facts_zh": [
+        "美国",
+        "卫生官员",
+        "警告"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-dd4f4c4531b99be0",
       "time": "2026-06-06T14:56:01.000Z",
       "title_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief - Anadolu Ajansı",
       "body_en": "Hantavirus cases remain at 13, no new deaths reported in over month: WHO chief Anadolu Ajansı",
-      "summary_zh": "WHO 称汉坦病毒病例仍为13例，月余无新增死亡。",
+      "summary_zh": "WHO称汉坦病毒病例仍为13例，月余无新增死亡。",
       "key_facts_zh": [
         "WHO",
         "13例",
@@ -264,32 +288,33 @@
       "key_facts_zh": [
         "阿根廷",
         "扩大调查",
-        "追溯源头"
+        "疫情源头"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-ebd7733ec6999ca3",
-      "time": "2026-06-06T02:36:00.000Z",
-      "title_en": "Novel technique enables rapid sequencing of rare hantaviruses - News-Medical",
-      "body_en": "Novel technique enables rapid sequencing of rare hantaviruses News-Medical",
-      "summary_zh": "新技术实现罕见汉坦病毒快速测序。",
-      "key_facts_zh": [
-        "新技术",
-        "快速测序"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-2c9f3ac1c4abaf10",
       "time": "2026-06-05T23:28:43.000Z",
       "title_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza - Toronto Star",
       "body_en": "Argentina expands hantavirus probe, sending teams to trap and test rats in Mendoza Toronto Star",
-      "summary_zh": "阿根廷扩大汉坦病毒调查，派团队在门多萨捕鼠检测。",
+      "summary_zh": "阿根廷派团队在门多萨捕鼠检测，扩大汉坦病毒调查。",
       "key_facts_zh": [
         "阿根廷",
         "门多萨",
-        "扩大调查"
+        "捕鼠检测"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ca5acd030470118d",
+      "time": "2026-06-05T07:12:38.000Z",
+      "title_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. - Outside Magazine",
+      "body_en": "I Was on the Deadly Hantavirus Cruise. Now I'm One of 18 People in Quarantine. Outside Magazine",
+      "summary_zh": "邮轮暴发汉坦病毒，18人隔离，作者亲述经历。",
+      "key_facts_zh": [
+        "邮轮",
+        "18人隔离",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     }
