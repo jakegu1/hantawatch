@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-10T15:00:20.711484+00:00",
+  "__generated_at": "2026-06-10T15:27:56.383331+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-10T15:00:19.069658+00:00",
+  "last_fetched": "2026-06-10T15:27:48.611237+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -63,8 +63,8 @@
       "body_en": "3 more former cruise ship passengers leave UNMC after quarantining following hantavirus outbreak Nebraska Public Media",
       "summary_zh": "内布拉斯加医学中心再释放3名邮轮隔离乘客。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加医学中心",
-        "邮轮",
         "3人解除隔离"
       ],
       "signal_strength": "high"
@@ -76,9 +76,9 @@
       "body_en": "3 Virginia people exposed to hantavirus healthy after incubation period passes WUSA9",
       "summary_zh": "弗吉尼亚州3名接触汉坦病毒者度过潜伏期后健康。",
       "key_facts_zh": [
+        "美国",
         "弗吉尼亚",
-        "3人",
-        "健康"
+        "3人健康"
       ],
       "signal_strength": "high"
     },
@@ -89,8 +89,8 @@
       "body_en": "Three more passengers from hantavirus-hit cruise ship leave Omaha quarantine KLKN-TV",
       "summary_zh": "奥马哈隔离区再释放3名汉坦病毒邮轮乘客。",
       "key_facts_zh": [
+        "美国",
         "奥马哈",
-        "邮轮",
         "3人解除隔离"
       ],
       "signal_strength": "high"
@@ -100,10 +100,10 @@
       "time": "2026-06-09T17:18:00.000Z",
       "title_en": "UNMC releases three more hantavirus cruise ship passengers - KETV",
       "body_en": "UNMC releases three more hantavirus cruise ship passengers KETV",
-      "summary_zh": "内布拉斯加医学中心释放3名汉坦病毒邮轮乘客。",
+      "summary_zh": "内布拉斯加医学中心再释放3名邮轮乘客。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加医学中心",
-        "邮轮",
         "3人解除隔离"
       ],
       "signal_strength": "high"
@@ -115,8 +115,8 @@
       "body_en": "Hantavirus update: three more cruise passengers leave Omaha quarantine unit WOWT",
       "summary_zh": "奥马哈隔离单元再释放3名邮轮乘客。",
       "key_facts_zh": [
+        "美国",
         "奥马哈",
-        "邮轮",
         "3人解除隔离"
       ],
       "signal_strength": "high"
@@ -126,10 +126,9 @@
       "time": "2026-06-09T14:35:45.000Z",
       "title_en": "Three more US passengers from hantavirus-hit ship return to home states - Reuters",
       "body_en": "Three more US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "3名美国汉坦病毒邮轮乘客返回原籍州。",
+      "summary_zh": "3名美国邮轮乘客返回原籍州。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
         "3人返回"
       ],
       "signal_strength": "high"
@@ -142,8 +141,8 @@
       "summary_zh": "英国皇家海军梅德韦号协助预防汉坦病毒在海外领土爆发。",
       "key_facts_zh": [
         "英国",
-        "海军",
-        "预防"
+        "海外领土",
+        "防控"
       ],
       "signal_strength": "high"
     },
@@ -155,8 +154,7 @@
       "summary_zh": "加拿大不列颠哥伦比亚省卫生官员称汉坦病毒阳性患者已康复。",
       "key_facts_zh": [
         "加拿大",
-        "BC省",
-        "康复"
+        "患者康复"
       ],
       "signal_strength": "high"
     },
@@ -165,11 +163,11 @@
       "time": "2026-06-09T12:25:15.000Z",
       "title_en": "Canadian who tested positive for hantavirus on cruise ship has recovered - Global News",
       "body_en": "Canadian who tested positive for hantavirus on cruise ship has recovered Global News Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say CBC B.C.'s first hantavirus patient has recovered, discharged from hospital Vancouver Sun",
-      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性后已康复。",
+      "summary_zh": "加拿大邮轮汉坦病毒阳性患者已康复出院。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "康复"
+        "患者康复"
       ],
       "signal_strength": "high"
     },
@@ -178,11 +176,11 @@
       "time": "2026-06-09T09:57:52.000Z",
       "title_en": "Vaccines and therapeutics for Andes hantavirus - Nature",
       "body_en": "Vaccines and therapeutics for Andes hantavirus Nature",
-      "summary_zh": "《自然》杂志发表关于安第斯汉坦病毒疫苗和治疗的研究。",
+      "summary_zh": "《自然》杂志发表关于安第斯汉坦病毒疫苗和疗法的文章。",
       "key_facts_zh": [
-        "自然",
+        "安第斯汉坦病毒",
         "疫苗",
-        "治疗"
+        "疗法"
       ],
       "signal_strength": "medium"
     },
@@ -191,7 +189,7 @@
       "time": "2026-06-09T08:00:01.000Z",
       "title_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient - GOV.UK",
       "body_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient GOV.UK",
-      "summary_zh": "英国国防医疗队跳伞进入特里斯坦达库尼亚治疗汉坦病毒患者。",
+      "summary_zh": "英国国防医疗队伞降特里斯坦达库尼亚治疗汉坦病毒患者。",
       "key_facts_zh": [
         "英国",
         "特里斯坦达库尼亚",
@@ -220,7 +218,7 @@
       "key_facts_zh": [
         "美国 CDC",
         "邮轮",
-        "疫情"
+        "疫情现状"
       ],
       "signal_strength": "high"
     },

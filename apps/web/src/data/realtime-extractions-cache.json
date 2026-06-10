@@ -5641,6 +5641,48 @@
         "source_url": "",
         "time": "2026-06-09T09:57:52.000Z"
       }
+    ],
+    "rt-e005cfad4f43411a": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "high",
+        "reasoning_zh": "英国卫生安全局声明对公众风险无变化，仍极低，未报告新增病例。",
+        "update_id": "rt-e005cfad4f43411a",
+        "source_url": "",
+        "time": "2026-06-10T13:37:35.000Z"
+      }
+    ],
+    "rt-15a9a9ef295065ab": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "low",
+        "reasoning_zh": "新闻未指明具体国家，仅提及港口加强监测，无病例数据。",
+        "update_id": "rt-15a9a9ef295065ab",
+        "source_url": "",
+        "time": "2026-06-10T11:39:40.000Z"
+      }
+    ],
+    "rt-263731f694bf0c03": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "加拿大不列颠哥伦比亚省卫生官员称一名汉坦病毒阳性患者已康复，无新增病例。",
+        "update_id": "rt-263731f694bf0c03",
+        "source_url": "",
+        "time": "2026-06-09T12:36:22.000Z"
+      }
     ]
   }
 }
