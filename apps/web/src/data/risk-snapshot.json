@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-10T03:27:35.076744+00:00",
+  "__generated_at": "2026-06-10T09:54:52.750938+00:00",
   "date": "2026-06-10",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-10T03:27:05.505944+00:00"
+    "updatedAt": "2026-06-10T09:54:29.029397+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-10T03:27:05.505944+00:00"
+    "updatedAt": "2026-06-10T09:54:29.029397+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -110,24 +110,24 @@
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "daysSinceLastIntlAlert": 13,
     "whoDaysSinceOfficialUpdate": 13,
-    "cluesLast24h": 11,
+    "cluesLast24h": 12,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月9日加拿大不列颠哥伦比亚省汉坦病毒患者康复；美国3名邮轮乘客结束隔离返家；法国1例确诊仍在ICU，状态稳定。",
-    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内基线未变。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内HFRS基线未变。",
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "6月9日无新增确诊或初筛阳性。",
     "sourceSummary": "WHO、各国卫生部、ArcGIS监测",
     "shareLine": "WHO 5/28公布累计13例（13天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "法国ICU患者状态",
-      "美国隔离监测进展",
-      "ArcGIS数据更新"
+      "法国确诊患者状态",
+      "美国监测进展",
+      "WHO数据更新"
     ],
     "evidence": [
       "WHO DON 5/28",
-      "西班牙卫生部/Xinhua",
-      "法国卫生部/TF1 Info"
+      "法国卫生部/TF1 Info",
+      "US CDC Situation Summary"
     ],
     "_guardrail_warnings": [
       "shareline_pending_sanitized: no pending confirmed deltas"

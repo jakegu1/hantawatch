@@ -5627,6 +5627,20 @@
         "source_url": "",
         "time": "2026-06-09T13:06:41.000Z"
       }
+    ],
+    "rt-ad4221cb22cc06bd": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题和正文仅提及疫苗和疗法，未涉及具体国家或病例数变化。",
+        "update_id": "rt-ad4221cb22cc06bd",
+        "source_url": "",
+        "time": "2026-06-09T09:57:52.000Z"
+      }
     ]
   }
 }
