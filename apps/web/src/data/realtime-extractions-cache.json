@@ -5501,6 +5501,132 @@
         "source_url": "",
         "time": "2026-06-08T22:30:00.000Z"
       }
+    ],
+    "rt-e71eb81da1061bfb": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "加拿大一名汉坦病毒患者康复，无新增病例数字。",
+        "update_id": "rt-e71eb81da1061bfb",
+        "source_url": "",
+        "time": "2026-06-09T23:47:35.000Z"
+      }
+    ],
+    "rt-cf38796cb16ad374": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "加拿大维多利亚医院一名汉坦病毒患者出院，无新增病例。",
+        "update_id": "rt-cf38796cb16ad374",
+        "source_url": "",
+        "time": "2026-06-09T23:00:00.000Z"
+      }
+    ],
+    "rt-0db4ba9068d253ea": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "美国内布拉斯加3名邮轮乘客结束隔离离开医院，无新增病例。",
+        "update_id": "rt-0db4ba9068d253ea",
+        "source_url": "",
+        "time": "2026-06-09T22:37:10.000Z"
+      }
+    ],
+    "rt-c5f961836f5882ee": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "美国弗吉尼亚3名接触者度过潜伏期后健康，无新增病例。",
+        "update_id": "rt-c5f961836f5882ee",
+        "source_url": "",
+        "time": "2026-06-09T22:14:00.000Z"
+      }
+    ],
+    "rt-f4537d229174e1d6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "美国3名邮轮汉坦病毒接触者结束隔离，无新增病例。",
+        "update_id": "rt-f4537d229174e1d6",
+        "source_url": "",
+        "time": "2026-06-09T21:44:00.000Z"
+      }
+    ],
+    "rt-f907b10ad7e3cae2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "邮轮汉坦病毒病例基因分析确认为安第斯变种，无新增病例。",
+        "update_id": "rt-f907b10ad7e3cae2",
+        "source_url": "",
+        "time": "2026-06-09T20:45:00.000Z"
+      }
+    ],
+    "rt-b7b56145deb8e174": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "美国内布拉斯加3名邮轮乘客离开隔离，无新增病例。",
+        "update_id": "rt-b7b56145deb8e174",
+        "source_url": "",
+        "time": "2026-06-09T20:31:53.000Z"
+      }
+    ],
+    "rt-62753fec75a290e0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "low",
+        "reasoning_zh": "美国3名邮轮乘客返回家乡州，无新增病例。",
+        "update_id": "rt-62753fec75a290e0",
+        "source_url": "",
+        "time": "2026-06-09T14:35:45.000Z"
+      }
+    ],
+    "rt-0310a8ca76f32ab9": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-09",
+        "confidence": "high",
+        "reasoning_zh": "加拿大BC省卫生官员称一名汉坦病毒阳性患者已康复，未提及新增病例或死亡。",
+        "update_id": "rt-0310a8ca76f32ab9",
+        "source_url": "",
+        "time": "2026-06-09T13:06:41.000Z"
+      }
     ]
   }
 }
