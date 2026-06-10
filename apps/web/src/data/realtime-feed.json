@@ -1,23 +1,34 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-10T11:34:06.478525+00:00",
+  "__generated_at": "2026-06-10T15:00:20.711484+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-10T11:34:04.981427+00:00",
+  "last_fetched": "2026-06-10T15:00:19.069658+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-c5bec035cb9e78ea",
-      "time": "2026-06-10T07:30:43.000Z",
-      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
-      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国 CDC 发布邮轮安第斯病毒爆发最新情况。",
+      "id": "rt-e005cfad4f43411a",
+      "time": "2026-06-10T13:37:35.000Z",
+      "title_en": "UKHSA Says No Change To Public Health Risk To The UK Population From Hantavirus, Which Remains Very Low - TradingView",
+      "body_en": "UKHSA Says No Change To Public Health Risk To The UK Population From Hantavirus, Which Remains Very Low TradingView",
+      "summary_zh": "英国卫生安全局称汉坦病毒对英国公众健康风险仍极低。",
       "key_facts_zh": [
-        "美国 CDC",
-        "邮轮",
-        "安第斯病毒"
+        "英国",
+        "风险极低"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-15a9a9ef295065ab",
+      "time": "2026-06-10T11:39:40.000Z",
+      "title_en": "Surveillance tightened at ports over hantavirus risk, health ministers tells parliament - The Daily Star",
+      "body_en": "Surveillance tightened at ports over hantavirus risk, health ministers tells parliament The Daily Star",
+      "summary_zh": "卫生部长告知议会，因汉坦病毒风险加强港口监测。",
+      "key_facts_zh": [
+        "议会",
+        "港口监测"
       ],
       "signal_strength": "high"
     },
@@ -50,11 +61,11 @@
       "time": "2026-06-09T22:37:10.000Z",
       "title_en": "3 more former cruise ship passengers leave UNMC after quarantining following hantavirus outbreak - Nebraska Public Media",
       "body_en": "3 more former cruise ship passengers leave UNMC after quarantining following hantavirus outbreak Nebraska Public Media",
-      "summary_zh": "内布拉斯加医学中心3名前邮轮乘客结束隔离离开。",
+      "summary_zh": "内布拉斯加医学中心再释放3名邮轮隔离乘客。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
         "邮轮",
-        "解除隔离"
+        "3人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -63,50 +74,24 @@
       "time": "2026-06-09T22:14:00.000Z",
       "title_en": "3 Virginia people exposed to hantavirus healthy after incubation period passes - WUSA9",
       "body_en": "3 Virginia people exposed to hantavirus healthy after incubation period passes WUSA9",
-      "summary_zh": "弗吉尼亚3名接触汉坦病毒者度过潜伏期后健康。",
+      "summary_zh": "弗吉尼亚州3名接触汉坦病毒者度过潜伏期后健康。",
       "key_facts_zh": [
-        "美国",
-        "接触者",
+        "弗吉尼亚",
+        "3人",
         "健康"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-f4537d229174e1d6",
-      "time": "2026-06-09T21:44:00.000Z",
-      "title_en": "3 people who were onboard of the Hantavirus cruise are leaving quarantine - WUSA9",
-      "body_en": "3 people who were onboard of the Hantavirus cruise are leaving quarantine WUSA9",
-      "summary_zh": "美国3名汉坦病毒邮轮乘客解除隔离。",
-      "key_facts_zh": [
-        "美国",
-        "解除隔离",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f907b10ad7e3cae2",
-      "time": "2026-06-09T20:45:00.000Z",
-      "title_en": "A first genetic analysis of the cruise hantavirus case confirmed it was the Andes variant, and the twist is what it did not show, no mutations that change the story - OkDiario",
-      "body_en": "A first genetic analysis of the cruise hantavirus case confirmed it was the Andes variant, and the twist is what it did not show, no mutations that change the story OkDiario",
-      "summary_zh": "邮轮汉坦病毒基因分析确认为安第斯变种，未发现突变。",
-      "key_facts_zh": [
-        "邮轮",
-        "安第斯变种",
-        "基因分析"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-b7b56145deb8e174",
-      "time": "2026-06-09T20:31:53.000Z",
+      "time": "2026-06-09T20:06:12.000Z",
       "title_en": "Three more passengers from hantavirus-hit cruise ship leave Omaha quarantine - KLKN-TV",
       "body_en": "Three more passengers from hantavirus-hit cruise ship leave Omaha quarantine KLKN-TV",
-      "summary_zh": "美国奥马哈又有3名汉坦病毒邮轮乘客解除隔离。",
+      "summary_zh": "奥马哈隔离区再释放3名汉坦病毒邮轮乘客。",
       "key_facts_zh": [
-        "美国",
         "奥马哈",
-        "解除隔离"
+        "邮轮",
+        "3人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -118,21 +103,8 @@
       "summary_zh": "内布拉斯加医学中心释放3名汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "释放",
-        "邮轮"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c0c06d99fb82327d",
-      "time": "2026-06-09T16:08:56.000Z",
-      "title_en": "Health Matters: Canadian who tested positive for hantavirus has recovered - Yahoo News Canada",
-      "body_en": "Health Matters: Canadian who tested positive for hantavirus has recovered Yahoo News Canada",
-      "summary_zh": "加拿大一名汉坦病毒检测阳性患者已康复。",
-      "key_facts_zh": [
-        "加拿大",
-        "康复",
-        "确诊"
+        "邮轮",
+        "3人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -141,11 +113,11 @@
       "time": "2026-06-09T15:41:00.000Z",
       "title_en": "Hantavirus update: three more cruise passengers leave Omaha quarantine unit - WOWT",
       "body_en": "Hantavirus update: three more cruise passengers leave Omaha quarantine unit WOWT",
-      "summary_zh": "美国奥马哈3名汉坦病毒邮轮乘客离开隔离区。",
+      "summary_zh": "奥马哈隔离单元再释放3名邮轮乘客。",
       "key_facts_zh": [
-        "美国",
         "奥马哈",
-        "解除隔离"
+        "邮轮",
+        "3人解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -154,11 +126,11 @@
       "time": "2026-06-09T14:35:45.000Z",
       "title_en": "Three more US passengers from hantavirus-hit ship return to home states - Reuters",
       "body_en": "Three more US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "美国3名汉坦病毒邮轮乘客返回原籍州。",
+      "summary_zh": "3名美国汉坦病毒邮轮乘客返回原籍州。",
       "key_facts_zh": [
         "美国",
-        "返回",
-        "邮轮"
+        "邮轮",
+        "3人返回"
       ],
       "signal_strength": "high"
     },
@@ -167,11 +139,11 @@
       "time": "2026-06-09T12:55:00.000Z",
       "title_en": "HMS Medway helps prevent hantavirus outbreak on UK's most remote overseas territory - Forces News",
       "body_en": "HMS Medway helps prevent hantavirus outbreak on UK's most remote overseas territory Forces News",
-      "summary_zh": "英国皇家海军梅德韦号帮助预防最偏远领土汉坦病毒疫情。",
+      "summary_zh": "英国皇家海军梅德韦号协助预防汉坦病毒在海外领土爆发。",
       "key_facts_zh": [
         "英国",
         "海军",
-        "预防疫情"
+        "预防"
       ],
       "signal_strength": "high"
     },
@@ -180,11 +152,24 @@
       "time": "2026-06-09T12:36:22.000Z",
       "title_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered - Global News",
       "body_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered Global News",
-      "summary_zh": "加拿大不列颠哥伦比亚省官员称汉坦病毒阳性患者已康复。",
+      "summary_zh": "加拿大不列颠哥伦比亚省卫生官员称汉坦病毒阳性患者已康复。",
       "key_facts_zh": [
         "加拿大",
         "BC省",
-        "患者康复"
+        "康复"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a92047cd04886f23",
+      "time": "2026-06-09T12:25:15.000Z",
+      "title_en": "Canadian who tested positive for hantavirus on cruise ship has recovered - Global News",
+      "body_en": "Canadian who tested positive for hantavirus on cruise ship has recovered Global News Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say CBC B.C.'s first hantavirus patient has recovered, discharged from hospital Vancouver Sun",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性后已康复。",
+      "key_facts_zh": [
+        "加拿大",
+        "邮轮",
+        "康复"
       ],
       "signal_strength": "high"
     },
@@ -193,7 +178,7 @@
       "time": "2026-06-09T09:57:52.000Z",
       "title_en": "Vaccines and therapeutics for Andes hantavirus - Nature",
       "body_en": "Vaccines and therapeutics for Andes hantavirus Nature",
-      "summary_zh": "《自然》杂志报道安第斯汉坦病毒疫苗和治疗研究进展。",
+      "summary_zh": "《自然》杂志发表关于安第斯汉坦病毒疫苗和治疗的研究。",
       "key_facts_zh": [
         "自然",
         "疫苗",
@@ -202,28 +187,40 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-30d7ef581678551a",
-      "time": "2026-06-09T09:23:11.000Z",
-      "title_en": "Update on Canadian cruise ship passenger who tested positive for hantavirus - CTV News",
-      "body_en": "Update on Canadian cruise ship passenger who tested positive for hantavirus CTV News Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say CBC B.C.'s first hantavirus patient has recovered, discharged from hospital Vancouver Sun",
-      "summary_zh": "加拿大邮轮汉坦病毒阳性乘客已康复出院。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "患者康复"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-51c60b62f7ea9b27",
       "time": "2026-06-09T08:00:01.000Z",
       "title_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient - GOV.UK",
       "body_en": "Defence Medics parachute into Tristan da Cunha to treat hantavirus patient GOV.UK",
-      "summary_zh": "英国国防医务人员跳伞进入特里斯坦达库尼亚治疗汉坦病毒患者。",
+      "summary_zh": "英国国防医疗队跳伞进入特里斯坦达库尼亚治疗汉坦病毒患者。",
       "key_facts_zh": [
         "英国",
         "特里斯坦达库尼亚",
-        "跳伞救治"
+        "医疗队"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-94cbc31eacf43f79",
+      "time": "2026-06-09T07:40:34.000Z",
+      "title_en": "New Sequencing Method Improves Hantavirus Tracking - Technology Networks",
+      "body_en": "New Sequencing Method Improves Hantavirus Tracking Technology Networks",
+      "summary_zh": "新测序方法改进汉坦病毒追踪。",
+      "key_facts_zh": [
+        "测序",
+        "追踪"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-c5bec035cb9e78ea",
+      "time": "2026-06-09T07:00:00.000Z",
+      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
+      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
+      "summary_zh": "美国 CDC 发布邮轮安第斯病毒疫情现状。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "邮轮",
+        "疫情"
       ],
       "signal_strength": "high"
     },
@@ -232,24 +229,11 @@
       "time": "2026-06-09T01:06:00.000Z",
       "title_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say - CBC",
       "body_en": "Canadian cruise passenger who tested positive for hantavirus has recovered, health officials say CBC",
-      "summary_zh": "加拿大邮轮汉坦病毒阳性乘客已康复，卫生官员确认。",
+      "summary_zh": "加拿大邮轮乘客汉坦病毒检测阳性后康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "患者康复"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b0ec311dab7ff163",
-      "time": "2026-06-08T22:21:00.000Z",
-      "title_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha - KETV",
-      "body_en": "Doctor quarantining at home after being monitored for hantavirus in Omaha KETV",
-      "summary_zh": "美国奥马哈一名医生因汉坦病毒监测后居家隔离。",
-      "key_facts_zh": [
-        "美国",
-        "医生",
-        "居家隔离"
+        "康复"
       ],
       "signal_strength": "high"
     }
