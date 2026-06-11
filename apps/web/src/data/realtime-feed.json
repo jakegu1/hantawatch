@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-11T02:54:00.284262+00:00",
+  "__generated_at": "2026-06-11T03:41:23.446069+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-11T02:53:58.926933+00:00",
+  "last_fetched": "2026-06-11T03:41:12.704477+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,24 +13,23 @@
       "time": "2026-06-10T23:33:22.000Z",
       "title_en": "San Quentin reports possible hantavirus case in inmate - San Francisco Chronicle",
       "body_en": "San Quentin reports possible hantavirus case in inmate San Francisco Chronicle",
-      "summary_zh": "美国圣昆廷监狱报告一名囚犯疑似感染汉坦病毒。",
+      "summary_zh": "美国圣昆廷监狱报告一名囚犯疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "监狱",
         "疑似病例"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-7619b1385ea15364",
       "time": "2026-06-10T21:49:52.000Z",
       "title_en": "San Quentin Rehabilitation Center confirms 38-year-old male inmate contracted possible case of hantavirus - ABC7 Bay Area",
       "body_en": "San Quentin Rehabilitation Center confirms 38-year-old male inmate contracted possible case of hantavirus ABC7 Bay Area",
-      "summary_zh": "美国圣昆廷康复中心确认一名38岁男性囚犯疑似感染汉坦病毒。",
+      "summary_zh": "美国圣昆廷监狱确认一名38岁男性囚犯感染疑似汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "high"
     },
@@ -39,7 +38,7 @@
       "time": "2026-06-10T21:42:00.000Z",
       "title_en": "Three more hantavirus cruise ship passengers cleared to leave Nebraska quarantine - WFAA",
       "body_en": "Three more hantavirus cruise ship passengers cleared to leave Nebraska quarantine WFAA",
-      "summary_zh": "美国内布拉斯加州解除三名邮轮乘客的隔离。",
+      "summary_zh": "三名汉坦病毒邮轮乘客获准离开内布拉斯加州隔离区。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -52,10 +51,11 @@
       "time": "2026-06-10T21:26:21.000Z",
       "title_en": "Hantavirus Cruise Outbreak Sparks Global Travel Concerns as Expedition Passengers Face Quarantine and Emergency Biocontainment Measures - Travel And Tour World",
       "body_en": "Hantavirus Cruise Outbreak Sparks Global Travel Concerns as Expedition Passengers Face Quarantine and Emergency Biocontainment Measures Travel And Tour World",
-      "summary_zh": "汉坦病毒邮轮疫情引发全球旅行担忧。",
+      "summary_zh": "汉坦病毒邮轮爆发引发全球旅行担忧，乘客面临隔离。",
       "key_facts_zh": [
         "邮轮",
-        "全球旅行担忧"
+        "全球旅行",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -76,20 +76,31 @@
       "time": "2026-06-10T11:39:40.000Z",
       "title_en": "Surveillance tightened at ports over hantavirus risk, health ministers tells parliament - The Daily Star",
       "body_en": "Surveillance tightened at ports over hantavirus risk, health ministers tells parliament The Daily Star",
-      "summary_zh": "卫生部长告知议会，港口因汉坦病毒风险加强监测。",
+      "summary_zh": "卫生部长告知议会，港口因汉坦病毒风险加强监控。",
       "key_facts_zh": [
         "港口",
-        "加强监测",
-        "卫生部长"
+        "加强监控"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7f864c47b1e7c213",
+      "time": "2026-06-10T10:30:43.000Z",
+      "title_en": "Hantavirus outbreaks rare, but not unheard of in U.S. - Butler Eagle",
+      "body_en": "Hantavirus outbreaks rare, but not unheard of in U.S. Butler Eagle",
+      "summary_zh": "美国媒体称汉坦病毒爆发罕见但并非前所未闻。",
+      "key_facts_zh": [
+        "美国",
+        "罕见"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e71eb81da1061bfb",
       "time": "2026-06-09T23:47:35.000Z",
       "title_en": "Hantavirus patient recovers - CTV News",
       "body_en": "Hantavirus patient recovers CTV News",
-      "summary_zh": "CTV新闻称一名汉坦病毒患者康复。",
+      "summary_zh": "加拿大一名汉坦病毒患者康复。",
       "key_facts_zh": [
         "加拿大",
         "患者康复"
@@ -101,10 +112,10 @@
       "time": "2026-06-09T23:00:00.000Z",
       "title_en": "Hantavirus patient discharged from Victoria hospital - Times Colonist",
       "body_en": "Hantavirus patient discharged from Victoria hospital Times Colonist",
-      "summary_zh": "汉坦病毒患者从维多利亚医院出院。",
+      "summary_zh": "加拿大维多利亚医院一名汉坦病毒患者出院。",
       "key_facts_zh": [
         "加拿大",
-        "出院"
+        "患者出院"
       ],
       "signal_strength": "high"
     },
@@ -113,11 +124,11 @@
       "time": "2026-06-09T22:37:10.000Z",
       "title_en": "3 more former cruise ship passengers leave UNMC after quarantining following hantavirus outbreak - Nebraska Public Media",
       "body_en": "3 more former cruise ship passengers leave UNMC after quarantining following hantavirus outbreak Nebraska Public Media",
-      "summary_zh": "3名前邮轮乘客在隔离后离开内布拉斯加医学中心。",
+      "summary_zh": "内布拉斯加医学中心3名前邮轮乘客结束隔离离开。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
         "邮轮",
-        "解除隔离"
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -128,9 +139,9 @@
       "body_en": "3 Virginia people exposed to hantavirus healthy after incubation period passes WUSA9",
       "summary_zh": "弗吉尼亚州3名接触汉坦病毒者度过潜伏期后健康。",
       "key_facts_zh": [
-        "美国",
         "弗吉尼亚",
-        "接触者健康"
+        "接触者",
+        "健康"
       ],
       "signal_strength": "high"
     },
@@ -139,25 +150,13 @@
       "time": "2026-06-09T15:41:00.000Z",
       "title_en": "Hantavirus update: three more cruise passengers leave Omaha quarantine unit - WOWT",
       "body_en": "Hantavirus update: three more cruise passengers leave Omaha quarantine unit WOWT",
-      "summary_zh": "美国内布拉斯加州邮轮隔离区又有3人离开。",
+      "summary_zh": "三名邮轮乘客离开内布拉斯加州隔离区。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "邮轮"
+        "邮轮",
+        "3人离开隔离"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-9f914cdb9427d6e5",
-      "time": "2026-06-09T12:56:12.000Z",
-      "title_en": "Hantavirus Outbreak Highlights the Importance of One Health - Medscape",
-      "body_en": "Hantavirus Outbreak Highlights the Importance of One Health Medscape",
-      "summary_zh": "汉坦病毒疫情凸显“一体化健康”重要性。",
-      "key_facts_zh": [
-        "汉坦病毒",
-        "一体化健康"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-a1d15a588b18e268",
@@ -168,7 +167,7 @@
       "key_facts_zh": [
         "英国",
         "海外领土",
-        "海军"
+        "海军防疫"
       ],
       "signal_strength": "high"
     },
@@ -177,11 +176,11 @@
       "time": "2026-06-09T12:36:22.000Z",
       "title_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered - Global News",
       "body_en": "B.C. health officials say Canadian who tested positive for hantavirus has recovered Global News",
-      "summary_zh": "加拿大不列颠哥伦比亚省汉坦阳性患者已康复。",
+      "summary_zh": "加拿大不列颠哥伦比亚省确诊汉坦患者已康复。",
       "key_facts_zh": [
         "加拿大",
-        "不列颠哥伦比亚",
-        "康复"
+        "BC省",
+        "患者康复"
       ],
       "signal_strength": "high"
     },
@@ -190,11 +189,11 @@
       "time": "2026-06-09T12:25:15.000Z",
       "title_en": "Canadian who tested positive for hantavirus on cruise ship has recovered - Global News",
       "body_en": "Canadian who tested positive for hantavirus on cruise ship has recovered Global News",
-      "summary_zh": "加拿大邮轮汉坦阳性患者已康复。",
+      "summary_zh": "邮轮上确诊汉坦的加拿大人已康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "康复"
+        "患者康复"
       ],
       "signal_strength": "high"
     },
@@ -220,7 +219,7 @@
       "key_facts_zh": [
         "英国",
         "特里斯坦达库尼亚",
-        "军医"
+        "军医空降"
       ],
       "signal_strength": "high"
     },
@@ -229,10 +228,10 @@
       "time": "2026-06-09T07:40:34.000Z",
       "title_en": "New Sequencing Method Improves Hantavirus Tracking - Technology Networks",
       "body_en": "New Sequencing Method Improves Hantavirus Tracking Technology Networks",
-      "summary_zh": "新技术改进汉坦病毒追踪方法。",
+      "summary_zh": "新技术改进汉坦病毒追踪测序方法。",
       "key_facts_zh": [
-        "汉坦病毒",
-        "测序技术"
+        "测序技术",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     }

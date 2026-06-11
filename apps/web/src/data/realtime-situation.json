@@ -4,13 +4,13 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 14
+    "daysAtState": 15
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "5/28",
-    "whoDaysAgo": 13,
+    "whoDaysAgo": 14,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
@@ -79,6 +79,16 @@
     ]
   },
   "events": [
+    {
+      "at": "2026-06-10T23:33:22Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
     {
       "at": "2026-06-07T12:00:00Z",
       "kind": "detection",
@@ -256,7 +266,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 13,
+  "daysWithoutNewConfirmed": 14,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -292,7 +302,7 @@
         "count": 2,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-10"
+        "asOf": "2026-06-11"
       },
       {
         "zh": "法国",
@@ -306,14 +316,14 @@
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-10"
+        "asOf": "2026-06-11"
       },
       {
         "zh": "瑞士",
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-10"
+        "asOf": "2026-06-11"
       }
     ],
     "confirmedAttributionTotal": 11,
@@ -462,7 +472,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-10T20:27:23.138901+00:00"
+      "updatedAt": "2026-06-11T03:41:18.788470+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -470,12 +480,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-07T12:00:00Z"
+      "updatedAt": "2026-06-10T23:33:22Z"
     }
   ],
   "intake": {
-    "last24hCount": 8,
+    "last24hCount": 7,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-10T20:27:26.336519+00:00"
+  "realtimeUpdatedAt": "2026-06-11T03:41:23.441944+00:00"
 }

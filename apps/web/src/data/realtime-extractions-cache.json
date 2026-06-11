@@ -5711,6 +5711,48 @@
         "source_url": "",
         "time": "2026-06-10T03:00:00.000Z"
       }
+    ],
+    "rt-ae4f52caefe6f9e2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 1,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "medium",
+        "reasoning_zh": "美国加州圣昆廷监狱报告一例疑似汉坦病毒病例，未确认，故新增监测1例。",
+        "update_id": "rt-ae4f52caefe6f9e2",
+        "source_url": "",
+        "time": "2026-06-10T23:33:22.000Z"
+      }
+    ],
+    "rt-7619b1385ea15364": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 1,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "medium",
+        "reasoning_zh": "同一监狱确认一名38岁男性囚犯感染疑似汉坦病毒，新增监测1例。",
+        "update_id": "rt-7619b1385ea15364",
+        "source_url": "",
+        "time": "2026-06-10T21:49:52.000Z"
+      }
+    ],
+    "rt-a0667e1ed6b1367d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮暴发引发全球旅行担忧，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-a0667e1ed6b1367d",
+        "source_url": "",
+        "time": "2026-06-10T21:26:21.000Z"
+      }
     ]
   }
 }
