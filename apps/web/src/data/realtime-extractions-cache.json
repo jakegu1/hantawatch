@@ -5837,6 +5837,104 @@
         "source_url": "",
         "time": "2026-06-11T10:00:47.000Z"
       }
+    ],
+    "rt-aa527230efe78bfd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "CDC与佛罗里达州就汉坦病毒邮轮乘客隔离问题存在分歧，未提供具体病例数字。",
+        "update_id": "rt-aa527230efe78bfd",
+        "source_url": "",
+        "time": "2026-06-11T19:47:58.000Z"
+      }
+    ],
+    "rt-bf3265ebb86393b4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "福布斯报道一名汉坦病毒邮轮乘客在内布拉斯加州隔离中，未提供新增病例数。",
+        "update_id": "rt-bf3265ebb86393b4",
+        "source_url": "",
+        "time": "2026-06-11T18:53:30.000Z"
+      }
+    ],
+    "rt-468b668577c621d9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "纽约邮报报道圣昆廷监狱发现汉坦病毒症状，但未明确新增病例数。",
+        "update_id": "rt-468b668577c621d9",
+        "source_url": "",
+        "time": "2026-06-11T18:41:00.000Z"
+      }
+    ],
+    "rt-e185258a96930226": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "low",
+        "reasoning_zh": "报道称受汉坦病毒影响的邮轮在消毒后恢复航行，未提及具体国家或病例数。",
+        "update_id": "rt-e185258a96930226",
+        "source_url": "",
+        "time": "2026-06-11T18:38:18.000Z"
+      }
+    ],
+    "rt-a2a65a6ce4e66257": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "low",
+        "reasoning_zh": "标题提及荷兰汉坦病毒船，但正文无具体病例信息。",
+        "update_id": "rt-a2a65a6ce4e66257",
+        "source_url": "",
+        "time": "2026-06-11T18:22:36.000Z"
+      }
+    ],
+    "rt-11283d8875d25413": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "NBC报道圣昆廷监狱出现可能汉坦病毒病例，但未提供新增确诊数。",
+        "update_id": "rt-11283d8875d25413",
+        "source_url": "",
+        "time": "2026-06-11T18:19:19.000Z"
+      }
+    ],
+    "rt-1652e4e52d0d538e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "多伦多星报报道美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮上的美国人，无新增病例。",
+        "update_id": "rt-1652e4e52d0d538e",
+        "source_url": "",
+        "time": "2026-06-11T18:16:48.000Z"
+      }
     ]
   }
 }
