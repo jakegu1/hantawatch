@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-06-11T03:41:23.447280+00:00",
+  "__generated_at": "2026-06-11T10:19:30.186562+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -69,7 +69,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788436+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325677+00:00"
             }
           ]
         },
@@ -123,7 +123,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788450+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325694+00:00"
             }
           ]
         },
@@ -142,7 +142,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788457+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325703+00:00"
             }
           ]
         },
@@ -221,7 +221,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788386+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325620+00:00"
             }
           ]
         },
@@ -240,7 +240,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788405+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325642+00:00"
             }
           ]
         },
@@ -259,7 +259,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788415+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325654+00:00"
             }
           ]
         },
@@ -278,7 +278,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788422+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325662+00:00"
             }
           ]
         },
@@ -297,7 +297,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788429+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325670+00:00"
             }
           ]
         },
@@ -316,7 +316,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788443+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325686+00:00"
             }
           ]
         },
@@ -335,14 +335,14 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788464+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325710+00:00"
             }
           ]
         },
         {
           "iso2": "GB",
           "nameZh": "英国",
-          "status": "monitoring",
+          "status": "presumptive_positive",
           "confirmed": 0,
           "monitoring": 28,
           "quarantine": 0,
@@ -354,7 +354,23 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-06-11T03:41:18.788470+00:00"
+              "retrievedAt": "2026-06-11T10:19:25.325718+00:00"
+            },
+            {
+              "tier": "news",
+              "url": "",
+              "sourceName": "Realtime LLM Extractor",
+              "retrievedAt": "2026-06-11T10:19:25.325724+00:00",
+              "asOf": "2026-06-11",
+              "reasoningZh": "WHO chief reports UK confirmed hantavirus case in Tristan da"
+            },
+            {
+              "tier": "news",
+              "url": "",
+              "sourceName": "Realtime LLM Extractor",
+              "retrievedAt": "2026-06-11T10:19:25.325724+00:00",
+              "asOf": "2026-06-10",
+              "reasoningZh": "WHO chief confirms UK hantavirus case in Tristan da Cunha."
             }
           ]
         }
@@ -364,13 +380,13 @@
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-          "retrievedAt": "2026-06-11T03:40:52.956120+00:00",
+          "retrievedAt": "2026-06-11T10:19:05.857002+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-06-11T03:41:18.788490+00:00",
+        "generatedAt": "2026-06-11T10:19:25.325782+00:00",
         "contributors": [
           "who_don",
           "arcgis",

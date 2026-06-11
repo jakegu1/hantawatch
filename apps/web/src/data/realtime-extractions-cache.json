@@ -5753,6 +5753,62 @@
         "source_url": "",
         "time": "2026-06-10T21:26:21.000Z"
       }
+    ],
+    "rt-bf981cd325b2ab0d": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "high",
+        "reasoning_zh": "WHO chief reports UK confirmed hantavirus case in Tristan da",
+        "update_id": "rt-bf981cd325b2ab0d",
+        "source_url": "",
+        "time": "2026-06-11T07:30:00.000Z"
+      }
+    ],
+    "rt-c386cc18fe1ff7db": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "low",
+        "reasoning_zh": "新闻关于CEPI投资埃博拉疫苗研发，不涉及汉坦病毒疫情变化。",
+        "update_id": "rt-c386cc18fe1ff7db",
+        "source_url": "",
+        "time": "2026-06-10T23:30:00Z"
+      }
+    ],
+    "rt-f9fe76732cf82784": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "medium",
+        "reasoning_zh": "三名汉坦病毒邮轮乘客获准离开内布拉斯加州隔离，无新增病例。",
+        "update_id": "rt-f9fe76732cf82784",
+        "source_url": "",
+        "time": "2026-06-10T21:42:00.000Z"
+      }
+    ],
+    "rt-302f1b5fae5ea7c9": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-10",
+        "confidence": "high",
+        "reasoning_zh": "WHO chief confirms UK hantavirus case in Tristan da Cunha.",
+        "update_id": "rt-302f1b5fae5ea7c9",
+        "source_url": "",
+        "time": "2026-06-10T21:30:00Z"
+      }
     ]
   }
 }
