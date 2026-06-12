@@ -6173,6 +6173,90 @@
         "source_url": "",
         "time": "2026-06-12T09:09:27.000Z"
       }
+    ],
+    "rt-50381f9481e0687a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及加强监测，无具体国家或病例数字。",
+        "update_id": "rt-50381f9481e0687a",
+        "source_url": "",
+        "time": "2026-06-12T19:23:14.000Z"
+      }
+    ],
+    "rt-67804a55e93f47b1": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "疫苗研发进展，无新增病例信息。",
+        "update_id": "rt-67804a55e93f47b1",
+        "source_url": "",
+        "time": "2026-06-12T19:16:00.000Z"
+      }
+    ],
+    "rt-015787a7f70b372d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "美国加州监狱疑似病例，正在调查，无新增确诊。",
+        "update_id": "rt-015787a7f70b372d",
+        "source_url": "",
+        "time": "2026-06-12T18:30:47.000Z"
+      }
+    ],
+    "rt-54cfbcbefb1e8a7d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "动物模型疫苗研究，无人类病例数据。",
+        "update_id": "rt-54cfbcbefb1e8a7d",
+        "source_url": "",
+        "time": "2026-06-12T18:16:51.000Z"
+      }
+    ],
+    "rt-bfc2d7646471eff5": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰邮轮疫情后恢复航行，未提供新增病例数。",
+        "update_id": "rt-bfc2d7646471eff5",
+        "source_url": "",
+        "time": "2026-06-12T17:30:00.000Z"
+      }
+    ],
+    "rt-a0b5e35da786ac10": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "乘客隔离纠纷，无新增病例或国家信息。",
+        "update_id": "rt-a0b5e35da786ac10",
+        "source_url": "",
+        "time": "2026-06-12T14:39:00.000Z"
+      }
     ]
   }
 }
