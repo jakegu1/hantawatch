@@ -1,12 +1,18 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-12T21:50:25.713300+00:00",
+  "__generated_at": "2026-06-12T23:10:46.153886+00:00",
   "windowDays": 30,
   "source": "https://hantaflow.com/api/signals.json",
   "countries": {
+    "RU": {
+      "iso2": "RU",
+      "signalCount30d": 5,
+      "signalCount7d": 4,
+      "lastSignalAt": "2026-06-12T22:39:00+00:00"
+    },
     "AR": {
       "iso2": "AR",
-      "signalCount30d": 21,
+      "signalCount30d": 20,
       "signalCount7d": 14,
       "lastSignalAt": "2026-06-12T21:02:00+00:00"
     },
@@ -22,46 +28,34 @@
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T18:56:15+00:00"
     },
-    "US": {
-      "iso2": "US",
-      "signalCount30d": 5,
-      "signalCount7d": 4,
-      "lastSignalAt": "2026-06-12T17:17:00+00:00"
-    },
     "ES": {
       "iso2": "ES",
-      "signalCount30d": 18,
+      "signalCount30d": 21,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T17:11:07+00:00"
     },
-    "RU": {
-      "iso2": "RU",
+    "US": {
+      "iso2": "US",
       "signalCount30d": 4,
       "signalCount7d": 3,
-      "lastSignalAt": "2026-06-12T11:01:46+00:00"
+      "lastSignalAt": "2026-06-12T05:57:55+00:00"
     },
     "VN": {
       "iso2": "VN",
       "signalCount30d": 26,
-      "signalCount7d": 17,
+      "signalCount7d": 22,
       "lastSignalAt": "2026-06-12T05:29:06+00:00"
     },
     "MX": {
       "iso2": "MX",
-      "signalCount30d": 4,
+      "signalCount30d": 3,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T00:02:00+00:00"
     },
-    "CR": {
-      "iso2": "CR",
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-11T16:58:16+00:00"
-    },
     "GB": {
       "iso2": "GB",
-      "signalCount30d": 8,
-      "signalCount7d": 8,
+      "signalCount30d": 12,
+      "signalCount7d": 12,
       "lastSignalAt": "2026-06-11T13:22:01+00:00"
     },
     "FR": {
@@ -76,6 +70,24 @@
       "signalCount7d": 3,
       "lastSignalAt": "2026-06-10T16:42:24+00:00"
     },
+    "CA": {
+      "iso2": "CA",
+      "signalCount30d": 3,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-09T03:22:00+00:00"
+    },
+    "BR": {
+      "iso2": "BR",
+      "signalCount30d": 7,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-08T08:34:57+00:00"
+    },
+    "PT": {
+      "iso2": "PT",
+      "signalCount30d": 6,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-06-04T16:52:00+00:00"
+    },
     "GR": {
       "iso2": "GR",
       "signalCount30d": 1,
@@ -84,21 +96,15 @@
     },
     "AU": {
       "iso2": "AU",
-      "signalCount30d": 5,
+      "signalCount30d": 3,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-05-29T06:15:28+00:00"
+      "lastSignalAt": "2026-05-29T06:08:38+00:00"
     },
     "PL": {
       "iso2": "PL",
       "signalCount30d": 4,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-28T07:00:00+00:00"
-    },
-    "BR": {
-      "iso2": "BR",
-      "signalCount30d": 4,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-27T07:00:00+00:00"
     },
     "ID": {
       "iso2": "ID",
@@ -112,23 +118,11 @@
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-24T07:00:00+00:00"
     },
-    "CA": {
-      "iso2": "CA",
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-22T07:00:00+00:00"
-    },
     "NL": {
       "iso2": "NL",
-      "signalCount30d": 3,
+      "signalCount30d": 2,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-22T07:00:00+00:00"
-    },
-    "PT": {
-      "iso2": "PT",
-      "signalCount30d": 5,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-20T07:00:00+00:00"
     },
     "CN": {
       "iso2": "CN",
@@ -141,6 +135,12 @@
       "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-18T07:00:00+00:00"
+    },
+    "AT": {
+      "iso2": "AT",
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-05-16T07:00:00+00:00"
     },
     "KR": {
       "iso2": "KR",
