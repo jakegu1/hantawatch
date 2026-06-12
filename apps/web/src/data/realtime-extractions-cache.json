@@ -5935,6 +5935,118 @@
         "source_url": "",
         "time": "2026-06-11T18:16:48.000Z"
       }
+    ],
+    "rt-c839a2384501a108": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "high",
+        "reasoning_zh": "美国提供75万美元撤离一名汉坦病毒邮轮上的美国人，无新增病例数字。",
+        "update_id": "rt-c839a2384501a108",
+        "source_url": "",
+        "time": "2026-06-12T03:18:17.000Z"
+      }
+    ],
+    "rt-fee71682010662a7": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "报道单剂疫苗对安第斯汉坦病毒完全保护，未涉及具体国家疫情变化。",
+        "update_id": "rt-fee71682010662a7",
+        "source_url": "",
+        "time": "2026-06-12T02:48:00.000Z"
+      }
+    ],
+    "rt-da8682cc1c49ef98": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷监狱报告可能汉坦病毒病例，但未确认新增病例数。",
+        "update_id": "rt-da8682cc1c49ef98",
+        "source_url": "",
+        "time": "2026-06-11T22:30:04.000Z"
+      }
+    ],
+    "rt-e3669089580291a0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "high",
+        "reasoning_zh": "两名暴露乘客离开UNMC隔离，无新增病例数字。",
+        "update_id": "rt-e3669089580291a0",
+        "source_url": "",
+        "time": "2026-06-11T21:15:00.000Z"
+      }
+    ],
+    "rt-06d353e970a4f0b7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "加州调查疑似病例，未提供具体新增数字。",
+        "update_id": "rt-06d353e970a4f0b7",
+        "source_url": "",
+        "time": "2026-06-11T21:10:00.000Z"
+      }
+    ],
+    "rt-141ee0c11335308b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "high",
+        "reasoning_zh": "美国提供75万美元撤离汉坦病毒邮轮乘客，无新增病例数字。",
+        "update_id": "rt-141ee0c11335308b",
+        "source_url": "",
+        "time": "2026-06-11T21:07:19.000Z"
+      }
+    ],
+    "rt-0a79a7cc74a0b565": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "high",
+        "reasoning_zh": "CNN报道美国提供75万美元撤离汉坦病毒邮轮乘客，无新增病例数字。",
+        "update_id": "rt-0a79a7cc74a0b565",
+        "source_url": "",
+        "time": "2026-06-11T18:58:28.000Z"
+      }
+    ],
+    "rt-0010840f113f97aa": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "high",
+        "reasoning_zh": "两名邮轮乘客离开国家隔离单位，无新增病例数字。",
+        "update_id": "rt-0010840f113f97aa",
+        "source_url": "",
+        "time": "2026-06-11T16:52:00.000Z"
+      }
     ]
   }
 }
