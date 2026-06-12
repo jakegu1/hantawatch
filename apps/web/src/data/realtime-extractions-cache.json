@@ -6131,6 +6131,48 @@
         "source_url": "",
         "time": "2026-06-11T20:25:00.000Z"
       }
+    ],
+    "rt-1c2bc68ebbe8c5da": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及致命汉坦病毒爆发，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-1c2bc68ebbe8c5da",
+        "source_url": "",
+        "time": "2026-06-12T14:39:00.000Z"
+      }
+    ],
+    "rt-f1aec7bd46b23c8b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "新闻关于安第斯汉坦病毒株的单剂量疫苗研究，未提及具体国家或病例变化。",
+        "update_id": "rt-f1aec7bd46b23c8b",
+        "source_url": "",
+        "time": "2026-06-12T11:20:04.000Z"
+      }
+    ],
+    "rt-4ae2eed110f1b5d0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "high",
+        "reasoning_zh": "WHO报道21国启动安第斯病毒研究计划，但未提供具体国家或病例变化数据。",
+        "update_id": "rt-4ae2eed110f1b5d0",
+        "source_url": "",
+        "time": "2026-06-12T09:09:27.000Z"
+      }
     ]
   }
 }

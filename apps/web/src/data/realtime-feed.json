@@ -1,23 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-12T14:42:06.067760+00:00",
+  "__generated_at": "2026-06-12T14:53:07.747646+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-12T14:42:04.428509+00:00",
+  "last_fetched": "2026-06-12T14:52:59.717001+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-1c2bc68ebbe8c5da",
+      "time": "2026-06-12T14:39:00.000Z",
+      "title_en": "Cruise passenger from deadly hantavirus outbreak says she's 'held hostage' in quarantine fight - The Cool Down",
+      "body_en": "Cruise passenger from deadly hantavirus outbreak says she's 'held hostage' in quarantine fight The Cool Down",
+      "summary_zh": "邮轮乘客因汉坦病毒疫情被隔离，称被扣为人质。",
+      "key_facts_zh": [
+        "邮轮",
+        "隔离",
+        "乘客"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-f1aec7bd46b23c8b",
       "time": "2026-06-12T11:20:04.000Z",
       "title_en": "Scientists track single-dose vaccines for Andes hantavirus strain - Medical Xpress",
       "body_en": "Scientists track single-dose vaccines for Andes hantavirus strain Medical Xpress",
-      "summary_zh": "科学家追踪安第斯汉坦病毒单剂疫苗研究。",
+      "summary_zh": "科学家追踪安第斯汉坦病毒单剂疫苗。",
       "key_facts_zh": [
         "安第斯汉坦病毒",
-        "单剂疫苗",
-        "研究进展"
+        "疫苗研究"
       ],
       "signal_strength": "medium"
     },
@@ -26,11 +38,24 @@
       "time": "2026-06-12T09:09:27.000Z",
       "title_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak - World Health Organization (WHO)",
       "body_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak World Health Organization (WHO)",
-      "summary_zh": "WHO 宣布21国启动安第斯病毒研究合作。",
+      "summary_zh": "21国启动安第斯病毒研究合作。",
       "key_facts_zh": [
         "WHO",
         "21国",
-        "研究合作"
+        "安第斯病毒"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ea2693450d516e79",
+      "time": "2026-06-12T08:11:00.000Z",
+      "title_en": "Fatal outbreak fears spark $750,000 rescue mission - The Independent",
+      "body_en": "Fatal outbreak fears spark $750,000 rescue mission The Independent",
+      "summary_zh": "致命疫情引发75万美元救援行动。",
+      "key_facts_zh": [
+        "疫情",
+        "救援",
+        "75万美元"
       ],
       "signal_strength": "high"
     },
@@ -39,10 +64,10 @@
       "time": "2026-06-12T02:48:00.000Z",
       "title_en": "Single-dose vaccine provides complete protection against Andes hantavirus - News-Medical",
       "body_en": "Single-dose vaccine provides complete protection against Andes hantavirus News-Medical",
-      "summary_zh": "单剂疫苗对安第斯汉坦病毒提供完全保护。",
+      "summary_zh": "单剂疫苗完全保护安第斯汉坦病毒。",
       "key_facts_zh": [
         "安第斯汉坦病毒",
-        "单剂疫苗",
+        "疫苗",
         "完全保护"
       ],
       "signal_strength": "medium"
@@ -52,23 +77,10 @@
       "time": "2026-06-11T21:47:09.000Z",
       "title_en": "San Quentin prison reports possible hantavirus case - Marin Independent Journal",
       "body_en": "San Quentin prison reports possible hantavirus case Marin Independent Journal",
-      "summary_zh": "美国圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "疑似病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-67d4b9064c2313a3",
-      "time": "2026-06-11T21:34:04.000Z",
-      "title_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison - SFGATE",
-      "body_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison SFGATE",
-      "summary_zh": "美国湾区监狱调查一例罕见汉坦病毒疑似病例。",
-      "key_facts_zh": [
-        "美国",
-        "湾区监狱",
+        "监狱",
         "疑似病例"
       ],
       "signal_strength": "high"
@@ -78,46 +90,22 @@
       "time": "2026-06-11T21:15:00.000Z",
       "title_en": "Two more passengers exposed to hantavirus leave UNMC quarantine in Omaha - KETV",
       "body_en": "Two more passengers exposed to hantavirus leave UNMC quarantine in Omaha KETV",
-      "summary_zh": "内布拉斯加医学中心又有两名接触者解除隔离。",
+      "summary_zh": "美国内布拉斯加医学中心两名接触汉坦病毒的乘客结束隔离。",
       "key_facts_zh": [
-        "内布拉斯加",
-        "解除隔离"
+        "美国",
+        "内布拉斯加医学中心",
+        "结束隔离"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-06d353e970a4f0b7",
-      "time": "2026-06-11T21:10:00.000Z",
-      "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
-      "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
-      "summary_zh": "加州调查一例疑似汉坦病毒病例。",
-      "key_facts_zh": [
-        "美国",
-        "疑似病例"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7999ef3387a38965",
-      "time": "2026-06-11T20:25:00.000Z",
-      "title_en": "Prisoner at San Quentin may have hantavirus, authorities say - The Independent",
-      "body_en": "Prisoner at San Quentin may have hantavirus, authorities say The Independent",
-      "summary_zh": "当局称圣昆廷监狱一名囚犯可能感染汉坦病毒。",
-      "key_facts_zh": [
-        "美国",
-        "圣昆廷",
-        "疑似病例"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-aa527230efe78bfd",
       "time": "2026-06-11T19:47:58.000Z",
       "title_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine - NBC News",
       "body_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine NBC News",
-      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客隔离问题产生分歧。",
+      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客汉坦病毒隔离问题产生分歧。",
       "key_facts_zh": [
-        "美国 CDC",
+        "美国CDC",
         "佛罗里达",
         "隔离争议"
       ],
@@ -128,46 +116,46 @@
       "time": "2026-06-11T18:58:28.000Z",
       "title_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island - CNN",
       "body_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island CNN",
-      "summary_zh": "美国出资75万美元从偏远岛屿撤离一名邮轮乘客。",
+      "summary_zh": "美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "撤离"
+        "撤离",
+        "75万美元"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-bf3265ebb86393b4",
+      "time": "2026-06-11T18:53:00.000Z",
+      "title_en": "Hantavirus Cruise Passenger Says She’s Being Held ‘Hostage’ In Nebraska Quarantine (Latest Updates) - Forbes",
+      "body_en": "Hantavirus Cruise Passenger Says She’s Being Held ‘Hostage’ In Nebraska Quarantine (Latest Updates) Forbes",
+      "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加隔离中被扣为人质。",
+      "key_facts_zh": [
+        "美国",
+        "内布拉斯加",
+        "隔离争议"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e185258a96930226",
       "time": "2026-06-11T18:38:18.000Z",
       "title_en": "Hantavirus-hit cruise ship set to resume voyages after disinfection - Baird Maritime",
       "body_en": "Hantavirus-hit cruise ship set to resume voyages after disinfection Baird Maritime",
-      "summary_zh": "涉汉坦病毒邮轮消毒后拟恢复航行。",
+      "summary_zh": "受汉坦病毒影响的邮轮在消毒后恢复航行。",
       "key_facts_zh": [
         "邮轮",
         "消毒",
-        "复航"
+        "恢复航行"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-11283d8875d25413",
-      "time": "2026-06-11T18:19:19.000Z",
-      "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
-      "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "圣昆廷监狱报告一例可能汉坦病毒病例。",
-      "key_facts_zh": [
-        "美国",
-        "圣昆廷",
-        "疑似病例"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-0010840f113f97aa",
       "time": "2026-06-11T16:52:00.000Z",
       "title_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha - WOWT",
       "body_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "奥马哈国家隔离单位又有2名邮轮乘客解除隔离。",
+      "summary_zh": "美国奥马哈国家隔离单位又有2名邮轮乘客解除隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -180,11 +168,10 @@
       "time": "2026-06-11T10:00:47.000Z",
       "title_en": "Table for one: Exposed to deadly hantavirus, man is eating his way through quarantine - Flatwater Free Press",
       "body_en": "Table for one: Exposed to deadly hantavirus, man is eating his way through quarantine Flatwater Free Press",
-      "summary_zh": "一名接触汉坦病毒的男子在隔离期间独自用餐。",
+      "summary_zh": "美国一男子因接触汉坦病毒在隔离中用餐。",
       "key_facts_zh": [
         "美国",
-        "隔离",
-        "接触者"
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -195,8 +182,8 @@
       "body_en": "Hantavirus: UK Reports Confirmed Case in Tristan da Cunha, Says WHO Chief Health and Me",
       "summary_zh": "WHO 通报英国在特里斯坦达库尼亚报告一例确诊。",
       "key_facts_zh": [
-        "英国",
         "WHO",
+        "英国",
         "确诊 1 例"
       ],
       "signal_strength": "high"
@@ -206,7 +193,7 @@
       "time": "2026-06-11T07:00:00.000Z",
       "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
       "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国 CDC 发布邮轮上安第斯病毒疫情最新情况。",
+      "summary_zh": "美国 CDC 发布邮轮上 Andes 病毒疫情最新情况。",
       "key_facts_zh": [
         "美国 CDC",
         "邮轮",
@@ -219,26 +206,26 @@
       "time": "2026-06-11T04:48:21.000Z",
       "title_en": "Possible hantavirus case at San Quentin prompts testing, decontamination - San Francisco Chronicle",
       "body_en": "Possible hantavirus case at San Quentin prompts testing, decontamination San Francisco Chronicle",
-      "summary_zh": "圣昆廷监狱疑似汉坦病毒病例，已启动检测和消毒。",
+      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例引发检测和消毒。",
       "key_facts_zh": [
         "美国",
         "监狱",
         "疑似病例"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-7619b1385ea15364",
       "time": "2026-06-11T01:16:03.000Z",
       "title_en": "San Quentin Rehabilitation Center investigating possible case of hantavirus in 38-year-old male inmate - ABC7 Bay Area",
       "body_en": "San Quentin Rehabilitation Center investigating possible case of hantavirus in 38-year-old male inmate ABC7 Bay Area",
-      "summary_zh": "圣昆廷监狱一名38岁男囚疑似汉坦病毒病例。",
+      "summary_zh": "美国圣昆廷监狱一名38岁男囚疑似感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "监狱",
         "疑似病例"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
