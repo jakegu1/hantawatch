@@ -6047,6 +6047,90 @@
         "source_url": "",
         "time": "2026-06-11T16:52:00.000Z"
       }
+    ],
+    "rt-48fc7a9825d808b4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "high",
+        "reasoning_zh": "WHO宣布21国启动协调研究，无具体国家新增病例数。",
+        "update_id": "rt-48fc7a9825d808b4",
+        "source_url": "",
+        "time": "2026-06-12T09:09:27.000Z"
+      }
+    ],
+    "rt-ea2693450d516e79": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "标题提及致命疫情引发救援，但未指明国家及具体数字。",
+        "update_id": "rt-ea2693450d516e79",
+        "source_url": "",
+        "time": "2026-06-12T08:11:00.000Z"
+      }
+    ],
+    "rt-a7998fbff9013a3d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "美国出资撤离一名在汉坦病毒邮轮上的美国人，无新增病例数。",
+        "update_id": "rt-a7998fbff9013a3d",
+        "source_url": "",
+        "time": "2026-06-12T04:34:02.000Z"
+      }
+    ],
+    "rt-2b92c21ce8fb3e0c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷监狱报告可能汉坦病毒病例，无新增确诊数。",
+        "update_id": "rt-2b92c21ce8fb3e0c",
+        "source_url": "",
+        "time": "2026-06-11T21:47:09.000Z"
+      }
+    ],
+    "rt-67d4b9064c2313a3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "湾区监狱调查潜在汉坦病毒病例，无新增确诊数。",
+        "update_id": "rt-67d4b9064c2313a3",
+        "source_url": "",
+        "time": "2026-06-11T21:34:04.000Z"
+      }
+    ],
+    "rt-7999ef3387a38965": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-11",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷囚犯可能感染汉坦病毒，无新增确诊数。",
+        "update_id": "rt-7999ef3387a38965",
+        "source_url": "",
+        "time": "2026-06-11T20:25:00.000Z"
+      }
     ]
   }
 }
