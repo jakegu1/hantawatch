@@ -6257,6 +6257,90 @@
         "source_url": "",
         "time": "2026-06-12T14:39:00.000Z"
       }
+    ],
+    "rt-b9b1cba26408605e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "美国出资撤离一名汉坦病毒邮轮上的美国人，未提供新增病例数。",
+        "update_id": "rt-b9b1cba26408605e",
+        "source_url": "",
+        "time": "2026-06-12T23:37:00.000Z"
+      }
+    ],
+    "rt-3275feea1db5c16c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷监狱囚犯排除汉坦病毒，无新增病例。",
+        "update_id": "rt-3275feea1db5c16c",
+        "source_url": "",
+        "time": "2026-06-12T21:46:13.000Z"
+      }
+    ],
+    "rt-9407a8b5d1dab19f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "报道邮轮疫情但未明确国家，无具体数字。",
+        "update_id": "rt-9407a8b5d1dab19f",
+        "source_url": "",
+        "time": "2026-06-12T21:41:00.000Z"
+      }
+    ],
+    "rt-11c5a0106e1de431": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "调查圣昆廷监狱可能病例，无新增确诊。",
+        "update_id": "rt-11c5a0106e1de431",
+        "source_url": "",
+        "time": "2026-06-12T19:16:00.000Z"
+      }
+    ],
+    "rt-edd16c88e4342060": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "疫苗研究报道，无国家疫情数据。",
+        "update_id": "rt-edd16c88e4342060",
+        "source_url": "",
+        "time": "2026-06-12T18:16:51.000Z"
+      }
+    ],
+    "rt-60c9d891f59bca46": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "邮轮公司CEO谈疫情影响，无具体国家病例数。",
+        "update_id": "rt-60c9d891f59bca46",
+        "source_url": "",
+        "time": "2026-06-12T15:01:18.000Z"
+      }
     ]
   }
 }

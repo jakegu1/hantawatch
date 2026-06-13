@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-13T02:43:12.631334+00:00",
+  "__generated_at": "2026-06-13T03:26:59.079560+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-13T02:43:10.845887+00:00",
+  "last_fetched": "2026-06-13T03:26:50.476047+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -35,23 +35,10 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-9407a8b5d1dab19f",
-      "time": "2026-06-12T21:41:00.000Z",
-      "title_en": "Hantavirus Outbreak On MV Hondius Cruise Exposes Hidden Agricultural Threat - Eurasia Review",
-      "body_en": "Hantavirus Outbreak On MV Hondius Cruise Exposes Hidden Agricultural Threat Eurasia Review",
-      "summary_zh": "MV Hondius邮轮汉坦病毒爆发暴露隐藏的农业威胁。",
-      "key_facts_zh": [
-        "邮轮",
-        "汉坦病毒",
-        "农业威胁"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-d3fe051451e1a859",
-      "time": "2026-06-12T21:18:52.000Z",
-      "title_en": "Hantavirus ruled out for San Quentin inmate - The Press Democrat",
-      "body_en": "Hantavirus ruled out for San Quentin inmate The Press Democrat",
+      "id": "rt-3275feea1db5c16c",
+      "time": "2026-06-12T21:46:13.000Z",
+      "title_en": "Hantavirus ruled out for San Quentin inmate - Marin Independent Journal",
+      "body_en": "Hantavirus ruled out for San Quentin inmate Marin Independent Journal",
       "summary_zh": "圣昆廷监狱囚犯排除汉坦病毒感染。",
       "key_facts_zh": [
         "美国",
@@ -61,6 +48,19 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-9407a8b5d1dab19f",
+      "time": "2026-06-12T21:41:00.000Z",
+      "title_en": "Hantavirus Outbreak On MV Hondius Cruise Exposes Hidden Agricultural Threat - Eurasia Review",
+      "body_en": "Hantavirus Outbreak On MV Hondius Cruise Exposes Hidden Agricultural Threat Eurasia Review",
+      "summary_zh": "MV Hondius邮轮汉坦病毒暴发暴露隐藏农业威胁。",
+      "key_facts_zh": [
+        "邮轮",
+        "暴发",
+        "农业威胁"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-50381f9481e0687a",
       "time": "2026-06-12T19:23:14.000Z",
       "title_en": "PAHO and partners strengthen surveillance of hantavirus and other hemorrhagic fevers in the Americas - Pan American Health Organization (PAHO)",
@@ -68,7 +68,8 @@
       "summary_zh": "泛美卫生组织加强美洲汉坦病毒及其他出血热监测。",
       "key_facts_zh": [
         "泛美卫生组织",
-        "加强监测"
+        "监测",
+        "美洲"
       ],
       "signal_strength": "high"
     },
@@ -81,7 +82,7 @@
       "key_facts_zh": [
         "美国",
         "圣昆廷监狱",
-        "监测中"
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -90,7 +91,7 @@
       "time": "2026-06-12T18:16:51.000Z",
       "title_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model - Genetic Engineering and Biotechnology News",
       "body_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model Genetic Engineering and Biotechnology News",
-      "summary_zh": "mRNA疫苗在叙利亚仓鼠模型中完全保护免受汉坦病毒。",
+      "summary_zh": "mRNA疫苗在叙利亚仓鼠模型中完全保护免受汉坦病毒感染。",
       "key_facts_zh": [
         "mRNA疫苗",
         "仓鼠模型",
@@ -129,7 +130,7 @@
       "time": "2026-06-12T09:09:27.000Z",
       "title_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak - World Health Organization (WHO)",
       "body_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak World Health Organization (WHO)",
-      "summary_zh": "21国启动协调的安第斯病毒研究计划。",
+      "summary_zh": "21国启动协调的安第斯病毒研究计划，WHO牵头。",
       "key_facts_zh": [
         "WHO",
         "21国",
@@ -151,19 +152,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-67804a55e93f47b1",
-      "time": "2026-06-12T07:00:00.000Z",
-      "title_en": "Breakthrough in Single-dose Vaccine for Andes Hantavirus - Labcompare",
-      "body_en": "Breakthrough in Single-dose Vaccine for Andes Hantavirus Labcompare",
-      "summary_zh": "安第斯汉坦病毒单剂疫苗取得突破。",
-      "key_facts_zh": [
-        "单剂疫苗",
-        "安第斯病毒",
-        "突破"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-fee71682010662a7",
       "time": "2026-06-12T02:48:00.000Z",
       "title_en": "Single-dose vaccine provides complete protection against Andes hantavirus - News-Medical",
@@ -181,24 +169,24 @@
       "time": "2026-06-11T21:47:09.000Z",
       "title_en": "San Quentin prison reports possible hantavirus case - Marin Independent Journal",
       "body_en": "San Quentin prison reports possible hantavirus case Marin Independent Journal",
-      "summary_zh": "美国圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告一例可能的汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
+        "监狱",
         "疑似病例"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-67d4b9064c2313a3",
       "time": "2026-06-11T21:34:04.000Z",
       "title_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison - SFGATE",
       "body_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison SFGATE",
-      "summary_zh": "美国湾区监狱调查一例罕见致命汉坦病毒疑似病例。",
+      "summary_zh": "旧金山湾区监狱调查一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "湾区监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -207,7 +195,7 @@
       "time": "2026-06-11T21:10:00.000Z",
       "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
       "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
-      "summary_zh": "美国加州调查一例汉坦病毒疑似病例，引发担忧。",
+      "summary_zh": "加州调查疑似汉坦病毒病例引发担忧。",
       "key_facts_zh": [
         "美国",
         "加州",
@@ -220,10 +208,10 @@
       "time": "2026-06-11T20:25:00.000Z",
       "title_en": "Prisoner at San Quentin may have hantavirus, authorities say - The Independent",
       "body_en": "Prisoner at San Quentin may have hantavirus, authorities say The Independent",
-      "summary_zh": "美国圣昆廷监狱一名囚犯可能感染汉坦病毒。",
+      "summary_zh": "当局称圣昆廷监狱囚犯可能感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
+        "圣昆廷",
         "疑似病例"
       ],
       "signal_strength": "medium"
@@ -259,11 +247,11 @@
       "time": "2026-06-11T18:53:00.000Z",
       "title_en": "Hantavirus Cruise Passenger Says She’s Being Held ‘Hostage’ In Nebraska Quarantine (Latest Updates) - Forbes",
       "body_en": "Hantavirus Cruise Passenger Says She’s Being Held ‘Hostage’ In Nebraska Quarantine (Latest Updates) Forbes",
-      "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加州隔离中被扣为人质。",
+      "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加隔离中被扣为人质。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加",
-        "邮轮",
-        "隔离"
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -272,11 +260,11 @@
       "time": "2026-06-11T18:19:19.000Z",
       "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
       "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "美国圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告一例可能汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "疑似病例",
-        "圣昆廷监狱"
+        "圣昆廷",
+        "疑似病例"
       ],
       "signal_strength": "medium"
     }
