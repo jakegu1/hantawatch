@@ -6341,6 +6341,76 @@
         "source_url": "",
         "time": "2026-06-12T15:01:18.000Z"
       }
+    ],
+    "rt-fcde94547bd2511f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "标题提及以色列和捷克科学家实验室重现COVID-19进化，与汉坦病毒无关，无相关数据。",
+        "update_id": "rt-fcde94547bd2511f",
+        "source_url": "",
+        "time": "2026-06-13T07:00:00Z"
+      }
+    ],
+    "rt-ee64dd0ca7943109": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "medium",
+        "reasoning_zh": "报道美国支付75万美元从偏远岛屿撤离一名曾登上汉坦病毒游轮的美国人，无新增病例数字。",
+        "update_id": "rt-ee64dd0ca7943109",
+        "source_url": "",
+        "time": "2026-06-13T03:39:43.000Z"
+      }
+    ],
+    "rt-4addace314831cba": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "high",
+        "reasoning_zh": "阿根廷卫生部称第二个省份未发现汉坦病毒，无新增病例。",
+        "update_id": "rt-4addace314831cba",
+        "source_url": "",
+        "time": "2026-06-13T02:13:39.000Z"
+      }
+    ],
+    "rt-d544a4527822ebd3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷康复中心一名38岁男性囚犯疑似汉坦病毒病例被判定为假阳性，无新增病例。",
+        "update_id": "rt-d544a4527822ebd3",
+        "source_url": "",
+        "time": "2026-06-13T02:00:00Z"
+      }
+    ],
+    "rt-a96d7df023a04f93": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "medium",
+        "reasoning_zh": "圣昆廷囚犯汉坦病毒被排除，无新增病例。",
+        "update_id": "rt-a96d7df023a04f93",
+        "source_url": "",
+        "time": "2026-06-12T23:45:00Z"
+      }
     ]
   }
 }
