@@ -2,13 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
-import { currentHpi, baseHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
+import { baseHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import {
   dataMeta,
   hondiusImports,
   hondiusImportSummaries,
   realtimeFeed,
-  riskSnapshot,
   arcgisCases,
   arcgisFetchedAt,
   outbreakStatus,
@@ -199,7 +198,7 @@ export default function HomePage() {
       ...point,
       value: Math.max(0, Math.min(100, point.value + importBump)),
     }));
-  }, [hpi.total, baseHpi.total]);
+  }, [hpi.total]);
   const briefContent = useMemo(
     () =>
       buildBriefSectionContent({
@@ -225,24 +224,11 @@ export default function HomePage() {
         outbreakStatus,
         hpiTotal: hpi.total,
       }),
-    [liveRecentCases, cluster?.lastUpdate, hpi.total, outbreakStatus],
+    [liveRecentCases, cluster?.lastUpdate, hpi.total],
   );
 
   const { metrics: briefMetrics } = briefContent;
 
-  // City-precise label: when cityZh is set, render "法国 尼斯" instead of
-  // just "法国". Keeps the country-only fallback when no city is known.
-  const importLocZh = nearestImport
-    ? nearestImport.cityZh
-      ? `${nearestImport.nameZh} ${nearestImport.cityZh}`
-      : nearestImport.nameZh
-    : '';
-  const highRiskDistanceText = hasImportDistance && nearestImport
-    ? `约 ${fmt(displayedDistanceKm)} km（${importLocZh}，${nearestImport.statusZh}）`
-    : `约 ${fmt(displayedDistanceKm)} km（${cluster.location?.name ?? '当前重点疫情'}）`;
-  const highRiskDistanceContext = hasImportDistance && nearestImport
-    ? `源头疫情距中国大陆约 ${fmt(liveRiskSnapshot.sourceDistanceKm ?? cluster.distanceFromChinaKm)} km；当前按地理距离最近的输入病例展示。`
-    : '按当前最近 Andes 型重点疫情距离展示。';
   return (
     <div className="pb-16">
       {/* ================================================================ */}
@@ -602,7 +588,7 @@ export default function HomePage() {
             <strong className="text-amber-700">新闻线索</strong>；国内通报由人工核验后录入。
             <br />
             <span className="text-violet-700">专业监测</span>介于官方通报与新闻线索之间；
-            <span className="text-amber-700">新闻线索仅作早期信号</span>，请优先参考蓝色"官方通报"。
+            <span className="text-amber-700">新闻线索仅作早期信号</span>，请优先参考蓝色「官方通报」。
             血清型标签的红色仅用于安第斯型（唯一确认人传人的汉坦病毒），不代表事件严重程度。
           </p>
         </div>

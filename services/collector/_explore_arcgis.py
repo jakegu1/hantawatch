@@ -1,5 +1,6 @@
 """Explore the correct ArcGIS FeatureServer schema."""
-import json, sys
+import sys
+
 sys.path.insert(0, ".")
 import httpx
 
@@ -10,12 +11,16 @@ with httpx.Client(timeout=15, follow_redirects=True) as c:
     info = r.json()
     print("=== FeatureServer Info ===")
     print(f"Layers: {len(info.get('layers', []))}")
-    for l in info.get('layers', []):
-        print(f"  Layer {l['id']}: {l['name']}")
+    for layer in info.get('layers', []):
+        print(f"  Layer {layer['id']}: {layer['name']}")
 
     for lid in [0, 1, 2]:
         try:
-            r = c.get(f"{URL}/{lid}/query?f=json&where=1=1&outFields=*&returnGeometry=false&resultRecordCount=3&orderByFields=OBJECTID DESC")
+            query = (
+                f"{URL}/{lid}/query?f=json&where=1=1&outFields=*"
+                "&returnGeometry=false&resultRecordCount=3&orderByFields=OBJECTID DESC"
+            )
+            r = c.get(query)
             body = r.json()
             if "error" in body:
                 print(f"\nLayer {lid}: ERROR — {body['error']['message']}")

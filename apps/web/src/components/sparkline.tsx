@@ -8,6 +8,16 @@ import { CanvasRenderer } from 'echarts/renderers';
 
 echarts.use([LineChart, GridComponent, TooltipComponent, CanvasRenderer]);
 
+type AxisTooltipParam = {
+  axisValue?: string | number;
+  value?: number | string;
+};
+
+function formatAxisTooltip(params: unknown): string {
+  const p = (Array.isArray(params) ? params[0] : params) as AxisTooltipParam;
+  return `${p.axisValue}<br/><b>${p.value}</b>`;
+}
+
 export interface SparklineProps {
   /** Data points (most recent last). */
   values: number[];
@@ -49,10 +59,7 @@ export function Sparkline({
       tooltip: tooltip
         ? {
             trigger: 'axis',
-            formatter: (params: any) => {
-              const p = Array.isArray(params) ? params[0] : params;
-              return `${p.axisValue}<br/><b>${p.value}</b>`;
-            },
+            formatter: formatAxisTooltip,
             textStyle: { fontSize: 11 },
             axisPointer: { type: 'line', lineStyle: { color: color, width: 1, type: 'dashed' } },
           }

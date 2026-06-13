@@ -20,7 +20,7 @@ Background (2026-05-13):
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 from hantawatch_collector.builder import (
@@ -119,7 +119,10 @@ def test_don601_is_localized_and_grouped(tmp_path: Path):
     entries = [_make_who_entry(
         "2026-DON601",
         published="2026-05-13T18:00:00+00:00",
-        summary="On 2 May 2026, WHO received notification regarding a cluster aboard MV Hondius. As of 13 May, a total of 11 cases have been reported.",
+        summary=(
+            "On 2 May 2026, WHO received notification regarding a cluster aboard MV Hondius. "
+            "As of 13 May, a total of 11 cases have been reported."
+        ),
     )]
     clusters = build_active_clusters(entries, fallback_path=tmp_path / "missing.json")
     assert clusters[0]["id"] == "mv-hondius-2026"

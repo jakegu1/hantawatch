@@ -19,7 +19,6 @@ from hantawatch_collector.news_leads import (
     title_dedup_key,
 )
 
-
 # ---- strip_trailing_source ------------------------------------------------
 
 @pytest.mark.parametrize(

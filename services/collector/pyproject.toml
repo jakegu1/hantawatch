@@ -29,3 +29,10 @@ line-length = 120
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N"]
+
+[tool.mypy]
+python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = "feedparser"
+ignore_missing_imports = true

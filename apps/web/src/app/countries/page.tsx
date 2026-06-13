@@ -25,11 +25,10 @@ import { ImportsBanner, StatusBadge } from '@/components/imports-banner';
 import {
   CONTINENT_LABEL_ZH,
   CONTINENT_ORDER,
-  countryViews,
   countryViewsByContinent,
   searchCountries,
 } from '@/lib/data';
-import type { CountryView, MvHondiusImport } from '@hantawatch/shared/types';
+import type { CountryView } from '@hantawatch/shared/types';
 
 const SEROTYPE_LABEL_ZH: Record<string, string> = {
   hantaan: '汉滩型',

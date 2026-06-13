@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <h3 className="font-medium text-sm text-gray-800 mt-3">2.1 你主动提交的信息</h3>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <strong>邮箱地址</strong>：仅当你主动填写"订阅预警通知"表单时收集，用于发送 HPI 阈值变化、聚集地距离圈层变化、官方发布新通报等触发式预警邮件。
+              <strong>邮箱地址</strong>：仅当你主动填写「订阅预警通知」表单时收集，用于发送 HPI 阈值变化、聚集地距离圈层变化、官方发布新通报等触发式预警邮件。
               你可以随时通过任意一封通知邮件底部的链接退订。
             </li>
             <li>

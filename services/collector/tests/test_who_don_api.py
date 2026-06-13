@@ -7,13 +7,9 @@ the contract so a future fetch-helper refactor can't quietly regress it.
 """
 from __future__ import annotations
 
-import json
-
 import httpx
-import pytest
 
 from hantawatch_collector.who_don import (
-    WHO_DON_API,
     WHO_DON_ITEM_BASE,
     fetch_who_don_entries,
 )

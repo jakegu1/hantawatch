@@ -9,6 +9,7 @@
     "dev:miniapp": "pnpm --filter @hantawatch/miniapp dev:weapp",
     "lint": "pnpm --filter @hantawatch/web lint",
     "check": "pnpm --filter @hantawatch/web check",
+    "verify": "node scripts/verify.mjs",
     "clean": "pnpm -r exec rm -rf .next dist node_modules"
   },
   "packageManager": "pnpm@9.15.9",

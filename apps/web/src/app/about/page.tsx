@@ -29,8 +29,8 @@ export default function AboutPage() {
               <li>· 血清型分离展示 — 不将不同类型的汉坦病毒混为一谈</li>
               <li>· 100% 数据溯源 — 每条数据标注原始出处</li>
               <li>· 透明评分体系 — HPI指数的每一个因子、权重、数据来源均公开可查</li>
-              <li>· 科学克制 — 不制造恐慌，不使用脉冲动画、虚假"LIVE"标识等视觉恐慌手段</li>
-              <li>· 教育前置 — 在展示数据之前帮助用户理解"这是什么、怎么传播、如何防护"</li>
+              <li>· 科学克制 — 不制造恐慌，不使用脉冲动画、虚假「LIVE」标识等视觉恐慌手段</li>
+              <li>· 教育前置 — 在展示数据之前帮助用户理解「这是什么、怎么传播、如何防护」</li>
             </ul>
           </div>
         </section>
@@ -104,8 +104,8 @@ export default function AboutPage() {
               <li>· ProMED-mail — 全球传染病即时报告</li>
               <li>· 各省卫健委 — 省级传染病通报</li>
             </ul>
-            <p className="mt-3"><strong>Tier 2 — 学术文献源（人工筛选）：</strong> PubMed, CNKI, 中华流行病学杂志, bioRxiv/medRxiv（标注"未经同行评议"）</p>
-            <p><strong>Tier 3 — 媒体源（标注"媒体报道，未经官方证实"）：</strong> 新华网, 央视新闻, 地方主流媒体, 丁香园</p>
+            <p className="mt-3"><strong>Tier 2 — 学术文献源（人工筛选）：</strong> PubMed, CNKI, 中华流行病学杂志, bioRxiv/medRxiv（标注「未经同行评议」）</p>
+            <p><strong>Tier 3 — 媒体源（标注「媒体报道，未经官方证实」）：</strong> 新华网, 央视新闻, 地方主流媒体, 丁香园</p>
           </div>
         </section>
 

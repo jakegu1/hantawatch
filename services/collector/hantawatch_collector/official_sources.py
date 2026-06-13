@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from typing import Any
 
 import httpx
 
@@ -35,10 +36,31 @@ OFFICIAL_SOURCES: tuple[OfficialSource, ...] = (
     OfficialSource("who-don", "WHO 疾病暴发新闻", "global", "https://www.who.int/emergencies/disease-outbreak-news"),
     OfficialSource("ecdc-threats", "ECDC 传染病威胁", "europe", "https://www.ecdc.europa.eu/en/threats-and-outbreaks"),
     OfficialSource("us-cdc-hantavirus", "美国 CDC 汉坦病毒", "country", "https://www.cdc.gov/hantavirus/", "US"),
-    OfficialSource("phac-hantavirus", "加拿大公共卫生署汉坦病毒", "country", "https://www.canada.ca/en/public-health/services/diseases/hantaviruses.html", "CA"),
-    OfficialSource("rki-hantavirus", "德国 RKI 汉坦病毒", "country", "https://www.rki.de/EN/Content/infections/epidemiology/inf_dis_Germany/hantavirus/hantavirus_node.html", "DE"),
+    OfficialSource(
+        "phac-hantavirus",
+        "加拿大公共卫生署汉坦病毒",
+        "country",
+        "https://www.canada.ca/en/public-health/services/diseases/hantaviruses.html",
+        "CA",
+    ),
+    OfficialSource(
+        "rki-hantavirus",
+        "德国 RKI 汉坦病毒",
+        "country",
+        (
+            "https://www.rki.de/EN/Content/infections/epidemiology/"
+            "inf_dis_Germany/hantavirus/hantavirus_node.html"
+        ),
+        "DE",
+    ),
     OfficialSource("spf-hantavirus", "法国公共卫生署", "country", "https://www.santepubliquefrance.fr/", "FR"),
-    OfficialSource("uk-hsa", "英国 UKHSA", "country", "https://www.gov.uk/government/organisations/uk-health-security-agency", "GB"),
+    OfficialSource(
+        "uk-hsa",
+        "英国 UKHSA",
+        "country",
+        "https://www.gov.uk/government/organisations/uk-health-security-agency",
+        "GB",
+    ),
     OfficialSource("kdca", "韩国 KDCA", "country", "https://www.kdca.go.kr/", "KR"),
     OfficialSource("niid-jp", "日本 NIID", "country", "https://www.niid.go.jp/niid/en/", "JP"),
     OfficialSource("taiwan-cdc", "台湾省疾病管制署", "country", "https://www.cdc.gov.tw/", "TW"),
@@ -59,7 +81,7 @@ def check_official_sources(
     transport: httpx.BaseTransport | None = None,
 ) -> dict:
     checked_at = datetime.now(timezone.utc).isoformat()
-    rows: list[dict] = []
+    rows: list[dict[str, Any]] = []
 
     with httpx.Client(
         timeout=timeout,
@@ -68,7 +90,7 @@ def check_official_sources(
         headers={"User-Agent": "HantaWatch-Collector/0.1 (official-source-check)"},
     ) as client:
         for source in OFFICIAL_SOURCES:
-            row = {
+            row: dict[str, Any] = {
                 "id": source.id,
                 "nameZh": source.name_zh,
                 "scope": source.scope,

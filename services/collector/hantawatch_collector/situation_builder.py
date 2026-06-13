@@ -1,9 +1,9 @@
 from __future__ import annotations
 
+import json
 import logging
 import re
 from datetime import date, datetime, timedelta, timezone
-import json
 from pathlib import Path
 from typing import Any
 
@@ -36,6 +36,10 @@ def _parse_iso_datetime(iso_str: str) -> datetime | None:
         return datetime.fromisoformat(s)
     except ValueError:
         return None
+
+
+def _as_date(value: date | None, fallback: date) -> date:
+    return value if value is not None else fallback
 
 
 def _parse_iso_date(iso_date: str) -> date | None:
@@ -112,7 +116,8 @@ def _compute_days_at_state(
     if not existing_situation or not isinstance(existing_situation, dict):
         return today.isoformat(), 0
 
-    st = existing_situation.get("state") if isinstance(existing_situation.get("state"), dict) else {}
+    st_raw = existing_situation.get("state")
+    st = st_raw if isinstance(st_raw, dict) else {}
     old_code = st.get("code")
     since_str = st.get("since")
     if old_code == new_state_code and isinstance(since_str, str):
@@ -159,8 +164,8 @@ def _headline_for(
     total_cases = int(totals.get("all") or 0)
 
     last_update = (o0.get("lastUpdate") or {}) if isinstance(o0.get("lastUpdate"), dict) else {}
-    asof = last_update.get("asOfDate")
-    who_date = _parse_iso_date(asof) or today
+    asof_raw = last_update.get("asOfDate")
+    who_date = _as_date(_parse_iso_date(asof_raw) if isinstance(asof_raw, str) else None, today)
     who_days_ago = (today - who_date).days
     who_last_zh = f"{who_date.month}/{who_date.day}"
 
@@ -209,7 +214,8 @@ def _since_who_confirmed_delta(
 
 
 def _has_follow_up_source(pc: dict[str, Any]) -> bool:
-    source = pc.get("followUpSource") if isinstance(pc.get("followUpSource"), dict) else {}
+    raw_source = pc.get("followUpSource")
+    source = raw_source if isinstance(raw_source, dict) else {}
     if str(source.get("url") or "").strip():
         return True
     evidence = pc.get("evidence") or []
@@ -354,16 +360,18 @@ def build_ruler(
     if not _has_active_outbreak(outbreak_status):
         return {"maxKm": MAX_RULER_KM, "markers": []}
 
-    risk_current_hpi = risk_snapshot.get("currentHpi") if isinstance(risk_snapshot.get("currentHpi"), dict) else {}
-    origin_km = (
-        risk_current_hpi.get("referenceCluster", {}).get("distanceFromChinaKm")
-        if isinstance(risk_current_hpi.get("referenceCluster"), dict)
-        else None
-    )
+    risk_hpi_raw = risk_snapshot.get("currentHpi")
+    risk_current_hpi = risk_hpi_raw if isinstance(risk_hpi_raw, dict) else {}
+    ref_cluster_raw = risk_current_hpi.get("referenceCluster")
+    ref_cluster = ref_cluster_raw if isinstance(ref_cluster_raw, dict) else {}
+    origin_km = ref_cluster.get("distanceFromChinaKm")
     try:
         origin_km_int = int(origin_km) if origin_km is not None else None
     except (TypeError, ValueError):
         origin_km_int = None
+
+    if not outbreak_status or not isinstance(outbreak_status[0], dict):
+        return {"maxKm": MAX_RULER_KM, "markers": []}
 
     o0 = outbreak_status[0]
     origin = o0.get("origin") or {}
@@ -380,7 +388,8 @@ def build_ruler(
         }
     )
 
-    nearest_import = risk_snapshot.get("nearestImport") if isinstance(risk_snapshot.get("nearestImport"), dict) else {}
+    raw_nearest = risk_snapshot.get("nearestImport")
+    nearest_import = raw_nearest if isinstance(raw_nearest, dict) else {}
     nearest_km = nearest_import.get("distanceKm")
     nearest_country = nearest_import.get("nameZh")
     nearest_km_int: int | None = None
@@ -451,7 +460,7 @@ def _country_maps(outbreak_status: list[dict[str, Any]] | None) -> dict[str, str
     if isinstance(per_country, list):
         for pc in per_country:
             if isinstance(pc, dict) and pc.get("iso2"):
-                m[str(pc["iso2"]).upper()] = pc.get("nameZh") or pc.get("iso2")
+                m[str(pc["iso2"]).upper()] = str(pc.get("nameZh") or pc.get("iso2") or "")
     return m
 
 
@@ -582,7 +591,8 @@ def _who_milestones(
     for c in recent_cases_intl:
         if not isinstance(c, dict):
             continue
-        src = c.get("source") if isinstance(c.get("source"), dict) else {}
+        raw_src = c.get("source")
+        src = raw_src if isinstance(raw_src, dict) else {}
         url = str(src.get("url") or "")
         cid = str(c.get("id") or "")
         is_don = "disease-outbreak-news" in url or (cid.startswith("who-") and "don" in cid.lower())
@@ -749,7 +759,7 @@ def build_events(
     who_asof = None
     if o0 and isinstance(o0.get("lastUpdate"), dict):
         who_asof = o0["lastUpdate"].get("asOfDate")
-    who_date = _parse_iso_date(who_asof) if who_asof else today_dt
+    who_date = _as_date(_parse_iso_date(who_asof) if isinstance(who_asof, str) else None, today_dt)
     who_days_ago = (today_dt - who_date).days
     who_last_at = f"{who_date.isoformat()}T12:00:00Z"
 
@@ -887,7 +897,13 @@ def build_events(
             if isinstance(pc, dict)
         )
         if _source_conf > 0:
-            _ms_ats = [e.get("at") for e in events if e.get("kind") == "who_baseline" and e.get("at")]
+            _ms_ats: list[str] = [
+                at
+                for e in events
+                if e.get("kind") == "who_baseline"
+                for at in [e.get("at")]
+                if isinstance(at, str)
+            ]
             events.append(
                 {
                     "at": min(_ms_ats) if _ms_ats else who_last_at,
@@ -949,10 +965,11 @@ def build_events(
             if d_confirmed <= 0 and d_monitoring <= 0 and d_deaths <= 0:
                 continue
 
-            at = e.get("time") or e.get("as_of") or e.get("at")
-            if isinstance(at, str) and at.endswith("Z"):
-                at = at.replace(".000Z", "Z")
-            if not isinstance(at, str):
+            event_at_raw = e.get("time") or e.get("as_of") or e.get("at")
+            event_at: str | None = event_at_raw if isinstance(event_at_raw, str) else None
+            if event_at and event_at.endswith("Z"):
+                event_at = event_at.replace(".000Z", "Z")
+            if not event_at:
                 continue
 
             if d_confirmed > 0:
@@ -972,7 +989,7 @@ def build_events(
             # Never propagate outlet/origin/source_url.
             events.append(
                 {
-                    "at": at,
+                    "at": event_at,
                     "kind": "detection",
                     "countryZh": country_zh,
                     "delta": delta,
@@ -996,12 +1013,13 @@ def build_events(
     # Unverified realtime screening signals (初筛阳性 · 待 WHO 复核) are a rolling
     # state — not dated additive cases — so they collapse to a single latest
     # line per country regardless of day.
-    _BEIJING = timezone(timedelta(hours=8))
+    _beijing = timezone(timedelta(hours=8))
     deduped: dict[tuple[Any, ...], dict[str, Any]] = {}
     for e in detections:
         if e.get("kind") != "detection":
             continue
         dt = _parse_iso_datetime(str(e.get("at") or ""))
+        key: tuple[Any, ...]
         if e.get("type") == "screening" and e.get("source") == "realtime_news":
             key = (e.get("countryZh"), "screening-pending", "screening")
         elif e.get("type") in ("confirmed", "case_attribution"):
@@ -1011,7 +1029,7 @@ def build_events(
             if dt is not None:
                 if dt.tzinfo is None:
                     dt = dt.replace(tzinfo=timezone.utc)
-                day = dt.astimezone(_BEIJING).date().isoformat()
+                day = dt.astimezone(_beijing).date().isoformat()
             else:
                 day = ""
             key = (e.get("countryZh"), day, e.get("type"))
@@ -1163,7 +1181,7 @@ def build_realtime_situation(
     who_asof = None
     if outbreak_status and outbreak_status[0] and isinstance(outbreak_status[0].get("lastUpdate"), dict):
         who_asof = outbreak_status[0]["lastUpdate"].get("asOfDate")
-    who_date = _parse_iso_date(who_asof) or today
+    who_date = _as_date(_parse_iso_date(who_asof) if isinstance(who_asof, str) else None, today)
     who_updated_at = f"{who_date.isoformat()}T12:00:00Z"
 
     arcgis_updated_iso: str | None = None

@@ -248,7 +248,8 @@ def build_outbreak_status(
         for imp in mv_hondius_imports:
             iso2 = imp.get("iso2", "").upper()
             if iso2 and iso2 not in seen_iso2:
-                source = imp.get("source") if isinstance(imp.get("source"), dict) else {}
+                raw_source = imp.get("source")
+                source = raw_source if isinstance(raw_source, dict) else {}
                 source_conf = str(source.get("confidence") or "manual")
                 seen_iso2.add(iso2)
                 per_country.append({
@@ -302,7 +303,12 @@ def build_outbreak_status(
                 "newConfirmedToday": 0,
                 "asOf": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                 "evidence": [
-                    {"tier": "arcgis", "url": "", "sourceName": "ArcGIS ANDV Dashboard", "retrievedAt": datetime.now(timezone.utc).isoformat()}
+                    {
+                        "tier": "arcgis",
+                        "url": "",
+                        "sourceName": "ArcGIS ANDV Dashboard",
+                        "retrievedAt": datetime.now(timezone.utc).isoformat(),
+                    }
                 ],
             })
 
@@ -424,7 +430,9 @@ def auto_approve_overdue_proposals(
     auto_approve_hours: int = 6,
 ) -> list[dict[str, Any]]:
     """Auto-approve proposals with official-tier evidence older than N hours."""
-    from datetime import datetime as _dt, timedelta, timezone as _tz
+    from datetime import datetime as _dt
+    from datetime import timedelta
+    from datetime import timezone as _tz
 
     now = now or _dt.now(_tz.utc)
     threshold = now - timedelta(hours=auto_approve_hours)

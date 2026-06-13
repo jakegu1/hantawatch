@@ -1,4 +1,6 @@
-import json, sys
+import json
+import sys
+
 sys.path.insert(0, ".")
 from hantawatch_collector.andv_dashboard import fetch_andv_data
 

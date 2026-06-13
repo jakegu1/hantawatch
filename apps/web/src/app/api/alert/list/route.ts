@@ -2,6 +2,18 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase, isSupabaseConfigured } from '@/lib/supabase';
 import { isAdminAuthed, isAdminConfigured } from '@/lib/admin-auth';
 
+type AlertSubscriptionRow = {
+  channel?: string | null;
+  contact?: string | null;
+  email?: string | null;
+  regions?: string[] | null;
+  serotypes?: string[] | null;
+  threshold?: number | null;
+  source?: string | null;
+  confirmed?: boolean | null;
+  created_at?: string | null;
+};
+
 /**
  * GET /api/alert/list
  *
@@ -34,7 +46,7 @@ export async function GET(request: NextRequest) {
     .select('channel, contact, regions, serotypes, threshold, source, confirmed, created_at')
     .order('created_at', { ascending: false })
     .limit(500);
-  let data: any[] | null = primary.data;
+  let data: AlertSubscriptionRow[] | null = primary.data as AlertSubscriptionRow[] | null;
   let error = primary.error;
 
   if (error && /column .*alert_subscriptions\.(channel|contact).* does not exist/i.test(error.message)) {
@@ -43,7 +55,7 @@ export async function GET(request: NextRequest) {
       .select('email, regions, serotypes, threshold, source, confirmed, created_at')
       .order('created_at', { ascending: false })
       .limit(500);
-    data = fallback.data;
+    data = fallback.data as AlertSubscriptionRow[] | null;
     error = fallback.error;
   }
 
@@ -51,7 +63,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  const subscribers = (data ?? []).map((row: any) => {
+  const subscribers = (data ?? []).map((row) => {
     const channel = row.channel === 'phone' ? 'phone' : 'email';
     const contact = String(row.contact ?? row.email ?? '');
     return {

@@ -5,14 +5,12 @@ Verifies that the cluster-sourced totals match known DON601 numbers
 surfaces correctly.
 """
 
-import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from hantawatch_collector.outbreak_status import build_outbreak_status
-
 
 # Real DON601 cluster shape (minimal)
 _MV_HONDIUS_CLUSTER = {

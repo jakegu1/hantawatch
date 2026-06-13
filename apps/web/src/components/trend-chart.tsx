@@ -19,6 +19,17 @@ echarts.use([
   CanvasRenderer,
 ]);
 
+type AxisTooltipParam = {
+  axisValue?: string | number;
+  value?: number | string;
+};
+
+function formatTrendTooltip(params: unknown, unit: string): string {
+  const p = (Array.isArray(params) ? params[0] : params) as AxisTooltipParam;
+  const value = typeof p.value === 'number' ? p.value.toLocaleString('zh-CN') : String(p.value ?? '');
+  return `${p.axisValue}<br/><b>${value}</b> ${unit}`;
+}
+
 export interface TrendChartProps {
   /** Category labels on the x-axis. e.g. ['2020', '2021', ...] */
   categories: (string | number)[];
@@ -60,10 +71,7 @@ export function TrendChart({
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: variant === 'bar' ? 'shadow' : 'line' },
-        formatter: (params: any) => {
-          const p = Array.isArray(params) ? params[0] : params;
-          return `${p.axisValue}<br/><b>${p.value.toLocaleString('zh-CN')}</b> ${unit}`;
-        },
+        formatter: (params: unknown) => formatTrendTooltip(params, unit),
         textStyle: { fontSize: 12 },
       },
       xAxis: {

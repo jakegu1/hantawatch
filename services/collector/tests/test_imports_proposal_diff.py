@@ -16,7 +16,16 @@ def _ledger_with_countries(iso2_list: list[str]) -> list[dict]:
     return [{
         "id": "mv-hondius-2026",
         "perCountry": [
-            {"iso2": iso, "nameZh": iso, "confirmed": 1, "monitoring": 0, "deaths": 0, "status": "monitoring", "asOf": "2026-05-20", "evidence": []}
+            {
+                "iso2": iso,
+                "nameZh": iso,
+                "confirmed": 1,
+                "monitoring": 0,
+                "deaths": 0,
+                "status": "monitoring",
+                "asOf": "2026-05-20",
+                "evidence": [],
+            }
             for iso in iso2_list
         ],
     }]

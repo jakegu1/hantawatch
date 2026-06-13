@@ -68,7 +68,7 @@ export function HantaTimeline() {
       </ul>
       <p className="mt-4 text-[11px] text-gray-400 leading-relaxed">
         汉坦病毒已被人类系统监测 50 年。每一次新血清型的发现、每一次跨国疫情，
-        都被官方机构记录、分析并公开。"了解，而非恐慌"的底气来自这份持续监测史。
+        都被官方机构记录、分析并公开。「了解，而非恐慌」的底气来自这份持续监测史。
       </p>
     </div>
   );

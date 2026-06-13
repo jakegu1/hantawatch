@@ -41,8 +41,8 @@ export default function GuidePage() {
             <p><strong>HFRS（肾综合征出血热）典型症状：</strong></p>
             <ul className="space-y-1 ml-4">
               <li>· 发热（38-40°C），持续3-7天</li>
-              <li>· "三痛"：头痛、腰痛、眼眶痛</li>
-              <li>· "三红"：面部、颈部、胸部潮红</li>
+              <li>· 「三痛」：头痛、腰痛、眼眶痛</li>
+              <li>· 「三红」：面部、颈部、胸部潮红</li>
               <li>· 恶心、呕吐、腹痛</li>
               <li>· 严重者可出现少尿、无尿等肾衰竭表现</li>
             </ul>

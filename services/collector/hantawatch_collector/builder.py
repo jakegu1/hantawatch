@@ -5,7 +5,6 @@ from __future__ import annotations
 import logging
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any
 
 from . import MANUAL_FILES
 from .distances import IMPORT_DISTANCE_KM
@@ -92,7 +91,12 @@ def _today_cn() -> date:
 CLUSTER_REGISTRY: dict[str, dict] = {
     "2026-DON599": {
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
-        "summaryZh": "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报：一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。",
+                "summaryZh": (
+            "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报："
+            "一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。"
+            "南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。"
+            "该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。"
+        ),
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -108,7 +112,13 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         # ("3 天前" / "今天"). Embedding a fixed date here makes the tool
         # look stale on day N+3 even when WHO genuinely hasn't updated.
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
-        "summaryZh": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+                "summaryZh": (
+            "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。"
+            "自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。"
+            "截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。"
+            "事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，"
+            "但乘客、船员及密切接触者仍需继续随访。"
+        ),
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -120,7 +130,14 @@ CLUSTER_REGISTRY: dict[str, dict] = {
     "2026-DON601": {
         # Date suffix removed — see comment in DON600 block above.
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
-        "summaryZh": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+                "summaryZh": (
+            "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。"
+            "截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），"
+            "其中 3 例死亡（2 例确诊、1 例可能）。"
+            "较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。"
+            "事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，"
+            "但乘客、船员及密切接触者仍需继续随访。"
+        ),
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -139,7 +156,12 @@ CLUSTER_REGISTRY: dict[str, dict] = {
         # + indeterminate(=suspectedCases) = 13. Keep summaryZh consistent so
         # the displayed number never contradicts the structured ledger.
         "name": "MV Hondius 邮轮安第斯型聚集疫情",
-        "summaryZh": "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+                "summaryZh": (
+            "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。"
+            "截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。"
+            "事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，"
+            "但乘客、船员及密切接触者仍需继续随访。"
+        ),
         "lat": -54.8,
         "lng": -68.3,
         "locationName": "南美洲海域（始发乌斯怀亚）",
@@ -170,7 +192,11 @@ def _mv_hondius_summary_zh(summary: str) -> str:
     lower = summary.lower()
     if any(k in lower for k in ("13 cases", "28 may", "11 cases", "13 may")):
         return CLUSTER_REGISTRY["2026-DON604"]["summaryZh"]
-    return "WHO 更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。该事件与南美洲航程和邮轮暴露相关，需重点关注乘客、船员及密切接触者的健康随访；普通公众风险仍按官方通报评估为较低。"
+    return (
+        "WHO 更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。"
+        "该事件与南美洲航程和邮轮暴露相关，需重点关注乘客、船员及密切接触者的健康随访；"
+        "普通公众风险仍按官方通报评估为较低。"
+    )
 
 
 def _inferred_registry(
@@ -219,7 +245,10 @@ def _localized_who_summary(title: str, summary: str) -> str:
         return summary
     if _is_mv_hondius_outbreak(title, summary):
         return _mv_hondius_summary_zh(summary)
-    return "WHO 发布新的汉坦病毒相关疾病暴发新闻。原始通报为英文，系统已先隐藏英文长摘要并标记为待人工中文复核；请以 WHO 原文链接为准。"
+    return (
+        "WHO 发布新的汉坦病毒相关疾病暴发新闻。"
+        "原始通报为英文，系统已先隐藏英文长摘要并标记为待人工中文复核；请以 WHO 原文链接为准。"
+    )
 
 
 def _enrich_cluster_from_registry(
@@ -387,9 +416,21 @@ def build_active_clusters(
         # where editors update counts manually in active-clusters.json and
         # don't want them clobbered on the next scheduled run.
         prev_cluster = prev_by_id.get(cluster_id, {})
-        confirmed = int(enriched.get("confirmedCases") if enriched.get("confirmedCases") is not None else (prev_cluster.get("confirmedCases", 0) or 0))
-        suspected = int(enriched.get("suspectedCases") if enriched.get("suspectedCases") is not None else (prev_cluster.get("suspectedCases", 0) or 0))
-        deaths = int(enriched.get("deaths") if enriched.get("deaths") is not None else (prev_cluster.get("deaths", 0) or 0))
+        confirmed = int(
+            enriched["confirmedCases"]
+            if enriched.get("confirmedCases") is not None
+            else (prev_cluster.get("confirmedCases", 0) or 0)
+        )
+        suspected = int(
+            enriched["suspectedCases"]
+            if enriched.get("suspectedCases") is not None
+            else (prev_cluster.get("suspectedCases", 0) or 0)
+        )
+        deaths = int(
+            enriched["deaths"]
+            if enriched.get("deaths") is not None
+            else (prev_cluster.get("deaths", 0) or 0)
+        )
 
         out.append(
             {
@@ -743,7 +784,7 @@ def build_daily_brief(
         and reference_id is not None
         and prev_reference_cluster_id == reference_id
     )
-    if comparable_distance:
+    if comparable_distance and prev_distance_km is not None:
         distance_delta_km = reference_km - prev_distance_km
 
     # HPI delta over last 2 points
@@ -928,7 +969,11 @@ def build_risk_snapshot(
     reference = base_hpi.get("referenceCluster") or {}
     source_distance_km = int(reference.get("distanceFromChinaKm") or factors.get("distance", {}).get("km", 0) or 0)
     has_import_distance = bool(nearest_import and nearest_import["distanceKm"] < source_distance_km)
-    displayed_distance_km = nearest_import["distanceKm"] if has_import_distance and nearest_import else source_distance_km
+    displayed_distance_km = (
+        nearest_import["distanceKm"]
+        if has_import_distance and nearest_import
+        else source_distance_km
+    )
 
     hpi = dict(base_hpi)
     hpi["factors"] = {k: dict(v) for k, v in factors.items()}
@@ -971,20 +1016,27 @@ def build_risk_snapshot(
         if hpi_delta == 0
         else f"HPI 指数{'增加' if hpi_delta > 0 else '减少'} {abs(hpi_delta)}（当前 {hpi['total']}，{grade_zh}）"
     )
+    domestic_status = daily_brief.get("domesticBaselineStatus")
+    baseline_key = domestic_status if isinstance(domestic_status, str) else ""
     baseline_phrase = {
         "normal": "国内 HFRS 处于基线正常范围",
         "elevated": "国内 HFRS 高于基线，需关注",
         "below": "国内 HFRS 低于基线",
-    }.get(daily_brief.get("domesticBaselineStatus"), "国内 HFRS 基线状态未知")
+    }.get(baseline_key, "国内 HFRS 基线状态未知")
     if has_import_distance and nearest_import:
         dist_phrase = (
-            f"最近相关输入监测在{nearest_import['nameZh']}（{nearest_import['statusZh']}），距中国大陆约 {displayed_distance_km:,} km；"
-            f"源头仍为{reference.get('name') or '当前重点疫情聚集'}，距中国约 {source_distance_km:,} km"
+            f"最近相关输入监测在{nearest_import['nameZh']}"
+            f"（{nearest_import['statusZh']}），距中国大陆约 {displayed_distance_km:,} km；"
+            f"源头仍为{reference.get('name') or '当前重点疫情聚集'}，"
+            f"距中国约 {source_distance_km:,} km"
         )
     elif distance_delta_km == 0:
         dist_phrase = "重点疫情聚集距中国大陆基本持平"
     else:
-        dist_phrase = f"重点疫情聚集离中国大陆{'远了' if distance_delta_km > 0 else '近了'} {abs(distance_delta_km):,} km"
+        dist_phrase = (
+            f"重点疫情聚集离中国大陆{'远了' if distance_delta_km > 0 else '近了'} "
+            f"{abs(distance_delta_km):,} km"
+        )
 
     snapshot_daily_brief = {
         **daily_brief,
@@ -1277,7 +1329,11 @@ def build_meta(
                 "entries": official_total,
                 "ok": official_total > 0 and official_ok > 0,
                 "okCount": official_ok,
-                "checkedAt": official_sources_status.get("checkedAt") if isinstance(official_sources_status, dict) else None,
+                "checkedAt": (
+                    official_sources_status.get("checkedAt")
+                    if isinstance(official_sources_status, dict)
+                    else None
+                ),
             },
         },
         "clusterCount": cluster_count,

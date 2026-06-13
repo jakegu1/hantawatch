@@ -20,6 +20,7 @@ import re
 import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from typing import Any
 from urllib.parse import parse_qs, urlparse
 
 import feedparser
@@ -458,7 +459,7 @@ def fetch_news_leads(
                 "https://news.google.com/rss/search"
                 f"?q={query}&hl={hl}&ceid={ceid}"
             )
-            d_stats = {
+            d_stats: dict[str, Any] = {
                 "query": query, "hl": hl, "fetched": 0, "blocked": 0,
                 "no_signal": 0, "duplicate": 0,
                 # Number of entries dropped because the outlet wasn't on
@@ -545,7 +546,9 @@ def fetch_news_leads(
 
                 pp = raw.get("published_parsed") or raw.get("updated_parsed")
                 published = (
-                    datetime(*pp[:6], tzinfo=timezone.utc) if pp else datetime.now(timezone.utc)
+                    datetime(pp[0], pp[1], pp[2], pp[3], pp[4], pp[5], tzinfo=timezone.utc)
+                    if pp
+                    else datetime.now(timezone.utc)
                 )
 
                 # Apply Taiwan -> Taiwan Province rewrite per editorial policy,

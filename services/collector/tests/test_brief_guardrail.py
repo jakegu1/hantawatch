@@ -1,6 +1,5 @@
 """Tests for the brief guardrail validator (P0.d)."""
 
-import pytest
 
 # Import the module under test — must be importable from the collector package.
 from hantawatch_collector.ai_brief import _validate_brief_against_structural

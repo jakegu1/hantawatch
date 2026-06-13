@@ -43,11 +43,11 @@ function HpiScaleBar({ total, color }: { total: number; color: string }) {
 
 export function DailyBriefSection({
   briefDate, hpiTotal, hpiGradeZh, hpiColor,
-  content, highRiskDistanceText, highRiskDistanceContext,
+  content, highRiskDistanceText,
 }: DailyBriefSectionProps) {
   const {
     metrics, briefTakeaway, briefNewCases, briefSituation,
-    briefRiskJudgment, briefShareLine, domesticBaselineText,
+    briefShareLine, domesticBaselineText,
     structuralMetricsLine, officialExcerpt, userActionHint,
     caseTable, caseTableSummary,
   } = content;

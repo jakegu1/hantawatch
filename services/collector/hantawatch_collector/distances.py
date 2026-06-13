@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 IMPORT_DISTANCE_KM = {
     "AR": 19400,
     "CL": 19200,

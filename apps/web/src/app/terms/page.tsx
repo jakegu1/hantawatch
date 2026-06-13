@@ -61,7 +61,7 @@ export default function TermsPage() {
             HPI（汉坦逼近指数）是本站<strong>自行设计的非官方指标</strong>，
             完整算法、因子权重与计算公式在{' '}
             <a href="/about#hpi" className="text-brand-500 underline">/about</a> 页面完整公开。
-            HPI 的目的是为中国读者提供"汉坦病毒离我有多远"的<strong>直观参考</strong>，
+            HPI 的目的是为中国读者提供「汉坦病毒离我有多远」的<strong>直观参考</strong>，
             <strong>不是预测，也不是任何机构的官方评级</strong>。
           </p>
         </section>

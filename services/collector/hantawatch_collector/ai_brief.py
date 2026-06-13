@@ -125,7 +125,8 @@ def _outbreak_status_for_llm(outbreak_status: list[dict[str, Any]] | None) -> di
 
 
 def _brief_case(row: dict[str, Any]) -> dict[str, Any]:
-    source = row.get("source") if isinstance(row.get("source"), dict) else {}
+    raw_source = row.get("source")
+    source = raw_source if isinstance(raw_source, dict) else {}
     return {
         "date": row.get("date"),
         "title": row.get("title"),
@@ -403,7 +404,9 @@ def _sanitize_share_line_against_pending_deltas(
     if not isinstance(text, str) or not text.strip():
         return brief, []
 
-    pending_total, pending_countries, follow_up_countries, o, has_delta_field = _pending_and_followup_countries(outbreak_status)
+    pending_total, pending_countries, follow_up_countries, o, has_delta_field = (
+        _pending_and_followup_countries(outbreak_status)
+    )
     if not o or not has_delta_field:
         return brief, []
 
@@ -695,10 +698,18 @@ def enhance_daily_brief(
             enhanced[key] = _postprocess_brief_text(value.strip())
     watch_focus = result.get("watchFocus")
     if isinstance(watch_focus, list):
-        enhanced["watchFocus"] = [_postprocess_brief_text(str(item).strip()) for item in watch_focus if str(item).strip()][:3]
+        enhanced["watchFocus"] = [
+            _postprocess_brief_text(str(item).strip())
+            for item in watch_focus
+            if str(item).strip()
+        ][:3]
     evidence = result.get("evidence")
     if isinstance(evidence, list):
-        enhanced["evidence"] = [_postprocess_brief_text(str(item).strip()) for item in evidence if str(item).strip()][:3]
+        enhanced["evidence"] = [
+            _postprocess_brief_text(str(item).strip())
+            for item in evidence
+            if str(item).strip()
+        ][:3]
 
     if isinstance(result.get("_guardrail_warnings"), list):
         enhanced["_guardrail_warnings"] = result["_guardrail_warnings"]

@@ -213,13 +213,23 @@ def test_validator_strips_at_today_n_days(share_line: str) -> None:
 # 2026-05-26 production brief — frozen for regression testing (P5.e).
 _PROD_2026_05_26_BRIEF: dict[str, Any] = {
     "date": "2026-05-26",
-    "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
+    "oneLine": (
+        "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；"
+        "源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，"
+        "HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。"
+    ),
     "structuralLine": "重点疫情聚集距中国大陆基本持平，HPI 指数持平（当前 24，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "5月26日西班牙确认第二例邮轮汉坦病例；美国肯尼迪提供法律保护以开发疗法。",
-    "situation": "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；多国监测中，中国大陆无相关病例。",
+    "situation": (
+        "WHO 5月13日更新累计11例（8确诊、3死亡），其后西班牙、法国各新增1例确诊输入；"
+        "多国监测中，中国大陆无相关病例。"
+    ),
     "riskJudgment": "中国大陆无本土病例，HFRS基线正常；输入风险极低",
     "newCases": "5月26日西班牙新增1例确诊（邮轮相关）；无其他官方新增。",
-    "shareLine": "WHO累计11例（5/13更新，至今13天）；其后西班牙、法国各新增1例确诊输入；中国大陆无相关病例，国内HFRS基线正常。",
+    "shareLine": (
+        "WHO累计11例（5/13更新，至今13天）；其后西班牙、法国各新增1例确诊输入；"
+        "中国大陆无相关病例，国内HFRS基线正常。"
+    ),
 }
 
 _PROD_2026_05_26_OUTBREAK_STATUS: list[dict[str, Any]] = [{

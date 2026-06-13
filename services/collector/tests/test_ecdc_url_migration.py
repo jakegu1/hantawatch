@@ -16,7 +16,6 @@ from hantawatch_collector.ecdc import (
     fetch_ecdc_assessment,
 )
 
-
 _FAKE_PAGE_WITH_RISK = """
 <html><body>
 <main>

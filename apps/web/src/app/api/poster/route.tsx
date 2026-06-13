@@ -51,7 +51,6 @@ export async function GET(req: NextRequest) {
     : '最近聚集地距中国';
 
   // Theme colors
-  const bg = variant === 'dark' ? '#0c1c3a' : '#f8fafc';
   const fg = variant === 'dark' ? '#ffffff' : '#0f172a';
   const muted = variant === 'dark' ? '#94a3b8' : '#475569';
   const cardBg = variant === 'dark' ? 'rgba(255,255,255,0.08)' : '#ffffff';

@@ -8,12 +8,18 @@ import pytest
 from hantawatch_collector.situation_builder import (
     MAX_EVENTS,
     build_events,
-    compute_state,
     build_realtime_situation,
+    compute_state,
 )
 
 
-def _risk_snapshot(*, domestic: str, displayed_km: int | None, nearest_iso2: str = "FR", nearest_km: int = 8400) -> dict[str, Any]:
+def _risk_snapshot(
+    *,
+    domestic: str,
+    displayed_km: int | None,
+    nearest_iso2: str = "FR",
+    nearest_km: int = 8400,
+) -> dict[str, Any]:
     return {
         "dailyBrief": {"domesticBaselineStatus": domestic},
         "displayedDistanceKm": displayed_km,
@@ -59,6 +65,23 @@ def _realtime_feed_entries(entries: list[dict[str, Any]]) -> dict[str, Any]:
     return {"entries": entries}
 
 
+def _news_entry(
+    iso2: str,
+    *,
+    delta_confirmed: int = 0,
+    delta_monitoring: int = 0,
+    delta_deaths: int = 0,
+    time: str = "2026-05-26T10:00:00Z",
+) -> dict[str, Any]:
+    return {
+        "iso2": iso2,
+        "delta_confirmed": delta_confirmed,
+        "delta_monitoring": delta_monitoring,
+        "delta_deaths": delta_deaths,
+        "time": time,
+    }
+
+
 @pytest.mark.parametrize(
     ("expected", "domestic", "all_cases", "displayed_km", "news_entries"),
     [
@@ -68,20 +91,20 @@ def _realtime_feed_entries(entries: list[dict[str, Any]]) -> dict[str, Any]:
         ("domestic_alert", "elevated", 11, 4000, []),
         # calm
         ("calm", "normal", 0, 8400, []),
-        ("calm", "normal", 0, 4000, [{"iso2": "FR", "delta_confirmed": 1, "delta_monitoring": 0, "delta_deaths": 0, "time": "2026-05-26T10:00:00Z"}]),
+        ("calm", "normal", 0, 4000, [_news_entry("FR", delta_confirmed=1)]),
         ("calm", "normal", 0, None, []),
         # near_watch by distance
         ("near_watch", "normal", 11, 4000, []),
         ("near_watch", "normal", 11, 5000, []),
-        ("near_watch", "normal", 11, 4999, [{"iso2": "FR", "delta_confirmed": 0, "delta_monitoring": 1, "delta_deaths": 0, "time": "2026-05-26T10:00:00Z"}]),
+        ("near_watch", "normal", 11, 4999, [_news_entry("FR", delta_monitoring=1)]),
         # remote_watch: news alone must not upgrade (no per-country distance yet)
-        ("remote_watch", "normal", 11, 8400, [{"iso2": "ES", "delta_confirmed": 1, "delta_monitoring": 0, "delta_deaths": 0, "time": "2026-05-27T00:34:41Z"}]),
-        ("remote_watch", "normal", 11, 8400, [{"iso2": "ES", "delta_confirmed": 0, "delta_monitoring": 2, "delta_deaths": 0, "time": "2026-05-22T10:00:00Z"}]),
-        ("remote_watch", "normal", 11, 7000, [{"iso2": "ES", "delta_confirmed": 1, "delta_monitoring": 0, "delta_deaths": 0, "time": "2026-05-23T10:00:00Z"}]),
+        ("remote_watch", "normal", 11, 8400, [_news_entry("ES", delta_confirmed=1, time="2026-05-27T00:34:41Z")]),
+        ("remote_watch", "normal", 11, 8400, [_news_entry("ES", delta_monitoring=2, time="2026-05-22T10:00:00Z")]),
+        ("remote_watch", "normal", 11, 7000, [_news_entry("ES", delta_confirmed=1, time="2026-05-23T10:00:00Z")]),
         # remote_watch
         ("remote_watch", "normal", 11, 8400, []),
         ("remote_watch", "normal", 11, 12000, []),
-        ("remote_watch", "normal", 11, 8400, [{"iso2": "ES", "delta_confirmed": 0, "delta_monitoring": 0, "delta_deaths": 0, "time": "2026-05-27T00:34:41Z"}]),
+        ("remote_watch", "normal", 11, 8400, [_news_entry("ES", time="2026-05-27T00:34:41Z")]),
     ],
 )
 def test_compute_state_parameterized(
@@ -94,11 +117,10 @@ def test_compute_state_parameterized(
     today = date(2026, 5, 27)
     outbreak_status = _outbreak_status(all_cases)
     risk_snapshot = _risk_snapshot(domestic=domestic, displayed_km=displayed_km)
-    realtime_feed = _realtime_feed_entries(news_entries)
     assert compute_state(outbreak_status, risk_snapshot, today=today) == expected
 
 
-def test_daysAtState_first_run_sets_since_today_and_zero_days() -> None:
+def test_days_at_state_first_run_sets_since_today_and_zero_days() -> None:
     today = date(2026, 5, 27)
     out = build_realtime_situation(
         outbreak_status=_outbreak_status(11),
@@ -114,7 +136,7 @@ def test_daysAtState_first_run_sets_since_today_and_zero_days() -> None:
     assert out["state"]["daysAtState"] == 0
 
 
-def test_daysAtState_same_state_continues_since_and_increments_days() -> None:
+def test_days_at_state_same_state_continues_since_and_increments_days() -> None:
     today = date(2026, 5, 27)
     existing = {
         "state": {"code": "remote_watch", "since": "2026-05-20", "daysAtState": 6},
@@ -132,7 +154,7 @@ def test_daysAtState_same_state_continues_since_and_increments_days() -> None:
     assert out["state"]["daysAtState"] == 7
 
 
-def test_daysAtState_state_switch_resets_since_and_days() -> None:
+def test_days_at_state_state_switch_resets_since_and_days() -> None:
     today = date(2026, 5, 27)
     existing = {
         "state": {"code": "calm", "since": "2026-05-20", "daysAtState": 6},
@@ -547,9 +569,25 @@ def test_build_events_collapses_same_country_pending_screening_across_utc_midnig
     ]
     entries = [
         # 2026-05-29T23:36Z == 2026-05-30 07:36 Beijing
-        {"iso2": "US", "delta_confirmed": 0, "delta_monitoring": 2, "delta_deaths": 0, "time": "2026-05-29T23:36:55Z", "confidence": "medium", "reasoning_zh": ""},
+        {
+            "iso2": "US",
+            "delta_confirmed": 0,
+            "delta_monitoring": 2,
+            "delta_deaths": 0,
+            "time": "2026-05-29T23:36:55Z",
+            "confidence": "medium",
+            "reasoning_zh": "",
+        },
         # 2026-05-30T04:25Z == 2026-05-30 12:25 Beijing (later, same Beijing day)
-        {"iso2": "US", "delta_confirmed": 0, "delta_monitoring": 2, "delta_deaths": 0, "time": "2026-05-30T04:25:11Z", "confidence": "medium", "reasoning_zh": ""},
+        {
+            "iso2": "US",
+            "delta_confirmed": 0,
+            "delta_monitoring": 2,
+            "delta_deaths": 0,
+            "time": "2026-05-30T04:25:11Z",
+            "confidence": "medium",
+            "reasoning_zh": "",
+        },
     ]
     events, _, _ = build_events(
         outbreak,
@@ -673,7 +711,14 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
                     "noNewConfirmedSinceWho": True,
                     "followUpLabelZh": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
                     "followUpSource": {"url": "https://example.com/fr", "confidence": "official"},
-                    "evidence": [{"tier": "official", "sourceName": "fr_spf", "url": "https://example.com/fr", "retrievedAt": ""}],
+                    "evidence": [
+                        {
+                            "tier": "official",
+                            "sourceName": "fr_spf",
+                            "url": "https://example.com/fr",
+                            "retrievedAt": "",
+                        }
+                    ],
                 },
                 {
                     "iso2": "ES",
@@ -685,7 +730,14 @@ def test_post_who_confirmed_without_delta_is_follow_up_not_pending() -> None:
                     "noNewConfirmedSinceWho": True,
                     "followUpLabelZh": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
                     "followUpSource": {"url": "https://example.com/es", "confidence": "official"},
-                    "evidence": [{"tier": "official", "sourceName": "es_isciii", "url": "https://example.com/es", "retrievedAt": ""}],
+                    "evidence": [
+                        {
+                            "tier": "official",
+                            "sourceName": "es_isciii",
+                            "url": "https://example.com/es",
+                            "retrievedAt": "",
+                        }
+                    ],
                 },
             ],
         }
@@ -750,11 +802,43 @@ def test_case_ledger_reconciles_confirmed_attribution_to_total() -> None:
             "totals": {"all": 13, "confirmed": 11, "indeterminate": 2, "possible": 0, "deaths": 3},
             "lastUpdate": {"asOfDate": "2026-05-28"},
             "perCountry": [
-                {"iso2": "ES", "nameZh": "西班牙", "confirmed": 2, "confirmedSinceWho": 0, "asOf": "2026-06-05", "evidence": [{"tier": "official", "sourceName": "es"}]},
-                {"iso2": "NL", "nameZh": "荷兰", "confirmed": 2, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
-                {"iso2": "FR", "nameZh": "法国", "confirmed": 1, "confirmedSinceWho": 0, "asOf": "2026-06-06", "evidence": [{"tier": "official", "sourceName": "fr"}]},
-                {"iso2": "ZA", "nameZh": "南非", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
-                {"iso2": "CH", "nameZh": "瑞士", "confirmed": 1, "asOf": "2026-05-28", "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}]},
+                {
+                    "iso2": "ES",
+                    "nameZh": "西班牙",
+                    "confirmed": 2,
+                    "confirmedSinceWho": 0,
+                    "asOf": "2026-06-05",
+                    "evidence": [{"tier": "official", "sourceName": "es"}],
+                },
+                {
+                    "iso2": "NL",
+                    "nameZh": "荷兰",
+                    "confirmed": 2,
+                    "asOf": "2026-05-28",
+                    "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}],
+                },
+                {
+                    "iso2": "FR",
+                    "nameZh": "法国",
+                    "confirmed": 1,
+                    "confirmedSinceWho": 0,
+                    "asOf": "2026-06-06",
+                    "evidence": [{"tier": "official", "sourceName": "fr"}],
+                },
+                {
+                    "iso2": "ZA",
+                    "nameZh": "南非",
+                    "confirmed": 1,
+                    "asOf": "2026-05-28",
+                    "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}],
+                },
+                {
+                    "iso2": "CH",
+                    "nameZh": "瑞士",
+                    "confirmed": 1,
+                    "asOf": "2026-05-28",
+                    "evidence": [{"tier": "arcgis", "sourceName": "ArcGIS"}],
+                },
             ],
         }
     ]

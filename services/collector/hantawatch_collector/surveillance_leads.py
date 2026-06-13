@@ -3,6 +3,7 @@ from __future__ import annotations
 import logging
 import os
 from datetime import datetime, timedelta, timezone
+from typing import Any
 
 import feedparser
 import httpx
@@ -110,8 +111,20 @@ def fetch_surveillance_leads(
         headers={"User-Agent": "HantaWatch-Collector/0.1 (surveillance-leads)"},
     ) as client:
         for query, hl, ceid in SURVEILLANCE_QUERIES:
-            url = "https://news.google.com/rss/search" f"?q={query}&hl={hl}&ceid={ceid}"
-            d_stats = {"query": query, "hl": hl, "fetched": 0, "blocked": 0, "no_signal": 0, "duplicate": 0, "kept": 0, "ok": False}
+            url = (
+                "https://news.google.com/rss/search"
+                f"?q={query}&hl={hl}&ceid={ceid}"
+            )
+            d_stats: dict[str, Any] = {
+                "query": query,
+                "hl": hl,
+                "fetched": 0,
+                "blocked": 0,
+                "no_signal": 0,
+                "duplicate": 0,
+                "kept": 0,
+                "ok": False,
+            }
             try:
                 resp = client.get(url)
                 resp.raise_for_status()
@@ -148,7 +161,11 @@ def fetch_surveillance_leads(
                     continue
 
                 pp = raw.get("published_parsed") or raw.get("updated_parsed")
-                published = datetime(*pp[:6], tzinfo=timezone.utc) if pp else datetime.now(timezone.utc)
+                published = (
+                    datetime(pp[0], pp[1], pp[2], pp[3], pp[4], pp[5], tzinfo=timezone.utc)
+                    if pp
+                    else datetime.now(timezone.utc)
+                )
                 if published < newest_allowed:
                     d_stats["blocked"] += 1
                     continue
