@@ -31,8 +31,7 @@ const STEPS = [
   // 构建放最后（最慢、最能抓出数据/渲染错误）
   { id: 'web-build',     label: 'Web 构建 (next build)',      cmd: 'pnpm build',                              cwd: ROOT },
   { id: 'mini-build',    label: '小程序构建 (taro weapp)',     cmd: 'pnpm build:miniapp',                      cwd: ROOT },
-  // ── T1 接入点：数字校验做完后，把它的命令加在这里，使“无源数字”能阻断整条 verify ──
-  // { id: 'data-guard', label: 'Headline 数字溯源校验', cmd: 'python -m hantawatch_collector.guard', cwd: COLLECTOR },
+  { id: 'data-guard', label: 'Headline 数字溯源校验', cmd: 'python -m hantawatch_collector.guard', cwd: COLLECTOR },
 ];
 
 const args = process.argv.slice(2);

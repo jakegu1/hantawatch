@@ -40,6 +40,7 @@ Web / 小程序（pnpm 9.15.9，Node ≥20，仓库根目录执行）：
 采集器（独立 Python 包，`services/collector`，Python ≥3.12）：
 - 测试：`cd services/collector && pytest`（改动采集器后必须全绿）
 - lint：`ruff check .`（line-length 120，规则 E/F/I/N）　·　类型：`mypy`
+- 数字溯源 guard：`python -m hantawatch_collector.guard`（verify 第 10 步，阻断无 source/asOf 的病例数字）
 - 跑采集：`python main.py`
 
 ## 验证闭环（所有自主运行的停止条件）
