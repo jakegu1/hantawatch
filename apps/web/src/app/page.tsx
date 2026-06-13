@@ -24,9 +24,11 @@ import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
+import { RiskVerdictBanner } from '@/components/risk-verdict-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { useLiveRealtimeSituation } from '@/lib/use-realtime-situation';
+import { deriveRiskVerdict } from '@/lib/risk-verdict';
 import { FeedLegend } from '@/components/feed-legend';
 import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
 import { SubscribeForm } from '@/components/subscribe-form';
@@ -229,6 +231,31 @@ export default function HomePage() {
 
   const { metrics: briefMetrics } = briefContent;
 
+  /** Same state code as RealtimeSituationSection — no second risk engine. */
+  const riskVerdict = useMemo(
+    () =>
+      deriveRiskVerdict({
+        stateCode: liveSituation.state?.code,
+        domesticBaselineStatus: todayBrief.domesticBaselineStatus,
+        displayedDistanceKm,
+        communityTransmissionCount: 0,
+        nearestImport: nearestImport
+          ? {
+              nameZh: nearestImport.nameZh,
+              distanceKm: nearestImport.distanceKm,
+              cityZh: nearestImport.cityZh,
+            }
+          : null,
+        sourceDistanceKm: liveRiskSnapshot.sourceDistanceKm,
+      }),
+    [
+      liveSituation.state?.code,
+      displayedDistanceKm,
+      nearestImport,
+      liveRiskSnapshot.sourceDistanceKm,
+    ],
+  );
+
   return (
     <div className="pb-16">
       {/* ================================================================ */}
@@ -278,13 +305,10 @@ export default function HomePage() {
             highConfidencePicks={intakeStats.highConfidencePicks}
           />
 
-          {/* (DELETED 2026-05-27 audit) — Andes 警告条 (red gradient) was an
-              identical-information duplicate of RealtimeSituationSection's
-              outbreakName + state.labelZh, and its red 30-40% 病死率 framing
-              violated the "warn without panic" principle. The realtime card
-              below carries the same factual signal in a calmer surface. */}
+          {/* Reassurance verdict — first visual answer to "should I worry?" */}
+          <RiskVerdictBanner verdict={riskVerdict} />
 
-          {/* ─── Above-the-fold metrics: Distance + HPI on one row ─── */}
+          {/* ─── Hero detail metrics: Distance + HPI (secondary to verdict) ─── */}
           <div className="grid grid-cols-5 gap-2 sm:gap-3 mb-3 sm:mb-4">
             {/* Distance card — uses nearest import distance when a confirmed/
                 quarantined import is closer than the outbreak source. */}

@@ -9,6 +9,7 @@ export default defineConfig({
     environment: 'happy-dom',
     include: [
       'src/__tests__/**/*.test.{ts,tsx}',
+      'src/lib/**/*.test.ts',
       '../../services/collector/tests/test_case_table_outbreak_only.ts',
     ],
   },
