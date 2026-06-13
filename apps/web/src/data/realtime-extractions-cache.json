@@ -6411,6 +6411,62 @@
         "source_url": "",
         "time": "2026-06-12T23:45:00Z"
       }
+    ],
+    "rt-e2cf1ffb014e9b1f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "新闻未提及具体国家，仅涉及邮轮乘客，无法确定国家。",
+        "update_id": "rt-e2cf1ffb014e9b1f",
+        "source_url": "",
+        "time": "2026-06-13T13:00:00Z"
+      }
+    ],
+    "rt-135a6637b0f66e2e": [
+      {
+        "iso2": "ID",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到印度尼西亚加强检疫系统以促进出口，但未涉及汉坦病毒病例数据。",
+        "update_id": "rt-135a6637b0f66e2e",
+        "source_url": "",
+        "time": "2026-06-13T12:30:00Z"
+      }
+    ],
+    "rt-5fc6d7ed2ea96311": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "medium",
+        "reasoning_zh": "美国堪萨斯州3人完成汉坦病毒暴露观察期，但未报告新增病例。",
+        "update_id": "rt-5fc6d7ed2ea96311",
+        "source_url": "",
+        "time": "2026-06-13T09:06:00.000Z"
+      }
+    ],
+    "rt-3ddc0dad912f824d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "low",
+        "reasoning_zh": "美国出资撤离一名汉坦病毒邮轮上的美国人，但未提供病例数据。",
+        "update_id": "rt-3ddc0dad912f824d",
+        "source_url": "",
+        "time": "2026-06-12T23:37:00.000Z"
+      }
     ]
   }
 }
