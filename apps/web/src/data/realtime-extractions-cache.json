@@ -6467,6 +6467,48 @@
         "source_url": "",
         "time": "2026-06-12T23:37:00.000Z"
       }
+    ],
+    "rt-c07b01e714554e67": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰Radboudumc解除部分员工隔离，但未报告新增病例或死亡。",
+        "update_id": "rt-c07b01e714554e67",
+        "source_url": "",
+        "time": "2026-06-13T14:55:00.000Z"
+      }
+    ],
+    "rt-dbda1b61337b4ed0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "牙买加《拾穗者》报道抗汉坦病毒工具前景，无具体国家病例数据。",
+        "update_id": "rt-dbda1b61337b4ed0",
+        "source_url": "",
+        "time": "2026-06-13T10:03:23.000Z"
+      }
+    ],
+    "rt-4f31b1f7a239afd9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "high",
+        "reasoning_zh": "美国圣昆廷康复中心疑似病例被排除，无新增确诊或死亡。",
+        "update_id": "rt-4f31b1f7a239afd9",
+        "source_url": "",
+        "time": "2026-06-13T01:06:25.000Z"
+      }
     ]
   }
 }
