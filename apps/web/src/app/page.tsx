@@ -28,7 +28,7 @@ import { RiskVerdictBanner } from '@/components/risk-verdict-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { useLiveRealtimeSituation } from '@/lib/use-realtime-situation';
-import { deriveRiskVerdict } from '@/lib/risk-verdict';
+import { deriveRiskVerdict } from '@hantawatch/shared/risk-verdict';
 import { FeedLegend } from '@/components/feed-legend';
 import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
 import { SubscribeForm } from '@/components/subscribe-form';

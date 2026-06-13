@@ -11,7 +11,8 @@
     "./timeline": "./src/timeline.ts",
     "./daily-brief-display": "./src/daily-brief-display.ts",
     "./feed-definitions": "./src/feed-definitions.ts",
-    "./mv-hondius-event": "./src/mv-hondius-event.ts"
+    "./mv-hondius-event": "./src/mv-hondius-event.ts",
+    "./risk-verdict": "./src/risk-verdict.ts"
   },
   "scripts": {
     "lint": "tsc --noEmit",

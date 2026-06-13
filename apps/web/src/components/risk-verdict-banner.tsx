@@ -1,7 +1,7 @@
 'use client';
 
 import { Heart } from 'lucide-react';
-import type { RiskVerdict } from '@/lib/risk-verdict';
+import type { RiskVerdict } from '@hantawatch/shared/risk-verdict';
 
 const LEVEL_SURFACE: Record<
   RiskVerdict['level'],

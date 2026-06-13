@@ -6,6 +6,7 @@ import { SEROTYPES } from '@hantawatch/shared';
 import { filterOfficialTimelineCases } from '@hantawatch/shared/timeline';
 import type { ActiveCluster } from '@hantawatch/shared/types';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
+import { deriveRiskVerdict } from '@hantawatch/shared/risk-verdict';
 import { useAppData, useRefreshAppData } from '@/lib/data-provider';
 import { findNearestAndes } from '@/lib/nearest-cluster';
 import { buildRiskSnapshot } from '@/lib/risk-snapshot';
@@ -13,6 +14,7 @@ import { fetchClusters, fetchHondiusImports, trackPageView } from '@/utils/api';
 import type { MvHondiusImport } from '@hantawatch/shared/types';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
+import { RiskVerdictBanner } from '@/components/risk-verdict-banner';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { FeedLegend } from '@/components/feed-legend';
 import { DataFreshness } from '@/components/data-freshness';
@@ -241,6 +243,32 @@ export default function HomePage() {
     ? `源头疫情距中国大陆约 ${fmt(sourceDistanceKm)} km；当前按地理距离最近的输入病例展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
 
+  /** Same state code as RealtimeSituationSection — no second risk engine. */
+  const riskVerdict = useMemo(
+    () =>
+      deriveRiskVerdict({
+        stateCode: realtimeSituation.state?.code,
+        domesticBaselineStatus: todayBrief.domesticBaselineStatus,
+        displayedDistanceKm,
+        communityTransmissionCount: 0,
+        nearestImport: nearestImport
+          ? {
+              nameZh: nearestImport.nameZh,
+              distanceKm: nearestImport.distanceKm,
+              cityZh: nearestImport.cityZh,
+            }
+          : null,
+        sourceDistanceKm: liveRiskSnapshot.sourceDistanceKm,
+      }),
+    [
+      realtimeSituation.state?.code,
+      todayBrief.domesticBaselineStatus,
+      displayedDistanceKm,
+      nearestImport,
+      liveRiskSnapshot.sourceDistanceKm,
+    ],
+  );
+
   const briefContent = useMemo(
     () =>
       buildBriefSectionContent({
@@ -302,10 +330,7 @@ export default function HomePage() {
           highConfidencePicks={intakeStats.highConfidencePicks}
         />
 
-        {/* (DELETED 2026-05-27 audit) — Andes 警告条 (red strip) was an
-            identical-information duplicate of RealtimeSituationSection's
-            outbreakName + state label; its red 30-40% 病死率 framing
-            violated the "warn without panic" principle. */}
+        <RiskVerdictBanner verdict={riskVerdict} />
 
         {/* Distance + HPI 2-column grid */}
         {cluster && (
