@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-14T03:42:55.883127+00:00",
+  "__generated_at": "2026-06-14T05:26:24.947215+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-14T03:42:49.696879+00:00",
+  "last_fetched": "2026-06-14T05:26:23.237022+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-06-13T16:46:00.000Z",
       "title_en": "US spends $750K to evacuate American woman who was on hantavirus-hit cruise from remote island - Cruise.Blog",
       "body_en": "US spends $750K to evacuate American woman who was on hantavirus-hit cruise from remote island Cruise.Blog",
-      "summary_zh": "美国花费75万美元从偏远岛屿撤离一名汉坦病毒邮轮上的美国女性。",
+      "summary_zh": "美国花费75万美元从偏远岛屿撤离一名汉坦病毒邮轮上的女性。",
       "key_facts_zh": [
         "美国",
         "撤离",
@@ -30,7 +30,7 @@
       "key_facts_zh": [
         "荷兰",
         "解除隔离",
-        "医院"
+        "员工"
       ],
       "signal_strength": "high"
     },
@@ -43,7 +43,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "完成观察"
+        "观察期结束"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-06-13T02:13:39.000Z",
       "title_en": "No hantavirus found in second Argentine province: ministry - ET HealthWorld",
       "body_en": "No hantavirus found in second Argentine province: ministry ET HealthWorld",
-      "summary_zh": "阿根廷卫生部：第二个省份未发现汉坦病毒。",
+      "summary_zh": "阿根廷卫生部称第二个省份未发现汉坦病毒。",
       "key_facts_zh": [
         "阿根廷",
         "未发现",
@@ -107,6 +107,7 @@
       "summary_zh": "美国圣昆廷监狱囚犯排除汉坦病毒感染。",
       "key_facts_zh": [
         "美国",
+        "圣昆廷监狱",
         "排除感染"
       ],
       "signal_strength": "high"
@@ -116,11 +117,11 @@
       "time": "2026-06-12T18:16:51.000Z",
       "title_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model - Genetic Engineering and Biotechnology News",
       "body_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model Genetic Engineering and Biotechnology News",
-      "summary_zh": "汉坦病毒单剂mRNA疫苗在叙利亚仓鼠模型中完全保护。",
+      "summary_zh": "单剂mRNA疫苗在叙利亚仓鼠模型中完全保护免受汉坦病毒。",
       "key_facts_zh": [
-        "疫苗",
-        "mRNA",
-        "仓鼠模型"
+        "mRNA疫苗",
+        "仓鼠模型",
+        "完全保护"
       ],
       "signal_strength": "medium"
     },
@@ -129,10 +130,11 @@
       "time": "2026-06-12T15:01:18.000Z",
       "title_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery - Cruise Trade News",
       "body_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery Cruise Trade News",
-      "summary_zh": "Oceanwide CEO独家谈汉坦病毒疫情、影响与恢复。",
+      "summary_zh": "Oceanwide CEO独家谈汉坦病毒疫情影响与恢复。",
       "key_facts_zh": [
-        "邮轮",
-        "CEO访谈"
+        "Oceanwide",
+        "CEO",
+        "疫情影响"
       ],
       "signal_strength": "medium"
     },
@@ -141,11 +143,11 @@
       "time": "2026-06-12T09:09:27.000Z",
       "title_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak - World Health Organization (WHO)",
       "body_en": "Twenty-one countries launch coordinated Andes virus research initiative following hantavirus outbreak World Health Organization (WHO)",
-      "summary_zh": "WHO宣布21国启动协调的安第斯病毒研究计划。",
+      "summary_zh": "WHO牵头21国启动安第斯病毒研究计划。",
       "key_facts_zh": [
         "WHO",
         "21国",
-        "研究计划"
+        "安第斯病毒研究"
       ],
       "signal_strength": "high"
     },
@@ -156,8 +158,8 @@
       "body_en": "Single-dose vaccine provides complete protection against Andes hantavirus News-Medical",
       "summary_zh": "单剂疫苗对安第斯汉坦病毒提供完全保护。",
       "key_facts_zh": [
-        "疫苗",
-        "单剂",
+        "单剂疫苗",
+        "安第斯病毒",
         "完全保护"
       ],
       "signal_strength": "medium"
@@ -167,9 +169,10 @@
       "time": "2026-06-11T21:47:09.000Z",
       "title_en": "San Quentin prison reports possible hantavirus case - Marin Independent Journal",
       "body_en": "San Quentin prison reports possible hantavirus case Marin Independent Journal",
-      "summary_zh": "美国圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "美国圣昆廷监狱报告可能汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
+        "圣昆廷监狱",
         "疑似病例"
       ],
       "signal_strength": "high"
@@ -179,11 +182,24 @@
       "time": "2026-06-11T21:34:04.000Z",
       "title_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison - SFGATE",
       "body_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison SFGATE",
-      "summary_zh": "美国旧金山湾区监狱调查一例疑似汉坦病毒病例。",
+      "summary_zh": "旧金山湾区监狱调查一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
         "疑似病例",
         "监狱"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-06d353e970a4f0b7",
+      "time": "2026-06-11T21:10:00.000Z",
+      "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
+      "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
+      "summary_zh": "加州调查一例疑似汉坦病毒病例，引发担忧。",
+      "key_facts_zh": [
+        "美国",
+        "加州",
+        "疑似病例"
       ],
       "signal_strength": "medium"
     },
@@ -192,11 +208,11 @@
       "time": "2026-06-11T20:25:00.000Z",
       "title_en": "Prisoner at San Quentin may have hantavirus, authorities say - The Independent",
       "body_en": "Prisoner at San Quentin may have hantavirus, authorities say The Independent",
-      "summary_zh": "美国圣昆廷监狱一名囚犯可能感染汉坦病毒。",
+      "summary_zh": "当局称圣昆廷监狱一名囚犯可能感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "疑似病例",
-        "监狱"
+        "圣昆廷监狱",
+        "疑似病例"
       ],
       "signal_strength": "medium"
     },
@@ -205,11 +221,11 @@
       "time": "2026-06-11T19:47:58.000Z",
       "title_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine - NBC News",
       "body_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine NBC News",
-      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客汉坦病毒隔离问题产生分歧。",
+      "summary_zh": "美国CDC与佛罗里达州就汉坦病毒邮轮乘客隔离问题发生分歧。",
       "key_facts_zh": [
         "美国 CDC",
         "佛罗里达",
-        "邮轮"
+        "邮轮隔离"
       ],
       "signal_strength": "high"
     },
@@ -222,7 +238,7 @@
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "邮轮"
+        "邮轮隔离"
       ],
       "signal_strength": "high"
     },
@@ -231,19 +247,19 @@
       "time": "2026-06-11T18:19:19.000Z",
       "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
       "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "美国圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告一例可能汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "疑似病例",
-        "监狱"
+        "圣昆廷监狱",
+        "疑似病例"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-1652e4e52d0d538e",
-      "time": "2026-06-11T18:16:48.000Z",
-      "title_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island - Toronto Star",
-      "body_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island Toronto Star",
+      "id": "rt-2387c0d72c326103",
+      "time": "2026-06-11T18:16:00.000Z",
+      "title_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island - AP News",
+      "body_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island AP News",
       "summary_zh": "美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "美国",
@@ -257,11 +273,11 @@
       "time": "2026-06-11T16:52:00.000Z",
       "title_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha - WOWT",
       "body_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "美国奥马哈国家隔离单位再有2名邮轮乘客出院。",
+      "summary_zh": "美国奥马哈国家隔离单位又有2名邮轮乘客出院。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "出院"
+        "2人出院"
       ],
       "signal_strength": "high"
     }
