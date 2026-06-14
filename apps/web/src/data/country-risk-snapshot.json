@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-14T03:42:55.881592+00:00",
+  "__generated_at": "2026-06-14T09:30:20.077993+00:00",
   "date": "2026-06-14",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -63,9 +63,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 8,
-      "signalCount7d": 3,
-      "lastSignalAt": "2026-06-13T09:18:14+00:00",
+      "signalCount30d": 5,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-11T12:40:19+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-06"
     },
@@ -254,7 +254,7 @@
       "stale": false,
       "signalCount30d": 5,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-06-04T07:00:00+00:00"
+      "lastSignalAt": "2026-05-20T07:00:00+00:00"
     },
     "AR": {
       "iso2": "AR",
@@ -262,11 +262,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 17 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 15 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 15 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 17,
-      "signalCount7d": 10,
+      "signalCount30d": 15,
+      "signalCount7d": 9,
       "lastSignalAt": "2026-06-13T17:50:29+00:00"
     },
     "CL": {
@@ -287,10 +287,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 3 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 4 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 3,
+      "signalCount30d": 4,
       "signalCount7d": 0,
       "lastSignalAt": "2026-05-27T07:00:00+00:00"
     },
@@ -316,8 +316,8 @@
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
       "signalCount30d": 4,
-      "signalCount7d": 4,
-      "lastSignalAt": "2026-06-13T03:39:43+00:00",
+      "signalCount7d": 3,
+      "lastSignalAt": "2026-06-12T05:57:55+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
@@ -348,16 +348,15 @@
     },
     "KR": {
       "iso2": "KR",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "韩国为 Hantaan 病毒最早分离地（1976 汉滩江）；秋季野外训练、农作业为典型暴露场景。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-15T07:00:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "JP": {
       "iso2": "JP",
@@ -409,16 +408,15 @@
     },
     "ID": {
       "iso2": "ID",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "近期多地卫生局开展监测，整体风险低；避免接触城市鼠类。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-26T07:00:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "AU": {
       "iso2": "AU",
