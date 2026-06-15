@@ -6607,6 +6607,20 @@
         "source_url": "",
         "time": "2026-06-13T16:00:00Z"
       }
+    ],
+    "rt-c0728a490e28d747": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-15",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒成功控制，但未提供具体国家、新增病例或死亡数字，无法提取增量。",
+        "update_id": "rt-c0728a490e28d747",
+        "source_url": "",
+        "time": "2026-06-15T15:00:35.000Z"
+      }
     ]
   }
 }

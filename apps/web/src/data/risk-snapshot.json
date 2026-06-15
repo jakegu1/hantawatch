@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-15T11:59:09.546995+00:00",
-  "date": "2026-06-15",
+  "__generated_at": "2026-06-15T17:21:23.386546+00:00",
+  "date": "2026-06-16",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-15T11:58:49.545681+00:00"
+    "updatedAt": "2026-06-15T17:20:58.353636+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-15T11:58:49.545681+00:00"
+    "updatedAt": "2026-06-15T17:20:58.353636+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,16 +101,16 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-06-15",
+    "date": "2026-06-16",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 11,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 18,
-    "whoDaysSinceOfficialUpdate": 18,
-    "cluesLast24h": 9,
+    "daysSinceLastIntlAlert": 19,
+    "whoDaysSinceOfficialUpdate": 19,
+    "cluesLast24h": 11,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月14日美国圣昆廷监狱排除疑似病例；荷兰解除部分员工隔离；法国1例确诊仍在ICU，状态稳定；中国大陆无相关病例。",
@@ -118,15 +118,15 @@
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "6月14日无新增确诊或初筛阳性。",
     "sourceSummary": "WHO、各国卫生部、ArcGIS监测",
-    "shareLine": "WHO 5/28公布累计13例（18天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+    "shareLine": "WHO 5/28公布累计13例（19天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "法国确诊患者状态",
-      "荷兰接触者隔离进展",
-      "美国监测排除情况"
+      "法国ICU患者状态",
+      "荷兰解除隔离",
+      "美国排除疑似"
     ],
     "evidence": [
       "WHO DON 5/28",
-      "法国卫生部/TF1 Info",
+      "法国卫生部/TF1",
       "ArcGIS ANDV Dashboard"
     ],
     "_guardrail_warnings": [
