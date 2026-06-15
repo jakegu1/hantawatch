@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-15T02:59:48.922493+00:00",
+  "__generated_at": "2026-06-15T03:58:01.479648+00:00",
   "cases": [
     {
       "id": "who-2026-don604",
@@ -14,7 +14,55 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-        "retrievedAt": "2026-06-14T19:22:36.692544+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don601",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-13",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don600",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-08",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don599",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-04",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报：一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "official"
       }
     },
@@ -42,11 +90,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "美国CDC期刊报告法国里昂和巴黎男男性行为者中疑似性传播皮肤真菌病。",
-      "summary": "法国；美国CDC；性传播",
+      "summary": "法国；美国CDC；疑似性传播",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5VaXNuSzA0bzJxY1MyLTZNN0tudGttdGtCMWZ5VG9TR3RNMUZCTWE0ZFNsblJ1Vm80S2s3UjhaWlhnQ1BXWGt0V1hVVkEwSEV5RHJYN0RSTm9EQ3F3ckVnYnMwSUE?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "surveillance"
       }
     },
@@ -121,12 +169,12 @@
       "date": "2026-05-29",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲CDC发布2026年5月23-29日传染病威胁周报。",
-      "summary": "欧洲CDC；周报；传染病威胁",
+      "title": "欧洲CDC发布2026年第22周传染病威胁报告。",
+      "summary": "欧洲CDC；传染病威胁；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTDlKOEhEblp0bG5aRGRWTjBWYmE0QjMtVE1tTTh5Z1ZCQ1lya1ZqeWNvcVZEVzJTbjVReHVUNm1QeTJMSnNjNlZIWWhpVFlOUzd2OFNxVUZWOFZJVG9GRFJCZTBBa0UtbUhIY19nUXhaZ3RBNWhWTGwyY2RiZWJnZG1nR0Y1R1pBaWY5ZlJnaVdUVXNRNUhQQkc2WnhZdjZQLVBlcWVoVmNnUQ?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "surveillance"
       }
     },
@@ -458,11 +506,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "欧洲CDC发布医疗机构安第斯病毒患者感染防控措施快速科学建议。",
-      "summary": "欧洲CDC；安第斯病毒；防控措施",
+      "summary": "欧洲CDC；安第斯病毒；感染防控",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQcV9QcVV5b0g3OGwzM2IzZDlROFJKdmdfb3R0X2dXMUZJNXo4Qk9sVGEzMTlfYk5yaDVaQXlPODZ6bU5NbHNZMGhWYS1xa2p5alEwdWlQLTVtckFWcGtfalE2RmREZ1lKX29BVFE1ME9IdzRIYnhDOUhoVkdXdnFJZko5V1Z3SW1PX2pXa2UtT00yamZDNThSNG5HRFlsYWlxTmcxQkl6LU0xanRpbzFkUDFIenZ6c2hER2dLbzBpcF9sZEFyX1N0Q1hlV3AwWC1LOWptQ2UtNWZjbWRJRGo3UHpndmU4enVG?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "surveillance"
       }
     },
@@ -473,12 +521,12 @@
       "date": "2026-05-14",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲CDC发布MV Hondius疫情中安第斯病毒高风险接触者实验室检测快速科学建议。",
-      "summary": "欧洲CDC；MV Hondius；实验室检测",
+      "title": "欧洲CDC发布Hondius号邮轮疫情中安第斯病毒高危接触者实验室检测快速科学建议。",
+      "summary": "欧洲CDC；邮轮；安第斯病毒",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMzdGSFRmMEoxaWZORkxiYnhzRHUzb1l2clR5OTFKdkVmZWloWnhwUHBBVE94cmg0U2liZzhkMk9yZ2FubF9hby0ySVVOWC1fdFlFczZDS1k2T2ZfV3NVbFNUNzNzLWMwQjVtWUhyUE5LMVlNS01ZeFJUeWdxTHFzVlE4OVZCQ3hjRy1ZM3RhLVFpWGNmdnd4azhweUktdzNrbmtDV0RxclYxd0RUazhVWGdUdG5qVDV4eXV0bnoyZEwtS2Zq?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "surveillance"
       }
     },
@@ -489,12 +537,12 @@
       "date": "2026-05-02",
       "caseType": "suspected",
       "count": 0,
-      "title": "研究探讨健康调解在法属圭亚那卡宴地区非正规住区汉坦病毒病例调查中的作用。",
+      "title": "研究探讨法属圭亚那卡宴地区非正规住区居民汉坦病毒病例调查中的健康调解作用。",
       "summary": "法属圭亚那；汉坦病毒；健康调解",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQeDRQZ3Uxc1I0X1NGblZKUlZNdk1QeUJCYnlCZ0hXRlZDT0VTaDFyZEN1al82Y3VNSzhqcm5UN0ZjZ2JqVllsbTRmQ2ZWejNqRHNXSlJ6SDRkejZhWjJnbTY5Ym4yZlpTV0pkZ3k2bEVWR2Y3MTg3U01tRlFZeXBVbVBxOXBINmZUVm5wM3BMV3BrWGtqdG5rXzhucThDZmc4ZjBnZVRjRmNqY0FkSC1JME5mM2JvWmlSMjNYMjZUM0x5Tm5MTmcxZEUwaDd0bEUyclEzN3RxRHZnbm5zUm5QcGJZWEg1ZlIzeDgxY0VaWGltUVpKZmR2UVZsb0tTY1d5TGFxX1Rhc1E5MTAwc0hV?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "surveillance"
       }
     },
@@ -510,7 +558,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-06-15T02:59:28.235723+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.922778+00:00",
         "confidence": "news"
       }
     },
@@ -526,7 +574,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-06-15T02:59:28.235723+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.922778+00:00",
         "confidence": "news"
       }
     },
@@ -542,7 +590,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-06-15T02:59:28.235723+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.922778+00:00",
         "confidence": "news"
       }
     },
@@ -558,7 +606,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "news"
       }
     },
@@ -574,7 +622,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "news"
       }
     },
@@ -590,7 +638,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "news"
       }
     },
@@ -606,7 +654,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-06-15T02:59:28.235723+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.922778+00:00",
         "confidence": "news"
       }
     },
@@ -622,7 +670,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-06-15T02:59:28.234773+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.921866+00:00",
         "confidence": "news"
       }
     },
@@ -638,7 +686,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-06-15T02:59:28.235723+00:00",
+        "retrievedAt": "2026-06-15T03:57:35.922778+00:00",
         "confidence": "news"
       }
     }

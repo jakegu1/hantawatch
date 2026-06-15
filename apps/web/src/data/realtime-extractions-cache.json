@@ -6551,6 +6551,20 @@
         "source_url": "",
         "time": "2026-06-14T15:08:26.000Z"
       }
+    ],
+    "rt-b45aded14bb1ba0f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-14",
+        "confidence": "high",
+        "reasoning_zh": "美国加州圣昆廷疑似汉坦病毒病例经复检确认为假阳性，无新增病例。",
+        "update_id": "rt-b45aded14bb1ba0f",
+        "source_url": "",
+        "time": "2026-06-14T22:53:51.000Z"
+      }
     ]
   }
 }

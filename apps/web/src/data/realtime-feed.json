@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-15T02:59:48.923792+00:00",
+  "__generated_at": "2026-06-15T03:58:01.483237+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-15T02:59:46.948440+00:00",
+  "last_fetched": "2026-06-15T03:57:54.686710+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-06-14T22:53:51.000Z",
       "title_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show - San Francisco Chronicle",
       "body_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show San Francisco Chronicle",
-      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例确认为假阳性。",
+      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例被证实为假阳性。",
       "key_facts_zh": [
         "美国",
-        "假阳性",
-        "圣昆廷监狱"
+        "圣昆廷监狱",
+        "假阳性"
       ],
       "signal_strength": "high"
     },
@@ -26,11 +26,11 @@
       "time": "2026-06-13T14:55:00.000Z",
       "title_en": "Radboudumc lifts quarantine for some staff after hantavirus exposure - NL Times",
       "body_en": "Radboudumc lifts quarantine for some staff after hantavirus exposure NL Times",
-      "summary_zh": "荷兰拉德堡德大学医学中心解除部分员工汉坦病毒暴露隔离。",
+      "summary_zh": "荷兰拉德堡德大学医学中心解除部分员工汉坦病毒暴露后的隔离。",
       "key_facts_zh": [
         "荷兰",
-        "解除隔离",
-        "拉德堡德大学"
+        "拉德堡德大学",
+        "解除隔离"
       ],
       "signal_strength": "high"
     },
@@ -43,7 +43,7 @@
       "key_facts_zh": [
         "美国",
         "堪萨斯",
-        "完成观察"
+        "观察期结束"
       ],
       "signal_strength": "high"
     },
@@ -55,8 +55,8 @@
       "summary_zh": "阿根廷卫生部：第二个省份未发现汉坦病毒。",
       "key_facts_zh": [
         "阿根廷",
-        "未发现",
-        "卫生部"
+        "卫生部",
+        "未发现"
       ],
       "signal_strength": "high"
     },
@@ -65,11 +65,11 @@
       "time": "2026-06-13T01:06:25.000Z",
       "title_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say - ABC7 Bay Area",
       "body_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say ABC7 Bay Area",
-      "summary_zh": "美国圣昆廷监狱38岁囚犯疑似汉坦病毒病例确认为假阳性。",
+      "summary_zh": "美国圣昆廷监狱一名38岁囚犯疑似汉坦病毒病例被判定为假阳性。",
       "key_facts_zh": [
         "美国",
-        "假阳性",
-        "圣昆廷监狱"
+        "圣昆廷监狱",
+        "假阳性"
       ],
       "signal_strength": "high"
     },
@@ -117,7 +117,7 @@
       "time": "2026-06-12T15:01:18.000Z",
       "title_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery - Cruise Trade News",
       "body_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery Cruise Trade News",
-      "summary_zh": "Oceanwide CEO独家谈汉坦疫情、影响及恢复。",
+      "summary_zh": "Oceanwide CEO独家谈汉坦病毒疫情影响与恢复。",
       "key_facts_zh": [
         "邮轮",
         "CEO",
@@ -159,8 +159,8 @@
       "summary_zh": "美国加州湾区监狱调查一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "加州",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -169,11 +169,11 @@
       "time": "2026-06-11T21:10:00.000Z",
       "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
       "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
-      "summary_zh": "加州调查一例疑似汉坦病毒病例，引发担忧。",
+      "summary_zh": "加州调查疑似汉坦病毒病例引发担忧。",
       "key_facts_zh": [
         "美国",
-        "加州",
-        "疑似病例"
+        "疑似病例",
+        "加州"
       ],
       "signal_strength": "medium"
     },
@@ -185,8 +185,8 @@
       "summary_zh": "当局称圣昆廷监狱一名囚犯可能感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -199,7 +199,7 @@
       "key_facts_zh": [
         "美国 CDC",
         "佛罗里达",
-        "邮轮隔离"
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -224,10 +224,10 @@
       "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加隔离中被扣为人质。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "邮轮隔离"
+        "邮轮",
+        "隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-11283d8875d25413",
@@ -237,8 +237,8 @@
       "summary_zh": "圣昆廷监狱报告一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -251,7 +251,7 @@
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "2人出院"
+        "出院"
       ],
       "signal_strength": "high"
     }
