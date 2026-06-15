@@ -6565,6 +6565,48 @@
         "source_url": "",
         "time": "2026-06-14T22:53:51.000Z"
       }
+    ],
+    "rt-1c67abff290616ab": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "标题提及世界杯期间监测疾病威胁，但未明确国家、具体数字或汉坦病毒，无法提取变化量。",
+        "update_id": "rt-1c67abff290616ab",
+        "source_url": "",
+        "time": "2026-06-13T22:45:00Z"
+      }
+    ],
+    "rt-1bfdf79bc1a80cc3": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "medium",
+        "reasoning_zh": "荷兰Radboudumc解除部分员工隔离，但未提供新增病例数字，仅提及汉坦病毒暴露。",
+        "update_id": "rt-1bfdf79bc1a80cc3",
+        "source_url": "",
+        "time": "2026-06-13T18:45:00Z"
+      }
+    ],
+    "rt-b1ca8b3e58f564b0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "标题提及游轮乘客隔离后要求回家，但未明确国家、汉坦病毒或具体数字，无法提取变化量。",
+        "update_id": "rt-b1ca8b3e58f564b0",
+        "source_url": "",
+        "time": "2026-06-13T16:00:00Z"
+      }
     ]
   }
 }
