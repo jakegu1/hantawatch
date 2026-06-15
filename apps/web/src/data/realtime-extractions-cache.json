@@ -6621,6 +6621,20 @@
         "source_url": "",
         "time": "2026-06-15T15:00:35.000Z"
       }
+    ],
+    "rt-5b0f304de72c0811": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-15",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒在游轮上被成功控制，但未提供具体国家、新增病例数或官方来源，无法提取有效变化量。",
+        "update_id": "rt-5b0f304de72c0811",
+        "source_url": "",
+        "time": "2026-06-15T15:00:35.000Z"
+      }
     ]
   }
 }
