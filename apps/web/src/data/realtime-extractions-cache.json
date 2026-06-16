@@ -6635,6 +6635,34 @@
         "source_url": "",
         "time": "2026-06-15T15:00:35.000Z"
       }
+    ],
+    "rt-cc7f2fa3ffebe39e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "报道提及联邦医学审查员和RFK Jr.，但未提供具体病例数字或国家信息，无法提取变化量。",
+        "update_id": "rt-cc7f2fa3ffebe39e",
+        "source_url": "",
+        "time": "2026-06-16T02:04:00.000Z"
+      }
+    ],
+    "rt-29b2c39c1325a8b3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-15",
+        "confidence": "low",
+        "reasoning_zh": "报道提到肯尼迪命令一名女性留在汉坦病毒隔离区，但未提供新增病例或死亡数字，无法提取变化量。",
+        "update_id": "rt-29b2c39c1325a8b3",
+        "source_url": "",
+        "time": "2026-06-15T23:29:08.000Z"
+      }
     ]
   }
 }

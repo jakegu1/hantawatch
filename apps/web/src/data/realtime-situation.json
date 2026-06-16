@@ -4,20 +4,22 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 19
+    "daysAtState": 20
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "5/28",
-    "whoDaysAgo": 18,
+    "whoDaysAgo": 19,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 13,
-    "sinceWhoNewCases": 0,
-    "sinceWhoNewCountries": [],
-    "currentReportedCases": 13
+    "sinceWhoNewCases": 1,
+    "sinceWhoNewCountries": [
+      "英国"
+    ],
+    "currentReportedCases": 14
   },
   "ruler": {
     "maxKm": 20000,
@@ -79,6 +81,16 @@
     ]
   },
   "events": [
+    {
+      "at": "2026-06-11T07:30:00Z",
+      "kind": "detection",
+      "countryZh": "英国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
     {
       "at": "2026-06-07T12:00:00Z",
       "kind": "detection",
@@ -256,7 +268,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 18,
+  "daysWithoutNewConfirmed": 5,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -292,7 +304,7 @@
         "count": 2,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-15"
+        "asOf": "2026-06-16"
       },
       {
         "zh": "法国",
@@ -306,14 +318,14 @@
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-15"
+        "asOf": "2026-06-16"
       },
       {
         "zh": "瑞士",
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-06-15"
+        "asOf": "2026-06-16"
       }
     ],
     "confirmedAttributionTotal": 11,
@@ -462,7 +474,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-15T20:53:15.826298+00:00"
+      "updatedAt": "2026-06-16T03:45:16.976116+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -470,12 +482,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-07T12:00:00Z"
+      "updatedAt": "2026-06-11T07:30:00Z"
     }
   ],
   "intake": {
     "last24hCount": 2,
-    "highConfidencePicks": 0
+    "highConfidencePicks": 1
   },
-  "realtimeUpdatedAt": "2026-06-15T20:53:19.242791+00:00"
+  "realtimeUpdatedAt": "2026-06-16T03:45:20.283856+00:00"
 }
