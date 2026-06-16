@@ -1,23 +1,62 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-16T03:45:20.286254+00:00",
+  "__generated_at": "2026-06-16T06:28:10.607668+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-16T03:45:12.636432+00:00",
+  "last_fetched": "2026-06-16T06:28:09.684164+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-f09bec40d145f926",
+      "time": "2026-06-16T04:10:46.000Z",
+      "title_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida - People.com",
+      "body_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida People.com",
+      "summary_zh": "美国邮轮乘客称因美国CDC与佛罗里达州公共卫生争议被扣留。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "美国CDC"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-58315ae98f78c7f3",
+      "time": "2026-06-16T04:02:00.000Z",
+      "title_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice - WSJ",
+      "body_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice WSJ",
+      "summary_zh": "美国卫生部长RFK Jr.下令接触汉坦病毒者违反医嘱隔离。",
+      "key_facts_zh": [
+        "美国",
+        "RFK Jr.",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-cc7f2fa3ffebe39e",
       "time": "2026-06-16T02:04:00.000Z",
       "title_en": "A federal medical reviewer said she could go home. RFK Jr. said no. - Healthbeat",
       "body_en": "A federal medical reviewer said she could go home. RFK Jr. said no. Healthbeat",
-      "summary_zh": "美国联邦医学审查员称可回家，但RFK Jr.拒绝。",
+      "summary_zh": "联邦医学审查员同意患者回家，但RFK Jr.否决。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
-        "隔离争议"
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ef6fd60f33fe2499",
+      "time": "2026-06-16T01:24:39.000Z",
+      "title_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak - Yahoo",
+      "body_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak Yahoo",
+      "summary_zh": "西班牙新增1例汉坦病毒，邮轮爆发后累计13例。",
+      "key_facts_zh": [
+        "西班牙",
+        "新增1例",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -26,11 +65,11 @@
       "time": "2026-06-15T23:29:08.000Z",
       "title_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation - Inquirer.com",
       "body_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation Inquirer.com",
-      "summary_zh": "美国CDC建议解除隔离，但肯尼迪下令女子继续隔离。",
+      "summary_zh": "美国官员Kennedy无视美国CDC建议，强制女子隔离。",
       "key_facts_zh": [
         "美国",
         "美国CDC",
-        "隔离命令"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -42,8 +81,20 @@
       "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例为假阳性。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
         "假阳性"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-ee64dd0ca7943109",
+      "time": "2026-06-13T03:39:43.000Z",
+      "title_en": "U.S. Pays $750K to Evacuate American From Remote Island After She Was Aboard Hantavirus Cruise Ship: Report - People.com",
+      "body_en": "U.S. Pays $750K to Evacuate American From Remote Island After She Was Aboard Hantavirus Cruise Ship: Report People.com",
+      "summary_zh": "美国支付75万美元从偏远岛屿撤离一名汉坦病毒邮轮乘客。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "撤离"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +103,7 @@
       "time": "2026-06-13T02:13:39.000Z",
       "title_en": "No hantavirus found in second Argentine province: ministry - ET HealthWorld",
       "body_en": "No hantavirus found in second Argentine province: ministry ET HealthWorld",
-      "summary_zh": "阿根廷第二个省份未发现汉坦病毒。",
+      "summary_zh": "阿根廷卫生部：第二个省份未发现汉坦病毒。",
       "key_facts_zh": [
         "阿根廷",
         "未发现"
@@ -64,11 +115,11 @@
       "time": "2026-06-13T01:06:25.000Z",
       "title_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say - ABC7 Bay Area",
       "body_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say ABC7 Bay Area",
-      "summary_zh": "美国圣昆廷康复中心疑似汉坦病毒病例被排除。",
+      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例确认为假阳性。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷",
-        "排除"
+        "圣昆廷监狱",
+        "假阳性"
       ],
       "signal_strength": "high"
     },
@@ -80,7 +131,7 @@
       "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例为假阳性。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷",
+        "圣昆廷监狱",
         "假阳性"
       ],
       "signal_strength": "high"
@@ -93,8 +144,7 @@
       "summary_zh": "泛美卫生组织加强美洲汉坦病毒监测。",
       "key_facts_zh": [
         "泛美卫生组织",
-        "美洲",
-        "监测"
+        "加强监测"
       ],
       "signal_strength": "high"
     },
@@ -103,7 +153,7 @@
       "time": "2026-06-12T18:16:51.000Z",
       "title_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model - Genetic Engineering and Biotechnology News",
       "body_en": "Hantavirus One-Shot mRNA Vaccine Fully Protects in Syrian Hamster Model Genetic Engineering and Biotechnology News",
-      "summary_zh": "汉坦病毒单剂mRNA疫苗在叙利亚仓鼠模型中完全保护。",
+      "summary_zh": "汉坦病毒单次mRNA疫苗在叙利亚仓鼠模型中完全保护。",
       "key_facts_zh": [
         "mRNA疫苗",
         "仓鼠模型",
@@ -116,11 +166,10 @@
       "time": "2026-06-12T11:20:04.000Z",
       "title_en": "Scientists track single-dose vaccines for Andes hantavirus strain - Medical Xpress",
       "body_en": "Scientists track single-dose vaccines for Andes hantavirus strain Medical Xpress",
-      "summary_zh": "科学家追踪安第斯汉坦病毒株单剂疫苗。",
+      "summary_zh": "科学家追踪安第斯汉坦病毒株的单剂疫苗研究。",
       "key_facts_zh": [
-        "安第斯病毒",
-        "单剂疫苗",
-        "研究"
+        "疫苗研究",
+        "安第斯病毒"
       ],
       "signal_strength": "medium"
     },
@@ -129,24 +178,24 @@
       "time": "2026-06-11T21:34:04.000Z",
       "title_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison - SFGATE",
       "body_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison SFGATE",
-      "summary_zh": "美国湾区监狱调查一例潜在汉坦病毒病例。",
+      "summary_zh": "加州湾区监狱调查一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "湾区监狱",
-        "调查"
+        "疑似病例",
+        "监狱"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-06d353e970a4f0b7",
       "time": "2026-06-11T21:10:00.000Z",
       "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
       "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
-      "summary_zh": "美国加州调查一例疑似汉坦病毒病例。",
+      "summary_zh": "加州调查疑似汉坦病毒病例，引发担忧。",
       "key_facts_zh": [
         "美国",
-        "加州",
-        "疑似病例"
+        "疑似病例",
+        "加州"
       ],
       "signal_strength": "medium"
     },
@@ -155,11 +204,11 @@
       "time": "2026-06-11T20:25:00.000Z",
       "title_en": "Prisoner at San Quentin may have hantavirus, authorities say - The Independent",
       "body_en": "Prisoner at San Quentin may have hantavirus, authorities say The Independent",
-      "summary_zh": "美国圣昆廷监狱一名囚犯可能感染汉坦病毒。",
+      "summary_zh": "当局称圣昆廷监狱一名囚犯可能感染汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -168,7 +217,7 @@
       "time": "2026-06-11T19:47:58.000Z",
       "title_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine - NBC News",
       "body_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine NBC News",
-      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客隔离问题产生分歧。",
+      "summary_zh": "美国 CDC 与佛罗里达州就邮轮乘客汉坦病毒隔离问题存在分歧。",
       "key_facts_zh": [
         "美国 CDC",
         "佛罗里达",
@@ -184,8 +233,8 @@
       "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加隔离中被扣为人质。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "邮轮隔离"
+        "邮轮",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -194,11 +243,11 @@
       "time": "2026-06-11T18:19:19.000Z",
       "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
       "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "美国圣昆廷监狱报告一例可能汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告一例疑似汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "疑似病例"
+        "疑似病例",
+        "监狱"
       ],
       "signal_strength": "medium"
     },
@@ -207,37 +256,11 @@
       "time": "2026-06-11T18:16:00.000Z",
       "title_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island - AP News",
       "body_en": "US puts up $750K to evacuate an American who was aboard hantavirus cruise ship from remote island AP News",
-      "summary_zh": "美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮乘客。",
+      "summary_zh": "美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮上的美国人。",
       "key_facts_zh": [
         "美国",
         "邮轮",
         "撤离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0010840f113f97aa",
-      "time": "2026-06-11T16:52:00.000Z",
-      "title_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha - WOWT",
-      "body_en": "Hantavirus update: 2 more cruise ship passengers leave National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "奥马哈国家隔离单元又有两名邮轮乘客离开。",
-      "key_facts_zh": [
-        "美国",
-        "奥马哈",
-        "邮轮乘客离开"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-bf981cd325b2ab0d",
-      "time": "2026-06-11T07:30:00.000Z",
-      "title_en": "Hantavirus: UK Reports Confirmed Case in Tristan da Cunha, Says WHO Chief - Health and Me",
-      "body_en": "Hantavirus: UK Reports Confirmed Case in Tristan da Cunha, Says WHO Chief Health and Me",
-      "summary_zh": "WHO 通报英国特里斯坦达库尼亚群岛出现汉坦病毒确诊病例。",
-      "key_facts_zh": [
-        "WHO",
-        "英国",
-        "确诊"
       ],
       "signal_strength": "high"
     }
