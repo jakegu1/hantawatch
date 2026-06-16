@@ -6733,6 +6733,132 @@
         "source_url": "",
         "time": "2026-06-13T11:39:39.000Z"
       }
+    ],
+    "rt-03c3cec517e106bd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "报道一名乘客在Nebraska被隔离，未提供新增病例数字。",
+        "update_id": "rt-03c3cec517e106bd",
+        "source_url": "",
+        "time": "2026-06-16T19:53:35.000Z"
+      }
+    ],
+    "rt-710fe341bb6b9c10": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "报道RFK Jr.命令一名女性继续隔离，未提供新增病例数字。",
+        "update_id": "rt-710fe341bb6b9c10",
+        "source_url": "",
+        "time": "2026-06-16T19:18:05.000Z"
+      }
+    ],
+    "rt-c136c970348bec79": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "报道Kennedy命令一名美国人隔离，未提供新增病例数字。",
+        "update_id": "rt-c136c970348bec79",
+        "source_url": "",
+        "time": "2026-06-16T18:43:59.000Z"
+      }
+    ],
+    "rt-8dd14a3621f9854e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国参议员致信特朗普政府关注埃博拉和汉坦病毒威胁，未提供新增病例数字。",
+        "update_id": "rt-8dd14a3621f9854e",
+        "source_url": "",
+        "time": "2026-06-16T18:00:00.000Z"
+      }
+    ],
+    "rt-b278fe786d6e038a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "报道各国对Andes汉坦病毒患者出院标准不同，未提及具体国家或数字。",
+        "update_id": "rt-b278fe786d6e038a",
+        "source_url": "",
+        "time": "2026-06-16T16:55:15.000Z"
+      }
+    ],
+    "rt-126ec19852c1905a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "报道一名美国人称隔离令像报复，未提供新增病例数字。",
+        "update_id": "rt-126ec19852c1905a",
+        "source_url": "",
+        "time": "2026-06-16T15:29:00.000Z"
+      }
+    ],
+    "rt-3ff7051158efb4e2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "报道Inflammatix与Nebraska大学合作应对汉坦疫情，未提供新增病例数字。",
+        "update_id": "rt-3ff7051158efb4e2",
+        "source_url": "",
+        "time": "2026-06-16T14:08:00.000Z"
+      }
+    ],
+    "rt-c4da1e7fd4c55f68": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-15",
+        "confidence": "medium",
+        "reasoning_zh": "报道Kennedy命令女性隔离，无视CDC建议，未提供新增病例数字。",
+        "update_id": "rt-c4da1e7fd4c55f68",
+        "source_url": "",
+        "time": "2026-06-15T21:47:21.000Z"
+      }
+    ],
+    "rt-9ef85af5cd276cfd": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-12",
+        "confidence": "high",
+        "reasoning_zh": "WHO报道21国启动研究计划，未提及具体国家新增病例数。",
+        "update_id": "rt-9ef85af5cd276cfd",
+        "source_url": "",
+        "time": "2026-06-12T14:47:02.000Z"
+      }
     ]
   }
 }
