@@ -6705,6 +6705,34 @@
         "source_url": "",
         "time": "2026-06-16T04:02:00.000Z"
       }
+    ],
+    "rt-4775553d0832ab58": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及合作，无具体国家或病例数据。",
+        "update_id": "rt-4775553d0832ab58",
+        "source_url": "",
+        "time": "2026-06-16T14:08:00.000Z"
+      }
+    ],
+    "rt-4e142b9df3ce45ba": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-13",
+        "confidence": "low",
+        "reasoning_zh": "新闻未提及国家或汉坦病毒病例数据。",
+        "update_id": "rt-4e142b9df3ce45ba",
+        "source_url": "",
+        "time": "2026-06-13T11:39:39.000Z"
+      }
     ]
   }
 }
