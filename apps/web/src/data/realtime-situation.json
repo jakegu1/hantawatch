@@ -17,7 +17,7 @@
     "whoConfirmedCases": 13,
     "sinceWhoNewCases": 1,
     "sinceWhoNewCountries": [
-      "英国"
+      "西班牙"
     ],
     "currentReportedCases": 14
   },
@@ -82,16 +82,6 @@
   },
   "events": [
     {
-      "at": "2026-06-11T07:30:00Z",
-      "kind": "detection",
-      "countryZh": "英国",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
-    {
       "at": "2026-06-07T12:00:00Z",
       "kind": "detection",
       "countryZh": "美国",
@@ -130,6 +120,16 @@
       "shortContext": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
       "verdict": "随访更新",
       "source": "es_isciii"
+    },
+    {
+      "at": "2026-05-29T22:49:30Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
     },
     {
       "at": "2026-05-28T12:00:00Z",
@@ -268,7 +268,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 5,
+  "daysWithoutNewConfirmed": 18,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -474,7 +474,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-16T03:45:16.976116+00:00"
+      "updatedAt": "2026-06-16T11:06:27.764782+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -482,12 +482,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-11T07:30:00Z"
+      "updatedAt": "2026-06-07T12:00:00Z"
     }
   ],
   "intake": {
-    "last24hCount": 2,
+    "last24hCount": 6,
     "highConfidencePicks": 1
   },
-  "realtimeUpdatedAt": "2026-06-16T03:45:20.283856+00:00"
+  "realtimeUpdatedAt": "2026-06-16T11:06:31.511073+00:00"
 }

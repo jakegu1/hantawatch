@@ -1,23 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-16T06:28:10.607668+00:00",
+  "__generated_at": "2026-06-16T11:06:31.515475+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-16T06:28:09.684164+00:00",
+  "last_fetched": "2026-06-16T11:06:23.365544+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-0a9af36e2ee41f62",
+      "time": "2026-06-16T07:33:59.000Z",
+      "title_en": "Vaccine Breakthrough Targets Andes Hantavirus - EMJ",
+      "body_en": "Vaccine Breakthrough Targets Andes Hantavirus EMJ",
+      "summary_zh": "EMJ 报道针对安第斯汉坦病毒的疫苗突破。",
+      "key_facts_zh": [
+        "疫苗突破",
+        "安第斯汉坦病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-f09bec40d145f926",
       "time": "2026-06-16T04:10:46.000Z",
       "title_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida - People.com",
       "body_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida People.com",
-      "summary_zh": "美国邮轮乘客称因美国CDC与佛罗里达州公共卫生争议被扣留。",
+      "summary_zh": "邮轮汉坦病毒乘客称因美国 CDC 与佛罗里达争端被扣留。",
       "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "美国CDC"
+        "美国 CDC",
+        "佛罗里达",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -26,7 +38,7 @@
       "time": "2026-06-16T04:02:00.000Z",
       "title_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice - WSJ",
       "body_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice WSJ",
-      "summary_zh": "美国卫生部长RFK Jr.下令接触汉坦病毒者违反医嘱隔离。",
+      "summary_zh": "RFK Jr. 命令接触汉坦病毒的美国人违反医嘱隔离。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
@@ -39,7 +51,7 @@
       "time": "2026-06-16T02:04:00.000Z",
       "title_en": "A federal medical reviewer said she could go home. RFK Jr. said no. - Healthbeat",
       "body_en": "A federal medical reviewer said she could go home. RFK Jr. said no. Healthbeat",
-      "summary_zh": "联邦医学审查员同意患者回家，但RFK Jr.否决。",
+      "summary_zh": "联邦医学审查员允许患者回家，但 RFK Jr. 拒绝。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
@@ -52,10 +64,10 @@
       "time": "2026-06-16T01:24:39.000Z",
       "title_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak - Yahoo",
       "body_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak Yahoo",
-      "summary_zh": "西班牙新增1例汉坦病毒，邮轮爆发后累计13例。",
+      "summary_zh": "西班牙新增 1 例汉坦病毒，邮轮爆发后总数达 13 例。",
       "key_facts_zh": [
         "西班牙",
-        "新增1例",
+        "新增 1 例",
         "邮轮"
       ],
       "signal_strength": "high"
@@ -65,10 +77,10 @@
       "time": "2026-06-15T23:29:08.000Z",
       "title_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation - Inquirer.com",
       "body_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation Inquirer.com",
-      "summary_zh": "美国官员Kennedy无视美国CDC建议，强制女子隔离。",
+      "summary_zh": "肯尼迪不顾美国 CDC 建议，命令女子继续隔离。",
       "key_facts_zh": [
         "美国",
-        "美国CDC",
+        "美国 CDC",
         "隔离"
       ],
       "signal_strength": "high"
@@ -78,10 +90,11 @@
       "time": "2026-06-14T22:53:51.000Z",
       "title_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show - San Francisco Chronicle",
       "body_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show San Francisco Chronicle",
-      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例为假阳性。",
+      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例确认为假阳性。",
       "key_facts_zh": [
         "美国",
-        "假阳性"
+        "假阳性",
+        "圣昆廷监狱"
       ],
       "signal_strength": "high"
     },
@@ -90,11 +103,11 @@
       "time": "2026-06-13T03:39:43.000Z",
       "title_en": "U.S. Pays $750K to Evacuate American From Remote Island After She Was Aboard Hantavirus Cruise Ship: Report - People.com",
       "body_en": "U.S. Pays $750K to Evacuate American From Remote Island After She Was Aboard Hantavirus Cruise Ship: Report People.com",
-      "summary_zh": "美国支付75万美元从偏远岛屿撤离一名汉坦病毒邮轮乘客。",
+      "summary_zh": "美国花费75万美元从偏远岛屿撤离一名曾乘坐汉坦病毒邮轮的公民。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "撤离"
+        "撤离",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -106,6 +119,7 @@
       "summary_zh": "阿根廷卫生部：第二个省份未发现汉坦病毒。",
       "key_facts_zh": [
         "阿根廷",
+        "卫生部",
         "未发现"
       ],
       "signal_strength": "high"
@@ -115,7 +129,7 @@
       "time": "2026-06-13T01:06:25.000Z",
       "title_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say - ABC7 Bay Area",
       "body_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say ABC7 Bay Area",
-      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例确认为假阳性。",
+      "summary_zh": "美国圣昆廷监狱38岁男囚疑似汉坦病毒病例确认为假阳性。",
       "key_facts_zh": [
         "美国",
         "圣昆廷监狱",
@@ -133,18 +147,6 @@
         "美国",
         "圣昆廷监狱",
         "假阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-50381f9481e0687a",
-      "time": "2026-06-12T19:23:14.000Z",
-      "title_en": "PAHO and partners strengthen surveillance of hantavirus and other hemorrhagic fevers in the Americas - Pan American Health Organization (PAHO)",
-      "body_en": "PAHO and partners strengthen surveillance of hantavirus and other hemorrhagic fevers in the Americas Pan American Health Organization (PAHO)",
-      "summary_zh": "泛美卫生组织加强美洲汉坦病毒监测。",
-      "key_facts_zh": [
-        "泛美卫生组织",
-        "加强监测"
       ],
       "signal_strength": "high"
     },
@@ -217,11 +219,11 @@
       "time": "2026-06-11T19:47:58.000Z",
       "title_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine - NBC News",
       "body_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine NBC News",
-      "summary_zh": "美国 CDC 与佛罗里达州就邮轮乘客汉坦病毒隔离问题存在分歧。",
+      "summary_zh": "美国 CDC 与佛罗里达州就汉坦病毒邮轮乘客隔离问题发生分歧。",
       "key_facts_zh": [
         "美国 CDC",
         "佛罗里达",
-        "邮轮隔离"
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -243,7 +245,7 @@
       "time": "2026-06-11T18:19:19.000Z",
       "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
       "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "圣昆廷监狱报告一例疑似汉坦病毒病例。",
+      "summary_zh": "圣昆廷监狱报告一例可能汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
         "疑似病例",
@@ -259,7 +261,7 @@
       "summary_zh": "美国出资75万美元从偏远岛屿撤离一名汉坦病毒邮轮上的美国人。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
+        "75万美元",
         "撤离"
       ],
       "signal_strength": "high"

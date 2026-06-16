@@ -6663,6 +6663,48 @@
         "source_url": "",
         "time": "2026-06-15T23:29:08.000Z"
       }
+    ],
+    "rt-0a9af36e2ee41f62": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及疫苗突破，但无具体国家、无病例数字变化。",
+        "update_id": "rt-0a9af36e2ee41f62",
+        "source_url": "",
+        "time": "2026-06-16T07:33:59.000Z"
+      }
+    ],
+    "rt-f09bec40d145f926": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "涉及美国佛罗里达州邮轮乘客，但无新增病例数字。",
+        "update_id": "rt-f09bec40d145f926",
+        "source_url": "",
+        "time": "2026-06-16T04:10:46.000Z"
+      }
+    ],
+    "rt-58315ae98f78c7f3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "美国一例暴露者被隔离，但无新增确诊病例数字。",
+        "update_id": "rt-58315ae98f78c7f3",
+        "source_url": "",
+        "time": "2026-06-16T04:02:00.000Z"
+      }
     ]
   }
 }
