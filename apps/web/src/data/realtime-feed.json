@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-15T22:12:29.847768+00:00",
+  "__generated_at": "2026-06-16T00:25:32.945633+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-15T22:12:28.845019+00:00",
+  "last_fetched": "2026-06-16T00:25:31.573862+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-29b2c39c1325a8b3",
+      "time": "2026-06-15T23:29:08.000Z",
+      "title_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation - Inquirer.com",
+      "body_en": "Kennedy orders woman to stay in hantavirus quarantine, despite CDC recommendation Inquirer.com",
+      "summary_zh": "美国肯尼迪下令女子继续隔离汉坦病毒，无视美国 CDC 建议。",
+      "key_facts_zh": [
+        "美国",
+        "隔离",
+        "美国 CDC"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-5b0f304de72c0811",
       "time": "2026-06-15T15:00:35.000Z",
@@ -25,23 +38,11 @@
       "time": "2026-06-14T22:53:51.000Z",
       "title_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show - San Francisco Chronicle",
       "body_en": "San Quentin’s suspected hantavirus case a false positive, additional tests show San Francisco Chronicle",
-      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例为假阳性。",
+      "summary_zh": "美国圣昆廷监狱疑似汉坦病毒病例确认为假阳性。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷监狱",
-        "假阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c07b01e714554e67",
-      "time": "2026-06-13T14:55:00.000Z",
-      "title_en": "Radboudumc lifts quarantine for some staff after hantavirus exposure - NL Times",
-      "body_en": "Radboudumc lifts quarantine for some staff after hantavirus exposure NL Times",
-      "summary_zh": "荷兰 Radboudumc 解除部分员工汉坦病毒隔离。",
-      "key_facts_zh": [
-        "荷兰",
-        "解除隔离"
+        "假阳性",
+        "监狱"
       ],
       "signal_strength": "high"
     },
@@ -90,8 +91,7 @@
       "body_en": "PAHO and partners strengthen surveillance of hantavirus and other hemorrhagic fevers in the Americas Pan American Health Organization (PAHO)",
       "summary_zh": "泛美卫生组织加强美洲汉坦病毒监测。",
       "key_facts_zh": [
-        "PAHO",
-        "美洲",
+        "泛美卫生组织",
         "加强监测"
       ],
       "signal_strength": "high"
@@ -114,7 +114,7 @@
       "time": "2026-06-12T15:01:18.000Z",
       "title_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery - Cruise Trade News",
       "body_en": "Exclusive: Oceanwide CEO on hantavirus outbreak, impact and recovery Cruise Trade News",
-      "summary_zh": "Oceanwide CEO独家谈汉坦病毒疫情影响与恢复。",
+      "summary_zh": "Oceanwide CEO谈汉坦病毒疫情影响与恢复。",
       "key_facts_zh": [
         "Oceanwide",
         "CEO",
@@ -127,49 +127,10 @@
       "time": "2026-06-12T11:20:04.000Z",
       "title_en": "Scientists track single-dose vaccines for Andes hantavirus strain - Medical Xpress",
       "body_en": "Scientists track single-dose vaccines for Andes hantavirus strain Medical Xpress",
-      "summary_zh": "科学家追踪安第斯汉坦病毒株的单剂疫苗。",
+      "summary_zh": "科学家追踪安第斯汉坦病毒株单剂疫苗。",
       "key_facts_zh": [
-        "疫苗研究",
-        "安第斯病毒"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-67d4b9064c2313a3",
-      "time": "2026-06-11T21:34:04.000Z",
-      "title_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison - SFGATE",
-      "body_en": "Potential case of rare and deadly hantavirus investigated at Bay Area prison SFGATE",
-      "summary_zh": "加州湾区监狱调查一例罕见汉坦病毒疑似病例。",
-      "key_facts_zh": [
-        "美国",
-        "疑似病例",
-        "监狱"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-06d353e970a4f0b7",
-      "time": "2026-06-11T21:10:00.000Z",
-      "title_en": "Hantavirus fears reignite as suspected case is investigated in California - The Independent",
-      "body_en": "Hantavirus fears reignite as suspected case is investigated in California The Independent",
-      "summary_zh": "加州调查疑似汉坦病毒病例引发担忧。",
-      "key_facts_zh": [
-        "美国",
-        "疑似病例",
-        "加州"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-7999ef3387a38965",
-      "time": "2026-06-11T20:25:00.000Z",
-      "title_en": "Prisoner at San Quentin may have hantavirus, authorities say - The Independent",
-      "body_en": "Prisoner at San Quentin may have hantavirus, authorities say The Independent",
-      "summary_zh": "当局称圣昆廷监狱一名囚犯可能感染汉坦病毒。",
-      "key_facts_zh": [
-        "美国",
-        "疑似病例",
-        "监狱"
+        "安第斯病毒",
+        "单剂疫苗"
       ],
       "signal_strength": "medium"
     },
@@ -178,7 +139,7 @@
       "time": "2026-06-11T19:47:58.000Z",
       "title_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine - NBC News",
       "body_en": "CDC and Florida at odds over hantavirus cruise ship passenger’s quarantine NBC News",
-      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客汉坦病毒隔离问题产生分歧。",
+      "summary_zh": "美国CDC与佛罗里达州就邮轮乘客隔离问题产生分歧。",
       "key_facts_zh": [
         "美国 CDC",
         "佛罗里达",
@@ -195,22 +156,9 @@
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "隔离"
+        "内布拉斯加"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-11283d8875d25413",
-      "time": "2026-06-11T18:19:19.000Z",
-      "title_en": "Possible hantavirus case reported at San Quentin - NBC Bay Area",
-      "body_en": "Possible hantavirus case reported at San Quentin NBC Bay Area",
-      "summary_zh": "圣昆廷监狱报告一例可能的汉坦病毒病例。",
-      "key_facts_zh": [
-        "美国",
-        "疑似病例",
-        "监狱"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-2387c0d72c326103",
