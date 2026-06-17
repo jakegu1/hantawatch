@@ -1,8 +1,8 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-17T03:47:26.565683+00:00",
-  "lastCollectedAt": "2026-06-17T03:47:26.562161+00:00",
-  "lastCollectedAtCn": "2026-06-17T11:47:26.562167+08:00",
+  "__generated_at": "2026-06-17T10:50:28.538553+00:00",
+  "lastCollectedAt": "2026-06-17T10:50:28.534918+00:00",
+  "lastCollectedAtCn": "2026-06-17T18:50:28.534925+08:00",
   "sources": {
     "who_don": {
       "entries": 4,
@@ -12,7 +12,7 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 5,
+      "entries": 4,
       "ok": true,
       "perQuery": [
         {
@@ -22,8 +22,8 @@
           "blocked": 1,
           "no_signal": 9,
           "duplicate": 0,
-          "non_authoritative": 10,
-          "kept": 5,
+          "non_authoritative": 11,
+          "kept": 4,
           "ok": true
         }
       ]
@@ -31,16 +31,8 @@
     "official_sources": {
       "entries": 12,
       "ok": true,
-      "okCount": 9,
-      "checkedAt": "2026-06-17T03:46:35.527861+00:00"
-    },
-    "surveillance_leads": {
-      "entries": 3,
-      "ok": true
-    },
-    "feeds_light_run": {
-      "ok": true,
-      "at": "2026-06-17T03:47:26.562161+00:00"
+      "okCount": 10,
+      "checkedAt": "2026-06-17T10:49:54.580234+00:00"
     }
   },
   "clusterCount": 1,

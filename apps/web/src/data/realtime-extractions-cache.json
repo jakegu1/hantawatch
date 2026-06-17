@@ -6943,6 +6943,62 @@
         "source_url": "",
         "time": "2026-06-16T18:28:59.000Z"
       }
+    ],
+    "rt-71d4f95e0d14d9f7": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙马德里医院出院最后一名汉坦病毒患者，无新增病例数字。",
+        "update_id": "rt-71d4f95e0d14d9f7",
+        "source_url": "",
+        "time": "2026-06-17T09:28:54.000Z"
+      }
+    ],
+    "rt-ce8aa37782d6f0f8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "medium",
+        "reasoning_zh": "美国内布拉斯加大学医学中心合作使用TriVerity应对疫情，无新增病例数字。",
+        "update_id": "rt-ce8aa37782d6f0f8",
+        "source_url": "",
+        "time": "2026-06-17T05:27:08.000Z"
+      }
+    ],
+    "rt-49f7f8abc48c5f68": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "RFK Jr. 否决专家意见，对游轮乘客隔离，未提及具体国家或新增病例。",
+        "update_id": "rt-49f7f8abc48c5f68",
+        "source_url": "",
+        "time": "2026-06-17T05:01:07.000Z"
+      }
+    ],
+    "rt-edce61ca20cc187b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "RFK Jr. 否决专家意见，对游轮乘客隔离，未提及具体国家或新增病例。",
+        "update_id": "rt-edce61ca20cc187b",
+        "source_url": "",
+        "time": "2026-06-17T00:25:00.000Z"
+      }
     ]
   }
 }
