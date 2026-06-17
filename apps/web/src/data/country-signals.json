@@ -1,24 +1,30 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-17T11:42:23.544567+00:00",
+  "__generated_at": "2026-06-17T14:58:06.667000+00:00",
   "windowDays": 30,
   "source": "https://hantaflow.com/api/signals.json",
   "countries": {
     "AR": {
       "iso2": "AR",
-      "signalCount30d": 15,
-      "signalCount7d": 4,
+      "signalCount30d": 18,
+      "signalCount7d": 5,
       "lastSignalAt": "2026-06-16T22:13:25+00:00"
+    },
+    "US": {
+      "iso2": "US",
+      "signalCount30d": 5,
+      "signalCount7d": 3,
+      "lastSignalAt": "2026-06-16T20:52:05+00:00"
     },
     "FR": {
       "iso2": "FR",
-      "signalCount30d": 7,
+      "signalCount30d": 8,
       "signalCount7d": 3,
       "lastSignalAt": "2026-06-15T15:14:36+00:00"
     },
     "ES": {
       "iso2": "ES",
-      "signalCount30d": 19,
+      "signalCount30d": 16,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T17:11:07+00:00"
     },
@@ -27,12 +33,6 @@
       "signalCount30d": 4,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T11:01:46+00:00"
-    },
-    "US": {
-      "iso2": "US",
-      "signalCount30d": 4,
-      "signalCount7d": 2,
-      "lastSignalAt": "2026-06-12T05:57:55+00:00"
     },
     "VN": {
       "iso2": "VN",
@@ -54,7 +54,7 @@
     },
     "PT": {
       "iso2": "PT",
-      "signalCount30d": 7,
+      "signalCount30d": 6,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-04T07:00:00+00:00"
     },
