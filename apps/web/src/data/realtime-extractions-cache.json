@@ -6999,6 +6999,76 @@
         "source_url": "",
         "time": "2026-06-17T00:25:00.000Z"
       }
+    ],
+    "rt-e03e72b944ac11a4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及佛罗里达州一名女性接触汉坦病毒后被隔离，无新增病例数字。",
+        "update_id": "rt-e03e72b944ac11a4",
+        "source_url": "",
+        "time": "2026-06-17T14:18:31.000Z"
+      }
+    ],
+    "rt-e73e8dd24e2c7544": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及一名汉坦病毒患者被强制隔离，无新增病例数字。",
+        "update_id": "rt-e73e8dd24e2c7544",
+        "source_url": "",
+        "time": "2026-06-17T12:19:56.000Z"
+      }
+    ],
+    "rt-5888b350629e1746": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及一名美国人接触汉坦病毒后被强制隔离，无新增病例数字。",
+        "update_id": "rt-5888b350629e1746",
+        "source_url": "",
+        "time": "2026-06-17T10:43:00.000Z"
+      }
+    ],
+    "rt-052953deeecfb1d1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及一名佛罗里达州邮轮乘客被隔离，无新增病例数字。",
+        "update_id": "rt-052953deeecfb1d1",
+        "source_url": "",
+        "time": "2026-06-16T21:43:23.000Z"
+      }
+    ],
+    "rt-779f41ac46c06c4a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及一名邮轮乘客被强制隔离，无新增病例数字。",
+        "update_id": "rt-779f41ac46c06c4a",
+        "source_url": "",
+        "time": "2026-06-16T20:52:05.000Z"
+      }
     ]
   }
 }

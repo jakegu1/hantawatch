@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-17T14:58:06.666524+00:00",
+  "__generated_at": "2026-06-17T15:20:08.991869+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-17T14:58:05.640198+00:00",
+  "last_fetched": "2026-06-17T15:20:01.161319+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,9 +13,10 @@
       "time": "2026-06-17T14:18:31.000Z",
       "title_en": "Feds Order FL Woman Exposed To Hantavirus To Remain Quarantined - Patch",
       "body_en": "Feds Order FL Woman Exposed To Hantavirus To Remain Quarantined Patch",
-      "summary_zh": "美国佛罗里达州一女子因接触汉坦病毒被联邦强制隔离。",
+      "summary_zh": "美国联邦政府命令佛罗里达州一名接触汉坦病毒的妇女继续隔离。",
       "key_facts_zh": [
         "美国",
+        "佛罗里达",
         "强制隔离"
       ],
       "signal_strength": "high"
@@ -25,10 +26,11 @@
       "time": "2026-06-17T12:19:56.000Z",
       "title_en": "Robert F. Kennedy Jr. is forcing a hantavirus patient to remain in quarantine - Yahoo",
       "body_en": "Robert F. Kennedy Jr. is forcing a hantavirus patient to remain in quarantine Yahoo",
-      "summary_zh": "罗伯特·肯尼迪强制一名汉坦病毒患者隔离。",
+      "summary_zh": "罗伯特·F·肯尼迪强制一名汉坦病毒患者继续隔离。",
       "key_facts_zh": [
         "美国",
-        "强制隔离"
+        "强制隔离",
+        "肯尼迪"
       ],
       "signal_strength": "high"
     },
@@ -37,10 +39,11 @@
       "time": "2026-06-17T10:43:00.000Z",
       "title_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will - Emirates 24|7",
       "body_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will Emirates 24|7",
-      "summary_zh": "肯尼迪下令一名接触汉坦病毒的美国人强制隔离。",
+      "summary_zh": "肯尼迪命令一名接触汉坦病毒的美国人违背其意愿隔离。",
       "key_facts_zh": [
         "美国",
-        "强制隔离"
+        "强制隔离",
+        "肯尼迪"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +55,8 @@
       "summary_zh": "马德里戈麦斯乌拉医院出院最后一名汉坦病毒患者。",
       "key_facts_zh": [
         "西班牙",
-        "出院"
+        "马德里",
+        "患者出院"
       ],
       "signal_strength": "high"
     },
@@ -61,10 +65,11 @@
       "time": "2026-06-17T05:27:08.000Z",
       "title_en": "Inflammatix Collaborates with University of Nebraska Medical Center to Support Rapid Response to the Hantavirus Outbreak Using TriVerity - BioSpace",
       "body_en": "Inflammatix Collaborates with University of Nebraska Medical Center to Support Rapid Response to the Hantavirus Outbreak Using TriVerity BioSpace",
-      "summary_zh": "Inflammatix 与内布拉斯加医学中心合作应对汉坦病毒。",
+      "summary_zh": "Inflammatix与内布拉斯加医学中心合作，用TriVerity快速应对汉坦疫情。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "合作"
+        "合作",
+        "快速检测"
       ],
       "signal_strength": "medium"
     },
@@ -73,7 +78,7 @@
       "time": "2026-06-17T03:43:02.000Z",
       "title_en": "Hantavirus cruise passenger says she’s being forced to quarantine in Nebraska - The Washington Post",
       "body_en": "Hantavirus cruise passenger says she’s being forced to quarantine in Nebraska The Washington Post",
-      "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加被强制隔离。",
+      "summary_zh": "华盛顿邮报：汉坦病毒邮轮乘客称在内布拉斯加被强制隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -86,11 +91,11 @@
       "time": "2026-06-17T00:50:55.000Z",
       "title_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger in quarantine - AP News",
       "body_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger in quarantine AP News",
-      "summary_zh": "美国卫生部长RFK Jr.推翻专家意见，强制汉坦病毒邮轮乘客隔离。",
+      "summary_zh": "美联社：RFK Jr.否决专家意见，维持汉坦病毒邮轮乘客隔离。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
-        "邮轮隔离"
+        "隔离争议"
       ],
       "signal_strength": "high"
     },
@@ -99,11 +104,11 @@
       "time": "2026-06-16T22:45:27.000Z",
       "title_en": "Woman exposed to hantavirus slams RFK Jr’s ‘arbitrary’ order to stay in quarantine facility - CNN",
       "body_en": "Woman exposed to hantavirus slams RFK Jr’s ‘arbitrary’ order to stay in quarantine facility CNN",
-      "summary_zh": "美国一女子因接触汉坦病毒被强制隔离，批评RFK Jr.命令武断。",
+      "summary_zh": "CNN：接触汉坦病毒女性抨击RFK Jr.的隔离令。",
       "key_facts_zh": [
         "美国",
-        "强制隔离",
-        "RFK Jr."
+        "RFK Jr.",
+        "隔离争议"
       ],
       "signal_strength": "high"
     },
@@ -112,11 +117,11 @@
       "time": "2026-06-16T21:50:00.000Z",
       "title_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice - WSJ",
       "body_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice WSJ",
-      "summary_zh": "美国卫生部长RFK Jr.无视医学建议，命令汉坦病毒暴露者继续隔离。",
+      "summary_zh": "华尔街日报：RFK Jr.违反医学建议，下令汉坦病毒接触者继续隔离。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
-        "强制隔离"
+        "隔离争议"
       ],
       "signal_strength": "high"
     },
@@ -125,11 +130,11 @@
       "time": "2026-06-16T21:43:23.000Z",
       "title_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger from Florida in quarantine - WFLA",
       "body_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger from Florida in quarantine WFLA",
-      "summary_zh": "美国卫生部长RFK Jr.推翻专家意见，强制佛罗里达州邮轮乘客隔离。",
+      "summary_zh": "WFLA：RFK Jr.否决专家意见，维持佛罗里达邮轮乘客隔离。",
       "key_facts_zh": [
         "美国",
-        "佛罗里达",
-        "邮轮隔离"
+        "RFK Jr.",
+        "隔离争议"
       ],
       "signal_strength": "high"
     },
@@ -138,11 +143,11 @@
       "time": "2026-06-16T21:18:00.000Z",
       "title_en": "RFK Jr. orders continued hantavirus quarantine of American woman despite CDC advice - The Hill",
       "body_en": "RFK Jr. orders continued hantavirus quarantine of American woman despite CDC advice The Hill",
-      "summary_zh": "美国卫生部长RFK Jr.不顾美国CDC建议，命令汉坦病毒暴露女子继续隔离。",
+      "summary_zh": "The Hill：RFK Jr.无视美国 CDC 建议，延长汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "美国 CDC",
-        "强制隔离"
+        "RFK Jr.",
+        "美国 CDC"
       ],
       "signal_strength": "high"
     },
@@ -151,11 +156,11 @@
       "time": "2026-06-16T20:52:05.000Z",
       "title_en": "RFK Jr. orders passenger from hantavirus-stricken cruise to remain in quarantine in Nebraska, despite CDC recommendation - CNN",
       "body_en": "RFK Jr. orders passenger from hantavirus-stricken cruise to remain in quarantine in Nebraska, despite CDC recommendation CNN Kennedy Orders Woman to Stay in Hantavirus Quarantine, Despite C.D.C. Recommendation The New York Times RFK Jr. orders American exposed to hantavirus to stay quarantined against her will USA Today Hantavirus cruise passenger says she’s being forced to quarantine in Nebraska The Washington Post RFK Jr. overrules experts to keep hantavirus cruise ship passenger in quarantine AP News RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice WS",
-      "summary_zh": "美国卫生部长RFK Jr.不顾美国CDC建议，命令汉坦病毒邮轮乘客在内布拉斯加州隔离。",
+      "summary_zh": "CNN：RFK Jr.无视美国 CDC 建议，下令邮轮乘客在内布拉斯加继续隔离。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
-        "强制隔离"
+        "RFK Jr.",
+        "美国 CDC"
       ],
       "signal_strength": "high"
     },
@@ -164,11 +169,11 @@
       "time": "2026-06-16T19:18:05.000Z",
       "title_en": "RFK Jr. Orders Woman To Remain In Hantavirus Quarantine Against Medical Expert's Advice - HuffPost",
       "body_en": "RFK Jr. Orders Woman To Remain In Hantavirus Quarantine Against Medical Expert's Advice HuffPost",
-      "summary_zh": "美国卫生部长RFK Jr.无视医学专家建议，命令女子继续汉坦病毒隔离。",
+      "summary_zh": "HuffPost：RFK Jr.违反医学专家建议，下令女性继续隔离。",
       "key_facts_zh": [
         "美国",
         "RFK Jr.",
-        "强制隔离"
+        "隔离争议"
       ],
       "signal_strength": "high"
     },
@@ -177,11 +182,11 @@
       "time": "2026-06-16T18:43:00.000Z",
       "title_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will, WSJ reports - Reuters",
       "body_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will, WSJ reports Reuters",
-      "summary_zh": "美国卫生部长RFK Jr.命令汉坦病毒暴露者违背意愿继续隔离。",
+      "summary_zh": "美国肯尼迪下令汉坦病毒接触者强制隔离。",
       "key_facts_zh": [
         "美国",
-        "RFK Jr.",
-        "强制隔离"
+        "强制隔离",
+        "肯尼迪"
       ],
       "signal_strength": "high"
     },
@@ -193,7 +198,8 @@
       "summary_zh": "各国对安第斯汉坦病毒患者出院标准存在分歧。",
       "key_facts_zh": [
         "各国",
-        "出院标准分歧"
+        "出院标准",
+        "安第斯汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -202,10 +208,11 @@
       "time": "2026-06-16T14:08:00.000Z",
       "title_en": "Inflammatix Collaborates with University of Nebraska Medical Center to Support Rapid Response to the Hantavirus Outbreak Using TriVerity® - PR Newswire",
       "body_en": "Inflammatix Collaborates with University of Nebraska Medical Center to Support Rapid Response to the Hantavirus Outbreak Using TriVerity® PR Newswire",
-      "summary_zh": "Inflammatix 与内布拉斯加医学中心合作，用 TriVerity 快速应对汉坦疫情。",
+      "summary_zh": "Inflammatix与内布拉斯加医学中心合作应对汉坦疫情。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "合作应对"
+        "合作",
+        "快速响应"
       ],
       "signal_strength": "medium"
     },
@@ -214,9 +221,9 @@
       "time": "2026-06-16T04:10:46.000Z",
       "title_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida - People.com",
       "body_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida People.com",
-      "summary_zh": "汉坦邮轮乘客称因美国 CDC 与佛罗里达州纠纷被扣留。",
+      "summary_zh": "汉坦病毒邮轮乘客称因美国CDC与佛罗里达争端被扣留。",
       "key_facts_zh": [
-        "美国 CDC",
+        "美国CDC",
         "佛罗里达",
         "邮轮"
       ],
@@ -227,10 +234,11 @@
       "time": "2026-06-16T02:04:00.000Z",
       "title_en": "A federal medical reviewer said she could go home. RFK Jr. said no. - Healthbeat",
       "body_en": "A federal medical reviewer said she could go home. RFK Jr. said no. Healthbeat",
-      "summary_zh": "联邦医学审查员同意患者回家，但 RFK Jr. 拒绝。",
+      "summary_zh": "联邦医学审查员同意患者回家，但肯尼迪否决。",
       "key_facts_zh": [
-        "RFK Jr.",
-        "拒绝放行"
+        "美国",
+        "肯尼迪",
+        "否决"
       ],
       "signal_strength": "high"
     },
@@ -239,24 +247,11 @@
       "time": "2026-06-15T21:47:21.000Z",
       "title_en": "Kennedy Orders Woman to Stay in Hantavirus Quarantine, Despite C.D.C. Recommendation - The New York Times",
       "body_en": "Kennedy Orders Woman to Stay in Hantavirus Quarantine, Despite C.D.C. Recommendation The New York Times",
-      "summary_zh": "肯尼迪无视美国 CDC 建议，命令女子继续汉坦隔离。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "肯尼迪",
-        "隔离命令"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4f31b1f7a239afd9",
-      "time": "2026-06-13T01:06:25.000Z",
-      "title_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say - ABC7 Bay Area",
-      "body_en": "San Quentin Rehabilitation Center suspected hantavirus case in 38-year-old male inmate ruled a false positive, officials say ABC7 Bay Area",
-      "summary_zh": "美国圣昆廷康复中心一名囚犯汉坦病毒疑似病例被排除。",
+      "summary_zh": "肯尼迪无视美国CDC建议，下令女子继续汉坦隔离。",
       "key_facts_zh": [
         "美国",
-        "圣昆廷康复中心",
-        "排除疑似"
+        "肯尼迪",
+        "美国CDC"
       ],
       "signal_strength": "high"
     }
