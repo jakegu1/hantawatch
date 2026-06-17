@@ -6859,6 +6859,90 @@
         "source_url": "",
         "time": "2026-06-12T14:47:02.000Z"
       }
+    ],
+    "rt-4ef9ee0a638bc06b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国卫生官员下令隔离一名汉坦病毒暴露者，无新增病例数字。",
+        "update_id": "rt-4ef9ee0a638bc06b",
+        "source_url": "",
+        "time": "2026-06-16T22:59:00.000Z"
+      }
+    ],
+    "rt-4a9907d92b78c890": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国一名暴露于汉坦病毒的女性批评隔离令，无新增病例。",
+        "update_id": "rt-4a9907d92b78c890",
+        "source_url": "",
+        "time": "2026-06-16T22:45:27.000Z"
+      }
+    ],
+    "rt-c8d51cf57b53a047": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国官员无视CDC建议延长隔离，无新增病例数字。",
+        "update_id": "rt-c8d51cf57b53a047",
+        "source_url": "",
+        "time": "2026-06-16T21:18:00.000Z"
+      }
+    ],
+    "rt-92eefd7cb0f7e84e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国官员下令隔离内布拉斯加州一名邮轮乘客，无新增病例。",
+        "update_id": "rt-92eefd7cb0f7e84e",
+        "source_url": "",
+        "time": "2026-06-16T20:52:05.000Z"
+      }
+    ],
+    "rt-289c9a94ed9e9c8e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "美国官员强制隔离一名暴露者，无新增病例数字。",
+        "update_id": "rt-289c9a94ed9e9c8e",
+        "source_url": "",
+        "time": "2026-06-16T18:44:09.000Z"
+      }
+    ],
+    "rt-9b71212660eafe20": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "medium",
+        "reasoning_zh": "WHO发布安第斯汉坦病毒隔离指南，涉及23国但无具体国家新增数据。",
+        "update_id": "rt-9b71212660eafe20",
+        "source_url": "",
+        "time": "2026-06-16T18:28:59.000Z"
+      }
     ]
   }
 }
