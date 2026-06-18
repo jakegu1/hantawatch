@@ -7237,6 +7237,34 @@
         "source_url": "",
         "time": "2026-06-17T22:33:00.000Z"
       }
+    ],
+    "rt-5210e25815e87e16": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-18",
+        "confidence": "low",
+        "reasoning_zh": "报道提及两名有汉坦病毒风险的邮轮乘客离开隔离，但未提供新增病例或死亡数字。",
+        "update_id": "rt-5210e25815e87e16",
+        "source_url": "",
+        "time": "2026-06-18T15:00:00.000Z"
+      }
+    ],
+    "rt-64d0b1e649f2bf7d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "报道称一名美国人被强制隔离，但未提供新增病例或死亡数字。",
+        "update_id": "rt-64d0b1e649f2bf7d",
+        "source_url": "",
+        "time": "2026-06-17T10:17:37.000Z"
+      }
     ]
   }
 }
