@@ -7265,6 +7265,34 @@
         "source_url": "",
         "time": "2026-06-17T10:17:37.000Z"
       }
+    ],
+    "rt-76b7e932bbb81c55": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-18",
+        "confidence": "medium",
+        "reasoning_zh": "美国内布拉斯加州奥马哈有2名邮轮乘客结束隔离，但未提及新增病例或死亡。",
+        "update_id": "rt-76b7e932bbb81c55",
+        "source_url": "",
+        "time": "2026-06-18T18:10:40.000Z"
+      }
+    ],
+    "rt-13a3d3416a300bf0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "文章讨论汉坦病毒疫苗研发前景，未涉及任何国家具体疫情数据。",
+        "update_id": "rt-13a3d3416a300bf0",
+        "source_url": "",
+        "time": "2026-06-17T13:56:31.000Z"
+      }
     ]
   }
 }
