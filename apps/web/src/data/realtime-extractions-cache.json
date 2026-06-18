@@ -7209,6 +7209,34 @@
         "source_url": "",
         "time": "2026-06-17T18:27:51.000Z"
       }
+    ],
+    "rt-71f6b3e211203b06": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-18",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及汉坦病毒邮轮乘客在珀斯隔离，但未提供任何新增病例数字。",
+        "update_id": "rt-71f6b3e211203b06",
+        "source_url": "",
+        "time": "2026-06-18T07:26:00.000Z"
+      }
+    ],
+    "rt-102be6783ee7cb25": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及佛罗里达州居民在奥马哈隔离，但未提供任何新增病例数字。",
+        "update_id": "rt-102be6783ee7cb25",
+        "source_url": "",
+        "time": "2026-06-17T22:33:00.000Z"
+      }
     ]
   }
 }
