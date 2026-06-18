@@ -7153,6 +7153,62 @@
         "source_url": "",
         "time": "2026-06-16T20:52:05.000Z"
       }
+    ],
+    "rt-17f22d20d64ca58e": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "报道提及汉坦病毒乘客隔离，但无新增病例数字。",
+        "update_id": "rt-17f22d20d64ca58e",
+        "source_url": "",
+        "time": "2026-06-17T22:51:00.000Z"
+      }
+    ],
+    "rt-ead34f48e8810d61": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "报道提及隔离命令，但无新增病例数字。",
+        "update_id": "rt-ead34f48e8810d61",
+        "source_url": "",
+        "time": "2026-06-17T21:54:00.000Z"
+      }
+    ],
+    "rt-e18166b8d7ffcc67": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "报道提及隔离命令，但无新增病例数字。",
+        "update_id": "rt-e18166b8d7ffcc67",
+        "source_url": "",
+        "time": "2026-06-17T21:30:00.000Z"
+      }
+    ],
+    "rt-0186ad79d68dd43e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "报道提及隔离命令，但无新增病例数字。",
+        "update_id": "rt-0186ad79d68dd43e",
+        "source_url": "",
+        "time": "2026-06-17T18:27:51.000Z"
+      }
     ]
   }
 }
