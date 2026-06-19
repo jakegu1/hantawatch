@@ -7293,6 +7293,62 @@
         "source_url": "",
         "time": "2026-06-17T13:56:31.000Z"
       }
+    ],
+    "rt-77713e3453cb4e4b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-19",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到2人离开隔离单位，但未明确新增病例或死亡，无法提取变化量。",
+        "update_id": "rt-77713e3453cb4e4b",
+        "source_url": "",
+        "time": "2026-06-19T02:24:00.000Z"
+      }
+    ],
+    "rt-51b6e13844ad5f05": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-19",
+        "confidence": "low",
+        "reasoning_zh": "新闻未提及具体国家，仅说船上乘客隔离结束，无新增病例数据。",
+        "update_id": "rt-51b6e13844ad5f05",
+        "source_url": "",
+        "time": "2026-06-19T00:43:00.000Z"
+      }
+    ],
+    "rt-8977395be100d46c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-18",
+        "confidence": "low",
+        "reasoning_zh": "新闻未提及具体国家，仅说船上乘客隔离结束，无新增病例数据。",
+        "update_id": "rt-8977395be100d46c",
+        "source_url": "",
+        "time": "2026-06-18T23:19:35.000Z"
+      }
+    ],
+    "rt-ed5448204ed58b01": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-17",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到一名美国人被强制隔离，但未提供新增病例或死亡数字。",
+        "update_id": "rt-ed5448204ed58b01",
+        "source_url": "",
+        "time": "2026-06-17T13:25:00.000Z"
+      }
     ]
   }
 }

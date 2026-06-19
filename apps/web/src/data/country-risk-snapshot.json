@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-18T20:23:06.389584+00:00",
+  "__generated_at": "2026-06-19T04:00:58.422250+00:00",
   "date": "2026-06-19",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -64,7 +64,7 @@
       "stale": false,
       "signalCount30d": 5,
       "signalCount7d": 1,
-      "lastSignalAt": "2026-06-14T13:41:29+00:00",
+      "lastSignalAt": "2026-06-18T20:49:08+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-06"
     },
@@ -86,12 +86,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-22T07:00:00+00:00"
+      "signalCount30d": 3,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-19T02:52:52+00:00"
     },
     "CH": {
       "iso2": "CH",
@@ -148,10 +148,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 4 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 4,
+      "signalCount30d": 3,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-12T11:01:46+00:00"
     },
@@ -262,11 +262,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 17 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 18 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 18 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 17,
-      "signalCount7d": 8,
+      "signalCount30d": 18,
+      "signalCount7d": 7,
       "lastSignalAt": "2026-06-18T14:30:00+00:00"
     },
     "CL": {
@@ -315,7 +315,7 @@
       "statusZh": "监测中",
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
-      "signalCount30d": 5,
+      "signalCount30d": 4,
       "signalCount7d": 3,
       "lastSignalAt": "2026-06-18T06:00:00+00:00",
       "importStatus": "monitoring",
@@ -412,12 +412,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-26T07:00:00+00:00"
+      "signalCount30d": 2,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-12T15:48:00+00:00"
     },
     "AU": {
       "iso2": "AU",
@@ -428,9 +428,9 @@
       "statusZh": "监测中",
       "riskSummaryZh": "ArcGIS ANDV 监测显示 6 名澳大利亚相关乘客仍在随访中，暂无确诊；初期 3 周 hospital 隔离期已结束，转入持续监测。",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-05-28T07:00:00+00:00",
+      "lastSignalAt": "2026-05-24T07:00:00+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
