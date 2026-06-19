@@ -1,35 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-19T04:00:58.423645+00:00",
+  "__generated_at": "2026-06-19T09:02:23.993050+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-19T04:00:49.676391+00:00",
+  "last_fetched": "2026-06-19T09:02:22.854814+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-77713e3453cb4e4b",
-      "time": "2026-06-19T02:24:00.000Z",
-      "title_en": "Hantavirus update: 2 more leave National Quarantine Unit in Omaha - WOWT",
-      "body_en": "Hantavirus update: 2 more leave National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "美国奥马哈国家隔离单位再有2人解除隔离。",
+      "id": "rt-03e5f5ea638806bb",
+      "time": "2026-06-19T08:30:01.000Z",
+      "title_en": "Quarantine over for almost all hantavirus ship passengers, crew - Medical Xpress",
+      "body_en": "Quarantine over for almost all hantavirus ship passengers, crew Medical Xpress",
+      "summary_zh": "汉坦病毒邮轮乘客及船员隔离结束。",
       "key_facts_zh": [
-        "美国",
-        "奥马哈",
-        "解除隔离"
+        "邮轮",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-51b6e13844ad5f05",
-      "time": "2026-06-19T00:43:00.000Z",
-      "title_en": "Quarantine over for almost all hantavirus ship passengers, crew - ABS-CBN",
-      "body_en": "Quarantine over for almost all hantavirus ship passengers, crew ABS-CBN",
-      "summary_zh": "汉坦病毒邮轮几乎所有乘客船员结束隔离。",
+      "id": "rt-77713e3453cb4e4b",
+      "time": "2026-06-19T02:24:00.000Z",
+      "title_en": "Hantavirus update: 2 more leave National Quarantine Unit in Omaha - WOWT",
+      "body_en": "Hantavirus update: 2 more leave National Quarantine Unit in Omaha WOWT",
+      "summary_zh": "美国奥马哈国家隔离单元再有2人离开。",
       "key_facts_zh": [
-        "邮轮",
-        "结束隔离"
+        "美国",
+        "奥马哈",
+        "2人离开"
       ],
       "signal_strength": "high"
     },
@@ -38,10 +38,10 @@
       "time": "2026-06-18T23:19:35.000Z",
       "title_en": "Quarantine over for almost all hantavirus ship passengers, crew - NST Online",
       "body_en": "Quarantine over for almost all hantavirus ship passengers, crew NST Online",
-      "summary_zh": "汉坦病毒邮轮几乎所有乘客船员结束隔离。",
+      "summary_zh": "汉坦病毒邮轮乘客及船员隔离结束。",
       "key_facts_zh": [
         "邮轮",
-        "结束隔离"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -50,11 +50,11 @@
       "time": "2026-06-18T18:11:43.000Z",
       "title_en": "2 more cruise ship passengers leave Omaha quarantine after deadly hantavirus outbreak - Nebraska Examiner",
       "body_en": "2 more cruise ship passengers leave Omaha quarantine after deadly hantavirus outbreak Nebraska Examiner",
-      "summary_zh": "美国奥马哈再有2名邮轮乘客离开隔离区。",
+      "summary_zh": "美国奥马哈再有2名邮轮乘客结束隔离。",
       "key_facts_zh": [
         "美国",
         "奥马哈",
-        "邮轮"
+        "2人结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -63,11 +63,11 @@
       "time": "2026-06-18T17:52:00.000Z",
       "title_en": "Two more hantavirus-risk cruise passengers leave Omaha quarantine - Omaha World-Herald",
       "body_en": "Two more hantavirus-risk cruise passengers leave Omaha quarantine Omaha World-Herald",
-      "summary_zh": "美国奥马哈再有2名高风险邮轮乘客离开隔离。",
+      "summary_zh": "美国奥马哈再有2名邮轮乘客结束隔离。",
       "key_facts_zh": [
         "美国",
         "奥马哈",
-        "邮轮"
+        "2人结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -76,10 +76,23 @@
       "time": "2026-06-17T22:51:00.000Z",
       "title_en": "Hantavirus ship passenger recounts 'huge shock' as quarantine nears end - Australian Broadcasting Corporation",
       "body_en": "Hantavirus ship passenger recounts 'huge shock' as quarantine nears end Australian Broadcasting Corporation",
-      "summary_zh": "汉坦病毒邮轮乘客回忆隔离结束前的震惊。",
+      "summary_zh": "汉坦病毒邮轮乘客回忆隔离经历。",
       "key_facts_zh": [
         "邮轮",
         "乘客回忆"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-102be6783ee7cb25",
+      "time": "2026-06-17T22:33:00.000Z",
+      "title_en": "Florida native forced to stay in Omaha during hantavirus quarantine - KETV",
+      "body_en": "Florida native forced to stay in Omaha during hantavirus quarantine KETV",
+      "summary_zh": "佛罗里达居民被迫在奥马哈隔离。",
+      "key_facts_zh": [
+        "美国",
+        "佛罗里达",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -88,23 +101,24 @@
       "time": "2026-06-17T19:07:24.000Z",
       "title_en": "RFK Jr. orders hantavirus cruise ship passenger to stay in quarantine - LiveNOW from FOX",
       "body_en": "RFK Jr. orders hantavirus cruise ship passenger to stay in quarantine LiveNOW from FOX",
-      "summary_zh": "美国卫生部长下令汉坦病毒邮轮乘客继续隔离。",
+      "summary_zh": "美国卫生部长下令邮轮汉坦病毒乘客隔离。",
       "key_facts_zh": [
         "美国",
-        "RFK Jr.",
-        "邮轮"
+        "邮轮",
+        "隔离"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-13a3d3416a300bf0",
-      "time": "2026-06-17T13:56:31.000Z",
-      "title_en": "Could a hantavirus vaccine be on the horizon? - Gavi, the Vaccine Alliance",
-      "body_en": "Could a hantavirus vaccine be on the horizon? Gavi, the Vaccine Alliance",
-      "summary_zh": "疫苗联盟探讨汉坦病毒疫苗研发前景。",
+      "id": "rt-9ab970904bbe512d",
+      "time": "2026-06-17T14:29:03.000Z",
+      "title_en": "Oceanwide CEO Interview: Inside the Deadly Hantavirus Outbreak - World of Cruising",
+      "body_en": "Oceanwide CEO Interview: Inside the Deadly Hantavirus Outbreak World of Cruising",
+      "summary_zh": "Oceanwide CEO 访谈：致命汉坦病毒爆发内幕。",
       "key_facts_zh": [
-        "疫苗联盟",
-        "疫苗研发"
+        "邮轮",
+        "CEO访谈",
+        "爆发内幕"
       ],
       "signal_strength": "medium"
     },
@@ -113,10 +127,11 @@
       "time": "2026-06-17T13:25:00.000Z",
       "title_en": "RFK Jr. orders American exposed to hantavirus to stay quarantined against her will - USA Today",
       "body_en": "RFK Jr. orders American exposed to hantavirus to stay quarantined against her will USA Today",
-      "summary_zh": "美国官员强制汉坦病毒接触者隔离。",
+      "summary_zh": "美国卫生部长强制隔离汉坦病毒接触者。",
       "key_facts_zh": [
         "美国",
-        "强制隔离"
+        "强制隔离",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -125,10 +140,11 @@
       "time": "2026-06-17T10:17:37.000Z",
       "title_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will, WSJ reports - Yahoo",
       "body_en": "Kennedy orders American exposed to hantavirus to stay quarantined against her will, WSJ reports Yahoo",
-      "summary_zh": "美国官员强制汉坦病毒接触者隔离。",
+      "summary_zh": "美国卫生部长强制隔离汉坦病毒接触者。",
       "key_facts_zh": [
         "美国",
-        "强制隔离"
+        "强制隔离",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -140,6 +156,7 @@
       "summary_zh": "马德里医院出院最后一名汉坦病毒患者。",
       "key_facts_zh": [
         "西班牙",
+        "马德里",
         "患者出院"
       ],
       "signal_strength": "high"
@@ -149,11 +166,11 @@
       "time": "2026-06-17T03:43:02.000Z",
       "title_en": "Hantavirus cruise passenger says she’s being forced to quarantine in Nebraska - The Washington Post",
       "body_en": "Hantavirus cruise passenger says she’s being forced to quarantine in Nebraska The Washington Post",
-      "summary_zh": "汉坦病毒邮轮乘客在内布拉斯加被强制隔离。",
+      "summary_zh": "汉坦病毒邮轮乘客称在内布拉斯加被强制隔离。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "强制隔离"
+        "内布拉斯加",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -162,11 +179,11 @@
       "time": "2026-06-16T22:59:00.000Z",
       "title_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger in quarantine - AP News",
       "body_en": "RFK Jr. overrules experts to keep hantavirus cruise ship passenger in quarantine AP News",
-      "summary_zh": "美国官员否决专家意见，强制邮轮乘客隔离。",
+      "summary_zh": "美国卫生官员否决专家意见，维持汉坦病毒邮轮乘客隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "强制隔离"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -175,10 +192,10 @@
       "time": "2026-06-16T22:45:27.000Z",
       "title_en": "Woman exposed to hantavirus slams RFK Jr’s ‘arbitrary’ order to stay in quarantine facility - CNN",
       "body_en": "Woman exposed to hantavirus slams RFK Jr’s ‘arbitrary’ order to stay in quarantine facility CNN",
-      "summary_zh": "汉坦病毒接触者批评美国官员强制隔离令。",
+      "summary_zh": "美国一汉坦病毒暴露女性批评隔离令武断。",
       "key_facts_zh": [
         "美国",
-        "强制隔离",
+        "隔离",
         "争议"
       ],
       "signal_strength": "high"
@@ -188,11 +205,11 @@
       "time": "2026-06-16T21:50:00.000Z",
       "title_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice - WSJ",
       "body_en": "RFK Jr. Orders American Exposed to Hantavirus to Stay Quarantined Against Medical Advice WSJ",
-      "summary_zh": "美国卫生部长下令隔离汉坦病毒接触者，无视美国 CDC 建议。",
+      "summary_zh": "美国官员无视医学建议，下令汉坦病毒暴露者继续隔离。",
       "key_facts_zh": [
         "美国",
         "隔离",
-        "美国 CDC"
+        "争议"
       ],
       "signal_strength": "high"
     },
@@ -201,11 +218,11 @@
       "time": "2026-06-16T21:18:00.000Z",
       "title_en": "RFK Jr. orders continued hantavirus quarantine of American woman despite CDC advice - The Hill",
       "body_en": "RFK Jr. orders continued hantavirus quarantine of American woman despite CDC advice The Hill",
-      "summary_zh": "美国卫生部长无视美国 CDC 建议，延长一名女性汉坦病毒隔离。",
+      "summary_zh": "美国官员无视美国 CDC 建议，延长汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "隔离",
-        "美国 CDC"
+        "美国 CDC",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -214,11 +231,11 @@
       "time": "2026-06-16T20:52:05.000Z",
       "title_en": "RFK Jr. orders passenger from hantavirus-stricken cruise to remain in quarantine in Nebraska, despite CDC recommendation - CNN",
       "body_en": "RFK Jr. orders passenger from hantavirus-stricken cruise to remain in quarantine in Nebraska, despite CDC recommendation CNN",
-      "summary_zh": "美国卫生部长下令邮轮汉坦病毒接触者在内布拉斯加继续隔离。",
+      "summary_zh": "美国官员无视美国 CDC 建议，下令邮轮乘客在内布拉斯加隔离。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "邮轮"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -235,52 +252,27 @@
       "signal_strength": "medium"
     },
     {
+      "id": "rt-126ec19852c1905a",
+      "time": "2026-06-16T15:29:00.000Z",
+      "title_en": "American Says Hantavirus Quarantine Order ‘Feels Like Retaliation’ - Newsweek",
+      "body_en": "American Says Hantavirus Quarantine Order ‘Feels Like Retaliation’ Newsweek",
+      "summary_zh": "美国汉坦病毒隔离者称命令像报复。",
+      "key_facts_zh": [
+        "美国",
+        "隔离",
+        "争议"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-f09bec40d145f926",
       "time": "2026-06-16T04:10:46.000Z",
       "title_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida - People.com",
       "body_en": "Hantavirus Cruise Passenger Says She’s ‘Being Held Hostage’ Due to Public Health Dispute Between CDC, Florida People.com",
-      "summary_zh": "邮轮汉坦病毒乘客称因美国 CDC 与佛罗里达州争端被扣留。",
+      "summary_zh": "汉坦病毒邮轮乘客称因美国 CDC 与佛罗里达争端被扣留。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "美国 CDC"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-cc7f2fa3ffebe39e",
-      "time": "2026-06-16T02:04:00.000Z",
-      "title_en": "A federal medical reviewer said she could go home. RFK Jr. said no. - Healthbeat",
-      "body_en": "A federal medical reviewer said she could go home. RFK Jr. said no. Healthbeat",
-      "summary_zh": "联邦医学审查员同意患者回家，但美国卫生部长否决。",
-      "key_facts_zh": [
-        "美国",
-        "隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c4da1e7fd4c55f68",
-      "time": "2026-06-15T21:47:21.000Z",
-      "title_en": "Kennedy Orders Woman to Stay in Hantavirus Quarantine, Despite C.D.C. Recommendation - The New York Times",
-      "body_en": "Kennedy Orders Woman to Stay in Hantavirus Quarantine, Despite C.D.C. Recommendation The New York Times",
-      "summary_zh": "美国卫生部长无视美国 CDC 建议，命令女性继续汉坦病毒隔离。",
-      "key_facts_zh": [
-        "美国",
-        "隔离",
-        "美国 CDC"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ef6fd60f33fe2499",
-      "time": "2026-06-15T15:52:26.000Z",
-      "title_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak - Yahoo",
-      "body_en": "Hantavirus latest updates: New case in Spain takes total to 13 after cruise ship outbreak Yahoo",
-      "summary_zh": "西班牙新增 1 例汉坦病毒，邮轮爆发后累计 13 例。",
-      "key_facts_zh": [
-        "西班牙",
-        "新增 1 例",
+        "美国 CDC",
         "邮轮"
       ],
       "signal_strength": "high"
