@@ -15,11 +15,9 @@
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 13,
-    "sinceWhoNewCases": 1,
-    "sinceWhoNewCountries": [
-      "西班牙"
-    ],
-    "currentReportedCases": 14
+    "sinceWhoNewCases": 0,
+    "sinceWhoNewCountries": [],
+    "currentReportedCases": 13
   },
   "ruler": {
     "maxKm": 20000,
@@ -120,16 +118,6 @@
       "shortContext": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
       "verdict": "随访更新",
       "source": "es_isciii"
-    },
-    {
-      "at": "2026-05-29T22:49:30Z",
-      "kind": "detection",
-      "countryZh": "西班牙",
-      "delta": 1,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
     },
     {
       "at": "2026-05-28T12:00:00Z",
@@ -268,7 +256,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 21,
+  "daysWithoutNewConfirmed": 22,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -474,7 +462,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-06-19T10:22:31.536426+00:00"
+      "updatedAt": "2026-06-19T14:59:07.818699+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -486,8 +474,8 @@
     }
   ],
   "intake": {
-    "last24hCount": 5,
-    "highConfidencePicks": 1
+    "last24hCount": 6,
+    "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-06-19T10:22:34.680358+00:00"
+  "realtimeUpdatedAt": "2026-06-19T14:59:11.499720+00:00"
 }

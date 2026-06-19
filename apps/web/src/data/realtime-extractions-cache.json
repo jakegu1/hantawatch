@@ -7363,6 +7363,20 @@
         "source_url": "",
         "time": "2026-06-19T08:30:01.000Z"
       }
+    ],
+    "rt-d6afb32af67ccd81": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-19",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒恐慌，但正文未提供具体国家或新增病例数字，无法提取有效变化量。",
+        "update_id": "rt-d6afb32af67ccd81",
+        "source_url": "",
+        "time": "2026-06-19T12:02:13.000Z"
+      }
     ]
   }
 }
