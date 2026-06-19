@@ -7349,6 +7349,20 @@
         "source_url": "",
         "time": "2026-06-17T13:25:00.000Z"
       }
+    ],
+    "rt-03e5f5ea638806bb": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-19",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题未提及具体国家，无法确定国家代码。",
+        "update_id": "rt-03e5f5ea638806bb",
+        "source_url": "",
+        "time": "2026-06-19T08:30:01.000Z"
+      }
     ]
   }
 }
