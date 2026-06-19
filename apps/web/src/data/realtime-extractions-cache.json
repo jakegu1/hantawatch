@@ -7377,6 +7377,34 @@
         "source_url": "",
         "time": "2026-06-19T12:02:13.000Z"
       }
+    ],
+    "rt-ebe43b4b8e410669": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-19",
+        "confidence": "low",
+        "reasoning_zh": "WHO官员提及荷兰邮轮汉坦病毒疫情，但未提供新增病例数字。",
+        "update_id": "rt-ebe43b4b8e410669",
+        "source_url": "",
+        "time": "2026-06-19T17:00:05.000Z"
+      }
+    ],
+    "rt-175960f7a7e6ae1e": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-18",
+        "confidence": "low",
+        "reasoning_zh": "法国24报道荷兰邮轮乘客隔离结束，无新增病例数据。",
+        "update_id": "rt-175960f7a7e6ae1e",
+        "source_url": "",
+        "time": "2026-06-18T20:49:08.000Z"
+      }
     ]
   }
 }
