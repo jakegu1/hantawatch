@@ -7419,6 +7419,34 @@
         "source_url": "",
         "time": "2026-06-20T03:48:33.000Z"
       }
+    ],
+    "rt-5b819ba4c11509c5": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-20",
+        "confidence": "low",
+        "reasoning_zh": "标题和正文未提及具体国家，仅说卫生部门结束疫情管理，无新增病例数字。",
+        "update_id": "rt-5b819ba4c11509c5",
+        "source_url": "",
+        "time": "2026-06-20T18:34:28.000Z"
+      }
+    ],
+    "rt-380c5d9210338ff0": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-20",
+        "confidence": "medium",
+        "reasoning_zh": "报道提及RFK Jr（美国官员）关于汉坦病毒隔离令，但未提供新增病例数字。",
+        "update_id": "rt-380c5d9210338ff0",
+        "source_url": "",
+        "time": "2026-06-20T11:00:00.000Z"
+      }
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-20T13:56:37.021889+00:00",
+  "__generated_at": "2026-06-20T19:21:58.981621+00:00",
   "clusters": [
     {
       "id": "mv-hondius-2026",
@@ -21,7 +21,7 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-        "retrievedAt": "2026-06-20T13:56:13.302773+00:00",
+        "retrievedAt": "2026-06-20T19:21:35.281492+00:00",
         "confidence": "official"
       },
       "_summary": "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。"
@@ -65,6 +65,6 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-20T13:56:13.303102+00:00"
+    "updatedAt": "2026-06-20T19:21:35.281778+00:00"
   }
 }
