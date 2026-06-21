@@ -7489,6 +7489,20 @@
         "source_url": "",
         "time": "2026-06-21T11:00:00.000Z"
       }
+    ],
+    "rt-c8d44b40f0cf1cd5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-21",
+        "confidence": "medium",
+        "reasoning_zh": "报道称18名美国人结束隔离，未提及新增病例或死亡，故delta均为0。",
+        "update_id": "rt-c8d44b40f0cf1cd5",
+        "source_url": "",
+        "time": "2026-06-21T18:00:41.000Z"
+      }
     ]
   }
 }
