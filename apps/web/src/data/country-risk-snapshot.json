@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-20T19:21:58.983993+00:00",
+  "__generated_at": "2026-06-21T03:53:33.658342+00:00",
   "date": "2026-06-21",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -62,9 +62,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 5,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-14T13:41:29+00:00",
+      "signalCount30d": 7,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-20T20:19:59+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-06"
     },
@@ -90,8 +90,8 @@
       "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 2,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-06-19T17:00:05+00:00"
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-06-21T03:20:23+00:00"
     },
     "CH": {
       "iso2": "CH",
@@ -148,10 +148,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 3 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 4 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 3,
+      "signalCount30d": 4,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-12T11:01:46+00:00"
     },
@@ -226,7 +226,7 @@
       "stale": false,
       "signalCount30d": 2,
       "signalCount7d": 1,
-      "lastSignalAt": "2026-06-19T17:11:31+00:00"
+      "lastSignalAt": "2026-06-19T14:37:26+00:00"
     },
     "ES": {
       "iso2": "ES",
@@ -237,9 +237,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 19,
-      "signalCount7d": 5,
-      "lastSignalAt": "2026-06-20T18:22:12+00:00",
+      "signalCount30d": 17,
+      "signalCount7d": 4,
+      "lastSignalAt": "2026-06-21T01:21:02+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-05"
     },
@@ -249,10 +249,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-04T07:00:00+00:00"
     },
@@ -262,11 +262,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 17 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 12 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 12 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 17,
-      "signalCount7d": 3,
+      "signalCount30d": 12,
+      "signalCount7d": 2,
       "lastSignalAt": "2026-06-20T02:06:35+00:00"
     },
     "CL": {
@@ -283,16 +283,15 @@
     },
     "BR": {
       "iso2": "BR",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "南部 Santa Catarina、Paraná 等州农业活动相关；甘蔗收获、谷仓清洁高风险。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-27T07:00:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "UY": {
       "iso2": "UY",
@@ -315,7 +314,7 @@
       "statusZh": "监测中",
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
-      "signalCount30d": 4,
+      "signalCount30d": 3,
       "signalCount7d": 1,
       "lastSignalAt": "2026-06-17T13:25:00+00:00",
       "importStatus": "monitoring",
@@ -360,16 +359,15 @@
     },
     "JP": {
       "iso2": "JP",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "整体风险极低；历史上港口大鼠相关，普通旅游与生活几乎不接触。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-05-28T07:00:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "TH": {
       "iso2": "TH",
@@ -413,12 +411,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-06-12T15:48:00+00:00"
+      "lastSignalAt": "2026-05-26T07:00:00+00:00"
     },
     "AU": {
       "iso2": "AU",
