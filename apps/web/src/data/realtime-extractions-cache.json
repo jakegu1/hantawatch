@@ -7475,6 +7475,20 @@
         "source_url": "",
         "time": "2026-06-21T05:30:00.000Z"
       }
+    ],
+    "rt-ce0545d624ab747c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-21",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题和正文未提及具体国家、新增病例或死亡数字，仅描述隔离结束，无法提取任何增量。",
+        "update_id": "rt-ce0545d624ab747c",
+        "source_url": "",
+        "time": "2026-06-21T11:00:00.000Z"
+      }
     ]
   }
 }
