@@ -7461,6 +7461,20 @@
         "source_url": "",
         "time": "2026-06-21T03:20:23.000Z"
       }
+    ],
+    "rt-4845a93a9c80c0fa": [
+      {
+        "iso2": "IE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-21",
+        "confidence": "low",
+        "reasoning_zh": "报道提到一名爱尔兰幸存者结束隔离，但未提供新增病例数字，无法提取增量。",
+        "update_id": "rt-4845a93a9c80c0fa",
+        "source_url": "",
+        "time": "2026-06-21T05:30:00.000Z"
+      }
     ]
   }
 }
