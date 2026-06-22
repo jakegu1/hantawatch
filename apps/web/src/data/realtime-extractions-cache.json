@@ -7587,6 +7587,48 @@
         "source_url": "",
         "time": "2026-06-22T11:54:23.000Z"
       }
+    ],
+    "rt-6fe6c5637fc27152": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及内布拉斯加州隔离结束，无新增病例数字。",
+        "update_id": "rt-6fe6c5637fc27152",
+        "source_url": "",
+        "time": "2026-06-22T20:13:03.000Z"
+      }
+    ],
+    "rt-114627413c1f2749": [
+      {
+        "iso2": "AU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及部分乘客结束隔离，无新增病例数字。",
+        "update_id": "rt-114627413c1f2749",
+        "source_url": "",
+        "time": "2026-06-22T20:04:53.000Z"
+      }
+    ],
+    "rt-b8d41bc9649ac87a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及调查邮轮疫情起源，未提供具体国家或数字。",
+        "update_id": "rt-b8d41bc9649ac87a",
+        "source_url": "",
+        "time": "2026-06-22T17:39:53.000Z"
+      }
     ]
   }
 }
