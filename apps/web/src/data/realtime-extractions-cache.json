@@ -7503,6 +7503,20 @@
         "source_url": "",
         "time": "2026-06-21T18:00:41.000Z"
       }
+    ],
+    "rt-7d90a49504b1b9e7": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-21",
+        "confidence": "low",
+        "reasoning_zh": "报道提及英国乘客结束隔离，但未提供新增病例数字，无法提取增量。",
+        "update_id": "rt-7d90a49504b1b9e7",
+        "source_url": "",
+        "time": "2026-06-21T23:01:00.000Z"
+      }
     ]
   }
 }
