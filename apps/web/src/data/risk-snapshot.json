@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-22T11:48:35.361851+00:00",
-  "date": "2026-06-22",
+  "__generated_at": "2026-06-22T16:51:27.961960+00:00",
+  "date": "2026-06-23",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-22T11:48:13.019884+00:00"
+    "updatedAt": "2026-06-22T16:51:05.532305+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-06-22T11:48:13.019884+00:00"
+    "updatedAt": "2026-06-22T16:51:05.532305+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,32 +101,32 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-06-22",
+    "date": "2026-06-23",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 11,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 25,
-    "whoDaysSinceOfficialUpdate": 25,
-    "cluesLast24h": 10,
+    "daysSinceLastIntlAlert": 26,
+    "whoDaysSinceOfficialUpdate": 26,
+    "cluesLast24h": 11,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "6月22日美国18名、英国1名邮轮接触者结束隔离；法国1例确诊仍在ICU；中国大陆无相关病例。",
-    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国邮轮接触者陆续结束隔离，法国确诊仍在ICU，国内HFRS基线正常。",
-    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；输入风险极低，无需特殊防护。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持接触者随访，国内HFRS基线正常。",
+    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "6月22日无新增确诊病例或初筛阳性报告。",
-    "sourceSummary": "WHO、欧洲CDC、ArcGIS监测及各国卫生部公告。",
-    "shareLine": "WHO 5/28公布累计13例（25天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+    "sourceSummary": "WHO DON、各国卫生部、ArcGIS监测",
+    "shareLine": "WHO 5/28公布累计13例（26天前）；其后暂无新增待复核确诊，西班牙、荷兰、法国为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "法国确诊患者状态",
-      "邮轮接触者隔离进展",
+      "法国ICU患者转归",
+      "多国接触者随访进展",
       "WHO下次数据更新"
     ],
     "evidence": [
       "WHO DON 5/28",
-      "ArcGIS ANDV Dashboard",
+      "西班牙卫生部/Xinhua",
       "法国卫生部/TF1 Info"
     ],
     "_guardrail_warnings": [

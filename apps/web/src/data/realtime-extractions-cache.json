@@ -7531,6 +7531,62 @@
         "source_url": "",
         "time": "2026-06-21T05:30:00.000Z"
       }
+    ],
+    "rt-152559f727979cb8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "美国空军基地支持汉坦病毒应对，无具体病例数字。",
+        "update_id": "rt-152559f727979cb8",
+        "source_url": "",
+        "time": "2026-06-22T16:15:59.000Z"
+      }
+    ],
+    "rt-a63d1ea44d66bdc9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "美国乘客结束隔离，无新增病例数字。",
+        "update_id": "rt-a63d1ea44d66bdc9",
+        "source_url": "",
+        "time": "2026-06-22T15:02:12.000Z"
+      }
+    ],
+    "rt-85c1bf49de1ae7ae": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "提及汉坦病毒隔离结束，无国家及数字。",
+        "update_id": "rt-85c1bf49de1ae7ae",
+        "source_url": "",
+        "time": "2026-06-22T13:37:58.000Z"
+      }
+    ],
+    "rt-db43bcba72b7e27a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "low",
+        "reasoning_zh": "汉坦病毒游轮乘客将解除隔离，无国家及数字。",
+        "update_id": "rt-db43bcba72b7e27a",
+        "source_url": "",
+        "time": "2026-06-22T11:54:23.000Z"
+      }
     ]
   }
 }
