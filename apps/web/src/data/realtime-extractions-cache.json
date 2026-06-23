@@ -8007,6 +8007,132 @@
         "source_url": "",
         "time": "2026-06-22T21:36:09.000Z"
       }
+    ],
+    "rt-db7ee2cd61c6c16b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道为视频，无新增病例数字，仅描述隔离经历。",
+        "update_id": "rt-db7ee2cd61c6c16b",
+        "source_url": "",
+        "time": "2026-06-23T19:03:44.000Z"
+      }
+    ],
+    "rt-829411270c28bc35": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道隔离结束，无新增病例数字。",
+        "update_id": "rt-829411270c28bc35",
+        "source_url": "",
+        "time": "2026-06-23T17:54:31.000Z"
+      }
+    ],
+    "rt-10ed9a0d73198e61": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "视频博客记录游轮疫情，无新增病例数字。",
+        "update_id": "rt-10ed9a0d73198e61",
+        "source_url": "",
+        "time": "2026-06-23T17:38:56.000Z"
+      }
+    ],
+    "rt-797a566ea74560b4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道内布拉斯加州隔离结束，无新增病例数字。",
+        "update_id": "rt-797a566ea74560b4",
+        "source_url": "",
+        "time": "2026-06-23T15:50:53.000Z"
+      }
+    ],
+    "rt-9897ceddd25cc97b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道所有美国乘客返回家乡，无新增病例数字。",
+        "update_id": "rt-9897ceddd25cc97b",
+        "source_url": "",
+        "time": "2026-06-23T15:39:14.000Z"
+      }
+    ],
+    "rt-2ad39ea5cfdaab99": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "UKHSA称所有英国乘客完成自我隔离，无新增病例数字。",
+        "update_id": "rt-2ad39ea5cfdaab99",
+        "source_url": "",
+        "time": "2026-06-23T15:24:31.000Z"
+      }
+    ],
+    "rt-f1ee7d411dd6d4cd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道美国游轮疫情威胁结束，无新增病例数字。",
+        "update_id": "rt-f1ee7d411dd6d4cd",
+        "source_url": "",
+        "time": "2026-06-23T15:17:18.000Z"
+      }
+    ],
+    "rt-9929888591790906": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "报道隔离结束乘客回家，无新增病例数字。",
+        "update_id": "rt-9929888591790906",
+        "source_url": "",
+        "time": "2026-06-23T15:05:57.000Z"
+      }
+    ],
+    "rt-0dc358490ba920a8": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及讨论结束监测行动，无具体病例数字变化。",
+        "update_id": "rt-0dc358490ba920a8",
+        "source_url": "",
+        "time": "2026-06-23T13:33:00.000Z"
+      }
     ]
   }
 }
