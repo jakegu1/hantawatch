@@ -7783,6 +7783,132 @@
         "source_url": "",
         "time": "2026-06-22T20:42:21.000Z"
       }
+    ],
+    "rt-1602e338c9c1118d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "内布拉斯加州汉坦病毒船舶乘客隔离结束，无新增病例报告。",
+        "update_id": "rt-1602e338c9c1118d",
+        "source_url": "",
+        "time": "2026-06-23T09:00:00.000Z"
+      }
+    ],
+    "rt-b7297ba1e71864f2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "美国汉坦病毒感染船舶乘客结束隔离，无新增病例。",
+        "update_id": "rt-b7297ba1e71864f2",
+        "source_url": "",
+        "time": "2026-06-23T04:33:02.000Z"
+      }
+    ],
+    "rt-1d9573c8d48d95ea": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "美国游轮汉坦病毒爆发最后一批乘客隔离结束，无新增。",
+        "update_id": "rt-1d9573c8d48d95ea",
+        "source_url": "",
+        "time": "2026-06-23T03:18:00.000Z"
+      }
+    ],
+    "rt-6b65b4a75fc24429": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "所有美国乘客从汉坦病毒船舶返回各州，无新增病例。",
+        "update_id": "rt-6b65b4a75fc24429",
+        "source_url": "",
+        "time": "2026-06-23T02:47:44.000Z"
+      }
+    ],
+    "rt-0a8415008321c45f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "美国汉坦病毒游轮乘客完成监测，无新病例报告。",
+        "update_id": "rt-0a8415008321c45f",
+        "source_url": "",
+        "time": "2026-06-23T01:58:00.000Z"
+      }
+    ],
+    "rt-0f50461cd752df85": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "所有18名接触汉坦病毒的美国游轮乘客隔离结束。",
+        "update_id": "rt-0f50461cd752df85",
+        "source_url": "",
+        "time": "2026-06-23T00:23:09.000Z"
+      }
+    ],
+    "rt-fc1185d3985fdeaa": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "medium",
+        "reasoning_zh": "汉坦病毒乘客监测期结束，无新增病例。",
+        "update_id": "rt-fc1185d3985fdeaa",
+        "source_url": "",
+        "time": "2026-06-22T22:51:24.000Z"
+      }
+    ],
+    "rt-35396fca6c4776d2": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "medium",
+        "reasoning_zh": "奥马哈最后一批游轮乘客隔离结束，无新汉坦病毒病例。",
+        "update_id": "rt-35396fca6c4776d2",
+        "source_url": "",
+        "time": "2026-06-22T20:07:50.000Z"
+      }
+    ],
+    "rt-3f2e7cb0a8e6ce85": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "medium",
+        "reasoning_zh": "报道一名美国乘客结束42天隔离，未提及新增病例或死亡，故delta均为0。",
+        "update_id": "rt-3f2e7cb0a8e6ce85",
+        "source_url": "",
+        "time": "2026-06-22T14:19:14.000Z"
+      }
     ]
   }
 }
