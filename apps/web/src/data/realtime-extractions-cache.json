@@ -7909,6 +7909,104 @@
         "source_url": "",
         "time": "2026-06-22T14:19:14.000Z"
       }
+    ],
+    "rt-f3b757ebd6e9909c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "隔离结束，无新增病例数字，仅描述事件结束。",
+        "update_id": "rt-f3b757ebd6e9909c",
+        "source_url": "",
+        "time": "2026-06-23T13:34:00.000Z"
+      }
+    ],
+    "rt-52beb8a23661f9e6": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "讨论监测结束，无新增病例数字。",
+        "update_id": "rt-52beb8a23661f9e6",
+        "source_url": "",
+        "time": "2026-06-23T12:06:00.000Z"
+      }
+    ],
+    "rt-fade032a5d8878e6": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "WHO声明接近结束，但未指定国家，无具体数字。",
+        "update_id": "rt-fade032a5d8878e6",
+        "source_url": "",
+        "time": "2026-06-23T11:22:04.000Z"
+      }
+    ],
+    "rt-17b8ffef82b72a12": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "最后一批邮轮乘客解除隔离，无新增病例。",
+        "update_id": "rt-17b8ffef82b72a12",
+        "source_url": "",
+        "time": "2026-06-23T10:39:00.000Z"
+      }
+    ],
+    "rt-6a68da8e67f6ae4d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "最后一批美国人离开隔离，无新增病例。",
+        "update_id": "rt-6a68da8e67f6ae4d",
+        "source_url": "",
+        "time": "2026-06-23T10:15:00.000Z"
+      }
+    ],
+    "rt-4abe61c2010fd93d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "WHO称疫情接近结束，80%接触者完成隔离，但无具体国家数字。",
+        "update_id": "rt-4abe61c2010fd93d",
+        "source_url": "",
+        "time": "2026-06-23T10:08:39.000Z"
+      }
+    ],
+    "rt-adfe8bcafab4f8e5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "medium",
+        "reasoning_zh": "邮轮乘客隔离结束，无新增病例数字。",
+        "update_id": "rt-adfe8bcafab4f8e5",
+        "source_url": "",
+        "time": "2026-06-22T21:36:09.000Z"
+      }
     ]
   }
 }
