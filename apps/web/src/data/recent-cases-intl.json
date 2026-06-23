@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-23T02:55:10.497729+00:00",
+  "__generated_at": "2026-06-23T06:43:04.683933+00:00",
   "cases": [
     {
       "id": "who-2026-don604",
@@ -14,54 +14,6 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "who-2026-don601",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-13",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮安第斯型聚集疫情",
-      "summary": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
-      "source": {
-        "name": "WHO 疾病暴发新闻（DON）",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "who-2026-don600",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-08",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮安第斯型聚集疫情",
-      "summary": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
-      "source": {
-        "name": "WHO 疾病暴发新闻（DON）",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
-        "confidence": "official"
-      }
-    },
-    {
-      "id": "who-2026-don599",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-04",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮安第斯型聚集疫情",
-      "summary": "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报：一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。",
-      "source": {
-        "name": "WHO 疾病暴发新闻（DON）",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
         "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
         "confidence": "official"
       }
@@ -89,12 +41,12 @@
       "date": "2026-06-18",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 扩大对刚果（金）和乌干达埃博拉疫情的地面支持。",
-      "summary": "欧洲 CDC；刚果（金）；乌干达",
+      "title": "欧洲 CDC 在刚果民主共和国和乌干达的埃博拉疫情中扩大实地支持。",
+      "summary": "欧洲 CDC；刚果民主共和国；乌干达",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPeWtSQmh5SUROZDRtcDhiaFNZZHF1WnU3X1Zkb0dfME1Qa2J5X2x1SGllV044X2xZUmdVTlBFYnFRSmJyVldhT0Z1N3k2TWc3NTJDQnJFUDNIS25DenJQSWdocFFuYk9BNDhhMGlRMWFMbi1vNnhGU1JSNDhWWEE3T09BWmpHdnBjWXRCMUxsZ2ZmcWptZUxOVWJnODNZN0U?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "surveillance"
       }
     },
@@ -106,11 +58,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "发布关于 MV Hondius 邮轮 Andes 病毒接触者公共卫生管理的临时指南。",
-      "summary": "MV Hondius；Andes病毒；临时指南",
+      "summary": "MV Hondius；Andes病毒；接触者管理",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNaXptbWo0VWZOLU40eVdnSTJxRG91MXYtdDFOX1ZhYkJoMGQtb2RReE5Ua1JhUm1XZEVOZFV0OXpfVjZKUUFEUldUZ2xQNTdYeU12RjdraUdhTXZ3TzhYTHVTNjg1TFdoUVR6VnhpNEdnbDFXdElvZi1lRmN1aVI2bHpvZ001SmtJSnljTXZaNXRZYW4xWGQ2bTlLc2NxT2N5NTY5Y3ZoOHBBaEVueGlGYlRQX2dXWmVOQjVoNU4zdnJidklSaElkbzhWNzhnU0NiQmN0RVlPM01rWkVxbUJTTjA0UjJVb2haTWdxV1lzamFtbWpHYk9lQkhuSTRiWTlyYURkdEdmRjFjVTNMcjhDUUpxVmJBV01CV3VQQ0dFLXpvb2NtQVZGY005N2p3MnZmTTZEUzhjVXVjZW50T3c?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "surveillance"
       }
     },
@@ -121,12 +73,12 @@
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布医疗机构 Andes 汉坦病毒感染预防与控制临时建议。",
-      "summary": "Andes病毒；医疗机构；防控建议",
+      "title": "发布医疗机构中 Andes 汉坦病毒感染预防与控制临时建议。",
+      "summary": "医疗机构；感染防控；Andes病毒",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOb19xSHpteXUwaVU3TFdHUFZiejNPZjk2MW5aMzBZakZZLVF5RXFVdkZWMS14azllYU9Qb0s5TC1HVGZGbFg4T1ZJMmM3QmxzRVo3U3I2aHN0cEZLZWk4UXNZOEJBWXMwSGFyVUZnTG8yRVZ0SGJPZVlRV19DSllHNzN4T2I0WEFrc1NXajk1MDcxSzJKVlZVR0lnTUlnanlpSTNwamRYUXJmX2NnbmJwbWRBZ1JmQUctc1J5blFNMUVxX0lSMkt0YzIxblMzZVAtZzd5ck9YcllSdkJTbTZTVmU4czlRdjNReGVqSGRTRjBMU1hMdEg5VHh0THV5aExpTm42YWk4aWlONWhoMDBWRnVNQmlFZ1JibG9WWDdIdw?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "surveillance"
       }
     },
@@ -281,12 +233,12 @@
       "date": "2026-05-29",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布 5 月 23-29 日传染病威胁周报。",
-      "summary": "欧洲 CDC；周报",
+      "title": "欧洲 CDC 发布 2026 年 5 月 23-29 日传染病威胁周报。",
+      "summary": "欧洲 CDC；传染病威胁；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTDlKOEhEblp0bG5aRGRWTjBWYmE0QjMtVE1tTTh5Z1ZCQ1lya1ZqeWNvcVZEVzJTbjVReHVUNm1QeTJMSnNjNlZIWWhpVFlOUzd2OFNxVUZWOFZJVG9GRFJCZTBBa0UtbUhIY19nUXhaZ3RBNWhWTGwyY2RiZWJnZG1nR0Y1R1pBaWY5ZlJnaVdUVXNRNUhQQkc2WnhZdjZQLVBlcWVoVmNnUQ?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "surveillance"
       }
     },
@@ -361,12 +313,12 @@
       "date": "2026-05-19",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 更新与 MV Hondius 邮轮相关的汉坦病毒疫情信息。",
-      "summary": "美国 CDC；MV Hondius；汉坦病毒",
+      "title": "美国 CDC 更新与 M/V Hondius 邮轮相关的汉坦病毒疫情信息。",
+      "summary": "美国 CDC；M/V Hondius；汉坦病毒",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOHFNeW1vVFJvU0tfejVQMFRXa1dSV0djeE0yUWRiMW5KazFnOWw0UjRpTV9WcksyY0xranRGeVpzNnN6VkNoMHRSQzI3cnA5NHI4cGJRYVRVOXJLRE14bzUybEpCcEJCVzdGUTJSSnJCTmxGVkRKRC1nYXJWN1VlTG9ZSkNJZkh0VWVwWUNRQjh2cjRoeGltU0kzOU9zRF9aWlRZWWR3cU5CLXhqTnFNMmVKRWwwV2ZadEpYaFNB?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "surveillance"
       }
     },
@@ -382,7 +334,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-06-23T02:54:44.657201+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274818+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +350,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-06-23T02:54:44.657201+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274818+00:00",
         "confidence": "news"
       }
     },
@@ -414,7 +366,23 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-06-23T02:54:44.657201+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274818+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmihajbvv95cuxprwiwnzdwchdczjlkrtduchrqr0nqdvrqmhhydu1ntmpfbtbyvti1stnttzbsemzwet",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-22",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织总干事在2026年5月22日关于埃博拉病毒病和汉坦病毒疫情的会员国情况介绍会上的开场白",
+      "summary": "",
+      "source": {
+        "name": "World Health Organization (WHO)",
+        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "news"
       }
     },
@@ -430,7 +398,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "news"
       }
     },
@@ -446,7 +414,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "news"
       }
     },
@@ -462,7 +430,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-06-23T02:54:44.657201+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274818+00:00",
         "confidence": "news"
       }
     },
@@ -478,7 +446,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-06-23T02:54:44.656454+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274081+00:00",
         "confidence": "news"
       }
     },
@@ -494,7 +462,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-06-23T02:54:44.657201+00:00",
+        "retrievedAt": "2026-06-23T06:42:49.274818+00:00",
         "confidence": "news"
       }
     }
