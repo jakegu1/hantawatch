@@ -1,22 +1,75 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-23T21:26:23.051619+00:00",
+  "__generated_at": "2026-06-23T23:02:27.964723+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-23T21:26:21.298575+00:00",
+  "last_fetched": "2026-06-23T23:02:26.813335+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-62c0196aeca6f278",
+      "time": "2026-06-23T22:49:00.000Z",
+      "title_en": "Omaha leaders mark end of quarantine for cruise passengers exposed to hantavirus - KETV",
+      "body_en": "Omaha leaders mark end of quarantine for cruise passengers exposed to hantavirus KETV",
+      "summary_zh": "奥马哈官员宣布汉坦病毒暴露邮轮乘客隔离结束。",
+      "key_facts_zh": [
+        "美国",
+        "奥马哈",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-2226ab508025bf86",
+      "time": "2026-06-23T22:17:00.000Z",
+      "title_en": "Last American hantavirus cruise ship passenger released from quarantine - The Hill",
+      "body_en": "Last American hantavirus cruise ship passenger released from quarantine The Hill",
+      "summary_zh": "最后一名美国汉坦病毒邮轮乘客解除隔离。",
+      "key_facts_zh": [
+        "美国",
+        "最后一名",
+        "解除隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-016d6ad74c2d916b",
+      "time": "2026-06-23T21:46:00.000Z",
+      "title_en": "Quarantine ends for more than dozen travelers on cruise ship impacted by hantavirus - 11Alive.com",
+      "body_en": "Quarantine ends for more than dozen travelers on cruise ship impacted by hantavirus 11Alive.com",
+      "summary_zh": "十余名汉坦病毒邮轮乘客隔离结束。",
+      "key_facts_zh": [
+        "美国",
+        "十余名",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9e2d77bcfb23fd4f",
+      "time": "2026-06-23T21:10:00.000Z",
+      "title_en": "Hantavirus quarantine ends for exposed cruise passengers, including two with NH ties - WMUR",
+      "body_en": "Hantavirus quarantine ends for exposed cruise passengers, including two with NH ties WMUR",
+      "summary_zh": "汉坦病毒暴露邮轮乘客隔离结束，包括两名新罕布什尔州居民。",
+      "key_facts_zh": [
+        "美国",
+        "新罕布什尔",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-5619a51f2ad0fac1",
       "time": "2026-06-23T21:07:10.000Z",
       "title_en": "UNMC hantavirus operation wraps up, team ready if Ebola outbreak calls - News From The States",
       "body_en": "UNMC hantavirus operation wraps up, team ready if Ebola outbreak calls News From The States",
-      "summary_zh": "内布拉斯加医学中心结束汉坦病毒行动，团队准备应对埃博拉。",
+      "summary_zh": "内布拉斯加医学中心汉坦病毒行动结束，团队准备应对埃博拉。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "汉坦病毒行动结束"
+        "行动结束",
+        "埃博拉准备"
       ],
       "signal_strength": "medium"
     },
@@ -25,48 +78,36 @@
       "time": "2026-06-23T19:03:44.000Z",
       "title_en": "Video American passenger aboard hantavirus ship details 42 days in quarantine - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Video American passenger aboard hantavirus ship details 42 days in quarantine ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国乘客讲述在汉坦病毒邮轮上隔离42天经历。",
+      "summary_zh": "美国乘客讲述汉坦病毒邮轮42天隔离经历。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "隔离42天"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-829411270c28bc35",
-      "time": "2026-06-23T17:54:31.000Z",
-      "title_en": "‘No room for error': UNMC reflects as quarantine ends for hantavirus cruise ship passengers - Nebraska Public Media",
-      "body_en": "‘No room for error': UNMC reflects as quarantine ends for hantavirus cruise ship passengers Nebraska Public Media",
-      "summary_zh": "内布拉斯加医学中心反思汉坦病毒邮轮乘客隔离结束。",
-      "key_facts_zh": [
-        "内布拉斯加医学中心",
-        "邮轮",
-        "隔离结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-10ed9a0d73198e61",
-      "time": "2026-06-23T17:38:56.000Z",
-      "title_en": "Video Travel blogger documents journey on cruise ship with hantavirus outbreak - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Video Travel blogger documents journey on cruise ship with hantavirus outbreak ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "旅游博主记录汉坦病毒暴发邮轮旅程。",
-      "key_facts_zh": [
-        "邮轮",
-        "汉坦病毒暴发"
+        "乘客",
+        "42天隔离"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-797a566ea74560b4",
-      "time": "2026-06-23T15:50:53.000Z",
-      "title_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska - Yahoo News Canada",
-      "body_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska Yahoo News Canada",
-      "summary_zh": "内布拉斯加州最后一批汉坦病毒邮轮乘客隔离结束。",
+      "id": "rt-f84063a13b0cdbae",
+      "time": "2026-06-23T17:55:31.000Z",
+      "title_en": "‘No room for error’: UNMC reflects as quarantine ends for hantavirus cruise ship passengers - thereader.com",
+      "body_en": "‘No room for error’: UNMC reflects as quarantine ends for hantavirus cruise ship passengers thereader.com",
+      "summary_zh": "内布拉斯加医学中心反思汉坦病毒邮轮隔离结束。",
       "key_facts_zh": [
+        "内布拉斯加医学中心",
+        "隔离结束",
+        "反思"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-5bf92e88456a0a66",
+      "time": "2026-06-23T15:53:00.000Z",
+      "title_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska - AP News",
+      "body_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska AP News",
+      "summary_zh": "内布拉斯加州最后一批汉坦病毒邮轮乘客结束隔离。",
+      "key_facts_zh": [
+        "美国",
         "内布拉斯加",
-        "邮轮",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -80,7 +121,7 @@
       "key_facts_zh": [
         "英国",
         "英国卫生安全局",
-        "自我隔离完成"
+        "隔离完成"
       ],
       "signal_strength": "high"
     },
@@ -102,10 +143,11 @@
       "time": "2026-06-23T15:05:57.000Z",
       "title_en": "They spent 42 days in hantavirus quarantine. Now they’re finally going home - Straight Arrow News - SAN - Unbiased. Straight Facts.",
       "body_en": "They spent 42 days in hantavirus quarantine. Now they’re finally going home Straight Arrow News - SAN - Unbiased. Straight Facts.",
-      "summary_zh": "汉坦病毒隔离42天后，乘客终于回家。",
+      "summary_zh": "经历42天汉坦病毒隔离后，乘客终于回家。",
       "key_facts_zh": [
-        "隔离42天",
-        "乘客回家"
+        "美国",
+        "42天隔离",
+        "回家"
       ],
       "signal_strength": "high"
     },
@@ -114,7 +156,7 @@
       "time": "2026-06-23T13:34:00.000Z",
       "title_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska - The Guardian",
       "body_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska The Guardian",
-      "summary_zh": "美国人在内布拉斯加州隔离六周后结束。",
+      "summary_zh": "内布拉斯加州六周汉坦病毒隔离结束。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
@@ -127,8 +169,9 @@
       "time": "2026-06-23T13:33:00.000Z",
       "title_en": "Health officials to discuss end of hantavirus monitoring operation in Omaha - WOWT",
       "body_en": "Health officials to discuss end of hantavirus monitoring operation in Omaha WOWT",
-      "summary_zh": "奥马哈卫生官员讨论结束汉坦病毒监测。",
+      "summary_zh": "奥马哈卫生官员讨论结束汉坦病毒监测行动。",
       "key_facts_zh": [
+        "美国",
         "奥马哈",
         "监测结束"
       ],
@@ -139,10 +182,11 @@
       "time": "2026-06-23T11:49:13.000Z",
       "title_en": "Hantavirus outbreak \"close to end\", says WHO director-general, after more than 80% of contacts have concluded quarantine - Gamereactor UK",
       "body_en": "Hantavirus outbreak \"close to end\", says WHO director-general, after more than 80% of contacts have concluded quarantine Gamereactor UK",
-      "summary_zh": "WHO总干事称汉坦病毒疫情接近尾声。",
+      "summary_zh": "WHO总干事称汉坦病毒疫情接近尾声，超80%接触者完成隔离。",
       "key_facts_zh": [
         "WHO",
-        "疫情接近尾声"
+        "疫情接近尾声",
+        "80%接触者"
       ],
       "signal_strength": "high"
     },
@@ -151,7 +195,7 @@
       "time": "2026-06-23T11:22:20.000Z",
       "title_en": "We’re closing in on ending Hantavirus outbreak — WHO - Modern Ghana",
       "body_en": "We’re closing in on ending Hantavirus outbreak — WHO Modern Ghana",
-      "summary_zh": "WHO称汉坦病毒疫情即将结束。",
+      "summary_zh": "WHO 称汉坦病毒疫情即将结束。",
       "key_facts_zh": [
         "WHO",
         "疫情即将结束"
@@ -163,7 +207,7 @@
       "time": "2026-06-23T10:39:00.000Z",
       "title_en": "Final US cruise passengers released after hantavirus quarantine - cbs19.tv",
       "body_en": "Final US cruise passengers released after hantavirus quarantine cbs19.tv",
-      "summary_zh": "美国邮轮乘客结束汉坦病毒隔离。",
+      "summary_zh": "美国邮轮乘客结束汉坦病毒隔离后获释。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -176,10 +220,9 @@
       "time": "2026-06-23T10:15:00.000Z",
       "title_en": "Last Americans leave hantavirus quarantine - WCNC",
       "body_en": "Last Americans leave hantavirus quarantine WCNC",
-      "summary_zh": "最后一批美国人离开汉坦病毒隔离。",
+      "summary_zh": "最后一批美国人离开汉坦病毒隔离区。",
       "key_facts_zh": [
         "美国",
-        "最后一批",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -189,20 +232,7 @@
       "time": "2026-06-23T04:33:02.000Z",
       "title_en": "Americans on hantavirus-infected ship end quarantine - NBC News",
       "body_en": "Americans on hantavirus-infected ship end quarantine NBC News",
-      "summary_zh": "感染汉坦病毒的美国船上人员结束隔离。",
-      "key_facts_zh": [
-        "美国",
-        "船上人员",
-        "隔离结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1d9573c8d48d95ea",
-      "time": "2026-06-23T03:18:00.000Z",
-      "title_en": "Quarantine ends for last of American passengers of cruise ship hit by hantavirus outbreak - weareiowa.com",
-      "body_en": "Quarantine ends for last of American passengers of cruise ship hit by hantavirus outbreak weareiowa.com",
-      "summary_zh": "美国邮轮汉坦病毒疫情乘客隔离结束。",
+      "summary_zh": "感染汉坦病毒的美国邮轮乘客结束隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -215,23 +245,11 @@
       "time": "2026-06-23T01:58:00.000Z",
       "title_en": "U.S. hantavirus cruise passengers complete monitoring, no new cases reported - AnewZ",
       "body_en": "U.S. hantavirus cruise passengers complete monitoring, no new cases reported AnewZ",
-      "summary_zh": "美国汉坦病毒邮轮乘客监测完成，无新增病例。",
+      "summary_zh": "美国汉坦病毒邮轮乘客完成监测，无新增病例。",
       "key_facts_zh": [
         "美国",
-        "监测完成",
-        "无新增"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b81ba5ea393aff2d",
-      "time": "2026-06-23T01:16:41.000Z",
-      "title_en": "US completes quarantine of cruise ship passengers after hantavirus outbreak - Українські Національні Новини (УНН)",
-      "body_en": "US completes quarantine of cruise ship passengers after hantavirus outbreak Українські Національні Новини (УНН)",
-      "summary_zh": "美国完成汉坦病毒邮轮乘客隔离。",
-      "key_facts_zh": [
-        "美国",
-        "隔离完成"
+        "邮轮",
+        "无新增病例"
       ],
       "signal_strength": "high"
     },
@@ -240,10 +258,10 @@
       "time": "2026-06-23T00:50:00.000Z",
       "title_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC - KOLN | Nebraska Local News, Weather, Sports | Lincoln, NE",
       "body_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC KOLN | Nebraska Local News, Weather, Sports | Lincoln, NE",
-      "summary_zh": "内布拉斯加医学中心结束汉坦病毒乘客监测。",
+      "summary_zh": "内布拉斯加医学中心结束对 M/V Hondius 乘客的汉坦病毒隔离监测。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "监测结束"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -252,10 +270,10 @@
       "time": "2026-06-22T23:48:00.000Z",
       "title_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC - WOWT",
       "body_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC WOWT",
-      "summary_zh": "内布拉斯加医学中心结束汉坦病毒乘客监测。",
+      "summary_zh": "内布拉斯加医学中心结束对 M/V Hondius 乘客的汉坦病毒隔离监测。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "监测结束"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -276,34 +294,11 @@
       "time": "2026-06-22T22:55:00.000Z",
       "title_en": "All US passengers from hantavirus-hit ship return to home states - Reuters",
       "body_en": "All US passengers from hantavirus-hit ship return to home states Reuters",
-      "summary_zh": "所有美国汉坦病毒邮轮乘客返回家乡。",
+      "summary_zh": "美国汉坦病毒邮轮乘客全部返回各州。",
       "key_facts_zh": [
         "美国",
+        "邮轮",
         "乘客返回"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-fc1185d3985fdeaa",
-      "time": "2026-06-22T22:51:24.000Z",
-      "title_en": "Monitoring period ends for hantavirus passengers - WOWT",
-      "body_en": "Monitoring period ends for hantavirus passengers WOWT",
-      "summary_zh": "汉坦病毒乘客监测期结束。",
-      "key_facts_zh": [
-        "监测结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-2f2e4da3884b5114",
-      "time": "2026-06-22T22:21:44.000Z",
-      "title_en": "Monitoring period ends for passengers exposed to hantavirus in Omaha - WOWT",
-      "body_en": "Monitoring period ends for passengers exposed to hantavirus in Omaha WOWT",
-      "summary_zh": "美国奥马哈汉坦病毒暴露者监测期结束。",
-      "key_facts_zh": [
-        "美国",
-        "奥马哈",
-        "监测结束"
       ],
       "signal_strength": "high"
     }
