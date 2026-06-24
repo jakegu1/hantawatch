@@ -8385,6 +8385,202 @@
         "source_url": "",
         "time": "2026-06-23T13:13:00.000Z"
       }
+    ],
+    "rt-95cb1c0b706b3304": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布疫情将于7月2日结束，未提供具体国家或新增病例数。",
+        "update_id": "rt-95cb1c0b706b3304",
+        "source_url": "",
+        "time": "2026-06-24T19:09:15.000Z"
+      }
+    ],
+    "rt-1e44c57888d147a5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "美国结束汉坦病毒响应，但未提及新增病例数。",
+        "update_id": "rt-1e44c57888d147a5",
+        "source_url": "",
+        "time": "2026-06-24T18:23:00.000Z"
+      }
+    ],
+    "rt-b9981d7204927047": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC结束游轮疫情响应，但未提供新增病例数。",
+        "update_id": "rt-b9981d7204927047",
+        "source_url": "",
+        "time": "2026-06-24T18:10:07.000Z"
+      }
+    ],
+    "rt-ff2d8416eca875c5": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "high",
+        "reasoning_zh": "加拿大34人完成自我隔离，无新增病例。",
+        "update_id": "rt-ff2d8416eca875c5",
+        "source_url": "",
+        "time": "2026-06-24T18:06:54.000Z"
+      }
+    ],
+    "rt-9b1e8fc2fa447cc1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "隔离患者解除隔离，但未说明具体国家或新增病例。",
+        "update_id": "rt-9b1e8fc2fa447cc1",
+        "source_url": "",
+        "time": "2026-06-24T16:54:00.000Z"
+      }
+    ],
+    "rt-a9c2ff9a2148b85f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "美国隔离结束，无病例，但未提供新增数字。",
+        "update_id": "rt-a9c2ff9a2148b85f",
+        "source_url": "",
+        "time": "2026-06-24T16:23:09.000Z"
+      }
+    ],
+    "rt-42850abd62f4914f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC结束美国汉坦病毒响应，未提及新增病例。",
+        "update_id": "rt-42850abd62f4914f",
+        "source_url": "",
+        "time": "2026-06-24T16:16:00.000Z"
+      }
+    ],
+    "rt-cf71f3190b813abd": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "明尼苏达州一人暴露，但风险低，无新增病例数。",
+        "update_id": "rt-cf71f3190b813abd",
+        "source_url": "",
+        "time": "2026-06-24T15:49:00.000Z"
+      }
+    ],
+    "rt-63168ac5aff4dea9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "WHO声明若7月2日前无新病例则宣布疫情结束，未提供具体国家或数字。",
+        "update_id": "rt-63168ac5aff4dea9",
+        "source_url": "",
+        "time": "2026-06-24T15:43:30.000Z"
+      }
+    ],
+    "rt-b3ba3bea489686a9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "美国CDC正式结束汉坦病毒响应，未提及新增病例数。",
+        "update_id": "rt-b3ba3bea489686a9",
+        "source_url": "",
+        "time": "2026-06-24T15:38:24.000Z"
+      }
+    ],
+    "rt-d449a8ec77ee5ee9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "WSJ报道美国CDC将结束汉坦病毒响应，未提供具体数字。",
+        "update_id": "rt-d449a8ec77ee5ee9",
+        "source_url": "",
+        "time": "2026-06-24T15:04:06.000Z"
+      }
+    ],
+    "rt-5a7ceadc8c26fad5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC结束对邮轮汉坦病毒爆发的响应，未提及新增病例。",
+        "update_id": "rt-5a7ceadc8c26fad5",
+        "source_url": "",
+        "time": "2026-06-24T14:46:06.000Z"
+      }
+    ],
+    "rt-6775979df638294a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC准备结束汉坦病毒响应，美国乘客结束隔离，无新增病例数。",
+        "update_id": "rt-6775979df638294a",
+        "source_url": "",
+        "time": "2026-06-24T13:33:00.000Z"
+      }
+    ],
+    "rt-84b072d970a7b70c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "CNN报道汉坦病毒邮轮乘客结束42天隔离回家，无新增病例。",
+        "update_id": "rt-84b072d970a7b70c",
+        "source_url": "",
+        "time": "2026-06-23T23:21:00.000Z"
+      }
     ]
   }
 }
