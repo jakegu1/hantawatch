@@ -8133,6 +8133,118 @@
         "source_url": "",
         "time": "2026-06-23T13:33:00.000Z"
       }
+    ],
+    "rt-fe5c833e0eac2e19": [
+      {
+        "iso2": "GH",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及一名汉坦病毒患者结束隔离，未提供新增病例数。",
+        "update_id": "rt-fe5c833e0eac2e19",
+        "source_url": "",
+        "time": "2026-06-24T00:14:25.000Z"
+      }
+    ],
+    "rt-4e602023a4964bb9": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及美国乘客结束隔离，未提供新增病例数。",
+        "update_id": "rt-4e602023a4964bb9",
+        "source_url": "",
+        "time": "2026-06-23T23:40:20.000Z"
+      }
+    ],
+    "rt-62c0196aeca6f278": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及奥马哈结束隔离，未提供新增病例数。",
+        "update_id": "rt-62c0196aeca6f278",
+        "source_url": "",
+        "time": "2026-06-23T22:49:00.000Z"
+      }
+    ],
+    "rt-2226ab508025bf86": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及最后一名美国乘客结束隔离，未提供新增病例数。",
+        "update_id": "rt-2226ab508025bf86",
+        "source_url": "",
+        "time": "2026-06-23T22:17:00.000Z"
+      }
+    ],
+    "rt-016d6ad74c2d916b": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及十多名乘客结束隔离，未提供新增病例数。",
+        "update_id": "rt-016d6ad74c2d916b",
+        "source_url": "",
+        "time": "2026-06-23T21:46:00.000Z"
+      }
+    ],
+    "rt-9e2d77bcfb23fd4f": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及新罕布什尔州相关乘客结束隔离，未提供新增病例数。",
+        "update_id": "rt-9e2d77bcfb23fd4f",
+        "source_url": "",
+        "time": "2026-06-23T21:10:00.000Z"
+      }
+    ],
+    "rt-50ed943e268be0a4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及UNMC汉坦病毒行动结束，未提供新增病例数。",
+        "update_id": "rt-50ed943e268be0a4",
+        "source_url": "",
+        "time": "2026-06-23T21:07:15.000Z"
+      }
+    ],
+    "rt-5bf92e88456a0a66": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及内布拉斯加州最后一批乘客结束隔离，未提供新增病例数。",
+        "update_id": "rt-5bf92e88456a0a66",
+        "source_url": "",
+        "time": "2026-06-23T15:53:00.000Z"
+      }
     ]
   }
 }
