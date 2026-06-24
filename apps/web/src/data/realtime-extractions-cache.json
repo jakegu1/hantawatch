@@ -8273,6 +8273,118 @@
         "source_url": "",
         "time": "2026-06-24T03:38:11.000Z"
       }
+    ],
+    "rt-29f692e4a90157eb": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC准备结束汉坦病毒应对，美国乘客结束隔离，无新增病例数字。",
+        "update_id": "rt-29f692e4a90157eb",
+        "source_url": "",
+        "time": "2026-06-24T13:33:00.000Z"
+      }
+    ],
+    "rt-ddaba728eda16df9": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "西班牙缺乏统一技术指挥应对卫生紧急情况，未提及汉坦病毒具体病例。",
+        "update_id": "rt-ddaba728eda16df9",
+        "source_url": "",
+        "time": "2026-06-24T13:12:13.000Z"
+      }
+    ],
+    "rt-1cafca86273930ff": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "国际公共卫生应对帮助控制荷兰邮轮上的汉坦病毒爆发，无新增病例数字。",
+        "update_id": "rt-1cafca86273930ff",
+        "source_url": "",
+        "time": "2026-06-24T13:03:39.000Z"
+      }
+    ],
+    "rt-1da54eef6dce7e2c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "美国疾控机构将结束汉坦病毒应对，无新增病例数字。",
+        "update_id": "rt-1da54eef6dce7e2c",
+        "source_url": "",
+        "time": "2026-06-24T12:10:20.000Z"
+      }
+    ],
+    "rt-071221220e5293a1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "high",
+        "reasoning_zh": "美国CDC将结束汉坦病毒应对，路透社报道，无新增病例数字。",
+        "update_id": "rt-071221220e5293a1",
+        "source_url": "",
+        "time": "2026-06-24T09:47:43.000Z"
+      }
+    ],
+    "rt-966851fd48b40b30": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "奥马哈隔离单位分享经验，最后一批汉坦病毒邮轮乘客离开，无新增病例数字。",
+        "update_id": "rt-966851fd48b40b30",
+        "source_url": "",
+        "time": "2026-06-24T09:45:00.000Z"
+      }
+    ],
+    "rt-139bb843639992ad": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "CDC的汉坦病毒应对在邮轮爆发后结束，无新增病例数字。",
+        "update_id": "rt-139bb843639992ad",
+        "source_url": "",
+        "time": "2026-06-24T09:44:54.000Z"
+      }
+    ],
+    "rt-c1417dfe8906a740": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-23",
+        "confidence": "medium",
+        "reasoning_zh": "美国邮轮爆发汉坦病毒威胁结束，官方声明，无新增病例数字。",
+        "update_id": "rt-c1417dfe8906a740",
+        "source_url": "",
+        "time": "2026-06-23T13:13:00.000Z"
+      }
     ]
   }
 }
