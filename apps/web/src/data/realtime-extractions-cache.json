@@ -8245,6 +8245,34 @@
         "source_url": "",
         "time": "2026-06-23T15:53:00.000Z"
       }
+    ],
+    "rt-72ce29b120edf3a7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "报道称CDC将结束汉坦病毒应对，但未提供新增病例数字，故delta均为0。",
+        "update_id": "rt-72ce29b120edf3a7",
+        "source_url": "",
+        "time": "2026-06-24T09:00:00.000Z"
+      }
+    ],
+    "rt-d4ee458117482cda": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "报道提及当地网红结束隔离，但未提供新增病例数字，故delta均为0。",
+        "update_id": "rt-d4ee458117482cda",
+        "source_url": "",
+        "time": "2026-06-24T03:38:11.000Z"
+      }
     ]
   }
 }
