@@ -1,21 +1,86 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-24T16:12:06.569595+00:00",
+  "__generated_at": "2026-06-24T18:29:21.544027+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-24T16:12:05.360559+00:00",
+  "last_fetched": "2026-06-24T18:29:20.198865+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-ff2d8416eca875c5",
+      "time": "2026-06-24T18:06:54.000Z",
+      "title_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - Global News",
+      "body_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says Global News",
+      "summary_zh": "加拿大卫生部称34名汉坦病毒隔离者已解除隔离。",
+      "key_facts_zh": [
+        "加拿大",
+        "34人",
+        "解除隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-72ce29b120edf3a7",
+      "time": "2026-06-24T17:48:00.000Z",
+      "title_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
+      "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
+      "summary_zh": "美国CDC因疫情风险降低结束汉坦病毒应急响应。",
+      "key_facts_zh": [
+        "美国CDC",
+        "结束响应",
+        "风险降低"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9b1e8fc2fa447cc1",
+      "time": "2026-06-24T16:54:00.000Z",
+      "title_en": "Hantavirus quarantined patients released from isolation after 42 days - WTHR",
+      "body_en": "Hantavirus quarantined patients released from isolation after 42 days WTHR",
+      "summary_zh": "汉坦病毒隔离患者42天后解除隔离。",
+      "key_facts_zh": [
+        "隔离",
+        "42天",
+        "解除"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-a9c2ff9a2148b85f",
+      "time": "2026-06-24T16:23:09.000Z",
+      "title_en": "Hantavirus quarantine ends; no cases in the US - WPXI",
+      "body_en": "Hantavirus quarantine ends; no cases in the US WPXI",
+      "summary_zh": "汉坦病毒隔离结束，美国无病例。",
+      "key_facts_zh": [
+        "美国",
+        "隔离结束",
+        "无病例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-42850abd62f4914f",
+      "time": "2026-06-24T16:16:00.000Z",
+      "title_en": "CDC ends US hantavirus response - The Hill",
+      "body_en": "CDC ends US hantavirus response The Hill",
+      "summary_zh": "美国CDC结束汉坦病毒应急响应。",
+      "key_facts_zh": [
+        "美国CDC",
+        "结束响应"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-63168ac5aff4dea9",
       "time": "2026-06-24T15:43:30.000Z",
       "title_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge - Anadolu Ajansı",
       "body_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge Anadolu Ajansı",
-      "summary_zh": "WHO称若7月2日前无新病例，汉坦疫情将宣布结束。",
+      "summary_zh": "WHO称若无新病例，汉坦病毒疫情将于7月2日宣布结束。",
       "key_facts_zh": [
         "WHO",
+        "7月2日",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -28,7 +93,7 @@
       "summary_zh": "美国CDC正式结束汉坦病毒应急响应。",
       "key_facts_zh": [
         "美国CDC",
-        "结束响应"
+        "正式结束"
       ],
       "signal_strength": "high"
     },
@@ -37,23 +102,23 @@
       "time": "2026-06-24T15:04:06.000Z",
       "title_en": "US CDC to end hantavirus response, WSJ reports - The Mighty 790 KFGO",
       "body_en": "US CDC to end hantavirus response, WSJ reports The Mighty 790 KFGO",
-      "summary_zh": "WSJ报道美国CDC将结束汉坦病毒响应。",
+      "summary_zh": "美国CDC将结束汉坦病毒应急响应。",
       "key_facts_zh": [
         "美国CDC",
-        "结束响应"
+        "将结束响应"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-5a7ceadc8c26fad5",
       "time": "2026-06-24T14:46:06.000Z",
       "title_en": "CDC Concludes Response to Hantavirus Outbreak from Cruise Ship - Devdiscourse",
       "body_en": "CDC Concludes Response to Hantavirus Outbreak from Cruise Ship Devdiscourse",
-      "summary_zh": "美国CDC结束对邮轮汉坦病毒疫情的响应。",
+      "summary_zh": "美国 CDC 结束对邮轮汉坦病毒疫情的应对。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "邮轮",
-        "结束响应"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -62,48 +127,50 @@
       "time": "2026-06-24T14:46:05.000Z",
       "title_en": "US CDC to wind down hantavirus response as outbreak eases - Reuters",
       "body_en": "US CDC to wind down hantavirus response as outbreak eases Reuters",
-      "summary_zh": "路透社：美国CDC将逐步结束汉坦病毒响应。",
+      "summary_zh": "美国 CDC 将逐步结束汉坦病毒应对，疫情缓解。",
       "key_facts_zh": [
-        "美国CDC",
-        "结束响应"
+        "美国 CDC",
+        "疫情缓解",
+        "结束应对"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6572ad994354233d",
+      "time": "2026-06-24T14:12:07.000Z",
+      "title_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case - HHS.gov",
+      "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov",
+      "summary_zh": "美国 HHS 结束汉坦病毒应对，监测无阳性病例。",
+      "key_facts_zh": [
+        "美国 HHS",
+        "监测结束",
+        "无阳性病例"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-29f692e4a90157eb",
       "time": "2026-06-24T13:33:00.000Z",
-      "title_en": "CDC prepares to end its hantavirus response as American passengers celebrate the end of quarantine - 10tv.com",
-      "body_en": "CDC prepares to end its hantavirus response as American passengers celebrate the end of quarantine 10tv.com",
-      "summary_zh": "美国CDC准备结束汉坦病毒响应，乘客庆祝隔离结束。",
+      "title_en": "CDC prepares to end its hantavirus response as American passengers celebrate the end of quarantine - 10TV",
+      "body_en": "CDC prepares to end its hantavirus response as American passengers celebrate the end of quarantine 10TV",
+      "summary_zh": "美国 CDC 准备结束汉坦病毒应对，乘客庆祝隔离结束。",
       "key_facts_zh": [
-        "美国CDC",
-        "结束响应",
+        "美国 CDC",
+        "乘客",
         "隔离结束"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-ddaba728eda16df9",
-      "time": "2026-06-24T13:12:13.000Z",
-      "title_en": "Spain still lacks unified technical command to tackle health emergencies - Sur in English",
-      "body_en": "Spain still lacks unified technical command to tackle health emergencies Sur in English",
-      "summary_zh": "西班牙仍缺乏应对卫生紧急事件的统一技术指挥。",
-      "key_facts_zh": [
-        "西班牙",
-        "卫生应急"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-1cafca86273930ff",
       "time": "2026-06-24T13:03:39.000Z",
       "title_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship - CIDRAP",
       "body_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship CIDRAP",
-      "summary_zh": "国际公共卫生响应帮助控制荷兰邮轮上的汉坦疫情。",
+      "summary_zh": "国际公共卫生应对帮助控制荷兰邮轮上的汉坦病毒疫情。",
       "key_facts_zh": [
-        "国际响应",
+        "国际应对",
         "荷兰邮轮",
-        "控制疫情"
+        "疫情控制"
       ],
       "signal_strength": "high"
     },
@@ -112,10 +179,10 @@
       "time": "2026-06-24T12:10:20.000Z",
       "title_en": "US disease control agency to end hantavirus response: report - TRT World",
       "body_en": "US disease control agency to end hantavirus response: report TRT World",
-      "summary_zh": "美国 CDC 将结束汉坦病毒疫情响应。",
+      "summary_zh": "美国疾控机构将结束汉坦病毒应对。",
       "key_facts_zh": [
         "美国 CDC",
-        "结束响应"
+        "结束应对"
       ],
       "signal_strength": "high"
     },
@@ -124,11 +191,11 @@
       "time": "2026-06-24T09:49:27.000Z",
       "title_en": "Omaha quarantine unit shares lessons as last passengers from hantavirus ship leave - Omaha World-Herald",
       "body_en": "Omaha quarantine unit shares lessons as last passengers from hantavirus ship leave Omaha World-Herald",
-      "summary_zh": "奥马哈隔离单位分享经验，最后一批乘客离开。",
+      "summary_zh": "奥马哈隔离单位分享经验，最后一批乘客离开汉坦病毒邮轮。",
       "key_facts_zh": [
         "奥马哈",
-        "隔离结束",
-        "邮轮"
+        "隔离单位",
+        "乘客离开"
       ],
       "signal_strength": "high"
     },
@@ -137,11 +204,11 @@
       "time": "2026-06-24T09:44:54.000Z",
       "title_en": "CDC's Hantavirus Response Concludes Post Cruise Ship Outbreak - Devdiscourse",
       "body_en": "CDC's Hantavirus Response Concludes Post Cruise Ship Outbreak Devdiscourse",
-      "summary_zh": "美国 CDC 结束邮轮疫情后的汉坦病毒响应。",
+      "summary_zh": "美国 CDC 结束邮轮汉坦病毒疫情后的应对。",
       "key_facts_zh": [
         "美国 CDC",
-        "结束响应",
-        "邮轮"
+        "邮轮",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -150,63 +217,23 @@
       "time": "2026-06-24T09:10:07.000Z",
       "title_en": "Americans on hantavirus-infected ship end quarantine - NBC News",
       "body_en": "Americans on hantavirus-infected ship end quarantine NBC News",
-      "summary_zh": "感染汉坦病毒的邮轮上的美国人结束隔离。",
+      "summary_zh": "美国汉坦病毒感染邮轮乘客结束隔离。",
       "key_facts_zh": [
         "美国",
-        "隔离结束",
-        "邮轮"
+        "邮轮",
+        "结束隔离"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-72ce29b120edf3a7",
-      "time": "2026-06-24T09:00:00.000Z",
-      "title_en": "Exclusive | CDC to End Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
-      "body_en": "Exclusive | CDC to End Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
-      "summary_zh": "美国 CDC 将结束汉坦病毒响应，疫情风险降低。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "结束响应",
-        "风险降低"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-d4ee458117482cda",
-      "time": "2026-06-24T03:38:11.000Z",
-      "title_en": "Local influencer returns home after quarantine following hantavirus outbreak on ship - NBC Boston",
-      "body_en": "Local influencer returns home after quarantine following hantavirus outbreak on ship NBC Boston",
-      "summary_zh": "当地网红结束邮轮疫情隔离后回家。",
-      "key_facts_zh": [
-        "美国",
-        "网红",
-        "隔离结束"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-f3b757ebd6e9909c",
       "time": "2026-06-24T03:20:00.000Z",
       "title_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska - The Guardian",
       "body_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska The Guardian",
-      "summary_zh": "在内布拉斯加州隔离六周的美国人结束隔离。",
+      "summary_zh": "内布拉斯加州六周汉坦病毒隔离结束。",
       "key_facts_zh": [
         "内布拉斯加",
-        "隔离结束",
-        "六周"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1a4052977523347a",
-      "time": "2026-06-23T23:24:23.000Z",
-      "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News - News On AIR",
-      "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News News On AIR",
-      "summary_zh": "WHO 确认五例汉坦病毒病例与邮轮疫情相关。",
-      "key_facts_zh": [
-        "WHO",
-        "5例确诊",
-        "邮轮"
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -215,11 +242,11 @@
       "time": "2026-06-23T22:17:00.000Z",
       "title_en": "Last American hantavirus cruise ship passenger released from quarantine - The Hill",
       "body_en": "Last American hantavirus cruise ship passenger released from quarantine The Hill",
-      "summary_zh": "美国最后一名汉坦病毒邮轮乘客结束隔离。",
+      "summary_zh": "最后一名美国汉坦病毒邮轮乘客解除隔离。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "隔离结束"
+        "最后一名"
       ],
       "signal_strength": "high"
     },
@@ -228,11 +255,11 @@
       "time": "2026-06-23T21:10:00.000Z",
       "title_en": "Hantavirus quarantine ends for exposed cruise passengers, including two with NH ties - WMUR",
       "body_en": "Hantavirus quarantine ends for exposed cruise passengers, including two with NH ties WMUR",
-      "summary_zh": "汉坦病毒邮轮接触者隔离结束，含两名新罕布什尔州关联者。",
+      "summary_zh": "汉坦病毒暴露邮轮乘客隔离结束，含两名新罕布什尔州关联者。",
       "key_facts_zh": [
-        "美国",
+        "新罕布什尔",
         "邮轮",
-        "隔离结束"
+        "结束隔离"
       ],
       "signal_strength": "high"
     },
@@ -241,11 +268,10 @@
       "time": "2026-06-23T21:07:15.000Z",
       "title_en": "UNMC hantavirus operation wraps up, team ready if Ebola outbreak calls - Nebraska Examiner",
       "body_en": "UNMC hantavirus operation wraps up, team ready if Ebola outbreak calls Nebraska Examiner",
-      "summary_zh": "内布拉斯加医学中心结束汉坦病毒行动，团队待命应对埃博拉。",
+      "summary_zh": "内布拉斯加医学中心汉坦病毒行动结束，团队准备应对埃博拉。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "行动结束",
-        "埃博拉"
+        "行动结束"
       ],
       "signal_strength": "medium"
     },
@@ -257,21 +283,20 @@
       "summary_zh": "内布拉斯加医学中心反思汉坦病毒邮轮乘客隔离结束。",
       "key_facts_zh": [
         "内布拉斯加医学中心",
-        "邮轮",
-        "隔离结束"
+        "结束隔离"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-797a566ea74560b4",
       "time": "2026-06-23T15:50:53.000Z",
       "title_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska - Yahoo News Canada",
       "body_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska Yahoo News Canada",
-      "summary_zh": "内布拉斯加州最后一批汉坦病毒邮轮乘客结束隔离。",
+      "summary_zh": "内布拉斯加州最后一批汉坦病毒邮轮乘客隔离结束。",
       "key_facts_zh": [
-        "美国",
+        "内布拉斯加",
         "邮轮",
-        "隔离结束"
+        "最后一批"
       ],
       "signal_strength": "high"
     },
@@ -284,20 +309,7 @@
       "key_facts_zh": [
         "英国",
         "英国卫生安全局",
-        "隔离结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0dc358490ba920a8",
-      "time": "2026-06-23T13:33:00.000Z",
-      "title_en": "Health officials to discuss end of hantavirus monitoring operation in Omaha - WOWT",
-      "body_en": "Health officials to discuss end of hantavirus monitoring operation in Omaha WOWT",
-      "summary_zh": "美国奥马哈卫生官员将讨论结束汉坦病毒监测行动。",
-      "key_facts_zh": [
-        "美国",
-        "奥马哈",
-        "监测结束"
+        "完成隔离"
       ],
       "signal_strength": "high"
     }
