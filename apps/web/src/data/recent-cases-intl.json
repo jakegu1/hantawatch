@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-25T11:35:03.337461+00:00",
+  "__generated_at": "2026-06-25T14:10:06.552621+00:00",
   "cases": [
     {
       "id": "who-2026-don604",
@@ -25,12 +25,12 @@
       "date": "2026-06-24",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲出现首例输入性埃博拉病例，欧洲 CDC 呼吁成员国加强准备。",
-      "summary": "欧洲 CDC；首例输入；埃博拉",
+      "title": "欧洲出现首例输入性埃博拉病例，欧洲CDC呼吁成员国加强防范。",
+      "summary": "欧洲；欧洲CDC；首例输入",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZW9fOE1YNWhXXzR0akd3MnMtU01YZnpxTU5qVEJoYXFXRFBtMGlWNWRwTUJVVnN1Y3JBYlExXzZwZzA3LWtoVWtUZ3ZuM0E5QmRXYlk0amFSM3NMSWUtUWFnMDRJMVRSN2N0QUtzTlAxUTJZdWJOT2F1QkJwMHZDOGxXdm1XS0J0bmR2VzdpWktQQlJxUDVBdGdFUHVKOFBJNkhVY2dtVHk0SWpMVFJxc29Dc1M5bkJTbVctcA?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "surveillance"
       }
     },
@@ -69,32 +69,32 @@
     {
       "id": "surv-news-news.google.com-rss-articles-cbmivgjbvv95cuxnaxptbwo0vwzolu40evdnstjxrg91mxytddfox1zhykjomgqtb2rree5ua1jhum1xze",
       "regionCode": "INT",
-      "serotypeId": "andes",
+      "serotypeId": "other",
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布 MV Hondius 邮轮 Andes 病毒接触者临时管理指南。",
-      "summary": "欧洲 CDC；邮轮；Andes病毒",
+      "title": "欧洲CDC发布针对MV Hondius邮轮安第斯病毒接触者的临时管理指南。",
+      "summary": "欧洲CDC；邮轮；接触者管理",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNaXptbWo0VWZOLU40eVdnSTJxRG91MXYtdDFOX1ZhYkJoMGQtb2RReE5Ua1JhUm1XZEVOZFV0OXpfVjZKUUFEUldUZ2xQNTdYeU12RjdraUdhTXZ3TzhYTHVTNjg1TFdoUVR6VnhpNEdnbDFXdElvZi1lRmN1aVI2bHpvZ001SmtJSnljTXZaNXRZYW4xWGQ2bTlLc2NxT2N5NTY5Y3ZoOHBBaEVueGlGYlRQX2dXWmVOQjVoNU4zdnJidklSaElkbzhWNzhnU0NiQmN0RVlPM01rWkVxbUJTTjA0UjJVb2haTWdxV1lzamFtbWpHYk9lQkhuSTRiWTlyYURkdEdmRjFjVTNMcjhDUUpxVmJBV01CV3VQQ0dFLXpvb2NtQVZGY005N2p3MnZmTTZEUzhjVXVjZW50T3c?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "surveillance"
       }
     },
     {
       "id": "surv-news-news.google.com-rss-articles-cbminwjbvv95cuxob19xshptexuwavu3tfdhufziejnpzjk2mw5amzbzakzzlvf5rxfvdkzwms14azllyu",
       "regionCode": "INT",
-      "serotypeId": "andes",
+      "serotypeId": "other",
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布医疗机构 Andes 汉坦病毒感染防控临时建议。",
-      "summary": "欧洲 CDC；医疗机构；防控建议",
+      "title": "欧洲CDC发布医疗机构安第斯汉坦病毒感染防控临时建议。",
+      "summary": "欧洲CDC；医疗机构；防控建议",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOb19xSHpteXUwaVU3TFdHUFZiejNPZjk2MW5aMzBZakZZLVF5RXFVdkZWMS14azllYU9Qb0s5TC1HVGZGbFg4T1ZJMmM3QmxzRVo3U3I2aHN0cEZLZWk4UXNZOEJBWXMwSGFyVUZnTG8yRVZ0SGJPZVlRV19DSllHNzN4T2I0WEFrc1NXajk1MDcxSzJKVlZVR0lnTUlnanlpSTNwamRYUXJmX2NnbmJwbWRBZ1JmQUctc1J5blFNMUVxX0lSMkt0YzIxblMzZVAtZzd5ck9YcllSdkJTbTZTVmU4czlRdjNReGVqSGRTRjBMU1hMdEg5VHh0THV5aExpTm42YWk4aWlONWhoMDBWRnVNQmlFZ1JibG9WWDdIdw?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "surveillance"
       }
     },
@@ -211,22 +211,6 @@
       }
     },
     {
-      "id": "surv-news-news.google.com-rss-articles-cbmiiafbvv95cuxpcjuwmfo1wuten0t1rfpuauh5n0c5ugfosw1ovgzzbdzflxyzbui2mfjmds0wm294zd",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-29",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "欧洲 CDC 通报刚果民主共和国和乌干达埃博拉疫情。",
-      "summary": "刚果民主共和国；乌干达；欧洲 CDC",
-      "source": {
-        "name": "专业监测源",
-        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcjUwMFo1WUtEN0t1RFpuaUh5N0c5UGFOSW1oVGZZbDZFLXYzbUI2MFJmdS0wM294ZDliYXo5dEU1Nk9rOHpOMlJITWpBQmRRV2pJczFTSVg2SmRyNU8tTVZrMGlhcFZuTXhpNW82ZHlzVjZ6SGlCRFpVNmdkdnotUU83dDU0S0pq?oc=5",
-        "retrievedAt": "2026-06-25T04:58:33.316537+00:00",
-        "confidence": "surveillance"
-      }
-    },
-    {
       "id": "surv-news-news.google.com-rss-articles-cbmiwgjbvv95cuxordiznxvwn3h0bdjtmlfpajzevnzqcu1qwk5fdzbtulb6qjewcwg3utnrzg1jtldun3",
       "regionCode": "INT",
       "serotypeId": "other",
@@ -243,18 +227,34 @@
       }
     },
     {
+      "id": "surv-news-news.google.com-rss-articles-cbmiiafbvv95cuxpcjuwmfo1wuten0t1rfpuauh5n0c5ugfosw1ovgzzbdzflxyzbui2mfjmds0wm294zd",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-29",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "欧洲CDC通报刚果民主共和国和乌干达埃博拉疫情。",
+      "summary": "欧洲CDC；刚果民主共和国；乌干达",
+      "source": {
+        "name": "专业监测源",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcjUwMFo1WUtEN0t1RFpuaUh5N0c5UGFOSW1oVGZZbDZFLXYzbUI2MFJmdS0wM294ZDliYXo5dEU1Nk9rOHpOMlJITWpBQmRRV2pJczFTSVg2SmRyNU8tTVZrMGlhcFZuTXhpNW82ZHlzVjZ6SGlCRFpVNmdkdnotUU83dDU0S0pq?oc=5",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
+        "confidence": "surveillance"
+      }
+    },
+    {
       "id": "surv-news-news.google.com-rss-articles-cbmiqgfbvv95cuxotdlkoeheblp0bg5argrwtjbwyme0qjmtve1ttth5z1zcq1lya1zqewnvcvzevzjtbj",
       "regionCode": "INT",
       "serotypeId": "other",
       "date": "2026-05-29",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布第 22 周传染病威胁报告（5月23-29日）。",
-      "summary": "欧洲 CDC；周报；传染病威胁",
+      "title": "欧洲CDC发布2026年第22周传染病威胁报告。",
+      "summary": "欧洲CDC；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTDlKOEhEblp0bG5aRGRWTjBWYmE0QjMtVE1tTTh5Z1ZCQ1lya1ZqeWNvcVZEVzJTbjVReHVUNm1QeTJMSnNjNlZIWWhpVFlOUzd2OFNxVUZWOFZJVG9GRFJCZTBBa0UtbUhIY19nUXhaZ3RBNWhWTGwyY2RiZWJnZG1nR0Y1R1pBaWY5ZlJnaVdUVXNRNUhQQkc2WnhZdjZQLVBlcWVoVmNnUQ?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "surveillance"
       }
     },
@@ -318,7 +318,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-06-25T11:34:45.562940+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.936788+00:00",
         "confidence": "news"
       }
     },
@@ -334,7 +334,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-06-25T11:34:45.562940+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.936788+00:00",
         "confidence": "news"
       }
     },
@@ -350,7 +350,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-06-25T11:34:45.562940+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.936788+00:00",
         "confidence": "news"
       }
     },
@@ -366,7 +366,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPRWIwNzdWcHdCZjlKRTducHRQR0NQdVRQMHhYdU1nTmpfbTByVTI1STNtTzBsemZWeTN0cE41LUpUWkpPNC1jS2ktckI3NHFUU3VaQ1lYSnlXbE5PNHo0MVYxaFgyVHZjUnZCRFNyWDZpek1jMjBYQXVjVEt5TlNyQmNpRTRPN21yYVJSeUJIRkRJdjFZTE1xR1NPc2V0ZVpSOVU2dHZtRERuWWYzMWxBdVRwS2ZzM19KR002WWJoZXo5UmdjUmtkRlVDREpoVFM3YVAzZTZHOEdQaUs4cVlvajl3NFRZYXg5VmRqVU1XRHdCMDQ5dXdOSlo0b2xMYmxMVGlaZg?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "news"
       }
     },
@@ -382,7 +382,23 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxte5pbkthr1fkefdtq0lkwg1qvk0ytxpdrus4mhityvhwqxvkvkpmmda1curoefhvcgd0eh",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-10",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "涉汉坦病毒疫情邮轮人员开始疏散转运",
+      "summary": "",
+      "source": {
+        "name": "新华网",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +414,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-06-25T11:34:45.562940+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.936788+00:00",
         "confidence": "news"
       }
     },
@@ -414,7 +430,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.935995+00:00",
         "confidence": "news"
       }
     },
@@ -430,23 +446,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-06-25T11:34:45.562940+00:00",
-        "confidence": "news"
-      }
-    },
-    {
-      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxte9zu0nxyzyxzu9txzfpnl9zzlvisjvondlpafbrz2tes0vev2tcbgrlltvhbnktv2dawt",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-04",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "世卫组织：大西洋一邮轮出现汉坦病毒感染 已致3人死亡",
-      "summary": "",
-      "source": {
-        "name": "新华网",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ZU0NxYzYxZU9TXzFpNl9zZlVISjVONDlPaFBrZ2tES0VEV2tCbGRlLTVhbnktV2daWTNfbjlwdllsZ2FDcHgxT2Mwb1dFWm90Ymw3WjF1cEFwTXF4bHlobWVTSDVuXzNIdjRzaUZNMno5bkNZYjJyUWxXTnplVkE?oc=5",
-        "retrievedAt": "2026-06-25T11:34:45.562115+00:00",
+        "retrievedAt": "2026-06-25T14:09:49.936788+00:00",
         "confidence": "news"
       }
     }
