@@ -9001,6 +9001,20 @@
         "source_url": "",
         "time": "2026-06-24T14:12:07.000Z"
       }
+    ],
+    "rt-fcae93fdd315b5c0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "标题提及WHO宣布疫情将于7月2日结束，但未提供具体国家或新增病例数字，无法提取delta。",
+        "update_id": "rt-fcae93fdd315b5c0",
+        "source_url": "",
+        "time": "2026-06-25T06:29:30.000Z"
+      }
     ]
   }
 }
