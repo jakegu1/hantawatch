@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-25T17:06:00.895036+00:00",
+  "__generated_at": "2026-06-25T19:48:58.690217+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-25T17:05:59.884454+00:00",
+  "last_fetched": "2026-06-25T19:48:57.686383+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,11 @@
       "time": "2026-06-25T10:53:10.000Z",
       "title_en": "WHO to declare end of hantavirus outbreak on July 2 - Plataforma Media",
       "body_en": "WHO to declare end of hantavirus outbreak on July 2 Plataforma Media",
-      "summary_zh": "WHO 宣布将于7月2日结束汉坦病毒疫情。",
+      "summary_zh": "WHO 将于 7 月 2 日宣布汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "7月2日结束"
+        "7月2日",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -25,11 +26,11 @@
       "time": "2026-06-25T09:10:13.000Z",
       "title_en": "WHO says cruise linked hantavirus outbreak will end by July 2 - mezha.net",
       "body_en": "WHO says cruise linked hantavirus outbreak will end by July 2 mezha.net",
-      "summary_zh": "WHO 称邮轮关联的汉坦病毒疫情将于7月2日结束。",
+      "summary_zh": "WHO 称邮轮相关汉坦病毒疫情将于 7 月 2 日结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "7月2日结束"
+        "7月2日"
       ],
       "signal_strength": "high"
     },
@@ -38,10 +39,23 @@
       "time": "2026-06-25T07:32:26.000Z",
       "title_en": "US CDC to wind down hantavirus response - Medical Buyer",
       "body_en": "US CDC to wind down hantavirus response Medical Buyer",
-      "summary_zh": "美国 CDC 将缩减汉坦病毒应对措施。",
+      "summary_zh": "美国 CDC 将逐步结束汉坦病毒应对工作。",
       "key_facts_zh": [
         "美国 CDC",
-        "缩减应对"
+        "结束应对"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-fcae93fdd315b5c0",
+      "time": "2026-06-25T06:29:30.000Z",
+      "title_en": "Hantavirus outbreak should formally end on July 2: WHO - ET HealthWorld",
+      "body_en": "Hantavirus outbreak should formally end on July 2: WHO ET HealthWorld",
+      "summary_zh": "WHO 称汉坦病毒疫情应于 7 月 2 日正式结束。",
+      "key_facts_zh": [
+        "WHO",
+        "7月2日",
+        "正式结束"
       ],
       "signal_strength": "high"
     },
@@ -50,7 +64,7 @@
       "time": "2026-06-25T06:21:51.000Z",
       "title_en": "WHO announces timeline for end of hantavirus outbreak - Українські Національні Новини (УНН)",
       "body_en": "WHO announces timeline for end of hantavirus outbreak Українські Національні Новини (УНН)",
-      "summary_zh": "WHO 公布汉坦病毒疫情结束时间表。",
+      "summary_zh": "WHO 宣布汉坦病毒疫情结束时间表。",
       "key_facts_zh": [
         "WHO",
         "时间表"
@@ -62,10 +76,11 @@
       "time": "2026-06-25T06:01:31.000Z",
       "title_en": "Global Hantavirus Response To End On July 2: WHO - Health and Me",
       "body_en": "Global Hantavirus Response To End On July 2: WHO Health and Me",
-      "summary_zh": "WHO 称全球汉坦病毒应对将于7月2日结束。",
+      "summary_zh": "WHO 称全球汉坦病毒应对将于 7 月 2 日结束。",
       "key_facts_zh": [
         "WHO",
-        "7月2日结束"
+        "7月2日",
+        "全球应对结束"
       ],
       "signal_strength": "high"
     },
@@ -74,46 +89,24 @@
       "time": "2026-06-25T05:12:00.000Z",
       "title_en": "No additional cases found after hantavirus cruise ship outbreak - Central Oregon Daily",
       "body_en": "No additional cases found after hantavirus cruise ship outbreak Central Oregon Daily",
-      "summary_zh": "汉坦病毒邮轮疫情后未发现新增病例。",
+      "summary_zh": "美国邮轮汉坦疫情后未发现新增病例。",
       "key_facts_zh": [
+        "美国",
         "邮轮",
-        "无新增病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a845929e34978de3",
-      "time": "2026-06-25T04:43:16.000Z",
-      "title_en": "Hantavirus Outbreak Should Formally End On July 2: WHO - NDTV",
-      "body_en": "Hantavirus Outbreak Should Formally End On July 2: WHO NDTV",
-      "summary_zh": "WHO 称汉坦病毒疫情应于7月2日正式结束。",
-      "key_facts_zh": [
-        "WHO",
-        "7月2日结束"
+        "无新增"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-f5fe5dc85c918a36",
       "time": "2026-06-24T23:40:10.000Z",
-      "title_en": "CDC concludes hantavirus response as outbreak eases - KSL.com",
-      "body_en": "CDC concludes hantavirus response as outbreak eases KSL.com",
-      "summary_zh": "美国 CDC 结束汉坦病毒疫情响应，疫情缓解。",
+      "title_en": "CDC concludes hantavirus response as outbreak eases - KSL News",
+      "body_en": "CDC concludes hantavirus response as outbreak eases KSL News",
+      "summary_zh": "美国 CDC 结束汉坦疫情响应，疫情缓解。",
       "key_facts_zh": [
         "美国 CDC",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0f0bbfd5b8e4c8cb",
-      "time": "2026-06-24T23:17:00.000Z",
-      "title_en": "HHS Marks End of Hantavirus Response - news8000.com",
-      "body_en": "HHS Marks End of Hantavirus Response news8000.com",
-      "summary_zh": "美国 HHS 宣布结束汉坦病毒疫情响应。",
-      "key_facts_zh": [
-        "美国 HHS",
-        "疫情结束"
+        "结束响应",
+        "疫情缓解"
       ],
       "signal_strength": "high"
     },
@@ -122,7 +115,7 @@
       "time": "2026-06-24T22:32:15.000Z",
       "title_en": "The CDC said hantavirus outbreak is over - Deseret News",
       "body_en": "The CDC said hantavirus outbreak is over Deseret News",
-      "summary_zh": "美国 CDC 称汉坦病毒疫情已结束。",
+      "summary_zh": "美国 CDC 宣布汉坦疫情结束。",
       "key_facts_zh": [
         "美国 CDC",
         "疫情结束"
@@ -134,11 +127,11 @@
       "time": "2026-06-24T22:17:08.000Z",
       "title_en": "CDC concludes response to hantavirus outbreak on cruise - upi.com",
       "body_en": "CDC concludes response to hantavirus outbreak on cruise upi.com",
-      "summary_zh": "美国 CDC 结束邮轮汉坦病毒疫情响应。",
+      "summary_zh": "美国 CDC 结束邮轮汉坦疫情响应。",
       "key_facts_zh": [
         "美国 CDC",
         "邮轮",
-        "疫情结束"
+        "结束响应"
       ],
       "signal_strength": "high"
     },
@@ -147,10 +140,10 @@
       "time": "2026-06-24T21:28:39.000Z",
       "title_en": "US ends hantavirus outbreak response with no answers on draconian quarantines - Ars Technica",
       "body_en": "US ends hantavirus outbreak response with no answers on draconian quarantines Ars Technica",
-      "summary_zh": "美国结束汉坦病毒疫情响应，但未解释严格隔离措施。",
+      "summary_zh": "美国结束汉坦疫情响应，未解释严格隔离。",
       "key_facts_zh": [
         "美国",
-        "疫情结束",
+        "结束响应",
         "隔离争议"
       ],
       "signal_strength": "medium"
@@ -160,7 +153,7 @@
       "time": "2026-06-24T21:07:47.000Z",
       "title_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says - Euronews.com",
       "body_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says Euronews.com",
-      "summary_zh": "WHO 称汉坦病毒疫情应于 7 月 2 日结束。",
+      "summary_zh": "WHO 称致命汉坦疫情将于7月2日结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
@@ -173,10 +166,11 @@
       "time": "2026-06-24T20:47:40.000Z",
       "title_en": "US public health agency concludes hantavirus response as outbreak eases - Al Jazeera",
       "body_en": "US public health agency concludes hantavirus response as outbreak eases Al Jazeera",
-      "summary_zh": "美国公共卫生机构结束汉坦病毒疫情响应，疫情缓解。",
+      "summary_zh": "美国公共卫生机构结束汉坦疫情响应。",
       "key_facts_zh": [
-        "美国 CDC",
-        "疫情结束"
+        "美国",
+        "结束响应",
+        "疫情缓解"
       ],
       "signal_strength": "high"
     },
@@ -197,7 +191,7 @@
       "time": "2026-06-24T18:23:00.000Z",
       "title_en": "US ends its hantavirus response as quarantines expire and threat wanes - The Independent",
       "body_en": "US ends its hantavirus response as quarantines expire and threat wanes The Independent",
-      "summary_zh": "美国结束汉坦病毒应急响应，隔离到期，威胁减弱。",
+      "summary_zh": "美国结束汉坦病毒应急响应，隔离期满且威胁减弱。",
       "key_facts_zh": [
         "美国",
         "结束响应"
@@ -221,8 +215,20 @@
       "id": "rt-72ce29b120edf3a7",
       "time": "2026-06-24T17:48:00.000Z",
       "title_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
-      "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ CDC ends US Hantavirus response The Hill US public health agency concludes hantavirus response as outbreak eases Al Jazeera",
+      "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
       "summary_zh": "美国 CDC 结束汉坦病毒应急响应，疫情风险降低。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "结束响应"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-42850abd62f4914f",
+      "time": "2026-06-24T16:16:00.000Z",
+      "title_en": "CDC ends US Hantavirus response - The Hill",
+      "body_en": "CDC ends US Hantavirus response The Hill",
+      "summary_zh": "美国 CDC 结束汉坦病毒应急响应。",
       "key_facts_zh": [
         "美国 CDC",
         "结束响应"
@@ -234,7 +240,7 @@
       "time": "2026-06-24T15:43:30.000Z",
       "title_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge - Anadolu Ajansı",
       "body_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge Anadolu Ajansı",
-      "summary_zh": "WHO 称若未出现新病例，汉坦病毒疫情将于7月2日宣布结束。",
+      "summary_zh": "WHO 称若无新病例，汉坦病毒疫情将于7月2日宣布结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -258,7 +264,7 @@
       "time": "2026-06-24T15:10:00.000Z",
       "title_en": "Quick takes: More New World screwworm; CDC to cease measles, mumps testing; hantavirus response ends - CIDRAP",
       "body_en": "Quick takes: More New World screwworm; CDC to cease measles, mumps testing; hantavirus response ends CIDRAP",
-      "summary_zh": "CIDRAP 简报：美国 CDC 结束汉坦病毒响应，同时停止麻疹、腮腺炎检测。",
+      "summary_zh": "CIDRAP 快讯：美国 CDC 将停止麻疹、腮腺炎检测，汉坦病毒响应结束。",
       "key_facts_zh": [
         "美国 CDC",
         "结束响应",
@@ -270,25 +276,12 @@
       "id": "rt-6572ad994354233d",
       "time": "2026-06-24T14:12:07.000Z",
       "title_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case - HHS.gov",
-      "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov",
-      "summary_zh": "美国 HHS 成功结束汉坦病毒响应，监测结束，无阳性病例。",
+      "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ CDC ends US Hantavirus response The Hill",
+      "summary_zh": "美国卫生与公众服务部结束汉坦病毒应对，监测无阳性病例。",
       "key_facts_zh": [
-        "美国 HHS",
-        "结束响应",
-        "无病例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1cafca86273930ff",
-      "time": "2026-06-24T13:03:39.000Z",
-      "title_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship - CIDRAP",
-      "body_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship CIDRAP",
-      "summary_zh": "国际公共卫生应对措施帮助控制荷兰邮轮上的安第斯汉坦病毒疫情。",
-      "key_facts_zh": [
-        "荷兰",
-        "邮轮",
-        "安第斯汉坦病毒"
+        "美国",
+        "HHS",
+        "监测结束"
       ],
       "signal_strength": "high"
     }
