@@ -8959,6 +8959,48 @@
         "source_url": "",
         "time": "2026-06-24T19:49:51.000Z"
       }
+    ],
+    "rt-8397d9635e27b137": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及WHO将宣布疫情结束，未涉及具体国家或新增病例数。",
+        "update_id": "rt-8397d9635e27b137",
+        "source_url": "",
+        "time": "2026-06-25T10:53:10.000Z"
+      }
+    ],
+    "rt-215caf19e5452fd4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及WHO称游轮相关疫情将于7月2日结束，未提供具体国家或新增数据。",
+        "update_id": "rt-215caf19e5452fd4",
+        "source_url": "",
+        "time": "2026-06-25T09:10:13.000Z"
+      }
+    ],
+    "rt-6572ad994354233d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "high",
+        "reasoning_zh": "HHS官方声明美国监测结束且无阳性病例，无新增变化。",
+        "update_id": "rt-6572ad994354233d",
+        "source_url": "",
+        "time": "2026-06-24T14:12:07.000Z"
+      }
     ]
   }
 }
