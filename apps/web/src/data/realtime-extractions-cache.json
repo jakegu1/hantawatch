@@ -9015,6 +9015,48 @@
         "source_url": "",
         "time": "2026-06-25T06:29:30.000Z"
       }
+    ],
+    "rt-ee51aa4a5236be8c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "high",
+        "reasoning_zh": "WHO宣布邮轮疫情将于7月2日结束，未提及新增病例数，故增量为0。",
+        "update_id": "rt-ee51aa4a5236be8c",
+        "source_url": "",
+        "time": "2026-06-25T23:30:02.000Z"
+      }
+    ],
+    "rt-1c265a60635dd56e": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大育空地区邮轮乘客出院，未提及新增病例数，故增量为0。",
+        "update_id": "rt-1c265a60635dd56e",
+        "source_url": "",
+        "time": "2026-06-25T22:33:27.000Z"
+      }
+    ],
+    "rt-8ab2d59a6fa44bc3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "high",
+        "reasoning_zh": "CDC结束对邮轮疫情响应，未提及新增病例数，故增量为0。",
+        "update_id": "rt-8ab2d59a6fa44bc3",
+        "source_url": "",
+        "time": "2026-06-24T22:17:08.000Z"
+      }
     ]
   }
 }
