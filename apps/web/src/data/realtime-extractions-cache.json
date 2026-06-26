@@ -9127,6 +9127,34 @@
         "source_url": "",
         "time": "2026-06-26T07:07:21.000Z"
       }
+    ],
+    "rt-2067036aa628562e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-26",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及WHO调查汉坦病毒疫情，但未提供具体国家或新增病例数字。",
+        "update_id": "rt-2067036aa628562e",
+        "source_url": "",
+        "time": "2026-06-26T18:16:53.000Z"
+      }
+    ],
+    "rt-10bc8a847c253761": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-26",
+        "confidence": "low",
+        "reasoning_zh": "新闻列出多个国家但未提供任何国家的新增病例数字，仅提及疫情结束。",
+        "update_id": "rt-10bc8a847c253761",
+        "source_url": "",
+        "time": "2026-06-26T12:06:15.000Z"
+      }
     ]
   }
 }
