@@ -9057,6 +9057,62 @@
         "source_url": "",
         "time": "2026-06-24T22:17:08.000Z"
       }
+    ],
+    "rt-a837405c7bd3d9f7": [
+      {
+        "iso2": "IE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-26",
+        "confidence": "medium",
+        "reasoning_zh": "爱尔兰乘客从汉坦病毒邮轮隔离中释放，无新增病例数字。",
+        "update_id": "rt-a837405c7bd3d9f7",
+        "source_url": "",
+        "time": "2026-06-26T05:04:42.000Z"
+      }
+    ],
+    "rt-2940f6f7271b9eff": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "medium",
+        "reasoning_zh": "育空地区汉坦病毒邮轮乘客出院，无新增病例数字。",
+        "update_id": "rt-2940f6f7271b9eff",
+        "source_url": "",
+        "time": "2026-06-25T22:32:23.000Z"
+      }
+    ],
+    "rt-457ca65fe225a5f2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "《柳叶刀》评论称拉丁美洲对汉坦病毒准备不足，无具体国家或数字。",
+        "update_id": "rt-457ca65fe225a5f2",
+        "source_url": "",
+        "time": "2026-06-25T22:30:06.000Z"
+      }
+    ],
+    "rt-021e7d55d37bbc97": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "medium",
+        "reasoning_zh": "美国CDC将结束汉坦病毒应对，无新增病例数字。",
+        "update_id": "rt-021e7d55d37bbc97",
+        "source_url": "",
+        "time": "2026-06-24T13:12:40.000Z"
+      }
     ]
   }
 }
