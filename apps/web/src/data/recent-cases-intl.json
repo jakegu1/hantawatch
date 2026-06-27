@@ -1,23 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-27T15:10:53.126370+00:00",
+  "__generated_at": "2026-06-27T17:02:02.077537+00:00",
   "cases": [
-    {
-      "id": "who-2026-don604",
-      "regionCode": "INT",
-      "serotypeId": "andes",
-      "date": "2026-05-28",
-      "caseType": "confirmed",
-      "count": 0,
-      "title": "MV Hondius 邮轮安第斯型聚集疫情",
-      "summary": "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
-      "source": {
-        "name": "WHO 疾病暴发新闻（DON）",
-        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-        "retrievedAt": "2026-06-27T13:26:14.151874+00:00",
-        "confidence": "official"
-      }
-    },
     {
       "id": "surv-news-news.google.com-rss-articles-cbmiqwfbvv95cuxonu80lux5venzdfftvfjcmtbmcza2sw8zymkyss1hthlxohbpdkznsmdszdlhcvfrsk",
       "regionCode": "INT",
@@ -30,7 +14,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONU80LUx5VENZdFFtVFJCMTBMczA2SW8zYmkySS1hTHlxOHBPdkZNSmdSZDlHcVFrSkktYUZXV3ZidGNWbjVKbS1Lc2d2eTFhVm55OUh5Y0l5U1pXZ05SbkphVmNCNDlJUXZlRlJ3QUlZMkh6eGV3YXZTc24zR3AwS2RpVVF6aWlXUzZNdEF6ZHdmZWYyX0liLXpaNEJNWE8zaUFPUU1ZRjhJY2s?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "surveillance"
       }
     },
@@ -46,7 +30,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbURESFJlcEVpVWRnYUJNdi1zdmYtZ1JNZmluNlpQR1dTdGVjd2JMMnJSc3JJMGdtdS1kWTNLMGpuak1ERzVSWTh5Vmo4YnFkNmQ0X0daMVJnTm43ekdSSVloQ2FqVGRqRmJwaVV4QmJSeDRoQjNiRExHSUNUelFXa1FvLVp3ZlVBdExDWFVoS0w5WHRDS09NUFNvOFgydUlDV3ZLajlST1NaalotM2RyT1FnOWFVblhqZDBodVZPX3NIQUV6RHhCWndyazA0eGFpajBXNkd3?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "surveillance"
       }
     },
@@ -58,11 +42,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "欧洲出现首例输入性埃博拉病例，欧洲 CDC 呼吁加强准备。",
-      "summary": "欧洲；首例输入性埃博拉；欧洲 CDC",
+      "summary": "欧洲 CDC；首例输入性埃博拉",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZW9fOE1YNWhXXzR0akd3MnMtU01YZnpxTU5qVEJoYXFXRFBtMGlWNWRwTUJVVnN1Y3JBYlExXzZwZzA3LWtoVWtUZ3ZuM0E5QmRXYlk0amFSM3NMSWUtUWFnMDRJMVRSN2N0QUtzTlAxUTJZdWJOT2F1QkJwMHZDOGxXdm1XS0J0bmR2VzdpWktQQlJxUDVBdGdFUHVKOFBJNkhVY2dtVHk0SWpMVFJxc29Dc1M5bkJTbVctcA?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "surveillance"
       }
     },
@@ -105,12 +89,12 @@
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布 MV Hondius 邮轮安第斯病毒接触者公共卫生管理临时指南。",
+      "title": "发布 MV Hondius 邮轮安第斯病毒接触者公共卫生管理指南。",
       "summary": "MV Hondius 邮轮；安第斯病毒；接触者管理",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNaXptbWo0VWZOLU40eVdnSTJxRG91MXYtdDFOX1ZhYkJoMGQtb2RReE5Ua1JhUm1XZEVOZFV0OXpfVjZKUUFEUldUZ2xQNTdYeU12RjdraUdhTXZ3TzhYTHVTNjg1TFdoUVR6VnhpNEdnbDFXdElvZi1lRmN1aVI2bHpvZ001SmtJSnljTXZaNXRZYW4xWGQ2bTlLc2NxT2N5NTY5Y3ZoOHBBaEVueGlGYlRQX2dXWmVOQjVoNU4zdnJidklSaElkbzhWNzhnU0NiQmN0RVlPM01rWkVxbUJTTjA0UjJVb2haTWdxV1lzamFtbWpHYk9lQkhuSTRiWTlyYURkdEdmRjFjVTNMcjhDUUpxVmJBV01CV3VQQ0dFLXpvb2NtQVZGY005N2p3MnZmTTZEUzhjVXVjZW50T3c?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "surveillance"
       }
     },
@@ -121,12 +105,12 @@
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 发布安第斯汉坦病毒医疗机构感染防控临时建议。",
+      "title": "美国 CDC 发布安第斯汉坦病毒医疗感染防控临时建议。",
       "summary": "美国 CDC；安第斯汉坦病毒；感染防控",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOb19xSHpteXUwaVU3TFdHUFZiejNPZjk2MW5aMzBZakZZLVF5RXFVdkZWMS14azllYU9Qb0s5TC1HVGZGbFg4T1ZJMmM3QmxzRVo3U3I2aHN0cEZLZWk4UXNZOEJBWXMwSGFyVUZnTG8yRVZ0SGJPZVlRV19DSllHNzN4T2I0WEFrc1NXajk1MDcxSzJKVlZVR0lnTUlnanlpSTNwamRYUXJmX2NnbmJwbWRBZ1JmQUctc1J5blFNMUVxX0lSMkt0YzIxblMzZVAtZzd5ck9YcllSdkJTbTZTVmU4czlRdjNReGVqSGRTRjBMU1hMdEg5VHh0THV5aExpTm42YWk4aWlONWhoMDBWRnVNQmlFZ1JibG9WWDdIdw?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "surveillance"
       }
     },
@@ -307,22 +291,6 @@
       }
     },
     {
-      "id": "surv-news-news.google.com-rss-articles-cbmi7afbvv95cuxneudquve1tuw4r0peuujdzjd5ay0xm2npvfjlewdkngfon3j4skh1rnm4n0dscjhpnn",
-      "regionCode": "INT",
-      "serotypeId": "other",
-      "date": "2026-05-28",
-      "caseType": "suspected",
-      "count": 0,
-      "title": "加拿大公共卫生署因埃博拉疫情实施临时边境措施。",
-      "summary": "加拿大公共卫生署；埃博拉；边境措施",
-      "source": {
-        "name": "专业监测源",
-        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNeUdqUVE1TUw4R0pEUUJDZjd5ay0xM2NPVFJleWdkNGFON3J4Skh1RnM4N0dScjhPNndHaVN6R2tMM0J3R3V6NnF0V2pBbmVFQ1FyRFVpSTQ2bVoyaDZGMzRsei1TZ05OVEp3MEd0Z3I5QzlDR3kwbWFpb24tbDcwVy1FekhVaXozSkEwMkt0bi1hcExmbGxhSXBkZ0dnN0xqblRVRzlBWVR3UzZERjluRXNSOVNEVG1YR1lqa3ZLS3pBWm13UDBRblRxbmtpOGtWZ1BhUXdMQ3NvVkxkcjJVR0U2YXBGT24tajUydQ?oc=5",
-        "retrievedAt": "2026-06-16T17:58:02.633267+00:00",
-        "confidence": "surveillance"
-      }
-    },
-    {
       "id": "manual-2026-06-07-texas-monitoring-end",
       "regionCode": "INT",
       "serotypeId": "andes",
@@ -334,7 +302,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-06-27T15:10:35.421571+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.073059+00:00",
         "confidence": "news"
       }
     },
@@ -350,7 +318,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-06-27T15:10:35.421571+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.073059+00:00",
         "confidence": "news"
       }
     },
@@ -366,7 +334,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-06-27T15:10:35.421571+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.073059+00:00",
         "confidence": "news"
       }
     },
@@ -382,7 +350,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +366,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "news"
       }
     },
@@ -414,7 +382,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-06-27T15:10:35.421571+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.073059+00:00",
         "confidence": "news"
       }
     },
@@ -430,7 +398,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-06-27T15:10:35.420772+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.072274+00:00",
         "confidence": "news"
       }
     },
@@ -446,7 +414,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-06-27T15:10:35.421571+00:00",
+        "retrievedAt": "2026-06-27T17:01:45.073059+00:00",
         "confidence": "news"
       }
     }
