@@ -9155,6 +9155,34 @@
         "source_url": "",
         "time": "2026-06-26T12:06:15.000Z"
       }
+    ],
+    "rt-6edca61c493decb6": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-26",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大育空地区汉坦病毒患者出院，无新增病例数字。",
+        "update_id": "rt-6edca61c493decb6",
+        "source_url": "",
+        "time": "2026-06-26T03:00:00Z"
+      }
+    ],
+    "rt-10c5dd991ce7e2d8": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大育空地区汉坦病毒患者出院，无新增病例数字。",
+        "update_id": "rt-10c5dd991ce7e2d8",
+        "source_url": "",
+        "time": "2026-06-25T23:30:05.000Z"
+      }
     ]
   }
 }
