@@ -9197,6 +9197,34 @@
         "source_url": "",
         "time": "2026-06-28T00:46:22.000Z"
       }
+    ],
+    "rt-54dd76519caf18c9": [
+      {
+        "iso2": "IE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-27",
+        "confidence": "low",
+        "reasoning_zh": "报道提及爱尔兰幸存者，但无新增病例数字，仅个人经历。",
+        "update_id": "rt-54dd76519caf18c9",
+        "source_url": "",
+        "time": "2026-06-27T19:45:15.000Z"
+      }
+    ],
+    "rt-b2cfa59287b94c2c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-27",
+        "confidence": "low",
+        "reasoning_zh": "报道为个人访谈，无具体国家或新增数字，无法提取变化量。",
+        "update_id": "rt-b2cfa59287b94c2c",
+        "source_url": "",
+        "time": "2026-06-27T14:36:46.000Z"
+      }
     ]
   }
 }
