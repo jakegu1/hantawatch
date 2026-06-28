@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-28T15:13:45.361967+00:00",
+  "__generated_at": "2026-06-28T17:02:11.982885+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-28T15:13:44.263617+00:00",
+  "last_fetched": "2026-06-28T17:02:10.413521+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -39,11 +39,11 @@
       "time": "2026-06-25T23:30:05.000Z",
       "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
       "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空地区汉坦病毒邮轮患者出院，仍在康复。",
+      "summary_zh": "育空地区邮轮乘客出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "患者出院"
+        "出院"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +52,11 @@
       "time": "2026-06-25T22:30:06.000Z",
       "title_en": "Hantavirus Reveals Latin America Is Unprepared, Warns The Lancet Commentary - AIDS Healthcare Foundation",
       "body_en": "Hantavirus Reveals Latin America Is Unprepared, Warns The Lancet Commentary AIDS Healthcare Foundation",
-      "summary_zh": "《柳叶刀》评论警告拉丁美洲对汉坦病毒准备不足。",
+      "summary_zh": "《柳叶刀》评论警告拉丁美洲防范不足。",
       "key_facts_zh": [
+        "《柳叶刀》",
         "拉丁美洲",
-        "准备不足"
+        "防范不足"
       ],
       "signal_strength": "medium"
     },
@@ -76,7 +77,7 @@
       "time": "2026-06-25T06:29:30.000Z",
       "title_en": "Hantavirus outbreak should formally end on July 2: WHO - ET HealthWorld",
       "body_en": "Hantavirus outbreak should formally end on July 2: WHO ET HealthWorld",
-      "summary_zh": "WHO 宣布汉坦病毒疫情将于 7 月 2 日正式结束。",
+      "summary_zh": "WHO 宣布汉坦病毒疫情将于7月2日正式结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -88,7 +89,7 @@
       "time": "2026-06-25T06:01:31.000Z",
       "title_en": "Global Hantavirus Response To End On July 2: WHO - Health and Me",
       "body_en": "Global Hantavirus Response To End On July 2: WHO Health and Me",
-      "summary_zh": "WHO 宣布全球汉坦病毒应对行动于 7 月 2 日结束。",
+      "summary_zh": "WHO 宣布全球汉坦病毒应对行动将于7月2日结束。",
       "key_facts_zh": [
         "WHO",
         "全球应对结束"
@@ -103,7 +104,8 @@
       "summary_zh": "美国 CDC 结束对邮轮汉坦病毒疫情的应对。",
       "key_facts_zh": [
         "美国 CDC",
-        "邮轮疫情结束"
+        "邮轮",
+        "疫情应对结束"
       ],
       "signal_strength": "high"
     },
@@ -112,7 +114,7 @@
       "time": "2026-06-24T21:07:47.000Z",
       "title_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says - Euronews",
       "body_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says Euronews",
-      "summary_zh": "WHO 称致命汉坦病毒疫情应于 7 月 2 日结束。",
+      "summary_zh": "WHO 称致命汉坦病毒疫情应于7月2日结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -127,7 +129,7 @@
       "summary_zh": "美国公共卫生机构结束汉坦病毒应对，疫情缓解。",
       "key_facts_zh": [
         "美国 CDC",
-        "疫情缓解"
+        "疫情应对结束"
       ],
       "signal_strength": "high"
     },
@@ -136,7 +138,7 @@
       "time": "2026-06-24T19:09:15.000Z",
       "title_en": "Hantavirus Outbreak Should Formally End On July 2: WHO - NDTV",
       "body_en": "Hantavirus Outbreak Should Formally End On July 2: WHO NDTV",
-      "summary_zh": "WHO 宣布汉坦病毒疫情应于 7 月 2 日正式结束。",
+      "summary_zh": "WHO 称汉坦病毒疫情应于7月2日正式结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -151,7 +153,8 @@
       "summary_zh": "美国结束汉坦病毒应对，隔离期满，威胁减弱。",
       "key_facts_zh": [
         "美国",
-        "隔离结束"
+        "疫情应对结束",
+        "隔离期满"
       ],
       "signal_strength": "high"
     },
@@ -160,10 +163,11 @@
       "time": "2026-06-24T18:06:54.000Z",
       "title_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National - Global News",
       "body_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National Global News",
-      "summary_zh": "加拿大卫生部称 34 名加拿大人完成汉坦病毒自我隔离。",
+      "summary_zh": "加拿大卫生部称34名加拿大人完成汉坦病毒自我隔离。",
       "key_facts_zh": [
         "加拿大",
-        "34 人隔离完成"
+        "34人",
+        "自我隔离完成"
       ],
       "signal_strength": "high"
     },
@@ -172,7 +176,7 @@
       "time": "2026-06-24T17:48:00.000Z",
       "title_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
       "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
-      "summary_zh": "美国 CDC 结束汉坦病毒应急响应，疫情风险降低。",
+      "summary_zh": "美国 CDC 结束汉坦病毒应急响应，认为疫情风险降低。",
       "key_facts_zh": [
         "美国 CDC",
         "结束响应",
