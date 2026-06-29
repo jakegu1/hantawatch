@@ -9267,6 +9267,34 @@
         "source_url": "",
         "time": "2026-06-25T07:20:03.000Z"
       }
+    ],
+    "rt-9aa1c1c9a96c14a3": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "标题提及WHO，但未指明具体国家，无法提取国家代码。",
+        "update_id": "rt-9aa1c1c9a96c14a3",
+        "source_url": "",
+        "time": "2026-06-29T07:59:26.000Z"
+      }
+    ],
+    "rt-466321ab3c7ef73a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "报道称总病例数维持在13例，无新增，但未指明具体国家。",
+        "update_id": "rt-466321ab3c7ef73a",
+        "source_url": "",
+        "time": "2026-06-29T07:59:11.000Z"
+      }
     ]
   }
 }
