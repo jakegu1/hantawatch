@@ -1,22 +1,36 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-06-29T22:50:08.321753+00:00",
+  "__generated_at": "2026-06-29T23:57:11.096702+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-06-29T22:50:07.355573+00:00",
+  "last_fetched": "2026-06-29T23:57:09.898446+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-9aa1c1c9a96c14a3",
-      "time": "2026-06-29T07:59:26.000Z",
-      "title_en": "Hantavirus Outbreak Nearing Its End, WHO Chief Says - Bernama",
-      "body_en": "Hantavirus Outbreak Nearing Its End, WHO Chief Says Bernama",
-      "summary_zh": "WHO 称汉坦病毒疫情接近结束。",
+      "id": "rt-1bf18d2da03811c0",
+      "time": "2026-06-29T23:33:25.000Z",
+      "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
+      "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
+      "summary_zh": "加拿大邮轮接触汉坦病毒者完成隔离。",
       "key_facts_zh": [
-        "WHO",
-        "疫情接近结束"
+        "加拿大",
+        "邮轮",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-81ac039d481bfcff",
+      "time": "2026-06-29T22:00:00.000Z",
+      "title_en": "CDC Ends Hantavirus Response as All 18 Americans from the Cruise Ship Return Home Safely - Medical Daily",
+      "body_en": "CDC Ends Hantavirus Response as All 18 Americans from the Cruise Ship Return Home Safely Medical Daily",
+      "summary_zh": "美国 CDC 结束汉坦病毒响应，18 名美国人安全返家。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "18人",
+        "结束响应"
       ],
       "signal_strength": "high"
     },
@@ -25,36 +39,60 @@
       "time": "2026-06-29T07:59:11.000Z",
       "title_en": "Hantavirus outbreak 'nearing end' as total cases hold at 13: WHO - Türkiye Today",
       "body_en": "Hantavirus outbreak 'nearing end' as total cases hold at 13: WHO Türkiye Today",
-      "summary_zh": "WHO 称土耳其汉坦疫情接近结束，病例仍为13例。",
+      "summary_zh": "WHO 称土耳其汉坦病毒疫情接近尾声，病例数维持 13 例。",
       "key_facts_zh": [
-        "土耳其",
         "WHO",
+        "土耳其",
         "13例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7fb42a39c169ec9a",
+      "time": "2026-06-29T06:15:54.000Z",
+      "title_en": "Hantavirus outbreak nearing its end, WHO chief says - The New Daily",
+      "body_en": "Hantavirus outbreak nearing its end, WHO chief says The New Daily",
+      "summary_zh": "WHO 负责人称汉坦病毒疫情接近结束。",
+      "key_facts_zh": [
+        "WHO",
+        "疫情接近结束"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-5f0fe484904cf2f5",
       "time": "2026-06-29T01:04:00.000Z",
       "title_en": "Scientists discover 70 existing drugs that block deadly hantavirus infections - News-Medical",
       "body_en": "Scientists discover 70 existing drugs that block deadly hantavirus infections News-Medical",
-      "summary_zh": "科学家发现70种现有药物可阻断汉坦病毒。",
+      "summary_zh": "科学家发现 70 种现有药物可阻断致命汉坦病毒感染。",
       "key_facts_zh": [
         "科学家",
-        "70种药物"
+        "70种药物",
+        "治疗"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-94d596b7618e0956",
+      "time": "2026-06-28T23:30:00Z",
+      "title_en": "CDC concludes hantavirus response as outbreak eases",
+      "summary_zh": "美国CDC结束汉坦病毒疫情响应，疫情缓解。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "疫情缓解"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-aa5f8d4e9d8e7ee2",
       "time": "2026-06-28T00:46:22.000Z",
       "title_en": "Bend doctor on hantavirus ship released from quarantine - bendbulletin.com",
       "body_en": "Bend doctor on hantavirus ship released from quarantine bendbulletin.com",
-      "summary_zh": "本德医生从汉坦病毒邮轮隔离中获释。",
+      "summary_zh": "美国本德市一名医生从汉坦病毒邮轮隔离中获释。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "解除隔离"
+        "医生获释"
       ],
       "signal_strength": "high"
     },
@@ -63,147 +101,62 @@
       "time": "2026-06-27T19:45:15.000Z",
       "title_en": "Irish survivor of deadly hantavirus cruise ship plans next voyage - The Times",
       "body_en": "Irish survivor of deadly hantavirus cruise ship plans next voyage The Times",
-      "summary_zh": "爱尔兰汉坦病毒邮轮幸存者计划再次航行。",
+      "summary_zh": "爱尔兰幸存者计划再次乘坐邮轮。",
+      "key_facts_zh": [
+        "爱尔兰",
+        "幸存者",
+        "邮轮"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-8dc2aed9c854ede1",
+      "time": "2026-06-27T18:45:00Z",
+      "title_en": "Ann Lane - People started dying , the Captain told us it was Hantavirus | Brendan OConnor",
+      "summary_zh": "船长告知乘客汉坦病毒导致死亡。",
+      "key_facts_zh": [
+        "邮轮",
+        "船长",
+        "死亡"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-c2262c13c7f58b36",
+      "time": "2026-06-27T15:07:50.000Z",
+      "title_en": "Irish woman on board hantavirus-hit cruise ship ‘surprised’ she didn’t become infected - The Irish Times",
+      "body_en": "Irish woman on board hantavirus-hit cruise ship ‘surprised’ she didn’t become infected The Irish Times",
+      "summary_zh": "爱尔兰女子对未感染汉坦病毒感到惊讶。",
       "key_facts_zh": [
         "爱尔兰",
         "邮轮",
-        "幸存者"
+        "未感染"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-10c5dd991ce7e2d8",
-      "time": "2026-06-25T23:30:05.000Z",
-      "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
-      "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空地区汉坦病毒邮轮乘客从BC省医院出院，仍在康复。",
+      "id": "rt-ce5355b4a5306164",
+      "time": "2026-06-27T14:30:00Z",
+      "title_en": "Irish woman stuck on hantavirus ship says she cant believe she escaped virus",
+      "summary_zh": "爱尔兰女子被困汉坦病毒邮轮，称难以置信逃过感染。",
       "key_facts_zh": [
-        "加拿大",
+        "爱尔兰",
         "邮轮",
-        "出院"
+        "未感染"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
-      "id": "rt-4cd72d0dc585d47d",
-      "time": "2026-06-25T07:32:26.000Z",
-      "title_en": "US CDC to wind down hantavirus response - Medical Buyer",
-      "body_en": "US CDC to wind down hantavirus response Medical Buyer",
-      "summary_zh": "美国CDC将缩减汉坦病毒应对工作。",
+      "id": "rt-c1f314ea8f546ee8",
+      "time": "2026-06-27T12:30:00Z",
+      "title_en": "Kenya health system put to test amid Ebola preparedness",
+      "summary_zh": "肯尼亚卫生系统面临埃博拉防控考验。",
       "key_facts_zh": [
-        "美国 CDC",
-        "缩减应对"
+        "肯尼亚",
+        "埃博拉",
+        "防控"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c9c64f5e26e75949",
-      "time": "2026-06-25T06:01:31.000Z",
-      "title_en": "Global Hantavirus Response To End On July 2: WHO - Health and Me",
-      "body_en": "Global Hantavirus Response To End On July 2: WHO Health and Me",
-      "summary_zh": "WHO 宣布全球汉坦病毒应急响应将于7月2日结束。",
-      "key_facts_zh": [
-        "WHO",
-        "应急结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-b1c179d97d8604f5",
-      "time": "2026-06-24T22:17:08.000Z",
-      "title_en": "CDC concludes response to hantavirus outbreak on cruise - upi.com",
-      "body_en": "CDC concludes response to hantavirus outbreak on cruise upi.com",
-      "summary_zh": "美国 CDC 结束对邮轮汉坦病毒疫情的响应。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "邮轮",
-        "应急结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-098b8716587377cd",
-      "time": "2026-06-24T21:07:47.000Z",
-      "title_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says - Euronews",
-      "body_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says Euronews",
-      "summary_zh": "WHO 称致命汉坦病毒疫情应于7月2日结束。",
-      "key_facts_zh": [
-        "WHO",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-21af9aeffc76607a",
-      "time": "2026-06-24T20:47:40.000Z",
-      "title_en": "US public health agency concludes hantavirus response as outbreak eases - Al Jazeera",
-      "body_en": "US public health agency concludes hantavirus response as outbreak eases Al Jazeera",
-      "summary_zh": "美国公共卫生机构结束汉坦病毒应急响应，疫情缓解。",
-      "key_facts_zh": [
-        "美国",
-        "应急结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-95cb1c0b706b3304",
-      "time": "2026-06-24T19:09:15.000Z",
-      "title_en": "Hantavirus Outbreak Should Formally End On July 2: WHO - NDTV",
-      "body_en": "Hantavirus Outbreak Should Formally End On July 2: WHO NDTV",
-      "summary_zh": "WHO 表示汉坦病毒疫情应于7月2日正式结束。",
-      "key_facts_zh": [
-        "WHO",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1e44c57888d147a5",
-      "time": "2026-06-24T18:23:00.000Z",
-      "title_en": "US ends its hantavirus response as quarantines expire and threat wanes - The Independent",
-      "body_en": "US ends its hantavirus response as quarantines expire and threat wanes The Independent",
-      "summary_zh": "美国结束汉坦病毒应急响应，隔离期满，威胁减弱。",
-      "key_facts_zh": [
-        "美国",
-        "应急结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-071221220e5293a1",
-      "time": "2026-06-24T18:09:56.000Z",
-      "title_en": "US CDC concludes hantavirus response as outbreak eases - Reuters",
-      "body_en": "US CDC concludes hantavirus response as outbreak eases Reuters",
-      "summary_zh": "美国 CDC 结束汉坦病毒应急响应，疫情缓解。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "应急结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ff2d8416eca875c5",
-      "time": "2026-06-24T18:06:54.000Z",
-      "title_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National - Global News",
-      "body_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National Global News",
-      "summary_zh": "加拿大卫生部称34名加拿大人汉坦病毒自我隔离完成。",
-      "key_facts_zh": [
-        "加拿大",
-        "隔离完成"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-72ce29b120edf3a7",
-      "time": "2026-06-24T17:48:00.000Z",
-      "title_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
-      "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
-      "summary_zh": "美国 CDC 结束汉坦病毒应急响应，认为疫情风险降低。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "结束应急响应"
-      ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
