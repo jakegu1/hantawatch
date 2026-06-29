@@ -9295,6 +9295,20 @@
         "source_url": "",
         "time": "2026-06-29T07:59:11.000Z"
       }
+    ],
+    "rt-de8b60958b362f2a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "标题提及WHO但未指明具体国家，无具体数字，无法提取增量。",
+        "update_id": "rt-de8b60958b362f2a",
+        "source_url": "",
+        "time": "2026-06-29T09:05:56.000Z"
+      }
     ]
   }
 }
