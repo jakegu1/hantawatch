@@ -9225,6 +9225,48 @@
         "source_url": "",
         "time": "2026-06-27T14:36:46.000Z"
       }
+    ],
+    "rt-2e5ce7552f866c42": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "WHO称疫情接近结束，但未提及具体国家或数字。",
+        "update_id": "rt-2e5ce7552f866c42",
+        "source_url": "",
+        "time": "2026-06-29T02:27:00.000Z"
+      }
+    ],
+    "rt-5f0fe484904cf2f5": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "发现70种现有药物可阻断汉坦病毒，无国家或病例数据。",
+        "update_id": "rt-5f0fe484904cf2f5",
+        "source_url": "",
+        "time": "2026-06-29T01:04:00.000Z"
+      }
+    ],
+    "rt-7e05070f15c2074c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "药物筛选研究针对Puumala病毒，无国家或病例数据。",
+        "update_id": "rt-7e05070f15c2074c",
+        "source_url": "",
+        "time": "2026-06-25T07:20:03.000Z"
+      }
     ]
   }
 }
