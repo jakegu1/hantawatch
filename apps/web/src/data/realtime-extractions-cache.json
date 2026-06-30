@@ -9309,6 +9309,48 @@
         "source_url": "",
         "time": "2026-06-29T09:05:56.000Z"
       }
+    ],
+    "rt-1bf18d2da03811c0": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "medium",
+        "reasoning_zh": "加拿大公民完成隔离，无新增病例数字。",
+        "update_id": "rt-1bf18d2da03811c0",
+        "source_url": "",
+        "time": "2026-06-29T23:33:25.000Z"
+      }
+    ],
+    "rt-81ac039d481bfcff": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "medium",
+        "reasoning_zh": "美国CDC结束响应，18名美国人返家，无新增病例。",
+        "update_id": "rt-81ac039d481bfcff",
+        "source_url": "",
+        "time": "2026-06-29T22:00:00.000Z"
+      }
+    ],
+    "rt-7676ac2b921aa72d": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "medium",
+        "reasoning_zh": "阿根廷火地岛检出汉坦病毒，但与邮轮无关，无新增病例。",
+        "update_id": "rt-7676ac2b921aa72d",
+        "source_url": "",
+        "time": "2026-06-29T19:14:45.000Z"
+      }
     ]
   }
 }
