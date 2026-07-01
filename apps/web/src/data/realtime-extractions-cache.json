@@ -9449,6 +9449,34 @@
         "source_url": "",
         "time": "2026-06-16T07:00:00.000Z"
       }
+    ],
+    "rt-ff657141a712a3fd": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及加拿大旅行者结束自我隔离，但未报告新增病例数。",
+        "update_id": "rt-ff657141a712a3fd",
+        "source_url": "",
+        "time": "2026-06-30T20:07:58.000Z"
+      }
+    ],
+    "rt-f2eb81fd0ff0f51c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-20",
+        "confidence": "high",
+        "reasoning_zh": "CDC NNDSS周报显示本周新增0例，累计1例，无新增。",
+        "update_id": "rt-f2eb81fd0ff0f51c",
+        "source_url": "",
+        "time": "2026-06-20T00:00:00.000Z"
+      }
     ]
   }
 }
