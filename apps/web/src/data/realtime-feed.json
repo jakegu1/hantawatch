@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-01T14:29:25.051483+00:00",
+  "__generated_at": "2026-07-01T15:36:30.968180+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-01T14:29:17.458412+00:00",
+  "last_fetched": "2026-07-01T15:36:29.574134+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,7 +16,7 @@
       "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "3人死亡",
+        "3死",
         "疑似爆发"
       ],
       "signal_strength": "high"
@@ -29,8 +29,8 @@
       "summary_zh": "接触汉坦病毒邮轮的旅客结束自我隔离。",
       "key_facts_zh": [
         "邮轮",
-        "隔离结束",
-        "旅客"
+        "接触者",
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -39,7 +39,7 @@
       "time": "2026-06-29T23:33:25.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大接触汉坦病毒邮轮者完成隔离。",
+      "summary_zh": "加拿大接触汉坦病毒邮轮人员完成隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -48,15 +48,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-327b032dfabaab42",
+      "time": "2026-06-26T17:00:00.000Z",
+      "title_en": "Hantavirus and Pandemic Preparedness: Lessons for Global Health Security After COVID-19 - NATO Association",
+      "body_en": "Hantavirus and Pandemic Preparedness: Lessons for Global Health Security After COVID-19 NATO Association",
+      "summary_zh": "北约协会讨论汉坦病毒与疫情防范。",
+      "key_facts_zh": [
+        "北约协会",
+        "疫情防范",
+        "汉坦病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-10c5dd991ce7e2d8",
       "time": "2026-06-25T23:30:05.000Z",
       "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
       "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空邮轮汉坦病毒患者出院，仍在康复。",
+      "summary_zh": "育空汉坦病毒邮轮乘客已出院，仍在康复中。",
       "key_facts_zh": [
-        "育空",
+        "加拿大",
         "邮轮",
-        "患者出院"
+        "出院"
       ],
       "signal_strength": "high"
     },
@@ -65,11 +78,10 @@
       "time": "2026-06-24T20:47:40.000Z",
       "title_en": "US public health agency concludes hantavirus response as outbreak eases - Al Jazeera",
       "body_en": "US public health agency concludes hantavirus response as outbreak eases Al Jazeera",
-      "summary_zh": "美国公共卫生机构结束汉坦病毒应对，疫情缓解。",
+      "summary_zh": "美国CDC结束汉坦病毒应急响应，疫情缓解。",
       "key_facts_zh": [
         "美国 CDC",
-        "疫情缓解",
-        "应对结束"
+        "结束响应"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +90,7 @@
       "time": "2026-06-24T18:06:54.000Z",
       "title_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National - Global News",
       "body_en": "Hantavirus self-isolation complete for 34 Canadians, Health Canada says - National Global News",
-      "summary_zh": "加拿大34人汉坦病毒自我隔离结束。",
+      "summary_zh": "加拿大卫生部称34名加拿大人完成汉坦病毒自我隔离。",
       "key_facts_zh": [
         "加拿大",
         "34人",
@@ -91,9 +103,9 @@
       "time": "2026-06-24T17:48:00.000Z",
       "title_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes - WSJ",
       "body_en": "Exclusive | CDC Ends Hantavirus Response as U.S. Outbreak Risk Diminishes WSJ",
-      "summary_zh": "美国CDC结束汉坦病毒应急响应。",
+      "summary_zh": "美国CDC结束汉坦病毒应急响应，爆发风险降低。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "结束响应"
       ],
       "signal_strength": "high"
@@ -105,7 +117,7 @@
       "body_en": "CDC ends US Hantavirus response The Hill",
       "summary_zh": "美国CDC结束汉坦病毒应急响应。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "结束响应"
       ],
       "signal_strength": "high"
@@ -117,8 +129,21 @@
       "body_en": "CDC Officially Ends Hantavirus Response as Outbreak Risk Recedes AJMC",
       "summary_zh": "美国CDC正式结束汉坦病毒应急响应。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "结束响应"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-6572ad994354233d",
+      "time": "2026-06-24T14:12:07.000Z",
+      "title_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case - HHS.gov",
+      "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov",
+      "summary_zh": "美国HHS结束汉坦病毒响应，监测无阳性病例。",
+      "key_facts_zh": [
+        "美国 HHS",
+        "结束响应",
+        "无病例"
       ],
       "signal_strength": "high"
     },
@@ -127,11 +152,11 @@
       "time": "2026-06-24T13:03:39.000Z",
       "title_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship - CIDRAP",
       "body_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship CIDRAP",
-      "summary_zh": "国际公共卫生应对控制荷兰邮轮汉坦疫情。",
+      "summary_zh": "国际响应控制荷兰邮轮安第斯汉坦病毒疫情。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "国际应对"
+        "国际响应"
       ],
       "signal_strength": "high"
     },
@@ -140,8 +165,9 @@
       "time": "2026-06-23T07:00:00.000Z",
       "title_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska - The Guardian",
       "body_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska The Guardian",
-      "summary_zh": "内布拉斯加州美国公民汉坦病毒隔离结束。",
+      "summary_zh": "美国内布拉斯加州汉坦病毒隔离结束。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加",
         "隔离结束"
       ],
@@ -152,7 +178,7 @@
       "time": "2026-06-22T07:00:00.000Z",
       "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
       "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国CDC更新邮轮安第斯病毒疫情现状。",
+      "summary_zh": "美国CDC通报邮轮安第斯病毒疫情现状。",
       "key_facts_zh": [
         "美国CDC",
         "邮轮",
@@ -165,23 +191,10 @@
       "time": "2026-06-22T07:00:00.000Z",
       "title_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska - CNN",
       "body_en": "Quarantine comes to an end for the last of the hantavirus ship passengers in Nebraska CNN",
-      "summary_zh": "内布拉斯加州最后一批汉坦病毒邮轮乘客结束隔离。",
+      "summary_zh": "内布拉斯加州最后一批邮轮乘客结束隔离。",
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "隔离结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4684f9a1dd6de60c",
-      "time": "2026-06-22T07:00:00.000Z",
-      "title_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC - WOWT",
-      "body_en": "Hantavirus quarantine monitoring ends for M/V Hondius passengers at UNMC WOWT",
-      "summary_zh": "内布拉斯加医学中心结束对M/V Hondius乘客的汉坦病毒隔离监测。",
-      "key_facts_zh": [
-        "美国",
-        "内布拉斯加医学中心",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -191,11 +204,11 @@
       "time": "2026-06-21T07:00:00.000Z",
       "title_en": "Hantavirus Quarantine Ends for 18 Americans Exposed on a Cruise Ship - The New York Times",
       "body_en": "Hantavirus Quarantine Ends for 18 Americans Exposed on a Cruise Ship The New York Times",
-      "summary_zh": "纽约时报报道18名美国邮轮接触者汉坦病毒隔离结束。",
+      "summary_zh": "18名美国邮轮乘客结束汉坦病毒隔离。",
       "key_facts_zh": [
         "美国",
-        "18人",
-        "隔离结束"
+        "邮轮",
+        "18人隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -204,36 +217,11 @@
       "time": "2026-06-20T07:00:00.000Z",
       "title_en": "‘It’s not science, it’s coercion’: health experts decry RFK Jr order on hantavirus quarantine - The Guardian",
       "body_en": "‘It’s not science, it’s coercion’: health experts decry RFK Jr order on hantavirus quarantine The Guardian",
-      "summary_zh": "卫生专家批评RFK Jr关于汉坦病毒隔离的命令。",
+      "summary_zh": "专家批评RFK Jr.关于汉坦病毒隔离的命令。",
       "key_facts_zh": [
         "美国",
         "专家批评",
         "隔离命令"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-13a3d3416a300bf0",
-      "time": "2026-06-17T07:00:00.000Z",
-      "title_en": "Could a hantavirus vaccine be on the horizon? - Gavi, the Vaccine Alliance",
-      "body_en": "Could a hantavirus vaccine be on the horizon? Gavi, the Vaccine Alliance",
-      "summary_zh": "Gavi探讨汉坦病毒疫苗研发前景。",
-      "key_facts_zh": [
-        "Gavi",
-        "疫苗",
-        "研发前景"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-83216ff37b7ddd2a",
-      "time": "2026-06-16T07:00:00.000Z",
-      "title_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus IV: Infection prevention and control: from isolation to safe discharge and quarantine - World Health Organization (WHO)",
-      "body_en": "WHO Health Emergencies EPI-WIN webinar: Hantavirus in focus IV: Infection prevention and control: from isolation to safe discharge and quarantine World Health Organization (WHO)",
-      "summary_zh": "WHO 举办汉坦病毒防控网络研讨会。",
-      "key_facts_zh": [
-        "WHO",
-        "网络研讨会"
       ],
       "signal_strength": "medium"
     }
