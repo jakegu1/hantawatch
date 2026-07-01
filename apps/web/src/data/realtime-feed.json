@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-01T03:32:43.149604+00:00",
+  "__generated_at": "2026-07-01T05:17:13.948519+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-01T03:32:35.054104+00:00",
+  "last_fetched": "2026-07-01T05:17:12.843190+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -22,11 +22,23 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-ff657141a712a3fd",
+      "time": "2026-06-30T20:07:58.000Z",
+      "title_en": "Self-isolation over for travellers exposed to hantavirus - Yahoo News Canada",
+      "body_en": "Self-isolation over for travellers exposed to hantavirus Yahoo News Canada",
+      "summary_zh": "加拿大汉坦病毒接触者结束自我隔离。",
+      "key_facts_zh": [
+        "加拿大",
+        "隔离结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-6b040a57f5f386d3",
       "time": "2026-06-30T15:30:23.000Z",
       "title_en": "Zero Americans Became Ill in a Cruise Ship Hantavirus Outbreak: Here's the Monitoring Process Behind It - Medical Daily",
       "body_en": "Zero Americans Became Ill in a Cruise Ship Hantavirus Outbreak: Here's the Monitoring Process Behind It Medical Daily",
-      "summary_zh": "美国无人因邮轮汉坦病毒疫情发病，介绍监测过程。",
+      "summary_zh": "美国无人因邮轮汉坦病毒疫情发病，介绍监测流程。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -39,7 +51,7 @@
       "time": "2026-06-29T23:33:25.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮汉坦病毒接触者完成隔离期。",
+      "summary_zh": "加拿大邮轮汉坦病毒接触者完成隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -52,7 +64,7 @@
       "time": "2026-06-29T19:14:45.000Z",
       "title_en": "Experts: Hantavirus detected in Tierra del Fuego, but no link to cruise outbreak - Buenos Aires Times",
       "body_en": "Experts: Hantavirus detected in Tierra del Fuego, but no link to cruise outbreak Buenos Aires Times",
-      "summary_zh": "火地岛检出汉坦病毒，但与邮轮疫情无关。",
+      "summary_zh": "专家称火地岛检出汉坦病毒，但与邮轮疫情无关。",
       "key_facts_zh": [
         "火地岛",
         "汉坦病毒",
@@ -65,10 +77,10 @@
       "time": "2026-06-29T07:59:11.000Z",
       "title_en": "Hantavirus outbreak 'nearing end' as total cases hold at 13: WHO - Türkiye Today",
       "body_en": "Hantavirus outbreak 'nearing end' as total cases hold at 13: WHO Türkiye Today",
-      "summary_zh": "WHO称土耳其汉坦病毒疫情接近尾声，病例仍为13例。",
+      "summary_zh": "WHO称汉坦病毒疫情接近尾声，总病例仍为13例。",
       "key_facts_zh": [
         "WHO",
-        "土耳其",
+        "疫情接近尾声",
         "13例"
       ],
       "signal_strength": "high"
@@ -81,22 +93,9 @@
       "summary_zh": "WHO总干事称汉坦病毒疫情接近尾声。",
       "key_facts_zh": [
         "WHO",
-        "疫情尾声"
+        "疫情接近尾声"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-54dd76519caf18c9",
-      "time": "2026-06-27T19:45:15.000Z",
-      "title_en": "Irish survivor of deadly hantavirus cruise ship plans next voyage - The Times",
-      "body_en": "Irish survivor of deadly hantavirus cruise ship plans next voyage The Times",
-      "summary_zh": "爱尔兰邮轮汉坦病毒幸存者计划再次航行。",
-      "key_facts_zh": [
-        "爱尔兰",
-        "幸存者",
-        "邮轮"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-10c5dd991ce7e2d8",
@@ -106,8 +105,34 @@
       "summary_zh": "育空汉坦病毒邮轮乘客从BC省医院出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
-        "邮轮",
+        "育空",
         "出院"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-21af9aeffc76607a",
+      "time": "2026-06-24T20:47:40.000Z",
+      "title_en": "US public health agency concludes hantavirus response as outbreak eases - Al Jazeera",
+      "body_en": "US public health agency concludes hantavirus response as outbreak eases Al Jazeera",
+      "summary_zh": "美国 CDC 结束汉坦病毒应急响应，疫情缓解。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "结束响应",
+        "疫情缓解"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-1e44c57888d147a5",
+      "time": "2026-06-24T18:23:00.000Z",
+      "title_en": "US ends its hantavirus response as quarantines expire and threat wanes - The Independent",
+      "body_en": "US ends its hantavirus response as quarantines expire and threat wanes The Independent",
+      "summary_zh": "美国结束汉坦病毒应急响应，隔离期满，威胁减弱。",
+      "key_facts_zh": [
+        "美国",
+        "结束响应",
+        "隔离期满"
       ],
       "signal_strength": "high"
     },
@@ -133,7 +158,7 @@
       "key_facts_zh": [
         "加拿大",
         "34 人",
-        "隔离结束"
+        "隔离完成"
       ],
       "signal_strength": "high"
     },
@@ -180,37 +205,11 @@
       "time": "2026-06-24T13:03:39.000Z",
       "title_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship - CIDRAP",
       "body_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship CIDRAP",
-      "summary_zh": "国际公共卫生响应帮助控制荷兰邮轮上安第斯汉坦病毒疫情。",
+      "summary_zh": "国际公共卫生响应控制荷兰邮轮安第斯汉坦病毒疫情。",
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "国际响应"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f3b757ebd6e9909c",
-      "time": "2026-06-24T03:20:00.000Z",
-      "title_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska - The Guardian",
-      "body_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska The Guardian",
-      "summary_zh": "内布拉斯加州隔离六周的美国人结束汉坦病毒隔离。",
-      "key_facts_zh": [
-        "内布拉斯加",
-        "隔离结束",
-        "六周"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c5bec035cb9e78ea",
-      "time": "2026-06-22T07:00:00.000Z",
-      "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
-      "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国 CDC 发布邮轮上安第斯病毒疫情最新情况。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "邮轮",
-        "疫情更新"
+        "疫情控制"
       ],
       "signal_strength": "high"
     }
