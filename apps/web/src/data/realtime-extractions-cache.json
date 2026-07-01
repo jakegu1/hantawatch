@@ -9365,6 +9365,48 @@
         "source_url": "",
         "time": "2026-06-30T17:12:55.000Z"
       }
+    ],
+    "rt-730af550ac97cd7a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提到邮轮接触者结束自我隔离，但未提供具体国家或新增病例数字。",
+        "update_id": "rt-730af550ac97cd7a",
+        "source_url": "",
+        "time": "2026-06-30T23:35:49.000Z"
+      }
+    ],
+    "rt-6b040a57f5f386d3": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-30",
+        "confidence": "medium",
+        "reasoning_zh": "报道称美国无人患病，但未提供新增病例数字，仅描述监测过程。",
+        "update_id": "rt-6b040a57f5f386d3",
+        "source_url": "",
+        "time": "2026-06-30T15:30:23.000Z"
+      }
+    ],
+    "rt-7fb42a39c169ec9a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "WHO称疫情接近尾声，但未提及具体国家或新增病例数字。",
+        "update_id": "rt-7fb42a39c169ec9a",
+        "source_url": "",
+        "time": "2026-06-29T06:15:54.000Z"
+      }
     ]
   }
 }
