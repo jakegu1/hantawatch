@@ -122,8 +122,21 @@
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
-      "headline": "WHO DON 最近一次公布（已 34 天无新事件）",
-      "source": "who_don"
+      "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 13,
+        "confirmed": 11,
+        "indeterminate": 2,
+        "deaths": 3
+      },
+      "delta": {
+        "all": 2,
+        "confirmed": 3,
+        "indeterminate": -1,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
     },
     {
       "at": "2026-05-28T12:00:00Z",
@@ -178,16 +191,6 @@
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "detection",
-      "countryZh": "源头·邮轮",
-      "delta": 4,
-      "type": "case_attribution",
-      "shortContext": "航程中确诊归属（4 例）",
-      "verdict": "已纳入 WHO",
-      "source": "who_don"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
       "countryZh": "疑似病例",
       "delta": 2,
       "type": "suspected_attribution",
@@ -203,6 +206,53 @@
       "type": "death_attribution",
       "shortContext": "WHO通报含3例死亡",
       "verdict": "WHO通报",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 11 例（含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 11,
+        "confirmed": 8,
+        "indeterminate": 3,
+        "deaths": 3
+      },
+      "delta": {
+        "all": 3,
+        "confirmed": 2,
+        "indeterminate": 1,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 +3 · 确诊 +2 · 疑似 +1 · 死亡 0"
+    },
+    {
+      "at": "2026-05-08T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 8 例（含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 8,
+        "confirmed": 6,
+        "indeterminate": 2,
+        "deaths": 3
+      }
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "源头·邮轮",
+      "delta": 4,
+      "type": "case_attribution",
+      "shortContext": "航程中确诊归属（4 例）",
+      "verdict": "已纳入 WHO",
       "source": "who_don"
     }
   ],
@@ -271,7 +321,53 @@
     "milestones": [
       {
         "at": "2026-05-28T12:00:00Z",
-        "headline": "WHO DON 最近一次公布（已 34 天无新事件）",
+        "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
+        "snapshot": {
+          "all": 13,
+          "confirmed": 11,
+          "indeterminate": 2,
+          "deaths": 3
+        },
+        "delta": {
+          "all": 2,
+          "confirmed": 3,
+          "indeterminate": -1,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
+      },
+      {
+        "at": "2026-05-13T12:00:00Z",
+        "headline": "WHO 累计 11 例（含 3 死亡）",
+        "snapshot": {
+          "all": 11,
+          "confirmed": 8,
+          "indeterminate": 3,
+          "deaths": 3
+        },
+        "delta": {
+          "all": 3,
+          "confirmed": 2,
+          "indeterminate": 1,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 +3 · 确诊 +2 · 疑似 +1 · 死亡 0"
+      },
+      {
+        "at": "2026-05-08T12:00:00Z",
+        "headline": "WHO 累计 8 例（含 3 死亡）",
+        "snapshot": {
+          "all": 8,
+          "confirmed": 6,
+          "indeterminate": 2,
+          "deaths": 3
+        },
+        "delta": null,
+        "deltaLabel": null
+      },
+      {
+        "at": "2026-05-04T12:00:00Z",
+        "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
         "snapshot": null,
         "delta": null,
         "deltaLabel": null
@@ -366,7 +462,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-07-01T09:41:46.227971+00:00"
+      "updatedAt": "2026-07-01T14:29:21.836492+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -381,5 +477,5 @@
     "last24hCount": 2,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-07-01T09:41:50.036676+00:00"
+  "realtimeUpdatedAt": "2026-07-01T14:29:25.047470+00:00"
 }

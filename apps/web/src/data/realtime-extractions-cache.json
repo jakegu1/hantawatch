@@ -9407,6 +9407,48 @@
         "source_url": "",
         "time": "2026-06-29T06:15:54.000Z"
       }
+    ],
+    "rt-c6dd84ec1bbefffc": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-01",
+        "confidence": "low",
+        "reasoning_zh": "报道提及游轮上3人死亡，但未明确国家，无法确定具体国家，且无新增病例数字。",
+        "update_id": "rt-c6dd84ec1bbefffc",
+        "source_url": "",
+        "time": "2026-07-01T07:04:40.000Z"
+      }
+    ],
+    "rt-ebe4c7505455fc9e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-22",
+        "confidence": "medium",
+        "reasoning_zh": "报道内布拉斯加州汉坦病毒隔离结束，但无新增病例或死亡数字。",
+        "update_id": "rt-ebe4c7505455fc9e",
+        "source_url": "",
+        "time": "2026-06-22T07:00:00.000Z"
+      }
+    ],
+    "rt-83216ff37b7ddd2a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-16",
+        "confidence": "high",
+        "reasoning_zh": "WHO webinar，无具体国家疫情数据，仅讨论感染防控。",
+        "update_id": "rt-83216ff37b7ddd2a",
+        "source_url": "",
+        "time": "2026-06-16T07:00:00.000Z"
+      }
     ]
   }
 }
