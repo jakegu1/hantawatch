@@ -9477,6 +9477,76 @@
         "source_url": "",
         "time": "2026-06-20T00:00:00.000Z"
       }
+    ],
+    "rt-095305e45447c0e0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "WHO称疫情接近尾声，但未提及具体国家或新增数字。",
+        "update_id": "rt-095305e45447c0e0",
+        "source_url": "",
+        "time": "2026-06-29T04:30:00Z"
+      }
+    ],
+    "rt-1ce0065df0cfd85e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "美国结束疫情响应，但标题未提供新增病例数字。",
+        "update_id": "rt-1ce0065df0cfd85e",
+        "source_url": "",
+        "time": "2026-06-29T01:15:00Z"
+      }
+    ],
+    "rt-94d596b7618e0956": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-28",
+        "confidence": "low",
+        "reasoning_zh": "CDC结束响应，疫情缓解，但无具体新增数字。",
+        "update_id": "rt-94d596b7618e0956",
+        "source_url": "",
+        "time": "2026-06-28T23:30:00Z"
+      }
+    ],
+    "rt-ce5355b4a5306164": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-27",
+        "confidence": "low",
+        "reasoning_zh": "爱尔兰女子被困船上，但未提及国家疫情数字。",
+        "update_id": "rt-ce5355b4a5306164",
+        "source_url": "",
+        "time": "2026-06-27T14:30:00Z"
+      }
+    ],
+    "rt-c1f314ea8f546ee8": [
+      {
+        "iso2": "KE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-27",
+        "confidence": "low",
+        "reasoning_zh": "肯尼亚埃博拉准备，但标题未涉及汉坦病毒疫情。",
+        "update_id": "rt-c1f314ea8f546ee8",
+        "source_url": "",
+        "time": "2026-06-27T12:30:00Z"
+      }
     ]
   }
 }
