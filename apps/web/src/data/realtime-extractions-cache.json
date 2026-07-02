@@ -9547,6 +9547,62 @@
         "source_url": "",
         "time": "2026-06-27T12:30:00Z"
       }
+    ],
+    "rt-466408600f06d2a8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题为汉坦病毒进化研究，无疫情数据。",
+        "update_id": "rt-466408600f06d2a8",
+        "source_url": "",
+        "time": "2026-07-02T05:04:00.000Z"
+      }
+    ],
+    "rt-87ee23ba4b8f1129": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-28",
+        "confidence": "low",
+        "reasoning_zh": "新闻为汉坦病毒和埃博拉病毒知识介绍，无疫情数据。",
+        "update_id": "rt-87ee23ba4b8f1129",
+        "source_url": "",
+        "time": "2026-06-28T20:23:18.000Z"
+      }
+    ],
+    "rt-9c9b6e1b3f50e0fb": [
+      {
+        "iso2": "IE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-27",
+        "confidence": "low",
+        "reasoning_zh": "爱尔兰女子讲述游轮疫情经历，无具体新增病例数。",
+        "update_id": "rt-9c9b6e1b3f50e0fb",
+        "source_url": "",
+        "time": "2026-06-27T11:57:48.000Z"
+      }
+    ],
+    "rt-327b032dfabaab42": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-26",
+        "confidence": "low",
+        "reasoning_zh": "文章讨论汉坦病毒与全球卫生安全，无疫情数据。",
+        "update_id": "rt-327b032dfabaab42",
+        "source_url": "",
+        "time": "2026-06-26T17:00:00.000Z"
+      }
     ]
   }
 }

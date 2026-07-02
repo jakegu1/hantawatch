@@ -1,64 +1,84 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-02T06:34:24.931841+00:00",
+  "__generated_at": "2026-07-02T08:54:04.302306+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-02T06:34:23.710462+00:00",
+  "last_fetched": "2026-07-02T08:53:22.689440+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-466408600f06d2a8",
+      "time": "2026-07-02T05:04:00.000Z",
+      "title_en": "Decades of research reveal surprising secrets about hantavirus evolution - News-Medical",
+      "body_en": "Decades of research reveal surprising secrets about hantavirus evolution News-Medical",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-c6dd84ec1bbefffc",
       "time": "2026-07-01T07:04:40.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡。",
-      "key_facts_zh": [
-        "邮轮",
-        "3人死亡",
-        "爆发"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-730af550ac97cd7a",
       "time": "2026-06-30T23:35:49.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "接触汉坦病毒邮轮的旅客结束自我隔离。",
-      "key_facts_zh": [
-        "邮轮",
-        "隔离结束",
-        "旅客"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-ff657141a712a3fd",
       "time": "2026-06-30T20:07:58.000Z",
       "title_en": "Self-isolation over for travellers exposed to hantavirus - Yahoo News Canada",
       "body_en": "Self-isolation over for travellers exposed to hantavirus Yahoo News Canada",
-      "summary_zh": "加拿大接触汉坦病毒的旅客结束隔离。",
-      "key_facts_zh": [
-        "加拿大",
-        "隔离结束",
-        "旅客"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-1bf18d2da03811c0",
       "time": "2026-06-29T23:33:25.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮接触汉坦病毒者完成隔离。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "隔离完成"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-87ee23ba4b8f1129",
+      "time": "2026-06-28T20:23:18.000Z",
+      "title_en": "Hantavirus and Ebola virus disease: 10 things to know - Hospital News",
+      "body_en": "Hantavirus and Ebola virus disease: 10 things to know Hospital News",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-9c9b6e1b3f50e0fb",
+      "time": "2026-06-27T11:57:48.000Z",
+      "title_en": "'I thought it was inevitable' - Irish woman on virus-hit cruise reflects on 'escaping' infection - RTE.ie",
+      "body_en": "'I thought it was inevitable' - Irish woman on virus-hit cruise reflects on 'escaping' infection RTE.ie",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-327b032dfabaab42",
+      "time": "2026-06-26T17:00:00.000Z",
+      "title_en": "Hantavirus and Pandemic Preparedness: Lessons for Global Health Security After COVID-19 - NATO Association",
+      "body_en": "Hantavirus and Pandemic Preparedness: Lessons for Global Health Security After COVID-19 NATO Association",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-ff2d8416eca875c5",
@@ -118,7 +138,7 @@
       "key_facts_zh": [
         "美国HHS",
         "结束响应",
-        "无病例"
+        "无阳性"
       ],
       "signal_strength": "high"
     },
@@ -131,7 +151,7 @@
       "key_facts_zh": [
         "荷兰",
         "邮轮",
-        "国际响应"
+        "疫情控制"
       ],
       "signal_strength": "high"
     },
@@ -140,8 +160,9 @@
       "time": "2026-06-23T07:00:00.000Z",
       "title_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska - The Guardian",
       "body_en": "Hantavirus quarantine ends for Americans held for six weeks in Nebraska The Guardian",
-      "summary_zh": "内布拉斯加州美国人结束六周汉坦病毒隔离。",
+      "summary_zh": "美国内布拉斯加州六周隔离结束。",
       "key_facts_zh": [
+        "美国",
         "内布拉斯加",
         "隔离结束"
       ],
@@ -152,7 +173,7 @@
       "time": "2026-06-22T07:00:00.000Z",
       "title_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus - Centers for Disease Control and Prevention | CDC (.gov)",
       "body_en": "Andes Virus Outbreak on a Cruise Ship: Current Situation | Hantavirus Centers for Disease Control and Prevention | CDC (.gov)",
-      "summary_zh": "美国CDC发布邮轮安第斯病毒疫情现状。",
+      "summary_zh": "美国CDC通报邮轮汉坦病毒疫情现状。",
       "key_facts_zh": [
         "美国CDC",
         "邮轮",
@@ -165,13 +186,12 @@
       "time": "2026-06-21T11:00:42.000Z",
       "title_en": "The hantavirus quarantine is over. Here’s what cruise passengers and scientists learned. - NBC News",
       "body_en": "The hantavirus quarantine is over. Here’s what cruise passengers and scientists learned. NBC News",
-      "summary_zh": "美国邮轮汉坦病毒隔离结束，乘客和科学家总结经验。",
+      "summary_zh": "NBC新闻总结汉坦病毒邮轮隔离结束后的经验。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
         "隔离结束"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-c8d44b40f0cf1cd5",
@@ -191,10 +211,10 @@
       "time": "2026-06-20T07:00:00.000Z",
       "title_en": "‘It’s not science, it’s coercion’: health experts decry RFK Jr order on hantavirus quarantine - The Guardian",
       "body_en": "‘It’s not science, it’s coercion’: health experts decry RFK Jr order on hantavirus quarantine The Guardian",
-      "summary_zh": "卫生专家批评RFK Jr.关于汉坦病毒隔离的命令。",
+      "summary_zh": "专家批评RFK Jr.关于汉坦病毒隔离的命令不科学。",
       "key_facts_zh": [
-        "美国",
-        "专家批评",
+        "专家",
+        "批评",
         "隔离命令"
       ],
       "signal_strength": "medium"
@@ -217,10 +237,10 @@
       "time": "2026-06-17T07:00:00.000Z",
       "title_en": "Could a hantavirus vaccine be on the horizon? - Gavi, the Vaccine Alliance",
       "body_en": "Could a hantavirus vaccine be on the horizon? Gavi, the Vaccine Alliance",
-      "summary_zh": "全球疫苗联盟探讨汉坦病毒疫苗前景。",
+      "summary_zh": "Gavi探讨汉坦病毒疫苗研发前景。",
       "key_facts_zh": [
-        "全球疫苗联盟",
-        "疫苗前景"
+        "疫苗",
+        "研发前景"
       ],
       "signal_strength": "medium"
     },
@@ -233,7 +253,7 @@
       "key_facts_zh": [
         "WHO",
         "网络研讨会",
-        "感染防控"
+        "防控"
       ],
       "signal_strength": "high"
     },
