@@ -9603,6 +9603,48 @@
         "source_url": "",
         "time": "2026-06-26T17:00:00.000Z"
       }
+    ],
+    "rt-a0541896795bb30f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及WHO宣布疫情结束，未提供具体国家或新增病例数。",
+        "update_id": "rt-a0541896795bb30f",
+        "source_url": "",
+        "time": "2026-07-02T13:43:00.000Z"
+      }
+    ],
+    "rt-0eec23ae0f64c74f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及WHO宣布疫情结束，未提供具体国家或新增病例数。",
+        "update_id": "rt-0eec23ae0f64c74f",
+        "source_url": "",
+        "time": "2026-07-02T13:38:50.000Z"
+      }
+    ],
+    "rt-3402840500fcd385": [
+      {
+        "iso2": "NP",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "medium",
+        "reasoning_zh": "尼泊尔卫生部发布警报，报告首例死亡，但未说明新增病例数。",
+        "update_id": "rt-3402840500fcd385",
+        "source_url": "",
+        "time": "2026-07-02T12:44:13.000Z"
+      }
     ]
   }
 }
