@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-07-02T13:53:27.043823+00:00",
+  "__generated_at": "2026-07-02T19:20:30.967819+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -69,7 +69,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978432+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200902+00:00"
             }
           ]
         },
@@ -123,7 +123,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978446+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200915+00:00"
             }
           ]
         },
@@ -142,7 +142,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978454+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200922+00:00"
             }
           ]
         },
@@ -221,7 +221,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978380+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200852+00:00"
             }
           ]
         },
@@ -240,7 +240,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978399+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200870+00:00"
             }
           ]
         },
@@ -259,7 +259,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978410+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200880+00:00"
             }
           ]
         },
@@ -278,7 +278,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978417+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200888+00:00"
             }
           ]
         },
@@ -297,7 +297,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978425+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200895+00:00"
             }
           ]
         },
@@ -316,7 +316,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978439+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200908+00:00"
             }
           ]
         },
@@ -335,7 +335,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978461+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200929+00:00"
             }
           ]
         },
@@ -354,23 +354,23 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-02T13:53:23.978468+00:00"
+              "retrievedAt": "2026-07-02T19:20:27.200935+00:00"
             }
           ]
         }
       ],
       "lastUpdate": {
-        "asOfDate": "2026-05-28",
+        "asOfDate": "2026-07-02",
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
-          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
-          "retrievedAt": "2026-07-02T13:53:07.043054+00:00",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON611",
+          "retrievedAt": "2026-07-02T19:20:04.565745+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-07-02T13:53:23.978487+00:00",
+        "generatedAt": "2026-07-02T19:20:27.200952+00:00",
         "contributors": [
           "who_don",
           "arcgis",

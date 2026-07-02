@@ -9,8 +9,8 @@
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
-    "whoLastUpdateZh": "5/28",
-    "whoDaysAgo": 35,
+    "whoLastUpdateZh": "7/2",
+    "whoDaysAgo": 0,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
@@ -80,13 +80,82 @@
   },
   "events": [
     {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 13,
+        "confirmed": 11,
+        "indeterminate": 2,
+        "deaths": 3
+      },
+      "delta": {
+        "all": 0,
+        "confirmed": 0,
+        "indeterminate": 0,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 0 · 确诊 0 · 疑似 0 · 死亡 0"
+    },
+    {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "荷兰",
+      "delta": 2,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（2 例）",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "南非",
+      "delta": 1,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（1 例）",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "瑞士",
+      "delta": 1,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（1 例）",
+      "verdict": "已纳入 WHO",
+      "source": "official_cdc"
+    },
+    {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "疑似病例",
+      "delta": 2,
+      "type": "suspected_attribution",
+      "shortContext": "WHO通报列为疑似（2 例）",
+      "verdict": "WHO通报",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-07-02T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "死亡病例",
+      "delta": 3,
+      "type": "death_attribution",
+      "shortContext": "WHO通报含3例死亡",
+      "verdict": "WHO通报",
+      "source": "who_don"
+    },
+    {
       "at": "2026-06-07T12:00:00Z",
       "kind": "detection",
       "countryZh": "美国",
       "delta": 0,
       "type": "monitoring",
       "shortContext": "监测中（13 人接触者）",
-      "verdict": "各国监测中",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
     {
@@ -96,33 +165,33 @@
       "delta": 0,
       "type": "monitoring",
       "shortContext": "监测中（6 人接触者）",
-      "verdict": "各国监测中",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
     {
       "at": "2026-06-06T12:00:00Z",
       "kind": "detection",
       "countryZh": "法国",
-      "delta": 0,
-      "type": "follow_up",
-      "shortContext": "确诊患者仍在 ICU，状态稳定；未报告新增确诊",
-      "verdict": "随访更新",
+      "delta": 1,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（1 例）",
+      "verdict": "已纳入 WHO",
       "source": "official_cdc"
     },
     {
       "at": "2026-06-05T12:00:00Z",
       "kind": "detection",
       "countryZh": "西班牙",
-      "delta": 0,
-      "type": "follow_up",
-      "shortContext": "1名确诊患者已出院，另1名症状轻微仍在院；未报告新增确诊",
-      "verdict": "随访更新",
+      "delta": 2,
+      "type": "case_attribution",
+      "shortContext": "确诊归属（2 例）",
+      "verdict": "已纳入 WHO",
       "source": "es_isciii"
     },
     {
       "at": "2026-05-28T12:00:00Z",
       "kind": "who_baseline",
-      "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
+      "headline": "WHO 累计 13 例（含 3 死亡）",
       "source": "who_don",
       "snapshot": {
         "all": 13,
@@ -137,76 +206,6 @@
         "deaths": 0
       },
       "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "西班牙",
-      "delta": 2,
-      "type": "case_attribution",
-      "shortContext": "确诊归属（2 例）",
-      "verdict": "已纳入 WHO",
-      "source": "es_isciii"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "荷兰",
-      "delta": 2,
-      "type": "case_attribution",
-      "shortContext": "确诊归属（2 例）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "法国",
-      "delta": 1,
-      "type": "case_attribution",
-      "shortContext": "确诊归属（1 例）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "南非",
-      "delta": 1,
-      "type": "case_attribution",
-      "shortContext": "确诊归属（1 例）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "瑞士",
-      "delta": 1,
-      "type": "case_attribution",
-      "shortContext": "确诊归属（1 例）",
-      "verdict": "已纳入 WHO",
-      "source": "official_cdc"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "疑似病例",
-      "delta": 2,
-      "type": "suspected_attribution",
-      "shortContext": "WHO通报列为疑似（2 例）",
-      "verdict": "WHO通报",
-      "source": "who_don"
-    },
-    {
-      "at": "2026-05-28T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "死亡病例",
-      "delta": 3,
-      "type": "death_attribution",
-      "shortContext": "WHO通报含3例死亡",
-      "verdict": "WHO通报",
-      "source": "who_don"
     },
     {
       "at": "2026-05-13T12:00:00Z",
@@ -256,7 +255,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 35,
+  "daysWithoutNewConfirmed": 0,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -278,7 +277,7 @@
         "count": 4,
         "kind": "source",
         "status": "who_baseline",
-        "asOf": "2026-05-28"
+        "asOf": "2026-07-02"
       },
       {
         "zh": "西班牙",
@@ -320,8 +319,25 @@
     "unattributedConfirmed": 0,
     "milestones": [
       {
-        "at": "2026-05-28T12:00:00Z",
+        "at": "2026-07-02T12:00:00Z",
         "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
+        "snapshot": {
+          "all": 13,
+          "confirmed": 11,
+          "indeterminate": 2,
+          "deaths": 3
+        },
+        "delta": {
+          "all": 0,
+          "confirmed": 0,
+          "indeterminate": 0,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 0 · 确诊 0 · 疑似 0 · 死亡 0"
+      },
+      {
+        "at": "2026-05-28T12:00:00Z",
+        "headline": "WHO 累计 13 例（含 3 死亡）",
         "snapshot": {
           "all": 13,
           "confirmed": 11,
@@ -458,24 +474,24 @@
   "sources": [
     {
       "name": "WHO DON",
-      "updatedAt": "2026-05-28T12:00:00Z"
+      "updatedAt": "2026-07-02T12:00:00Z"
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-07-02T13:53:23.978468+00:00"
+      "updatedAt": "2026-07-02T19:20:27.200935+00:00"
     },
     {
       "name": "ECDC Surveillance",
-      "updatedAt": "2026-05-28T12:00:00Z"
+      "updatedAt": "2026-07-02T12:00:00Z"
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-06-07T12:00:00Z"
+      "updatedAt": "2026-07-02T12:00:00Z"
     }
   ],
   "intake": {
-    "last24hCount": 3,
+    "last24hCount": 16,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-07-02T13:53:27.038740+00:00"
+  "realtimeUpdatedAt": "2026-07-02T19:20:30.962642+00:00"
 }
