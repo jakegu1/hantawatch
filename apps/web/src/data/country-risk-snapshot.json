@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-02T19:20:30.965094+00:00",
+  "__generated_at": "2026-07-03T02:40:19.069009+00:00",
   "date": "2026-07-03",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -130,15 +130,16 @@
     },
     "PL": {
       "iso2": "PL",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "东南部 Podkarpackie 省最为活跃；近期媒体讨论较多，实际本土传播水平偏低。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-30T03:56:37+00:00"
     },
     "RU": {
       "iso2": "RU",
@@ -146,10 +147,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 4 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 4,
+      "signalCount30d": 2,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-12T07:00:00+00:00"
     },
@@ -259,12 +260,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 19 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 19 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 28 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 28 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 19,
-      "signalCount7d": 18,
-      "lastSignalAt": "2026-07-02T19:12:53+00:00"
+      "signalCount30d": 28,
+      "signalCount7d": 28,
+      "lastSignalAt": "2026-07-03T01:33:47+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -324,12 +325,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 4 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 4,
-      "signalCount7d": 2,
-      "lastSignalAt": "2026-06-30T20:07:58+00:00"
+      "signalCount30d": 2,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-06-30T18:07:25+00:00"
     },
     "CN": {
       "iso2": "CN",

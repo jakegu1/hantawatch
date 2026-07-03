@@ -4,13 +4,13 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 36
+    "daysAtState": 37
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "7/2",
-    "whoDaysAgo": 0,
+    "whoDaysAgo": 1,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
@@ -79,6 +79,16 @@
     ]
   },
   "events": [
+    {
+      "at": "2026-07-02T22:09:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
     {
       "at": "2026-07-02T12:00:00Z",
       "kind": "who_baseline",
@@ -255,7 +265,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 0,
+  "daysWithoutNewConfirmed": 1,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -291,7 +301,7 @@
         "count": 2,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-07-02"
+        "asOf": "2026-07-03"
       },
       {
         "zh": "法国",
@@ -305,14 +315,14 @@
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-07-02"
+        "asOf": "2026-07-03"
       },
       {
         "zh": "瑞士",
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-07-02"
+        "asOf": "2026-07-03"
       }
     ],
     "confirmedAttributionTotal": 11,
@@ -478,7 +488,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-07-02T19:20:27.200935+00:00"
+      "updatedAt": "2026-07-03T02:40:15.826002+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -486,12 +496,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-07-02T12:00:00Z"
+      "updatedAt": "2026-07-02T22:09:00Z"
     }
   ],
   "intake": {
-    "last24hCount": 16,
+    "last24hCount": 23,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-07-02T19:20:30.962642+00:00"
+  "realtimeUpdatedAt": "2026-07-03T02:40:19.066724+00:00"
 }
