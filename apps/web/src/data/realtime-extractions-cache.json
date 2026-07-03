@@ -10121,6 +10121,132 @@
         "source_url": "",
         "time": "2026-07-02T17:10:00.000Z"
       }
+    ],
+    "rt-d4aa7dd024ac0f5f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布国际汉坦病毒疫情结束，但未提及具体国家或新增数字。",
+        "update_id": "rt-d4aa7dd024ac0f5f",
+        "source_url": "",
+        "time": "2026-07-03T07:39:10.000Z"
+      }
+    ],
+    "rt-9cacd47cdff2edf5": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布与邮轮相关的汉坦病毒疫情结束，未提供具体国家或新增数字。",
+        "update_id": "rt-9cacd47cdff2edf5",
+        "source_url": "",
+        "time": "2026-07-03T05:33:39.000Z"
+      }
+    ],
+    "rt-2235c28ff51aad31": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "WHO预计邮轮疫情不会进一步扩散，无具体国家或新增数字。",
+        "update_id": "rt-2235c28ff51aad31",
+        "source_url": "",
+        "time": "2026-07-03T05:07:30.000Z"
+      }
+    ],
+    "rt-26d6825df861474e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布豪华邮轮汉坦病毒疫情结束，无具体国家或新增数字。",
+        "update_id": "rt-26d6825df861474e",
+        "source_url": "",
+        "time": "2026-07-03T04:13:47.000Z"
+      }
+    ],
+    "rt-baaf34320663f002": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "WHO总干事称邮轮疫情结束，无具体国家或新增数字。",
+        "update_id": "rt-baaf34320663f002",
+        "source_url": "",
+        "time": "2026-07-03T04:01:06.000Z"
+      }
+    ],
+    "rt-4277f030c96be48a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "medium",
+        "reasoning_zh": "WHO宣布南极邮轮疫情结束，累计12例3死，但未说明新增。",
+        "update_id": "rt-4277f030c96be48a",
+        "source_url": "",
+        "time": "2026-07-03T03:33:00.000Z"
+      }
+    ],
+    "rt-22c3c9c9dc5544fe": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "邮轮疫情仍在WHO调查中，无具体国家或新增数字。",
+        "update_id": "rt-22c3c9c9dc5544fe",
+        "source_url": "",
+        "time": "2026-07-03T03:08:04.000Z"
+      }
+    ],
+    "rt-573bf6b6c74a0c49": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "medium",
+        "reasoning_zh": "WHO宣布MV Hondius疫情结束，累计13例3死，但未说明新增。",
+        "update_id": "rt-573bf6b6c74a0c49",
+        "source_url": "",
+        "time": "2026-07-03T00:00:49.000Z"
+      }
+    ],
+    "rt-b48de629c66a61d9": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及WHO宣布邮轮汉坦疫情结束，未提供具体国家或新增病例数字。",
+        "update_id": "rt-b48de629c66a61d9",
+        "source_url": "",
+        "time": "2026-07-02T20:24:00.000Z"
+      }
     ]
   }
 }
