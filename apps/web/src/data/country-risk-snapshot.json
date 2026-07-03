@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-03T13:57:03.681233+00:00",
-  "date": "2026-07-03",
+  "__generated_at": "2026-07-03T19:16:55.341406+00:00",
+  "date": "2026-07-04",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -70,15 +70,16 @@
     },
     "BE": {
       "iso2": "BE",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "瓦隆区南部森林为高发区；与法国 Ardennes 相邻区域同等风险。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-07-01T18:49:44+00:00"
     },
     "NL": {
       "iso2": "NL",
@@ -235,9 +236,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 3,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-06-25T17:08:30+00:00",
+      "signalCount30d": 4,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-07-02T18:50:00+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-05"
     },
@@ -259,12 +260,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 30 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 30 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 24 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 24 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 30,
-      "signalCount7d": 29,
-      "lastSignalAt": "2026-07-03T12:58:00+00:00"
+      "signalCount30d": 24,
+      "signalCount7d": 22,
+      "lastSignalAt": "2026-07-03T03:30:00+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -284,10 +285,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 1,
+      "signalCount30d": 2,
       "signalCount7d": 1,
       "lastSignalAt": "2026-07-02T16:15:52+00:00"
     },
@@ -312,7 +313,7 @@
       "statusZh": "监测中",
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
-      "signalCount30d": 7,
+      "signalCount30d": 5,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-25T07:49:44+00:00",
       "importStatus": "monitoring",
@@ -324,24 +325,25 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
+      "stale": false,
+      "signalCount30d": 3,
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-07-03T12:32:25+00:00"
+    },
+    "CN": {
+      "iso2": "CN",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
       "statusZh": "近 30 天有 1 条相关报道线索",
       "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-06-24T07:00:00+00:00"
-    },
-    "CN": {
-      "iso2": "CN",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "陕西、黑龙江、辽宁、山东、湖北等省为传统疫区；秋冬季为主要发病季；高风险人群已有国产 HFRS 疫苗。",
-      "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-07-03T15:49:05+00:00"
     },
     "KR": {
       "iso2": "KR",
