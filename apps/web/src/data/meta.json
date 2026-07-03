@@ -12,19 +12,19 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 2,
-      "ok": true,
+      "entries": 0,
+      "ok": false,
       "perQuery": [
         {
           "query": "汉坦病毒",
           "hl": "zh-CN",
-          "fetched": 96,
+          "fetched": 0,
           "blocked": 0,
-          "no_signal": 4,
+          "no_signal": 0,
           "duplicate": 0,
-          "non_authoritative": 19,
-          "kept": 2,
-          "ok": true
+          "non_authoritative": 0,
+          "kept": 0,
+          "ok": false
         }
       ]
     },
@@ -35,8 +35,8 @@
       "checkedAt": "2026-07-03T13:56:31.301654+00:00"
     },
     "surveillance_leads": {
-      "entries": 7,
-      "ok": true
+      "entries": 0,
+      "ok": false
     },
     "feeds_light_run": {
       "ok": true,
