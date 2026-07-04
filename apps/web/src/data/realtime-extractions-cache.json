@@ -10569,6 +10569,34 @@
         "source_url": "",
         "time": "2026-07-02T23:59:42.000Z"
       }
+    ],
+    "rt-91f548a3b7b68210": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-04",
+        "confidence": "low",
+        "reasoning_zh": "报道称WHO宣布邮轮汉坦疫情结束，但未提及具体国家或新增病例数。",
+        "update_id": "rt-91f548a3b7b68210",
+        "source_url": "",
+        "time": "2026-07-04T01:38:07.000Z"
+      }
+    ],
+    "rt-e12d890c8bc1abf4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "报道称WHO宣布汉坦疫情结束，但未提及具体国家或新增病例数。",
+        "update_id": "rt-e12d890c8bc1abf4",
+        "source_url": "",
+        "time": "2026-07-03T23:51:19.000Z"
+      }
     ]
   }
 }

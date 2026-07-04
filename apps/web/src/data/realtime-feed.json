@@ -1,22 +1,46 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-03T23:58:18.880777+00:00",
+  "__generated_at": "2026-07-04T02:37:02.665839+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-03T23:58:17.279793+00:00",
+  "last_fetched": "2026-07-04T02:36:55.815634+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-91f548a3b7b68210",
-      "time": "2026-07-03T20:00:20.000Z",
+      "time": "2026-07-04T01:38:07.000Z",
       "title_en": "The World Health Organization declared an end to the deadly hantavirus outbreak on a cruise ship which sparked international alarm, after the last person left quarantine. | via ANC 24/7 Link to full story in the comments section. - facebook",
       "body_en": "The World Health Organization declared an end to the deadly hantavirus outbreak on a cruise ship which sparked international alarm, after the last person left quarantine. | via ANC 24/7 Link to full story in the comments section. facebook.com",
-      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束，最后一人解除隔离。",
+      "summary_zh": "WHO宣布邮轮汉坦病毒疫情结束，最后一人解除隔离。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e12d890c8bc1abf4",
+      "time": "2026-07-03T23:51:19.000Z",
+      "title_en": "Hantavirus outbreak over: WHO - CTV News",
+      "body_en": "Hantavirus outbreak over: WHO CTV News",
+      "summary_zh": "WHO宣布汉坦病毒疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-68d1ff32745cd3db",
+      "time": "2026-07-03T22:37:00.000Z",
+      "title_en": "WHO declare hantavirus outbreak is over months after first case was recorded - The Independent",
+      "body_en": "WHO declare hantavirus outbreak is over months after first case was recorded The Independent",
+      "summary_zh": "WHO宣布汉坦病毒疫情结束，距首例数月。",
+      "key_facts_zh": [
+        "WHO",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -26,7 +50,7 @@
       "time": "2026-07-03T17:18:00.000Z",
       "title_en": "World Health Organization says hantavirus outbreak tied to cruise ship is over - thv11.com",
       "body_en": "World Health Organization says hantavirus outbreak tied to cruise ship is over thv11.com",
-      "summary_zh": "WHO 表示与邮轮相关的汉坦病毒疫情已结束。",
+      "summary_zh": "WHO称与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -39,10 +63,10 @@
       "time": "2026-07-03T16:10:42.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情正式结束。",
+      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒疫情正式结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
+        "MV Hondius",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -52,23 +76,10 @@
       "time": "2026-07-03T16:10:10.000Z",
       "title_en": "WHO declares international Hantavirus outbreak over - Premium Times Nigeria",
       "body_en": "WHO declares international Hantavirus outbreak over Premium Times Nigeria",
-      "summary_zh": "WHO 宣布国际汉坦病毒疫情结束。",
+      "summary_zh": "WHO宣布国际汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-68d1ff32745cd3db",
-      "time": "2026-07-03T13:54:00.000Z",
-      "title_en": "WHO issues new hantavirus update months after cruise ship outbreak - The Independent",
-      "body_en": "WHO issues new hantavirus update months after cruise ship outbreak The Independent",
-      "summary_zh": "WHO 在邮轮疫情数月后发布最新汉坦病毒更新。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "最新更新"
       ],
       "signal_strength": "high"
     },
@@ -77,7 +88,7 @@
       "time": "2026-07-03T12:32:25.000Z",
       "title_en": "WHO declares deadly hantavirus outbreak on cruise ship over after three months - Yahoo News Canada",
       "body_en": "WHO declares deadly hantavirus outbreak on cruise ship over after three months Yahoo News Canada",
-      "summary_zh": "WHO 宣布邮轮致命汉坦病毒疫情在三个月后结束。",
+      "summary_zh": "WHO宣布邮轮致命汉坦病毒疫情三个月后结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -90,11 +101,23 @@
       "time": "2026-07-03T12:32:00.000Z",
       "title_en": "WHO issues final update on deadly cruise ship hantavirus outbreak - The Independent",
       "body_en": "WHO issues final update on deadly cruise ship hantavirus outbreak The Independent",
-      "summary_zh": "WHO 发布致命邮轮汉坦病毒疫情最终更新。",
+      "summary_zh": "WHO发布致命邮轮汉坦疫情最终通报。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "最终更新"
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-b5cdb64164bd4a8b",
+      "time": "2026-07-03T12:04:00.000Z",
+      "title_en": "WHO Declares Deadly Hantavirus Outbreak Over - Newser",
+      "body_en": "WHO Declares Deadly Hantavirus Outbreak Over Newser",
+      "summary_zh": "WHO宣布致命汉坦疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -103,7 +126,7 @@
       "time": "2026-07-03T12:01:00.000Z",
       "title_en": "Hantavirus outbreak is over, World Health Organization says - KHOU",
       "body_en": "Hantavirus outbreak is over, World Health Organization says KHOU",
-      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
+      "summary_zh": "WHO称汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -115,7 +138,7 @@
       "time": "2026-07-03T11:56:55.000Z",
       "title_en": "WHO declares cruise ship-linked hantavirus outbreak over - news.cgtn.com",
       "body_en": "WHO declares cruise ship-linked hantavirus outbreak over news.cgtn.com",
-      "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
+      "summary_zh": "WHO宣布与邮轮相关的汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -128,20 +151,7 @@
       "time": "2026-07-03T11:22:47.000Z",
       "title_en": "WHO confirms end of deadly cruise ship hantavirus outbreak - Mid-day",
       "body_en": "WHO confirms end of deadly cruise ship hantavirus outbreak Mid-day",
-      "summary_zh": "WHO 确认致命邮轮汉坦病毒疫情结束。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c4981677d92b2944",
-      "time": "2026-07-03T11:06:34.000Z",
-      "title_en": "WHO Declares Cruise Ship Hantavirus Outbreak Over After Global Response - Fox Rio Grande Valley",
-      "body_en": "WHO Declares Cruise Ship Hantavirus Outbreak Over After Global Response Fox Rio Grande Valley",
-      "summary_zh": "WHO 宣布全球应对后邮轮汉坦病毒疫情结束。",
+      "summary_zh": "WHO确认致命邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -154,9 +164,8 @@
       "time": "2026-07-03T10:00:26.000Z",
       "title_en": "Serious Potato Chip Recall; Taylor Swift $$ for Hospitals; Hantavirus Outbreak Ends - MedPage Today",
       "body_en": "Serious Potato Chip Recall; Taylor Swift $$ for Hospitals; Hantavirus Outbreak Ends MedPage Today",
-      "summary_zh": "MedPage Today 报道汉坦病毒疫情结束。",
+      "summary_zh": "MedPage Today报道汉坦疫情结束。",
       "key_facts_zh": [
-        "汉坦病毒",
         "疫情结束"
       ],
       "signal_strength": "medium"
@@ -166,7 +175,7 @@
       "time": "2026-07-03T09:36:00.000Z",
       "title_en": "WHO declares end of hantavirus outbreak - SWI swissinfo.ch",
       "body_en": "WHO declares end of hantavirus outbreak SWI swissinfo.ch",
-      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
+      "summary_zh": "WHO宣布汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -178,11 +187,11 @@
       "time": "2026-07-03T08:40:56.000Z",
       "title_en": "WHO declares end to cruise ship-linked hantavirus outbreak | The virus spread on a Dutch-flagged ship | Inshorts - Inshorts",
       "body_en": "WHO declares end to cruise ship-linked hantavirus outbreak | The virus spread on a Dutch-flagged ship | Inshorts Inshorts",
-      "summary_zh": "WHO 宣布与荷兰旗邮轮相关的汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "荷兰旗邮轮",
-        "疫情结束"
+        "疫情结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -195,7 +204,7 @@
       "key_facts_zh": [
         "WHO",
         "疫情结束",
-        "邮轮"
+        "MV Hondius"
       ],
       "signal_strength": "high"
     },
@@ -217,7 +226,7 @@
       "time": "2026-07-03T05:07:30.000Z",
       "title_en": "WHO expects no further hantavirus spread following outbreak on cruise ship - Baird Maritime",
       "body_en": "WHO expects no further hantavirus spread following outbreak on cruise ship Baird Maritime",
-      "summary_zh": "WHO 预计邮轮疫情不会进一步扩散。",
+      "summary_zh": "WHO 预计邮轮汉坦病毒疫情不会进一步扩散。",
       "key_facts_zh": [
         "WHO",
         "预计无扩散",
@@ -230,11 +239,11 @@
       "time": "2026-07-03T04:13:47.000Z",
       "title_en": "Hantavirus Outbreak Linked To Luxury Cruise Ship Over, Says WHO - Health and Me",
       "body_en": "Hantavirus Outbreak Linked To Luxury Cruise Ship Over, Says WHO Health and Me",
-      "summary_zh": "WHO 宣布豪华邮轮汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称与豪华邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
-        "邮轮"
+        "豪华邮轮"
       ],
       "signal_strength": "high"
     },
@@ -250,19 +259,6 @@
         "溢出风险"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-f336b6ce0eb50f32",
-      "time": "2026-07-03T00:36:00.000Z",
-      "title_en": "WHO declares Hantavirus outbreak tied to cruise ship over - cbs8.com",
-      "body_en": "WHO declares Hantavirus outbreak tied to cruise ship over cbs8.com",
-      "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
-      "key_facts_zh": [
-        "WHO",
-        "疫情结束",
-        "邮轮"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-e4fe09dd95e8be32",
@@ -281,12 +277,12 @@
       "id": "rt-f4a40b0a4de2f79e",
       "time": "2026-07-02T22:25:48.000Z",
       "title_en": "Deadly MV Hondius Hantavirus Outbreak Is Over, W.H.O. Says - The New York Times",
-      "body_en": "Deadly MV Hondius Hantavirus Outbreak Is Over, W.H.O. Says The New York Times Hantavirus Cruise Ship Outbreak Officially Over After 13 Infected, 3 Dead Forbes WHO declares hantavirus outbreak linked to cruise ship over The Guardian Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos WHO declares cruise-linked hantavirus outbreak officially over Al Jazeera WHO says Hantavirus outbreak linked to ship is over BBC WHO issues final update on deadly cruise ship hantavirus outbreak The Independent WHO declares cr",
-      "summary_zh": "WHO 宣布 MV Hondius 致命汉坦病毒疫情结束，13 人感染，3 人死亡。",
+      "body_en": "Deadly MV Hondius Hantavirus Outbreak Is Over, W.H.O. Says The New York Times",
+      "summary_zh": "《纽约时报》报道 WHO 宣布 MV Hondius 致命汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
-        "13 感染 3 死"
+        "MV Hondius"
       ],
       "signal_strength": "high"
     },
