@@ -10597,6 +10597,20 @@
         "source_url": "",
         "time": "2026-07-03T23:51:19.000Z"
       }
+    ],
+    "rt-751160954932e684": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "标题提及汉坦病毒爆发与游轮有关，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-751160954932e684",
+        "source_url": "",
+        "time": "2026-07-03T04:58:43.000Z"
+      }
     ]
   }
 }
