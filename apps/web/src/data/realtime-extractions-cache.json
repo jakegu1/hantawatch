@@ -10611,6 +10611,34 @@
         "source_url": "",
         "time": "2026-07-03T04:58:43.000Z"
       }
+    ],
+    "rt-87d12d4444fdfb4d": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "报道称疫情结束，但未提及具体国家或新增病例数，无法提取变化量。",
+        "update_id": "rt-87d12d4444fdfb4d",
+        "source_url": "",
+        "time": "2026-07-02T17:35:29.000Z"
+      }
+    ],
+    "rt-0bb0c6f1f87a0e35": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "报道称疫情结束，但未提及具体国家或新增病例数，无法提取变化量。",
+        "update_id": "rt-0bb0c6f1f87a0e35",
+        "source_url": "",
+        "time": "2026-07-02T16:30:42.000Z"
+      }
     ]
   }
 }
