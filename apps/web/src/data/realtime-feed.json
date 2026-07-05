@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-05T20:08:42.690298+00:00",
+  "__generated_at": "2026-07-05T21:55:18.282711+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-05T20:08:41.366374+00:00",
+  "last_fetched": "2026-07-05T21:55:17.048903+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -89,7 +89,7 @@
       "time": "2026-07-03T11:56:55.000Z",
       "title_en": "WHO declares cruise ship-linked hantavirus outbreak over - news.cgtn.com",
       "body_en": "WHO declares cruise ship-linked hantavirus outbreak over news.cgtn.com",
-      "summary_zh": "WHO 宣布与邮轮相关的汉坦疫情结束。",
+      "summary_zh": "WHO 宣布邮轮相关汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -130,8 +130,7 @@
       "summary_zh": "WHO 宣布邮轮相关汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束",
-        "邮轮"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -140,11 +139,10 @@
       "time": "2026-07-03T05:07:30.000Z",
       "title_en": "WHO expects no further hantavirus spread following outbreak on cruise ship - Baird Maritime",
       "body_en": "WHO expects no further hantavirus spread following outbreak on cruise ship Baird Maritime",
-      "summary_zh": "WHO 预计邮轮疫情后无进一步传播。",
+      "summary_zh": "WHO 预计邮轮疫情后汉坦病毒不会进一步扩散。",
       "key_facts_zh": [
         "WHO",
-        "无进一步传播",
-        "邮轮"
+        "无进一步扩散"
       ],
       "signal_strength": "high"
     },
@@ -153,11 +151,10 @@
       "time": "2026-07-03T04:13:47.000Z",
       "title_en": "Hantavirus Outbreak Linked To Luxury Cruise Ship Over, Says WHO - Health and Me",
       "body_en": "Hantavirus Outbreak Linked To Luxury Cruise Ship Over, Says WHO Health and Me",
-      "summary_zh": "WHO 称豪华邮轮汉坦疫情结束。",
+      "summary_zh": "WHO 称豪华邮轮汉坦疫情已结束。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束",
-        "邮轮"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -179,11 +176,10 @@
       "time": "2026-07-02T22:43:00.000Z",
       "title_en": "Hantavirus outbreak tied to expedition ship is over, says WHO - PAXnews.com",
       "body_en": "Hantavirus outbreak tied to expedition ship is over, says WHO PAXnews.com",
-      "summary_zh": "WHO 称探险船汉坦疫情结束。",
+      "summary_zh": "WHO 称探险船汉坦疫情已结束。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束",
-        "探险船"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -294,7 +290,7 @@
       "time": "2026-07-02T16:30:42.000Z",
       "title_en": "WHO says Hantavirus outbreak linked to ship is over - BBC",
       "body_en": "WHO says Hantavirus outbreak linked to ship is over BBC",
-      "summary_zh": "WHO 宣布与邮轮相关的汉坦疫情结束。",
+      "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
