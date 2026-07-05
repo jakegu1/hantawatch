@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-05T18:09:53.871927+00:00",
+  "__generated_at": "2026-07-05T19:13:35.609986+00:00",
   "cases": [
     {
       "id": "who-2026-don611",
@@ -14,7 +14,71 @@
       "source": {
         "name": "WHO 疾病暴发新闻（DON）",
         "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON611",
-        "retrievedAt": "2026-07-05T13:24:28.218372+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don604",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-28",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 28 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 28 日，相关聚集共报告 13 例（11 例确诊、2 例疑似），其中含 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 评估普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON604",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don601",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-13",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 13 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。截至 5 月 13 日，相关聚集共报告 11 例（8 例确诊、1 例结果未定、2 例可能），其中 3 例死亡（2 例确诊、1 例可能）。较 5 月 8 日通报新增 2 例确诊和 1 例结果未定病例。事件仍与南美洲航程和邮轮暴露相关；普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON601",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don600",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-08",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 8 日更新 MV Hondius 邮轮相关汉坦病毒聚集疫情。自 5 月 4 日首次通报后，新增确诊病例并完成多例疑似病例确认。截至 5 月 8 日，相关聚集共报告 8 例（6 例确诊、2 例可能），其中 3 例死亡。事件与南美洲航程和邮轮暴露相关；WHO 认为普通公众风险较低，但乘客、船员及密切接触者仍需继续随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON600",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
+        "confidence": "official"
+      }
+    },
+    {
+      "id": "who-2026-don599",
+      "regionCode": "INT",
+      "serotypeId": "andes",
+      "date": "2026-05-04",
+      "caseType": "confirmed",
+      "count": 0,
+      "title": "MV Hondius 邮轮安第斯型聚集疫情",
+      "summary": "WHO 于 2026 年 5 月 2 日接获英国《国际卫生条例》国家联络点通报：一艘荷兰籍邮轮上出现重症急性呼吸道疾病聚集，包括死亡病例和一名重症监护患者。南非实验室检测确认其中一名重症患者感染汉坦病毒，后续仍有疑似病例接受调查。该事件与南美洲航程相关，需重点关注邮轮乘客、船员和密切接触者的健康随访。",
+      "source": {
+        "name": "WHO 疾病暴发新闻（DON）",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "official"
       }
     },
@@ -25,12 +89,12 @@
       "date": "2026-07-01",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 通报多国爆发与调味面条相关的 Stanley 沙门氏菌感染。",
-      "summary": "欧洲 CDC；多国爆发；沙门氏菌",
+      "title": "欧洲 CDC 通报多国沙门氏菌疫情与调味面条产品相关。",
+      "summary": "欧洲 CDC；多国；沙门氏菌",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQLTV4RDJnUUF5Rmd1ZVVpaG5qaFUxQ1pmRm5zWTFWczN0NGxkRlRwZGZPdlhLRXhBbE9iajZON1d6bFh2QzZNNS1DQlpMeV9TcGdjU1JRM20yX2FiMFYxMmRzamxXTTg0TG5UOEp5UnZtZHlReTlrRnZENi1kVGdndlZKTXkxSFl3TjRTdHBaNy1TR1BjN1JpSWZlYmdwLWJ0cHpzUEJwM2ZZZ1MwbERxck9jZjFfQVR5aS01ZDc1aUpxd2NBUkE?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -41,12 +105,12 @@
       "date": "2026-07-01",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 通报多国爆发与调味面条相关的 Stanley ST2045 沙门氏菌感染。",
-      "summary": "欧洲 CDC；多国爆发；沙门氏菌",
+      "title": "欧洲 CDC 通报多国沙门氏菌 ST2045 疫情与调味面条相关。",
+      "summary": "欧洲 CDC；多国；沙门氏菌",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPT0JOR041RnRieTV5Wm5XZ1VDQzdDb1hselhVSW5xcWNXaFRnaGJmaWd6cElOZGdpX19jeWlzT0dNZExPOVJLNWNEbjZCNE5tM2pmRlFoMXNiLUpkdjZ6S3FSd3NwZUh3OVQ1MFo5cGF2dTdPWUl0QUNPLWU0Y3FRUGR4VTE3bHJHdkxRR3ZzQm4yRnZZeEExWTQycEMtaHRrczlyYjFkdWN1T2JJSTNQRkZfcUI3aUdzUUxEMWtvZVYtVXB4?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -57,12 +121,12 @@
       "date": "2026-07-01",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 船舶卫生项目发布管辖范围内邮轮疫情报告。",
-      "summary": "美国 CDC；邮轮；疫情报告",
+      "title": "美国 CDC 发布管辖范围内邮轮疫情报告。",
+      "summary": "美国 CDC；邮轮；疫情",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9kNHQxeGtLaEtqdGw5U01VSU03OXZ2OERrcGRMYjZyRy1sQ1R5Uy1QMXBxREw5Rmt3eTNwY2pVY2pWX2dSSzBFSzZ1ei0tNWNJZWFLS1VxNmtacWJVWUdiN1J6bXR4THlFTGl2aEFWby1oekZhMlhJcGNB?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -73,12 +137,12 @@
       "date": "2026-06-30",
       "caseType": "suspected",
       "count": 0,
-      "title": "加拿大公共卫生署发布 2013-2022 年泛加拿大人畜共患病报告。",
-      "summary": "加拿大公共卫生署；人畜共患病；报告",
+      "title": "加拿大发布 2013-2022 年全国人畜共患病报告。",
+      "summary": "加拿大；人畜共患病；报告",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMC01MTg0Z0UwTU9hUjVFc1BXbmMzUEcwajY3WTFMeHRyTE5sMzVzTm95T25USUxHM2c2bWxzNmF2djlvOV9kSnFla0tvakw4b1NXYkhHallfbFdXZ0NYaExOaHRKU1BNMUVySjdodVZlVV94eV9JU2V2aFNteW94UG9EZjE5ODlTZGV2dGdRRnhid05RdFBrLUI2VUdYbmNrRGp2RkJDc0ZSel9hNTYxa2RLbl96eGZnTUxxaURMVDZhZ2ZEWmppRk1uVUU?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -201,12 +265,12 @@
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布针对 MV Hondius 邮轮 Andes 病毒接触者的临时公共卫生管理指南。",
-      "summary": "Andes病毒；邮轮；临时指南",
+      "title": "加拿大公共卫生署发布 MV Hondius 邮轮 Andes 病毒接触者临时管理指南。",
+      "summary": "加拿大公共卫生署；邮轮；Andes病毒",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNaXptbWo0VWZOLU40eVdnSTJxRG91MXYtdDFOX1ZhYkJoMGQtb2RReE5Ua1JhUm1XZEVOZFV0OXpfVjZKUUFEUldUZ2xQNTdYeU12RjdraUdhTXZ3TzhYTHVTNjg1TFdoUVR6VnhpNEdnbDFXdElvZi1lRmN1aVI2bHpvZ001SmtJSnljTXZaNXRZYW4xWGQ2bTlLc2NxT2N5NTY5Y3ZoOHBBaEVueGlGYlRQX2dXWmVOQjVoNU4zdnJidklSaElkbzhWNzhnU0NiQmN0RVlPM01rWkVxbUJTTjA0UjJVb2haTWdxV1lzamFtbWpHYk9lQkhuSTRiWTlyYURkdEdmRjFjVTNMcjhDUUpxVmJBV01CV3VQQ0dFLXpvb2NtQVZGY005N2p3MnZmTTZEUzhjVXVjZW50T3c?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -217,12 +281,12 @@
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布医疗机构中 Andes 汉坦病毒感染防控临时建议。",
-      "summary": "Andes病毒；医疗机构；防控建议",
+      "title": "加拿大公共卫生署发布医疗机构 Andes 汉坦病毒感染防控临时建议。",
+      "summary": "加拿大公共卫生署；Andes病毒；防控",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOb19xSHpteXUwaVU3TFdHUFZiejNPZjk2MW5aMzBZakZZLVF5RXFVdkZWMS14azllYU9Qb0s5TC1HVGZGbFg4T1ZJMmM3QmxzRVo3U3I2aHN0cEZLZWk4UXNZOEJBWXMwSGFyVUZnTG8yRVZ0SGJPZVlRV19DSllHNzN4T2I0WEFrc1NXajk1MDcxSzJKVlZVR0lnTUlnanlpSTNwamRYUXJmX2NnbmJwbWRBZ1JmQUctc1J5blFNMUVxX0lSMkt0YzIxblMzZVAtZzd5ck9YcllSdkJTbTZTVmU4czlRdjNReGVqSGRTRjBMU1hMdEg5VHh0THV5aExpTm42YWk4aWlONWhoMDBWRnVNQmlFZ1JibG9WWDdIdw?oc=5",
-        "retrievedAt": "2026-07-05T17:00:00.630497+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "surveillance"
       }
     },
@@ -334,7 +398,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-07-05T18:09:38.128349+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.311558+00:00",
         "confidence": "news"
       }
     },
@@ -350,7 +414,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-07-05T18:09:38.128349+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.311558+00:00",
         "confidence": "news"
       }
     },
@@ -366,7 +430,23 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-07-05T18:09:38.128349+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.311558+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束”",
+      "summary": "",
+      "source": {
+        "name": "新华网",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "news"
       }
     },
@@ -382,7 +462,23 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-07-05T18:09:38.128349+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.311558+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmipafbvv95cuxqretaaxhocdnrt0lzzs1mejlmtglqdgk0zhvhazzjcvlncfdqoxneuzq4tuxfsfzcat",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-07",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织就与游轮有关的汉坦病毒病例采取应对行动",
+      "summary": "",
+      "source": {
+        "name": "World Health Organization (WHO)",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
+        "retrievedAt": "2026-07-05T19:13:17.310816+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +494,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-07-05T18:09:38.128349+00:00",
+        "retrievedAt": "2026-07-05T19:13:17.311558+00:00",
         "confidence": "news"
       }
     }
