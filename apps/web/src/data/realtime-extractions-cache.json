@@ -10667,6 +10667,34 @@
         "source_url": "",
         "time": "2026-07-02T16:46:40.000Z"
       }
+    ],
+    "rt-09afb42dc45489a8": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-05",
+        "confidence": "high",
+        "reasoning_zh": "WHO宣布荷兰邮轮疫情结束，无新增病例数据。",
+        "update_id": "rt-09afb42dc45489a8",
+        "source_url": "",
+        "time": "2026-07-05T12:45:00.000Z"
+      }
+    ],
+    "rt-dcfb3b95b47c104a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "报道提及邮轮疫情感染超100人，但未明确国家及新增病例数。",
+        "update_id": "rt-dcfb3b95b47c104a",
+        "source_url": "",
+        "time": "2026-07-03T09:56:52.000Z"
+      }
     ]
   }
 }
