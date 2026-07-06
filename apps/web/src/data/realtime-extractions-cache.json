@@ -10709,6 +10709,20 @@
         "source_url": "",
         "time": "2026-07-02T14:39:00.000Z"
       }
+    ],
+    "rt-9eb22835951eee22": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题未提及具体国家，无法确定国家代码。",
+        "update_id": "rt-9eb22835951eee22",
+        "source_url": "",
+        "time": "2026-07-02T19:28:06.000Z"
+      }
     ]
   }
 }
