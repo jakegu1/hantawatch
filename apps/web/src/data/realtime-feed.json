@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-06T19:46:15.089853+00:00",
+  "__generated_at": "2026-07-06T19:52:06.280893+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-06T19:46:13.574072+00:00",
+  "last_fetched": "2026-07-06T19:52:00.131875+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-07-05T12:45:00.000Z",
       "title_en": "Video: WHO declares hantavirus outbreak that started on Dutch cruise ship over - NL Times",
       "body_en": "Video: WHO declares hantavirus outbreak that started on Dutch cruise ship over NL Times",
-      "summary_zh": "WHO 宣布荷兰邮轮汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布始于荷兰邮轮的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "荷兰",
@@ -50,7 +50,7 @@
       "time": "2026-07-03T22:37:00.000Z",
       "title_en": "WHO declare hantavirus outbreak is over months after first case was recorded - The Independent",
       "body_en": "WHO declare hantavirus outbreak is over months after first case was recorded The Independent",
-      "summary_zh": "WHO 宣布汉坦病毒疫情在首例病例数月后结束。",
+      "summary_zh": "WHO 宣布汉坦病毒疫情结束，距首例数月。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -88,7 +88,7 @@
       "time": "2026-07-03T09:56:52.000Z",
       "title_en": "Another Cruise Ship Virus Outbreak Infected More Than 100 Passengers - Forbes",
       "body_en": "Another Cruise Ship Virus Outbreak Infected More Than 100 Passengers Forbes",
-      "summary_zh": "福布斯报道另一艘邮轮疫情，超100名乘客感染。",
+      "summary_zh": "福布斯报道另一艘邮轮暴发病毒疫情，超100人感染。",
       "key_facts_zh": [
         "邮轮",
         "超100人感染"
@@ -115,7 +115,7 @@
       "summary_zh": "WHO预计邮轮汉坦病毒疫情不会进一步扩散。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束"
+        "预计不扩散"
       ],
       "signal_strength": "high"
     },
@@ -136,10 +136,11 @@
       "time": "2026-07-03T02:50:00.000Z",
       "title_en": "Study links biodiversity loss to rising hantavirus spillover risk - News-Medical",
       "body_en": "Study links biodiversity loss to rising hantavirus spillover risk News-Medical",
-      "summary_zh": "研究将生物多样性丧失与汉坦病毒溢出风险增加联系起来。",
+      "summary_zh": "研究将生物多样性丧失与汉坦病毒溢出风险上升联系起来。",
       "key_facts_zh": [
         "研究",
-        "生物多样性"
+        "生物多样性",
+        "溢出风险"
       ],
       "signal_strength": "medium"
     },
@@ -163,7 +164,8 @@
       "summary_zh": "纽约时报报道WHO宣布致命邮轮汉坦病毒疫情3个月后结束。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束"
+        "疫情结束",
+        "3个月"
       ],
       "signal_strength": "high"
     },
@@ -261,11 +263,11 @@
       "time": "2026-07-02T14:26:00.000Z",
       "title_en": "Hantavirus Cruise Ship Outbreak Officially Over After 13 Infected, 3 Dead - Forbes",
       "body_en": "Hantavirus Cruise Ship Outbreak Officially Over After 13 Infected, 3 Dead Forbes",
-      "summary_zh": "邮轮汉坦疫情结束，13人感染3人死亡。",
+      "summary_zh": "邮轮汉坦疫情结束，13 人感染，3 人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "13例感染",
-        "3例死亡"
+        "13 感染",
+        "3 死亡"
       ],
       "signal_strength": "high"
     }
