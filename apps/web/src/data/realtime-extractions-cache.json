@@ -10737,6 +10737,48 @@
         "source_url": "",
         "time": "2026-07-06T19:06:00.000Z"
       }
+    ],
+    "rt-a8ff29070de07468": [
+      {
+        "iso2": "KR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-07",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及韩国汉坦病毒疫苗计划，但无具体病例数字，无法提取增量。",
+        "update_id": "rt-a8ff29070de07468",
+        "source_url": "",
+        "time": "2026-07-07T01:35:33.000Z"
+      }
+    ],
+    "rt-67da9b98e4a0d99d": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-06",
+        "confidence": "low",
+        "reasoning_zh": "新闻称美国HHS暂停汉坦病毒监测，但无具体病例数字，无法提取增量。",
+        "update_id": "rt-67da9b98e4a0d99d",
+        "source_url": "",
+        "time": "2026-07-06T20:38:18.000Z"
+      }
+    ],
+    "rt-45120fb470cbafb8": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-06",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及汉坦病毒爆发后CEO声明，但无具体国家或病例数字，无法提取增量。",
+        "update_id": "rt-45120fb470cbafb8",
+        "source_url": "",
+        "time": "2026-07-06T20:27:25.000Z"
+      }
     ]
   }
 }
