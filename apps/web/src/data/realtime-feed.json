@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-07T14:13:13.570012+00:00",
+  "__generated_at": "2026-07-07T14:26:08.068417+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-07T14:13:12.437280+00:00",
+  "last_fetched": "2026-07-07T14:26:02.346648+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-07-07T01:35:33.000Z",
       "title_en": "New sa‑mRNA and LNP Platform to Support Korea’s Hantavirus Vaccine Initiative - Genetic Engineering and Biotechnology News",
       "body_en": "New sa‑mRNA and LNP Platform to Support Korea’s Hantavirus Vaccine Initiative Genetic Engineering and Biotechnology News",
-      "summary_zh": "韩国开发新型sa-mRNA和LNP平台支持汉坦病毒疫苗项目。",
+      "summary_zh": "韩国开发新型sa-mRNA和LNP平台支持汉坦病毒疫苗计划。",
       "key_facts_zh": [
         "韩国",
         "疫苗研发"
@@ -38,7 +38,7 @@
       "time": "2026-07-06T19:06:00.000Z",
       "title_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project - News-Medical",
       "body_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project News-Medical",
-      "summary_zh": "韩国大学医学院被选为汉坦病毒疫苗开发项目牵头机构。",
+      "summary_zh": "韩国大学医学院被选为汉坦病毒疫苗开发牵头机构。",
       "key_facts_zh": [
         "韩国",
         "疫苗研发"
@@ -115,9 +115,8 @@
       "body_en": "Another Cruise Ship Virus Outbreak Infected More Than 100 Passengers Forbes",
       "summary_zh": "福布斯报道另一邮轮疫情感染超百人。",
       "key_facts_zh": [
-        "福布斯",
         "邮轮",
-        "超百人感染"
+        "感染超百人"
       ],
       "signal_strength": "medium"
     },
@@ -159,6 +158,19 @@
         "疫情结束"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-54dc38804d28e594",
+      "time": "2026-07-03T02:50:00.000Z",
+      "title_en": "Study links biodiversity loss to rising hantavirus spillover risk - News-Medical",
+      "body_en": "Study links biodiversity loss to rising hantavirus spillover risk News-Medical",
+      "summary_zh": "研究称生物多样性丧失增加汉坦病毒溢出风险。",
+      "key_facts_zh": [
+        "研究",
+        "生物多样性",
+        "溢出风险"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e4fe09dd95e8be32",
@@ -229,7 +241,7 @@
       "time": "2026-07-02T17:35:29.000Z",
       "title_en": "Hantavirus outbreak linked to cruise ship over, says WHO - CBC",
       "body_en": "Hantavirus outbreak linked to cruise ship over, says WHO CBC",
-      "summary_zh": "WHO 表示与邮轮相关的汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
@@ -255,7 +267,7 @@
       "time": "2026-07-02T16:30:42.000Z",
       "title_en": "WHO says Hantavirus outbreak linked to ship is over - BBC",
       "body_en": "WHO says Hantavirus outbreak linked to ship is over BBC",
-      "summary_zh": "WHO 表示与邮轮相关的汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
@@ -270,9 +282,9 @@
       "body_en": "Hantavirus Cruise Ship Outbreak Officially Over After 13 Infected, 3 Dead Forbes",
       "summary_zh": "邮轮汉坦病毒疫情正式结束，13 人感染，3 人死亡。",
       "key_facts_zh": [
-        "疫情结束",
-        "13 感染",
-        "3 死亡"
+        "13 例确诊",
+        "3 例死亡",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
