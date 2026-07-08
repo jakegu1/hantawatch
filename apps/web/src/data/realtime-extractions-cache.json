@@ -10807,6 +10807,20 @@
         "source_url": "",
         "time": "2026-07-08T09:19:45.000Z"
       }
+    ],
+    "rt-279237823277622b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-08",
+        "confidence": "low",
+        "reasoning_zh": "标题提及汉坦病毒聚集性病例与邮轮旅行相关，但未提供具体国家或新增数字，无法提取变化量。",
+        "update_id": "rt-279237823277622b",
+        "source_url": "",
+        "time": "2026-07-08T06:50:59.000Z"
+      }
     ]
   }
 }
