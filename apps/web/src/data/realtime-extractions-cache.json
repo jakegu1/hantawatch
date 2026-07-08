@@ -10779,6 +10779,20 @@
         "source_url": "",
         "time": "2026-07-06T20:27:25.000Z"
       }
+    ],
+    "rt-21aefd23ae8b5b4f": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题称WHO宣布邮轮汉坦疫情结束，但未提及具体国家、新增病例数或死亡数，无法提取任何delta。",
+        "update_id": "rt-21aefd23ae8b5b4f",
+        "source_url": "",
+        "time": "2026-07-03T12:36:00.000Z"
+      }
     ]
   }
 }
