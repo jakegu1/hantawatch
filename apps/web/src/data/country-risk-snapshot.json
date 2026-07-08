@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-08T08:23:27.973826+00:00",
+  "__generated_at": "2026-07-08T13:57:03.045797+00:00",
   "date": "2026-07-08",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -62,7 +62,7 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 1,
       "signalCount7d": 0,
       "lastSignalAt": "2026-06-15T07:00:00+00:00",
       "importStatus": "imports_confirmed",
@@ -215,16 +215,15 @@
     },
     "IT": {
       "iso2": "IT",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "整体风险低；东北边境地区林业作业者注意。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-06-22T22:51:16+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "ES": {
       "iso2": "ES",
@@ -259,11 +258,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 19 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 19 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 17 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 19,
-      "signalCount7d": 12,
+      "signalCount30d": 17,
+      "signalCount7d": 10,
       "lastSignalAt": "2026-07-03T21:20:36+00:00"
     },
     "CL": {
