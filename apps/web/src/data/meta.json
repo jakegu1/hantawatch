@@ -19,10 +19,10 @@
           "query": "汉坦病毒",
           "hl": "zh-CN",
           "fetched": 100,
-          "blocked": 1,
-          "no_signal": 10,
+          "blocked": 0,
+          "no_signal": 9,
           "duplicate": 0,
-          "non_authoritative": 12,
+          "non_authoritative": 14,
           "kept": 2,
           "ok": true
         }
@@ -33,6 +33,14 @@
       "ok": true,
       "okCount": 9,
       "checkedAt": "2026-07-09T02:39:33.070703+00:00"
+    },
+    "surveillance_leads": {
+      "entries": 6,
+      "ok": true
+    },
+    "feeds_light_run": {
+      "ok": true,
+      "at": "2026-07-09T02:40:13.164023+00:00"
     }
   },
   "clusterCount": 1,
