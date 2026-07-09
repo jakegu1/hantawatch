@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-09T14:51:57.717431+00:00",
-  "date": "2026-07-09",
+  "__generated_at": "2026-07-09T19:41:18.914748+00:00",
+  "date": "2026-07-10",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -258,11 +258,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 17 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 17 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 16 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 16 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 17,
-      "signalCount7d": 9,
+      "signalCount30d": 16,
+      "signalCount7d": 4,
       "lastSignalAt": "2026-07-04T06:26:23+00:00"
     },
     "CL": {
@@ -287,7 +287,7 @@
       "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 1,
-      "signalCount7d": 1,
+      "signalCount7d": 0,
       "lastSignalAt": "2026-07-02T16:15:52+00:00"
     },
     "UY": {
@@ -311,9 +311,9 @@
       "statusZh": "监测中",
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
-      "signalCount30d": 9,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-07-03T03:59:54+00:00",
+      "signalCount30d": 8,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-06-27T00:00:00+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
