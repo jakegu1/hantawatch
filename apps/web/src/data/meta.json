@@ -1,8 +1,8 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-10T02:42:35.540616+00:00",
-  "lastCollectedAt": "2026-07-10T02:42:35.538685+00:00",
-  "lastCollectedAtCn": "2026-07-10T10:42:35.538690+08:00",
+  "__generated_at": "2026-07-10T09:30:12.091439+00:00",
+  "lastCollectedAt": "2026-07-10T09:30:12.087999+00:00",
+  "lastCollectedAtCn": "2026-07-10T17:30:12.088004+08:00",
   "sources": {
     "who_don": {
       "entries": 5,
@@ -19,10 +19,10 @@
           "query": "汉坦病毒",
           "hl": "zh-CN",
           "fetched": 100,
-          "blocked": 2,
+          "blocked": 1,
           "no_signal": 10,
           "duplicate": 0,
-          "non_authoritative": 11,
+          "non_authoritative": 12,
           "kept": 2,
           "ok": true
         }
@@ -31,16 +31,8 @@
     "official_sources": {
       "entries": 12,
       "ok": true,
-      "okCount": 10,
-      "checkedAt": "2026-07-10T02:42:03.755119+00:00"
-    },
-    "surveillance_leads": {
-      "entries": 6,
-      "ok": true
-    },
-    "feeds_light_run": {
-      "ok": true,
-      "at": "2026-07-10T02:42:35.538685+00:00"
+      "okCount": 9,
+      "checkedAt": "2026-07-10T09:29:29.970859+00:00"
     }
   },
   "clusterCount": 1,
