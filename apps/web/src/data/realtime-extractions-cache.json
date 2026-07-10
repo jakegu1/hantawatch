@@ -10863,6 +10863,34 @@
         "source_url": "",
         "time": "2026-07-09T19:38:00.000Z"
       }
+    ],
+    "rt-d8fe6dd9e5bb39a5": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-10",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及汉坦病毒死亡事件，但未提供具体国家、新增病例或死亡数字，无法提取有效变化量。",
+        "update_id": "rt-d8fe6dd9e5bb39a5",
+        "source_url": "",
+        "time": "2026-07-10T05:14:44.000Z"
+      }
+    ],
+    "rt-b8ad3c5e85a282c0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻提及接触汉坦病毒邮轮的旅行者结束自我隔离，但未提供具体国家、新增病例或死亡数字，无法提取有效变化量。",
+        "update_id": "rt-b8ad3c5e85a282c0",
+        "source_url": "",
+        "time": "2026-06-30T07:00:00.000Z"
+      }
     ]
   }
 }
