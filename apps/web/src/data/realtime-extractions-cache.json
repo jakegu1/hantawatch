@@ -10891,6 +10891,34 @@
         "source_url": "",
         "time": "2026-06-30T07:00:00.000Z"
       }
+    ],
+    "rt-ae68c2e3097fdbf8": [
+      {
+        "iso2": "SA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-10",
+        "confidence": "low",
+        "reasoning_zh": "沙特发布旅行健康警告，提及汉坦病毒，但无具体病例数字。",
+        "update_id": "rt-ae68c2e3097fdbf8",
+        "source_url": "",
+        "time": "2026-07-10T23:27:39.000Z"
+      }
+    ],
+    "rt-ac188f0da342c40c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-25",
+        "confidence": "low",
+        "reasoning_zh": "学术文章讨论汉坦病毒神经系统表现，无国家或病例数据。",
+        "update_id": "rt-ac188f0da342c40c",
+        "source_url": "",
+        "time": "2026-06-25T07:00:00.000Z"
+      }
     ]
   }
 }
