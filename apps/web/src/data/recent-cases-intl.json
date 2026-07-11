@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-11T16:47:05.884576+00:00",
+  "__generated_at": "2026-07-11T17:48:41.156276+00:00",
   "cases": [
     {
       "id": "who-2026-don611",
@@ -26,11 +26,11 @@
       "caseType": "suspected",
       "count": 0,
       "title": "欧洲 CDC 推出改进工具监测沿海水域感染风险。",
-      "summary": "欧洲 CDC；热浪；沿海监测",
+      "summary": "欧洲 CDC；热浪；沿海水域监测",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYVRKeGcwUGJFSjEtZWhPYktTMnRfQ0Fna3B5RWVGOVlyNjlVcmNTa1lpbVpWd2VHTEVOR1NTbE5xWEdYQURfNVVTclhQMlI2aWlRQmpJU1VCdmJ5WFpnVXFRUUlNa3dld1JaNmFuQWNGUVFvNHVDdTFyeTN5ZE1jdUg4SkdYRnVIbjFweXVCWXFRVFBpVTd1VGlnM0c2dWRTNk55THdQZE1DcGpaTXhGdElwR05KNDJmcFFOU005YlhLS1E?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
@@ -46,7 +46,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONDV1SVA3blZGa3Z1NVpnM0ZaSmpvcGFlTF9rU1ZMelUyMV9iN0FtZEU3S3RueHQxSVI0WURnUW10NE5sSWd0ZlJLRzlMaktkWFpEc0g3cVNHQlE1eld5VjFsWEl3VTlUcFY1X2I5cXd6SW1VcmlzZTRzX2ZNV3JtbXQ2VW1rVUN4ME5zYlpPNldJRDJva0k0anE3cm42eVZYX1lLbg?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
@@ -73,12 +73,12 @@
       "date": "2026-07-01",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 通报多国 Stanley 沙门氏菌疫情与调味面制品有关。",
-      "summary": "欧洲 CDC；沙门氏菌；调味面制品",
+      "title": "欧洲 CDC 通报多国斯坦利沙门氏菌疫情与调味面条有关。",
+      "summary": "欧洲 CDC；沙门氏菌；调味面条",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQLTV4RDJnUUF5Rmd1ZVVpaG5qaFUxQ1pmRm5zWTFWczN0NGxkRlRwZGZPdlhLRXhBbE9iajZON1d6bFh2QzZNNS1DQlpMeV9TcGdjU1JRM20yX2FiMFYxMmRzamxXTTg0TG5UOEp5UnZtZHlReTlrRnZENi1kVGdndlZKTXkxSFl3TjRTdHBaNy1TR1BjN1JpSWZlYmdwLWJ0cHpzUEJwM2ZZZ1MwbERxck9jZjFfQVR5aS01ZDc1aUpxd2NBUkE?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
@@ -110,7 +110,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9kNHQxeGtLaEtqdGw5U01VSU03OXZ2OERrcGRMYjZyRy1sQ1R5Uy1QMXBxREw5Rmt3eTNwY2pVY2pWX2dSSzBFSzZ1ei0tNWNJZWFLS1VxNmtacWJVWUdiN1J6bXR4THlFTGl2aEFWby1oekZhMlhJcGNB?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
@@ -245,32 +245,32 @@
     {
       "id": "surv-news-news.google.com-rss-articles-cbmivgjbvv95cuxnaxptbwo0vwzolu40evdnstjxrg91mxytddfox1zhykjomgqtb2rree5ua1jhum1xze",
       "regionCode": "INT",
-      "serotypeId": "andes",
+      "serotypeId": "other",
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布针对 Hondius 邮轮 Andes 病毒接触者的临时管理指南。",
-      "summary": "Andes 病毒；邮轮；接触者管理",
+      "title": "发布安第斯病毒病例接触者公共卫生管理临时指南。",
+      "summary": "安第斯病毒；邮轮；临时指南",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNaXptbWo0VWZOLU40eVdnSTJxRG91MXYtdDFOX1ZhYkJoMGQtb2RReE5Ua1JhUm1XZEVOZFV0OXpfVjZKUUFEUldUZ2xQNTdYeU12RjdraUdhTXZ3TzhYTHVTNjg1TFdoUVR6VnhpNEdnbDFXdElvZi1lRmN1aVI2bHpvZ001SmtJSnljTXZaNXRZYW4xWGQ2bTlLc2NxT2N5NTY5Y3ZoOHBBaEVueGlGYlRQX2dXWmVOQjVoNU4zdnJidklSaElkbzhWNzhnU0NiQmN0RVlPM01rWkVxbUJTTjA0UjJVb2haTWdxV1lzamFtbWpHYk9lQkhuSTRiWTlyYURkdEdmRjFjVTNMcjhDUUpxVmJBV01CV3VQQ0dFLXpvb2NtQVZGY005N2p3MnZmTTZEUzhjVXVjZW50T3c?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
     {
       "id": "surv-news-news.google.com-rss-articles-cbminwjbvv95cuxob19xshptexuwavu3tfdhufziejnpzjk2mw5amzbzakzzlvf5rxfvdkzwms14azllyu",
       "regionCode": "INT",
-      "serotypeId": "andes",
+      "serotypeId": "other",
       "date": "2026-06-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "发布医疗机构 Andes 汉坦病毒感染防控临时建议。",
-      "summary": "Andes 汉坦病毒；医疗机构；防控",
+      "title": "发布医疗机构安第斯汉坦病毒感染防控临时建议。",
+      "summary": "安第斯汉坦病毒；医疗机构；防控建议",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOb19xSHpteXUwaVU3TFdHUFZiejNPZjk2MW5aMzBZakZZLVF5RXFVdkZWMS14azllYU9Qb0s5TC1HVGZGbFg4T1ZJMmM3QmxzRVo3U3I2aHN0cEZLZWk4UXNZOEJBWXMwSGFyVUZnTG8yRVZ0SGJPZVlRV19DSllHNzN4T2I0WEFrc1NXajk1MDcxSzJKVlZVR0lnTUlnanlpSTNwamRYUXJmX2NnbmJwbWRBZ1JmQUctc1J5blFNMUVxX0lSMkt0YzIxblMzZVAtZzd5ck9YcllSdkJTbTZTVmU4czlRdjNReGVqSGRTRjBMU1hMdEg5VHh0THV5aExpTm42YWk4aWlONWhoMDBWRnVNQmlFZ1JibG9WWDdIdw?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "surveillance"
       }
     },
@@ -366,7 +366,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-07-11T16:46:47.798747+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.264651+00:00",
         "confidence": "news"
       }
     },
@@ -382,7 +382,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-07-11T16:46:47.798747+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.264651+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +398,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-07-11T16:46:47.798747+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.264651+00:00",
         "confidence": "news"
       }
     },
@@ -414,7 +414,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "news"
       }
     },
@@ -430,7 +430,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-07-11T16:46:47.798747+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.264651+00:00",
         "confidence": "news"
       }
     },
@@ -446,7 +446,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-07-11T16:46:47.797883+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.263931+00:00",
         "confidence": "news"
       }
     },
@@ -462,7 +462,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-07-11T16:46:47.798747+00:00",
+        "retrievedAt": "2026-07-11T17:48:23.264651+00:00",
         "confidence": "news"
       }
     }
