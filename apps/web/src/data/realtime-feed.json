@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-11T18:58:06.232777+00:00",
+  "__generated_at": "2026-07-11T20:01:16.388782+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-11T18:58:00.608161+00:00",
+  "last_fetched": "2026-07-11T20:01:15.422801+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,24 +26,12 @@
       "time": "2026-07-06T19:06:00.000Z",
       "title_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project - News-Medical",
       "body_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project News-Medical",
-      "summary_zh": "韩国大学医学院被选为汉坦病毒疫苗开发主导机构。",
+      "summary_zh": "韩国大学医学院被选为汉坦病毒疫苗开发牵头机构。",
       "key_facts_zh": [
         "韩国",
-        "疫苗研发"
+        "疫苗开发"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-e12d890c8bc1abf4",
-      "time": "2026-07-03T23:51:19.000Z",
-      "title_en": "Hantavirus outbreak over: WHO - CTV News",
-      "body_en": "Hantavirus outbreak over: WHO CTV News",
-      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
-      "key_facts_zh": [
-        "WHO",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-65119068e032d0e0",
@@ -54,6 +42,18 @@
       "key_facts_zh": [
         "WHO",
         "邮轮",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-e12d890c8bc1abf4",
+      "time": "2026-07-03T07:00:00.000Z",
+      "title_en": "Hantavirus outbreak over: WHO - CTV News",
+      "body_en": "Hantavirus outbreak over: WHO CTV News",
+      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
+      "key_facts_zh": [
+        "WHO",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -102,7 +102,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO 称邮轮汉坦病毒疫情在最后接触者完成隔离后结束。",
+      "summary_zh": "WHO 称最后接触者完成隔离，邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -156,8 +156,8 @@
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
       "summary_zh": "接触邮轮汉坦病毒的旅客结束自我隔离。",
       "key_facts_zh": [
+        "加拿大",
         "邮轮",
-        "接触者",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -180,11 +180,11 @@
       "time": "2026-06-27T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 26): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦感染本周 0 例，年累计 1 例。",
+      "summary_zh": "美国 CDC 报告本周汉坦新增 0 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "周报",
-        "0 新增"
+        "新增 0 例",
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -197,7 +197,7 @@
       "key_facts_zh": [
         "美国",
         "HHS",
-        "监测结束"
+        "无阳性病例"
       ],
       "signal_strength": "high"
     },
@@ -209,7 +209,7 @@
       "summary_zh": "美国 CDC 正式结束汉坦病毒应对，疫情风险降低。",
       "key_facts_zh": [
         "美国 CDC",
-        "应对结束"
+        "结束应对"
       ],
       "signal_strength": "high"
     },
@@ -234,7 +234,7 @@
       "summary_zh": "美国 CDC 结束汉坦病毒应对。",
       "key_facts_zh": [
         "美国 CDC",
-        "应对结束"
+        "结束应对"
       ],
       "signal_strength": "high"
     },
@@ -246,7 +246,7 @@
       "summary_zh": "美国公共卫生机构结束汉坦病毒应对，疫情缓解。",
       "key_facts_zh": [
         "美国",
-        "应对结束"
+        "结束应对"
       ],
       "signal_strength": "high"
     },
@@ -258,7 +258,7 @@
       "summary_zh": "美国 CDC 结束汉坦病毒应对，国内疫情风险降低。",
       "key_facts_zh": [
         "美国 CDC",
-        "应对结束"
+        "结束应对"
       ],
       "signal_strength": "high"
     },
@@ -267,10 +267,11 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says - Euronews",
       "body_en": "Deadly Hantavirus outbreak should end on 2 July, WHO says Euronews",
-      "summary_zh": "WHO 称致命汉坦病毒疫情将于 7 月 2 日结束。",
+      "summary_zh": "WHO 称致命汉坦病毒疫情应于7月2日结束。",
       "key_facts_zh": [
         "WHO",
-        "疫情结束日期"
+        "疫情结束",
+        "7月2日"
       ],
       "signal_strength": "high"
     },
@@ -279,7 +280,7 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge - Anadolu Ajansı",
       "body_en": "WHO says hantavirus outbreak to be declared over by July 2 if no new cases emerge Anadolu Ajansı",
-      "summary_zh": "WHO 称若无新病例，汉坦病毒疫情将于7月2日宣布结束。",
+      "summary_zh": "WHO称若无新病例，汉坦病毒疫情将于7月2日宣布结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
