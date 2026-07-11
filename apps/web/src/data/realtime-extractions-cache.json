@@ -10919,6 +10919,20 @@
         "source_url": "",
         "time": "2026-06-25T07:00:00.000Z"
       }
+    ],
+    "rt-575e98de668a313c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-03",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅宣布疫情结束，未提供任何国家或新增病例数字。",
+        "update_id": "rt-575e98de668a313c",
+        "source_url": "",
+        "time": "2026-07-03T07:00:00.000Z"
+      }
     ]
   }
 }
