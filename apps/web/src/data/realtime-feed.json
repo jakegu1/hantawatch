@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-12T15:53:10.433536+00:00",
+  "__generated_at": "2026-07-12T16:51:32.074675+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-12T15:53:09.186824+00:00",
+  "last_fetched": "2026-07-12T16:51:31.234164+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,13 +25,25 @@
       "time": "2026-07-09T19:38:00.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在邮轮上感染汉坦病毒，于内布拉斯加医学中心接受监测。",
+      "summary_zh": "美国公民在邮轮上感染汉坦病毒，于内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加医学中心",
-        "监测中"
+        "邮轮",
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-279237823277622b",
+      "time": "2026-07-08T06:50:59.000Z",
+      "title_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern - Cureus",
+      "body_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern Cureus",
+      "summary_zh": "综述邮轮汉坦病毒聚集性疫情。",
+      "key_facts_zh": [
+        "邮轮",
+        "聚集性疫情"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-67da9b98e4a0d99d",
@@ -46,23 +58,36 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-6e8a3519b6bba30e",
-      "time": "2026-07-06T19:06:00.000Z",
-      "title_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project - News-Medical",
-      "body_en": "Korea University College of Medicine selected as the lead institution for hantavirus vaccine development project News-Medical",
-      "summary_zh": "韩国大学医学院被选为汉坦病毒疫苗开发牵头机构。",
+      "id": "rt-68d1ff32745cd3db",
+      "time": "2026-07-03T22:37:00.000Z",
+      "title_en": "WHO declare hantavirus outbreak is over months after first case was recorded - The Independent",
+      "body_en": "WHO declare hantavirus outbreak is over months after first case was recorded The Independent",
+      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
       "key_facts_zh": [
-        "韩国",
-        "疫苗开发"
+        "WHO",
+        "疫情结束"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-368dfa4511e6486c",
+      "time": "2026-07-03T12:32:00.000Z",
+      "title_en": "WHO issues final update on deadly cruise ship hantavirus outbreak - The Independent",
+      "body_en": "WHO issues final update on deadly cruise ship hantavirus outbreak The Independent",
+      "summary_zh": "WHO 发布致命邮轮汉坦病毒疫情最终更新。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "最终更新"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-65119068e032d0e0",
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情正式结束。",
+      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -75,7 +100,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak over: WHO - CTV News",
       "body_en": "Hantavirus outbreak over: WHO CTV News",
-      "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -87,7 +112,7 @@
       "time": "2026-07-02T19:36:38.000Z",
       "title_en": "WHO says cruise ship-linked hantavirus outbreak over - CTV News",
       "body_en": "WHO says cruise ship-linked hantavirus outbreak over CTV News",
-      "summary_zh": "WHO 称邮轮关联汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称邮轮相关汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -100,7 +125,7 @@
       "time": "2026-07-02T13:27:44.000Z",
       "title_en": "WHO declares hantavirus outbreak linked to cruise ship over - Reuters",
       "body_en": "WHO declares hantavirus outbreak linked to cruise ship over Reuters",
-      "summary_zh": "WHO 宣布邮轮关联汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布邮轮相关汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -113,7 +138,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says - Forbes",
       "body_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says Forbes",
-      "summary_zh": "WHO 称邮轮汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -126,11 +151,11 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO 称最后接触者完成隔离，邮轮疫情结束。",
+      "summary_zh": "WHO 称邮轮汉坦疫情结束，最后接触者完成隔离。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "隔离完成"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -152,7 +177,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO says Hantavirus outbreak linked to ship is over - BBC",
       "body_en": "WHO says Hantavirus outbreak linked to ship is over BBC",
-      "summary_zh": "WHO 称邮轮汉坦疫情结束。",
+      "summary_zh": "WHO 称邮轮相关汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -165,11 +190,11 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO declares cruise-linked hantavirus outbreak officially over - Al Jazeera",
       "body_en": "WHO declares cruise-linked hantavirus outbreak officially over Al Jazeera",
-      "summary_zh": "WHO 宣布邮轮关联汉坦疫情正式结束。",
+      "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情正式结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
-        "疫情结束"
+        "疫情结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -178,7 +203,7 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "加拿大邮轮汉坦病毒接触者结束自我隔离。",
+      "summary_zh": "接触汉坦病毒邮轮的旅客结束自我隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -191,11 +216,11 @@
       "time": "2026-06-29T07:00:00.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮汉坦病毒接触者完成隔离。",
+      "summary_zh": "加拿大邮轮接触者完成隔离期。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
-        "隔离完成"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -217,10 +242,10 @@
       "time": "2026-06-25T07:00:00.000Z",
       "title_en": "Hantavirus infection: Neurologic manifestations should not be overlooked - Springer Nature Link",
       "body_en": "Hantavirus infection: Neurologic manifestations should not be overlooked Springer Nature Link",
-      "summary_zh": "研究：汉坦病毒神经系统表现不应忽视。",
+      "summary_zh": "研究指出汉坦病毒神经系统表现不应忽视。",
       "key_facts_zh": [
-        "研究",
-        "神经系统"
+        "神经系统",
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -242,10 +267,11 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "CDC Officially Ends Hantavirus Response as Outbreak Risk Recedes - Journal of Managed Care",
       "body_en": "CDC Officially Ends Hantavirus Response as Outbreak Risk Recedes Journal of Managed Care",
-      "summary_zh": "美国 CDC 正式结束汉坦病毒响应，风险降低。",
+      "summary_zh": "美国 CDC 正式结束汉坦病毒响应，疫情风险降低。",
       "key_facts_zh": [
         "美国 CDC",
-        "响应结束"
+        "响应结束",
+        "风险降低"
       ],
       "signal_strength": "high"
     },
@@ -254,23 +280,11 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship - CIDRAP",
       "body_en": "International public health response helped contain Andes hantavirus outbreak on Dutch cruise ship CIDRAP",
-      "summary_zh": "国际公共卫生响应控制荷兰邮轮汉坦疫情。",
+      "summary_zh": "国际公共卫生响应控制荷兰邮轮上的安第斯汉坦病毒疫情。",
       "key_facts_zh": [
-        "国际",
-        "荷兰邮轮",
-        "疫情控制"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-42850abd62f4914f",
-      "time": "2026-06-24T07:00:00.000Z",
-      "title_en": "CDC ends US Hantavirus response - The Hill",
-      "body_en": "CDC ends US Hantavirus response The Hill",
-      "summary_zh": "美国CDC结束汉坦病毒应急响应。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "结束响应"
+        "荷兰",
+        "邮轮",
+        "安第斯汉坦病毒"
       ],
       "signal_strength": "high"
     }
