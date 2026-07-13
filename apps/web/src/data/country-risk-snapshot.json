@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-12T19:01:25.415161+00:00",
+  "__generated_at": "2026-07-13T02:29:41.761571+00:00",
   "date": "2026-07-13",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -257,10 +257,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 11 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 11 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 12 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 12 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 11,
+      "signalCount30d": 12,
       "signalCount7d": 1,
       "lastSignalAt": "2026-07-08T14:55:13+00:00"
     },
