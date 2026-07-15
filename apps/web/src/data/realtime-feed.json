@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-15T19:06:36.939891+00:00",
+  "__generated_at": "2026-07-15T20:13:47.333190+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-15T19:06:32.608212+00:00",
+  "last_fetched": "2026-07-15T20:13:45.992553+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,36 +25,11 @@
       "time": "2026-07-09T19:38:00.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被送至内布拉斯加医学中心监测。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上被监测于内布拉斯加医学中心。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加医学中心",
-        "监测"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-279237823277622b",
-      "time": "2026-07-08T06:50:59.000Z",
-      "title_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern - Cureus",
-      "body_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern Cureus",
-      "summary_zh": "Cureus 发表邮轮汉坦病毒聚集性病例综述。",
-      "key_facts_zh": [
         "邮轮",
-        "综述"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-65119068e032d0e0",
-      "time": "2026-07-03T07:00:00.000Z",
-      "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
-      "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情正式结束。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情结束"
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -66,6 +41,19 @@
       "summary_zh": "WHO 宣布汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-65119068e032d0e0",
+      "time": "2026-07-03T07:00:00.000Z",
+      "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
+      "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
+      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情正式结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -101,7 +89,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO 称最后接触者完成隔离，邮轮疫情结束。",
+      "summary_zh": "最后接触者完成隔离，WHO 宣布邮轮疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -166,9 +154,10 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "暴露于汉坦邮轮的旅客结束自我隔离。",
+      "summary_zh": "接触邮轮汉坦疫情的旅客结束自我隔离。",
       "key_facts_zh": [
         "邮轮",
+        "接触者",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -178,7 +167,7 @@
       "time": "2026-06-29T07:00:00.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮上接触汉坦病毒的人员完成隔离。",
+      "summary_zh": "加拿大邮轮上接触汉坦病毒的乘客完成隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -191,7 +180,7 @@
       "time": "2026-06-27T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 26): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增，2026年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增汉坦病例，2026年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "无新增",
@@ -204,7 +193,7 @@
       "time": "2026-06-25T07:00:00.000Z",
       "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
       "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空邮轮汉坦病毒患者出院，仍在康复。",
+      "summary_zh": "育空邮轮汉坦患者从BC省医院出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -213,15 +202,27 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-ac188f0da342c40c",
+      "time": "2026-06-25T07:00:00.000Z",
+      "title_en": "Hantavirus infection: Neurologic manifestations should not be overlooked - Springer Nature Link",
+      "body_en": "Hantavirus infection: Neurologic manifestations should not be overlooked Springer Nature Link",
+      "summary_zh": "研究强调汉坦病毒神经系统表现不应忽视。",
+      "key_facts_zh": [
+        "研究",
+        "神经系统"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-6572ad994354233d",
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case - HHS.gov",
       "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov",
-      "summary_zh": "美国 HHS 结束汉坦病毒响应，监测无阳性病例。",
+      "summary_zh": "美国 HHS 结束汉坦病毒应对，监测无阳性病例。",
       "key_facts_zh": [
         "美国 HHS",
-        "响应结束",
-        "无病例"
+        "无阳性",
+        "结束应对"
       ],
       "signal_strength": "high"
     },
