@@ -10961,6 +10961,20 @@
         "source_url": "",
         "time": "2026-07-12T12:00:00.000Z"
       }
+    ],
+    "rt-60aa8765ee972fa4": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-29",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题和正文未提及具体国家、新增病例或死亡数字，仅涉及培训信息。",
+        "update_id": "rt-60aa8765ee972fa4",
+        "source_url": "",
+        "time": "2026-06-29T14:40:26.000Z"
+      }
     ]
   }
 }

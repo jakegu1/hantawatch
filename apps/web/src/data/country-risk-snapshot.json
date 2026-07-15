@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-14T19:15:27.250327+00:00",
+  "__generated_at": "2026-07-15T02:06:53.158925+00:00",
   "date": "2026-07-15",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -311,8 +311,8 @@
       "riskSummaryZh": "CDC 内布拉斯加隔离单元仍有 13 人在 42 天联邦监测期内（5 人已转居家监测）；得州州级邮轮乘客监测已于 6 月 7 日结束，无人感染。美国仍无确诊病例。",
       "stale": false,
       "signalCount30d": 5,
-      "signalCount7d": 2,
-      "lastSignalAt": "2026-07-10T05:14:44+00:00",
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-07-09T19:38:00+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
