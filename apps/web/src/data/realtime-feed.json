@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-15T20:13:47.333190+00:00",
+  "__generated_at": "2026-07-15T21:52:19.688944+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-15T20:13:45.992553+00:00",
+  "last_fetched": "2026-07-15T21:52:18.863592+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -28,10 +28,22 @@
       "summary_zh": "美国公民在汉坦病毒邮轮上被监测于内布拉斯加医学中心。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
+        "内布拉斯加医学中心",
         "监测中"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-279237823277622b",
+      "time": "2026-07-08T06:50:59.000Z",
+      "title_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern - Cureus",
+      "body_en": "Hantavirus Cluster Linked to Cruise Ship Travel: A Comprehensive Review of a Looming Global Public Health Concern Cureus",
+      "summary_zh": "综述：与邮轮旅行相关的汉坦病毒聚集性病例。",
+      "key_facts_zh": [
+        "邮轮",
+        "聚集性病例"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e12d890c8bc1abf4",
@@ -89,7 +101,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "最后接触者完成隔离，WHO 宣布邮轮疫情结束。",
+      "summary_zh": "WHO 称邮轮汉坦疫情在最后接触者完成隔离后结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -154,10 +166,9 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "接触邮轮汉坦疫情的旅客结束自我隔离。",
+      "summary_zh": "接触汉坦疫情邮轮的旅客结束自我隔离。",
       "key_facts_zh": [
         "邮轮",
-        "接触者",
         "隔离结束"
       ],
       "signal_strength": "high"
@@ -176,15 +187,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-9c9b6e1b3f50e0fb",
+      "time": "2026-06-27T07:00:00.000Z",
+      "title_en": "'I thought it was inevitable' - Irish woman on virus-hit cruise reflects on 'escaping' infection - RTE.ie",
+      "body_en": "'I thought it was inevitable' - Irish woman on virus-hit cruise reflects on 'escaping' infection RTE.ie",
+      "summary_zh": "爱尔兰女子讲述在病毒邮轮上逃过感染经历。",
+      "key_facts_zh": [
+        "爱尔兰",
+        "邮轮",
+        "幸存者"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-06-27T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 26): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增汉坦病例，2026年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增汉坦病例，年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "无新增",
-        "累计1例"
+        "年累计1例"
       ],
       "signal_strength": "high"
     },
@@ -193,25 +217,13 @@
       "time": "2026-06-25T07:00:00.000Z",
       "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
       "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空邮轮汉坦患者从BC省医院出院，仍在康复。",
+      "summary_zh": "育空邮轮汉坦患者从卑诗省医院出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
         "患者出院"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-ac188f0da342c40c",
-      "time": "2026-06-25T07:00:00.000Z",
-      "title_en": "Hantavirus infection: Neurologic manifestations should not be overlooked - Springer Nature Link",
-      "body_en": "Hantavirus infection: Neurologic manifestations should not be overlooked Springer Nature Link",
-      "summary_zh": "研究强调汉坦病毒神经系统表现不应忽视。",
-      "key_facts_zh": [
-        "研究",
-        "神经系统"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-6572ad994354233d",
@@ -221,8 +233,8 @@
       "summary_zh": "美国 HHS 结束汉坦病毒应对，监测无阳性病例。",
       "key_facts_zh": [
         "美国 HHS",
-        "无阳性",
-        "结束应对"
+        "监测结束",
+        "无病例"
       ],
       "signal_strength": "high"
     },
