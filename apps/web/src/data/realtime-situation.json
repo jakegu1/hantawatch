@@ -89,7 +89,14 @@
         "confirmed": 11,
         "indeterminate": 2,
         "deaths": 3
-      }
+      },
+      "delta": {
+        "all": 0,
+        "confirmed": 0,
+        "indeterminate": 0,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 0 · 确诊 0 · 疑似 0 · 死亡 0"
     },
     {
       "at": "2026-07-02T12:00:00Z",
@@ -120,16 +127,6 @@
       "shortContext": "确诊归属（1 例）",
       "verdict": "已纳入 WHO",
       "source": "official_cdc"
-    },
-    {
-      "at": "2026-07-02T12:00:00Z",
-      "kind": "detection",
-      "countryZh": "源头·邮轮",
-      "delta": 4,
-      "type": "case_attribution",
-      "shortContext": "航程中确诊归属（4 例）",
-      "verdict": "已纳入 WHO",
-      "source": "who_don"
     },
     {
       "at": "2026-07-02T12:00:00Z",
@@ -190,6 +187,72 @@
       "shortContext": "确诊归属（2 例）",
       "verdict": "已纳入 WHO",
       "source": "es_isciii"
+    },
+    {
+      "at": "2026-05-28T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 13 例（含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 13,
+        "confirmed": 11,
+        "indeterminate": 2,
+        "deaths": 3
+      },
+      "delta": {
+        "all": 2,
+        "confirmed": 3,
+        "indeterminate": -1,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
+    },
+    {
+      "at": "2026-05-13T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 11 例（含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 11,
+        "confirmed": 8,
+        "indeterminate": 3,
+        "deaths": 3
+      },
+      "delta": {
+        "all": 3,
+        "confirmed": 2,
+        "indeterminate": 1,
+        "deaths": 0
+      },
+      "deltaLabel": "较前次：总数 +3 · 确诊 +2 · 疑似 +1 · 死亡 0"
+    },
+    {
+      "at": "2026-05-08T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 累计 8 例（含 3 死亡）",
+      "source": "who_don",
+      "snapshot": {
+        "all": 8,
+        "confirmed": 6,
+        "indeterminate": 2,
+        "deaths": 3
+      }
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "who_baseline",
+      "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
+      "source": "who_don"
+    },
+    {
+      "at": "2026-05-04T12:00:00Z",
+      "kind": "detection",
+      "countryZh": "源头·邮轮",
+      "delta": 4,
+      "type": "case_attribution",
+      "shortContext": "航程中确诊归属（4 例）",
+      "verdict": "已纳入 WHO",
+      "source": "who_don"
     }
   ],
   "daysWithoutNewConfirmed": 14,
@@ -264,6 +327,64 @@
           "indeterminate": 2,
           "deaths": 3
         },
+        "delta": {
+          "all": 0,
+          "confirmed": 0,
+          "indeterminate": 0,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 0 · 确诊 0 · 疑似 0 · 死亡 0"
+      },
+      {
+        "at": "2026-05-28T12:00:00Z",
+        "headline": "WHO 累计 13 例（含 3 死亡）",
+        "snapshot": {
+          "all": 13,
+          "confirmed": 11,
+          "indeterminate": 2,
+          "deaths": 3
+        },
+        "delta": {
+          "all": 2,
+          "confirmed": 3,
+          "indeterminate": -1,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
+      },
+      {
+        "at": "2026-05-13T12:00:00Z",
+        "headline": "WHO 累计 11 例（含 3 死亡）",
+        "snapshot": {
+          "all": 11,
+          "confirmed": 8,
+          "indeterminate": 3,
+          "deaths": 3
+        },
+        "delta": {
+          "all": 3,
+          "confirmed": 2,
+          "indeterminate": 1,
+          "deaths": 0
+        },
+        "deltaLabel": "较前次：总数 +3 · 确诊 +2 · 疑似 +1 · 死亡 0"
+      },
+      {
+        "at": "2026-05-08T12:00:00Z",
+        "headline": "WHO 累计 8 例（含 3 死亡）",
+        "snapshot": {
+          "all": 8,
+          "confirmed": 6,
+          "indeterminate": 2,
+          "deaths": 3
+        },
+        "delta": null,
+        "deltaLabel": null
+      },
+      {
+        "at": "2026-05-04T12:00:00Z",
+        "headline": "WHO 首次通报：南美邮轮聚集（首例确诊 + 死亡）",
+        "snapshot": null,
         "delta": null,
         "deltaLabel": null
       }
@@ -357,7 +478,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-07-16T13:44:20.378139+00:00"
+      "updatedAt": "2026-07-16T19:04:50.468308+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -372,5 +493,5 @@
     "last24hCount": 0,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-07-16T13:44:23.730756+00:00"
+  "realtimeUpdatedAt": "2026-07-16T19:04:53.885163+00:00"
 }
