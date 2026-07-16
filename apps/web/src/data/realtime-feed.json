@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-16T21:58:30.976575+00:00",
+  "__generated_at": "2026-07-16T22:56:53.506924+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-16T21:58:30.146194+00:00",
+  "last_fetched": "2026-07-16T22:56:52.396945+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-07-15T12:05:53.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被送至内布拉斯加医学中心监测。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上被送往内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -39,7 +39,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak over: WHO - CTV News",
       "body_en": "Hantavirus outbreak over: WHO CTV News",
-      "summary_zh": "WHO宣布汉坦病毒疫情结束。",
+      "summary_zh": "WHO宣布汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -120,20 +120,7 @@
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "隔离完成"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a0541896795bb30f",
-      "time": "2026-07-02T07:00:00.000Z",
-      "title_en": "WHO declares hantavirus outbreak linked to cruise ship over - The Guardian",
-      "body_en": "WHO declares hantavirus outbreak linked to cruise ship over The Guardian",
-      "summary_zh": "WHO 宣布邮轮汉坦疫情结束。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情结束"
+        "隔离结束"
       ],
       "signal_strength": "high"
     },
@@ -151,11 +138,24 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-a0541896795bb30f",
+      "time": "2026-07-02T07:00:00.000Z",
+      "title_en": "WHO declares hantavirus outbreak linked to cruise ship over - The Guardian",
+      "body_en": "WHO declares hantavirus outbreak linked to cruise ship over The Guardian",
+      "summary_zh": "WHO 宣布邮轮汉坦疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-730af550ac97cd7a",
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "加拿大邮轮接触汉坦病毒旅客结束自我隔离。",
+      "summary_zh": "加拿大邮轮汉坦病毒暴露者结束自我隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
