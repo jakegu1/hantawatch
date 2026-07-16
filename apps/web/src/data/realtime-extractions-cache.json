@@ -10975,6 +10975,34 @@
         "source_url": "",
         "time": "2026-06-29T14:40:26.000Z"
       }
+    ],
+    "rt-f8a72be9d8c4868a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-15",
+        "confidence": "low",
+        "reasoning_zh": "报道提及美国公民在游轮上被监测，但无具体新增病例数字，无法提取delta。",
+        "update_id": "rt-f8a72be9d8c4868a",
+        "source_url": "",
+        "time": "2026-07-15T12:05:53.000Z"
+      }
+    ],
+    "rt-a47e95cdbc2ded03": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-06-24",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布疫情应于7月2日结束，但未提及具体国家或新增病例数。",
+        "update_id": "rt-a47e95cdbc2ded03",
+        "source_url": "",
+        "time": "2026-06-24T07:00:00.000Z"
+      }
     ]
   }
 }
