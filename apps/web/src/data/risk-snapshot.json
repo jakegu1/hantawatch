@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-17T02:23:45.556611+00:00",
+  "__generated_at": "2026-07-17T08:04:50.689180+00:00",
   "date": "2026-07-17",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-07-17T02:23:27.084825+00:00"
+    "updatedAt": "2026-07-17T08:04:33.375586+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-07-17T02:23:27.084825+00:00"
+    "updatedAt": "2026-07-17T08:04:33.375586+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -110,24 +110,24 @@
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "daysSinceLastIntlAlert": 15,
     "whoDaysSinceOfficialUpdate": 15,
-    "cluesLast24h": 7,
+    "cluesLast24h": 6,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "7月15日美国公民在邮轮上被内布拉斯加医学中心监测；法国1例确诊仍在ICU，状态稳定；中国大陆无相关病例。",
-    "situation": "WHO数据每1-2周更新，期间由ArcGIS监测及各国卫生部公告补足；多国维持监测，国内HFRS基线正常。",
-    "riskJudgment": "中国用户无需担心，国内无相关病例，HFRS处于基线正常范围，输入风险极低。",
+    "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，国内HFRS基线正常。",
+    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围，普通公众风险极低。",
     "newCases": "7月15日无新增确诊病例或初筛阳性报告。",
-    "sourceSummary": "WHO、ArcGIS监测、各国卫生部",
+    "sourceSummary": "主要依据WHO DON、各国卫生部及ArcGIS监测。",
     "shareLine": "WHO 7/2公布累计13例（15天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "WHO数据滞后",
-      "法国ICU病例",
-      "美国监测进展"
+      "法国确诊患者状态",
+      "美国监测进展",
+      "WHO数据更新"
     ],
     "evidence": [
       "WHO DON 7/2更新",
-      "ArcGIS ANDV Dashboard",
-      "法国卫生部/TF1 Info"
+      "法国卫生部/TF1 Info",
+      "ArcGIS ANDV Dashboard"
     ],
     "_guardrail_warnings": [
       "shareline_pending_sanitized: no pending confirmed deltas"

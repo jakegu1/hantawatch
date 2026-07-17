@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-17T07:57:07.489140+00:00",
+  "__generated_at": "2026-07-17T08:04:50.690487+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-17T07:57:06.399525+00:00",
+  "last_fetched": "2026-07-17T08:04:46.477480+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-07-15T12:05:53.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上，于内布拉斯加医学中心接受监测。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上被送至内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -132,7 +132,7 @@
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "隔离结束"
+        "隔离完成"
       ],
       "signal_strength": "high"
     },
@@ -167,7 +167,7 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "加拿大邮轮汉坦病毒接触者结束自我隔离。",
+      "summary_zh": "加拿大邮轮接触汉坦病毒旅客结束自我隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -180,7 +180,7 @@
       "time": "2026-06-29T07:00:00.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮汉坦病毒接触者完成隔离。",
+      "summary_zh": "加拿大邮轮接触汉坦病毒旅客完成隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -196,7 +196,7 @@
       "summary_zh": "育空邮轮汉坦病毒患者出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
-        "育空",
+        "邮轮",
         "出院"
       ],
       "signal_strength": "high"
@@ -206,11 +206,11 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case - HHS.gov",
       "body_en": "HHS Successfully Concludes Hantavirus Response Effort; Monitoring Ends with No Positive U.S. Case HHS.gov",
-      "summary_zh": "美国HHS结束汉坦病毒响应，无阳性病例。",
+      "summary_zh": "美国 HHS 结束汉坦病毒响应，无阳性病例。",
       "key_facts_zh": [
-        "美国",
-        "HHS",
-        "无病例"
+        "美国 HHS",
+        "无病例",
+        "响应结束"
       ],
       "signal_strength": "high"
     },
@@ -219,10 +219,10 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "CDC Officially Ends Hantavirus Response as Outbreak Risk Recedes - The American Journal of Managed Care® (AJMC®)",
       "body_en": "CDC Officially Ends Hantavirus Response as Outbreak Risk Recedes The American Journal of Managed Care® (AJMC®)",
-      "summary_zh": "美国CDC正式结束汉坦病毒响应。",
+      "summary_zh": "美国 CDC 正式结束汉坦病毒响应。",
       "key_facts_zh": [
-        "美国CDC",
-        "结束响应"
+        "美国 CDC",
+        "响应结束"
       ],
       "signal_strength": "high"
     },
@@ -231,10 +231,10 @@
       "time": "2026-06-24T07:00:00.000Z",
       "title_en": "CDC ends US Hantavirus response - The Hill",
       "body_en": "CDC ends US Hantavirus response The Hill",
-      "summary_zh": "美国CDC结束汉坦病毒响应。",
+      "summary_zh": "美国 CDC 结束汉坦病毒响应。",
       "key_facts_zh": [
-        "美国CDC",
-        "结束响应"
+        "美国 CDC",
+        "响应结束"
       ],
       "signal_strength": "high"
     },
