@@ -11031,6 +11031,20 @@
         "source_url": "",
         "time": "2026-07-16T10:00:51.000Z"
       }
+    ],
+    "rt-e5dbb8e1bd9c497b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒疫情与邮轮相关，但未提供具体国家或新增病例数字，无法提取变化量。",
+        "update_id": "rt-e5dbb8e1bd9c497b",
+        "source_url": "",
+        "time": "2026-07-02T15:46:03.000Z"
+      }
     ]
   }
 }
