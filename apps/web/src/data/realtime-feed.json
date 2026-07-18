@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-18T13:07:46.636195+00:00",
+  "__generated_at": "2026-07-18T14:20:10.019633+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-18T13:07:42.368761+00:00",
+  "last_fetched": "2026-07-18T14:20:08.693141+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-07-16T10:00:51.000Z",
       "title_en": "Viruses do not respect borders. An expert explains how the world should prepare for their outbreaks - The Indian Express",
       "body_en": "Viruses do not respect borders. An expert explains how the world should prepare for their outbreaks The Indian Express",
-      "summary_zh": "印度快报专家解释全球应如何准备疫情暴发。",
+      "summary_zh": "印度快报专家解释病毒不分国界，世界应如何准备。",
       "key_facts_zh": [
         "专家",
         "全球准备"
@@ -38,10 +38,11 @@
       "time": "2026-07-15T10:00:00.000Z",
       "title_en": "Hantavirus and Ebola scares reveal cracks in public health messaging, infectious diseases experts warn - Labmate Online",
       "body_en": "Hantavirus and Ebola scares reveal cracks in public health messaging, infectious diseases experts warn Labmate Online",
-      "summary_zh": "传染病专家警告汉坦病毒和埃博拉恐慌暴露公共卫生信息传递缺陷。",
+      "summary_zh": "专家警告汉坦病毒和埃博拉恐慌暴露公共卫生信息传递缺陷。",
       "key_facts_zh": [
-        "专家警告",
-        "公共卫生"
+        "专家",
+        "公共卫生",
+        "警告"
       ],
       "signal_strength": "medium"
     },
@@ -62,11 +63,23 @@
       "time": "2026-07-04T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 27): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 2026年第27周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周0新增，2026年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "新增 0",
+        "累计 1"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-dcfb3b95b47c104a",
+      "time": "2026-07-03T07:00:00.000Z",
+      "title_en": "Another Cruise Ship Virus Outbreak Infected More Than 100 Passengers - Forbes",
+      "body_en": "Another Cruise Ship Virus Outbreak Infected More Than 100 Passengers Forbes",
+      "summary_zh": "福布斯报道另一邮轮疫情致超百人感染。",
+      "key_facts_zh": [
+        "邮轮",
+        "超百人感染"
       ],
       "signal_strength": "high"
     },
@@ -87,7 +100,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦疫情正式结束。",
+      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束",
@@ -167,8 +180,8 @@
       "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
-        "疫情结束"
+        "疫情结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -180,8 +193,8 @@
       "summary_zh": "WHO 称与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
-        "疫情结束"
+        "疫情结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -190,11 +203,11 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO says cruise ship-linked hantavirus outbreak over - CTV News",
       "body_en": "WHO says cruise ship-linked hantavirus outbreak over CTV News",
-      "summary_zh": "WHO 宣布邮轮相关汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称邮轮相关汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
-        "疫情结束"
+        "疫情结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -205,8 +218,9 @@
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
       "summary_zh": "接触汉坦病毒邮轮的旅客结束自我隔离。",
       "key_facts_zh": [
-        "邮轮",
-        "隔离结束"
+        "加拿大",
+        "隔离结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -215,7 +229,7 @@
       "time": "2026-06-29T14:40:26.000Z",
       "title_en": "Hantavirus Town Hall: What Frontline Healthcare Staff Need to Know About Andes Hantavirus Preparedness - National Emerging Special Pathogens Training & Education Center",
       "body_en": "Hantavirus Town Hall: What Frontline Healthcare Staff Need to Know About Andes Hantavirus Preparedness National Emerging Special Pathogens Training & Education Center",
-      "summary_zh": "美国举办汉坦病毒准备情况线上会议。",
+      "summary_zh": "美国培训中心举办汉坦病毒准备网络研讨会。",
       "key_facts_zh": [
         "美国",
         "培训",
@@ -228,11 +242,11 @@
       "time": "2026-06-29T07:00:00.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大邮轮接触汉坦病毒者完成隔离。",
+      "summary_zh": "加拿大接触汉坦病毒邮轮的旅客完成隔离。",
       "key_facts_zh": [
         "加拿大",
-        "邮轮",
-        "隔离结束"
+        "隔离结束",
+        "邮轮"
       ],
       "signal_strength": "high"
     },
@@ -241,7 +255,7 @@
       "time": "2026-06-25T07:00:00.000Z",
       "title_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering - Yukon News",
       "body_en": "Yukon hantavirus cruise ship passenger discharged from B.C. hospital, still recovering Yukon News",
-      "summary_zh": "育空地区汉坦病毒邮轮乘客从卑诗省医院出院，仍在康复中。",
+      "summary_zh": "加拿大育空地区汉坦病毒邮轮乘客从卑诗省医院出院，仍在康复。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
