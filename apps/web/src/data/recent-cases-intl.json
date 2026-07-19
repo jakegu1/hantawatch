@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-18T23:45:28.996742+00:00",
+  "__generated_at": "2026-07-19T01:59:17.678286+00:00",
   "cases": [
     {
       "id": "who-2026-don611",
@@ -25,12 +25,12 @@
       "date": "2026-07-17",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布第 29 周传染病威胁报告。",
+      "title": "欧洲 CDC 发布第29周传染病威胁报告。",
       "summary": "欧洲 CDC；传染病威胁报告",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNnNzdDQ5cWJZVWt0N1JreE1SVVZoUlVOUmhhVzF6c21zWldkV3VfMXUyc0kyTlhrMkdxbjdHS2hZWWJ0TGtfb0JEX2Rid0lzZXVzbEprVjZ0RUlIa25IeG5pbGtlVDFIenRDSDhUNUowdFFZa0o1UXZJdlA4SVprT2JnY3pRUHVTY0VHSFlSZzhsQnV1S2RMUWZBTE5aQ0IycHhhd1FibzN2SjQ?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "surveillance"
       }
     },
@@ -41,12 +41,12 @@
       "date": "2026-07-16",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 警告耐药性淋病在欧洲增加。",
-      "summary": "欧洲 CDC；耐药性淋病；欧洲",
+      "title": "欧洲 CDC 警告欧洲耐药淋病病例增加。",
+      "summary": "欧洲 CDC；耐药淋病；欧洲",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTEJxQU5XMkhFZ2tDOWVFVDJJblhmZzQ4WTZqX1gzMmRvalZvYXFTd29rWDlXSGVNNVpiLVFkUXh2aFJTcXRZVG9OMUVjYnBjaWtoQjM4TDdOYnJ1R3NMU21uTHdmb2tKTEV0X3lsYk1DOVQ3Qm93OTcyMVN0ak5vbEdjcXFyT3dWOFRFVkt1bk1XXzhP?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "surveillance"
       }
     },
@@ -57,12 +57,12 @@
       "date": "2026-07-14",
       "caseType": "suspected",
       "count": 0,
-      "title": "美国 CDC 报告多州本地获得性环孢子虫病病例。",
+      "title": "美国 CDC 通报2026年多州本地获得性环孢子虫病病例。",
       "summary": "美国 CDC；环孢子虫病；美国",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE53ZlNIRS1wTDNpa25rUC1QRWRtcWczX2hkMTd2MnY1UkdaQmNvalRlQ3RBdEdHQ3NCakNSNEdsdXdYUndjYjRiQml1NkxnT0stMXJUdHVmd0kwdWJDQnc?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "surveillance"
       }
     },
@@ -302,7 +302,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-07-18T23:45:13.506856+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.680454+00:00",
         "confidence": "news"
       }
     },
@@ -318,7 +318,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-07-18T23:45:13.506856+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.680454+00:00",
         "confidence": "news"
       }
     },
@@ -334,7 +334,7 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-07-18T23:45:13.506856+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.680454+00:00",
         "confidence": "news"
       }
     },
@@ -350,7 +350,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "news"
       }
     },
@@ -366,7 +366,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5pbkthR1FkeFdTQ0lKWG1QVk0yTXpDRUs4MHItYVhWQXVKVkpmMDA1cURoeFhvcGd0eHpfdmlzRllVWWpuOFVpTGlqYWZicFdtYk95T1hXdmJyWDhVZU5BdVJHaEFDYjljbVFZd29SX0JsVTZ4SmI0V1pFSnZTYTA?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "news"
       }
     },
@@ -382,7 +382,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-07-18T23:45:13.506856+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.680454+00:00",
         "confidence": "news"
       }
     },
@@ -398,7 +398,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "news"
       }
     },
@@ -414,7 +414,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-07-18T23:45:13.506856+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.680454+00:00",
         "confidence": "news"
       }
     },
@@ -430,7 +430,7 @@
       "source": {
         "name": "新华网",
         "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9ZU0NxYzYxZU9TXzFpNl9zZlVISjVONDlPaFBrZ2tES0VEV2tCbGRlLTVhbnktV2daWTNfbjlwdllsZ2FDcHgxT2Mwb1dFWm90Ymw3WjF1cEFwTXF4bHlobWVTSDVuXzNIdjRzaUZNMno5bkNZYjJyUWxXTnplVkE?oc=5",
-        "retrievedAt": "2026-07-18T23:45:13.505901+00:00",
+        "retrievedAt": "2026-07-19T01:59:02.679694+00:00",
         "confidence": "news"
       }
     }
