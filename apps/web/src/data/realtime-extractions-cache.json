@@ -11045,6 +11045,20 @@
         "source_url": "",
         "time": "2026-07-02T15:46:03.000Z"
       }
+    ],
+    "rt-908bb7c9be0ce7f0": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-20",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及邮轮暴发后综述，但未提供具体国家、新增病例或死亡数字。",
+        "update_id": "rt-908bb7c9be0ce7f0",
+        "source_url": "",
+        "time": "2026-07-20T18:41:09.000Z"
+      }
     ]
   }
 }
