@@ -11059,6 +11059,118 @@
         "source_url": "",
         "time": "2026-07-20T18:41:09.000Z"
       }
+    ],
+    "rt-4072afc3a6944043": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "The Manila Times报道委内瑞拉3例汉坦病毒死亡，未说明新增，故delta_deaths设为3（累计）。",
+        "update_id": "rt-4072afc3a6944043",
+        "source_url": "",
+        "time": "2026-07-21T19:06:00.000Z"
+      }
+    ],
+    "rt-38d6e639791fb9a9": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Report.az报道委内瑞拉3例死亡，未说明新增，故delta_deaths设为3（累计）。",
+        "update_id": "rt-38d6e639791fb9a9",
+        "source_url": "",
+        "time": "2026-07-21T18:41:05.000Z"
+      }
+    ],
+    "rt-4b0f053b260921b0": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "high",
+        "reasoning_zh": "阿纳多卢通讯社援引委内瑞拉官方确认3例死亡，官方来源，可信度高。",
+        "update_id": "rt-4b0f053b260921b0",
+        "source_url": "",
+        "time": "2026-07-21T17:59:53.000Z"
+      }
+    ],
+    "rt-423b4b235601d480": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "high",
+        "reasoning_zh": "Informat.ro报道委内瑞拉卫生部确认3例死亡，官方来源，可信度高。",
+        "update_id": "rt-423b4b235601d480",
+        "source_url": "",
+        "time": "2026-07-21T17:34:15.000Z"
+      }
+    ],
+    "rt-6406aabb2fa5a5ed": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "The Independent报道委内瑞拉3例死亡，可信媒体，但未明确是否为新增。",
+        "update_id": "rt-6406aabb2fa5a5ed",
+        "source_url": "",
+        "time": "2026-07-21T17:02:00.000Z"
+      }
+    ],
+    "rt-ab48f5719093ee69": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "GMA Network报道委内瑞拉官方确认3例死亡，可信媒体，但非官方直接发布。",
+        "update_id": "rt-ab48f5719093ee69",
+        "source_url": "",
+        "time": "2026-07-21T15:52:16.000Z"
+      }
+    ],
+    "rt-c8e12e32a508b2fd": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-21",
+        "confidence": "low",
+        "reasoning_zh": "Devdiscourse报道疫情引发关注，未提供具体数字，无法提取增量。",
+        "update_id": "rt-c8e12e32a508b2fd",
+        "source_url": "",
+        "time": "2026-07-21T15:29:28.000Z"
+      }
+    ],
+    "rt-dc4ac1b990def065": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-21",
+        "confidence": "low",
+        "reasoning_zh": "Devdiscourse报道疫情导致死亡，未提供具体数字，无法提取增量。",
+        "update_id": "rt-dc4ac1b990def065",
+        "source_url": "",
+        "time": "2026-07-21T15:23:25.000Z"
+      }
     ]
   }
 }
