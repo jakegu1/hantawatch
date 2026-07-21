@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-21T08:12:33.650494+00:00",
+  "__generated_at": "2026-07-21T08:23:10.646992+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-21T08:12:32.622989+00:00",
+  "last_fetched": "2026-07-21T08:23:06.746529+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-07-20T18:41:09.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，CIDRAP 综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
-        "CIDRAP",
         "邮轮",
-        "脑部影响"
+        "汉坦病毒",
+        "大脑影响"
       ],
       "signal_strength": "medium"
     },
@@ -30,16 +30,29 @@
       "key_facts_zh": [
         "美国",
         "内布拉斯加医学中心",
-        "监测中"
+        "监测"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-f171bd1d770c8884",
+      "time": "2026-07-15T10:00:00.000Z",
+      "title_en": "Hantavirus and Ebola scares reveal cracks in public health messaging, infectious diseases experts warn - Labmate Online",
+      "body_en": "Hantavirus and Ebola scares reveal cracks in public health messaging, infectious diseases experts warn Labmate Online",
+      "summary_zh": "传染病专家警告：汉坦病毒和埃博拉恐慌暴露公共卫生信息传递缺陷。",
+      "key_facts_zh": [
+        "专家",
+        "公共卫生",
+        "信息传递"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-67da9b98e4a0d99d",
       "time": "2026-07-06T20:38:18.000Z",
       "title_en": "HHS Suspends Hantavirus Monitoring - respiratory-therapy.com",
       "body_en": "HHS Suspends Hantavirus Monitoring respiratory-therapy.com",
-      "summary_zh": "美国卫生与公众服务部暂停汉坦病毒监测。",
+      "summary_zh": "美国HHS暂停汉坦病毒监测。",
       "key_facts_zh": [
         "美国",
         "HHS",
@@ -52,7 +65,7 @@
       "time": "2026-07-04T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 27): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：2026年第27周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒新增0例，2026年累计1例。",
       "key_facts_zh": [
         "美国CDC",
         "新增0例",
@@ -77,7 +90,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "WHO issues final update on deadly cruise ship hantavirus outbreak - The Independent",
       "body_en": "WHO issues final update on deadly cruise ship hantavirus outbreak The Independent",
-      "summary_zh": "WHO就致命邮轮汉坦病毒疫情发布最终更新。",
+      "summary_zh": "WHO发布致命邮轮汉坦疫情最终更新。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -90,7 +103,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "WHO declare hantavirus outbreak is over months after first case was recorded - The Independent",
       "body_en": "WHO declare hantavirus outbreak is over months after first case was recorded The Independent",
-      "summary_zh": "WHO宣布汉坦病毒疫情结束，距首例数月。",
+      "summary_zh": "WHO宣布汉坦疫情结束，距首例数月。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -102,7 +115,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒疫情正式结束。",
+      "summary_zh": "WHO宣布MV Hondius邮轮汉坦疫情正式结束。",
       "key_facts_zh": [
         "WHO",
         "MV Hondius",
@@ -115,7 +128,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak over: WHO - CTV News",
       "body_en": "Hantavirus outbreak over: WHO CTV News",
-      "summary_zh": "WHO宣布汉坦病毒疫情结束。",
+      "summary_zh": "WHO宣布汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "疫情结束"
@@ -127,7 +140,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says - Forbes",
       "body_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says Forbes",
-      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
