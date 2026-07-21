@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-21T11:00:11.412799+00:00",
+  "__generated_at": "2026-07-21T12:25:21.725490+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-21T11:00:10.243249+00:00",
+  "last_fetched": "2026-07-21T12:25:20.894495+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,7 +16,8 @@
       "summary_zh": "CIDRAP 综述汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "CIDRAP",
-        "大脑影响"
+        "邮轮",
+        "研究综述"
       ],
       "signal_strength": "medium"
     },
@@ -29,7 +30,7 @@
       "key_facts_zh": [
         "美国",
         "内布拉斯加医学中心",
-        "监测中"
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -50,7 +51,7 @@
       "time": "2026-07-04T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 27): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026年第27周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国 CDC 报告2026年第27周汉坦病毒新增0例，全年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增0例",
@@ -164,7 +165,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO declares hantavirus outbreak linked to cruise ship over - The Guardian",
       "body_en": "WHO declares hantavirus outbreak linked to cruise ship over The Guardian",
-      "summary_zh": "WHO 宣布邮轮相关汉坦病毒疫情结束。",
+      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -203,7 +204,7 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "加拿大邮轮汉坦病毒暴露者结束自我隔离。",
+      "summary_zh": "加拿大邮轮汉坦病毒接触者结束自我隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
