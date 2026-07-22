@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-22T13:26:31.389365+00:00",
+  "__generated_at": "2026-07-22T13:44:29.299581+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-22T13:26:29.939442+00:00",
+  "last_fetched": "2026-07-22T13:44:22.168002+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒爆发致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡",
@@ -63,7 +63,7 @@
       "time": "2026-07-22T04:33:26.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths - NDTV",
       "body_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths NDTV",
-      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒爆发致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡",
@@ -101,7 +101,7 @@
       "time": "2026-07-22T01:51:55.000Z",
       "title_en": "Hantavirus kills three in Venezuela - ABS-CBN",
       "body_en": "Hantavirus kills three in Venezuela ABS-CBN",
-      "summary_zh": "汉坦病毒在委内瑞拉致死3人。",
+      "summary_zh": "汉坦病毒在委内瑞拉致3人死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡3例"
@@ -163,10 +163,11 @@
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3人确诊汉坦病毒死亡。",
+      "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "确诊3例",
+        "死亡"
       ],
       "signal_strength": "high"
     },
@@ -178,8 +179,8 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "医学协会"
+        "确诊3例",
+        "死亡"
       ],
       "signal_strength": "high"
     },
@@ -191,7 +192,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -203,34 +204,10 @@
       "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "内布拉斯加医学中心"
+        "内布拉斯加医学中心",
+        "邮轮"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-c8e12e32a508b2fd",
-      "time": "2026-07-21T15:29:28.000Z",
-      "title_en": "Hantavirus Outbreak Sparks Concerns in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Sparks Concerns in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情引发委内瑞拉担忧。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "疫情担忧"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-dc4ac1b990def065",
-      "time": "2026-07-21T15:23:25.000Z",
-      "title_en": "Hantavirus Outbreak Claims Lives in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Claims Lives in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情在委内瑞拉夺命。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "疫情夺命"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }

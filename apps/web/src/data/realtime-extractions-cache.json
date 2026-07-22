@@ -11409,6 +11409,34 @@
         "source_url": "",
         "time": "2026-07-21T23:36:08.000Z"
       }
+    ],
+    "rt-488d398618c91c03": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉官方确认3例汉坦病毒死亡，排除人传人。来源Qazinform，可信媒体，具体数字，故置信度中等。",
+        "update_id": "rt-488d398618c91c03",
+        "source_url": "",
+        "time": "2026-07-22T10:43:54.000Z"
+      }
+    ],
+    "rt-1a3f4e0cac2699c1": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉汉坦病毒爆发致3人死亡，另有2例疑似死亡。来源News18，可信媒体，具体数字，故置信度中等。",
+        "update_id": "rt-1a3f4e0cac2699c1",
+        "source_url": "",
+        "time": "2026-07-22T08:27:13.000Z"
+      }
     ]
   }
 }
