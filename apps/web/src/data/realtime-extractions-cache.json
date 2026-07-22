@@ -11269,6 +11269,146 @@
         "source_url": "",
         "time": "2026-07-21T18:24:46.000Z"
       }
+    ],
+    "rt-bca9015fdf576043": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "土耳其媒体Türkiye Today报道委内瑞拉确认3例汉坦病毒死亡，未说明新增，故delta_deaths设为3（累计",
+        "update_id": "rt-bca9015fdf576043",
+        "source_url": "",
+        "time": "2026-07-22T06:44:14.000Z"
+      }
+    ],
+    "rt-29c2ba58d4ead09b": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "Caliber.Az报道委内瑞拉确认3例死亡，与上条重复，delta_deaths设为3。",
+        "update_id": "rt-29c2ba58d4ead09b",
+        "source_url": "",
+        "time": "2026-07-22T06:15:34.000Z"
+      }
+    ],
+    "rt-ebdcf9f2c425e093": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "NDTV报道委内瑞拉3人死亡，另有2例疑似死亡，delta_deaths=3，delta_monitoring=2。",
+        "update_id": "rt-ebdcf9f2c425e093",
+        "source_url": "",
+        "time": "2026-07-22T04:33:26.000Z"
+      }
+    ],
+    "rt-7e7b2393cad50286": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "VOI.ID报道委内瑞拉确认3例死亡，与之前重复。",
+        "update_id": "rt-7e7b2393cad50286",
+        "source_url": "",
+        "time": "2026-07-22T04:21:52.000Z"
+      }
+    ],
+    "rt-749f3179544e3a44": [
+      {
+        "iso2": "GB",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "英国科尔切斯特护士因帮助阻止汉坦病毒传播受表彰，无具体病例数字。",
+        "update_id": "rt-749f3179544e3a44",
+        "source_url": "",
+        "time": "2026-07-22T04:00:00.000Z"
+      }
+    ],
+    "rt-0444adc0bdd78e21": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "中国日报亚洲版报道委内瑞拉确认3例死亡，排除人传人。",
+        "update_id": "rt-0444adc0bdd78e21",
+        "source_url": "",
+        "time": "2026-07-22T03:59:41.000Z"
+      }
+    ],
+    "rt-7524e43ffc588fb3": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "livingstonenterprise.net报道委内瑞拉3人死亡，2例疑似死亡。",
+        "update_id": "rt-7524e43ffc588fb3",
+        "source_url": "",
+        "time": "2026-07-22T02:00:00.000Z"
+      }
+    ],
+    "rt-ed049e2559a9c1c7": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "ABS-CBN报道委内瑞拉3人死于汉坦病毒。",
+        "update_id": "rt-ed049e2559a9c1c7",
+        "source_url": "",
+        "time": "2026-07-22T01:51:55.000Z"
+      }
+    ],
+    "rt-973b9189302c1118": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉官方确认3例汉坦病毒死亡，无新增确诊病例，无新增监测病例。",
+        "update_id": "rt-973b9189302c1118",
+        "source_url": "",
+        "time": "2026-07-22T00:55:00.000Z"
+      }
+    ],
+    "rt-ab01b4a727f0e5b5": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡，无新增确诊病例。",
+        "update_id": "rt-ab01b4a727f0e5b5",
+        "source_url": "",
+        "time": "2026-07-21T23:36:08.000Z"
+      }
     ]
   }
 }
