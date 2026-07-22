@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-22T02:07:32.224633+00:00",
+  "__generated_at": "2026-07-22T02:22:55.873045+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-22T02:07:31.372743+00:00",
+  "last_fetched": "2026-07-22T02:22:47.214400+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -53,8 +53,7 @@
       "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "确诊"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -63,7 +62,7 @@
       "time": "2026-07-21T20:20:06.000Z",
       "title_en": "Hantavirus kills three in Venezuela - Medical Xpress",
       "body_en": "Hantavirus kills three in Venezuela Medical Xpress",
-      "summary_zh": "汉坦病毒在委内瑞拉致死3人。",
+      "summary_zh": "汉坦病毒在委内瑞拉致3人死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3人死亡"
@@ -115,7 +114,20 @@
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡",
-        "医学协会警告"
+        "医学协会"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-423b4b235601d480",
+      "time": "2026-07-21T17:34:15.000Z",
+      "title_en": "Three deaths caused by hantavirus in Venezuela, the Ministry of Health confirms - Informat.ro",
+      "body_en": "Three deaths caused by hantavirus in Venezuela, the Ministry of Health confirms Informat.ro",
+      "summary_zh": "委内瑞拉卫生部确认3例汉坦病毒死亡。",
+      "key_facts_zh": [
+        "委内瑞拉",
+        "卫生部",
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -149,7 +161,7 @@
       "time": "2026-07-21T15:29:28.000Z",
       "title_en": "Hantavirus Outbreak Sparks Concerns in Venezuela - Devdiscourse",
       "body_en": "Hantavirus Outbreak Sparks Concerns in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情在委内瑞拉引发担忧。",
+      "summary_zh": "汉坦病毒疫情引发委内瑞拉担忧。",
       "key_facts_zh": [
         "委内瑞拉",
         "疫情担忧"
@@ -161,7 +173,7 @@
       "time": "2026-07-21T15:23:25.000Z",
       "title_en": "Hantavirus Outbreak Claims Lives in Venezuela - Devdiscourse",
       "body_en": "Hantavirus Outbreak Claims Lives in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情在委内瑞拉致人死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致人死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡"
@@ -173,9 +185,9 @@
       "time": "2026-07-20T18:41:09.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "CIDRAP 综述汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
-        "CIDRAP",
+        "邮轮",
         "大脑影响"
       ],
       "signal_strength": "medium"
@@ -185,7 +197,7 @@
       "time": "2026-07-04T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 27): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦新增 0 例，年累计 1 例。",
+      "summary_zh": "美国CDC周报：汉坦病毒新增0例，年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -198,24 +210,11 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "WHO issues final update on deadly cruise ship hantavirus outbreak - The Independent",
       "body_en": "WHO issues final update on deadly cruise ship hantavirus outbreak The Independent",
-      "summary_zh": "WHO 发布致命邮轮汉坦疫情最终更新。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮疫情",
-        "最终更新"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-65119068e032d0e0",
-      "time": "2026-07-03T07:00:00.000Z",
-      "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
-      "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦疫情结束。",
+      "summary_zh": "WHO 发布致命邮轮汉坦疫情最终通报。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "疫情结束"
+        "最终通报"
       ],
       "signal_strength": "high"
     }

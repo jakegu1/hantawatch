@@ -11171,6 +11171,104 @@
         "source_url": "",
         "time": "2026-07-21T15:23:25.000Z"
       }
+    ],
+    "rt-1b28d404a275339b": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "BNO News报道委内瑞拉3人死于汉坦病毒，未说明新增，故delta_deaths设为3（累计死亡）。",
+        "update_id": "rt-1b28d404a275339b",
+        "source_url": "",
+        "time": "2026-07-22T01:37:07.000Z"
+      }
+    ],
+    "rt-6fc0844a1492cfd1": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Ottumwa Courier报道委内瑞拉确认3人死亡，另有2例疑似死亡，delta_deaths取3。",
+        "update_id": "rt-6fc0844a1492cfd1",
+        "source_url": "",
+        "time": "2026-07-21T23:36:08.000Z"
+      }
+    ],
+    "rt-a1da7f9e39e66b91": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "teleSUR报道委内瑞拉卫生当局报告3例死亡，未提新增，故delta_deaths设为3。",
+        "update_id": "rt-a1da7f9e39e66b91",
+        "source_url": "",
+        "time": "2026-07-21T23:34:33.000Z"
+      }
+    ],
+    "rt-7f1e3e014430b0a6": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Outbreak News Today报道委内瑞拉3例确诊汉坦病毒死亡，delta_deaths设为3。",
+        "update_id": "rt-7f1e3e014430b0a6",
+        "source_url": "",
+        "time": "2026-07-21T21:58:40.000Z"
+      }
+    ],
+    "rt-5eacd253531d0909": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Medical Xpress报道汉坦病毒在委内瑞拉致死3人，delta_deaths设为3。",
+        "update_id": "rt-5eacd253531d0909",
+        "source_url": "",
+        "time": "2026-07-21T20:20:06.000Z"
+      }
+    ],
+    "rt-db959aa5a5f6a2df": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Azerbaijan新闻转载委内瑞拉确认3例死亡，delta_deaths设为3。",
+        "update_id": "rt-db959aa5a5f6a2df",
+        "source_url": "",
+        "time": "2026-07-21T19:52:30.000Z"
+      }
+    ],
+    "rt-7be9bdc2c9490c88": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "Jamaica Observer报道汉坦病毒在委内瑞拉致死3人，delta_deaths设为3。",
+        "update_id": "rt-7be9bdc2c9490c88",
+        "source_url": "",
+        "time": "2026-07-21T18:24:46.000Z"
+      }
     ]
   }
 }
