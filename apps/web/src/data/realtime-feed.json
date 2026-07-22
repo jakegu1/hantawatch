@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-22T19:01:45.862827+00:00",
+  "__generated_at": "2026-07-22T19:11:59.887703+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-22T19:01:44.371657+00:00",
+  "last_fetched": "2026-07-22T19:11:52.629985+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,10 @@
       "time": "2026-07-22T17:14:00.000Z",
       "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn - The Guardian",
       "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn The Guardian",
-      "summary_zh": "前官员警告美国 CDC 预算削减削弱疫情应对能力。",
+      "summary_zh": "前官员警告美国 CDC 削减经费导致疫情应对能力下降。",
       "key_facts_zh": [
         "美国 CDC",
-        "预算削减",
-        "应对能力"
+        "经费削减"
       ],
       "signal_strength": "medium"
     },
@@ -43,7 +42,7 @@
       "key_facts_zh": [
         "美国",
         "内布拉斯加",
-        "邮轮"
+        "邮轮隔离"
       ],
       "signal_strength": "high"
     },
@@ -65,13 +64,25 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒爆发致 3 死，另有 2 例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致 3 死，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡 3 例",
         "疑似 2 例"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-53c595ff261b4cde",
+      "time": "2026-07-22T06:49:56.000Z",
+      "title_en": "Hantavirus Claims 3 Lives In Venezuela: What The Rat-borne Virus Does To The Brain - Health and Me",
+      "body_en": "Hantavirus Claims 3 Lives In Venezuela: What The Rat-borne Virus Does To The Brain Health and Me",
+      "summary_zh": "委内瑞拉汉坦病毒致3人死亡，病毒影响大脑。",
+      "key_facts_zh": [
+        "委内瑞拉",
+        "3例死亡"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-bca9015fdf576043",
@@ -148,7 +159,7 @@
       "time": "2026-07-22T01:37:07.000Z",
       "title_en": "3 killed by hantavirus in Venezuela - BNO News",
       "body_en": "3 killed by hantavirus in Venezuela BNO News",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒。",
+      "summary_zh": "委内瑞拉汉坦病毒致3人死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡"
@@ -186,7 +197,7 @@
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
+      "summary_zh": "委内瑞拉：3例确诊汉坦病毒患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡"

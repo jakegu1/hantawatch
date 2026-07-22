@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-22T13:44:29.298317+00:00",
-  "date": "2026-07-22",
+  "__generated_at": "2026-07-22T19:11:59.885487+00:00",
+  "date": "2026-07-23",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-07-22T13:44:09.952736+00:00"
+    "updatedAt": "2026-07-22T19:11:39.940107+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-07-22T13:44:09.952736+00:00"
+    "updatedAt": "2026-07-22T19:11:39.940107+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,32 +101,32 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-07-22",
+    "date": "2026-07-23",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 11,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 20,
-    "whoDaysSinceOfficialUpdate": 20,
-    "cluesLast24h": 7,
+    "daysSinceLastIntlAlert": 21,
+    "whoDaysSinceOfficialUpdate": 21,
+    "cluesLast24h": 6,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "7月22日委内瑞拉卫生部确认3例汉坦病毒死亡，排除人传人；法国1例确诊仍在ICU，状态稳定；中国大陆无相关病例。",
     "situation": "WHO数据每1-2周更新，期间由各国卫生部公告与ArcGIS监测补足；委内瑞拉新增死亡待WHO复核，多国维持监测，国内基线未变。",
     "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；输入风险极低，无需额外防护。",
     "newCases": "7月22日无新增确诊病例或初筛阳性报告。",
-    "sourceSummary": "主要依据：委内瑞拉卫生部、WHO DON、ArcGIS监测。",
-    "shareLine": "WHO 7/2公布累计13例（20天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+    "sourceSummary": "主要依据WHO、各国卫生部及ArcGIS监测。",
+    "shareLine": "WHO 7/2公布累计13例（21天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "委内瑞拉死亡待复核",
-      "法国ICU患者状态",
+      "委内瑞拉死亡事件",
+      "法国ICU病例",
       "ArcGIS监测更新"
     ],
     "evidence": [
-      "委内瑞拉卫生部通报",
-      "WHO DON 7/2更新",
+      "WHO DON 7/2",
+      "委内瑞拉卫生部",
       "ArcGIS ANDV Dashboard"
     ],
     "_guardrail_warnings": [

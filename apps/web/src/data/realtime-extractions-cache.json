@@ -11437,6 +11437,62 @@
         "source_url": "",
         "time": "2026-07-22T08:27:13.000Z"
       }
+    ],
+    "rt-2b643882ddef3391": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "报道称美国疾控中心削减导致应对疫情准备不足，未提及具体病例变化。",
+        "update_id": "rt-2b643882ddef3391",
+        "source_url": "",
+        "time": "2026-07-22T17:14:00.000Z"
+      }
+    ],
+    "rt-0fcb8fc15546935a": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "high",
+        "reasoning_zh": "委内瑞拉卫生部通报至少3人死于汉坦病毒，排除人传人。",
+        "update_id": "rt-0fcb8fc15546935a",
+        "source_url": "",
+        "time": "2026-07-22T17:00:14.000Z"
+      }
+    ],
+    "rt-f31abc636296d44e": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 18,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "18名美国人在内布拉斯加隔离，因游轮接触汉坦病毒，但未说明新增确诊。",
+        "update_id": "rt-f31abc636296d44e",
+        "source_url": "",
+        "time": "2026-07-22T15:31:27.000Z"
+      }
+    ],
+    "rt-53c595ff261b4cde": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "健康网站报道委内瑞拉3人死于汉坦病毒，来源可信度较低。",
+        "update_id": "rt-53c595ff261b4cde",
+        "source_url": "",
+        "time": "2026-07-22T06:49:56.000Z"
+      }
     ]
   }
 }
