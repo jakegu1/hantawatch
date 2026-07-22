@@ -1,22 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-22T11:01:15.054617+00:00",
+  "__generated_at": "2026-07-22T13:26:31.389365+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-22T11:01:13.556699+00:00",
+  "last_fetched": "2026-07-22T13:26:29.939442+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-488d398618c91c03",
+      "time": "2026-07-22T10:43:54.000Z",
+      "title_en": "Venezuela confirms three hantavirus deaths, rules out human-to-human transmission - Qazinform",
+      "body_en": "Venezuela confirms three hantavirus deaths, rules out human-to-human transmission Qazinform",
+      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，排除人传人。",
+      "key_facts_zh": [
+        "委内瑞拉",
+        "3例死亡",
+        "排除人传人"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-1a3f4e0cac2699c1",
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒爆发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
+        "3例死亡",
         "2例疑似"
       ],
       "signal_strength": "medium"
@@ -29,8 +42,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "官方确认"
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -42,8 +54,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "官方确认"
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +63,10 @@
       "time": "2026-07-22T04:33:26.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths - NDTV",
       "body_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths NDTV",
-      "summary_zh": "委内瑞拉汉坦病毒爆发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
+        "3例死亡",
         "2例疑似"
       ],
       "signal_strength": "medium"
@@ -65,26 +76,12 @@
       "time": "2026-07-22T04:21:52.000Z",
       "title_en": "Venezuela Confirms 3 Deaths from Hantavirus - VOI.ID",
       "body_en": "Venezuela Confirms 3 Deaths from Hantavirus VOI.ID",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "官方确认"
+        "死亡3例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-749f3179544e3a44",
-      "time": "2026-07-22T04:00:00.000Z",
-      "title_en": "Colchester nurses recognised for helping to stop Hantavirus spread - Colchester Gazette",
-      "body_en": "Colchester nurses recognised for helping to stop Hantavirus spread Colchester Gazette",
-      "summary_zh": "英国科尔切斯特护士因协助阻止汉坦病毒传播获表彰。",
-      "key_facts_zh": [
-        "英国",
-        "护士",
-        "阻止传播"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-0444adc0bdd78e21",
@@ -94,7 +91,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，排除人传人。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡",
+        "死亡3例",
         "排除人传人"
       ],
       "signal_strength": "high"
@@ -107,7 +104,7 @@
       "summary_zh": "汉坦病毒在委内瑞拉致死3人。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -119,7 +116,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -128,11 +125,11 @@
       "time": "2026-07-22T00:55:00.000Z",
       "title_en": "Venezuela confirms three hantavirus deaths, says no sign of person-to-person spread - AnewZ",
       "body_en": "Venezuela confirms three hantavirus deaths, says no sign of person-to-person spread AnewZ",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，无人传人迹象。",
+      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，无迹象表明人传人。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡",
-        "无人传人"
+        "死亡3例",
+        "排除人传人"
       ],
       "signal_strength": "high"
     },
@@ -141,11 +138,11 @@
       "time": "2026-07-21T23:36:08.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Oskaloosa Herald",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Oskaloosa Herald",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，另有2例疑似。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡",
-        "2例疑似"
+        "死亡3例",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -157,7 +154,7 @@
       "summary_zh": "委内瑞拉卫生当局报告3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -166,34 +163,10 @@
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
+      "summary_zh": "委内瑞拉3人确诊汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-db959aa5a5f6a2df",
-      "time": "2026-07-21T19:53:40.000Z",
-      "title_en": "Outbreak could be worse: Venezuela confirms 3 hantavirus deaths - Latest news from Azerbaijan",
-      "body_en": "Outbreak could be worse: Venezuela confirms 3 hantavirus deaths Latest news from Azerbaijan",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3例死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-38d6e639791fb9a9",
-      "time": "2026-07-21T18:41:05.000Z",
-      "title_en": "Three patients die of hantavirus in Venezuela - Report.az",
-      "body_en": "Three patients die of hantavirus in Venezuela Report.az",
-      "summary_zh": "委内瑞拉3名患者死于汉坦病毒。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3例死亡"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -205,7 +178,8 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "3人死亡",
+        "医学协会"
       ],
       "signal_strength": "high"
     },
@@ -214,10 +188,10 @@
       "time": "2026-07-21T17:02:00.000Z",
       "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
       "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
+      "summary_zh": "委内瑞拉3人死于汉坦病毒引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -230,7 +204,7 @@
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "监测中"
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "high"
     },
@@ -251,12 +225,12 @@
       "time": "2026-07-21T15:23:25.000Z",
       "title_en": "Hantavirus Outbreak Claims Lives in Venezuela - Devdiscourse",
       "body_en": "Hantavirus Outbreak Claims Lives in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情在委内瑞拉致人死亡。",
+      "summary_zh": "汉坦病毒疫情在委内瑞拉夺命。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡"
+        "疫情夺命"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
