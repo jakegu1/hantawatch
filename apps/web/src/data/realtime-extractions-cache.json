@@ -11549,6 +11549,48 @@
         "source_url": "",
         "time": "2026-07-21T23:36:00.000Z"
       }
+    ],
+    "rt-bc564edd4da56fc1": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 3,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "high",
+        "reasoning_zh": "委内瑞拉官方确认3人死亡，另有2例疑似死亡。",
+        "update_id": "rt-bc564edd4da56fc1",
+        "source_url": "",
+        "time": "2026-07-22T10:07:17.000Z"
+      }
+    ],
+    "rt-a2278394399d5778": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 2,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "媒体报道委内瑞拉3人死亡，2例疑似病例。",
+        "update_id": "rt-a2278394399d5778",
+        "source_url": "",
+        "time": "2026-07-22T06:31:53.000Z"
+      }
+    ],
+    "rt-8da84df40c4fc1d7": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 3,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "high",
+        "reasoning_zh": "委内瑞拉官方确认3人死亡，另有2例疑似死亡。",
+        "update_id": "rt-8da84df40c4fc1d7",
+        "source_url": "",
+        "time": "2026-07-21T23:36:00.000Z"
+      }
     ]
   }
 }
