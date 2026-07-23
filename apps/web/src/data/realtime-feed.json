@@ -1,32 +1,31 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-23T19:10:46.699209+00:00",
+  "__generated_at": "2026-07-23T20:54:50.749514+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-23T19:10:41.659273+00:00",
+  "last_fetched": "2026-07-23T20:54:49.238953+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-b06e1f9b64914f61",
-      "time": "2026-07-23T11:36:02.000Z",
-      "title_en": "A man in the Lviv region tested positive for hantavirus after a trip to Croatia - UA.NEWS",
-      "body_en": "A man in the Lviv region tested positive for hantavirus after a trip to Croatia UA.NEWS",
-      "summary_zh": "乌克兰利沃夫一男子从克罗地亚旅行后确诊汉坦病毒。",
+      "id": "rt-3816534e0b0f70bb",
+      "time": "2026-07-23T19:40:03.000Z",
+      "title_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats - Medical Xpress",
+      "body_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats Medical Xpress",
+      "summary_zh": "邮轮疫情凸显新兴疾病威胁沟通需求。",
       "key_facts_zh": [
-        "乌克兰",
-        "确诊",
-        "克罗地亚"
+        "邮轮",
+        "沟通需求"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f47abdf676a38fd5",
       "time": "2026-07-23T10:03:09.000Z",
       "title_en": "Man in Lviv region found to have hantavirus after vacation in Croatia and trip to mountains - Українські Національні Новини (УНН)",
       "body_en": "Man in Lviv region found to have hantavirus after vacation in Croatia and trip to mountains Українські Національні Новини (УНН)",
-      "summary_zh": "乌克兰利沃夫一男子从克罗地亚度假后确诊汉坦病毒。",
+      "summary_zh": "乌克兰利沃夫地区一男子在克罗地亚度假后确诊汉坦病毒。",
       "key_facts_zh": [
         "乌克兰",
         "确诊",
@@ -35,28 +34,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-7ec734c06333c90b",
-      "time": "2026-07-23T00:40:00.000Z",
-      "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
-      "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒暴发凸显公共卫生沟通与全球防备需求。",
-      "key_facts_zh": [
-        "邮轮",
-        "公共卫生",
-        "全球防备"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-2b643882ddef3391",
       "time": "2026-07-22T17:14:00.000Z",
       "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn - The Guardian",
       "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn The Guardian",
-      "summary_zh": "美国 CDC 预算削减导致疫情防备能力下降，前官员警告。",
+      "summary_zh": "美国CDC预算削减导致疫情应对能力下降。",
       "key_facts_zh": [
-        "美国 CDC",
-        "预算削减",
-        "防备能力"
+        "美国CDC",
+        "预算削减"
       ],
       "signal_strength": "medium"
     },
@@ -65,7 +50,7 @@
       "time": "2026-07-22T14:59:00.000Z",
       "title_en": "US Passengers Describe Their Days in Hantavirus Quarantine - Newser",
       "body_en": "US Passengers Describe Their Days in Hantavirus Quarantine Newser",
-      "summary_zh": "美国乘客描述汉坦病毒隔离期间的生活。",
+      "summary_zh": "美国乘客描述汉坦病毒隔离经历。",
       "key_facts_zh": [
         "美国",
         "隔离",
@@ -91,11 +76,11 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒暴发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3例死亡",
-        "暴发"
+        "2例疑似"
       ],
       "signal_strength": "high"
     },
@@ -107,7 +92,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "确认3死"
+        "3 例死亡"
       ],
       "signal_strength": "high"
     },
@@ -116,11 +101,11 @@
       "time": "2026-07-22T04:33:26.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths - NDTV",
       "body_en": "Hantavirus Outbreak In Venezuela: 3 Dead, 2 More Suspected Deaths NDTV",
-      "summary_zh": "委内瑞拉汉坦病毒爆发，3人死亡，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情：3人死亡，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2疑似"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
@@ -132,32 +117,19 @@
       "summary_zh": "英国科尔切斯特护士因协助阻止汉坦病毒传播获表彰。",
       "key_facts_zh": [
         "英国",
-        "护士",
-        "获表彰"
+        "护士表彰"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-ed049e2559a9c1c7",
-      "time": "2026-07-22T01:51:55.000Z",
-      "title_en": "Hantavirus kills three in Venezuela - ABS-CBN",
-      "body_en": "Hantavirus kills three in Venezuela ABS-CBN",
-      "summary_zh": "委内瑞拉汉坦病毒致3人死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3死"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-1b28d404a275339b",
       "time": "2026-07-22T01:37:07.000Z",
       "title_en": "3 killed by hantavirus in Venezuela - BNO News",
       "body_en": "3 killed by hantavirus in Venezuela BNO News",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒。",
+      "summary_zh": "委内瑞拉汉坦病毒致3人死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死"
+        "3 例死亡"
       ],
       "signal_strength": "high"
     },
@@ -169,7 +141,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，称无人传人迹象。",
       "key_facts_zh": [
         "委内瑞拉",
-        "确认3死",
+        "3 例死亡",
         "无人传人"
       ],
       "signal_strength": "high"
@@ -182,21 +154,21 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-15b088dc81869c3e",
-      "time": "2026-07-21T23:22:15.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Toronto Star",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Toronto Star",
+      "id": "rt-ab01b4a727f0e5b5",
+      "time": "2026-07-21T23:36:08.000Z",
+      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Oskaloosa Herald",
+      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Oskaloosa Herald",
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
@@ -205,10 +177,10 @@
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3名确诊汉坦病毒患者死亡。",
+      "summary_zh": "委内瑞拉3例汉坦病毒确诊患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -217,10 +189,10 @@
       "time": "2026-07-21T17:59:53.000Z",
       "title_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis - Anadolu Ajansı",
       "body_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis Anadolu Ajansı",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告更广泛危机。",
+      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
+        "3例死亡",
         "医学协会警告"
       ],
       "signal_strength": "high"
@@ -233,7 +205,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
+        "3例死亡",
         "疫情担忧"
       ],
       "signal_strength": "high"
@@ -243,23 +215,24 @@
       "time": "2026-07-21T16:21:52.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被送至内布拉斯加医学中心监测。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "内布拉斯加医学中心"
+        "内布拉斯加医学中心",
+        "邮轮监测"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-c8e12e32a508b2fd",
-      "time": "2026-07-21T15:29:28.000Z",
-      "title_en": "Hantavirus Outbreak Sparks Concerns in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Sparks Concerns in Venezuela Devdiscourse",
-      "summary_zh": "汉坦病毒疫情在委内瑞拉引发担忧。",
+      "id": "rt-908bb7c9be0ce7f0",
+      "time": "2026-07-20T18:41:09.000Z",
+      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
+      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
+      "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
-        "委内瑞拉",
-        "疫情担忧"
+        "邮轮",
+        "汉坦病毒",
+        "大脑影响"
       ],
       "signal_strength": "medium"
     }
