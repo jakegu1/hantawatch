@@ -15,11 +15,9 @@
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
     "whoConfirmedCases": 13,
-    "sinceWhoNewCases": 3,
-    "sinceWhoNewCountries": [
-      "VE"
-    ],
-    "currentReportedCases": 16
+    "sinceWhoNewCases": 0,
+    "sinceWhoNewCountries": [],
+    "currentReportedCases": 13
   },
   "ruler": {
     "maxKm": 20000,
@@ -81,36 +79,6 @@
     ]
   },
   "events": [
-    {
-      "at": "2026-07-22T10:43:54Z",
-      "kind": "detection",
-      "countryZh": "VE",
-      "delta": 3,
-      "type": "deaths",
-      "shortContext": "死亡",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
-    {
-      "at": "2026-07-22T10:07:17Z",
-      "kind": "detection",
-      "countryZh": "VE",
-      "delta": 3,
-      "type": "confirmed",
-      "shortContext": "新增确诊输入",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
-    {
-      "at": "2026-07-22T06:31:53Z",
-      "kind": "detection",
-      "countryZh": "VE",
-      "delta": 2,
-      "type": "screening",
-      "shortContext": "初筛阳性",
-      "verdict": "待 WHO 复核",
-      "source": "realtime_news"
-    },
     {
       "at": "2026-07-02T12:00:00Z",
       "kind": "who_baseline",
@@ -287,7 +255,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 1,
+  "daysWithoutNewConfirmed": 21,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -510,7 +478,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-07-23T08:24:50.426886+00:00"
+      "updatedAt": "2026-07-23T13:49:45.806446+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -518,12 +486,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-07-22T10:43:54Z"
+      "updatedAt": "2026-07-02T12:00:00Z"
     }
   ],
   "intake": {
     "last24hCount": 5,
-    "highConfidencePicks": 3
+    "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-07-23T08:24:54.006335+00:00"
+  "realtimeUpdatedAt": "2026-07-23T13:49:49.216354+00:00"
 }

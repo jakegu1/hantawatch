@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-07-23T08:24:54.011632+00:00",
+  "__generated_at": "2026-07-23T13:49:49.222208+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -69,7 +69,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426850+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806409+00:00"
             }
           ]
         },
@@ -123,7 +123,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426865+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806424+00:00"
             }
           ]
         },
@@ -142,7 +142,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426873+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806432+00:00"
             }
           ]
         },
@@ -221,7 +221,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426798+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806332+00:00"
             }
           ]
         },
@@ -240,7 +240,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426817+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806354+00:00"
             }
           ]
         },
@@ -259,7 +259,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426827+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806384+00:00"
             }
           ]
         },
@@ -278,7 +278,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426835+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806393+00:00"
             }
           ]
         },
@@ -297,7 +297,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426843+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806400+00:00"
             }
           ]
         },
@@ -316,7 +316,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426858+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806417+00:00"
             }
           ]
         },
@@ -335,7 +335,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426879+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806439+00:00"
             }
           ]
         },
@@ -354,31 +354,9 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-07-23T08:24:50.426886+00:00"
+              "retrievedAt": "2026-07-23T13:49:45.806446+00:00"
             }
           ]
-        },
-        {
-          "iso2": "VE",
-          "nameZh": "",
-          "status": "monitoring",
-          "confirmed": 0,
-          "monitoring": 1,
-          "quarantine": 0,
-          "deaths": 0,
-          "newConfirmedToday": 0,
-          "asOf": "2026-07-22",
-          "evidence": [
-            {
-              "tier": "news",
-              "url": "",
-              "sourceName": "Realtime LLM Extractor",
-              "retrievedAt": "2026-07-23T08:24:50.426890+00:00",
-              "asOf": "2026-07-22",
-              "reasoningZh": "委内瑞拉官方确认3人死亡，另有2例疑似死亡。"
-            }
-          ],
-          "note": ""
         }
       ],
       "lastUpdate": {
@@ -386,13 +364,13 @@
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON611",
-          "retrievedAt": "2026-07-23T08:24:30.862057+00:00",
+          "retrievedAt": "2026-07-23T13:49:26.280699+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-07-23T08:24:50.427004+00:00",
+        "generatedAt": "2026-07-23T13:49:45.806468+00:00",
         "contributors": [
           "who_don",
           "arcgis",

@@ -11591,6 +11591,62 @@
         "source_url": "",
         "time": "2026-07-21T23:36:00.000Z"
       }
+    ],
+    "rt-b06e1f9b64914f61": [
+      {
+        "iso2": "UA",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-23",
+        "confidence": "medium",
+        "reasoning_zh": "乌克兰利沃夫地区一名男子从克罗地亚旅行归来后确诊汉坦病毒，新增1例确诊病例。",
+        "update_id": "rt-b06e1f9b64914f61",
+        "source_url": "",
+        "time": "2026-07-23T11:36:02.000Z"
+      }
+    ],
+    "rt-f47abdf676a38fd5": [
+      {
+        "iso2": "UA",
+        "delta_confirmed": 1,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-23",
+        "confidence": "medium",
+        "reasoning_zh": "乌克兰利沃夫地区一名男子从克罗地亚度假后确诊汉坦病毒，新增1例确诊病例。",
+        "update_id": "rt-f47abdf676a38fd5",
+        "source_url": "",
+        "time": "2026-07-23T10:03:09.000Z"
+      }
+    ],
+    "rt-9ba3ff1238a0e891": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉汉坦病毒爆发致3人死亡，另有2例疑似死亡，新增3例死亡。",
+        "update_id": "rt-9ba3ff1238a0e891",
+        "source_url": "",
+        "time": "2026-07-22T08:27:13.000Z"
+      }
+    ],
+    "rt-15b088dc81869c3e": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡，新增3例死亡。",
+        "update_id": "rt-15b088dc81869c3e",
+        "source_url": "",
+        "time": "2026-07-21T23:22:15.000Z"
+      }
     ]
   }
 }
