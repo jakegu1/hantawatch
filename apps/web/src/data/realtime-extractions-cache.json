@@ -11493,6 +11493,62 @@
         "source_url": "",
         "time": "2026-07-22T06:49:56.000Z"
       }
+    ],
+    "rt-7ec734c06333c90b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及邮轮汉坦病毒爆发，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-7ec734c06333c90b",
+        "source_url": "",
+        "time": "2026-07-22T18:50:00.000Z"
+      }
+    ],
+    "rt-82bfcb3cda5d7c39": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "新闻描述美国乘客在汉坦病毒隔离中的经历，但未提供新增病例或死亡数字。",
+        "update_id": "rt-82bfcb3cda5d7c39",
+        "source_url": "",
+        "time": "2026-07-22T14:59:00.000Z"
+      }
+    ],
+    "rt-ca4c63beb3f35770": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-22",
+        "confidence": "medium",
+        "reasoning_zh": "ABC新闻确认委内瑞拉3人死于汉坦病毒感染，另有2例疑似死亡，但未说明新增，故delta_deaths设为3。",
+        "update_id": "rt-ca4c63beb3f35770",
+        "source_url": "",
+        "time": "2026-07-22T02:35:33.000Z"
+      }
+    ],
+    "rt-9d883b468d43eb23": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 3,
+        "as_of": "2026-07-21",
+        "confidence": "medium",
+        "reasoning_zh": "AP新闻确认委内瑞拉3人死于汉坦病毒感染，另有2例疑似死亡，但未说明新增，故delta_deaths设为3。",
+        "update_id": "rt-9d883b468d43eb23",
+        "source_url": "",
+        "time": "2026-07-21T23:36:00.000Z"
+      }
     ]
   }
 }
