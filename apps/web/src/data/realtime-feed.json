@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-24T07:27:07.707912+00:00",
+  "__generated_at": "2026-07-24T08:22:22.128352+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-24T07:27:06.569474+00:00",
+  "last_fetched": "2026-07-24T08:22:15.610925+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,10 +25,22 @@
       "time": "2026-07-22T17:14:00.000Z",
       "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn - The Guardian",
       "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn The Guardian",
-      "summary_zh": "美国 CDC 预算削减致疫情应对能力下降。",
+      "summary_zh": "美国 CDC 预算削减导致疫情应对能力下降。",
       "key_facts_zh": [
         "美国 CDC",
         "预算削减"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-82bfcb3cda5d7c39",
+      "time": "2026-07-22T14:59:00.000Z",
+      "title_en": "US Passengers Describe Their Days in Hantavirus Quarantine - Newser",
+      "body_en": "US Passengers Describe Their Days in Hantavirus Quarantine Newser",
+      "summary_zh": "美国乘客描述汉坦病毒隔离经历。",
+      "key_facts_zh": [
+        "美国",
+        "隔离经历"
       ],
       "signal_strength": "medium"
     },
@@ -83,27 +95,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-6fc0844a1492cfd1",
+      "id": "rt-ab01b4a727f0e5b5",
       "time": "2026-07-21T23:36:08.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Ottumwa Courier",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Ottumwa Courier",
+      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Oskaloosa Herald",
+      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Oskaloosa Herald",
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3人死亡",
         "2例疑似"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-a1da7f9e39e66b91",
-      "time": "2026-07-21T23:34:33.000Z",
-      "title_en": "Venezuelan Health Authorities Report Three Fatalities from Hantavirus - teleSUR English",
-      "body_en": "Venezuelan Health Authorities Report Three Fatalities from Hantavirus teleSUR English",
-      "summary_zh": "委内瑞拉卫生当局报告3例汉坦病毒死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -137,7 +137,7 @@
       "time": "2026-07-21T17:02:00.000Z",
       "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
       "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒引发疫情担忧。",
+      "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
         "3人死亡",
@@ -150,47 +150,36 @@
       "time": "2026-07-21T16:21:52.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被监测，由内布拉斯加医学中心负责。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上被送至内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "监测中"
+        "监测"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-c8e12e32a508b2fd",
-      "time": "2026-07-21T15:29:28.000Z",
-      "title_en": "Hantavirus Outbreak Sparks Concerns in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Sparks Concerns in Venezuela Devdiscourse",
-      "summary_zh": "委内瑞拉汉坦病毒暴发引发担忧。",
+      "id": "rt-3e985fba911fd187",
+      "time": "2026-07-21T09:01:06.000Z",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
       "key_facts_zh": [
-        "委内瑞拉",
-        "暴发"
+        "纽约时报",
+        "隔离经历"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-dc4ac1b990def065",
-      "time": "2026-07-21T15:23:25.000Z",
-      "title_en": "Hantavirus Outbreak Claims Lives in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Claims Lives in Venezuela Devdiscourse",
-      "summary_zh": "委内瑞拉汉坦病毒暴发导致死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "死亡"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T18:41:09.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮暴发后，综述研究汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响"
+        "大脑影响",
+        "综述"
       ],
       "signal_strength": "medium"
     },
@@ -199,11 +188,11 @@
       "time": "2026-07-11T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 28): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 28 周汉坦病毒新增 0 例，累计 1 例。",
+      "summary_zh": "美国CDC周报：汉坦感染本周0例，2026年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "美国CDC",
+        "本周0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     }

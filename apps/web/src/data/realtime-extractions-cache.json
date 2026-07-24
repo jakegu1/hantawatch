@@ -11647,6 +11647,34 @@
         "source_url": "",
         "time": "2026-07-21T23:22:15.000Z"
       }
+    ],
+    "rt-3816534e0b0f70bb": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-23",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及游轮疫情，但未指明国家、具体数字或汉坦病毒，无法提取变化量。",
+        "update_id": "rt-3816534e0b0f70bb",
+        "source_url": "",
+        "time": "2026-07-23T19:40:03.000Z"
+      }
+    ],
+    "rt-3e985fba911fd187": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-21",
+        "confidence": "low",
+        "reasoning_zh": "新闻标题提及汉坦病毒隔离经历，但未提供具体国家或数字，无法提取变化量。",
+        "update_id": "rt-3e985fba911fd187",
+        "source_url": "",
+        "time": "2026-07-21T09:01:06.000Z"
+      }
     ]
   }
 }
