@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-24T21:58:29.040578+00:00",
+  "__generated_at": "2026-07-24T23:02:24.145206+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-24T21:58:28.177316+00:00",
+  "last_fetched": "2026-07-24T23:02:23.031833+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-07-23T19:40:03.000Z",
       "title_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats - Medical Xpress",
       "body_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats Medical Xpress",
-      "summary_zh": "邮轮疫情凸显新兴疾病沟通需求。",
+      "summary_zh": "邮轮暴发凸显新兴疾病沟通需求。",
       "key_facts_zh": [
         "邮轮",
         "沟通"
@@ -25,7 +25,7 @@
       "time": "2026-07-22T17:14:00.000Z",
       "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn - The Guardian",
       "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn The Guardian",
-      "summary_zh": "美国 CDC 预算削减导致疫情应对能力下降。",
+      "summary_zh": "美国 CDC 预算削减致疫情应对能力下降。",
       "key_facts_zh": [
         "美国 CDC",
         "预算削减"
@@ -40,7 +40,7 @@
       "summary_zh": "美国乘客描述汉坦病毒隔离经历。",
       "key_facts_zh": [
         "美国",
-        "隔离"
+        "隔离经历"
       ],
       "signal_strength": "medium"
     },
@@ -52,7 +52,7 @@
       "summary_zh": "委内瑞拉确认三例汉坦病毒死亡，排除人传人。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例",
+        "3 死",
         "排除人传人"
       ],
       "signal_strength": "high"
@@ -62,11 +62,11 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒暴发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒暴发致 3 死，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例",
-        "疑似 2 例"
+        "3 死",
+        "2 疑似"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +78,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "确认3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -90,8 +90,7 @@
       "summary_zh": "英国科尔切斯特护士因协助阻止汉坦病毒传播获表彰。",
       "key_facts_zh": [
         "英国",
-        "护士",
-        "防控"
+        "护士获表彰"
       ],
       "signal_strength": "medium"
     },
@@ -115,7 +114,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，称无人传人迹象。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
+        "确认3例死亡",
         "无人传人"
       ],
       "signal_strength": "high"
@@ -147,14 +146,26 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-a1da7f9e39e66b91",
+      "time": "2026-07-21T23:34:33.000Z",
+      "title_en": "Venezuelan Health Authorities Report Three Fatalities from Hantavirus - teleSUR English",
+      "body_en": "Venezuelan Health Authorities Report Three Fatalities from Hantavirus teleSUR English",
+      "summary_zh": "委内瑞拉卫生当局报告3例汉坦病毒死亡。",
+      "key_facts_zh": [
+        "委内瑞拉",
+        "3人死亡"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-7f1e3e014430b0a6",
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
+      "summary_zh": "委内瑞拉3例汉坦病毒确诊患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -163,10 +174,10 @@
       "time": "2026-07-21T17:59:53.000Z",
       "title_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis - Anadolu Ajansı",
       "body_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis Anadolu Ajansı",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机扩大。",
+      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
+        "3例死亡",
         "医学协会"
       ],
       "signal_strength": "high"
@@ -179,8 +190,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疫情担忧"
+        "3例死亡"
       ],
       "signal_strength": "high"
     },
@@ -189,22 +199,10 @@
       "time": "2026-07-21T15:29:28.000Z",
       "title_en": "Hantavirus Outbreak Sparks Concerns in Venezuela - Devdiscourse",
       "body_en": "Hantavirus Outbreak Sparks Concerns in Venezuela Devdiscourse",
-      "summary_zh": "委内瑞拉汉坦病毒疫情引发担忧。",
+      "summary_zh": "汉坦病毒疫情引发委内瑞拉担忧。",
       "key_facts_zh": [
         "委内瑞拉",
         "疫情担忧"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-dc4ac1b990def065",
-      "time": "2026-07-21T15:23:25.000Z",
-      "title_en": "Hantavirus Outbreak Claims Lives in Venezuela - Devdiscourse",
-      "body_en": "Hantavirus Outbreak Claims Lives in Venezuela Devdiscourse",
-      "summary_zh": "委内瑞拉汉坦病毒疫情致人死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "疫情死亡"
       ],
       "signal_strength": "medium"
     },
@@ -216,8 +214,7 @@
       "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响",
-        "综述"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     },
