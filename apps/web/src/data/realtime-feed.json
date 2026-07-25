@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-25T01:59:23.583743+00:00",
+  "__generated_at": "2026-07-25T02:23:23.434233+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-25T01:59:22.521226+00:00",
+  "last_fetched": "2026-07-25T02:23:17.748010+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-07-24T23:13:19.000Z",
       "title_en": "Ukraine: Lviv man contracts hantavirus after vacationing in Croatia - Outbreak News Today",
       "body_en": "Ukraine: Lviv man contracts hantavirus after vacationing in Croatia Outbreak News Today",
-      "summary_zh": "乌克兰利沃夫一名男子在克罗地亚度假后感染汉坦病毒。",
+      "summary_zh": "乌克兰利沃夫一男子在克罗地亚度假后感染汉坦病毒。",
       "key_facts_zh": [
         "乌克兰",
         "克罗地亚",
-        "输入病例"
+        "新增 1 例"
       ],
       "signal_strength": "high"
     },
@@ -26,7 +26,7 @@
       "time": "2026-07-23T19:40:03.000Z",
       "title_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats - Medical Xpress",
       "body_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats Medical Xpress",
-      "summary_zh": "邮轮暴发凸显新兴疾病威胁沟通需求。",
+      "summary_zh": "邮轮疫情凸显新兴疾病威胁沟通需求。",
       "key_facts_zh": [
         "邮轮",
         "沟通"
@@ -65,7 +65,7 @@
       "summary_zh": "委内瑞拉确认三例汉坦病毒死亡，排除人传人。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
+        "死亡 3 例",
         "排除人传人"
       ],
       "signal_strength": "high"
@@ -75,11 +75,11 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒暴发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒疫情致3死，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疑似2例"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
     },
@@ -91,7 +91,8 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死"
+        "3死",
+        "确认"
       ],
       "signal_strength": "high"
     },
@@ -104,7 +105,7 @@
       "key_facts_zh": [
         "英国",
         "护士",
-        "防控"
+        "表彰"
       ],
       "signal_strength": "medium"
     },
@@ -116,7 +117,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死"
+        "3死"
       ],
       "signal_strength": "high"
     },
@@ -128,7 +129,7 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，称无人传人迹象。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
+        "3死",
         "无人传人"
       ],
       "signal_strength": "high"
@@ -141,8 +142,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
-        "2 疑似"
+        "3死",
+        "2例疑似"
       ],
       "signal_strength": "high"
     },
@@ -154,8 +155,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
-        "2 疑似"
+        "3死",
+        "2例疑似"
       ],
       "signal_strength": "high"
     },
