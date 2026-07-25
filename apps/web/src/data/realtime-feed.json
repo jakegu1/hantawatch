@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-25T14:57:07.004237+00:00",
+  "__generated_at": "2026-07-25T16:02:23.317691+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-25T14:57:05.724911+00:00",
+  "last_fetched": "2026-07-25T16:02:22.316530+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -22,23 +22,11 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-3816534e0b0f70bb",
-      "time": "2026-07-23T19:40:03.000Z",
-      "title_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats - Medical Xpress",
-      "body_en": "Cruise ship outbreak highlights need for clear communication on emerging disease threats Medical Xpress",
-      "summary_zh": "邮轮暴发凸显新兴疾病威胁需清晰沟通。",
-      "key_facts_zh": [
-        "邮轮",
-        "沟通"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-2b643882ddef3391",
       "time": "2026-07-22T17:14:00.000Z",
       "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn - The Guardian",
       "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn The Guardian",
-      "summary_zh": "美国 CDC 削减预算使美国应对疫情准备不足。",
+      "summary_zh": "前官员警告：美国 CDC 预算削减导致疫情应对能力下降。",
       "key_facts_zh": [
         "美国 CDC",
         "预算削减"
@@ -50,7 +38,7 @@
       "time": "2026-07-22T14:59:00.000Z",
       "title_en": "US Passengers Describe Their Days in Hantavirus Quarantine - Newser",
       "body_en": "US Passengers Describe Their Days in Hantavirus Quarantine Newser",
-      "summary_zh": "美国乘客描述汉坦病毒隔离期间的日子。",
+      "summary_zh": "美国乘客描述汉坦病毒隔离经历。",
       "key_facts_zh": [
         "美国",
         "隔离"
@@ -78,8 +66,8 @@
       "summary_zh": "委内瑞拉确认3例汉坦病毒死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "确认"
+        "3 例死亡",
+        "官方确认"
       ],
       "signal_strength": "high"
     },
@@ -88,11 +76,11 @@
       "time": "2026-07-22T06:31:53.000Z",
       "title_en": "Hantavirus alert in Venezuela: 3 dead, 2 suspected cases - Inshorts",
       "body_en": "Hantavirus alert in Venezuela: 3 dead, 2 suspected cases Inshorts",
-      "summary_zh": "委内瑞拉汉坦病毒警报：3死，2例疑似。",
+      "summary_zh": "委内瑞拉汉坦病毒警报：3人死亡，2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2例疑似"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
@@ -104,7 +92,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死"
+        "3 例死亡"
       ],
       "signal_strength": "high"
     },
@@ -116,21 +104,21 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2例疑似"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-ab01b4a727f0e5b5",
-      "time": "2026-07-21T23:36:08.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Oskaloosa Herald",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Oskaloosa Herald",
+      "id": "rt-15b088dc81869c3e",
+      "time": "2026-07-21T23:22:15.000Z",
+      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - Toronto Star",
+      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected Toronto Star",
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2例疑似"
+        "3 例死亡",
+        "2 例疑似"
       ],
       "signal_strength": "high"
     },
@@ -142,8 +130,7 @@
       "summary_zh": "委内瑞拉3例确诊汉坦病毒患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "确诊"
+        "3 例死亡"
       ],
       "signal_strength": "high"
     },
@@ -152,10 +139,11 @@
       "time": "2026-07-21T17:59:53.000Z",
       "title_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis - Anadolu Ajansı",
       "body_en": "Venezuela confirms 3 hantavirus deaths as medical association warns of broader crisis Anadolu Ajansı",
-      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告危机。",
+      "summary_zh": "委内瑞拉确认3例汉坦病毒死亡，医学协会警告更广泛危机。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "3 例死亡",
+        "医学协会警告"
       ],
       "signal_strength": "high"
     },
@@ -167,7 +155,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -188,7 +176,7 @@
       "time": "2026-07-20T18:41:09.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
@@ -200,11 +188,11 @@
       "time": "2026-07-11T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 28): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：2026年第28周新增0例，全年1例。",
+      "summary_zh": "美国CDC报告2026年第28周汉坦病毒新增0例，累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增0例",
-        "全年1例"
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -213,11 +201,24 @@
       "time": "2026-07-10T17:38:00.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国汉坦病毒邮轮乘客在内布拉斯加医学中心接受监测。",
+      "summary_zh": "汉坦病毒邮轮上的美国公民在内布拉斯加医学中心接受监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "监测中"
+        "内布拉斯加医学中心"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-65119068e032d0e0",
+      "time": "2026-07-03T07:00:00.000Z",
+      "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
+      "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
+      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
       ],
       "signal_strength": "high"
     }
