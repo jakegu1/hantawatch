@@ -11717,6 +11717,34 @@
         "source_url": "",
         "time": "2026-07-21T12:23:00.000Z"
       }
+    ],
+    "rt-fb0a95e99de57402": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "报道提及委内瑞拉3人死亡、2例疑似，但未说明新增，故delta均为0。",
+        "update_id": "rt-fb0a95e99de57402",
+        "source_url": "",
+        "time": "2026-07-22T06:36:07.000Z"
+      }
+    ],
+    "rt-3e306a75639b64bf": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-21",
+        "confidence": "low",
+        "reasoning_zh": "报道确认委内瑞拉3人死亡、2例疑似死亡，但未说明新增，故delta均为0。",
+        "update_id": "rt-3e306a75639b64bf",
+        "source_url": "",
+        "time": "2026-07-21T23:36:08.000Z"
+      }
     ]
   }
 }
