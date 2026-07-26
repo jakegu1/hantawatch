@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-25T19:02:59.283303+00:00",
+  "__generated_at": "2026-07-26T02:29:23.783378+00:00",
   "date": "2026-07-26",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -130,16 +130,15 @@
     },
     "PL": {
       "iso2": "PL",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "东南部 Podkarpackie 省最为活跃；近期媒体讨论较多，实际本土传播水平偏低。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-07-22T09:48:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "RU": {
       "iso2": "RU",
@@ -258,10 +257,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 7 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 7 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 9 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 9 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 7,
+      "signalCount30d": 9,
       "signalCount7d": 1,
       "lastSignalAt": "2026-07-21T18:35:05+00:00"
     },
