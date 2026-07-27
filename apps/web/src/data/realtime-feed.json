@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-27T21:59:14.260099+00:00",
+  "__generated_at": "2026-07-27T23:04:13.139810+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-27T21:59:13.038434+00:00",
+  "last_fetched": "2026-07-27T23:04:12.079642+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,11 +26,11 @@
       "time": "2026-07-22T08:27:13.000Z",
       "title_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your - News18",
       "body_en": "Hantavirus Outbreak In Venezuela Kills 3 And 2 More Deaths Suspected: What The Rat-Borne Virus Does To Your News18",
-      "summary_zh": "委内瑞拉汉坦病毒暴发致3死，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉汉坦病毒暴发致3人死亡，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
-        "2 疑似"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
     },
@@ -42,8 +42,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
-        "2 疑似"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
     },
@@ -55,8 +55,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3 死",
-        "2 疑似"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
     },
@@ -65,10 +65,11 @@
       "time": "2026-07-21T21:58:40.000Z",
       "title_en": "Venezuela: Three people with confirmed hantavirus have died - Outbreak News Today",
       "body_en": "Venezuela: Three people with confirmed hantavirus have died Outbreak News Today",
-      "summary_zh": "委内瑞拉3例汉坦病毒确诊患者死亡。",
+      "summary_zh": "委内瑞拉3名汉坦病毒确诊患者死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "确诊3例",
+        "死亡"
       ],
       "signal_strength": "high"
     },
@@ -80,19 +81,34 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3例死亡"
+        "死亡3例",
+        "疫情担忧"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-3e985fba911fd187",
+      "time": "2026-07-21T09:01:06.000Z",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
+      "key_facts_zh": [
+        "隔离",
+        "42天",
+        "个人经历"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T18:41:09.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮暴发后，综述研究汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响"
+        "大脑影响",
+        "综述"
       ],
       "signal_strength": "medium"
     },
@@ -117,8 +133,8 @@
       "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加医学中心",
-        "监测"
+        "邮轮",
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "high"
     },
@@ -127,11 +143,24 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒暴发正式结束。",
+      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒疫情正式结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "暴发结束"
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-61893a461f8fccaa",
+      "time": "2026-07-02T15:46:03.000Z",
+      "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "WHO 宣布邮轮汉坦疫情结束，最后接触者完成隔离。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -140,7 +169,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says - Forbes",
       "body_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says Forbes",
-      "summary_zh": "WHO 宣布邮轮汉坦疫情结束。",
+      "summary_zh": "WHO 称邮轮汉坦疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -167,19 +196,6 @@
       "title_en": "Deadly Hantavirus Cruise Ship Outbreak Is Over 3 Months Later, W.H.O. Says - The New York Times",
       "body_en": "Deadly Hantavirus Cruise Ship Outbreak Is Over 3 Months Later, W.H.O. Says The New York Times",
       "summary_zh": "WHO 称致命邮轮汉坦疫情三个月后结束。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-61893a461f8fccaa",
-      "time": "2026-07-02T07:00:00.000Z",
-      "title_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Hantavirus outbreak linked to cruise ship over after last contact completes quarantine: WHO ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "WHO 称邮轮汉坦疫情在最后接触者隔离后结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -218,7 +234,7 @@
       "time": "2026-06-30T07:00:00.000Z",
       "title_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship - Times Colonist",
       "body_en": "Self-isolation ends for travellers exposed to hantavirus-stricken cruise ship Times Colonist",
-      "summary_zh": "接触汉坦邮轮的旅客结束自我隔离。",
+      "summary_zh": "接触邮轮汉坦病毒的旅客结束自我隔离。",
       "key_facts_zh": [
         "邮轮",
         "隔离结束"
@@ -230,7 +246,7 @@
       "time": "2026-06-29T07:00:00.000Z",
       "title_en": "Canadians exposed to hantavirus on cruise ship complete isolation period - CBC",
       "body_en": "Canadians exposed to hantavirus on cruise ship complete isolation period CBC",
-      "summary_zh": "加拿大接触汉坦邮轮者完成隔离。",
+      "summary_zh": "加拿大邮轮汉坦病毒接触者完成隔离。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
