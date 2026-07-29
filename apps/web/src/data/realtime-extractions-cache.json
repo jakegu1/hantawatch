@@ -11745,6 +11745,34 @@
         "source_url": "",
         "time": "2026-07-21T23:36:08.000Z"
       }
+    ],
+    "rt-502d166cf74d8cdc": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-28",
+        "confidence": "low",
+        "reasoning_zh": "标题提到智利因汉坦病毒死亡率宣布卫生警报，但未提供具体新增病例或死亡数字。",
+        "update_id": "rt-502d166cf74d8cdc",
+        "source_url": "",
+        "time": "2026-07-28T22:24:00.000Z"
+      }
+    ],
+    "rt-593ba1e04b9108ca": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-28",
+        "confidence": "low",
+        "reasoning_zh": "报道称亚利桑那州和佐治亚州官员正在监测部分返回美国的汉坦病毒邮轮乘客，但未提供具体数字。",
+        "update_id": "rt-593ba1e04b9108ca",
+        "source_url": "",
+        "time": "2026-07-28T20:38:01.000Z"
+      }
     ]
   }
 }
