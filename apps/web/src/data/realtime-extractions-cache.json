@@ -11773,6 +11773,34 @@
         "source_url": "",
         "time": "2026-07-28T20:38:01.000Z"
       }
+    ],
+    "rt-96e6ae9ee6024172": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-29",
+        "confidence": "low",
+        "reasoning_zh": "智利因汉坦病毒死亡率宣布卫生警报，但未提供具体新增病例或死亡数字。",
+        "update_id": "rt-96e6ae9ee6024172",
+        "source_url": "",
+        "time": "2026-07-29T04:13:36.000Z"
+      }
+    ],
+    "rt-ff4449c24f9c24ed": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-29",
+        "confidence": "low",
+        "reasoning_zh": "文献综述称汉坦病毒罕见影响脑神经，未涉及具体国家或新增病例。",
+        "update_id": "rt-ff4449c24f9c24ed",
+        "source_url": "",
+        "time": "2026-07-29T01:00:05.000Z"
+      }
     ]
   }
 }
