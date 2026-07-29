@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-29T08:35:11.045855+00:00",
+  "__generated_at": "2026-07-29T11:16:56.705073+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-29T08:35:04.436234+00:00",
+  "last_fetched": "2026-07-29T11:16:55.866778+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -41,8 +41,8 @@
       "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客中的汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "亚利桑那",
-        "佐治亚"
+        "邮轮",
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -51,11 +51,10 @@
       "time": "2026-07-22T06:49:56.000Z",
       "title_en": "Hantavirus Claims 3 Lives In Venezuela: What The Rat-borne Virus Does To The Brain - Health and Me",
       "body_en": "Hantavirus Claims 3 Lives In Venezuela: What The Rat-borne Virus Does To The Brain Health and Me",
-      "summary_zh": "委内瑞拉汉坦病毒致3人死亡，文章讨论病毒对大脑影响。",
+      "summary_zh": "委内瑞拉汉坦病毒致3人死亡，文章介绍病毒对大脑影响。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "大脑影响"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -79,9 +78,8 @@
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
       "summary_zh": "纽约时报报道一名乘客经历42天汉坦病毒隔离的感受。",
       "key_facts_zh": [
-        "美国",
-        "42天隔离",
-        "个人经历"
+        "隔离",
+        "42天"
       ],
       "signal_strength": "medium"
     },
@@ -92,9 +90,8 @@
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
       "summary_zh": "邮轮暴发后，CIDRAP综述汉坦病毒对大脑的影响。",
       "key_facts_zh": [
-        "邮轮暴发",
-        "大脑影响",
-        "综述"
+        "邮轮",
+        "大脑影响"
       ],
       "signal_strength": "medium"
     },
@@ -103,10 +100,10 @@
       "time": "2026-07-11T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 28): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026年第28周无新增，全年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "无新增",
+        "本周0新增",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -129,7 +126,7 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情正式结束。",
+      "summary_zh": "WHO 宣布 MV Hondius 邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -168,7 +165,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO says Hantavirus outbreak linked to ship is over - BBC",
       "body_en": "WHO says Hantavirus outbreak linked to ship is over BBC",
-      "summary_zh": "WHO 表示与邮轮相关的汉坦病毒疫情结束。",
+      "summary_zh": "WHO 称与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -223,7 +220,8 @@
       "summary_zh": "接触汉坦邮轮的旅客结束自我隔离。",
       "key_facts_zh": [
         "邮轮",
-        "自我隔离结束"
+        "自我隔离",
+        "结束"
       ],
       "signal_strength": "high"
     }
