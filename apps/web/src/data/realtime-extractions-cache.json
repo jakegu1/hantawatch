@@ -11871,6 +11871,34 @@
         "source_url": "",
         "time": "2026-07-30T04:36:40.000Z"
       }
+    ],
+    "rt-36acb587c7ddf55e": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及智利发布预防性汉坦病毒健康警报，未提供具体病例数字变化。",
+        "update_id": "rt-36acb587c7ddf55e",
+        "source_url": "",
+        "time": "2026-07-30T13:43:44.000Z"
+      }
+    ],
+    "rt-c7a03b03679696d8": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻为研究安第斯病毒遗传多样性，未报告新增病例或死亡。",
+        "update_id": "rt-c7a03b03679696d8",
+        "source_url": "",
+        "time": "2026-07-30T08:14:59.000Z"
+      }
     ]
   }
 }
