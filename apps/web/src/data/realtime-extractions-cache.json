@@ -11815,6 +11815,48 @@
         "source_url": "",
         "time": "2026-07-29T17:03:29.000Z"
       }
+    ],
+    "rt-7d26154d07222d4d": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-29",
+        "confidence": "medium",
+        "reasoning_zh": "BNO News报道智利因汉坦病毒死亡18例宣布卫生警报，未提新增，故delta为0。",
+        "update_id": "rt-7d26154d07222d4d",
+        "source_url": "",
+        "time": "2026-07-29T23:57:51.000Z"
+      }
+    ],
+    "rt-f4fc6ffb01bb873a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-29",
+        "confidence": "low",
+        "reasoning_zh": "CTV News报道乘客前往加拿大，涉及汉坦病毒爆发船只，但未明确国家及具体数字。",
+        "update_id": "rt-f4fc6ffb01bb873a",
+        "source_url": "",
+        "time": "2026-07-29T21:02:00.000Z"
+      }
+    ],
+    "rt-19a252fd7a68be04": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-29",
+        "confidence": "medium",
+        "reasoning_zh": "Daily Star报道智利因汉坦病毒死亡率上升宣布全国卫生警报，未提新增病例。",
+        "update_id": "rt-19a252fd7a68be04",
+        "source_url": "",
+        "time": "2026-07-29T18:13:00.000Z"
+      }
     ]
   }
 }
