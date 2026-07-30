@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-30T04:52:55.655029+00:00",
+  "__generated_at": "2026-07-30T07:31:36.829278+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-30T04:52:54.283488+00:00",
+  "last_fetched": "2026-07-30T07:31:35.917816+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-07-29T23:57:51.000Z",
       "title_en": "Chile declares 1st hantavirus health alert after 18 deaths this year - BNO News",
       "body_en": "Chile declares 1st hantavirus health alert after 18 deaths this year BNO News",
-      "summary_zh": "智利因今年18例死亡宣布首次汉坦病毒卫生警报。",
+      "summary_zh": "智利因今年18人死亡宣布首次汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "18例死亡",
+        "18人死亡",
         "卫生警报"
       ],
       "signal_strength": "high"
@@ -39,11 +39,11 @@
       "time": "2026-07-29T18:13:00.000Z",
       "title_en": "Chile declares nationwide health alert after hantavirus fatality rate rises - Daily Star",
       "body_en": "Chile declares nationwide health alert after hantavirus fatality rate rises Daily Star",
-      "summary_zh": "智利因汉坦病毒致死率上升宣布全国卫生警报。",
+      "summary_zh": "智利因汉坦病毒死亡率上升宣布全国卫生警报。",
       "key_facts_zh": [
         "智利",
         "全国卫生警报",
-        "致死率上升"
+        "死亡率上升"
       ],
       "signal_strength": "high"
     },
@@ -52,13 +52,25 @@
       "time": "2026-07-29T17:03:29.000Z",
       "title_en": "Chile Declares Health Alert Over Hantavirus Fatality Rate - teleSUR English",
       "body_en": "Chile Declares Health Alert Over Hantavirus Fatality Rate teleSUR English",
-      "summary_zh": "智利因汉坦病毒致死率宣布卫生警报。",
+      "summary_zh": "智利因汉坦病毒死亡率宣布卫生警报。",
       "key_facts_zh": [
         "智利",
         "卫生警报",
-        "致死率"
+        "死亡率"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-ff4449c24f9c24ed",
+      "time": "2026-07-29T01:00:05.000Z",
+      "title_en": "Hantavirus Can Affect the Brain and Nerves in Rare Cases, a New Review of the Literature Finds - Medical Daily",
+      "body_en": "Hantavirus Can Affect the Brain and Nerves in Rare Cases, a New Review of the Literature Finds Medical Daily",
+      "summary_zh": "文献综述发现汉坦病毒罕见情况下可影响大脑和神经。",
+      "key_facts_zh": [
+        "汉坦病毒",
+        "影响大脑"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-593ba1e04b9108ca",
@@ -126,11 +138,24 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-3e985fba911fd187",
+      "time": "2026-07-21T07:00:00.000Z",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "纽约时报报道一名患者经历42天汉坦病毒隔离。",
+      "key_facts_zh": [
+        "美国",
+        "42天隔离",
+        "个人经历"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
-      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
-      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
+      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - cidrap.umn.edu",
+      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain cidrap.umn.edu",
+      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "汉坦病毒",
@@ -159,8 +184,8 @@
       "summary_zh": "美国汉坦病毒邮轮乘客在内布拉斯加医学中心接受监测。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
-        "内布拉斯加医学中心"
+        "内布拉斯加医学中心",
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -207,7 +232,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says - Forbes",
       "body_en": "Hantavirus Cruise Ship Outbreak Over, WHO Says Forbes",
-      "summary_zh": "WHO称邮轮汉坦病毒疫情结束。",
+      "summary_zh": "福布斯报道WHO称邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -220,7 +245,7 @@
       "time": "2026-07-02T07:00:00.000Z",
       "title_en": "WHO declares cruise-linked hantavirus outbreak officially over - Al Jazeera",
       "body_en": "WHO declares cruise-linked hantavirus outbreak officially over Al Jazeera",
-      "summary_zh": "WHO宣布邮轮相关汉坦病毒疫情正式结束。",
+      "summary_zh": "半岛电视台报道WHO宣布邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
