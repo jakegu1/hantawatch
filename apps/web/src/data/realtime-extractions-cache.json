@@ -11857,6 +11857,20 @@
         "source_url": "",
         "time": "2026-07-29T18:13:00.000Z"
       }
+    ],
+    "rt-1057eabef657007d": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-30",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及智利因汉坦病毒死亡率宣布健康警报，未提供具体新增病例或死亡数字。",
+        "update_id": "rt-1057eabef657007d",
+        "source_url": "",
+        "time": "2026-07-30T04:36:40.000Z"
+      }
     ]
   }
 }
