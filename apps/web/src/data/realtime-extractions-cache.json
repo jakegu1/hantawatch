@@ -11899,6 +11899,48 @@
         "source_url": "",
         "time": "2026-07-30T08:14:59.000Z"
       }
+    ],
+    "rt-de447e7feebef8c4": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-31",
+        "confidence": "low",
+        "reasoning_zh": "报道提及奥马哈隔离，但无具体新增病例数字，无法提取变化量。",
+        "update_id": "rt-de447e7feebef8c4",
+        "source_url": "",
+        "time": "2026-07-31T03:27:00.000Z"
+      }
+    ],
+    "rt-6078a1d5538590b5": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-31",
+        "confidence": "low",
+        "reasoning_zh": "报道提及波士顿居民返家，但无新增病例数字，无法提取变化量。",
+        "update_id": "rt-6078a1d5538590b5",
+        "source_url": "",
+        "time": "2026-07-31T03:22:00.000Z"
+      }
+    ],
+    "rt-70c08508d6df8454": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-31",
+        "confidence": "low",
+        "reasoning_zh": "报道为医生个人经历分享，无具体新增病例数字，无法提取变化量。",
+        "update_id": "rt-70c08508d6df8454",
+        "source_url": "",
+        "time": "2026-07-31T01:18:00.000Z"
+      }
     ]
   }
 }
