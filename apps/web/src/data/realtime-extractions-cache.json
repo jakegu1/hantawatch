@@ -11955,6 +11955,20 @@
         "source_url": "",
         "time": "2026-07-22T08:25:00.000Z"
       }
+    ],
+    "rt-73fadbf0aa4151ab": [
+      {
+        "iso2": "NL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-31",
+        "confidence": "low",
+        "reasoning_zh": "报道称12名工作人员隔离，但未明确新增病例数，故delta均为0。",
+        "update_id": "rt-73fadbf0aa4151ab",
+        "source_url": "",
+        "time": "2026-07-31T18:57:03.000Z"
+      }
     ]
   }
 }
