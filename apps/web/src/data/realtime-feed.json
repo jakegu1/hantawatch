@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-07-31T08:45:03.387760+00:00",
+  "__generated_at": "2026-07-31T08:51:02.238546+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-07-31T08:44:56.076528+00:00",
+  "last_fetched": "2026-07-31T08:51:01.233094+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-07-31T03:27:00.000Z",
       "title_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine - KETV",
       "body_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine KETV",
-      "summary_zh": "美国奥马哈隔离期间，内容创作者在汉坦病毒爆发后找到希望。",
+      "summary_zh": "美国奥马哈隔离中，内容创作者在汉坦病毒爆发后找到希望。",
       "key_facts_zh": [
         "美国",
         "奥马哈",
@@ -26,7 +26,7 @@
       "time": "2026-07-31T03:22:00.000Z",
       "title_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak - WCVB",
       "body_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak WCVB",
-      "summary_zh": "内容创作者在邮轮汉坦病毒爆发后返回波士顿家中。",
+      "summary_zh": "内容创作者在汉坦病毒爆发后返回波士顿家中。",
       "key_facts_zh": [
         "美国",
         "波士顿",
@@ -42,8 +42,8 @@
       "summary_zh": "医生分享在汉坦病毒邮轮上的经历。",
       "key_facts_zh": [
         "美国",
-        "医生",
-        "邮轮"
+        "邮轮",
+        "医生"
       ],
       "signal_strength": "medium"
     },
@@ -77,7 +77,7 @@
       "time": "2026-07-29T23:57:51.000Z",
       "title_en": "Chile declares 1st hantavirus health alert after 18 deaths this year - BNO News",
       "body_en": "Chile declares 1st hantavirus health alert after 18 deaths this year BNO News",
-      "summary_zh": "智利今年18人死亡后宣布首次汉坦病毒健康警报。",
+      "summary_zh": "智利今年18人死亡后首次发布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
         "18人死亡",
@@ -118,7 +118,7 @@
       "body_en": "Hantavirus Can Affect the Brain and Nerves in Rare Cases, a New Review of the Literature Finds Medical Daily",
       "summary_zh": "文献综述发现汉坦病毒罕见情况下可影响大脑和神经。",
       "key_facts_zh": [
-        "汉坦病毒",
+        "文献综述",
         "神经系统"
       ],
       "signal_strength": "medium"
@@ -169,8 +169,8 @@
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
       "summary_zh": "纽约时报报道 42 天汉坦病毒隔离经历，当事人称像囚犯。",
       "key_facts_zh": [
-        "美国",
-        "42 天隔离"
+        "隔离",
+        "42 天"
       ],
       "signal_strength": "medium"
     },
@@ -179,7 +179,7 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
       "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉三人死于汉坦病毒，引发疫情担忧。",
+      "summary_zh": "委内瑞拉三人死于汉坦病毒引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
         "3 死",
