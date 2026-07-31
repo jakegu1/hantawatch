@@ -11941,6 +11941,20 @@
         "source_url": "",
         "time": "2026-07-31T01:18:00.000Z"
       }
+    ],
+    "rt-7e9395b8c75cf676": [
+      {
+        "iso2": "VE",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-22",
+        "confidence": "low",
+        "reasoning_zh": "标题提及委内瑞拉3人死亡，但未提供新增病例数，且来源为媒体，故增量均为0。",
+        "update_id": "rt-7e9395b8c75cf676",
+        "source_url": "",
+        "time": "2026-07-22T08:25:00.000Z"
+      }
     ]
   }
 }
