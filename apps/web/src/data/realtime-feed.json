@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T13:16:48.131083+00:00",
+  "__generated_at": "2026-08-01T14:53:58.848974+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-01T13:16:47.287901+00:00",
+  "last_fetched": "2026-08-01T14:53:57.980596+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -38,9 +38,9 @@
       "time": "2026-07-31T15:13:00.000Z",
       "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - WCVB",
       "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
-      "summary_zh": "内容创作者在邮轮暴发汉坦病毒后返回波士顿。",
+      "summary_zh": "内容创作者在邮轮汉坦病毒爆发后返回波士顿。",
       "key_facts_zh": [
-        "美国",
+        "波士顿",
         "邮轮",
         "返回"
       ],
@@ -51,10 +51,10 @@
       "time": "2026-07-31T06:05:00.000Z",
       "title_en": "'Right place at the right time:' Dr. Steve Kornfeld shares his experience on Hantavirus cruise - Central Oregon Daily",
       "body_en": "'Right place at the right time:' Dr. Steve Kornfeld shares his experience on Hantavirus cruise Central Oregon Daily",
-      "summary_zh": "医生分享在汉坦病毒邮轮上的经历。",
+      "summary_zh": "医生分享汉坦病毒邮轮经历。",
       "key_facts_zh": [
-        "邮轮",
         "医生",
+        "邮轮",
         "经历"
       ],
       "signal_strength": "medium"
@@ -66,9 +66,9 @@
       "body_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine KETV",
       "summary_zh": "内容创作者在奥马哈隔离期间找到希望。",
       "key_facts_zh": [
-        "美国",
         "奥马哈",
-        "隔离"
+        "隔离",
+        "希望"
       ],
       "signal_strength": "high"
     },
@@ -81,7 +81,7 @@
       "key_facts_zh": [
         "智利",
         "首次",
-        "卫生警报"
+        "预防性警报"
       ],
       "signal_strength": "high"
     },
@@ -90,11 +90,11 @@
       "time": "2026-07-29T23:57:51.000Z",
       "title_en": "Chile declares 1st hantavirus health alert after 18 deaths this year - BNO News",
       "body_en": "Chile declares 1st hantavirus health alert after 18 deaths this year BNO News",
-      "summary_zh": "智利今年18人死亡后首次发布汉坦病毒卫生警报。",
+      "summary_zh": "智利今年18人死亡后宣布首个汉坦病毒警报。",
       "key_facts_zh": [
         "智利",
         "18人死亡",
-        "卫生警报"
+        "首个警报"
       ],
       "signal_strength": "high"
     },
@@ -103,7 +103,7 @@
       "time": "2026-07-29T21:02:00.000Z",
       "title_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada - CTV News",
       "body_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada CTV News",
-      "summary_zh": "汉坦病毒暴发邮轮上的乘客正前往加拿大。",
+      "summary_zh": "汉坦病毒爆发邮轮乘客前往加拿大。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -131,8 +131,8 @@
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
       "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
       "key_facts_zh": [
-        "美国",
-        "隔离经历"
+        "隔离",
+        "42天"
       ],
       "signal_strength": "medium"
     },
@@ -144,7 +144,7 @@
       "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "脑影响"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     },
@@ -156,8 +156,8 @@
       "summary_zh": "美国CDC周报：本周汉坦病毒新增0例，2026年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例",
-        "累计1例"
+        "新增0",
+        "累计1"
       ],
       "signal_strength": "high"
     },
