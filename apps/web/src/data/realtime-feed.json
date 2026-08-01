@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T02:06:40.520337+00:00",
+  "__generated_at": "2026-08-01T02:30:33.356053+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-01T02:06:39.513765+00:00",
+  "last_fetched": "2026-08-01T02:30:25.538293+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-07-31T17:32:36.000Z",
       "title_en": "‘Most scared I’ve ever been’: Man recalls 42 days in quarantine after deadly hantavirus outbreak on ship - WBAL News Radio",
       "body_en": "‘Most scared I’ve ever been’: Man recalls 42 days in quarantine after deadly hantavirus outbreak on ship WBAL News Radio",
-      "summary_zh": "男子回忆在船上因汉坦病毒爆发隔离42天，称最害怕经历。",
+      "summary_zh": "男子回忆船上汉坦病毒爆发后隔离42天，称最害怕的经历。",
       "key_facts_zh": [
         "邮轮",
         "隔离42天",
@@ -39,7 +39,7 @@
       "time": "2026-07-31T15:13:00.000Z",
       "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - WCVB",
       "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
-      "summary_zh": "内容创作者在波士顿回家，此前被困于汉坦病毒爆发的船上。",
+      "summary_zh": "内容创作者在波士顿回家，此前被困于爆发汉坦病毒的船上。",
       "key_facts_zh": [
         "波士顿",
         "邮轮",
@@ -117,7 +117,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
@@ -142,11 +142,11 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO - Global News",
       "body_en": "Hantavirus outbreak on MV Hondius cruise ship officially over: WHO Global News",
-      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒爆发正式结束。",
+      "summary_zh": "WHO宣布MV Hondius邮轮汉坦病毒疫情正式结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "结束"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -155,11 +155,11 @@
       "time": "2026-07-03T07:00:00.000Z",
       "title_en": "WHO declares cruise ship hantavirus outbreak over - The Hindu",
       "body_en": "WHO declares cruise ship hantavirus outbreak over The Hindu",
-      "summary_zh": "WHO宣布邮轮汉坦病毒爆发结束。",
+      "summary_zh": "WHO宣布邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "结束"
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -171,20 +171,18 @@
       "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
         "疫情结束"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-396f459888318ab6",
+      "id": "rt-d76fd1f729211728",
       "time": "2026-07-02T07:00:00.000Z",
-      "title_en": "WHO says Hantavirus outbreak linked to ship is over - BBC",
-      "body_en": "WHO says Hantavirus outbreak linked to ship is over BBC",
+      "title_en": "WHO says Hantavirus outbreak linked to ship is over - bbc.co.uk",
+      "body_en": "WHO says Hantavirus outbreak linked to ship is over bbc.co.uk",
       "summary_zh": "WHO 称与邮轮相关的汉坦病毒疫情已结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -197,7 +195,6 @@
       "summary_zh": "WHO 宣布与邮轮相关的汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
         "疫情结束"
       ],
       "signal_strength": "high"
@@ -210,7 +207,6 @@
       "summary_zh": "WHO 表示与邮轮相关的汉坦病毒疫情已结束。",
       "key_facts_zh": [
         "WHO",
-        "邮轮",
         "疫情结束"
       ],
       "signal_strength": "high"

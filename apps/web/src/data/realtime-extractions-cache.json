@@ -11969,6 +11969,34 @@
         "source_url": "",
         "time": "2026-07-31T18:57:03.000Z"
       }
+    ],
+    "rt-8866cfa811fe424b": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-31",
+        "confidence": "low",
+        "reasoning_zh": "报道为个人回忆，无具体国家及新增病例数，仅提及船上疫情及隔离，无法提取变化量。",
+        "update_id": "rt-8866cfa811fe424b",
+        "source_url": "",
+        "time": "2026-07-31T17:32:36.000Z"
+      }
+    ],
+    "rt-d76fd1f729211728": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-07-02",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布疫情结束，但未提供具体国家及新增数字，无法提取变化量。",
+        "update_id": "rt-d76fd1f729211728",
+        "source_url": "",
+        "time": "2026-07-02T07:00:00.000Z"
+      }
     ]
   }
 }
