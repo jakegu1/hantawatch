@@ -1,39 +1,38 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T13:12:40.799080+00:00",
-  "date": "2026-08-01",
+  "__generated_at": "2026-08-01T19:04:09.204464+00:00",
+  "date": "2026-08-02",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 11,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 30,
-  "whoDaysSinceOfficialUpdate": 30,
+  "daysSinceLastIntlAlert": 31,
+  "whoDaysSinceOfficialUpdate": 31,
   "cluesLast24h": 3,
-  "headline24h": "智利宣布汉坦病毒卫生警报。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "7月31日荷兰12名员工因汉坦病毒隔离六周；7月30日智利首次发布全国汉坦病毒卫生警报。",
-  "situation": "WHO数据滞后期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，荷兰隔离事件待官方复核；国内HFRS基线正常。",
-  "riskJudgment": "中国大陆境内无相关病例，输入风险极低；关注邮轮相关接触者随访及南美卫生警报即可。",
+  "latestChange": "7月30日智利首次发布全国汉坦病毒卫生警报；7月31日荷兰12名员工隔离六周，无新增确诊。",
+  "situation": "WHO数据滞后期间，由各国卫生部及ArcGIS监测补足；多国维持随访，智利警报待WHO复核。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险低，无需过度担忧。",
   "newCases": "7月31日无新增确诊；荷兰12名员工隔离非新增病例。",
   "sourceSummary": "主要依据WHO、各国官方及ArcGIS监测。",
-  "shareLine": "WHO 7/2公布累计13例（30天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+  "shareLine": "WHO 7/2公布累计13例（31天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
     "智利卫生警报",
     "荷兰隔离事件",
-    "邮轮接触者随访"
+    "WHO数据更新"
   ],
   "evidence": [
-    "WHO 7/2 公布13例",
-    "智利7/30卫生警报",
-    "荷兰7/31隔离事件"
+    "WHO DON 7/2更新",
+    "智利卫生部警报",
+    "ArcGIS监测数据"
   ],
   "_guardrail_warnings": [
     "brief mentions \"智利\" but it is not in mvHondiusImports or arcgisCases",
     "shareline_pending_sanitized: no pending confirmed deltas",
     "brief contains \"12\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]",
-    "brief contains \"12\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]",
-    "compliance_corrected: riskJudgment"
+    "brief contains \"12\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]"
   ]
 }
