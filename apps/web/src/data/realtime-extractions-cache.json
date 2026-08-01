@@ -11997,6 +11997,20 @@
         "source_url": "",
         "time": "2026-07-02T07:00:00.000Z"
       }
+    ],
+    "rt-bffd2e97d390f077": [
+      {
+        "iso2": "CL",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-01",
+        "confidence": "low",
+        "reasoning_zh": "智利宣布汉坦病毒健康警报，但未提供具体病例数字，无法提取增量。",
+        "update_id": "rt-bffd2e97d390f077",
+        "source_url": "",
+        "time": "2026-08-01T11:41:29.000Z"
+      }
     ]
   }
 }
