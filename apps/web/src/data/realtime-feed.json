@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T21:48:36.301709+00:00",
+  "__generated_at": "2026-08-01T22:46:38.385010+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-01T21:48:35.194913+00:00",
+  "last_fetched": "2026-08-01T22:46:37.528925+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -27,7 +27,7 @@
       "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
       "summary_zh": "内容创作者因邮轮汉坦病毒爆发滞留后返回波士顿。",
       "key_facts_zh": [
-        "波士顿",
+        "美国",
         "邮轮",
         "返回"
       ],
@@ -38,11 +38,11 @@
       "time": "2026-07-31T03:27:00.000Z",
       "title_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine - KETV",
       "body_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine KETV",
-      "summary_zh": "邮轮汉坦病毒爆发后，内容创作者在奥马哈隔离期间找到希望。",
+      "summary_zh": "邮轮汉坦病毒爆发后，内容创作者在奥马哈隔离中看到希望。",
       "key_facts_zh": [
+        "美国",
         "奥马哈",
-        "隔离",
-        "邮轮"
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -55,7 +55,7 @@
       "key_facts_zh": [
         "智利",
         "首次",
-        "卫生警报"
+        "预防警报"
       ],
       "signal_strength": "high"
     },
@@ -64,7 +64,7 @@
       "time": "2026-07-29T21:02:00.000Z",
       "title_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada - CTV News",
       "body_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada CTV News",
-      "summary_zh": "汉坦病毒爆发邮轮上的乘客正前往加拿大。",
+      "summary_zh": "汉坦病毒爆发邮轮乘客正前往加拿大。",
       "key_facts_zh": [
         "加拿大",
         "邮轮",
@@ -80,8 +80,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疑似2例"
+        "3死",
+        "疑似2死"
       ],
       "signal_strength": "high"
     },
@@ -90,7 +90,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "汉坦病毒",
