@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-02T16:53:51.028733+00:00",
+  "__generated_at": "2026-08-02T17:56:33.713140+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-02T16:53:50.179825+00:00",
+  "last_fetched": "2026-08-02T17:56:32.356201+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,21 +13,21 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-6078a1d5538590b5",
       "time": "2026-07-31T15:13:00.000Z",
-      "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - WCVB",
-      "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
-      "summary_zh": "内容创作者因邮轮汉坦病毒爆发被困后返回波士顿。",
+      "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - wcvb.com",
+      "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak wcvb.com",
+      "summary_zh": "内容创作者因邮轮汉坦病毒爆发滞留后返回波士顿。",
       "key_facts_zh": [
-        "美国",
+        "波士顿",
         "邮轮",
         "返回"
       ],
@@ -38,10 +38,11 @@
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
+      "summary_zh": "智利发布首次预防性汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "首次警报"
+        "首次",
+        "预防性警报"
       ],
       "signal_strength": "high"
     },
@@ -63,7 +64,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
@@ -75,10 +76,10 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周汉坦病毒新增0例，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，2026年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例",
+        "本周0例",
         "累计1例"
       ],
       "signal_strength": "high"
