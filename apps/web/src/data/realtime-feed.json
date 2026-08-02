@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T23:51:12.365125+00:00",
+  "__generated_at": "2026-08-02T02:02:58.694233+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-01T23:51:11.378366+00:00",
+  "last_fetched": "2026-08-02T02:02:57.663465+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
     },
@@ -25,11 +25,10 @@
       "time": "2026-07-31T15:13:00.000Z",
       "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - WCVB",
       "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
-      "summary_zh": "内容创作者因邮轮汉坦病毒爆发滞留后返回波士顿。",
+      "summary_zh": "内容创作者因邮轮疫情滞留后返回波士顿。",
       "key_facts_zh": [
         "波士顿",
-        "邮轮",
-        "返回"
+        "邮轮疫情"
       ],
       "signal_strength": "medium"
     },
@@ -38,11 +37,10 @@
       "time": "2026-07-31T03:27:00.000Z",
       "title_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine - KETV",
       "body_en": "After hantavirus outbreak at sea, content creator finds hope during Omaha quarantine KETV",
-      "summary_zh": "邮轮汉坦病毒爆发后，内容创作者在奥马哈隔离中获希望。",
+      "summary_zh": "邮轮疫情后，内容创作者在奥马哈隔离中获希望。",
       "key_facts_zh": [
         "奥马哈",
-        "隔离",
-        "邮轮"
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -51,24 +49,10 @@
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
+      "summary_zh": "智利首次发布预防性汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "首次",
-        "预防性警报"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f4fc6ffb01bb873a",
-      "time": "2026-07-29T21:02:00.000Z",
-      "title_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada - CTV News",
-      "body_en": "Passengers who were on ship at centre of hantavirus outbreak en route to Canada CTV News",
-      "summary_zh": "汉坦病毒爆发邮轮乘客正前往加拿大。",
-      "key_facts_zh": [
-        "加拿大",
-        "邮轮",
-        "乘客"
+        "首次警报"
       ],
       "signal_strength": "high"
     },
@@ -77,7 +61,7 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
         "3死",
@@ -86,14 +70,25 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-3e985fba911fd187",
+      "time": "2026-07-21T07:00:00.000Z",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "42天汉坦病毒隔离经历：感觉像囚犯。",
+      "key_facts_zh": [
+        "42天隔离",
+        "个人经历"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
-        "邮轮",
-        "汉坦病毒",
+        "邮轮疫情",
         "大脑影响"
       ],
       "signal_strength": "medium"
@@ -103,10 +98,10 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增 0 例，2026 年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周 0 例，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
+        "本周 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
