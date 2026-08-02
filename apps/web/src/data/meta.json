@@ -19,8 +19,8 @@
           "query": "汉坦病毒",
           "hl": "zh-CN",
           "fetched": 100,
-          "blocked": 0,
-          "no_signal": 15,
+          "blocked": 1,
+          "no_signal": 14,
           "duplicate": 0,
           "non_authoritative": 6,
           "kept": 4,
@@ -33,6 +33,14 @@
       "ok": true,
       "okCount": 10,
       "checkedAt": "2026-08-02T13:13:20.639850+00:00"
+    },
+    "surveillance_leads": {
+      "entries": 1,
+      "ok": true
+    },
+    "feeds_light_run": {
+      "ok": true,
+      "at": "2026-08-02T13:13:44.854796+00:00"
     }
   },
   "clusterCount": 1,
