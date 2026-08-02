@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-02T11:56:47.846894+00:00",
+  "__generated_at": "2026-08-02T13:11:32.829153+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-02T11:56:46.583970+00:00",
+  "last_fetched": "2026-08-02T13:11:31.877131+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒健康警报。",
+      "summary_zh": "智利宣布汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "健康警报"
+        "卫生警报"
       ],
       "signal_strength": "high"
     },
@@ -25,7 +25,7 @@
       "time": "2026-07-31T18:57:03.000Z",
       "title_en": "Radboudumc Bypassed Its Isolation Unit, Putting 12 Staff in Six-Week Hantavirus Quarantine - Tech Times",
       "body_en": "Radboudumc Bypassed Its Isolation Unit, Putting 12 Staff in Six-Week Hantavirus Quarantine Tech Times",
-      "summary_zh": "荷兰拉德堡德医学中心12名员工因汉坦病毒隔离6周。",
+      "summary_zh": "荷兰拉德堡德医学中心绕过隔离单元，12名员工隔离六周。",
       "key_facts_zh": [
         "荷兰",
         "隔离"
@@ -37,7 +37,7 @@
       "time": "2026-07-31T15:13:00.000Z",
       "title_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak - WCVB",
       "body_en": "Content creator back home in Boston after getting stuck aboard ship with hantavirus outbreak WCVB",
-      "summary_zh": "美国波士顿内容创作者因邮轮汉坦病毒爆发被困后返家。",
+      "summary_zh": "内容创作者因邮轮汉坦病毒疫情滞留后返回波士顿。",
       "key_facts_zh": [
         "美国",
         "邮轮"
@@ -49,34 +49,22 @@
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒健康警报。",
+      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "健康警报"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7d26154d07222d4d",
-      "time": "2026-07-29T23:57:51.000Z",
-      "title_en": "Chile declares 1st hantavirus health alert after 18 deaths this year - BNO News",
-      "body_en": "Chile declares 1st hantavirus health alert after 18 deaths this year BNO News",
-      "summary_zh": "智利因今年18人死亡宣布首次汉坦病毒健康警报。",
-      "key_facts_zh": [
-        "智利",
-        "18人死亡"
+        "首次"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-19a252fd7a68be04",
       "time": "2026-07-29T18:13:00.000Z",
-      "title_en": "Chile declares nationwide health alert after hantavirus fatality rate rises - Daily Star",
-      "body_en": "Chile declares nationwide health alert after hantavirus fatality rate rises Daily Star",
-      "summary_zh": "智利因汉坦病毒死亡率上升宣布全国健康警报。",
+      "title_en": "Chile declares nationwide health alert after hantavirus fatality rate rises - dailystar.co.uk",
+      "body_en": "Chile declares nationwide health alert after hantavirus fatality rate rises dailystar.co.uk",
+      "summary_zh": "智利因汉坦病毒死亡率上升宣布全国卫生警报。",
       "key_facts_zh": [
         "智利",
-        "全国警报"
+        "死亡率"
       ],
       "signal_strength": "high"
     },
@@ -85,24 +73,10 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ca4c63beb3f35770",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -111,11 +85,11 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，CIDRAP综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响",
-        "CIDRAP"
+        "汉坦病毒",
+        "大脑影响"
       ],
       "signal_strength": "medium"
     },
@@ -124,11 +98,11 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：2026年第29周汉坦病毒新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
       "key_facts_zh": [
-        "美国CDC",
-        "新增0例",
-        "年内1例"
+        "美国 CDC",
+        "本周 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     }
