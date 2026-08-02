@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-01T19:04:09.205174+00:00",
+  "__generated_at": "2026-08-02T02:28:16.529429+00:00",
   "date": "2026-08-02",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -268,11 +268,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 71 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 71 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 59 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 59 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 71,
-      "signalCount7d": 71,
+      "signalCount30d": 59,
+      "signalCount7d": 59,
       "lastSignalAt": "2026-08-01T11:41:29+00:00"
     },
     "BR": {
@@ -316,16 +316,15 @@
     },
     "CA": {
       "iso2": "CA",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "西部农村地区为主；夏季清扫旧木屋、谷仓需通风后再进入。",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 2,
-      "lastSignalAt": "2026-07-31T03:20:00+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "CN": {
       "iso2": "CN",
