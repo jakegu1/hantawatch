@@ -12025,6 +12025,20 @@
         "source_url": "",
         "time": "2026-07-31T03:20:00.000Z"
       }
+    ],
+    "rt-3d1aada5dbd02f19": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-03",
+        "confidence": "low",
+        "reasoning_zh": "美国亚利桑那州和佐治亚州正在监测部分汉坦病毒邮轮乘客，但未提供具体数字，无法确定新增病例数。",
+        "update_id": "rt-3d1aada5dbd02f19",
+        "source_url": "",
+        "time": "2026-08-03T09:20:45.000Z"
+      }
     ]
   }
 }
