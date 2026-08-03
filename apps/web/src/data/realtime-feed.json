@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-03T10:35:00.999127+00:00",
+  "__generated_at": "2026-08-03T13:34:39.310125+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-03T10:34:59.812611+00:00",
+  "last_fetched": "2026-08-03T13:34:37.975357+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-3d1aada5dbd02f19",
+      "time": "2026-08-03T09:20:45.000Z",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客。",
+      "key_facts_zh": [
+        "美国",
+        "监测中",
+        "邮轮"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-bffd2e97d390f077",
       "time": "2026-08-01T11:41:29.000Z",
@@ -21,42 +34,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-8866cfa811fe424b",
-      "time": "2026-07-31T17:32:36.000Z",
-      "title_en": "‘Most scared I’ve ever been’: Man recalls 42 days in quarantine after deadly hantavirus outbreak on ship - WBAL News Radio",
-      "body_en": "‘Most scared I’ve ever been’: Man recalls 42 days in quarantine after deadly hantavirus outbreak on ship WBAL News Radio",
-      "summary_zh": "男子回忆邮轮汉坦病毒疫情后隔离42天。",
-      "key_facts_zh": [
-        "邮轮",
-        "隔离42天"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-70c08508d6df8454",
-      "time": "2026-07-31T06:05:00.000Z",
-      "title_en": "'Right place at the right time:' Dr. Steve Kornfeld shares his experience on Hantavirus cruise - Central Oregon Daily",
-      "body_en": "'Right place at the right time:' Dr. Steve Kornfeld shares his experience on Hantavirus cruise Central Oregon Daily",
-      "summary_zh": "医生分享汉坦病毒邮轮经历。",
-      "key_facts_zh": [
-        "邮轮",
-        "医生经历"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-d2cfb03564132131",
-      "time": "2026-07-31T03:20:00.000Z",
-      "title_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak - ca.news.yahoo.com",
-      "body_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak ca.news.yahoo.com",
-      "summary_zh": "内容创作者因邮轮疫情滞留后返回波士顿。",
-      "key_facts_zh": [
-        "波士顿",
-        "邮轮"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-36acb587c7ddf55e",
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
@@ -64,19 +41,8 @@
       "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "首次警报"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-7d26154d07222d4d",
-      "time": "2026-07-29T23:57:51.000Z",
-      "title_en": "Chile declares 1st hantavirus health alert after 18 deaths this year - BNO News",
-      "body_en": "Chile declares 1st hantavirus health alert after 18 deaths this year BNO News",
-      "summary_zh": "智利今年18人死亡后宣布首次汉坦病毒警报。",
-      "key_facts_zh": [
-        "智利",
-        "18人死亡"
+        "首次",
+        "卫生警报"
       ],
       "signal_strength": "high"
     },
@@ -85,10 +51,11 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "死亡3例",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -97,10 +64,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "42天汉坦病毒隔离经历：感觉像囚犯。",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
       "key_facts_zh": [
-        "隔离42天",
-        "个人经历"
+        "美国",
+        "隔离经历"
       ],
       "signal_strength": "medium"
     },
@@ -109,10 +76,9 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒",
         "大脑影响"
       ],
       "signal_strength": "medium"
@@ -122,24 +88,11 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周新增0例，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "本周0例",
+        "新增0例",
         "累计1例"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f8a72be9d8c4868a",
-      "time": "2026-07-10T17:38:00.000Z",
-      "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
-      "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在邮轮感染汉坦病毒，于内布拉斯加医学中心接受监测。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "内布拉斯加医学中心"
       ],
       "signal_strength": "high"
     }
