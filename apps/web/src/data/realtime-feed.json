@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-03T14:32:11.356870+00:00",
+  "__generated_at": "2026-08-03T16:16:12.501686+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-03T14:32:04.701266+00:00",
+  "last_fetched": "2026-08-03T16:16:11.676134+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-08-03T09:20:45.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮汉坦病毒乘客。",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -26,10 +26,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
     },
@@ -38,11 +38,10 @@
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
+      "summary_zh": "智利首次发布预防性汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "首次",
-        "卫生警报"
+        "首次警报"
       ],
       "signal_strength": "high"
     },
@@ -51,7 +50,7 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死亡，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡3例",
@@ -67,7 +66,7 @@
       "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
       "key_facts_zh": [
         "美国",
-        "隔离42天"
+        "隔离经历"
       ],
       "signal_strength": "medium"
     },
@@ -88,11 +87,11 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周新增0例，年内累计1例。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "新增0例",
-        "累计1例"
+        "年内1例"
       ],
       "signal_strength": "high"
     }
