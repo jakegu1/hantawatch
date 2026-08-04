@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-04T03:59:17.687801+00:00",
+  "__generated_at": "2026-08-04T06:29:55.572894+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-04T03:59:16.703504+00:00",
+  "last_fetched": "2026-08-04T06:29:54.235953+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -52,7 +52,7 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死2疑"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -85,10 +85,10 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增汉坦病毒病例，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "累计1例"
+        "本周0例"
       ],
       "signal_strength": "high"
     }
