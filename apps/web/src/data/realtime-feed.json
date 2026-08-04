@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-03T22:00:50.622132+00:00",
+  "__generated_at": "2026-08-04T00:01:46.563639+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-03T22:00:49.773866+00:00",
+  "last_fetched": "2026-08-04T00:01:45.685364+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -37,31 +37,19 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-5eac2f168424b530",
-      "time": "2026-07-31T03:20:00.000Z",
-      "title_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak - Yahoo News Canada",
-      "body_en": "Content creator back home in Boston after getting stuck on board ship with hantavirus outbreak Yahoo News Canada",
-      "summary_zh": "内容创作者返回波士顿，此前被困邮轮。",
-      "key_facts_zh": [
-        "波士顿",
-        "邮轮"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-36acb587c7ddf55e",
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
+      "summary_zh": "智利发布首次预防性汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
         "首次警报"
@@ -73,7 +61,7 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死亡，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
         "3人死亡"
@@ -83,9 +71,9 @@
     {
       "id": "rt-3e985fba911fd187",
       "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - nytimes.com",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ nytimes.com",
-      "summary_zh": "42天汉坦病毒隔离经历，当事人称像囚犯。",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
       "key_facts_zh": [
         "隔离",
         "42天"
@@ -109,10 +97,9 @@
       "time": "2026-07-18T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 29): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
