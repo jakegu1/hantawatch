@@ -12039,6 +12039,20 @@
         "source_url": "",
         "time": "2026-08-03T09:20:45.000Z"
       }
+    ],
+    "rt-4bd8a09f72ef9770": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-06",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅宣布加速治疗项目，未提及任何国家或具体病例数字，无法提取变化量。",
+        "update_id": "rt-4bd8a09f72ef9770",
+        "source_url": "",
+        "time": "2026-08-06T02:24:52.000Z"
+      }
     ]
   }
 }
