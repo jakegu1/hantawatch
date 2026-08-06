@@ -1,16 +1,16 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-06T08:30:20.038504+00:00",
+  "__generated_at": "2026-08-06T11:13:55.418087+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-06T08:30:13.931391+00:00",
+  "last_fetched": "2026-08-06T11:13:54.574261+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
       "id": "rt-4bd8a09f72ef9770",
-      "time": "2026-08-06T02:24:52.000Z",
+      "time": "2026-08-06T02:39:35.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
       "summary_zh": "澳大利亚多尔蒂研究所宣布加速埃博拉和汉坦病毒治疗项目。",
@@ -37,11 +37,10 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 报告本周汉坦病毒零新增，今年累计 1 例。",
+      "summary_zh": "美国CDC报告2026年第30周汉坦病毒新增0例，全年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "零新增",
-        "累计 1 例"
+        "新增 0 例"
       ],
       "signal_strength": "high"
     },
@@ -62,7 +61,7 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认 3 人死于汉坦病毒，另有 2 例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡 3 例"
@@ -74,7 +73,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮暴发后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "汉坦病毒",
