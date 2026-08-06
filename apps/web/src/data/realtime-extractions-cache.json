@@ -12053,6 +12053,62 @@
         "source_url": "",
         "time": "2026-08-06T02:24:52.000Z"
       }
+    ],
+    "rt-0283b8b37c1f1257": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-06",
+        "confidence": "medium",
+        "reasoning_zh": "报道称法国游客在西班牙被隔离，但未提供新增病例数，故增量为0。",
+        "update_id": "rt-0283b8b37c1f1257",
+        "source_url": "",
+        "time": "2026-08-06T18:07:31.000Z"
+      }
+    ],
+    "rt-f8eb31da3a8f4c78": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-06",
+        "confidence": "low",
+        "reasoning_zh": "报道提及欧洲新增一例汉坦病毒病例，但未指明具体国家，且无具体数字，故增量为0。",
+        "update_id": "rt-f8eb31da3a8f4c78",
+        "source_url": "",
+        "time": "2026-08-06T17:54:15.000Z"
+      }
+    ],
+    "rt-85d51dc6662c393c": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-06",
+        "confidence": "medium",
+        "reasoning_zh": "报道称在加利西亚发现一例无症状病例，但未提供新增数字，故增量为0。",
+        "update_id": "rt-85d51dc6662c393c",
+        "source_url": "",
+        "time": "2026-08-06T16:13:50.000Z"
+      }
+    ],
+    "rt-98f9bd950a843d08": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-05",
+        "confidence": "medium",
+        "reasoning_zh": "报道称一名游客在法国检测阳性，但未提供新增病例数，故增量为0。",
+        "update_id": "rt-98f9bd950a843d08",
+        "source_url": "",
+        "time": "2026-08-05T23:00:47.000Z"
+      }
     ]
   }
 }
