@@ -1,22 +1,34 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-06T02:13:31.809482+00:00",
+  "__generated_at": "2026-08-06T05:11:24.631522+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-06T02:13:27.726297+00:00",
+  "last_fetched": "2026-08-06T05:11:23.599471+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-4bd8a09f72ef9770",
+      "time": "2026-08-06T02:24:52.000Z",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
+      "summary_zh": "澳大利亚多尔蒂研究所宣布加速埃博拉和汉坦病毒治疗项目。",
+      "key_facts_zh": [
+        "澳大利亚",
+        "治疗研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-36acb587c7ddf55e",
       "time": "2026-07-30T13:43:44.000Z",
       "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
       "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布汉坦病毒预防性卫生警报。",
+      "summary_zh": "智利发布首个预防性汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
     },
@@ -25,11 +37,10 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报 2026 年第 30 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 报告 2026 年第 30 周汉坦病毒新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "新增 0 例"
       ],
       "signal_strength": "high"
     },
@@ -38,7 +49,7 @@
       "time": "2026-07-23T00:40:00.000Z",
       "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
       "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒疫情凸显公共卫生沟通与全球防备需求。",
+      "summary_zh": "邮轮汉坦病毒疫情凸显公共卫生沟通和全球防备需求。",
       "key_facts_zh": [
         "邮轮",
         "疫情"
@@ -53,47 +64,22 @@
       "summary_zh": "委内瑞拉确认 3 人死于汉坦病毒，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例",
-        "疑似 2 例"
+        "死亡 3 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-3e985fba911fd187",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道 42 天汉坦病毒隔离经历，当事人称如囚犯。",
-      "key_facts_zh": [
-        "隔离",
-        "42 天"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，CIDRAP 综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
-        "CIDRAP",
-        "脑影响"
+        "邮轮",
+        "汉坦病毒",
+        "大脑影响"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-f8a72be9d8c4868a",
-      "time": "2026-07-10T17:38:00.000Z",
-      "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
-      "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
-      "key_facts_zh": [
-        "美国",
-        "内布拉斯加医学中心",
-        "监测中"
-      ],
-      "signal_strength": "high"
     }
   ]
 }
