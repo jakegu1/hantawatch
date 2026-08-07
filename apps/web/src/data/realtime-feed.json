@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-07T17:42:28.680392+00:00",
+  "__generated_at": "2026-08-07T18:43:35.328026+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-07T17:42:27.411175+00:00",
+  "last_fetched": "2026-08-07T18:43:34.423639+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -11,12 +11,12 @@
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T13:36:30.000Z",
-      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - aa.com.tr",
-      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days aa.com.tr",
+      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
+      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
       "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期"
+        "传染10天"
       ],
       "signal_strength": "high"
     },
@@ -25,22 +25,24 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Hantavirus in France 2026: Andes strain case confirmed after man visited in July - The Connexion",
       "body_en": "Hantavirus in France 2026: Andes strain case confirmed after man visited in July The Connexion",
-      "summary_zh": "法国确认一例安第斯株汉坦病毒，患者曾于7月到访。",
+      "summary_zh": "法国确认安第斯株汉坦病毒病例，患者曾于7月到访。",
       "key_facts_zh": [
         "法国",
-        "安第斯株"
+        "安第斯株",
+        "确诊"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-9c4413dc41dcd50e",
       "time": "2026-08-07T10:52:12.000Z",
-      "title_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' - en.hespress.com",
-      "body_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' en.hespress.com",
+      "title_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' - HESPRESS English - Morocco News",
+      "body_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' HESPRESS English - Morocco News",
       "summary_zh": "法国建议汉坦病毒病例密切接触者居家隔离，风险低。",
       "key_facts_zh": [
         "法国",
-        "居家隔离"
+        "居家隔离",
+        "风险低"
       ],
       "signal_strength": "high"
     },
@@ -61,10 +63,11 @@
       "time": "2026-08-07T05:54:33.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - euractiv.com",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain euractiv.com",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒并被隔离。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
+        "法国",
         "西班牙",
-        "法国游客"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -73,10 +76,11 @@
       "time": "2026-08-07T05:29:58.000Z",
       "title_en": "Visited in July: Tourist in France tests positive for hantavirus - RTL Today",
       "body_en": "Visited in July: Tourist in France tests positive for hantavirus RTL Today",
-      "summary_zh": "法国一游客7月到访后汉坦病毒检测阳性。",
+      "summary_zh": "7月到访法国的游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客"
+        "游客",
+        "阳性"
       ],
       "signal_strength": "high"
     },
@@ -87,8 +91,9 @@
       "body_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain NDTV",
       "summary_zh": "法国游客检出汉坦病毒，在西班牙隔离。",
       "key_facts_zh": [
+        "法国",
         "西班牙",
-        "法国游客"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -97,11 +102,11 @@
       "time": "2026-08-06T16:22:00.000Z",
       "title_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic - El Constitucional",
       "body_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic El Constitucional",
-      "summary_zh": "西班牙发现一例法阿游客汉坦病毒无症状病例，患者隔离中。",
+      "summary_zh": "西班牙发现一例汉坦病毒无症状病例，患者为法阿游客，已隔离。",
       "key_facts_zh": [
         "西班牙",
-        "新增 1 例",
-        "隔离中"
+        "无症状",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -123,7 +128,7 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国报告一名七月过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国报告一游客7月过境法国后汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -138,8 +143,9 @@
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
       "summary_zh": "全球大流行病治疗中心宣布加速埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
-        "全球中心",
-        "治疗研究"
+        "治疗研究",
+        "埃博拉",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -148,10 +154,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒健康警报。",
       "key_facts_zh": [
         "智利",
-        "卫生警报"
+        "健康警报"
       ],
       "signal_strength": "high"
     },
@@ -160,11 +166,11 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 报告本周无新增汉坦病毒病例，今年累计 1 例。",
+      "summary_zh": "美国CDC周报：汉坦病毒感染本周0例，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "本周 0 例",
-        "累计 1 例"
+        "本周0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -173,11 +179,11 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2疑似"
+        "3人死亡",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -189,31 +195,19 @@
       "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
       "key_facts_zh": [
         "纽约时报",
-        "隔离经历"
+        "42天隔离"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6406aabb2fa5a5ed",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
-      "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3死",
-        "疫情担忧"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，CIDRAP综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
-        "邮轮",
+        "CIDRAP",
+        "邮轮爆发",
         "大脑影响"
       ],
       "signal_strength": "medium"
