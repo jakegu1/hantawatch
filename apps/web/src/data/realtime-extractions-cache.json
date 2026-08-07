@@ -12109,6 +12109,34 @@
         "source_url": "",
         "time": "2026-08-05T23:00:47.000Z"
       }
+    ],
+    "rt-6bea49ac108b440c": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "low",
+        "reasoning_zh": "报道称法国一名游客检测出汉坦病毒阳性，但未提供新增病例数，故增量为0。",
+        "update_id": "rt-6bea49ac108b440c",
+        "source_url": "",
+        "time": "2026-08-07T05:29:58.000Z"
+      }
+    ],
+    "rt-ab889ee07ed59cd1": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "low",
+        "reasoning_zh": "报道称法国游客在西班牙被隔离，但未提供新增病例数，故增量为0。",
+        "update_id": "rt-ab889ee07ed59cd1",
+        "source_url": "",
+        "time": "2026-08-07T04:27:53.000Z"
+      }
     ]
   }
 }
