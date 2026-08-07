@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-07T02:29:53.750751+00:00",
+  "__generated_at": "2026-08-07T03:44:21.023023+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-07T02:29:49.627222+00:00",
+  "last_fetched": "2026-08-07T03:44:19.542374+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,8 +16,8 @@
       "summary_zh": "西班牙隔离一名在法国感染汉坦病毒的游客。",
       "key_facts_zh": [
         "西班牙",
-        "隔离",
-        "游客"
+        "法国游客",
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -30,20 +30,33 @@
       "key_facts_zh": [
         "欧洲",
         "新增病例",
-        "邮轮"
+        "邮轮无关"
       ],
       "signal_strength": "medium"
+    },
+    {
+      "id": "rt-365168d211790ffc",
+      "time": "2026-08-06T16:53:42.000Z",
+      "title_en": "Hantavirus found in French tourist isolated in Spain - Egyptian Gazette",
+      "body_en": "Hantavirus found in French tourist isolated in Spain Egyptian Gazette",
+      "summary_zh": "西班牙隔离一名法国游客，检出汉坦病毒。",
+      "key_facts_zh": [
+        "西班牙",
+        "法国游客",
+        "隔离"
+      ],
+      "signal_strength": "high"
     },
     {
       "id": "rt-85d51dc6662c393c",
       "time": "2026-08-06T16:13:50.000Z",
       "title_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France - Diari ARA",
       "body_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France Diari ARA",
-      "summary_zh": "西班牙加利西亚发现无症状汉坦病毒病例，游客在法国检测阳性。",
+      "summary_zh": "西班牙加利西亚发现无症状汉坦病毒病例，游客在法国阳性。",
       "key_facts_zh": [
         "西班牙",
         "无症状",
-        "法国"
+        "法国阳性"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +65,7 @@
       "time": "2026-08-06T02:39:35.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "全球大流行病治疗中心宣布推进埃博拉和汉坦病毒治疗项目。",
+      "summary_zh": "全球大流行病治疗中心启动埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
         "治疗研究",
         "埃博拉",
@@ -65,7 +78,7 @@
       "time": "2026-08-05T23:00:47.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国一游客七月过境后检测汉坦病毒阳性。",
+      "summary_zh": "法国游客七月过境法国后检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -78,11 +91,10 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周零新增，全年累计一例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "零新增",
-        "累计一例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -91,25 +103,12 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认 3 人死亡，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疑似2例"
+        "死亡 3 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-3e985fba911fd187",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称如囚犯。",
-      "key_facts_zh": [
-        "美国",
-        "隔离42天"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
@@ -119,7 +118,7 @@
       "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响"
+        "研究"
       ],
       "signal_strength": "medium"
     }
