@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-07T12:44:43.980975+00:00",
+  "__generated_at": "2026-08-07T12:55:42.782022+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-07T12:44:43.073811+00:00",
+  "last_fetched": "2026-08-07T12:55:36.190882+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-08-07T05:54:33.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - euractiv.com",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain euractiv.com",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒，已隔离。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
         "法国游客",
@@ -39,7 +39,7 @@
       "time": "2026-08-07T05:29:58.000Z",
       "title_en": "Visited in July: Tourist in France tests positive for hantavirus - RTL Today",
       "body_en": "Visited in July: Tourist in France tests positive for hantavirus RTL Today",
-      "summary_zh": "法国游客七月访问后检出汉坦病毒阳性。",
+      "summary_zh": "7月访法游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -52,7 +52,7 @@
       "time": "2026-08-07T04:27:53.000Z",
       "title_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain - NDTV",
       "body_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain NDTV",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒，患者已隔离。",
+      "summary_zh": "法国游客检出汉坦病毒，在西班牙隔离。",
       "key_facts_zh": [
         "西班牙",
         "法国游客",
@@ -76,13 +76,13 @@
     {
       "id": "rt-85d51dc6662c393c",
       "time": "2026-08-06T16:13:50.000Z",
-      "title_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France - en.ara.cat",
-      "body_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France en.ara.cat",
+      "title_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France - Diari ARA",
+      "body_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France Diari ARA",
       "summary_zh": "西班牙加利西亚发现无症状汉坦病毒病例，游客在法国阳性。",
       "key_facts_zh": [
         "西班牙",
         "无症状",
-        "法国游客"
+        "游客"
       ],
       "signal_strength": "high"
     },
@@ -91,7 +91,7 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "七月过境法国的游客汉坦病毒检测阳性。",
+      "summary_zh": "7月过境法国的游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -106,7 +106,7 @@
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
       "summary_zh": "全球大流行病治疗中心宣布加速埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
-        "治疗中心",
+        "治疗研究",
         "埃博拉",
         "汉坦病毒"
       ],
@@ -120,31 +120,21 @@
       "summary_zh": "美国 CDC 周报：本周无新增，今年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
+        "本周 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-7ec734c06333c90b",
-      "time": "2026-07-23T00:40:00.000Z",
-      "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
-      "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒疫情凸显公共卫生沟通需求。",
-      "key_facts_zh": [
-        "邮轮",
-        "公共卫生"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认 3 人死于汉坦病毒，另有 2 例疑似死亡。",
+      "summary_zh": "委内瑞拉确认 3 人死亡，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例"
+        "3 死",
+        "2 疑似"
       ],
       "signal_strength": "high"
     },
@@ -153,10 +143,11 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
       "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉 3 人死于汉坦病毒引发疫情担忧。",
+      "summary_zh": "委内瑞拉 3 人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例"
+        "3 死",
+        "疫情担忧"
       ],
       "signal_strength": "high"
     },
@@ -165,7 +156,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"

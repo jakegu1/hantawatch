@@ -12137,6 +12137,34 @@
         "source_url": "",
         "time": "2026-08-07T04:27:53.000Z"
       }
+    ],
+    "rt-803fb59d20819a9d": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国建议密切接触者居家隔离，未报告新增病例数，风险低。",
+        "update_id": "rt-803fb59d20819a9d",
+        "source_url": "",
+        "time": "2026-08-07T09:56:19.000Z"
+      }
+    ],
+    "rt-2ab7b155b7ac5024": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国游客在西班牙隔离，未报告新增病例数，仅提及检测到病毒。",
+        "update_id": "rt-2ab7b155b7ac5024",
+        "source_url": "",
+        "time": "2026-08-07T05:54:33.000Z"
+      }
     ]
   }
 }
