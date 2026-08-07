@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-07T18:43:35.328026+00:00",
+  "__generated_at": "2026-08-07T18:51:25.988377+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-07T18:43:34.423639+00:00",
+  "last_fetched": "2026-08-07T18:51:17.851605+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Hantavirus in France 2026: Andes strain case confirmed after man visited in July - The Connexion",
       "body_en": "Hantavirus in France 2026: Andes strain case confirmed after man visited in July The Connexion",
-      "summary_zh": "法国确认安第斯株汉坦病毒病例，患者曾于7月到访。",
+      "summary_zh": "法国确认安第斯株汉坦病毒病例，患者7月曾到访。",
       "key_facts_zh": [
         "法国",
         "安第斯株",
@@ -63,10 +63,10 @@
       "time": "2026-08-07T05:54:33.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - euractiv.com",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain euractiv.com",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒，现被隔离。",
       "key_facts_zh": [
-        "法国",
         "西班牙",
+        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -91,8 +91,8 @@
       "body_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain NDTV",
       "summary_zh": "法国游客检出汉坦病毒，在西班牙隔离。",
       "key_facts_zh": [
-        "法国",
         "西班牙",
+        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -102,11 +102,11 @@
       "time": "2026-08-06T16:22:00.000Z",
       "title_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic - El Constitucional",
       "body_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic El Constitucional",
-      "summary_zh": "西班牙发现一例汉坦病毒无症状病例，患者为法阿游客，已隔离。",
+      "summary_zh": "西班牙发现一例法阿游客汉坦病毒无症状病例，患者隔离中。",
       "key_facts_zh": [
         "西班牙",
-        "无症状",
-        "隔离"
+        "新增 1 例",
+        "隔离中"
       ],
       "signal_strength": "high"
     },
@@ -128,7 +128,7 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国报告一游客7月过境法国后汉坦病毒检测阳性。",
+      "summary_zh": "法国一游客七月过境后检测汉坦病毒阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -154,10 +154,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒健康警报。",
+      "summary_zh": "智利宣布汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "健康警报"
+        "卫生警报"
       ],
       "signal_strength": "high"
     },
@@ -166,13 +166,26 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒感染本周0例，今年累计1例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周新增 0 例，全年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "本周0例",
-        "累计1例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7ec734c06333c90b",
+      "time": "2026-07-23T00:40:00.000Z",
+      "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
+      "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
+      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防备需求。",
+      "key_facts_zh": [
+        "邮轮",
+        "公共卫生",
+        "全球防备"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
@@ -182,8 +195,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
+        "3死",
+        "2疑似"
       ],
       "signal_strength": "high"
     },
@@ -195,7 +208,7 @@
       "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
       "key_facts_zh": [
         "纽约时报",
-        "42天隔离"
+        "隔离经历"
       ],
       "signal_strength": "medium"
     },
@@ -204,10 +217,9 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，CIDRAP综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
-        "CIDRAP",
-        "邮轮爆发",
+        "邮轮",
         "大脑影响"
       ],
       "signal_strength": "medium"

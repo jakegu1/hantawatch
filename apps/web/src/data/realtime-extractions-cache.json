@@ -12165,6 +12165,76 @@
         "source_url": "",
         "time": "2026-08-07T05:54:33.000Z"
       }
+    ],
+    "rt-e289857641e81a83": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙新增一例汉坦病毒患者，但未提供具体新增数字，故增量均为0。",
+        "update_id": "rt-e289857641e81a83",
+        "source_url": "",
+        "time": "2026-08-07T13:36:30.000Z"
+      }
+    ],
+    "rt-8d059864355b2406": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国确认一例安第斯株汉坦病毒病例，但未提供新增数字，故增量均为0。",
+        "update_id": "rt-8d059864355b2406",
+        "source_url": "",
+        "time": "2026-08-07T12:46:43.000Z"
+      }
+    ],
+    "rt-9c4413dc41dcd50e": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国建议密切接触者居家隔离，但未提及新增病例数字，故增量均为0。",
+        "update_id": "rt-9c4413dc41dcd50e",
+        "source_url": "",
+        "time": "2026-08-07T10:52:12.000Z"
+      }
+    ],
+    "rt-57c8e4fd38a7d0c2": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国建议接触者隔离，但未提供新增病例数字，故增量均为0。",
+        "update_id": "rt-57c8e4fd38a7d0c2",
+        "source_url": "",
+        "time": "2026-08-07T10:30:05.000Z"
+      }
+    ],
+    "rt-1bbe10e8ef4edb47": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-06",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙发现一例汉坦病毒病例，但未提供新增数字，故增量均为0。",
+        "update_id": "rt-1bbe10e8ef4edb47",
+        "source_url": "",
+        "time": "2026-08-06T16:22:00.000Z"
+      }
     ]
   }
 }
