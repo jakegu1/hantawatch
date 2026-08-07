@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-07T20:32:45.432349+00:00",
+  "__generated_at": "2026-08-07T21:31:52.211477+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-07T20:32:44.103002+00:00",
+  "last_fetched": "2026-08-07T21:31:50.550898+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -45,25 +45,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-57c8e4fd38a7d0c2",
-      "time": "2026-08-07T10:30:05.000Z",
-      "title_en": "France recommends home isolation for people who had contact with hantavirus-infected tourist - Le Monde.fr",
-      "body_en": "France recommends home isolation for people who had contact with hantavirus-infected tourist Le Monde.fr",
-      "summary_zh": "法国建议与感染汉坦病毒游客接触者居家隔离。",
-      "key_facts_zh": [
-        "法国",
-        "居家隔离"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-2ab7b155b7ac5024",
       "time": "2026-08-07T05:54:33.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - euractiv.com",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain euractiv.com",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒，现隔离中。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒，已隔离。",
       "key_facts_zh": [
         "西班牙",
+        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -73,9 +62,10 @@
       "time": "2026-08-07T05:29:58.000Z",
       "title_en": "Visited in July: Tourist in France tests positive for hantavirus - RTL Today",
       "body_en": "Visited in July: Tourist in France tests positive for hantavirus RTL Today",
-      "summary_zh": "7月访法游客汉坦病毒检测阳性。",
+      "summary_zh": "法国游客7月到访后确诊汉坦病毒。",
       "key_facts_zh": [
         "法国",
+        "游客",
         "确诊"
       ],
       "signal_strength": "high"
@@ -85,12 +75,25 @@
       "time": "2026-08-07T04:27:53.000Z",
       "title_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain - NDTV",
       "body_en": "Hantavirus Detected In French Tourist, Patient Isolated In Spain NDTV",
-      "summary_zh": "法国游客检出汉坦病毒，在西班牙隔离。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒，已隔离。",
       "key_facts_zh": [
         "西班牙",
+        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-f8eb31da3a8f4c78",
+      "time": "2026-08-06T17:54:15.000Z",
+      "title_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. - Informat.ro",
+      "body_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. Informat.ro",
+      "summary_zh": "欧洲新增汉坦病毒病例，与邮轮疫情无关。",
+      "key_facts_zh": [
+        "欧洲",
+        "新增病例"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-1bbe10e8ef4edb47",
@@ -100,6 +103,7 @@
       "summary_zh": "西班牙发现法阿游客汉坦病毒病例，患者隔离无症状。",
       "key_facts_zh": [
         "西班牙",
+        "法阿游客",
         "无症状"
       ],
       "signal_strength": "high"
@@ -113,7 +117,7 @@
       "key_facts_zh": [
         "西班牙",
         "法国",
-        "无症状"
+        "无症状病例"
       ],
       "signal_strength": "high"
     },
@@ -148,10 +152,10 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒健康警报。",
+      "summary_zh": "智利宣布汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "健康警报"
+        "卫生警报"
       ],
       "signal_strength": "high"
     },
@@ -160,13 +164,25 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，今年累计1例。",
       "key_facts_zh": [
-        "美国CDC",
-        "新增0例",
-        "累计1例"
+        "美国 CDC",
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7ec734c06333c90b",
+      "time": "2026-07-23T00:40:00.000Z",
+      "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
+      "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
+      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防范需求。",
+      "key_facts_zh": [
+        "邮轮",
+        "公共卫生"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
@@ -176,20 +192,32 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疑似2例"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-3e985fba911fd187",
+      "time": "2026-07-21T07:00:00.000Z",
+      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
+      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
+      "summary_zh": "纽约时报报道汉坦病毒隔离42天的经历。",
+      "key_facts_zh": [
+        "美国",
+        "隔离经历"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，CIDRAP综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，CIDRAP审查汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "脑部影响"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     }
