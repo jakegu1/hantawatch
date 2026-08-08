@@ -1,19 +1,19 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T17:22:51.524798+00:00",
+  "__generated_at": "2026-08-08T18:26:06.068875+00:00",
   "windowDays": 30,
   "source": "https://hantaflow.com/api/signals.json",
   "countries": {
     "CL": {
       "iso2": "CL",
-      "signalCount30d": 19,
+      "signalCount30d": 20,
       "signalCount7d": 6,
       "lastSignalAt": "2026-08-08T16:08:50+00:00"
     },
     "FR": {
       "iso2": "FR",
-      "signalCount30d": 76,
-      "signalCount7d": 76,
+      "signalCount30d": 74,
+      "signalCount7d": 74,
       "lastSignalAt": "2026-08-08T10:52:50+00:00"
     },
     "ES": {
@@ -48,7 +48,7 @@
     },
     "VE": {
       "iso2": "VE",
-      "signalCount30d": 14,
+      "signalCount30d": 15,
       "signalCount7d": 0,
       "lastSignalAt": "2026-07-22T07:41:00+00:00"
     }
