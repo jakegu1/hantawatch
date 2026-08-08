@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T01:03:20.020290+00:00",
+  "__generated_at": "2026-08-08T01:18:40.725469+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-08T01:03:19.071454+00:00",
+  "last_fetched": "2026-08-08T01:18:36.351605+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -138,7 +138,7 @@
       "time": "2026-08-06T02:39:35.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "Cumming全球中心宣布加速埃博拉和汉坦病毒治疗项目。",
+      "summary_zh": "全球大流行病治疗中心宣布加速埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
         "治疗研究",
         "埃博拉",
@@ -163,13 +163,25 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，今年累计1例。",
+      "summary_zh": "美国 CDC 报告本周汉坦病毒新增0例，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-7ec734c06333c90b",
+      "time": "2026-07-23T00:40:00.000Z",
+      "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
+      "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
+      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防备需求。",
+      "key_facts_zh": [
+        "邮轮",
+        "公共卫生"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
@@ -213,7 +225,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
