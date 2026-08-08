@@ -12,7 +12,7 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 1,
+      "entries": 2,
       "ok": true,
       "perQuery": [
         {
@@ -22,8 +22,8 @@
           "blocked": 0,
           "no_signal": 13,
           "duplicate": 0,
-          "non_authoritative": 11,
-          "kept": 1,
+          "non_authoritative": 10,
+          "kept": 2,
           "ok": true
         }
       ]
@@ -33,6 +33,14 @@
       "ok": true,
       "okCount": 9,
       "checkedAt": "2026-08-08T12:39:49.767391+00:00"
+    },
+    "surveillance_leads": {
+      "entries": 2,
+      "ok": true
+    },
+    "feeds_light_run": {
+      "ok": true,
+      "at": "2026-08-08T12:40:11.097384+00:00"
     }
   },
   "clusterCount": 1,
