@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T07:42:25.025068+00:00",
+  "__generated_at": "2026-08-08T08:31:37.288133+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-08T07:42:24.142592+00:00",
+  "last_fetched": "2026-08-08T08:31:36.381408+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，与访问法国有关。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例，与旅行相关。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -52,28 +52,16 @@
       "summary_zh": "法国关联旅行者检测出安第斯汉坦病毒。",
       "key_facts_zh": [
         "法国",
-        "旅行者"
+        "安第斯病毒"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-2ab7b155b7ac5024",
-      "time": "2026-08-07T05:54:33.000Z",
-      "title_en": "Hantavirus detected in France tourist now isolated in Spain - euractiv.com",
-      "body_en": "Hantavirus detected in France tourist now isolated in Spain euractiv.com",
-      "summary_zh": "法国游客在西班牙检测出汉坦病毒并被隔离。",
-      "key_facts_zh": [
-        "西班牙",
-        "隔离"
-      ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-0283b8b37c1f1257",
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "法国游客在西班牙检测出汉坦病毒并被隔离。",
+      "summary_zh": "法国游客在西班牙检测出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
         "隔离"
@@ -85,10 +73,10 @@
       "time": "2026-08-06T17:54:15.000Z",
       "title_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. - Informat.ro",
       "body_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. Informat.ro",
-      "summary_zh": "欧洲出现新汉坦病毒病例，与邮轮疫情无关。",
+      "summary_zh": "欧洲新增汉坦病毒病例，与邮轮疫情无关。",
       "key_facts_zh": [
         "欧洲",
-        "新病例"
+        "邮轮无关"
       ],
       "signal_strength": "medium"
     },
@@ -97,11 +85,10 @@
       "time": "2026-08-06T16:22:00.000Z",
       "title_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic - El Constitucional",
       "body_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic El Constitucional",
-      "summary_zh": "西班牙发现一例汉坦病毒无症状病例，患者为法阿游客，已隔离。",
+      "summary_zh": "西班牙发现法阿游客汉坦病毒病例，患者隔离无症状。",
       "key_facts_zh": [
         "西班牙",
-        "新增 1 例",
-        "隔离"
+        "无症状"
       ],
       "signal_strength": "high"
     },
@@ -110,11 +97,11 @@
       "time": "2026-08-06T16:13:50.000Z",
       "title_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France - Diari ARA",
       "body_en": "Detected in Galicia an asymptomatic case of hantavirus: a tourist who tested positive in France Diari ARA",
-      "summary_zh": "西班牙加利西亚发现一例无症状汉坦病毒病例，游客在法国检测阳性。",
+      "summary_zh": "西班牙加利西亚发现无症状汉坦病毒病例，游客在法国检测阳性。",
       "key_facts_zh": [
         "西班牙",
-        "加利西亚",
-        "无症状"
+        "法国",
+        "无症状病例"
       ],
       "signal_strength": "high"
     },
@@ -123,7 +110,7 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国报告一游客7月过境法国后检测汉坦病毒阳性。",
+      "summary_zh": "法国报告一名7月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
@@ -136,7 +123,7 @@
       "time": "2026-08-01T11:41:29.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利因汉坦病毒宣布卫生警报。",
+      "summary_zh": "智利宣布汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
         "卫生警报"
@@ -148,11 +135,11 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 报告2026年第30周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒感染本周0例，年内累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -161,7 +148,7 @@
       "time": "2026-07-23T00:40:00.000Z",
       "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
       "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球疾病防备需求。",
+      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防备需求。",
       "key_facts_zh": [
         "邮轮",
         "公共卫生"
@@ -176,8 +163,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例",
-        "疑似 2 例"
+        "3死",
+        "疑似2死"
       ],
       "signal_strength": "high"
     },
@@ -186,10 +173,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历。",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称如囚犯。",
       "key_facts_zh": [
-        "纽约时报",
-        "隔离经历"
+        "美国",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -198,10 +185,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
       "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒引发担忧。",
+      "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -210,10 +197,10 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响"
+        "研究"
       ],
       "signal_strength": "medium"
     }
