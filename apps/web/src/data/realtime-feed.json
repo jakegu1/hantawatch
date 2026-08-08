@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T10:23:38.066953+00:00",
+  "__generated_at": "2026-08-08T11:21:46.100485+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-08T10:23:37.091426+00:00",
+  "last_fetched": "2026-08-08T11:21:45.117041+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -76,7 +76,7 @@
       "summary_zh": "欧洲新增一例汉坦病毒，与邮轮疫情无关。",
       "key_facts_zh": [
         "欧洲",
-        "新增病例"
+        "邮轮无关"
       ],
       "signal_strength": "medium"
     },
@@ -101,7 +101,7 @@
       "key_facts_zh": [
         "西班牙",
         "法国",
-        "无症状病例"
+        "无症状"
       ],
       "signal_strength": "high"
     },
@@ -114,7 +114,7 @@
       "key_facts_zh": [
         "法国",
         "游客",
-        "检测阳性"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -135,9 +135,9 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周新增0例，全年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，年内累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
+        "美国CDC",
         "新增0例",
         "累计1例"
       ],
@@ -148,7 +148,7 @@
       "time": "2026-07-23T00:40:00.000Z",
       "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
       "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒暴发凸显公共卫生沟通和全球防备需求。",
+      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防备需求。",
       "key_facts_zh": [
         "邮轮",
         "公共卫生"
@@ -169,14 +169,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-6406aabb2fa5a5ed",
+      "id": "rt-4d0d54dc679152a5",
       "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
-      "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
+      "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - independent.co.uk",
+      "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns independent.co.uk",
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例"
+        "3人死亡"
       ],
       "signal_strength": "high"
     },
@@ -185,7 +185,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
