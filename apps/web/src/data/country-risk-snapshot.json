@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T01:18:40.723955+00:00",
+  "__generated_at": "2026-08-08T06:44:57.252203+00:00",
   "date": "2026-08-08",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -130,16 +130,15 @@
     },
     "PL": {
       "iso2": "PL",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "东南部 Podkarpackie 省最为活跃；近期媒体讨论较多，实际本土传播水平偏低。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-07-22T06:51:55+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "RU": {
       "iso2": "RU",
@@ -234,8 +233,8 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 34,
-      "signalCount7d": 34,
+      "signalCount30d": 35,
+      "signalCount7d": 35,
       "lastSignalAt": "2026-08-07T16:31:46+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-05"
@@ -271,11 +270,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 19 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 19 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 18 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 18 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 19,
-      "signalCount7d": 10,
+      "signalCount30d": 18,
+      "signalCount7d": 8,
       "lastSignalAt": "2026-08-07T20:42:00+00:00"
     },
     "BR": {
