@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-08T12:31:54.459017+00:00",
+  "__generated_at": "2026-08-08T12:40:11.101571+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-08T12:31:53.287047+00:00",
+  "last_fetched": "2026-08-08T12:40:07.495589+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -37,7 +37,7 @@
       "time": "2026-08-07T10:52:12.000Z",
       "title_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' - HESPRESS English - Morocco News",
       "body_en": "France recommends home isolation for close contacts of hantavirus case, risk 'low' HESPRESS English - Morocco News",
-      "summary_zh": "法国建议汉坦病毒病例密切接触者居家隔离，风险低。",
+      "summary_zh": "法国建议汉坦病毒密切接触者居家隔离，风险低。",
       "key_facts_zh": [
         "法国",
         "居家隔离"
@@ -49,7 +49,7 @@
       "time": "2026-08-07T05:58:48.000Z",
       "title_en": "Andes hantavirus case detected in France-linked traveller | Tap to know more | Inshorts - Inshorts",
       "body_en": "Andes hantavirus case detected in France-linked traveller | Tap to know more | Inshorts Inshorts",
-      "summary_zh": "法国关联旅行者检出安第斯汉坦病毒病例。",
+      "summary_zh": "法国关联旅行者检出安第斯汉坦病毒。",
       "key_facts_zh": [
         "法国",
         "安第斯汉坦病毒"
@@ -61,7 +61,7 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙隔离一名法国游客，检出汉坦病毒。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
         "隔离"
@@ -73,10 +73,10 @@
       "time": "2026-08-06T17:54:15.000Z",
       "title_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. - Informat.ro",
       "body_en": "A new case of hantavirus in Europe, unrelated to the epidemic on the cruise ship that caused three victims. Informat.ro",
-      "summary_zh": "欧洲新增一例汉坦病毒，与邮轮疫情无关。",
+      "summary_zh": "欧洲新增汉坦病毒病例，与邮轮疫情无关。",
       "key_facts_zh": [
         "欧洲",
-        "新增病例"
+        "邮轮无关"
       ],
       "signal_strength": "medium"
     },
@@ -85,7 +85,7 @@
       "time": "2026-08-06T16:22:00.000Z",
       "title_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic - El Constitucional",
       "body_en": "A new case of hantavirus detected in Spain in a French-Argentine tourist: the patient remains isolated and asymptomatic El Constitucional",
-      "summary_zh": "西班牙检出法阿游客汉坦病毒，患者隔离无症状。",
+      "summary_zh": "西班牙检出法阿游客汉坦病毒，无症状隔离。",
       "key_facts_zh": [
         "西班牙",
         "无症状"
@@ -148,7 +148,7 @@
       "time": "2026-07-23T00:40:00.000Z",
       "title_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise - Newswise",
       "body_en": "Cruise Ship Hantavirus Outbreak Highlights Need for Clear Public Health Communication and Global Disease Preparedness | Newswise Newswise",
-      "summary_zh": "邮轮汉坦病毒爆发凸显公共卫生沟通和全球防备需求。",
+      "summary_zh": "邮轮汉坦病毒疫情凸显公共卫生沟通和全球防备需求。",
       "key_facts_zh": [
         "邮轮",
         "公共卫生"
@@ -176,7 +176,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
