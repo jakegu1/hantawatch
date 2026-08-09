@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-09T20:22:43.621342+00:00",
+  "__generated_at": "2026-08-09T21:24:08.031819+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-09T20:22:42.659867+00:00",
+  "last_fetched": "2026-08-09T21:24:06.719373+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -49,7 +49,7 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙隔离一名在法国感染汉坦病毒的游客。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
         "隔离"
@@ -73,19 +73,19 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，年内累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "累计1例"
+        "新增0例"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-9d883b468d43eb23",
       "time": "2026-07-22T07:00:00.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - apnews.com",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected apnews.com",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
+      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡3例"
@@ -97,10 +97,10 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮暴发后，CIDRAP综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮暴发后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "脑影响"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     }
