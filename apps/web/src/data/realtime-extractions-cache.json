@@ -12249,6 +12249,20 @@
         "source_url": "",
         "time": "2026-08-07T05:58:48.000Z"
       }
+    ],
+    "rt-0e51b4f6a1d49d24": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-07",
+        "confidence": "medium",
+        "reasoning_zh": "法国建议密切接触者居家隔离，但未提供新增病例数，故增量为0。",
+        "update_id": "rt-0e51b4f6a1d49d24",
+        "source_url": "",
+        "time": "2026-08-07T14:22:45.000Z"
+      }
     ]
   }
 }
