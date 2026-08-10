@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-10T20:33:49.026321+00:00",
+  "__generated_at": "2026-08-10T21:34:19.205924+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-10T20:33:47.671989+00:00",
+  "last_fetched": "2026-08-10T21:34:18.006772+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-08-07T13:36:30.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
+      "summary_zh": "西班牙新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
         "传染10天"
@@ -36,9 +36,9 @@
     {
       "id": "rt-8d059864355b2406",
       "time": "2026-08-07T12:46:43.000Z",
-      "title_en": "Rare hantavirus case confirmed after visit to France - connexionfrance.com",
-      "body_en": "Rare hantavirus case confirmed after visit to France connexionfrance.com",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，曾到访法国。",
+      "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
+      "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
+      "summary_zh": "法国旅行后确诊罕见汉坦病毒病例。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -50,11 +50,10 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙隔离一名在法国感染汉坦病毒的游客。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
-        "隔离",
-        "游客"
+        "隔离"
       ],
       "signal_strength": "high"
     },
@@ -63,11 +62,11 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，年内累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，年内1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "美国CDC",
+        "新增0例",
+        "年内1例"
       ],
       "signal_strength": "high"
     },
@@ -79,8 +78,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例",
-        "疑似 2 例"
+        "死亡3例",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -101,7 +100,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
