@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T07:01:26.798857+00:00",
+  "__generated_at": "2026-08-11T08:05:35.955309+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T07:01:21.986314+00:00",
+  "last_fetched": "2026-08-11T08:05:35.007629+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-08-07T13:36:30.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
+      "summary_zh": "西班牙卫生官员称新汉坦病毒患者或已传染10天。",
       "key_facts_zh": [
         "西班牙",
         "传染10天"
@@ -38,7 +38,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，曾到访法国。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例，曾访法国。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -52,8 +52,8 @@
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
       "summary_zh": "法国游客在西班牙被检出汉坦病毒并隔离。",
       "key_facts_zh": [
+        "法国",
         "西班牙",
-        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -63,7 +63,7 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周新增0例，年内累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增0例",
@@ -105,8 +105,8 @@
       "summary_zh": "纽约时报报道一名患者经历42天汉坦病毒隔离，感觉像囚犯。",
       "key_facts_zh": [
         "美国",
-        "隔离",
-        "42天"
+        "汉坦病毒",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
