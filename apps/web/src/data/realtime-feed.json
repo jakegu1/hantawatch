@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T12:46:13.805807+00:00",
+  "__generated_at": "2026-08-11T12:56:03.545956+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T12:46:12.761894+00:00",
+  "last_fetched": "2026-08-11T12:55:59.649516+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，与访问有关。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例，曾到访法国。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -49,10 +49,10 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增汉坦病毒病例，今年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "累计1例"
+        "美国CDC",
+        "无新增"
       ],
       "signal_strength": "high"
     },
@@ -67,18 +67,6 @@
         "死亡3例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-908bb7c9be0ce7f0",
-      "time": "2026-07-20T07:00:00.000Z",
-      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
-      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
-      "key_facts_zh": [
-        "邮轮",
-        "大脑影响"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
