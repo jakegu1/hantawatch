@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T17:52:09.605668+00:00",
+  "__generated_at": "2026-08-11T18:51:54.480433+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T17:52:08.504085+00:00",
+  "last_fetched": "2026-08-11T18:51:53.617522+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -35,8 +35,8 @@
     {
       "id": "rt-0283b8b37c1f1257",
       "time": "2026-08-06T18:07:31.000Z",
-      "title_en": "Hantavirus detected in France tourist now isolated in Spain - medicalxpress.com",
-      "body_en": "Hantavirus detected in France tourist now isolated in Spain medicalxpress.com",
+      "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
+      "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
       "summary_zh": "西班牙隔离一名在法国感染汉坦病毒的游客。",
       "key_facts_zh": [
         "西班牙",
@@ -49,9 +49,9 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，年内累计1例。",
+      "summary_zh": "美国CDC周报：本周汉坦病毒新增0例，年内累计1例。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "新增0例"
       ],
       "signal_strength": "high"
@@ -61,9 +61,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称如囚犯。",
       "key_facts_zh": [
-        "隔离42天"
+        "隔离",
+        "42天"
       ],
       "signal_strength": "medium"
     },
@@ -84,7 +85,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述研究汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "汉坦病毒",
