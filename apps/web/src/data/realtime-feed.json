@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T20:37:43.322590+00:00",
+  "__generated_at": "2026-08-11T21:37:53.070564+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T20:37:41.961772+00:00",
+  "last_fetched": "2026-08-11T21:37:51.581565+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-08-11T12:26:45.000Z",
       "title_en": "Four contacts of a tourist with hantavirus isolated in Spain - Diari ARA",
       "body_en": "Four contacts of a tourist with hantavirus isolated in Spain Diari ARA",
-      "summary_zh": "西班牙隔离一名游客的4名接触者，该游客感染汉坦病毒。",
+      "summary_zh": "西班牙隔离一名游客的4名接触者。",
       "key_facts_zh": [
         "西班牙",
         "隔离接触者"
@@ -25,19 +25,19 @@
       "time": "2026-08-10T16:24:00.000Z",
       "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
       "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "罕见邮轮病毒爆发凸显公共卫生信息传递和疾病准备教训。",
+      "summary_zh": "邮轮罕见疫情爆发凸显公共卫生沟通教训。",
       "key_facts_zh": [
         "邮轮",
-        "疫情教训"
+        "疫情爆发"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T13:36:30.000Z",
-      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - aa.com.tr",
-      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days aa.com.tr",
-      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
+      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
+      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
+      "summary_zh": "西班牙新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
         "传染期10天"
@@ -49,7 +49,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，患者曾到访法国。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -59,9 +59,9 @@
     {
       "id": "rt-0283b8b37c1f1257",
       "time": "2026-08-06T18:07:31.000Z",
-      "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
-      "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "法国游客在西班牙被检测出汉坦病毒并隔离。",
+      "title_en": "Hantavirus detected in France tourist now isolated in Spain - medicalxpress.com",
+      "body_en": "Hantavirus detected in France tourist now isolated in Spain medicalxpress.com",
+      "summary_zh": "法国游客在西班牙被隔离并检出汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
         "法国游客",
@@ -74,25 +74,13 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：本周新增0例，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增0例",
-        "累计1例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-3e985fba911fd187",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
-      "key_facts_zh": [
-        "隔离经历",
-        "42天"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
@@ -102,8 +90,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2疑似"
+        "3人死亡",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -112,9 +100,10 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
+        "汉坦病毒",
         "大脑影响"
       ],
       "signal_strength": "medium"
