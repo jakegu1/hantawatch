@@ -1,13 +1,25 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T01:08:22.107681+00:00",
+  "__generated_at": "2026-08-11T01:24:31.968485+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T01:08:21.276568+00:00",
+  "last_fetched": "2026-08-11T01:24:25.249807+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-e908c62fa7d51976",
+      "time": "2026-08-10T16:24:00.000Z",
+      "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
+      "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
+      "summary_zh": "邮轮罕见病毒爆发凸显公共卫生信息传递与防范准备。",
+      "key_facts_zh": [
+        "邮轮",
+        "公共卫生"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-0e51b4f6a1d49d24",
       "time": "2026-08-07T14:22:45.000Z",
@@ -16,8 +28,7 @@
       "summary_zh": "法国建议汉坦病毒病例密切接触者居家隔离，风险低。",
       "key_facts_zh": [
         "法国",
-        "居家隔离",
-        "风险低"
+        "居家隔离"
       ],
       "signal_strength": "high"
     },
@@ -38,7 +49,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例，曾到访法国。",
+      "summary_zh": "法国旅行后确诊罕见汉坦病毒病例。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -50,10 +61,9 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "法国游客在西班牙被检出汉坦病毒，现隔离中。",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
       "key_facts_zh": [
         "西班牙",
-        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -63,11 +73,10 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，年内累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增0例",
-        "年内1例"
+        "美国CDC",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -79,8 +88,7 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
-        "疑似2例"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -92,7 +100,7 @@
       "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },

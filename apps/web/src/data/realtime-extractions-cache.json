@@ -12263,6 +12263,20 @@
         "source_url": "",
         "time": "2026-08-07T14:22:45.000Z"
       }
+    ],
+    "rt-e908c62fa7d51976": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-10",
+        "confidence": "low",
+        "reasoning_zh": "标题提及邮轮病毒爆发，但未指明国家、病毒类型及具体数字，无法提取变化量。",
+        "update_id": "rt-e908c62fa7d51976",
+        "source_url": "",
+        "time": "2026-08-10T16:24:00.000Z"
+      }
     ]
   }
 }
