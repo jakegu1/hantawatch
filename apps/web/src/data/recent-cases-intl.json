@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T03:28:47.209011+00:00",
+  "__generated_at": "2026-08-11T04:59:51.185125+00:00",
   "cases": [
     {
       "id": "surv-news-news.google.com-rss-articles-cbmi0afbvv95cuxqoexxcwzprgfdrkjiuvbdsedov3ndn0dyqupytm4wskowa1fjem5lnu40lw5qcgjcwk",
@@ -9,12 +9,12 @@
       "date": "2026-08-07",
       "caseType": "suspected",
       "count": 0,
-      "title": "某国发现输入性安第斯汉坦病毒病例，开展流调与接触者追踪。",
-      "summary": "输入病例；流调；接触追踪",
+      "title": "[翻译缺失 · 请参考英文原文]",
+      "summary": "",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQOExXcWZpRGFDRkJIUVBDSEdOV3NDN0dYQUpyTm4wSkowa1FJem5LNU40LW5QcGJCWkFpMlRWRW9vRE01a29rV1RjQ0xKVUZTU296Smw4b3F3VG1Bb0YtNnpySThCYXBPT1A0WU0wa1hoLWo3c1R4ZmpGUE1ORlBUcUY3am9lNlN2TWstN0hUQVFwSkptTzB3amRYblhZX2FCV2tmQXZVQVB1X1cta2NwZ2xZT3NORHdLbkJUejlsV2U3OTVFNGxCWFFYSjJzcnFk?oc=5",
-        "retrievedAt": "2026-08-11T03:28:37.870332+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.168535+00:00",
         "confidence": "surveillance"
       }
     },
@@ -25,12 +25,12 @@
       "date": "2026-08-07",
       "caseType": "suspected",
       "count": 0,
-      "title": "欧洲 CDC 发布 8 月 1 日至 7 日传染病威胁周报。",
+      "title": "欧洲 CDC 发布 8 月 1-7 日传染病威胁周报。",
       "summary": "欧洲 CDC；周报",
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPR0FmRTZDX2t1bVhJelR3QklCQXNObVJESXFEZHh6eW8yLWo1d1JpZWxqbTY2eGxPRURpel9TeWxCekZXT29BSk1hM1Q5cVZ2eVQtWWpaU2JlcnJRRnRiQlZfN0FYNGh6VUkxNjlJMUhNLXdpNW9VSkt1RXBUSlZRXzZBcWtxOEFXdmpzc0dyU3JqRUt2eTY5RUFUTDBFaUw0aGMyMUh6dGhYdG8?oc=5",
-        "retrievedAt": "2026-08-11T03:28:37.870332+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.168535+00:00",
         "confidence": "surveillance"
       }
     },
@@ -46,7 +46,7 @@
       "source": {
         "name": "专业监测源",
         "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc1NvTmQwekk2WFhTUE5CZV9QRXJ5N2R6S3VuMkpySjRxVXlLd2x5Qkd5YjhjaG1YdkRRMmh6dkowa1pSbXFyQld6eVVSYUpFRF9OZ3p0anJ2N3NwY2VtVDJEY2FWLUFmTWlxRC1QNFZtb3F4ZXdmdmxJUHRUTUE2a0t2aWxKeVR1MDZ5RndBY1dKSFZPTEJiNXJXbEpzMXpQN0xKZjFDLUY0MUxhOUE?oc=5",
-        "retrievedAt": "2026-08-11T03:28:37.870332+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.168535+00:00",
         "confidence": "surveillance"
       }
     },
@@ -126,7 +126,7 @@
       "source": {
         "name": "Texas DSHS / ABC13 Houston",
         "url": "https://www.cdc.gov/hantavirus/situation-summary/index.html",
-        "retrievedAt": "2026-08-11T03:28:37.870912+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.169148+00:00",
         "confidence": "news"
       }
     },
@@ -142,7 +142,7 @@
       "source": {
         "name": "Ministère de la Santé / TF1 Info",
         "url": "https://www.tf1info.fr/sante/hantavirus-fin-de-l-isolement-samedi-pour-la-majorite-des-cas-contacts-2445568.html",
-        "retrievedAt": "2026-08-11T03:28:37.870912+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.169148+00:00",
         "confidence": "news"
       }
     },
@@ -158,7 +158,23 @@
       "source": {
         "name": "西班牙卫生部 / Xinhua",
         "url": "https://english.news.cn/europe/20260605/0175b6b4a97946cc86b6ac9924a9148a/c.html",
-        "retrievedAt": "2026-08-11T03:28:37.870912+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.169148+00:00",
+        "confidence": "news"
+      }
+    },
+    {
+      "id": "news-news.google.com-rss-articles-cbmif0fvx3lxtfbgofvuv0xmzzjvz290x0zrb2trmlllbgviuut5ewdmbxb0mxvxqufuqzvky19bd0v0af",
+      "regionCode": "INT",
+      "serotypeId": "other",
+      "date": "2026-05-12",
+      "caseType": "suspected",
+      "count": 0,
+      "title": "世卫组织：应对汉坦病毒疫情工作“还未结束”",
+      "summary": "",
+      "source": {
+        "name": "新华网",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGOFVuV0xMZzJvZ290X0ZRb2trMllLbGVIUUt5eWdMbXB0MXVxQUFuQzVkY19Bd0V0aFNNM0Frc24xcEZsOG9oVDJKREJiMVgzN1ZfTzlpeDh1Zjg3cF9PVEdZa2ZzQ0g0aTNsRWxRcUJScUVIdUhXYXlrSXN2ZGc?oc=5",
+        "retrievedAt": "2026-08-11T04:59:43.168535+00:00",
         "confidence": "news"
       }
     },
@@ -174,7 +190,7 @@
       "source": {
         "name": "台湾省疾病管制署",
         "url": "https://www.cdc.gov.tw",
-        "retrievedAt": "2026-08-11T03:28:37.870912+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.169148+00:00",
         "confidence": "news"
       }
     },
@@ -190,7 +206,7 @@
       "source": {
         "name": "World Health Organization (WHO)",
         "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQREtaaXhOcDNRT0lzZS1mejlmTGlqdGk0ZHVhazZjcVlncFdqOXNEUzQ4TUxFSFZCaTZYVnQtY2o4LUNicWY1VzNnaHVhLVBDZU9qZ3JZLXhNY3gyVi14SDhkR3pWT1ktbzdWYldYRm83cXVLTGJ1djUyclhidGVPM1JPWGxIUnhWOEM1RG9iVjVvaG5KLVJ1X2lhR1c5bEpaTXVhaw?oc=5",
-        "retrievedAt": "2026-08-11T03:28:37.870332+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.168535+00:00",
         "confidence": "news"
       }
     },
@@ -206,7 +222,7 @@
       "source": {
         "name": "Swiss BAG",
         "url": "https://www.bag.admin.ch",
-        "retrievedAt": "2026-08-11T03:28:37.870912+00:00",
+        "retrievedAt": "2026-08-11T04:59:43.169148+00:00",
         "confidence": "news"
       }
     }
