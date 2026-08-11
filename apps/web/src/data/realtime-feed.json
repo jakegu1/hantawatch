@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T22:34:11.708265+00:00",
+  "__generated_at": "2026-08-11T23:32:16.830684+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T22:34:10.447553+00:00",
+  "last_fetched": "2026-08-11T23:32:15.876243+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,21 +16,10 @@
       "summary_zh": "西班牙隔离一名游客的4名接触者，该游客感染汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
-        "隔离接触者"
+        "隔离接触者",
+        "游客感染"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-e908c62fa7d51976",
-      "time": "2026-08-10T16:24:00.000Z",
-      "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - news-medical.net",
-      "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness news-medical.net",
-      "summary_zh": "邮轮罕见病毒爆发凸显公共卫生信息传递和疾病防范教训。",
-      "key_facts_zh": [
-        "邮轮",
-        "疫情教训"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-e289857641e81a83",
@@ -40,7 +29,8 @@
       "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期"
+        "传染期",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +42,8 @@
       "summary_zh": "法国确认一例罕见汉坦病毒病例，患者曾到访法国。",
       "key_facts_zh": [
         "法国",
-        "确诊"
+        "确诊",
+        "汉坦病毒"
       ],
       "signal_strength": "high"
     },
@@ -61,7 +52,7 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒并被隔离。",
+      "summary_zh": "法国游客在西班牙被隔离，检测出汉坦病毒。",
       "key_facts_zh": [
         "西班牙",
         "法国游客",
@@ -74,10 +65,11 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增汉坦病毒病例，今年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例"
+        "美国CDC",
+        "无新增",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
