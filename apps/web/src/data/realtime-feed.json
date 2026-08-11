@@ -1,26 +1,13 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-11T11:38:44.834754+00:00",
+  "__generated_at": "2026-08-11T12:46:13.805807+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-11T11:38:43.887250+00:00",
+  "last_fetched": "2026-08-11T12:46:12.761894+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
-    {
-      "id": "rt-0e51b4f6a1d49d24",
-      "time": "2026-08-07T14:22:45.000Z",
-      "title_en": "France recommends home isolation for close contacts of hantavirus case, risk ‘low’ - Macau Business",
-      "body_en": "France recommends home isolation for close contacts of hantavirus case, risk ‘low’ Macau Business",
-      "summary_zh": "法国建议汉坦病毒病例密切接触者居家隔离，风险低。",
-      "key_facts_zh": [
-        "法国",
-        "居家隔离",
-        "风险低"
-      ],
-      "signal_strength": "high"
-    },
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T13:36:30.000Z",
@@ -29,8 +16,7 @@
       "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期",
-        "10天"
+        "传染10天"
       ],
       "signal_strength": "high"
     },
@@ -39,11 +25,10 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国旅行后确诊罕见汉坦病毒病例。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例，与访问有关。",
       "key_facts_zh": [
         "法国",
-        "确诊",
-        "旅行"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +37,9 @@
       "time": "2026-08-06T18:07:31.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "法国游客在西班牙检出汉坦病毒并隔离。",
+      "summary_zh": "西班牙隔离一名在法国感染汉坦病毒的游客。",
       "key_facts_zh": [
         "西班牙",
-        "法国游客",
         "隔离"
       ],
       "signal_strength": "high"
@@ -65,50 +49,22 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增0例，年内累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增0例",
-        "年内1例"
+        "累计1例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-2b643882ddef3391",
-      "time": "2026-07-22T07:00:00.000Z",
-      "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn | US healthcare - The Guardian",
-      "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn | US healthcare The Guardian",
-      "summary_zh": "前官员警告美国 CDC 削减致疫情准备不足。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "削减",
-        "准备不足"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-9d883b468d43eb23",
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "疑似2死"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-6406aabb2fa5a5ed",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns - The Independent",
-      "body_en": "Three people dead from Hantavirus in Venezuela spark outbreak concerns The Independent",
-      "summary_zh": "委内瑞拉3人死于汉坦病毒，引发疫情担忧。",
-      "key_facts_zh": [
-        "委内瑞拉",
-        "3死",
-        "疫情担忧"
+        "死亡3例"
       ],
       "signal_strength": "high"
     },
@@ -117,11 +73,10 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，综述研究汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响",
-        "综述"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     }
