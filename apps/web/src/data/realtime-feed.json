@@ -1,34 +1,22 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-12T05:38:01.819513+00:00",
+  "__generated_at": "2026-08-12T07:13:12.014188+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-12T05:38:00.882650+00:00",
+  "last_fetched": "2026-08-12T07:13:11.111229+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-b171b8ce9110351f",
-      "time": "2026-08-11T12:26:45.000Z",
-      "title_en": "Four contacts of a tourist with hantavirus isolated in Spain - Diari ARA",
-      "body_en": "Four contacts of a tourist with hantavirus isolated in Spain Diari ARA",
-      "summary_zh": "西班牙隔离一名游客的4名接触者。",
-      "key_facts_zh": [
-        "西班牙",
-        "隔离接触者"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-e908c62fa7d51976",
       "time": "2026-08-10T16:24:00.000Z",
       "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
       "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "邮轮罕见疫情暴发凸显公共卫生沟通教训。",
+      "summary_zh": "邮轮罕见病毒爆发凸显公共卫生沟通与准备教训。",
       "key_facts_zh": [
         "邮轮",
-        "疫情暴发"
+        "公共卫生"
       ],
       "signal_strength": "medium"
     },
@@ -37,10 +25,10 @@
       "time": "2026-08-07T13:36:30.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新汉坦病毒患者或已传染10天。",
+      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期10天"
+        "传染10天"
       ],
       "signal_strength": "high"
     },
@@ -49,7 +37,7 @@
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Rare hantavirus case confirmed after visit to France - The Connexion",
       "body_en": "Rare hantavirus case confirmed after visit to France The Connexion",
-      "summary_zh": "法国确认一例罕见汉坦病毒病例。",
+      "summary_zh": "法国确认一例罕见汉坦病毒病例，患者曾到访法国。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -61,9 +49,9 @@
       "time": "2026-07-25T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026年累计1例。",
       "key_facts_zh": [
-        "美国CDC",
+        "美国 CDC",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -73,9 +61,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "42天汉坦病毒隔离经历：感觉像囚犯。",
+      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称如囚犯。",
       "key_facts_zh": [
-        "隔离42天"
+        "隔离",
+        "42天"
       ],
       "signal_strength": "medium"
     },
@@ -84,7 +73,7 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡3例"
@@ -96,10 +85,9 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒",
         "大脑影响"
       ],
       "signal_strength": "medium"
