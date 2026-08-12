@@ -1,25 +1,13 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-12T19:57:27.686552+00:00",
+  "__generated_at": "2026-08-12T20:40:29.328988+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-12T19:57:26.849398+00:00",
+  "last_fetched": "2026-08-12T20:40:28.179381+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
-    {
-      "id": "rt-e908c62fa7d51976",
-      "time": "2026-08-10T16:24:00.000Z",
-      "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
-      "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "邮轮罕见病毒爆发凸显公共卫生沟通与准备教训。",
-      "key_facts_zh": [
-        "邮轮",
-        "公共卫生"
-      ],
-      "signal_strength": "medium"
-    },
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T13:36:30.000Z",
@@ -45,9 +33,21 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-0283b8b37c1f1257",
+      "time": "2026-08-06T18:07:31.000Z",
+      "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
+      "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
+      "summary_zh": "法国游客在西班牙检出汉坦病毒并被隔离。",
+      "key_facts_zh": [
+        "西班牙",
+        "隔离"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-f2eb81fd0ff0f51c",
-      "time": "2026-07-25T00:00:00.000Z",
-      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 30): 0 new, 1 YTD",
+      "time": "2026-08-01T00:00:00.000Z",
+      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
       "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
@@ -69,14 +69,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-2b643882ddef3391",
+      "time": "2026-07-22T07:00:00.000Z",
+      "title_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn | US healthcare - theguardian.com",
+      "body_en": "CDC cuts leave US less prepared for disease outbreaks, former officials warn | US healthcare theguardian.com",
+      "summary_zh": "美国前官员警告，CDC削减经费致美国应对疫情能力下降。",
+      "key_facts_zh": [
+        "美国",
+        "美国 CDC",
+        "经费削减"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-3e985fba911fd187",
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
+      "summary_zh": "纽约时报报道，一名患者经历42天汉坦病毒隔离，感觉像囚犯。",
       "key_facts_zh": [
-        "隔离",
-        "42天"
+        "美国",
+        "汉坦病毒",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -85,9 +99,10 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮暴发后，CIDRAP审查汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
+        "汉坦病毒",
         "大脑影响"
       ],
       "signal_strength": "medium"
