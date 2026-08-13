@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-13T12:53:12.359389+00:00",
+  "__generated_at": "2026-08-13T13:02:10.409746+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-13T12:53:11.523342+00:00",
+  "last_fetched": "2026-08-13T13:02:06.390588+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -18,14 +18,14 @@
         "西班牙",
         "传染10天"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-8d059864355b2406",
       "time": "2026-08-07T12:46:43.000Z",
       "title_en": "Hantavirus case confirmed: man visited France in July - The Connexion",
       "body_en": "Hantavirus case confirmed: man visited France in July The Connexion",
-      "summary_zh": "法国确认一例汉坦病毒病例，患者曾于7月到访法国。",
+      "summary_zh": "法国确认一例汉坦病毒病例，患者7月曾访法。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -49,10 +49,10 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，年内累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "年内1例"
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -73,7 +73,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮爆发后，CIDRAP综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
