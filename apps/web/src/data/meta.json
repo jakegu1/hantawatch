@@ -20,9 +20,9 @@
           "hl": "zh-CN",
           "fetched": 100,
           "blocked": 0,
-          "no_signal": 14,
+          "no_signal": 13,
           "duplicate": 0,
-          "non_authoritative": 7,
+          "non_authoritative": 8,
           "kept": 4,
           "ok": true
         }
@@ -33,6 +33,14 @@
       "ok": true,
       "okCount": 8,
       "checkedAt": "2026-08-13T13:01:41.228696+00:00"
+    },
+    "surveillance_leads": {
+      "entries": 3,
+      "ok": true
+    },
+    "feeds_light_run": {
+      "ok": true,
+      "at": "2026-08-13T13:02:10.405637+00:00"
     }
   },
   "clusterCount": 1,
