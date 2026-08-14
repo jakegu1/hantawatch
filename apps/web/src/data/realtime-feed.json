@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-14T01:40:54.082496+00:00",
+  "__generated_at": "2026-08-14T03:59:12.652871+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-14T01:40:49.250512+00:00",
+  "last_fetched": "2026-08-14T03:59:11.820597+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-08-07T10:30:05.000Z",
       "title_en": "France recommends home isolation for people who had contact with hantavirus-infected tourist - Le Monde.fr",
       "body_en": "France recommends home isolation for people who had contact with hantavirus-infected tourist Le Monde.fr",
-      "summary_zh": "法国建议接触汉坦病毒游客者居家隔离。",
+      "summary_zh": "法国建议与汉坦病毒感染者接触者居家隔离。",
       "key_facts_zh": [
         "法国",
         "居家隔离"
@@ -25,10 +25,10 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：7月过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国一游客7月过境后确诊汉坦病毒。",
       "key_facts_zh": [
         "法国",
-        "游客确诊"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -37,9 +37,10 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
+        "无新增",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -52,7 +53,8 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例"
+        "死亡3例",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -61,7 +63,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
