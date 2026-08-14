@@ -12291,6 +12291,48 @@
         "source_url": "",
         "time": "2026-08-11T12:26:45.000Z"
       }
+    ],
+    "rt-8f4319721a69d348": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-14",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙加利西亚发现汉坦病毒病例的两名密切接触者，未报告新增病例数。",
+        "update_id": "rt-8f4319721a69d348",
+        "source_url": "",
+        "time": "2026-08-14T10:48:15.000Z"
+      }
+    ],
+    "rt-c25aa336a441505e": [
+      {
+        "iso2": "ES",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-14",
+        "confidence": "medium",
+        "reasoning_zh": "西班牙巴塞罗那和巴达洛纳发现汉坦病毒病例的三名密切接触者，未报告新增病例数。",
+        "update_id": "rt-c25aa336a441505e",
+        "source_url": "",
+        "time": "2026-08-14T09:59:15.000Z"
+      }
+    ],
+    "rt-ca4355cb357da714": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-14",
+        "confidence": "low",
+        "reasoning_zh": "皮肤科医生强调汉坦病毒感染的皮肤表现，未提及具体国家或病例数。",
+        "update_id": "rt-ca4355cb357da714",
+        "source_url": "",
+        "time": "2026-08-14T07:43:30.000Z"
+      }
     ]
   }
 }
