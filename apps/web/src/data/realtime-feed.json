@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-15T18:17:21.793805+00:00",
+  "__generated_at": "2026-08-15T18:23:05.041765+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-15T18:17:20.679374+00:00",
+  "last_fetched": "2026-08-15T18:23:01.507162+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-08-10T16:24:00.000Z",
       "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
       "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "罕见邮轮病毒爆发凸显公共信息传递和疾病准备教训。",
+      "summary_zh": "邮轮疫情凸显公共卫生信息传递与防范教训。",
       "key_facts_zh": [
         "邮轮",
-        "病毒爆发",
-        "公共信息"
+        "疫情",
+        "公共卫生"
       ],
       "signal_strength": "medium"
     },
@@ -38,7 +38,7 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
         "3死",
@@ -47,23 +47,11 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-3e985fba911fd187",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "42天汉坦病毒隔离经历：感觉像囚犯。",
-      "key_facts_zh": [
-        "隔离",
-        "42天"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
