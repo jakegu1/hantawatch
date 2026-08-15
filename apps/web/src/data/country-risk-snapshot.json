@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-15T06:32:10.085991+00:00",
+  "__generated_at": "2026-08-15T12:30:37.581757+00:00",
   "date": "2026-08-15",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -62,8 +62,8 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 30,
-      "signalCount7d": 5,
+      "signalCount30d": 34,
+      "signalCount7d": 7,
       "lastSignalAt": "2026-08-12T13:19:07+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-06"
@@ -86,12 +86,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 2,
-      "lastSignalAt": "2026-08-13T04:56:36+00:00"
+      "signalCount30d": 1,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-08-13T16:38:32+00:00"
     },
     "CH": {
       "iso2": "CH",
@@ -234,9 +234,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 12,
-      "signalCount7d": 3,
-      "lastSignalAt": "2026-08-14T09:45:34+00:00",
+      "signalCount30d": 11,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-08-13T13:22:13+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-05"
     },
@@ -270,11 +270,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 22 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 22 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 21 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 21 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 22,
-      "signalCount7d": 9,
+      "signalCount30d": 21,
+      "signalCount7d": 8,
       "lastSignalAt": "2026-08-14T19:58:01+00:00"
     },
     "BR": {
