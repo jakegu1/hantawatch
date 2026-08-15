@@ -1,58 +1,22 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-15T04:22:19.810827+00:00",
+  "__generated_at": "2026-08-15T05:18:27.868767+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-15T04:22:18.735983+00:00",
+  "last_fetched": "2026-08-15T05:18:26.631649+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-8f4319721a69d348",
-      "time": "2026-08-14T10:48:15.000Z",
-      "title_en": "Identify two close contacts of the positive hantavirus case from Galicia - Diari ARA",
-      "body_en": "Identify two close contacts of the positive hantavirus case from Galicia Diari ARA",
-      "summary_zh": "西班牙加利西亚确认汉坦病毒阳性病例的两名密切接触者。",
-      "key_facts_zh": [
-        "西班牙",
-        "密切接触者"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-c25aa336a441505e",
-      "time": "2026-08-14T09:59:15.000Z",
-      "title_en": "Salut identifies three Close Contacts of a hantavirus Case in Barcelona and Badalona - modernetdigital.cat",
-      "body_en": "Salut identifies three Close Contacts of a hantavirus Case in Barcelona and Badalona modernetdigital.cat",
-      "summary_zh": "西班牙巴塞罗那和巴达洛纳确认汉坦病毒病例的三名密切接触者。",
-      "key_facts_zh": [
-        "西班牙",
-        "密切接触者"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-ca4355cb357da714",
-      "time": "2026-08-14T07:43:30.000Z",
-      "title_en": "Dermatologists Highlight Cutaneous Signs of Hantavirus Infections - Medscape",
-      "body_en": "Dermatologists Highlight Cutaneous Signs of Hantavirus Infections Medscape",
-      "summary_zh": "皮肤科医生强调汉坦病毒感染的皮肤表现。",
-      "key_facts_zh": [
-        "皮肤科医生",
-        "皮肤表现"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-e908c62fa7d51976",
       "time": "2026-08-10T16:24:00.000Z",
       "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
       "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "罕见邮轮病毒爆发凸显公共卫生信息传递和疾病防范教训。",
+      "summary_zh": "罕见邮轮疫情凸显公共信息与防控准备教训。",
       "key_facts_zh": [
         "邮轮",
-        "公共卫生"
+        "疫情教训"
       ],
       "signal_strength": "medium"
     },
@@ -61,10 +25,10 @@
       "time": "2026-08-07T13:36:30.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
+      "summary_zh": "西班牙新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期"
+        "传染10天"
       ],
       "signal_strength": "high"
     },
@@ -73,10 +37,9 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：2026年第31周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -86,7 +49,7 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
         "死亡3例"
@@ -96,12 +59,11 @@
     {
       "id": "rt-908bb7c9be0ce7f0",
       "time": "2026-07-20T07:00:00.000Z",
-      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - cidrap.umn.edu",
-      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain cidrap.umn.edu",
+      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
+      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
       "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "汉坦病毒",
         "大脑影响"
       ],
       "signal_strength": "medium"
