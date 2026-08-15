@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-15T03:32:22.152588+00:00",
+  "__generated_at": "2026-08-15T04:22:19.811268+00:00",
   "windowDays": 30,
   "source": "https://hantaflow.com/api/signals.json",
   "countries": {
@@ -24,7 +24,7 @@
     },
     "FR": {
       "iso2": "FR",
-      "signalCount30d": 30,
+      "signalCount30d": 31,
       "signalCount7d": 5,
       "lastSignalAt": "2026-08-12T13:19:07+00:00"
     },
