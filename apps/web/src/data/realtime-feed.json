@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-16T00:52:07.909127+00:00",
+  "__generated_at": "2026-08-16T01:05:43.394083+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-16T00:52:06.674983+00:00",
+  "last_fetched": "2026-08-16T01:05:39.211751+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -11,12 +11,12 @@
     {
       "id": "rt-e908c62fa7d51976",
       "time": "2026-08-10T16:24:00.000Z",
-      "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - news-medical.net",
-      "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness news-medical.net",
-      "summary_zh": "罕见邮轮疫情凸显公共信息传递和疾病防范教训。",
+      "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
+      "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
+      "summary_zh": "邮轮疫情凸显公共卫生信息传递和防范教训。",
       "key_facts_zh": [
         "邮轮",
-        "疫情"
+        "公共卫生"
       ],
       "signal_strength": "medium"
     },
@@ -28,7 +28,7 @@
       "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染10天"
+        "传染期"
       ],
       "signal_strength": "high"
     },
@@ -37,7 +37,7 @@
       "time": "2026-08-06T16:09:01.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：一名经法国过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国：过境游客7月检测汉坦病毒阳性。",
       "key_facts_zh": [
         "法国",
         "游客确诊"
@@ -59,8 +59,8 @@
     {
       "id": "rt-9d883b468d43eb23",
       "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - apnews.com",
-      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected apnews.com",
+      "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
+      "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
