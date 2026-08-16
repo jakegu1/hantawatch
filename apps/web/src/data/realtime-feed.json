@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-16T17:13:18.338731+00:00",
+  "__generated_at": "2026-08-16T18:17:42.364607+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-16T17:13:17.506875+00:00",
+  "last_fetched": "2026-08-16T18:17:41.545513+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,11 @@
       "time": "2026-08-10T16:24:00.000Z",
       "title_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness - News-Medical",
       "body_en": "Rare cruise ship virus outbreak highlights public messaging lessons and disease preparedness News-Medical",
-      "summary_zh": "罕见邮轮疫情凸显公共信息传递与疾病防范教训。",
+      "summary_zh": "罕见邮轮疫情凸显公共卫生信息传递与准备教训。",
       "key_facts_zh": [
         "邮轮",
-        "疫情教训"
+        "疫情",
+        "公共卫生"
       ],
       "signal_strength": "medium"
     },
@@ -25,10 +26,11 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：过境游客7月检测汉坦病毒阳性。",
+      "summary_zh": "法国：过境游客7月检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客确诊"
+        "游客",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -37,10 +39,11 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增0例，全年1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例"
+        "无新增",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -49,10 +52,11 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死亡，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例"
+        "死亡3例",
+        "疑似2例"
       ],
       "signal_strength": "high"
     },
@@ -61,10 +65,10 @@
       "time": "2026-07-21T07:00:00.000Z",
       "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
       "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称如囚犯。",
+      "summary_zh": "42天汉坦病毒隔离经历：感觉像囚犯。",
       "key_facts_zh": [
-        "隔离经历",
-        "42 天"
+        "隔离",
+        "42天"
       ],
       "signal_strength": "medium"
     },
@@ -73,7 +77,7 @@
       "time": "2026-07-20T07:00:00.000Z",
       "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
       "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
-      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
+      "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
         "大脑影响"
