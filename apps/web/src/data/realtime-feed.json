@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-16T11:13:28.207552+00:00",
+  "__generated_at": "2026-08-16T12:23:09.007792+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-16T11:13:26.982502+00:00",
+  "last_fetched": "2026-08-16T12:23:08.230803+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,8 +16,7 @@
       "summary_zh": "罕见邮轮疫情凸显公共信息传递与疾病防范教训。",
       "key_facts_zh": [
         "邮轮",
-        "疫情",
-        "防范"
+        "疫情教训"
       ],
       "signal_strength": "medium"
     },
@@ -36,13 +35,12 @@
     {
       "id": "rt-98f9bd950a843d08",
       "time": "2026-08-06T07:00:00.000Z",
-      "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
-      "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
+      "title_en": "Hantavirus: Tourist who transited France in July tests positive - lemonde.fr",
+      "body_en": "Hantavirus: Tourist who transited France in July tests positive lemonde.fr",
       "summary_zh": "法国：7月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客",
-        "阳性"
+        "游客确诊"
       ],
       "signal_strength": "high"
     },
@@ -60,14 +58,13 @@
     },
     {
       "id": "rt-9d883b468d43eb23",
-      "time": "2026-07-21T07:00:00.000Z",
+      "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3死",
-        "2疑似"
+        "3死2疑"
       ],
       "signal_strength": "high"
     },
@@ -79,7 +76,7 @@
       "summary_zh": "邮轮疫情后，综述探讨汉坦病毒对大脑的影响。",
       "key_facts_zh": [
         "邮轮",
-        "大脑影响"
+        "脑影响"
       ],
       "signal_strength": "medium"
     }
