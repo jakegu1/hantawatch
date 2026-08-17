@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-17T11:18:37.192160+00:00",
+  "__generated_at": "2026-08-17T12:27:55.626959+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-17T11:18:36.025082+00:00",
+  "last_fetched": "2026-08-17T12:27:54.895014+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,9 +13,10 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：一名过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国：过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
+        "游客",
         "确诊"
       ],
       "signal_strength": "high"
@@ -25,9 +26,10 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC：本周无新增，今年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，今年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
+        "无新增",
         "累计 1 例"
       ],
       "signal_strength": "high"
@@ -40,7 +42,8 @@
       "summary_zh": "委内瑞拉确认 3 人死亡，另有 2 例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡 3 例"
+        "死亡 3 例",
+        "疑似 2 例"
       ],
       "signal_strength": "high"
     },
@@ -52,7 +55,7 @@
       "summary_zh": "邮轮爆发后，综述探讨汉坦病毒对大脑影响。",
       "key_facts_zh": [
         "邮轮",
-        "脑影响"
+        "大脑影响"
       ],
       "signal_strength": "medium"
     }
