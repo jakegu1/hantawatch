@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-17T20:17:37.418240+00:00",
+  "__generated_at": "2026-08-17T21:18:36.105079+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-17T20:17:36.261726+00:00",
+  "last_fetched": "2026-08-17T21:18:34.949468+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -46,6 +46,19 @@
         "疑似 2 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-908bb7c9be0ce7f0",
+      "time": "2026-07-20T07:00:00.000Z",
+      "title_en": "After cruise ship outbreak, review examines how hantavirus affects the brain - CIDRAP",
+      "body_en": "After cruise ship outbreak, review examines how hantavirus affects the brain CIDRAP",
+      "summary_zh": "邮轮暴发后，综述探讨汉坦病毒对大脑的影响。",
+      "key_facts_zh": [
+        "邮轮",
+        "汉坦病毒",
+        "脑部影响"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
