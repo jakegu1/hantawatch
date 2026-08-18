@@ -12333,6 +12333,20 @@
         "source_url": "",
         "time": "2026-08-14T07:43:30.000Z"
       }
+    ],
+    "rt-1a4052977523347a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-18",
+        "confidence": "low",
+        "reasoning_zh": "WHO确认5例汉坦病毒病例，但未指明国家，且为累计数，无新增数据。",
+        "update_id": "rt-1a4052977523347a",
+        "source_url": "",
+        "time": "2026-08-18T08:36:16.000Z"
+      }
     ]
   }
 }
