@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-19T09:25:50.504823+00:00",
+  "__generated_at": "2026-08-19T10:20:41.058676+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-19T09:25:49.422455+00:00",
+  "last_fetched": "2026-08-19T10:20:40.349502+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,23 @@
       "time": "2026-08-18T08:36:16.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO 确认邮轮疫情相关 5 例汉坦病毒病例。",
+      "summary_zh": "WHO确认邮轮疫情关联5例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "5 例"
+        "5例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-593ba1e04b9108ca",
+      "time": "2026-08-18T00:44:36.000Z",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客。",
+      "key_facts_zh": [
+        "美国",
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -26,24 +38,10 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：7 月过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国过境游客确诊汉坦病毒。",
       "key_facts_zh": [
         "法国",
-        "游客",
         "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f8a72be9d8c4868a",
-      "time": "2026-08-02T19:44:33.000Z",
-      "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
-      "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在邮轮感染汉坦病毒，于内布拉斯加医学中心监测。",
-      "key_facts_zh": [
-        "美国",
-        "内布拉斯加医学中心",
-        "监测"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +50,10 @@
       "time": "2026-08-01T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 31): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增 0 例，2026 年累计 1 例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "美国CDC",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -65,25 +62,12 @@
       "time": "2026-07-22T07:00:00.000Z",
       "title_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected - AP News",
       "body_en": "Venezuela confirms 3 people have died of hantavirus infections, with 2 more deaths suspected AP News",
-      "summary_zh": "委内瑞拉确认3人死于汉坦病毒感染，另有2例疑似死亡。",
+      "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡",
-        "疑似2例"
+        "死亡3例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-3e985fba911fd187",
-      "time": "2026-07-21T07:00:00.000Z",
-      "title_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ - The New York Times",
-      "body_en": "The Ordeal of a 42-Day Hantavirus Quarantine: ‘I Felt Like a Prisoner’ The New York Times",
-      "summary_zh": "纽约时报报道42天汉坦病毒隔离经历，当事人称像囚犯。",
-      "key_facts_zh": [
-        "美国",
-        "隔离经历"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
