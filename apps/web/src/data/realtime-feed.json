@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-20T11:19:30.869562+00:00",
+  "__generated_at": "2026-08-20T12:32:05.416568+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-20T11:19:30.048696+00:00",
+  "last_fetched": "2026-08-20T12:32:04.075968+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,20 +16,8 @@
       "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "3人死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-1a4052977523347a",
-      "time": "2026-08-18T08:36:16.000Z",
-      "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
-      "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO确认邮轮爆发5例汉坦病毒病例。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "5例"
+        "3人死亡",
+        "疑似爆发"
       ],
       "signal_strength": "high"
     },
@@ -41,7 +29,8 @@
       "summary_zh": "亚利桑那州和佐治亚州监测返美邮轮乘客。",
       "key_facts_zh": [
         "美国",
-        "监测中"
+        "监测中",
+        "邮轮乘客"
       ],
       "signal_strength": "high"
     },
@@ -50,10 +39,11 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例"
+        "新增0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -65,6 +55,7 @@
       "summary_zh": "法国过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
+        "游客",
         "确诊"
       ],
       "signal_strength": "high"
@@ -77,7 +68,8 @@
       "summary_zh": "委内瑞拉确认3人死亡，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "3人死亡"
+        "3人死亡",
+        "2例疑似"
       ],
       "signal_strength": "high"
     }
