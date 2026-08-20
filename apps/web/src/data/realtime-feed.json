@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-20T07:34:53.022787+00:00",
+  "__generated_at": "2026-08-20T08:28:32.297793+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-20T07:34:51.731862+00:00",
+  "last_fetched": "2026-08-20T08:28:31.111940+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -53,7 +53,7 @@
       "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "无新增",
+        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -66,8 +66,7 @@
       "summary_zh": "法国过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客",
-        "确诊"
+        "游客确诊"
       ],
       "signal_strength": "high"
     },
@@ -80,7 +79,7 @@
       "key_facts_zh": [
         "委内瑞拉",
         "3人死亡",
-        "疑似2例"
+        "2例疑似"
       ],
       "signal_strength": "high"
     }
