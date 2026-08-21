@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-21T02:19:53.433976+00:00",
+  "__generated_at": "2026-08-21T03:43:43.291749+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-21T02:19:52.017557+00:00",
+  "last_fetched": "2026-08-21T03:43:42.110876+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -48,19 +48,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-593ba1e04b9108ca",
-      "time": "2026-08-18T00:44:36.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那和佐治亚州监测邮轮返美乘客。",
-      "key_facts_zh": [
-        "美国",
-        "亚利桑那",
-        "佐治亚"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
@@ -82,7 +69,7 @@
       "key_facts_zh": [
         "法国",
         "游客",
-        "阳性"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -91,11 +78,11 @@
       "time": "2026-08-02T19:44:33.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
+      "summary_zh": "美国公民在邮轮接触汉坦病毒，于内布拉斯加医学中心监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "监测中"
+        "监测"
       ],
       "signal_strength": "high"
     },
@@ -107,7 +94,7 @@
       "summary_zh": "委内瑞拉确认3人死于汉坦病毒，另有2例疑似死亡。",
       "key_facts_zh": [
         "委内瑞拉",
-        "死亡3例",
+        "3人死亡",
         "疑似2例"
       ],
       "signal_strength": "high"
