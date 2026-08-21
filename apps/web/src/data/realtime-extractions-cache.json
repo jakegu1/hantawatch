@@ -12375,6 +12375,20 @@
         "source_url": "",
         "time": "2026-08-20T23:25:48.000Z"
       }
+    ],
+    "rt-fbe51e4ee12437ea": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-20",
+        "confidence": "low",
+        "reasoning_zh": "新闻仅提及卫生部长访问隔离设施，无具体疫情数字，无法提取变化量。",
+        "update_id": "rt-fbe51e4ee12437ea",
+        "source_url": "",
+        "time": "2026-08-20T17:12:00.000Z"
+      }
     ]
   }
 }
