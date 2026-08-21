@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-21T17:21:38.858578+00:00",
+  "__generated_at": "2026-08-21T18:25:51.407797+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-21T17:21:37.298459+00:00",
+  "last_fetched": "2026-08-21T18:25:50.063225+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -17,7 +17,7 @@
       "key_facts_zh": [
         "美国",
         "卫生部长",
-        "内布拉斯加"
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "medium"
     },
@@ -26,11 +26,11 @@
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心汉坦病毒行动。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
-        "内布拉斯加"
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "medium"
     },
@@ -39,7 +39,7 @@
       "time": "2026-08-20T18:53:41.000Z",
       "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
       "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲出现罕见安第斯汉坦病毒病例，源头为阿根廷。",
+      "summary_zh": "欧洲因阿根廷来源的罕见安第斯汉坦病毒病例提高警惕。",
       "key_facts_zh": [
         "欧洲",
         "阿根廷",
@@ -65,10 +65,10 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周无新增，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报本周无新增汉坦病毒病例，今年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "周报",
+        "本周 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
@@ -78,11 +78,11 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：一名过境游客七月检测汉坦病毒阳性。",
+      "summary_zh": "法国通报一名经法国过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
-        "阳性"
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -91,23 +91,11 @@
       "time": "2026-08-02T19:44:33.000Z",
       "title_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine - American Hospital Association",
       "body_en": "U.S. citizens on hantavirus cruise ship monitored at Nebraska Medicine American Hospital Association",
-      "summary_zh": "美国公民在汉坦病毒邮轮上被内布拉斯加医学中心监测。",
+      "summary_zh": "美国公民在汉坦病毒邮轮上，于内布拉斯加医学中心接受监测。",
       "key_facts_zh": [
         "美国",
         "邮轮",
         "监测中"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-bffd2e97d390f077",
-      "time": "2026-08-01T07:00:00.000Z",
-      "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
-      "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
-      "key_facts_zh": [
-        "智利",
-        "卫生警报"
       ],
       "signal_strength": "high"
     }
