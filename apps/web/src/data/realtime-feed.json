@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-22T15:13:27.818538+00:00",
+  "__generated_at": "2026-08-22T16:14:57.866443+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-22T15:13:26.466562+00:00",
+  "last_fetched": "2026-08-22T16:14:56.625531+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -17,7 +17,7 @@
       "key_facts_zh": [
         "美国",
         "松岭保留地",
-        "检出"
+        "检出病毒"
       ],
       "signal_strength": "high"
     },
@@ -26,7 +26,7 @@
       "time": "2026-08-21T00:15:00.000Z",
       "title_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response - KETV",
       "body_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response KETV",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心应对。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -39,7 +39,7 @@
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心汉坦病毒行动。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -52,11 +52,11 @@
       "time": "2026-08-20T18:53:41.000Z",
       "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
       "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲出现罕见安第斯汉坦病毒病例，源头为阿根廷。",
+      "summary_zh": "欧洲出现罕见安第斯汉坦病毒病例，源自阿根廷。",
       "key_facts_zh": [
         "欧洲",
         "阿根廷",
-        "安第斯汉坦病毒"
+        "罕见病例"
       ],
       "signal_strength": "high"
     },
@@ -68,8 +68,8 @@
       "summary_zh": "美国卫生部长访问奥马哈国家隔离单元。",
       "key_facts_zh": [
         "美国",
-        "奥马哈",
-        "国家隔离单元"
+        "卫生部长",
+        "奥马哈"
       ],
       "signal_strength": "medium"
     },
@@ -82,7 +82,7 @@
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -91,7 +91,7 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：一名经法国过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国：一名七月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
