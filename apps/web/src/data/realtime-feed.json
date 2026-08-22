@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-22T22:13:53.066421+00:00",
+  "__generated_at": "2026-08-22T23:13:29.346290+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-22T22:13:51.741943+00:00",
+  "last_fetched": "2026-08-22T23:13:28.417131+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -55,8 +55,8 @@
       "summary_zh": "欧洲现罕见安第斯汉坦病毒病例，源自阿根廷。",
       "key_facts_zh": [
         "欧洲",
-        "阿根廷",
-        "罕见病例"
+        "安第斯病毒",
+        "阿根廷来源"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +78,7 @@
       "time": "2026-08-20T13:36:36.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO 确认邮轮疫情关联 5 例汉坦病毒病例。",
+      "summary_zh": "WHO 确认邮轮暴发 5 例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
