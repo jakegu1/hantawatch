@@ -12403,6 +12403,20 @@
         "source_url": "",
         "time": "2026-08-21T20:30:00.000Z"
       }
+    ],
+    "rt-32dbba35afc9478c": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-20",
+        "confidence": "low",
+        "reasoning_zh": "报道提及欧洲出现罕见安第斯汉坦病毒病例，源自阿根廷，但未提供具体国家及新增数字，无法确定delta。",
+        "update_id": "rt-32dbba35afc9478c",
+        "source_url": "",
+        "time": "2026-08-20T18:53:41.000Z"
+      }
     ]
   }
 }
