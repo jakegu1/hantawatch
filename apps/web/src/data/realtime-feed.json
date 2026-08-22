@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-21T23:16:34.973455+00:00",
+  "__generated_at": "2026-08-22T00:48:25.802185+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-21T23:16:33.641214+00:00",
+  "last_fetched": "2026-08-22T00:48:24.948529+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-08-21T20:30:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
+      "summary_zh": "美国松岭保留地检出汉坦病毒，官方提醒防范。",
       "key_facts_zh": [
         "美国",
         "松岭保留地",
@@ -55,8 +55,8 @@
       "summary_zh": "美国卫生部长访问奥马哈国家隔离单位。",
       "key_facts_zh": [
         "美国",
-        "卫生部长",
-        "奥马哈"
+        "奥马哈",
+        "隔离单位"
       ],
       "signal_strength": "medium"
     },
@@ -65,10 +65,10 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增 0 例，今年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，今年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
+        "本周 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
