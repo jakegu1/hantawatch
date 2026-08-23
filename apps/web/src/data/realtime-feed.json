@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-23T20:13:36.258495+00:00",
+  "__generated_at": "2026-08-23T21:14:14.282510+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-23T20:13:35.076620+00:00",
+  "last_fetched": "2026-08-23T21:14:13.083225+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -18,7 +18,7 @@
         "智利",
         "记者死亡"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-2ef09f204d5b39ad",
@@ -29,7 +29,7 @@
       "key_facts_zh": [
         "美国",
         "松岭保留地",
-        "检测到"
+        "检测到病毒"
       ],
       "signal_strength": "high"
     },
@@ -38,7 +38,7 @@
       "time": "2026-08-21T00:15:00.000Z",
       "title_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response - KETV",
       "body_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response KETV",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心应对汉坦病毒。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心的汉坦病毒应对。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -51,7 +51,7 @@
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心汉坦病毒行动。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心的汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -64,11 +64,11 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增0例，2026年累计1例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒感染本周新增0例，年内累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增0例",
-        "累计1例"
+        "年内1例"
       ],
       "signal_strength": "high"
     },
@@ -77,11 +77,10 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：7月过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国：一名7月过境法国的游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客",
-        "阳性"
+        "游客确诊"
       ],
       "signal_strength": "high"
     }
