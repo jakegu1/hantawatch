@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-23T01:07:04.824799+00:00",
+  "__generated_at": "2026-08-23T06:35:10.811037+00:00",
   "date": "2026-08-23",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,17 +11,17 @@
   "daysSinceLastIntlAlert": 52,
   "whoDaysSinceOfficialUpdate": 52,
   "cluesLast24h": 7,
-  "headline24h": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "8月21日美国松岭保留地检出汉坦病毒，官方提醒防范；法国1例确诊输入仍在ICU，状态稳定；中国大陆无相关病例。",
-  "situation": "WHO数据滞后期间，由欧洲CDC、ArcGIS监测及各国卫生部公告补足；多国维持接触者随访，美国松岭检出待官方复核；国内HFRS基线正常。",
-  "riskJudgment": "中国大陆无相关病例，输入风险极低；关注邮轮相关接触者随访及美国松岭检出动态，无需过度担忧。",
+  "situation": "WHO数据滞后期间，由欧洲CDC、ArcGIS监测及各国卫生部公告补足；多国维持监测，待WHO复核美国松岭检出及法国输入病例后续。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险极低，公众但邮轮相关接触者仍需关注。",
   "newCases": "8月21日无新增确诊；美国松岭检出病毒待官方确认。",
-  "sourceSummary": "WHO、欧洲CDC、ArcGIS监测及官方通报。",
+  "sourceSummary": "主要依据WHO、欧洲CDC、ArcGIS及各国官方通报。",
   "shareLine": "WHO 7/2公布累计13例（52天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "美国松岭检出",
-    "法国ICU病例",
+    "美国松岭检出确认",
+    "法国ICU病例转归",
     "邮轮接触者随访"
   ],
   "evidence": [
