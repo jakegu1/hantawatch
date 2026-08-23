@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-22T23:13:29.346290+00:00",
+  "__generated_at": "2026-08-23T00:52:56.131542+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-22T23:13:28.417131+00:00",
+  "last_fetched": "2026-08-23T00:52:55.158616+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -52,11 +52,11 @@
       "time": "2026-08-20T18:53:41.000Z",
       "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
       "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲现罕见安第斯汉坦病毒病例，源自阿根廷。",
+      "summary_zh": "欧洲出现罕见安第斯汉坦病毒病例，源自阿根廷。",
       "key_facts_zh": [
         "欧洲",
-        "安第斯病毒",
-        "阿根廷来源"
+        "阿根廷",
+        "罕见病例"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-08-20T17:12:00.000Z",
       "title_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha - WOWT",
       "body_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "美国卫生部长访问奥马哈国家隔离单元。",
+      "summary_zh": "美国卫生部长访问奥马哈国家隔离单位。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -78,7 +78,7 @@
       "time": "2026-08-20T13:36:36.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO 确认邮轮暴发 5 例汉坦病毒病例。",
+      "summary_zh": "WHO 确认邮轮暴发关联 5 例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -117,11 +117,11 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙：法国游客确诊汉坦病毒，已被隔离。",
+      "summary_zh": "西班牙：一名在法国感染的游客被隔离。",
       "key_facts_zh": [
         "西班牙",
         "隔离",
-        "确诊"
+        "游客"
       ],
       "signal_strength": "high"
     },
