@@ -12417,6 +12417,20 @@
         "source_url": "",
         "time": "2026-08-20T18:53:41.000Z"
       }
+    ],
+    "rt-437f94251081511e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-23",
+        "confidence": "low",
+        "reasoning_zh": "报道记者因汉坦病毒去世，但未提供国家或新增病例数，无法提取变化量。",
+        "update_id": "rt-437f94251081511e",
+        "source_url": "",
+        "time": "2026-08-23T16:03:04.000Z"
+      }
     ]
   }
 }
