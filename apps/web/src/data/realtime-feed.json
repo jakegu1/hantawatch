@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-24T16:26:43.501006+00:00",
+  "__generated_at": "2026-08-24T17:24:11.571734+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-24T16:26:42.501222+00:00",
+  "last_fetched": "2026-08-24T17:24:10.722727+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,7 +16,7 @@
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "记者去世"
+        "记者死亡"
       ],
       "signal_strength": "medium"
     },
@@ -29,7 +29,7 @@
       "key_facts_zh": [
         "美国",
         "松岭保留地",
-        "检测到"
+        "检测到病毒"
       ],
       "signal_strength": "high"
     },
@@ -38,26 +38,26 @@
       "time": "2026-08-21T00:15:00.000Z",
       "title_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response - KETV",
       "body_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response KETV",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对汉坦病毒。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-d7806dbc1f7823fd",
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心汉坦病毒行动。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-fbe51e4ee12437ea",
@@ -70,14 +70,14 @@
         "卫生部长",
         "奥马哈"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增 0 例，2026 年累计 1 例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -90,34 +90,23 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：一名经法国中转的游客汉坦病毒检测阳性。",
+      "summary_zh": "法国通报一名经法国中转的游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客确诊"
+        "游客",
+        "确诊"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-bffd2e97d390f077",
       "time": "2026-08-01T07:00:00.000Z",
       "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
       "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒健康警报。",
+      "summary_zh": "智利宣布汉坦病毒卫生警报。",
       "key_facts_zh": [
         "智利",
-        "健康警报"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-36acb587c7ddf55e",
-      "time": "2026-07-30T07:00:00.000Z",
-      "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
-      "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒健康警报。",
-      "key_facts_zh": [
-        "智利",
-        "首次警报"
+        "卫生警报"
       ],
       "signal_strength": "high"
     }
