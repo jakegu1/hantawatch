@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-24T11:19:55.465829+00:00",
+  "__generated_at": "2026-08-24T12:33:27.947049+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-24T11:19:54.275043+00:00",
+  "last_fetched": "2026-08-24T12:33:26.972582+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,11 @@
       "time": "2026-08-21T20:30:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
+      "summary_zh": "美国松岭保留地检测到汉坦病毒，官员敦促预防。",
       "key_facts_zh": [
         "美国",
-        "检出病毒"
+        "松岭保留地",
+        "检测到"
       ],
       "signal_strength": "high"
     },
@@ -25,10 +26,11 @@
       "time": "2026-08-21T00:15:00.000Z",
       "title_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response - KETV",
       "body_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response KETV",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心应对汉坦病毒。",
       "key_facts_zh": [
         "美国",
-        "部长访问"
+        "卫生部长",
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "medium"
     },
@@ -37,10 +39,11 @@
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒行动。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
-        "部长访问"
+        "卫生部长",
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "medium"
     },
@@ -49,10 +52,11 @@
       "time": "2026-08-20T17:12:00.000Z",
       "title_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha - WOWT",
       "body_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "卫生部长肯尼迪访问奥马哈国家隔离单位。",
+      "summary_zh": "卫生部长访问奥马哈国家隔离单位。",
       "key_facts_zh": [
         "美国",
-        "部长访问"
+        "奥马哈",
+        "隔离单位"
       ],
       "signal_strength": "medium"
     },
@@ -61,9 +65,10 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周汉坦病毒新增0例，2026年累计1例。",
       "key_facts_zh": [
         "美国CDC",
+        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -76,7 +81,8 @@
       "summary_zh": "法国：过境游客7月检测汉坦病毒阳性。",
       "key_facts_zh": [
         "法国",
-        "游客阳性"
+        "游客",
+        "阳性"
       ],
       "signal_strength": "high"
     },
@@ -85,10 +91,11 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
       "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙：法国游客检出汉坦病毒，已隔离。",
+      "summary_zh": "西班牙：法国游客检测汉坦病毒阳性，已隔离。",
       "key_facts_zh": [
         "西班牙",
-        "游客隔离"
+        "游客",
+        "隔离"
       ],
       "signal_strength": "high"
     },
