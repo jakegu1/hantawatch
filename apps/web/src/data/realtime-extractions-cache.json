@@ -12431,6 +12431,34 @@
         "source_url": "",
         "time": "2026-08-23T16:03:04.000Z"
       }
+    ],
+    "rt-d6408bfbf31fc1da": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-24",
+        "confidence": "low",
+        "reasoning_zh": "标题提及国家隔离单位及汉坦病毒应对，但无具体国家、数字或新增病例信息。",
+        "update_id": "rt-d6408bfbf31fc1da",
+        "source_url": "",
+        "time": "2026-08-24T14:39:53.000Z"
+      }
+    ],
+    "rt-49e9852a52ecb13b": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 1,
+        "as_of": "2026-08-23",
+        "confidence": "medium",
+        "reasoning_zh": "报道记者因汉坦病毒死亡，地点为巴塔哥尼亚，属阿根廷，死亡1例，但无新增病例数。",
+        "update_id": "rt-49e9852a52ecb13b",
+        "source_url": "",
+        "time": "2026-08-23T16:12:03.000Z"
+      }
     ]
   }
 }
