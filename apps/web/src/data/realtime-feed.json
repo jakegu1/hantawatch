@@ -1,13 +1,25 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-24T06:51:14.645235+00:00",
+  "__generated_at": "2026-08-24T07:51:47.034918+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-24T06:51:10.043139+00:00",
+  "last_fetched": "2026-08-24T07:51:45.868543+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-437f94251081511e",
+      "time": "2026-08-23T16:03:04.000Z",
+      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, has died of hantavirus at 54 - Mongabay",
+      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, has died of hantavirus at 54 Mongabay",
+      "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
+      "key_facts_zh": [
+        "智利",
+        "记者死亡"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T20:30:00.000Z",
@@ -39,7 +51,7 @@
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒应对工作。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
@@ -52,10 +64,10 @@
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增汉坦病毒病例，今年累计1例。",
       "key_facts_zh": [
-        "美国CDC",
-        "新增0例",
+        "美国 CDC",
+        "无新增",
         "累计1例"
       ],
       "signal_strength": "high"
