@@ -12473,6 +12473,20 @@
         "source_url": "",
         "time": "2026-08-24T18:00:08.000Z"
       }
+    ],
+    "rt-17c6961e7b11178a": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-25",
+        "confidence": "low",
+        "reasoning_zh": "报道称在松岭保留地检测到汉坦病毒，但未提供具体病例数或新增数，故增量为0。",
+        "update_id": "rt-17c6961e7b11178a",
+        "source_url": "",
+        "time": "2026-08-25T01:49:20.000Z"
+      }
     ]
   }
 }
