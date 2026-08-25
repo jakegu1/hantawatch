@@ -12459,6 +12459,20 @@
         "source_url": "",
         "time": "2026-08-23T16:12:03.000Z"
       }
+    ],
+    "rt-2c9528f05004e953": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-24",
+        "confidence": "low",
+        "reasoning_zh": "报道称在松岭印第安保留地发现汉坦病毒，但未提供具体病例数或新增数，故增量均为0。",
+        "update_id": "rt-2c9528f05004e953",
+        "source_url": "",
+        "time": "2026-08-24T18:00:08.000Z"
+      }
     ]
   }
 }
