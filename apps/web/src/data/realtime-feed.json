@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-24T23:16:34.155730+00:00",
+  "__generated_at": "2026-08-25T00:51:06.328710+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-24T23:16:33.107153+00:00",
+  "last_fetched": "2026-08-25T00:51:05.275405+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,26 +26,13 @@
       "time": "2026-08-24T17:09:18.000Z",
       "title_en": "National Quarantine Unit (NQU) & Hantavirus Response - National Emerging Special Pathogens Training & Education Center",
       "body_en": "National Quarantine Unit (NQU) & Hantavirus Response National Emerging Special Pathogens Training & Education Center",
-      "summary_zh": "美国国家隔离单位应对汉坦病毒。",
+      "summary_zh": "美国国家隔离单元参与汉坦病毒应对。",
       "key_facts_zh": [
         "美国",
-        "国家隔离单位",
+        "国家隔离单元",
         "应对"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-17c6961e7b11178a",
-      "time": "2026-08-24T00:51:45.000Z",
-      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
-      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检测到汉坦病毒，官员敦促防范。",
-      "key_facts_zh": [
-        "美国",
-        "松岭保留地",
-        "检测到"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-49e9852a52ecb13b",
@@ -55,7 +42,7 @@
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "记者去世",
+        "记者死亡",
         "汉坦病毒"
       ],
       "signal_strength": "high"
@@ -65,11 +52,11 @@
       "time": "2026-08-21T20:30:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检测到汉坦病毒，官员敦促防范。",
+      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
       "key_facts_zh": [
         "美国",
         "松岭保留地",
-        "检测到"
+        "官方警告"
       ],
       "signal_strength": "high"
     },
@@ -78,49 +65,36 @@
       "time": "2026-08-21T00:15:00.000Z",
       "title_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response - KETV",
       "body_en": "Health Secretary RFK Jr. visits Nebraska, praises UNMC's Hantavirus response KETV",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心应对汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-d7806dbc1f7823fd",
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬医学中心应对。",
+      "summary_zh": "美国卫生部长访问内布拉斯加，赞扬内布拉斯加医学中心汉坦病毒行动。",
       "key_facts_zh": [
         "美国",
         "卫生部长",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-fbe51e4ee12437ea",
-      "time": "2026-08-20T17:12:00.000Z",
-      "title_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha - WOWT",
-      "body_en": "Health Secretary Kennedy visits National Quarantine Unit in Omaha WOWT",
-      "summary_zh": "美国卫生部长访问奥马哈国家隔离单位。",
-      "key_facts_zh": [
-        "美国",
-        "卫生部长",
-        "奥马哈"
-      ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增汉坦病毒病例，今年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，2026年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "本周0例",
+        "美国CDC",
+        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -130,49 +104,11 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国过境游客汉坦病毒检测阳性。",
+      "summary_zh": "法国：一名7月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
-        "游客",
-        "检测阳性"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-0283b8b37c1f1257",
-      "time": "2026-08-06T07:00:00.000Z",
-      "title_en": "Hantavirus detected in France tourist now isolated in Spain - Medical Xpress",
-      "body_en": "Hantavirus detected in France tourist now isolated in Spain Medical Xpress",
-      "summary_zh": "西班牙隔离在法国感染的汉坦病毒游客。",
-      "key_facts_zh": [
-        "西班牙",
-        "隔离",
-        "游客"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-bffd2e97d390f077",
-      "time": "2026-08-01T07:00:00.000Z",
-      "title_en": "Chile declares health alert for hantavirus - Outbreak News Today",
-      "body_en": "Chile declares health alert for hantavirus Outbreak News Today",
-      "summary_zh": "智利宣布汉坦病毒卫生警报。",
-      "key_facts_zh": [
-        "智利",
-        "卫生警报"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-36acb587c7ddf55e",
-      "time": "2026-07-30T07:00:00.000Z",
-      "title_en": "Chile issues first-ever preventive hantavirus health alert - upi.com",
-      "body_en": "Chile issues first-ever preventive hantavirus health alert upi.com",
-      "summary_zh": "智利首次发布预防性汉坦病毒卫生警报。",
-      "key_facts_zh": [
-        "智利",
-        "首次",
-        "预防性警报"
+        "游客确诊",
+        "过境"
       ],
       "signal_strength": "high"
     }
