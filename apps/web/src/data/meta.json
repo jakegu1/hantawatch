@@ -33,6 +33,14 @@
       "ok": true,
       "okCount": 10,
       "checkedAt": "2026-08-26T12:43:55.341135+00:00"
+    },
+    "surveillance_leads": {
+      "entries": 4,
+      "ok": true
+    },
+    "feeds_light_run": {
+      "ok": true,
+      "at": "2026-08-26T12:44:11.675319+00:00"
     }
   },
   "clusterCount": 1,
