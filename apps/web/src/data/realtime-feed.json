@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-26T10:27:07.986002+00:00",
+  "__generated_at": "2026-08-26T11:21:50.303735+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-26T10:27:07.166445+00:00",
+  "last_fetched": "2026-08-26T11:21:49.022488+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -11,15 +11,15 @@
     {
       "id": "rt-2c9528f05004e953",
       "time": "2026-08-24T18:00:08.000Z",
-      "title_en": "Hantavirus Found on Pine Ridge Indian Reservation – KCSR / KBPY - chadronradio.com",
-      "body_en": "Hantavirus Found on Pine Ridge Indian Reservation – KCSR / KBPY chadronradio.com",
+      "title_en": "Hantavirus Found on Pine Ridge Indian Reservation - chadronradio.com",
+      "body_en": "Hantavirus Found on Pine Ridge Indian Reservation chadronradio.com",
       "summary_zh": "美国松岭印第安保留地发现汉坦病毒。",
       "key_facts_zh": [
         "美国",
         "松岭保留地",
         "发现病毒"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-49e9852a52ecb13b",
@@ -35,19 +35,6 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-2ef09f204d5b39ad",
-      "time": "2026-08-21T20:30:00.000Z",
-      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
-      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检测到汉坦病毒，官方敦促防范。",
-      "key_facts_zh": [
-        "美国",
-        "松岭保留地",
-        "官方警告"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-d7806dbc1f7823fd",
       "time": "2026-08-20T23:24:59.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
@@ -58,18 +45,18 @@
         "卫生部长",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-08T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 32): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周新增0例，2026年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "本周0例",
-        "累计1例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +65,7 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国过境游客7月检测汉坦病毒阳性。",
+      "summary_zh": "法国：7月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客确诊",
