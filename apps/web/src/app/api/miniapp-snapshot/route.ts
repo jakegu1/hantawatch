@@ -16,6 +16,7 @@ import arcgisAndvTracking from '@/data/arcgis-andv-tracking.json';
 import outbreakStatus from '@/data/outbreak-status.json';
 import officialAssessments from '@/data/official-assessments.json';
 import realtimeSituation from '@/data/realtime-situation.json';
+import diseaseWatch from '@/data/disease-watch.json';
 
 /**
  * GET /api/miniapp-snapshot
@@ -53,6 +54,7 @@ export async function GET() {
       outbreakStatus,
       officialAssessments,
       realtimeSituation,
+      diseaseWatch,
     },
     {
       headers: {

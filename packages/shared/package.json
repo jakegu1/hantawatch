@@ -12,7 +12,9 @@
     "./daily-brief-display": "./src/daily-brief-display.ts",
     "./feed-definitions": "./src/feed-definitions.ts",
     "./mv-hondius-event": "./src/mv-hondius-event.ts",
-    "./risk-verdict": "./src/risk-verdict.ts"
+    "./risk-verdict": "./src/risk-verdict.ts",
+    "./data-provenance": "./src/data-provenance.ts",
+    "./disease-watch": "./src/disease-watch.ts"
   },
   "scripts": {
     "lint": "tsc --noEmit",

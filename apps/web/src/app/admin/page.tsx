@@ -277,6 +277,9 @@ export default function AdminPage() {
                 <div className="card text-center">
                   <div className="text-2xl font-bold text-brand-700">{stats.totalUV}</div>
                   <div className="text-xs text-gray-500">独立访客 (UV)</div>
+                  <div className="text-[10px] text-gray-400 mt-0.5">
+                    仅历史数据 · 已停止记录 IP
+                  </div>
                 </div>
                 <div className="card text-center">
                   <div className="text-2xl font-bold text-brand-700">{stats.topPages.length}</div>
@@ -356,8 +359,12 @@ export default function AdminPage() {
         <div className="space-y-4">
           <div className="card">
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <h2 className="font-semibold">订阅用户</h2>
+              <h2 className="font-semibold">订阅用户（已下线）</h2>
               <span className="text-xs text-gray-400">共 {subs.length} 人</span>
+              <p className="w-full text-[11px] leading-relaxed text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1.5">
+                订阅入口已于 2026-08-27 下线（邮箱 / 手机号与隐私政策冲突，且从未发出过通知）。
+                此处只读，不会再有新增。请导出 CSV 备份后，到 Supabase 删除 <code>alert_subscriptions</code> 表中的记录。
+              </p>
               <div className="ml-auto flex gap-1">
                 {(['all', 'confirmed', 'pending'] as const).map((f) => (
                   <button

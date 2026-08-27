@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BarChart3, BookOpen, ShieldCheck, MessageSquare, Globe2 } from 'lucide-react';
+import { Home, BarChart3, BookOpen, ShieldCheck, MessageSquare, Globe2, Plane } from 'lucide-react';
 
 /**
  * App navigation — renders both the desktop top bar and the mobile bottom tab
@@ -37,6 +37,10 @@ const ITEMS: NavItem[] = [
   { href: '/data',     label: '疫情数据', Icon: BarChart3,    inTabBar: true,  shortLabel: '数据' },
   { href: '/wiki',     label: '病毒百科', Icon: BookOpen,     inTabBar: true,  shortLabel: '百科' },
   { href: '/guide',    label: '防护指南', Icon: ShieldCheck,  inTabBar: true,  shortLabel: '防护' },
+  // Desktop-only: the tab bar is grid-cols-5 and already full. /destinations
+  // is a search-and-cite surface (see docs/strategy-post-hanta.md L3), so the
+  // top bar and sitemap matter more to it than a mobile tab slot.
+  { href: '/destinations', label: '出国目的地', Icon: Plane },
   { href: '/about',    label: '关于',     Icon: MessageSquare },
   { href: '/feedback', label: '反馈',     Icon: MessageSquare },
 ];

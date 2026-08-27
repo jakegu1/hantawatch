@@ -31,6 +31,7 @@ import type {
   MvHondiusImport,
   SerotypeId,
 } from '@hantawatch/shared/types';
+import { readFileProvenance } from '@hantawatch/shared/data-provenance';
 import { cleanNewsTitle, dedupByTitle } from './news-format';
 import { isAuthoritativeNewsSource } from './news-allowlist';
 
@@ -147,11 +148,26 @@ export const todayBrief: DailyBrief = {
 
 // ---- China baseline (yearly, monthly, by province) -----------------------
 
+/**
+ * File-level provenance for the hand-transcribed China HFRS baseline.
+ *
+ * The homepage used to render these series under the caption
+ * "数据来源：中国疾控中心传染病月报" while the file carried no source URL and
+ * no as-of date — it had not been touched since the initial scaffold commit.
+ * Under 铁律 #3 an unattributable number must not reach a display surface, so
+ * the charts now key off `isSourced` and withhold the numbers until someone
+ * fills in `provenance.sourceUrl` + `provenance.asOf` in china-baseline.json.
+ */
+export const chinaBaselineProvenance = readFileProvenance(chinaBaselineJson);
+
 export const chinaHfrsHistory: { year: number; cases: number; deaths: number }[] =
   chinaBaselineJson.yearly;
 
 export const chinaHfrsMonthly2026: { month: string; cases: number }[] =
   chinaBaselineJson.monthlyCurrentYear.months;
+
+/** Year the monthly series belongs to — captions used to hardcode "2026年". */
+export const chinaBaselineMonthlyYear: number = chinaBaselineJson.monthlyCurrentYear.year;
 
 export const chinaProvinceCases: { code: string; name: string; annualCases: number }[] =
   chinaBaselineJson.byProvince;

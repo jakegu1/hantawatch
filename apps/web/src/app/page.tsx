@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { buildBriefSectionContent } from '@hantawatch/shared/daily-brief-display';
 import { baseHpi, activeClusters, chinaHfrsHistory, chinaHfrsMonthly2026, hpi7DayHistory, todayBrief } from '@/lib/mock-data';
 import {
+  chinaBaselineMonthlyYear,
+  chinaBaselineProvenance,
   dataMeta,
   hondiusImports,
   hondiusImportSummaries,
@@ -18,20 +20,22 @@ import { buildRiskSnapshot } from '@/lib/risk-snapshot';
 import type { ActiveCluster, MvHondiusImport } from '@hantawatch/shared/types';
 import { SEROTYPES } from '@hantawatch/shared';
 import { filterOfficialTimelineCases } from '@hantawatch/shared/timeline';
-import { Shield, TrendingUp, Bell, ChevronRight, Info, AlertTriangle } from 'lucide-react';
+import { Shield, TrendingUp, Bell, ChevronRight, Info, AlertTriangle, Share2 } from 'lucide-react';
 import { DataFreshness } from '@/components/data-freshness';
 import { NearestAndesCard } from '@/components/nearest-andes-card';
 import { TrendChart } from '@/components/trend-chart';
 import { Sparkline } from '@/components/sparkline';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { RiskVerdictBanner } from '@/components/risk-verdict-banner';
+import { DiseaseWatchSection } from '@/components/disease-watch-section';
+import diseaseWatchJson from '@/data/disease-watch.json';
+import type { DiseaseWatchFile } from '@hantawatch/shared/disease-watch';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { loadRealtimeSituation } from '@/data/realtime-situation';
 import { useLiveRealtimeSituation } from '@/lib/use-realtime-situation';
 import { deriveRiskVerdict } from '@hantawatch/shared/risk-verdict';
 import { FeedLegend } from '@/components/feed-legend';
 import { RecentCasesTimeline } from '@/components/recent-cases-timeline';
-import { SubscribeForm } from '@/components/subscribe-form';
 import { RealtimeFeedSection } from '@/components/realtime-feed-section';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 
@@ -201,6 +205,18 @@ export default function HomePage() {
       value: Math.max(0, Math.min(100, point.value + importBump)),
     }));
   }, [hpi.total]);
+  // Chart captions were hardcoded ("年度趋势（2020-2025）", "（截至5月）") and
+  // silently went stale as the data moved on. Derive them from the data.
+  const yearlyRangeLabel =
+    chinaHfrsHistory.length > 0
+      ? `${chinaHfrsHistory[0].year}-${chinaHfrsHistory[chinaHfrsHistory.length - 1].year}`
+      : '—';
+  const monthlyYear = chinaBaselineMonthlyYear;
+  const latestMonthLabel =
+    chinaHfrsMonthly2026.length > 0
+      ? chinaHfrsMonthly2026[chinaHfrsMonthly2026.length - 1].month
+      : '—';
+
   const briefContent = useMemo(
     () =>
       buildBriefSectionContent({
@@ -247,12 +263,20 @@ export default function HomePage() {
             }
           : null,
         sourceDistanceKm: liveRiskSnapshot.sourceDistanceKm,
+        // Streak + WHO age power the `resolved` copy ("已经 N 天没有新增确诊").
+        daysWithoutNewConfirmed: liveSituation.daysWithoutNewConfirmed,
+        whoDaysAgo: intakeStats.whoDaysAgo,
+        whoLastUpdateZh:
+          typeof liveSituation.headline.whoLastUpdateZh === 'string'
+            ? liveSituation.headline.whoLastUpdateZh
+            : undefined,
       }),
     [
-      liveSituation.state?.code,
+      liveSituation,
       displayedDistanceKm,
       nearestImport,
       liveRiskSnapshot.sourceDistanceKm,
+      intakeStats.whoDaysAgo,
     ],
   );
 
@@ -293,6 +317,36 @@ export default function HomePage() {
               without needing to check admin. */}
           <div className="mb-2 flex justify-end">
             <DataFreshness meta={dataMeta} variant="pill" />
+          </div>
+
+          {/* ─── 传言体温计 — the page's primary answer ───
+              Moved above the hantavirus hero on 2026-08-28. The MV Hondius
+              cluster has been quiet since WHO's 7/2 notice, so leading with
+              it answered a question almost nobody is still asking. This
+              section answers the one that never expires: "I saw a scary post
+              about X — is there anything behind it?" See
+              docs/strategy-post-hanta.md §4. */}
+          <div className="mb-4 sm:mb-5">
+            <DiseaseWatchSection data={diseaseWatchJson as DiseaseWatchFile} />
+          </div>
+
+          {/* ─── Hantavirus: the one outbreak we track in depth ───
+              Everything below is Andes/MV-Hondius-specific. It keeps its full
+              detail, but it is now framed as one tracked event rather than as
+              the whole product. */}
+          <div className="mb-2 flex flex-wrap items-baseline gap-x-2 border-t border-slate-200/70 pt-4">
+            <h2 className="text-sm font-semibold text-slate-900 sm:text-base">
+              深度追踪：汉坦 / 安第斯型
+            </h2>
+            <a
+              href="/events/mv-hondius-2026"
+              className="text-[11px] text-sky-700 underline underline-offset-2"
+            >
+              事件存档 →
+            </a>
+            <span className="text-[10px] text-slate-400">
+              本站唯一逐国核对病例的疫情
+            </span>
           </div>
 
           {/* Daily brief banner — 口径 B: prominent date + intake summary. */}
@@ -526,42 +580,74 @@ export default function HomePage() {
             以下为中国大陆每年常规报告的 HFRS 病例（地方性流行基线），<strong className="text-slate-700">并非新兴疫情</strong>。
           </p>
 
-          {/* Yearly trend — ECharts bar with 5y mean baseline */}
-          <div className="mb-6">
-            <p className="text-xs font-medium text-slate-500 mb-2">年度趋势（2020-2025）</p>
-            <TrendChart
-              categories={chinaHfrsHistory.map((d) => d.year)}
-              values={chinaHfrsHistory.map((d) => d.cases)}
-              variant="bar"
-              color="#1e40af"
-              baseline={Math.round(
-                chinaHfrsHistory.reduce((s, d) => s + d.cases, 0) / chinaHfrsHistory.length,
-              )}
-              unit="例"
-              height={200}
-            />
-          </div>
+          {/* Numbers are gated on file-level provenance — see
+              lib/data.ts#chinaBaselineProvenance. An unsourced chart looks
+              more authoritative than an empty slot, which is exactly the
+              failure mode 铁律 #2/#3 exist to prevent. */}
+          {chinaBaselineProvenance.isSourced ? (
+            <>
+              {/* Yearly trend — ECharts bar with N-year mean baseline */}
+              <div className="mb-6">
+                <p className="text-xs font-medium text-slate-500 mb-2">
+                  年度趋势（{yearlyRangeLabel}）
+                </p>
+                <TrendChart
+                  categories={chinaHfrsHistory.map((d) => d.year)}
+                  values={chinaHfrsHistory.map((d) => d.cases)}
+                  variant="bar"
+                  color="#1e40af"
+                  baseline={Math.round(
+                    chinaHfrsHistory.reduce((s, d) => s + d.cases, 0) / chinaHfrsHistory.length,
+                  )}
+                  unit="例"
+                  height={200}
+                />
+              </div>
 
-          {/* 2026 monthly — line chart, easier to read for short series */}
-          <div>
-            <p className="text-xs font-medium text-slate-500 mb-2">
-              2026年月度数据 <span className="text-slate-400 font-normal">（截至5月）</span>
-            </p>
-            <TrendChart
-              categories={chinaHfrsMonthly2026.map((d) => d.month)}
-              values={chinaHfrsMonthly2026.map((d) => d.cases)}
-              variant="line"
-              color="#0891b2"
-              unit="例"
-              height={180}
-            />
-          </div>
+              {/* Monthly — line chart, easier to read for short series */}
+              <div>
+                <p className="text-xs font-medium text-slate-500 mb-2">
+                  {monthlyYear}年月度数据{' '}
+                  <span className="text-slate-400 font-normal">（截至{latestMonthLabel}）</span>
+                </p>
+                <TrendChart
+                  categories={chinaHfrsMonthly2026.map((d) => d.month)}
+                  values={chinaHfrsMonthly2026.map((d) => d.cases)}
+                  variant="line"
+                  color="#0891b2"
+                  unit="例"
+                  height={180}
+                />
+              </div>
 
-          <p className="mt-3 text-[10px] text-slate-500 leading-relaxed">
-            数据来源：中国疾控中心传染病月报。HFRS 在中国大陆属于地方性流行（endemic），每年报告约 1-2 万例，
-            主要由汉滩型和汉城型引起，均<strong className="text-slate-700">不具备人际传播能力</strong>。
-            当前发病数处于历史基线正常范围，无异常暴发。
-          </p>
+              <p className="mt-3 text-[10px] text-slate-500 leading-relaxed">
+                数据来源：
+                <a
+                  href={chinaBaselineProvenance.sourceUrl ?? '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-700 underline"
+                >
+                  {chinaBaselineProvenance.sourceName ?? '官方月报'}
+                </a>
+                （截至 {chinaBaselineProvenance.asOf}）。HFRS 在中国大陆属于地方性流行（endemic），
+                主要由汉滩型和汉城型引起，均<strong className="text-slate-700">不具备人际传播能力</strong>。
+              </p>
+            </>
+          ) : (
+            <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/60 px-4 py-5">
+              <p className="text-xs font-medium text-slate-700">暂无可溯源的国内基线数字</p>
+              <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
+                中国疾控没有公开 API，年度 / 月度 HFRS 数字需人工从月报抄录。
+                在补齐来源链接与截止日期之前，我们<strong className="text-slate-700">选择不显示这些数字</strong>
+                ——宁可留白，也不给你一个无法核对的图表。
+              </p>
+              <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+                不变的事实：HFRS（肾综合征出血热）在中国大陆属于地方性流行，主要由汉滩型和汉城型引起，
+                两者均<strong className="text-slate-700">不具备人际传播能力</strong>，与本站追踪的安第斯型不同。
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -692,24 +778,37 @@ export default function HomePage() {
       </section>
 
       {/* ================================================================ */}
-      {/* SECTION 7: Alert CTA + Feedback entry                             */}
-      {/* Iter 2: switch from blue brand gradient to soft sky/teal wash to  */}
-      {/* match new design tokens.                                          */}
+      {/* SECTION 7: Share CTA + Feedback entry                             */}
+      {/*                                                                   */}
+      {/* Replaced the email/phone subscribe form (2026-08-27). Two reasons:*/}
+      {/*  1. Compliance — collecting a mainland mobile number contradicted */}
+      {/*     our own /privacy page ("我们不会收集…手机号") and the project's */}
+      {/*     zero-PII rule for an 个人主体. Nothing was ever sent, so the   */}
+      {/*     stored contacts were pure liability.                          */}
+      {/*  2. Growth — the validated acquisition loop is the screenshot, and */}
+      {/*     /share (the 9:16 poster) only had a site-footer link. This CTA */}
+      {/*     puts it in the page body instead.                              */}
       {/* ================================================================ */}
       <section className="container-page mt-10">
         <div className="card !bg-gradient-to-br !from-sky-50/70 !via-white !to-teal-50/40 !border-sky-100/60">
           <div className="flex flex-col gap-4">
             <div>
               <h2 className="font-semibold text-base flex items-center gap-2 text-slate-900">
-                <Bell className="h-4 w-4 text-sky-600" />
-                订阅预警通知
+                <Share2 className="h-4 w-4 text-sky-600" />
+                把这一屏发给担心的朋友
               </h2>
               <p className="text-xs text-slate-600 mt-1">
-                只在以下情况通知你：聚集地距离跨圈层 / HPI 跨阈值 / 官方发布新通报。
-                <strong className="text-slate-800">不会发送日常推送。</strong>
+                生成一张带来源和日期的态势卡，适合发小红书 / 微博 / 朋友圈。
+                <strong className="text-slate-800">不需要注册，我们不收集你的任何信息。</strong>
               </p>
             </div>
-            <SubscribeForm variant="inline" />
+            <a
+              href="/share"
+              className="inline-flex w-fit items-center gap-1.5 rounded-lg bg-sky-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-sky-700"
+            >
+              <Share2 className="h-4 w-4" />
+              生成分享海报
+            </a>
             <div className="flex items-center gap-3 pt-3 border-t border-sky-100/60">
               <a href="/feedback" className="text-xs text-slate-500 hover:text-sky-700 transition-colors">反馈建议 →</a>
               <span className="text-slate-300">·</span>

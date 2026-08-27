@@ -101,6 +101,42 @@ def _is_relevant(title: str, summary: str) -> bool:
     return any(kw in blob for kw in KEYWORDS)
 
 
+def _row_to_entry(raw: object) -> WhoDonEntry | None:
+    """Convert one OData row into a `WhoDonEntry`, or None if unusable.
+
+    Shared by the hantavirus path and the disease-agnostic path
+    (`fetch_all_don_entries`); the relevance gate lives in the caller so
+    the generic path can keep every disease.
+    """
+    if not isinstance(raw, dict):
+        return None
+    title = str(raw.get("Title") or "").strip()
+    if not title:
+        return None
+
+    # Article URL: prefer building from the stable `UrlName` slug; fall back
+    # to the relative `ItemDefaultUrl` for older date-prefixed legacy slugs.
+    url_name = (raw.get("UrlName") or "").strip()
+    item_path = (raw.get("ItemDefaultUrl") or "").strip()
+    if url_name:
+        link = WHO_DON_ITEM_BASE + url_name
+    elif item_path:
+        link = WHO_DON_ITEM_BASE.rstrip("/") + (
+            item_path if item_path.startswith("/") else "/" + item_path
+        )
+    else:
+        return None  # no resolvable link — useless to display
+
+    return WhoDonEntry(
+        id=_normalise_id(url_name, raw.get("DonId"), link, title),
+        title=title,
+        link=link,
+        published=_parse_published(raw.get("PublicationDateAndTime")),
+        summary=_extract_summary(raw.get("Overview")),
+        raw_tags=[],  # the OData API doesn't expose taxonomy terms
+    )
+
+
 def _normalise_id(url_name: str | None, don_id: str | None, link: str, title: str) -> str:
     """Return the canonical DON id, preferring the API's own slug fields.
 
@@ -370,3 +406,96 @@ def iter_clusters_from_entries(entries: Iterable[WhoDonEntry]) -> Iterable[dict]
             },
             "_summary": e.summary,
         }
+
+
+# ---------------------------------------------------------------------------
+# Disease-agnostic access
+#
+# `fetch_who_don_entries` above answers "what has WHO said about hantavirus".
+# The 传言体温计 needs the other question — "what has WHO said about anything"
+# — so it can answer, for a disease someone saw a rumour about, when the last
+# traceable official notice was (and honestly say "never" when there is none).
+#
+# Same API, same row parsing, no relevance gate, and paged because the service
+# caps `$top` at 100 (a larger value returns an error body, not a big page).
+# ---------------------------------------------------------------------------
+
+#: Server-side cap on `$top`. Verified 2026-08-28: 100 works, 200 errors.
+DON_PAGE_SIZE = 100
+
+
+def fetch_all_don_entries(
+    *,
+    timeout: float = 20.0,
+    pages: int = 3,
+    page_size: int = DON_PAGE_SIZE,
+    api_url: str = WHO_DON_API,
+    transport: httpx.BaseTransport | None = None,
+) -> list[WhoDonEntry]:
+    """Fetch recent DON entries for *every* disease, newest first.
+
+    `pages` × `page_size` bounds how far back we look. The default 300 reaches
+    roughly five years, which is enough to answer "when did WHO last publish a
+    Disease Outbreak News about X" for anything that is plausibly rumoured —
+    and for anything older than that, "over five years ago" and "never" lead a
+    reader to the same conclusion anyway.
+
+    Returns [] on network failure; the caller keeps its previous JSON.
+    """
+    try:
+        client = httpx.Client(
+            timeout=timeout,
+            transport=transport,
+            headers={
+                "User-Agent": "HantaWatch-Collector/0.1 (who-don)",
+                "Accept": "application/json",
+            },
+            follow_redirects=True,
+        )
+    except Exception as e:  # noqa: BLE001
+        logger.warning("WHO DON (all): failed to create http client: %s", e)
+        return []
+
+    rows: list[object] = []
+    with client:
+        for page in range(max(1, pages)):
+            params = {
+                "sf_culture": "en",
+                "$orderby": "PublicationDateAndTime desc",
+                "$top": str(page_size),
+                "$skip": str(page * page_size),
+                "$select": ",".join((
+                    "UrlName",
+                    "DonId",
+                    "Title",
+                    "Overview",
+                    "PublicationDateAndTime",
+                    "ItemDefaultUrl",
+                )),
+            }
+            try:
+                resp = client.get(api_url, params=params)
+                resp.raise_for_status()
+                data = resp.json()
+            except (httpx.HTTPError, ValueError) as e:
+                logger.warning("WHO DON (all): page %d failed: %s", page, e)
+                break
+            batch = data.get("value")
+            if not isinstance(batch, list) or not batch:
+                break
+            rows.extend(batch)
+            if len(batch) < page_size:
+                break  # last page
+
+    entries: list[WhoDonEntry] = []
+    seen: set[str] = set()
+    for raw in rows:
+        entry = _row_to_entry(raw)
+        if entry is None or entry.id in seen:
+            continue
+        seen.add(entry.id)
+        entries.append(entry)
+
+    entries.sort(key=lambda e: e.published, reverse=True)
+    logger.info("WHO DON (all): %d entries across %d rows", len(entries), len(rows))
+    return entries

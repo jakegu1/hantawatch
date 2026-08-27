@@ -13,12 +13,16 @@ const PRIMARY_FILE = path.join(PRIMARY_DIR, 'events.json');
 const FALLBACK_DIR = path.join('/tmp', 'hantawatch-analytics');
 const FALLBACK_FILE = path.join(FALLBACK_DIR, 'events.json');
 
+// NOTE (2026-08-27): `ip` was removed from the stored record. /privacy §2.2
+// promises "不记录 IP 地址" and this route was writing the raw
+// x-forwarded-for value into events.json, contradicting it. The address is
+// still read in-process as a rate-limit key (never persisted, dropped when
+// the lambda recycles).
 interface PageViewEvent {
   page: string;
   referrer: string;
   timestamp: string;
   userAgent: string;
-  ip: string;
 }
 
 // Simple in-memory rate limiter. 250 ms is enough to absorb React StrictMode
@@ -69,13 +73,17 @@ function resolveSink(): string | null {
 
 export async function POST(request: NextRequest) {
   // Rate limit
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? request.headers.get('x-real-ip') ?? 'unknown';
+  // In-memory only — this value is never written to disk or to Supabase.
+  const rateLimitKey =
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+    request.headers.get('x-real-ip') ??
+    'unknown';
   const now = Date.now();
-  const last = lastRequest.get(ip) ?? 0;
+  const last = lastRequest.get(rateLimitKey) ?? 0;
   if (now - last < RATE_LIMIT_MS) {
     return new NextResponse(null, { status: 429 });
   }
-  lastRequest.set(ip, now);
+  lastRequest.set(rateLimitKey, now);
 
   // Parse body
   let body: { page?: string; referrer?: string; timestamp?: string; userAgent?: string };
@@ -103,7 +111,6 @@ export async function POST(request: NextRequest) {
     referrer: body.referrer ?? '',
     timestamp: body.timestamp ?? new Date().toISOString(),
     userAgent: body.userAgent ?? request.headers.get('user-agent') ?? '',
-    ip,
   };
 
   // Append to JSON file, fail-safe. ANY FS-level error must be swallowed:

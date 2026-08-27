@@ -36,6 +36,7 @@ import arcgisAndvTrackingJson from '@web-data/arcgis-andv-tracking.json';
 import outbreakStatusJson from '@web-data/outbreak-status.json';
 import officialAssessmentsJson from '@web-data/official-assessments.json';
 import realtimeSituationJson from '@web-data/realtime-situation.json';
+import diseaseWatchJson from '@web-data/disease-watch.json';
 
 /** The raw collector JSON bundle, keyed exactly like `/api/miniapp-snapshot`. */
 export const BUNDLED_RAW = {
@@ -56,6 +57,7 @@ export const BUNDLED_RAW = {
   outbreakStatus: outbreakStatusJson,
   officialAssessments: officialAssessmentsJson,
   realtimeSituation: realtimeSituationJson,
+  diseaseWatch: diseaseWatchJson,
 };
 
 export type RawBundle = typeof BUNDLED_RAW;
@@ -87,6 +89,7 @@ export const {
   countryViewsByContinent,
   searchCountries,
   realtimeSituation,
+  diseaseWatch,
 } = bundledAppData;
 
 export { CONTINENT_ORDER, CONTINENT_LABEL_ZH } from './app-data';

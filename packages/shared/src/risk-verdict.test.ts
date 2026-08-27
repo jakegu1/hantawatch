@@ -70,6 +70,41 @@ describe('deriveRiskVerdict', () => {
     expect(v.detailZh).toContain('实时态势');
   });
 
+  it('resolved → states the no-new-case streak as a fact, not an "outbreak over" claim', () => {
+    const v = deriveRiskVerdict({
+      ...base,
+      stateCode: 'resolved',
+      daysWithoutNewConfirmed: 56,
+      whoDaysAgo: 56,
+      whoLastUpdateZh: '7/2',
+    });
+    expect(v.level).toBe('resolved');
+    expect(v.titleZh).toContain('56 天');
+    expect(v.titleZh).toContain('没有新增确诊');
+    // We never declare an outbreak finished — that is WHO's call, not ours.
+    expect(v.titleZh).not.toMatch(/疫情结束|已结束|完全安全/);
+    expect(v.detailZh).toContain('WHO 最近一次通报在 56 天前（7/2）');
+    expect(v.detailZh).toContain('16,500');
+  });
+
+  it('resolved without a streak number → no fabricated count', () => {
+    const v = deriveRiskVerdict({ ...base, stateCode: 'resolved' });
+    expect(v.level).toBe('resolved');
+    expect(v.titleZh).not.toMatch(/\d/);
+    // WHO clause is omitted entirely rather than rendered with a placeholder.
+    expect(v.detailZh).not.toContain('WHO');
+  });
+
+  it('elevated domestic baseline still overrides resolved', () => {
+    const v = deriveRiskVerdict({
+      ...base,
+      stateCode: 'resolved',
+      domesticBaselineStatus: 'elevated',
+      daysWithoutNewConfirmed: 56,
+    });
+    expect(v.level).toBe('domestic');
+  });
+
   it('missing distance → em dash in copy without throwing', () => {
     const v = deriveRiskVerdict({
       ...base,

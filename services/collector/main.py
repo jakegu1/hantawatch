@@ -69,6 +69,8 @@ from hantawatch_collector.builder import (
     write_all_outputs,
 )
 from hantawatch_collector.country_signals import aggregate_country_signals
+from hantawatch_collector.destination_watch import build_and_write_destination_watch
+from hantawatch_collector.disease_watch import build_and_write_disease_watch
 from hantawatch_collector.distance import distance_to_china_km
 from hantawatch_collector.ecdc import fetch_ecdc_assessment
 from hantawatch_collector.imports_proposals import submit_import_proposals
@@ -83,7 +85,7 @@ from hantawatch_collector.realtime_extractor import extract_country_deltas
 from hantawatch_collector.realtime_feed import build_realtime_feed
 from hantawatch_collector.situation_builder import build_and_write_realtime_situation
 from hantawatch_collector.surveillance_leads import fetch_surveillance_leads
-from hantawatch_collector.who_don import fetch_who_don_entries
+from hantawatch_collector.who_don import fetch_all_don_entries, fetch_who_don_entries
 
 logging.basicConfig(
     level=logging.INFO,
@@ -611,6 +613,25 @@ def main(argv: list[str] | None = None) -> int:
             )
         except Exception as e:
             logger.warning("realtime-situation: build failed (%s)", e)
+
+    # 传言体温计 — cross-disease "last traceable WHO notice" table. Independent
+    # of the hantavirus pipeline above: it re-queries WHO DON unfiltered, so a
+    # failure here degrades one homepage section and nothing else. Skipped on
+    # --no-network (an empty fetch would keep the previous file anyway, but the
+    # request is pointless).
+    if not args.no_network:
+        try:
+            # One unfiltered DON fetch feeds both views of the corpus:
+            # by disease (传言体温计) and by country (出国目的地).
+            all_don = fetch_all_don_entries()
+            build_and_write_disease_watch(
+                out_dir=out_dir, entries=all_don, dry_run=args.dry_run
+            )
+            build_and_write_destination_watch(
+                out_dir=out_dir, entries=all_don, dry_run=args.dry_run
+            )
+        except Exception as e:
+            logger.warning("disease-watch/destination-health: build failed (%s)", e)
 
     compliance_rc = run_compliance_gate(out_dir, dry_run=args.dry_run)
     if compliance_rc != 0:

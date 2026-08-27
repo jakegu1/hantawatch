@@ -14,6 +14,15 @@ const LEVEL_SURFACE: Record<
     title: 'text-emerald-950',
     detail: 'text-emerald-900/85',
   },
+  // Same reassuring green family as `calm` — a long confirmed-case drought
+  // should read as "you can stop worrying", not as a fourth alert tier.
+  resolved: {
+    border: 'border-emerald-200',
+    bg: 'bg-emerald-50/70',
+    icon: 'text-emerald-600',
+    title: 'text-emerald-950',
+    detail: 'text-emerald-900/85',
+  },
   remote: {
     border: 'border-sky-200',
     bg: 'bg-sky-50/70',

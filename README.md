@@ -44,6 +44,7 @@ hantawatch/
 - [产品全景计划书](docs/PRODUCT_PLAN.md)
 - [每日简报与最新通报改进](docs/BRIEF_AND_TIMELINE_IMPROVEMENTS.md)
 - [动态数据清单与数据链评估](docs/DATA_CHAIN_INVENTORY.md)
+- 开发协作工作流：见 [CLAUDE.md](CLAUDE.md)（脊柱）· [rules/](rules/) · [docs/PRD.md](docs/PRD.md) · [docs/PLAN.md](docs/PLAN.md)
 
 ## 许可
 

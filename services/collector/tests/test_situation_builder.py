@@ -7,6 +7,7 @@ import pytest
 
 from hantawatch_collector.situation_builder import (
     MAX_EVENTS,
+    RESOLVED_QUIET_DAYS,
     build_events,
     build_realtime_situation,
     compute_state,
@@ -933,3 +934,96 @@ def test_who_milestones_include_structured_case_deltas() -> None:
     assert latest["delta"] == {"all": 2, "confirmed": 3, "indeterminate": -1, "deaths": 0}
     assert "疑似 -1（分类重算）" in latest["deltaLabel"]
 
+
+
+# ---------------------------------------------------------------------------
+# `resolved` — the way back out of an indefinite 海外关注 watch.
+# Before this state existed, `_has_active_outbreak` keyed off the cumulative
+# total, which never decreases, so the site sat at 海外关注 for 92 days after
+# the cluster wound down.
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    ("expected", "domestic", "all_cases", "displayed_km", "quiet_days"),
+    [
+        # Drought longer than one max Andes incubation period → resolved.
+        ("resolved", "normal", 11, 8400, RESOLVED_QUIET_DAYS),
+        ("resolved", "normal", 11, 8400, 56),
+        # A quiet drought outranks distance-based near_watch.
+        ("resolved", "normal", 11, 4000, 60),
+        # Just under the threshold keeps the previous behaviour.
+        ("remote_watch", "normal", 11, 8400, RESOLVED_QUIET_DAYS - 1),
+        ("near_watch", "normal", 11, 4000, RESOLVED_QUIET_DAYS - 1),
+        # Domestic signal always wins, however long the overseas drought.
+        ("domestic_alert", "elevated", 11, 8400, 90),
+        # No outbreak at all stays calm, not resolved.
+        ("calm", "normal", 0, 8400, 90),
+    ],
+)
+def test_compute_state_resolved(
+    expected: str,
+    domestic: str,
+    all_cases: int,
+    displayed_km: int | None,
+    quiet_days: int,
+) -> None:
+    today = date(2026, 5, 27)
+    assert (
+        compute_state(
+            _outbreak_status(all_cases),
+            _risk_snapshot(domestic=domestic, displayed_km=displayed_km),
+            today=today,
+            days_without_new_confirmed=quiet_days,
+        )
+        == expected
+    )
+
+
+def test_compute_state_without_streak_keeps_legacy_behaviour() -> None:
+    """Callers that cannot supply the streak must not silently get `resolved`."""
+    today = date(2026, 5, 27)
+    assert (
+        compute_state(
+            _outbreak_status(11),
+            _risk_snapshot(domestic="normal", displayed_km=8400),
+            today=today,
+        )
+        == "remote_watch"
+    )
+
+
+def test_build_realtime_situation_reports_resolved_after_long_drought() -> None:
+    """End-to-end: a stale WHO baseline with no new confirmed → resolved."""
+    outbreak_status = _outbreak_status(11)
+    outbreak_status[0]["lastUpdate"] = {"asOfDate": "2026-03-01"}
+    for pc in outbreak_status[0]["perCountry"]:
+        pc["asOf"] = "2026-03-01"
+    out = build_realtime_situation(
+        outbreak_status=outbreak_status,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta=None,
+        existing_situation=None,
+        today=date(2026, 5, 27),
+    )
+    assert out["daysWithoutNewConfirmed"] >= RESOLVED_QUIET_DAYS
+    assert out["state"]["code"] == "resolved"
+    assert out["state"]["labelZh"] == "已平息"
+
+
+def test_build_realtime_situation_stays_remote_while_cases_are_recent() -> None:
+    outbreak_status = _outbreak_status(11)
+    outbreak_status[0]["lastUpdate"] = {"asOfDate": "2026-05-20"}
+    out = build_realtime_situation(
+        outbreak_status=outbreak_status,
+        risk_snapshot=_risk_snapshot(domestic="normal", displayed_km=8400),
+        realtime_feed=_realtime_feed_entries([]),
+        realtime_extracted=None,
+        meta=None,
+        existing_situation=None,
+        today=date(2026, 5, 27),
+    )
+    assert out["daysWithoutNewConfirmed"] < RESOLVED_QUIET_DAYS
+    assert out["state"]["code"] == "remote_watch"

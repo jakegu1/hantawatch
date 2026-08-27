@@ -43,4 +43,9 @@ GENERATED_FILES = frozenset({
     "arcgis-andv-tracking.json",
     "outbreak-status.json",
     "realtime-extractions-cache.json",
+    # 传言体温计 — per-disease "last traceable WHO notice". Cross-disease and
+    # event-level only; see disease_watch.py for why there is no case ledger.
+    "disease-watch.json",
+    # 出国目的地健康概览 — same DON corpus grouped by country instead of disease.
+    "destination-health.json",
 })

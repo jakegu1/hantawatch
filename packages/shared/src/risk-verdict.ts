@@ -6,13 +6,20 @@
 
 export type RiskVerdictStateCode =
   | 'calm'
+  | 'resolved'
   | 'remote_watch'
   | 'near_watch'
   | 'domestic_alert';
 
 export type DomesticBaselineStatus = 'normal' | 'elevated' | 'below';
 
-export type RiskVerdictLevel = 'calm' | 'remote' | 'near' | 'domestic' | 'pending';
+export type RiskVerdictLevel =
+  | 'calm'
+  | 'resolved'
+  | 'remote'
+  | 'near'
+  | 'domestic'
+  | 'pending';
 
 export interface RiskVerdictNearestImport {
   nameZh: string;
@@ -33,6 +40,17 @@ export interface RiskVerdictInput {
   nearestImport: RiskVerdictNearestImport | null | undefined;
   /** Outbreak source cluster distance — used for calm/remote copy. */
   sourceDistanceKm?: number | null | undefined;
+  /**
+   * From liveSituation.daysWithoutNewConfirmed — days since the last new
+   * confirmed case anywhere in the tracked outbreak. Drives the `resolved`
+   * copy, which states this streak as a fact rather than declaring an
+   * outbreak "over" (that call belongs to WHO, not to us).
+   */
+  daysWithoutNewConfirmed?: number | null | undefined;
+  /** From liveSituation.headline.whoDaysAgo — age of the last WHO update. */
+  whoDaysAgo?: number | null | undefined;
+  /** From liveSituation.headline.whoLastUpdateZh — e.g. "7/2". */
+  whoLastUpdateZh?: string | null | undefined;
 }
 
 export interface RiskVerdict {
@@ -67,10 +85,19 @@ function resolveLevel(input: RiskVerdictInput): RiskVerdictLevel {
     return 'domestic';
   }
   if (code === 'near_watch') return 'near';
+  if (code === 'resolved') return 'resolved';
   if (code === 'remote_watch') return 'remote';
   if (code === 'calm' && domestic !== 'elevated') return 'calm';
   if (!code) return 'pending';
   return 'pending';
+}
+
+/** "WHO 最近一次通报在 56 天前（7/2）" — omitted entirely when unknown. */
+function whoClause(input: RiskVerdictInput): string {
+  const days = input.whoDaysAgo;
+  if (days == null || !Number.isFinite(days)) return '';
+  const stamp = input.whoLastUpdateZh ? `（${input.whoLastUpdateZh}）` : '';
+  return `WHO 最近一次通报在 ${Math.round(days)} 天前${stamp}；`;
 }
 
 /** Pure mapper: existing fields → human verdict copy. */
@@ -109,6 +136,21 @@ export function deriveRiskVerdict(input: RiskVerdictInput): RiskVerdict {
       level,
       titleZh: '出现较近的输入监测，仍无社区传播',
       detailZh: `最近输入监测在 ${loc}（约 ${fmtKm(km)} km）；${communityPhrase(input.communityTransmissionCount, true)}`,
+    };
+  }
+
+  if (level === 'resolved') {
+    // Deliberately states the *streak* (a fact we can source) instead of
+    // declaring the outbreak over — that declaration is WHO's to make.
+    const days = input.daysWithoutNewConfirmed;
+    const streak =
+      days != null && Number.isFinite(days)
+        ? `已经 ${Math.round(days)} 天没有新增确诊`
+        : '这波疫情已经很久没有新增确诊';
+    return {
+      level,
+      titleZh: streak,
+      detailZh: `${whoClause(input)}${community}。距离仍在约 ${fmtKm(sourceKm)} km 外。`,
     };
   }
 

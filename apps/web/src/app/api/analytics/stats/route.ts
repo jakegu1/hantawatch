@@ -26,7 +26,9 @@ interface PageViewEvent {
   referrer: string;
   timestamp: string;
   userAgent: string;
-  ip: string;
+  /** Legacy only — the track route stopped writing this on 2026-08-27
+   *  (see /privacy §2.2). Present on rows collected before that date. */
+  ip?: string;
 }
 
 export async function GET() {
@@ -60,8 +62,11 @@ export async function GET() {
   // Total PV
   const totalPV = events.length;
 
-  // Unique visitors (by IP)
-  const ips = new Set(events.map(e => e.ip));
+  // Unique visitors. We no longer record IPs, so this can only be derived
+  // from rows collected before 2026-08-27; it decays to 0 as those age out.
+  // Reporting 0 is the honest answer — do NOT substitute a proxy that would
+  // read like a real UV number.
+  const ips = new Set(events.map((e) => e.ip).filter((v): v is string => Boolean(v)));
   const totalUV = ips.size;
 
   // Top pages
@@ -78,7 +83,16 @@ export async function GET() {
   // Referrer breakdown
   const referrerCounts = new Map<string, number>();
   for (const e of events) {
-    const ref = e.referrer ? new URL(e.referrer).hostname : '直接访问';
+    // `new URL` throws on a malformed referrer, which used to take the whole
+    // admin stats endpoint down with a 500. Bucket unparseable values instead.
+    let ref = '直接访问';
+    if (e.referrer) {
+      try {
+        ref = new URL(e.referrer).hostname;
+      } catch {
+        ref = '未知来源';
+      }
+    }
     referrerCounts.set(ref, (referrerCounts.get(ref) ?? 0) + 1);
   }
   const referrers = [...referrerCounts.entries()]

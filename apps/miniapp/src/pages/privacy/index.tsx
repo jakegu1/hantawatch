@@ -98,7 +98,7 @@ export default function PrivacyPage() {
         <H2>二、我们收集什么</H2>
         <H3>2.1 小程序版本不收集邮箱</H3>
         <P>
-          <Text style={{ fontWeight: 600 }}>本微信小程序版本不提供邮箱订阅功能，不收集任何邮箱地址。</Text>
+          <Text style={{ fontWeight: 600 }}>本微信小程序不提供邮箱订阅功能，不收集任何邮箱地址或手机号。网页版亦已于 2026-08-27 下线订阅功能。</Text>
           邮件预警订阅仅通过 Web 版（bingduguancha.com）提供，相关隐私条款详见 Web 版隐私政策。
         </P>
         <H3>2.2 自动收集的匿名信息</H3>

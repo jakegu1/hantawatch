@@ -27,11 +27,12 @@ const OFFICIAL_SOURCE_ZH: Record<string, string> = {
   '实时抓取': '实时抓取',
 };
 
-type StateCode = 'calm' | 'remote_watch' | 'near_watch' | 'domestic_alert';
+type StateCode = 'calm' | 'resolved' | 'remote_watch' | 'near_watch' | 'domestic_alert';
 
 /** One-line plain-language meaning for each state, so the label isn't cryptic. */
 const STATE_HINT: Record<StateCode, string> = {
   calm: '全球暂无活跃聚集疫情',
+  resolved: '追踪中的疫情已长期无新增确诊，仅保留存档',
   remote_watch: '全球有活跃疫情，但距中国大陆较远',
   near_watch: '疫情信号已逼近中国大陆周边（约 5000 km 内）',
   domestic_alert: '国内 HFRS 监测出现异常，请留意官方通报',
@@ -101,11 +102,16 @@ function fmtKm(n: number): string {
   return n.toLocaleString('zh-CN');
 }
 
+// Explicit per-code mapping. The old version returned the red 本土警报 surface
+// for anything it didn't recognise, so a newly added state code would have
+// painted the scariest possible card. Unknown codes now fall back to the
+// neutral base surface instead.
 function stateCardClass(code: StateCode): string {
-  if (code === 'calm') return 'rs-card rs-card--calm';
+  if (code === 'calm' || code === 'resolved') return 'rs-card rs-card--calm';
   if (code === 'remote_watch') return 'rs-card rs-card--remote';
   if (code === 'near_watch') return 'rs-card rs-card--near';
-  return 'rs-card rs-card--domestic';
+  if (code === 'domestic_alert') return 'rs-card rs-card--domestic';
+  return 'rs-card';
 }
 
 /** User-facing source label — compliance-safe. */

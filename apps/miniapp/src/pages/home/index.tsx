@@ -15,6 +15,7 @@ import type { MvHondiusImport } from '@hantawatch/shared/types';
 import { useLiveRecentCases } from '@/lib/use-live-recent-cases';
 import { DailyBriefBanner } from '@/components/daily-brief-banner';
 import { RiskVerdictBanner } from '@/components/risk-verdict-banner';
+import { DiseaseWatchSection } from '@/components/disease-watch-section';
 import { RealtimeSituationSection } from '@/components/realtime-situation-section';
 import { FeedLegend } from '@/components/feed-legend';
 import { DataFreshness } from '@/components/data-freshness';
@@ -42,14 +43,6 @@ const ASSESSMENT_TONE: Record<string, { bg: string; color: string }> = {
   high: { bg: '#fee2e2', color: '#b91c1c' },
 };
 
-// Forward-looking watchlist (想法1 Phase 1). The "病毒观察" brand is
-// disease-agnostic; as the current hantavirus outbreak winds down we want a
-// visible placeholder signalling the tool will expand to other emerging
-// diseases. No live data yet — keep copy calm and honest ("暂未纳入实时追踪").
-const OTHER_WATCHLIST: { emoji: string; nameZh: string; note: string }[] = [
-  { emoji: '🦠', nameZh: '埃博拉病毒病', note: '非洲偶发暴发，WHO 持续监测' },
-  { emoji: '🐒', nameZh: 'Mpox（猴痘）', note: 'WHO 关注中，全球散发病例' },
-];
 
 export default function HomePage() {
   const {
@@ -60,6 +53,8 @@ export default function HomePage() {
     todayBrief,
     chinaHfrsHistory,
     chinaHfrsMonthly2026,
+    chinaBaselineProvenance,
+    chinaBaselineMonthlyYear,
     dataMeta,
     hondiusImports,
     hondiusImportSummaries,
@@ -67,6 +62,7 @@ export default function HomePage() {
     outbreakStatus,
     realtimeFeed,
     realtimeSituation,
+    diseaseWatch,
   } = useAppData();
   const refreshAppData = useRefreshAppData();
 
@@ -141,21 +137,18 @@ export default function HomePage() {
   }, []);
 
   // WeChat native share — replaces the web app's /share poster page.
-  useShareAppMessage(() => {
-    if (hasImportDistance) {
-      return {
-        title: `汉坦距中国大陆 ${fmt(displayedDistanceKm)} km（${importLocZh}输入）· 病毒观察`,
-        path: '/pages/home/index',
-      };
-    }
-    const nearest = findNearestAndes(liveClusters);
-    return {
-      title: `汉坦距中国大陆 ${fmt(nearest.km > 0 ? nearest.km : 0)} km · 病毒观察`,
-      path: '/pages/home/index',
-    };
-  });
+  //
+  // The title used to be the raw distance ("汉坦距中国大陆 8,400 km"). That
+  // worked while the outbreak was live, but a bare number carried into a
+  // friend's chat reads as an alarm, and it says nothing once the cluster has
+  // gone quiet. Share the verdict line instead — it is the product, and it is
+  // the same sentence the recipient sees at the top of the page they land on.
+  useShareAppMessage(() => ({
+    title: `${riskVerdict.titleZh} · 病毒观察`,
+    path: '/pages/home/index',
+  }));
   useShareTimeline(() => ({
-    title: '病毒观察 BingDuGuanCha · 第一时间看清风险',
+    title: `${riskVerdict.titleZh} · 病毒观察`,
   }));
 
   // Live overlay: fetch baseline ∪ approved Supabase additions from
@@ -243,6 +236,16 @@ export default function HomePage() {
     ? `源头疫情距中国大陆约 ${fmt(sourceDistanceKm)} km；当前按地理距离最近的输入病例展示。`
     : '按当前最近 Andes 型重点疫情距离展示。';
 
+  // Chart captions were hardcoded and went stale silently. Derive them.
+  const chinaYearlyRangeLabel =
+    chinaHfrsHistory.length > 0
+      ? `${chinaHfrsHistory[0].year}-${chinaHfrsHistory[chinaHfrsHistory.length - 1].year}`
+      : '—';
+  const chinaLatestMonthLabel =
+    chinaHfrsMonthly2026.length > 0
+      ? chinaHfrsMonthly2026[chinaHfrsMonthly2026.length - 1].month
+      : '—';
+
   /** Same state code as RealtimeSituationSection — no second risk engine. */
   const riskVerdict = useMemo(
     () =>
@@ -259,6 +262,13 @@ export default function HomePage() {
             }
           : null,
         sourceDistanceKm: liveRiskSnapshot.sourceDistanceKm,
+        // Streak + WHO age power the `resolved` copy ("已经 N 天没有新增确诊").
+        daysWithoutNewConfirmed: situationSnapshot.daysWithoutNewConfirmed,
+        whoDaysAgo: intakeStats.whoDaysAgo,
+        whoLastUpdateZh:
+          typeof situationSnapshot.headline.whoLastUpdateZh === 'string'
+            ? situationSnapshot.headline.whoLastUpdateZh
+            : undefined,
       }),
     [
       realtimeSituation.state?.code,
@@ -266,6 +276,8 @@ export default function HomePage() {
       displayedDistanceKm,
       nearestImport,
       liveRiskSnapshot.sourceDistanceKm,
+      situationSnapshot,
+      intakeStats.whoDaysAgo,
     ],
   );
 
@@ -319,6 +331,21 @@ export default function HomePage() {
         {/* Data freshness pill — right aligned */}
         <View className="flex items-center" style={{ justifyContent: 'flex-end', gap: '8rpx', marginBottom: '8rpx' }}>
           <DataFreshness meta={dataMeta} />
+        </View>
+
+        {/* Everything from here to the end of the hero is Andes/MV-Hondius
+            specific. Labelled so it reads as one tracked event rather than
+            as the whole tool. */}
+        <View
+          className="flex items-center"
+          style={{ gap: '10rpx', marginBottom: '12rpx', flexWrap: 'wrap' }}
+        >
+          <Text style={{ fontSize: '24rpx', fontWeight: 600, color: 'rgba(255,255,255,0.95)' }}>
+            深度追踪：汉坦 / 安第斯型
+          </Text>
+          <Text style={{ fontSize: '20rpx', color: 'rgba(255,255,255,0.6)' }}>
+            本站唯一逐国核对病例的疫情
+          </Text>
         </View>
 
         <DailyBriefBanner
@@ -554,6 +581,20 @@ export default function HomePage() {
 
       </View>
 
+      {/* ============================================================ */}
+      {/* 传言体温计 — the page's primary answer (2026-08-28).           */}
+      {/* Sits directly under the hero because it answers the question  */}
+      {/* that does not expire: "I saw a scary post about X — is there  */}
+      {/* anything behind it?" The hantavirus blocks above and below    */}
+      {/* keep their full depth but are now one tracked event, not the  */}
+      {/* whole product. See docs/strategy-post-hanta.md §4.            */}
+      {/* This also replaces the old static 其他关注疫情 teaser card —   */}
+      {/* 埃博拉 and Mpox are now real rows backed by WHO DON dates.     */}
+      {/* ============================================================ */}
+      <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
+        <DiseaseWatchSection data={diseaseWatch} />
+      </View>
+
       <RealtimeSituationSection data={realtimeSituation} />
 
       {/* ============================================================ */}
@@ -628,34 +669,62 @@ export default function HomePage() {
             以下为每年常规报告的 HFRS 病例（地方性流行基线），并非新兴疫情。
           </Text>
 
-          <Text style={{ fontSize: '22rpx', fontWeight: 500, color: '#6b7280', marginBottom: '8rpx', display: 'block' }}>
-            年度趋势（2020-2025）
-          </Text>
-          <TrendBar
-            data={chinaHfrsHistory.map((d) => ({ label: d.year.toString(), value: d.cases }))}
-            color="#1e40af"
-            baseline={Math.round(
-              chinaHfrsHistory.reduce((s, d) => s + d.cases, 0) / chinaHfrsHistory.length,
-            )}
-            unit="例"
-          />
+          {/* Numbers gated on file-level provenance — mirrors web. An
+              unsourced chart reads as authoritative, which is exactly what
+              铁律 #2/#3 exist to prevent. */}
+          {chinaBaselineProvenance.isSourced ? (
+            <>
+              <Text style={{ fontSize: '22rpx', fontWeight: 500, color: '#6b7280', marginBottom: '8rpx', display: 'block' }}>
+                年度趋势（{chinaYearlyRangeLabel}）
+              </Text>
+              <TrendBar
+                data={chinaHfrsHistory.map((d) => ({ label: d.year.toString(), value: d.cases }))}
+                color="#1e40af"
+                baseline={Math.round(
+                  chinaHfrsHistory.reduce((s, d) => s + d.cases, 0) / chinaHfrsHistory.length,
+                )}
+                unit="例"
+              />
 
-          <View className="mt-3">
-            <Text style={{ fontSize: '22rpx', fontWeight: 500, color: '#6b7280', marginBottom: '8rpx', display: 'block' }}>
-              2026年月度数据（截至5月）
-            </Text>
-            <TrendBar
-              data={chinaHfrsMonthly2026.map((d) => ({ label: d.month, value: d.cases }))}
-              color="#0891b2"
-              unit="例"
-              showDelta
-            />
-          </View>
+              <View className="mt-3">
+                <Text style={{ fontSize: '22rpx', fontWeight: 500, color: '#6b7280', marginBottom: '8rpx', display: 'block' }}>
+                  {chinaBaselineMonthlyYear}年月度数据（截至{chinaLatestMonthLabel}）
+                </Text>
+                <TrendBar
+                  data={chinaHfrsMonthly2026.map((d) => ({ label: d.month, value: d.cases }))}
+                  color="#0891b2"
+                  unit="例"
+                  showDelta
+                />
+              </View>
 
-          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '12rpx', display: 'block', lineHeight: 1.6 }}>
-            数据来源：中国疾控中心传染病月报。HFRS 主要由汉滩型和汉城型引起，均不具备人际传播能力。
-            当前发病数处于历史基线正常范围，无异常暴发。
-          </Text>
+              <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginTop: '12rpx', display: 'block', lineHeight: 1.6 }}>
+                数据来源：{chinaBaselineProvenance.sourceName ?? '官方月报'}（截至 {chinaBaselineProvenance.asOf}）。
+                HFRS 主要由汉滩型和汉城型引起，均不具备人际传播能力。
+              </Text>
+            </>
+          ) : (
+            <View
+              style={{
+                border: '2rpx dashed #cbd5e1',
+                background: '#f8fafc',
+                borderRadius: '16rpx',
+                padding: '24rpx 20rpx',
+              }}
+            >
+              <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#334155', display: 'block' }}>
+                暂无可溯源的国内基线数字
+              </Text>
+              <Text style={{ fontSize: '22rpx', color: '#64748b', display: 'block', marginTop: '10rpx', lineHeight: 1.6 }}>
+                中国疾控没有公开 API，年度 / 月度 HFRS 数字需人工从月报抄录。在补齐来源链接与截止日期之前，
+                我们选择不显示这些数字——宁可留白，也不给你一个无法核对的图表。
+              </Text>
+              <Text style={{ fontSize: '22rpx', color: '#64748b', display: 'block', marginTop: '10rpx', lineHeight: 1.6 }}>
+                不变的事实：HFRS 在中国大陆属于地方性流行，主要由汉滩型和汉城型引起，两者均不具备人际传播能力，
+                与本站追踪的安第斯型不同。
+              </Text>
+            </View>
+          )}
         </View>
       </View>
 
@@ -718,58 +787,13 @@ export default function HomePage() {
       </View>
 
       {/* ============================================================ */}
-      {/* SECTION 6 · 其他关注疫情 (forward-looking watchlist, 想法1)     */}
-      {/* Phase 1: static teaser. No live data — signals the disease-    */}
-      {/* agnostic "病毒观察" brand will expand as the current outbreak   */}
-      {/* winds down. Keep copy calm; no panic framing.                  */}
-      {/* ============================================================ */}
-      <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx' }}>
-        <View className="card" style={{ border: '1rpx solid #e5e7eb', borderRadius: '20rpx', boxShadow: '0 6rpx 18rpx rgba(15,23,42,0.05)' }}>
-          <View className="flex items-center gap-2 mb-1">
-            <Text style={{ fontSize: '24rpx' }}>🌍</Text>
-            <Text style={{ fontSize: '28rpx', fontWeight: 600, color: '#374151' }}>其他关注疫情</Text>
-            <Text
-              style={{
-                fontSize: '22rpx',
-                color: '#6b7280',
-                marginLeft: 'auto',
-                background: '#f3f4f6',
-                borderRadius: '999rpx',
-                padding: '2rpx 14rpx',
-              }}
-            >
-              即将上线
-            </Text>
-          </View>
-          <Text style={{ fontSize: '22rpx', color: '#9ca3af', marginBottom: '12rpx', display: 'block', lineHeight: 1.5 }}>
-            病毒观察将逐步覆盖更多新发传染病。以下病种暂未纳入实时追踪，敬请期待。
-          </Text>
-          {OTHER_WATCHLIST.map((d) => (
-            <View
-              key={d.nameZh}
-              className="flex items-center"
-              style={{ padding: '12rpx 0', borderTop: '1rpx solid #f3f4f6' }}
-            >
-              <Text style={{ fontSize: '32rpx', marginRight: '14rpx' }}>{d.emoji}</Text>
-              <View className="flex-1 min-w-0">
-                <Text style={{ fontSize: '24rpx', fontWeight: 600, color: '#111827', display: 'block' }}>{d.nameZh}</Text>
-                <Text style={{ fontSize: '22rpx', color: '#6b7280', display: 'block', lineHeight: 1.3 }} className="truncate">
-                  {d.note}
-                </Text>
-              </View>
-            </View>
-          ))}
-        </View>
-      </View>
-
-      {/* ============================================================ */}
       {/* SECTION 7 · 导航 footer                                        */}
       {/*                                                                */}
-      {/* The full subscribe-alerts CTA was REMOVED from miniapp on      */}
-      {/* 2026-05-27 (audit #16): WeChat reviewers reject email-capture  */}
-      {/* flows as PII collection, blocking app-store listing. Web users */}
-      {/* still get the subscribe surface; miniapp users link out for    */}
-      {/* email alerts on the web at bingduguancha.com.                  */}
+      {/* The subscribe-alerts CTA was removed from miniapp on 2026-05-27 */}
+      {/* (audit #16): WeChat reviewers reject email-capture flows as PII */}
+      {/* collection. As of 2026-08-27 the web form is gone too, so both  */}
+      {/* surfaces are now consistently zero-PII — see docs/PRD.md        */}
+      {/* OUT-OF-SCOPE #2/#3 and apps/web/src/app/api/alert/subscribe.    */}
       {/* ============================================================ */}
       <View className="container-page" style={{ padding: '0 24rpx', marginTop: '24rpx', marginBottom: '32rpx' }}>
         <View

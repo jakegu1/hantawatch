@@ -13,6 +13,8 @@
  * because Vercel redeploys on every data commit; the miniapp needs this layer).
  */
 
+import { readFileProvenance } from '@hantawatch/shared/data-provenance';
+import type { DiseaseWatchFile } from '@hantawatch/shared/disease-watch';
 import { sortRecentCasesByDate } from '@hantawatch/shared/timeline';
 import type {
   ActiveCluster,
@@ -221,6 +223,10 @@ export function deriveAppData(raw: RawBundle) {
   const chinaHfrsHistory = raw.chinaBaseline.yearly as { year: number; cases: number; deaths: number }[];
   const chinaHfrsMonthly2026 = raw.chinaBaseline.monthlyCurrentYear.months as { month: string; cases: number }[];
   const chinaProvinceCases = raw.chinaBaseline.byProvince as { code: string; name: string; annualCases: number }[];
+  // 铁律 #3 — the home page withholds these series unless the file carries a
+  // source URL + as-of date. Mirrors apps/web/src/lib/data.ts.
+  const chinaBaselineProvenance = readFileProvenance(raw.chinaBaseline);
+  const chinaBaselineMonthlyYear = raw.chinaBaseline.monthlyCurrentYear.year as number;
 
   const chinaCases: RecentCase[] = (raw.recentCasesChina.cases as CaseRecord[]).map((c) => ({
     ...c,
@@ -330,6 +336,10 @@ export function deriveAppData(raw: RawBundle) {
 
   const realtimeSituation = raw.realtimeSituation as RealtimeSituation;
 
+  // 传言体温计 — cross-disease "last traceable WHO notice" table. Passed
+  // through untouched; all wording lives in @hantawatch/shared/disease-watch.
+  const diseaseWatch = raw.diseaseWatch as unknown as DiseaseWatchFile;
+
   return {
     activeClusters,
     riskSnapshot,
@@ -340,6 +350,8 @@ export function deriveAppData(raw: RawBundle) {
     chinaHfrsHistory,
     chinaHfrsMonthly2026,
     chinaProvinceCases,
+    chinaBaselineProvenance,
+    chinaBaselineMonthlyYear,
     recentCases,
     dataMeta,
     realtimeFeed,
@@ -354,6 +366,7 @@ export function deriveAppData(raw: RawBundle) {
     countryViewsByContinent,
     searchCountries,
     realtimeSituation,
+    diseaseWatch,
   };
 }
 

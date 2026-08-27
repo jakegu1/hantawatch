@@ -40,6 +40,9 @@ docker-compose.override.yml
 # Turborepo
 .turbo/
 
+# TS incremental build cache (was committed; every local `tsc` dirtied the tree)
+*.tsbuildinfo
+
 # Runtime-collected data (regenerated; not source of truth)
 apps/web/data/analytics/
 

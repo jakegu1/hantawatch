@@ -16,9 +16,19 @@ NEAR_WATCH_DISTANCE_KM = 5000
 MAX_EVENTS = 30
 MAX_RULER_KM = 20000
 
+# An outbreak whose cumulative case count is > 0 stays "active" forever if we
+# only look at totals — which is how the site sat at 海外关注 for 92 days after
+# the MV Hondius cluster had visibly wound down. `resolved` is the way back
+# out: once no new confirmed case has been reported for longer than one
+# maximum Andes incubation period (~42 days), the transmission chain is quiet.
+# We still never print "疫情结束" — that declaration belongs to WHO. The UI
+# states the streak ("已经 N 天没有新增确诊"), which is a sourced fact.
+RESOLVED_QUIET_DAYS = 42
+
 
 _STATE_DEFS: dict[str, dict[str, Any]] = {
     "calm": {"code": "calm", "labelZh": "平静", "icon": "🟢"},
+    "resolved": {"code": "resolved", "labelZh": "已平息", "icon": "🟢"},
     "remote_watch": {"code": "remote_watch", "labelZh": "海外关注", "icon": "🟡"},
     "near_watch": {"code": "near_watch", "labelZh": "邻近警戒", "icon": "🟠"},
     "domestic_alert": {"code": "domestic_alert", "labelZh": "本土警报", "icon": "🔴"},
@@ -80,7 +90,17 @@ def compute_state(
     risk_snapshot: dict[str, Any],
     *,
     today: date,
+    days_without_new_confirmed: int | None = None,
 ) -> str:
+    """
+    Map the current ledger to one state code.
+
+    `days_without_new_confirmed` comes from `build_events`. When it exceeds
+    RESOLVED_QUIET_DAYS the outbreak is reported as `resolved` rather than
+    keeping an indefinite 海外关注 watch alive off a frozen cumulative total.
+    Callers that cannot supply it (older tests, ad-hoc checks) keep the
+    previous behaviour.
+    """
     domestic_baseline = (
         risk_snapshot.get("dailyBrief", {}).get("domesticBaselineStatus")
         or risk_snapshot.get("domesticBaselineStatus")
@@ -91,6 +111,11 @@ def compute_state(
 
     if not _has_active_outbreak(outbreak_status):
         return "calm"
+
+    # A long confirmed-case drought outranks distance: an import 4,000 km away
+    # that produced no new case in six weeks is not an active 邻近警戒.
+    if days_without_new_confirmed is not None and days_without_new_confirmed >= RESOLVED_QUIET_DAYS:
+        return "resolved"
 
     closest = risk_snapshot.get("displayedDistanceKm")
     try:
@@ -1105,10 +1130,20 @@ def build_realtime_situation(
     realtime_payload["entries"] = entries
     realtime_payload["__today"] = today.isoformat()  # internal hint for tests
 
+    # Events and streaks — built BEFORE compute_state because the
+    # confirmed-case drought (`days_without_new_confirmed`) is what lets the
+    # state fall back out of 海外关注 into `resolved`. See RESOLVED_QUIET_DAYS.
+    events, days_without_new_confirmed, days_without_any_news = build_events(
+        outbreak_status,
+        realtime_feed=realtime_payload,
+        recent_cases_intl=recent_cases_intl,
+    )
+
     state_code = compute_state(
         outbreak_status=outbreak_status,
         risk_snapshot=risk_snapshot,
         today=today,
+        days_without_new_confirmed=days_without_new_confirmed,
     )
     since_str, days_at_state = _compute_days_at_state(existing_situation, state_code, today=today)
 
@@ -1118,13 +1153,6 @@ def build_realtime_situation(
 
     headline = _headline_for(outbreak_status, risk_snapshot, today=today)
     ruler = build_ruler(outbreak_status, risk_snapshot)
-
-    # Events and streaks
-    events, days_without_new_confirmed, days_without_any_news = build_events(
-        outbreak_status,
-        realtime_feed=realtime_payload,
-        recent_cases_intl=recent_cases_intl,
-    )
 
     # 口径 B: enrich headline with since-WHO delta + current reported count.
     # MUST run after events are built since the delta is derived from events.

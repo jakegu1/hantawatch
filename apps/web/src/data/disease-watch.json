@@ -1,0 +1,216 @@
+{
+  "__generated_by": "hantawatch-collector@0.1.0",
+  "__generated_at": "2026-08-27T16:08:46.971294+00:00",
+  "asOf": "2026-08-27",
+  "sourceName": "WHO 疾病暴发新闻（DON）",
+  "sourceUrl": "https://www.who.int/emergencies/disease-outbreak-news",
+  "windowDays": 90,
+  "scannedEntries": 299,
+  "oldestScanned": "2020-11-13",
+  "diseases": [
+    {
+      "id": "hantavirus",
+      "nameZh": "汉坦病毒",
+      "aliasesZh": [
+        "汉坦",
+        "出血热",
+        "肾综合征出血热",
+        "HFRS",
+        "安第斯型"
+      ],
+      "blurbZh": "鼠传病毒。中国大陆常见的汉滩型/汉城型不具备人际传播能力；只有南美的安第斯型确认可人传人。",
+      "level": "active",
+      "latest": {
+        "titleEn": "Hantavirus outbreak linked to cruise ship travel, Multi-locations",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON611",
+        "asOf": "2026-07-02",
+        "daysAgo": 56
+      },
+      "countInWindow": 1,
+      "countScanned": 5,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "本站对汉坦病毒有逐国病例追踪，详情见事件页。",
+      "officialRefs": [
+        {
+          "nameZh": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news"
+        },
+        {
+          "nameZh": "WHO 汉坦病毒专题",
+          "url": "https://www.who.int/health-topics/hantavirus"
+        },
+        {
+          "nameZh": "中国疾病预防控制中心",
+          "url": "https://www.chinacdc.cn/"
+        }
+      ]
+    },
+    {
+      "id": "influenza",
+      "nameZh": "流感",
+      "aliasesZh": [
+        "甲流",
+        "乙流",
+        "流行性感冒",
+        "禽流感",
+        "H5N1",
+        "H9N2"
+      ],
+      "blurbZh": "呼吸道传染病，每年冬春季节性流行。禽流感是另一类，由禽类传人，人际传播能力有限。",
+      "level": "quiet",
+      "latest": {
+        "titleEn": "Avian Influenza A(H9N2) - Italy",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON597",
+        "asOf": "2026-04-10",
+        "daysAgo": 139
+      },
+      "countInWindow": 0,
+      "countScanned": 42,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "WHO 只为不寻常事件发疫情通报，季节性流感不在其列——所以这里没有条目不代表没有流感。国内流行程度请看中国疾控中心的流感周报。",
+      "officialRefs": [
+        {
+          "nameZh": "中国疾控中心 流感周报",
+          "url": "https://ivdc.chinacdc.cn/cnic/zyzx/lgzb/"
+        },
+        {
+          "nameZh": "WHO 季节性流感说明",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)"
+        },
+        {
+          "nameZh": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news"
+        }
+      ]
+    },
+    {
+      "id": "dengue",
+      "nameZh": "登革热",
+      "aliasesZh": [
+        "登革",
+        "骨痛热"
+      ],
+      "blurbZh": "蚊媒传染病，不人传人。中国大陆以广东、云南等地夏秋季输入引发的本地传播为主。",
+      "level": "quiet",
+      "latest": {
+        "titleEn": "Dengue – Iran (Islamic Republic of)",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2024-DON526",
+        "asOf": "2024-07-22",
+        "daysAgo": 766
+      },
+      "countInWindow": 0,
+      "countScanned": 14,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "登革热在很多国家是常年流行病，WHO 只在出现异常暴发时才发疫情通报。国内情况以各省疾控与国家疾控局通报为准。",
+      "officialRefs": [
+        {
+          "nameZh": "国家疾病预防控制局",
+          "url": "https://www.ndcpa.gov.cn/"
+        },
+        {
+          "nameZh": "WHO 登革热说明",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue"
+        },
+        {
+          "nameZh": "美国 CDC 旅行健康通报",
+          "url": "https://wwwnc.cdc.gov/travel/notices"
+        }
+      ]
+    },
+    {
+      "id": "norovirus",
+      "nameZh": "诺如病毒",
+      "aliasesZh": [
+        "诺如",
+        "急性胃肠炎",
+        "冬季呕吐病"
+      ],
+      "blurbZh": "肠道病毒，冬春季高发，学校和托幼机构容易出现聚集。病程通常 2–3 天可自愈。",
+      "level": "none",
+      "latest": null,
+      "countInWindow": 0,
+      "countScanned": 0,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "诺如病毒在全球常年流行，从不进入 WHO 疫情通报——这里没有条目是常态，不代表没有病例。学校聚集通常由当地疾控通报。",
+      "officialRefs": [
+        {
+          "nameZh": "中国疾病预防控制中心",
+          "url": "https://www.chinacdc.cn/"
+        },
+        {
+          "nameZh": "WHO 食源性疾病说明",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety"
+        }
+      ]
+    },
+    {
+      "id": "ebola",
+      "nameZh": "埃博拉病毒病",
+      "aliasesZh": [
+        "埃博拉",
+        "Ebola"
+      ],
+      "blurbZh": "丝状病毒科，通过接触体液传播，病死率高。历史上暴发集中在中非、西非。",
+      "level": "active",
+      "latest": {
+        "titleEn": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON615",
+        "asOf": "2026-08-14",
+        "daysAgo": 13
+      },
+      "countInWindow": 8,
+      "countScanned": 28,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "埃博拉暴发一定会进入 WHO 疫情通报，所以这里的日期基本等于全球最新情况。",
+      "officialRefs": [
+        {
+          "nameZh": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news"
+        },
+        {
+          "nameZh": "WHO 埃博拉说明",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/ebola-virus-disease"
+        },
+        {
+          "nameZh": "美国 CDC 旅行健康通报",
+          "url": "https://wwwnc.cdc.gov/travel/notices"
+        }
+      ]
+    },
+    {
+      "id": "mpox",
+      "nameZh": "Mpox（猴痘）",
+      "aliasesZh": [
+        "猴痘",
+        "Mpox",
+        "monkeypox"
+      ],
+      "blurbZh": "正痘病毒属，主要通过密切接触传播，多数为自限性。",
+      "level": "quiet",
+      "latest": {
+        "titleEn": "Mpox: recombinant virus with genomic elements of clades Ib and IIb – Global situation",
+        "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON595",
+        "asOf": "2026-02-14",
+        "daysAgo": 194
+      },
+      "countInWindow": 0,
+      "countScanned": 19,
+      "chinaTitledInWindow": 0,
+      "donScopeNoteZh": "Mpox 的全球态势由 WHO 持续通报，这里的日期反映最近一次正式通报。",
+      "officialRefs": [
+        {
+          "nameZh": "WHO 疾病暴发新闻（DON）",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news"
+        },
+        {
+          "nameZh": "WHO Mpox 说明",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/mpox"
+        },
+        {
+          "nameZh": "美国 CDC 旅行健康通报",
+          "url": "https://wwwnc.cdc.gov/travel/notices"
+        }
+      ]
+    }
+  ]
+}
