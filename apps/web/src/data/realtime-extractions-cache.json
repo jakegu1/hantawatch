@@ -12487,6 +12487,34 @@
         "source_url": "",
         "time": "2026-08-25T01:49:20.000Z"
       }
+    ],
+    "rt-02d30df1d0169e50": [
+      {
+        "iso2": "VN",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-27",
+        "confidence": "low",
+        "reasoning_zh": "报道提及越南野生动物养殖者接触汉坦病毒，但无具体新增病例数字，故增量为0。",
+        "update_id": "rt-02d30df1d0169e50",
+        "source_url": "",
+        "time": "2026-08-27T02:25:00.000Z"
+      }
+    ],
+    "rt-49383c025e8a2641": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-22",
+        "confidence": "low",
+        "reasoning_zh": "WHO宣布邮轮疫情结束，但未提供具体国家及新增数字，故增量为0。",
+        "update_id": "rt-49383c025e8a2641",
+        "source_url": "",
+        "time": "2026-08-22T04:49:28.000Z"
+      }
     ]
   }
 }
