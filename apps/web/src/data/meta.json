@@ -1,8 +1,8 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-27T21:42:08.508412+00:00",
-  "lastCollectedAt": "2026-08-27T21:42:08.504790+00:00",
-  "lastCollectedAtCn": "2026-08-28T05:42:08.504799+08:00",
+  "__generated_at": "2026-08-28T08:55:05.929619+00:00",
+  "lastCollectedAt": "2026-08-28T08:55:05.926238+00:00",
+  "lastCollectedAtCn": "2026-08-28T16:55:05.926244+08:00",
   "sources": {
     "who_don": {
       "entries": 5,
@@ -31,16 +31,8 @@
     "official_sources": {
       "entries": 12,
       "ok": true,
-      "okCount": 10,
-      "checkedAt": "2026-08-27T21:41:50.370199+00:00"
-    },
-    "surveillance_leads": {
-      "entries": 4,
-      "ok": true
-    },
-    "feeds_light_run": {
-      "ok": true,
-      "at": "2026-08-27T21:42:08.504790+00:00"
+      "okCount": 9,
+      "checkedAt": "2026-08-28T08:54:36.505627+00:00"
     }
   },
   "clusterCount": 1,
