@@ -4,13 +4,13 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 93
+    "daysAtState": 94
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "7/2",
-    "whoDaysAgo": 57,
+    "whoDaysAgo": 58,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
@@ -255,7 +255,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 57,
+  "daysWithoutNewConfirmed": 58,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -291,7 +291,7 @@
         "count": 2,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-08-28"
+        "asOf": "2026-08-29"
       },
       {
         "zh": "法国",
@@ -305,14 +305,14 @@
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-08-28"
+        "asOf": "2026-08-29"
       },
       {
         "zh": "瑞士",
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-08-28"
+        "asOf": "2026-08-29"
       }
     ],
     "confirmedAttributionTotal": 11,
@@ -478,7 +478,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-08-28T21:42:23.102124+00:00"
+      "updatedAt": "2026-08-29T05:30:14.880554+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -493,5 +493,5 @@
     "last24hCount": 0,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-08-28T21:42:26.258348+00:00"
+  "realtimeUpdatedAt": "2026-08-29T05:30:17.810196+00:00"
 }
