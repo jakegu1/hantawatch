@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-08-29T12:14:24.036884+00:00",
+  "__generated_at": "2026-08-29T14:51:44.627396+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-08-29T12:14:20.369449+00:00",
+  "last_fetched": "2026-08-29T14:51:43.464698+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-08-27T02:25:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者暴露于汉坦病毒，专家警告东南亚风险。",
+      "summary_zh": "越南野生动物养殖者接触汉坦病毒，专家警告东南亚风险。",
       "key_facts_zh": [
         "越南",
-        "暴露风险",
-        "东南亚"
+        "野生动物养殖",
+        "专家警告"
       ],
       "signal_strength": "medium"
     },
@@ -39,7 +39,7 @@
       "time": "2026-08-07T07:00:00.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新患者可能已传染 10 天，官方通报。",
+      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染 10 天。",
       "key_facts_zh": [
         "西班牙",
         "传染期 10 天"
@@ -51,7 +51,7 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "经法国转机游客汉坦病毒检测阳性。",
+      "summary_zh": "一名经法国过境游客确诊汉坦病毒。",
       "key_facts_zh": [
         "法国",
         "游客确诊"
