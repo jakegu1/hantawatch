@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-01T19:05:25.276138+00:00",
+  "__generated_at": "2026-09-01T20:30:22.977398+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-01T19:05:24.080301+00:00",
+  "last_fetched": "2026-09-01T20:30:18.526704+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-09-01T00:18:47.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO 确认邮轮疫情中 5 例汉坦病毒病例。",
+      "summary_zh": "WHO确认邮轮暴发5例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "5 例"
+        "5例"
       ],
       "signal_strength": "high"
     },
@@ -26,11 +26,11 @@
       "time": "2026-08-27T02:25:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者接触汉坦病毒，警示东南亚。",
+      "summary_zh": "越南野生动物养殖者接触汉坦病毒，警告东南亚。",
       "key_facts_zh": [
         "越南",
         "养殖者",
-        "警示"
+        "警告"
       ],
       "signal_strength": "medium"
     },
@@ -39,11 +39,11 @@
       "time": "2026-08-15T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 33): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
+      "summary_zh": "美国CDC周报：本周0例，2026年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "本周 0",
-        "累计 1"
+        "美国CDC",
+        "0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +52,10 @@
       "time": "2026-08-07T07:00:00.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新患者可能已传染 10 天。",
+      "summary_zh": "西班牙新患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期"
+        "传染10天"
       ],
       "signal_strength": "high"
     },
@@ -64,7 +64,7 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "经法国转机游客 7 月检测阳性。",
+      "summary_zh": "法国过境游客7月检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
