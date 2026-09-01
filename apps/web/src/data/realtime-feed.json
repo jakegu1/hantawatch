@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-01T20:30:22.977398+00:00",
+  "__generated_at": "2026-09-01T22:15:42.059466+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-01T20:30:18.526704+00:00",
+  "last_fetched": "2026-09-01T22:15:40.780884+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-09-01T00:18:47.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak News On AIR",
-      "summary_zh": "WHO确认邮轮暴发5例汉坦病毒病例。",
+      "summary_zh": "WHO 确认邮轮暴发疫情中 5 例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
-        "5例"
+        "5 例"
       ],
       "signal_strength": "high"
     },
@@ -39,11 +39,11 @@
       "time": "2026-08-15T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 33): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周0例，2026年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
       "key_facts_zh": [
-        "美国CDC",
-        "0例",
-        "累计1例"
+        "美国 CDC",
+        "无新增",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -52,10 +52,11 @@
       "time": "2026-08-07T07:00:00.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新患者可能已传染10天。",
+      "summary_zh": "西班牙卫生官员称新患者可能已传染 10 天。",
       "key_facts_zh": [
         "西班牙",
-        "传染10天"
+        "传染期",
+        "10 天"
       ],
       "signal_strength": "high"
     },
@@ -64,7 +65,7 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国过境游客7月检测阳性。",
+      "summary_zh": "法国：7 月过境游客汉坦病毒检测阳性。",
       "key_facts_zh": [
         "法国",
         "游客",
