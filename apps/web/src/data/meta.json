@@ -12,7 +12,7 @@
       "ok": true
     },
     "news_leads": {
-      "entries": 4,
+      "entries": 1,
       "ok": true,
       "perQuery": [
         {
@@ -22,8 +22,8 @@
           "blocked": 1,
           "no_signal": 15,
           "duplicate": 0,
-          "non_authoritative": 5,
-          "kept": 4,
+          "non_authoritative": 8,
+          "kept": 1,
           "ok": true
         }
       ]
