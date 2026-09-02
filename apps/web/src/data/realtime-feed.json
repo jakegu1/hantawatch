@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-02T10:19:17.112364+00:00",
+  "__generated_at": "2026-09-02T10:33:55.722996+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-02T10:19:16.289487+00:00",
+  "last_fetched": "2026-09-02T10:33:52.057800+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -11,8 +11,8 @@
     {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-27T02:25:00.000Z",
-      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
-      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - theconversation.com",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia theconversation.com",
       "summary_zh": "越南野生动物养殖者接触汉坦病毒，警示东南亚。",
       "key_facts_zh": [
         "越南",
@@ -22,28 +22,15 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-d6408bfbf31fc1da",
-      "time": "2026-08-24T17:09:18.000Z",
-      "title_en": "National Quarantine Unit (NQU) & Hantavirus Response - National Emerging Special Pathogens Training & Education Center",
-      "body_en": "National Quarantine Unit (NQU) & Hantavirus Response National Emerging Special Pathogens Training & Education Center",
-      "summary_zh": "美国国家隔离单位应对汉坦病毒，培训中心发布信息。",
-      "key_facts_zh": [
-        "美国",
-        "隔离单位",
-        "应对"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-15T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 33): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周零新增，全年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
       "key_facts_zh": [
-        "美国CDC",
-        "零新增",
-        "累计1例"
+        "美国 CDC",
+        "本周 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -52,11 +39,11 @@
       "time": "2026-08-07T07:00:00.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新汉坦病毒患者或已传染10天，官方通报。",
+      "summary_zh": "西班牙新患者或已传染 10 天，官方通报。",
       "key_facts_zh": [
         "西班牙",
-        "新患者",
-        "传染期"
+        "传染期 10 天",
+        "官方通报"
       ],
       "signal_strength": "high"
     },
@@ -65,11 +52,10 @@
       "time": "2026-08-06T07:00:00.000Z",
       "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
       "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
-      "summary_zh": "法国：过境游客7月检测汉坦病毒阳性。",
+      "summary_zh": "法国过境游客确诊汉坦病毒。",
       "key_facts_zh": [
         "法国",
-        "游客",
-        "阳性"
+        "游客确诊"
       ],
       "signal_strength": "high"
     }
