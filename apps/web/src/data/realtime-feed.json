@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-03T10:38:17.246789+00:00",
+  "__generated_at": "2026-09-03T12:25:42.949359+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-03T10:38:13.827508+00:00",
+  "last_fetched": "2026-09-03T12:25:42.410269+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增 0 例，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "本周 0 例",
+        "新增 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
@@ -24,14 +24,14 @@
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T07:00:00.000Z",
-      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
-      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙卫生官员称新患者或已传染 10 天。",
+      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - aa.com.tr",
+      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days aa.com.tr",
+      "summary_zh": "西班牙卫生官员称新汉坦病毒患者可能已传染 10 天。",
       "key_facts_zh": [
         "西班牙",
         "传染期 10 天"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
