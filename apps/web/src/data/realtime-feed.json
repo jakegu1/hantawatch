@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-03T02:48:52.909992+00:00",
+  "__generated_at": "2026-09-03T07:35:01.131373+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-03T02:48:47.882810+00:00",
+  "last_fetched": "2026-09-03T07:34:59.972996+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-08-31T14:57:45.000Z",
       "title_en": "French traveler tests positive for Andes Hantavirus after returning from cruise - News On AIR",
       "body_en": "French traveler tests positive for Andes Hantavirus after returning from cruise News On AIR",
-      "summary_zh": "法国游客返程后确诊安第斯汉坦病毒。",
+      "summary_zh": "法国旅客邮轮返程后确诊安第斯汉坦病毒。",
       "key_facts_zh": [
         "法国",
         "确诊"
@@ -37,10 +37,10 @@
       "time": "2026-08-24T17:09:18.000Z",
       "title_en": "National Quarantine Unit (NQU) & Hantavirus Response - National Emerging Special Pathogens Training & Education Center",
       "body_en": "National Quarantine Unit (NQU) & Hantavirus Response National Emerging Special Pathogens Training & Education Center",
-      "summary_zh": "国家隔离单位与汉坦病毒应对措施介绍。",
+      "summary_zh": "美国国家隔离单位应对汉坦病毒。",
       "key_facts_zh": [
-        "国家隔离单位",
-        "应对"
+        "美国",
+        "隔离"
       ],
       "signal_strength": "medium"
     },
@@ -49,7 +49,7 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，累计1例。",
       "key_facts_zh": [
         "美国CDC",
         "累计1例"
@@ -66,19 +66,7 @@
         "西班牙",
         "传染期"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-98f9bd950a843d08",
-      "time": "2026-08-06T07:00:00.000Z",
-      "title_en": "Hantavirus: Tourist who transited France in July tests positive - lemonde.fr",
-      "body_en": "Hantavirus: Tourist who transited France in July tests positive lemonde.fr",
-      "summary_zh": "过境法国游客确诊汉坦病毒。",
-      "key_facts_zh": [
-        "法国",
-        "确诊"
-      ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
