@@ -12529,6 +12529,20 @@
         "source_url": "",
         "time": "2026-08-24T09:34:25.000Z"
       }
+    ],
+    "rt-034bd5cbea47a03b": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-31",
+        "confidence": "low",
+        "reasoning_zh": "报道称法国旅行者检测阳性，但未提供新增病例数，无法确定具体国家变化量。",
+        "update_id": "rt-034bd5cbea47a03b",
+        "source_url": "",
+        "time": "2026-08-31T14:57:45.000Z"
+      }
     ]
   }
 }
