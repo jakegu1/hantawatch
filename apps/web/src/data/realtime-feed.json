@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-03T20:27:29.625955+00:00",
+  "__generated_at": "2026-09-03T22:05:32.506713+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-03T20:27:26.070098+00:00",
+  "last_fetched": "2026-09-03T22:05:31.502178+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,33 +16,21 @@
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "记者死亡"
+        "死亡"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报本周无新增，2026年累计1例。",
+      "summary_zh": "美国 CDC 通报本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "累计1例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-4bd8a09f72ef9770",
-      "time": "2026-08-21T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚研究所宣布加速埃博拉和汉坦病毒治疗项目。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "治疗研究"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-de99951949bf596f",
@@ -54,30 +42,29 @@
         "美国",
         "内布拉斯加医学中心"
       ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-32dbba35afc9478c",
-      "time": "2026-08-20T18:53:41.000Z",
-      "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
-      "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲出现罕见安第斯汉坦病毒病例，源自阿根廷。",
-      "key_facts_zh": [
-        "欧洲",
-        "阿根廷",
-        "输入病例"
-      ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-e289857641e81a83",
       "time": "2026-08-07T07:00:00.000Z",
-      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
-      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新患者可能已传染10天，卫生官员称。",
+      "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - aa.com.tr",
+      "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days aa.com.tr",
+      "summary_zh": "西班牙新患者可能已传染10天。",
       "key_facts_zh": [
         "西班牙",
         "传染期"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-98f9bd950a843d08",
+      "time": "2026-08-06T07:00:00.000Z",
+      "title_en": "Hantavirus: Tourist who transited France in July tests positive - Le Monde.fr",
+      "body_en": "Hantavirus: Tourist who transited France in July tests positive Le Monde.fr",
+      "summary_zh": "法国过境游客检测呈阳性。",
+      "key_facts_zh": [
+        "法国",
+        "游客确诊"
       ],
       "signal_strength": "high"
     }
