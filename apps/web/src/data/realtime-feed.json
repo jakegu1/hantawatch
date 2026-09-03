@@ -1,58 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-03T07:35:01.131373+00:00",
+  "__generated_at": "2026-09-03T10:38:17.246789+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-03T07:34:59.972996+00:00",
+  "last_fetched": "2026-09-03T10:38:13.827508+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-c6dd84ec1bbefffc",
-      "time": "2026-09-01T15:18:49.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡。",
-      "key_facts_zh": [
-        "邮轮",
-        "3人死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-034bd5cbea47a03b",
-      "time": "2026-08-31T14:57:45.000Z",
-      "title_en": "French traveler tests positive for Andes Hantavirus after returning from cruise - News On AIR",
-      "body_en": "French traveler tests positive for Andes Hantavirus after returning from cruise News On AIR",
-      "summary_zh": "法国旅客邮轮返程后确诊安第斯汉坦病毒。",
-      "key_facts_zh": [
-        "法国",
-        "确诊"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-d6408bfbf31fc1da",
-      "time": "2026-08-24T17:09:18.000Z",
-      "title_en": "National Quarantine Unit (NQU) & Hantavirus Response - National Emerging Special Pathogens Training & Education Center",
-      "body_en": "National Quarantine Unit (NQU) & Hantavirus Response National Emerging Special Pathogens Training & Education Center",
-      "summary_zh": "美国国家隔离单位应对汉坦病毒。",
-      "key_facts_zh": [
-        "美国",
-        "隔离"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周无新增，累计1例。",
+      "summary_zh": "美国 CDC 周报：本周无新增，2026 年累计 1 例。",
       "key_facts_zh": [
-        "美国CDC",
-        "累计1例"
+        "美国 CDC",
+        "本周 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -61,12 +26,12 @@
       "time": "2026-08-07T07:00:00.000Z",
       "title_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days - Anadolu Ajansı",
       "body_en": "Health officials say new hantavirus patient in Spain may have been contagious for 10 days Anadolu Ajansı",
-      "summary_zh": "西班牙新患者或已传染10天。",
+      "summary_zh": "西班牙卫生官员称新患者或已传染 10 天。",
       "key_facts_zh": [
         "西班牙",
-        "传染期"
+        "传染期 10 天"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
