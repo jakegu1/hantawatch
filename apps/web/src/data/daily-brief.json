@@ -1,36 +1,36 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-03T15:44:27.906204+00:00",
-  "date": "2026-09-03",
+  "__generated_at": "2026-09-03T20:27:29.623592+00:00",
+  "date": "2026-09-04",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 11,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 63,
-  "whoDaysSinceOfficialUpdate": 63,
+  "daysSinceLastIntlAlert": 64,
+  "whoDaysSinceOfficialUpdate": 64,
   "cluesLast24h": 6,
-  "headline24h": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "9月1日美国松岭检出汉坦病毒待官方确认；法国1例确诊输入仍在ICU；WHO确认邮轮疫情关联5例。",
-  "situation": "WHO数据滞后期间由各国卫生部公告与ArcGIS监测补足；多国维持监测，待WHO复核美国松岭检出及各国新增。",
-  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险低，公众",
-  "newCases": "9月1日无新增确诊；美国松岭检出病毒待官方确认。",
-  "sourceSummary": "WHO、美国CDC、法国卫生部、ArcGIS监测",
-  "shareLine": "WHO 7/2公布累计13例（63天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+  "latestChange": "9月3日法国1例确诊输入仍在ICU；智利记者8月23日因汉坦病毒去世；美国松岭检出病毒待官方确认。",
+  "situation": "WHO数据滞后，由各国卫生部及ArcGIS监测补足；多国维持监测，法国、西班牙输入病例待WHO复核；国内HFRS基线正常。",
+  "riskJudgment": "中国大陆无相关病例，输入风险极低；关注邮轮相关聚集及欧洲输入，但普通公众风险低。",
+  "newCases": "9月3日无新增确诊；美国松岭检出病毒待官方确认。",
+  "sourceSummary": "WHO、欧洲CDC、ArcGIS及多国官方通报。",
+  "shareLine": "WHO 7/2公布累计13例（64天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "美国松岭检出确认",
-    "法国ICU病例转归",
-    "邮轮疫情随访进展"
+    "法国ICU病例",
+    "美国松岭检测",
+    "邮轮聚集疫情"
   ],
   "evidence": [
-    "WHO DON 7/2更新",
-    "美国CDC周报9/1",
-    "ArcGIS监测9/3"
+    "WHO DON 7/2",
+    "欧洲CDC 8/20",
+    "ArcGIS监测"
   ],
   "_guardrail_warnings": [
-    "shareline_pending_sanitized: no pending confirmed deltas",
-    "brief contains \"5\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]"
+    "brief mentions \"智利\" but it is not in mvHondiusImports or arcgisCases",
+    "shareline_pending_sanitized: no pending confirmed deltas"
   ]
 }
