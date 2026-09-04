@@ -12543,6 +12543,20 @@
         "source_url": "",
         "time": "2026-08-31T14:57:45.000Z"
       }
+    ],
+    "rt-1b4e1e385c40a971": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-04",
+        "confidence": "low",
+        "reasoning_zh": "标题提及海洋探险公司应对汉坦病毒疫情，但未提供具体国家、病例数或新增数据，无法提取变化量。",
+        "update_id": "rt-1b4e1e385c40a971",
+        "source_url": "",
+        "time": "2026-09-04T05:51:32.000Z"
+      }
     ]
   }
 }
