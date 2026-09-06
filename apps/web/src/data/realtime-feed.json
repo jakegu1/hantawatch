@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-06T13:52:01.935010+00:00",
+  "__generated_at": "2026-09-06T14:53:23.108426+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-06T13:52:00.715292+00:00",
+  "last_fetched": "2026-09-06T14:53:19.105526+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-05T11:57:57.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客。",
+      "summary_zh": "美国亚利桑那州和佐治亚州官员监测返美的汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -26,10 +26,10 @@
       "time": "2026-09-04T05:51:32.000Z",
       "title_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak - Cruise & Ferry Review",
       "body_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak Cruise & Ferry Review",
-      "summary_zh": "Oceanwide Expeditions 应对致命汉坦病毒疫情。",
+      "summary_zh": "Oceanwide Expeditions 公司回应致命汉坦病毒爆发的海上紧急情况。",
       "key_facts_zh": [
         "邮轮",
-        "疫情应对"
+        "应对"
       ],
       "signal_strength": "medium"
     },
@@ -38,7 +38,7 @@
       "time": "2026-08-28T07:00:00.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "Cumming 中心宣布加速埃博拉和汉坦病毒治疗项目。",
+      "summary_zh": "Cumming 全球中心宣布加速埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
         "治疗研究",
         "埃博拉"
@@ -50,10 +50,11 @@
       "time": "2026-08-27T07:00:00.000Z",
       "title_en": "Grey-Bruce couple potentially exposed to hantavirus are ‘well’ - Owen Sound Sun-Times",
       "body_en": "Grey-Bruce couple potentially exposed to hantavirus are ‘well’ Owen Sound Sun-Times",
-      "summary_zh": "加拿大 Grey-Bruce 夫妇可能接触汉坦病毒，状况良好。",
+      "summary_zh": "加拿大灰布鲁斯夫妇可能接触汉坦病毒，目前状况良好。",
       "key_facts_zh": [
         "加拿大",
-        "接触者"
+        "接触",
+        "状况良好"
       ],
       "signal_strength": "medium"
     },
@@ -62,10 +63,11 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增 0 例，2026 年累计 1 例。",
+      "summary_zh": "美国 CDC 报告 2026 年第 34 周汉坦病毒新增 0 例，全年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -74,10 +76,11 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方提醒预防。",
+      "summary_zh": "美国松岭保留地检测到汉坦病毒，官员敦促采取预防措施。",
       "key_facts_zh": [
         "美国",
-        "检出病毒"
+        "松岭保留地",
+        "检测到"
       ],
       "signal_strength": "high"
     }
