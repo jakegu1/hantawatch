@@ -12557,6 +12557,20 @@
         "source_url": "",
         "time": "2026-09-04T05:51:32.000Z"
       }
+    ],
+    "rt-d599dfd2cb93d2cc": [
+      {
+        "iso2": "CA",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-27",
+        "confidence": "low",
+        "reasoning_zh": "报道称夫妇可能接触汉坦病毒但状况良好，未提供具体病例数或新增数据，故增量为0。",
+        "update_id": "rt-d599dfd2cb93d2cc",
+        "source_url": "",
+        "time": "2026-08-27T07:00:00.000Z"
+      }
     ]
   }
 }
