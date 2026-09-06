@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-06T14:53:23.106886+00:00",
-  "date": "2026-09-06",
+  "__generated_at": "2026-09-06T19:57:37.740163+00:00",
+  "date": "2026-09-07",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -62,7 +62,7 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 3,
+      "signalCount30d": 4,
       "signalCount7d": 1,
       "lastSignalAt": "2026-09-04T07:00:00+00:00",
       "importStatus": "imports_confirmed",
