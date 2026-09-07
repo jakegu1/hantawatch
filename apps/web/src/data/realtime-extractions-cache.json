@@ -12585,6 +12585,20 @@
         "source_url": "",
         "time": "2026-09-06T21:54:14.000Z"
       }
+    ],
+    "rt-0ea8ebc1d69fa55c": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-07",
+        "confidence": "low",
+        "reasoning_zh": "标题提及阿根廷汉坦病毒激增并触发健康警报，但未提供具体新增病例数，故增量均为0。",
+        "update_id": "rt-0ea8ebc1d69fa55c",
+        "source_url": "",
+        "time": "2026-09-07T06:48:22.000Z"
+      }
     ]
   }
 }
