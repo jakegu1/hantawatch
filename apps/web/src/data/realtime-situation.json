@@ -80,6 +80,16 @@
   },
   "events": [
     {
+      "at": "2026-09-07T17:01:12Z",
+      "kind": "detection",
+      "countryZh": "法国",
+      "delta": 45,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-07-02T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 13 例（11 确诊 · 2 疑似 · 含 3 死亡）",
@@ -478,7 +488,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-09-07T17:10:40.060828+00:00"
+      "updatedAt": "2026-09-07T21:04:38.608579+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -486,12 +496,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-07-02T12:00:00Z"
+      "updatedAt": "2026-09-07T17:01:12Z"
     }
   ],
   "intake": {
-    "last24hCount": 2,
+    "last24hCount": 3,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-09-07T17:10:42.262187+00:00"
+  "realtimeUpdatedAt": "2026-09-07T21:04:41.223506+00:00"
 }
