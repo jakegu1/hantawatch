@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-07T21:04:41.227525+00:00",
+  "__generated_at": "2026-09-07T23:13:24.489890+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-07T21:04:36.287253+00:00",
+  "last_fetched": "2026-09-07T23:13:23.329462+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,22 +16,9 @@
       "summary_zh": "法国发现汉坦病毒病例，45人被隔离。",
       "key_facts_zh": [
         "法国",
-        "45人隔离"
+        "隔离45人"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-0ea8ebc1d69fa55c",
-      "time": "2026-09-07T06:48:22.000Z",
-      "title_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces - Nomad Lawyer",
-      "body_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces Nomad Lawyer",
-      "summary_zh": "阿根廷汉坦病毒激增，农村省份发布健康警报和旅行警告。",
-      "key_facts_zh": [
-        "阿根廷",
-        "健康警报",
-        "旅行警告"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-f537398f3d5680bc",
@@ -41,8 +28,7 @@
       "summary_zh": "新墨西哥大学研究人员在陶斯县追踪携带汉坦病毒的啮齿动物。",
       "key_facts_zh": [
         "美国",
-        "研究",
-        "啮齿动物"
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -54,7 +40,6 @@
       "summary_zh": "亚利桑那州和佐治亚州官员监测邮轮返美乘客。",
       "key_facts_zh": [
         "美国",
-        "邮轮",
         "监测"
       ],
       "signal_strength": "high"
@@ -79,7 +64,6 @@
       "summary_zh": "美国CDC周报：本周无新增，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "无新增",
         "累计1例"
       ],
       "signal_strength": "high"
@@ -89,11 +73,10 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "松岭保留地检测到汉坦病毒，官员敦促防范。",
+      "summary_zh": "松岭保留地检测到汉坦病毒，官方敦促预防。",
       "key_facts_zh": [
         "美国",
-        "松岭保留地",
-        "防范"
+        "松岭保留地"
       ],
       "signal_strength": "high"
     }
