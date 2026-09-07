@@ -1,19 +1,31 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-07T17:10:42.265799+00:00",
+  "__generated_at": "2026-09-07T20:22:43.664639+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-07T17:10:39.344387+00:00",
+  "last_fetched": "2026-09-07T20:22:42.650823+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-5c4ee95095bbf41e",
+      "time": "2026-09-07T17:01:12.000Z",
+      "title_en": "45 people quarantined after hantavirus case detected in France - Anadolu Ajansı",
+      "body_en": "45 people quarantined after hantavirus case detected in France Anadolu Ajansı",
+      "summary_zh": "法国发现汉坦病毒病例，45人被隔离。",
+      "key_facts_zh": [
+        "法国",
+        "隔离45人"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-0ea8ebc1d69fa55c",
       "time": "2026-09-07T06:48:22.000Z",
       "title_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces - Nomad Lawyer",
       "body_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces Nomad Lawyer",
-      "summary_zh": "阿根廷农村省份汉坦病毒激增，引发健康警报和旅行警告。",
+      "summary_zh": "阿根廷农村省份汉坦病毒激增，发布健康警报和旅行警告。",
       "key_facts_zh": [
         "阿根廷",
         "旅行警告"
@@ -28,27 +40,27 @@
       "summary_zh": "新墨西哥大学研究人员在陶斯县追踪携带汉坦病毒的啮齿动物。",
       "key_facts_zh": [
         "美国",
-        "研究"
+        "研究追踪"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-3d1aada5dbd02f19",
       "time": "2026-09-06T12:30:37.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - abcnews.com",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US abcnews.com",
-      "summary_zh": "美国亚利桑那州和佐治亚州官员监测邮轮返美乘客。",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "亚利桑那州和佐治亚州官员监测邮轮上返美的汉坦病毒乘客。",
       "key_facts_zh": [
         "美国",
-        "监测中"
+        "邮轮监测"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-c6dd84ec1bbefffc",
       "time": "2026-09-06T11:40:26.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - abcnews.com",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know abcnews.com",
+      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
       "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡。",
       "key_facts_zh": [
         "邮轮",
@@ -57,38 +69,14 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-49e9852a52ecb13b",
-      "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news.mongabay.com",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news.mongabay.com",
-      "summary_zh": "巴塔哥尼亚记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
-      "key_facts_zh": [
-        "巴塔哥尼亚",
-        "死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC报告本周无新增汉坦病毒病例，今年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒感染本周新增0例，全年累计1例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "无新增"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-2ef09f204d5b39ad",
-      "time": "2026-08-21T07:00:00.000Z",
-      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
-      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "松岭保留地检测到汉坦病毒，官员敦促采取预防措施。",
-      "key_facts_zh": [
-        "美国",
-        "检测到"
+        "美国CDC",
+        "累计1例"
       ],
       "signal_strength": "high"
     }
