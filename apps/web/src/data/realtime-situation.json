@@ -80,7 +80,7 @@
   },
   "events": [
     {
-      "at": "2026-09-07T17:01:12Z",
+      "at": "2026-09-08T07:38:11Z",
       "kind": "detection",
       "countryZh": "法国",
       "delta": 45,
@@ -488,7 +488,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-09-08T02:56:10.363904+00:00"
+      "updatedAt": "2026-09-08T10:31:56.210240+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -496,12 +496,12 @@
     },
     {
       "name": "各国 CDC + 实时新闻",
-      "updatedAt": "2026-09-07T17:01:12Z"
+      "updatedAt": "2026-09-08T07:38:11Z"
     }
   ],
   "intake": {
-    "last24hCount": 1,
+    "last24hCount": 2,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-09-08T02:56:13.765001+00:00"
+  "realtimeUpdatedAt": "2026-09-08T10:31:58.563454+00:00"
 }

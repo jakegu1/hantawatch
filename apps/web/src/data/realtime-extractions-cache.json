@@ -12613,6 +12613,20 @@
         "source_url": "",
         "time": "2026-09-07T17:01:12.000Z"
       }
+    ],
+    "rt-d3b76795672d5b14": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 45,
+        "delta_deaths": 0,
+        "as_of": "2026-09-08",
+        "confidence": "medium",
+        "reasoning_zh": "法国45人隔离监测，无新增确诊或死亡数字，仅报道隔离人数。",
+        "update_id": "rt-d3b76795672d5b14",
+        "source_url": "",
+        "time": "2026-09-08T07:38:11.000Z"
+      }
     ]
   }
 }
