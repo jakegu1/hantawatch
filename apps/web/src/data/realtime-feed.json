@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-08T12:28:38.585813+00:00",
+  "__generated_at": "2026-09-08T15:56:43.897864+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-08T12:28:37.821190+00:00",
+  "last_fetched": "2026-09-08T15:56:39.648703+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -25,7 +25,7 @@
       "time": "2026-09-07T17:01:12.000Z",
       "title_en": "45 people quarantined after hantavirus case detected in France - Anadolu Ajansı",
       "body_en": "45 people quarantined after hantavirus case detected in France Anadolu Ajansı",
-      "summary_zh": "法国检测到汉坦病毒病例后45人被隔离。",
+      "summary_zh": "法国发现汉坦病毒病例后45人被隔离。",
       "key_facts_zh": [
         "法国",
         "隔离45人"
@@ -48,12 +48,12 @@
     {
       "id": "rt-49e9852a52ecb13b",
       "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - Mongabay",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 Mongabay",
+      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
+      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "死亡"
+        "死亡1例"
       ],
       "signal_strength": "medium"
     },
@@ -62,10 +62,9 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：本周无新增，2026年累计1例。",
       "key_facts_zh": [
         "美国CDC",
-        "新增0例",
         "累计1例"
       ],
       "signal_strength": "high"
