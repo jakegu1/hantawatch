@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-08T16:57:48.737704+00:00",
+  "__generated_at": "2026-09-08T19:44:25.593446+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-08T16:57:47.677953+00:00",
+  "last_fetched": "2026-09-08T19:44:24.792441+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,24 @@
       "time": "2026-09-08T07:38:11.000Z",
       "title_en": "45 quarantined in France after teenager diagnosed with hantavirus - Türkiye Today",
       "body_en": "45 quarantined in France after teenager diagnosed with hantavirus Türkiye Today",
-      "summary_zh": "法国45人因青少年感染汉坦病毒被隔离。",
+      "summary_zh": "法国一名青少年确诊汉坦病毒，45人隔离。",
       "key_facts_zh": [
         "法国",
-        "隔离45人",
-        "青少年确诊"
+        "确诊1例",
+        "隔离45人"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-593ba1e04b9108ca",
+      "time": "2026-09-07T21:56:40.000Z",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那和佐治亚州监测邮轮返美汉坦病毒乘客。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮",
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -26,11 +39,10 @@
       "time": "2026-09-07T17:01:12.000Z",
       "title_en": "45 people quarantined after hantavirus case detected in France - Anadolu Ajansı",
       "body_en": "45 people quarantined after hantavirus case detected in France Anadolu Ajansı",
-      "summary_zh": "法国发现汉坦病毒病例后45人被隔离。",
+      "summary_zh": "法国检测到汉坦病毒病例后45人被隔离。",
       "key_facts_zh": [
         "法国",
-        "隔离45人",
-        "病例"
+        "隔离45人"
       ],
       "signal_strength": "high"
     },
@@ -39,33 +51,20 @@
       "time": "2026-09-06T12:30:37.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测邮轮返美乘客。",
+      "summary_zh": "美国亚利桑那和佐治亚州监测邮轮返美汉坦病毒乘客。",
       "key_facts_zh": [
         "美国",
-        "亚利桑那",
-        "佐治亚"
+        "邮轮",
+        "监测中"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-49e9852a52ecb13b",
-      "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
-      "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
-      "key_facts_zh": [
-        "智利",
-        "记者死亡",
-        "54岁"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：2026年第34周汉坦病毒新增0例，全年累计1例。",
+      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，今年累计1例。",
       "key_facts_zh": [
         "美国CDC",
         "新增0例",
