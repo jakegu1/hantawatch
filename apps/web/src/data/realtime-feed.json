@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-08T20:40:37.347170+00:00",
+  "__generated_at": "2026-09-08T22:14:17.637799+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-08T20:40:34.328585+00:00",
+  "last_fetched": "2026-09-08T22:14:16.561901+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,20 +16,21 @@
       "summary_zh": "法国45人因青少年确诊汉坦病毒被隔离。",
       "key_facts_zh": [
         "法国",
-        "隔离45人"
+        "隔离45人",
+        "确诊"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-593ba1e04b9108ca",
       "time": "2026-09-07T21:56:40.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - abcnews.com",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US abcnews.com",
-      "summary_zh": "美国亚利桑那和佐治亚州监测返美邮轮乘客汉坦病毒。",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测返美邮轮乘客中的汉坦病毒接触者。",
       "key_facts_zh": [
         "美国",
         "邮轮",
-        "监测"
+        "监测中"
       ],
       "signal_strength": "high"
     },
@@ -38,10 +39,11 @@
       "time": "2026-09-07T17:01:12.000Z",
       "title_en": "45 people quarantined after hantavirus case detected in France - Anadolu Ajansı",
       "body_en": "45 people quarantined after hantavirus case detected in France Anadolu Ajansı",
-      "summary_zh": "法国检测到汉坦病毒病例后45人被隔离。",
+      "summary_zh": "法国检测到汉坦病毒病例后，45人被隔离。",
       "key_facts_zh": [
         "法国",
-        "隔离45人"
+        "隔离45人",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -50,7 +52,7 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：汉坦病毒本周新增0例，2026年累计1例。",
+      "summary_zh": "美国CDC周报：2026年第34周汉坦病毒新增0例，全年累计1例。",
       "key_facts_zh": [
         "美国CDC",
         "新增0例",
@@ -63,8 +65,9 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "松岭保留地检测到汉坦病毒，官员敦促预防。",
+      "summary_zh": "美国松岭保留地检测到汉坦病毒，官方敦促预防。",
       "key_facts_zh": [
+        "美国",
         "松岭保留地",
         "检测到"
       ],
