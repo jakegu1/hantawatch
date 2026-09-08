@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-08T02:56:13.768809+00:00",
+  "__generated_at": "2026-09-08T07:38:52.508679+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-08T02:56:09.311058+00:00",
+  "last_fetched": "2026-09-08T07:38:51.306636+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,8 +16,7 @@
       "summary_zh": "法国发现汉坦病毒病例，45人被隔离。",
       "key_facts_zh": [
         "法国",
-        "45人隔离",
-        "确诊"
+        "45人隔离"
       ],
       "signal_strength": "high"
     },
@@ -35,6 +34,18 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-1b4e1e385c40a971",
+      "time": "2026-09-04T05:51:32.000Z",
+      "title_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak - Cruise & Ferry Review",
+      "body_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak Cruise & Ferry Review",
+      "summary_zh": "Oceanwide Expeditions 应对致命汉坦病毒疫情。",
+      "key_facts_zh": [
+        "邮轮",
+        "疫情应对"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-49e9852a52ecb13b",
       "time": "2026-08-23T07:00:00.000Z",
       "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
@@ -42,36 +53,34 @@
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "死亡",
-        "记者"
+        "死亡"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国CDC周报：本周新增0例，今年累计1例。",
+      "summary_zh": "美国 CDC 周报：本周新增0例，2026年累计1例。",
       "key_facts_zh": [
-        "美国CDC",
-        "新增0例",
-        "累计1例"
+        "美国 CDC",
+        "新增0例"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T07:00:00.000Z",
-      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - kotatv.com",
-      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions kotatv.com",
-      "summary_zh": "美国松岭保留地检测到汉坦病毒，官员敦促预防。",
+      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
+      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
+      "summary_zh": "美国松岭保留地检测到汉坦病毒，官方提醒预防。",
       "key_facts_zh": [
         "美国",
         "松岭保留地",
         "检测到"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
