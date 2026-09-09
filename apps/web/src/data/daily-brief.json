@@ -1,37 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-09T15:52:49.834438+00:00",
-  "date": "2026-09-09",
+  "__generated_at": "2026-09-09T20:21:54.138905+00:00",
+  "date": "2026-09-10",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 11,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 69,
-  "whoDaysSinceOfficialUpdate": 69,
+  "daysSinceLastIntlAlert": 70,
+  "whoDaysSinceOfficialUpdate": 70,
   "cluesLast24h": 6,
-  "headline24h": "内布拉斯加国家隔离单位准备接收汉坦病毒邮轮乘客。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "9月8日法国45人因青少年确诊汉坦病毒被隔离；9月7日阿根廷农村省份病例激增，发布健康警报。",
-  "situation": "WHO数据滞后期间，由欧洲CDC、ArcGIS及各国卫生部公告补足；多国维持监测，法国隔离事件及阿根廷激增待官方复核。",
-  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险低，但邮轮相关接触者仍需关注。",
-  "newCases": "9月8日无新增确诊；法国隔离事件及阿根廷激增待官方确认。",
-  "sourceSummary": "主要依据WHO、欧洲CDC、ArcGIS及新闻线索。",
-  "shareLine": "WHO 7/2公布累计13例（69天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+  "latestChange": "9月8日美国内布拉斯加隔离单元准备接收邮轮乘客；9月7日亚利桑那、佐治亚监测返美乘客；法国1例确诊仍在ICU，无新增。",
+  "situation": "WHO数据滞后，由各国卫生部及ArcGIS监测补足；多国维持监测，美国多州准备接收或监测邮轮乘客；待WHO复核法国、西班牙等新增情况。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS基线正常；输入风险极低，公众无需担忧，但邮轮相关接触者需持续关注。",
+  "newCases": "9月8日无新增确诊；美国隔离准备及监测动态待官方确认。",
+  "sourceSummary": "主要依据WHO、美国CDC、ArcGIS监测及新闻线索。",
+  "shareLine": "WHO 7/2公布累计13例（70天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "法国隔离事件",
-    "阿根廷激增",
-    "邮轮疫情动态"
+    "美国隔离准备",
+    "邮轮乘客监测",
+    "WHO数据更新"
   ],
   "evidence": [
-    "WHO 7/2 公布13例",
-    "欧洲CDC 8/20 输入病例",
-    "9/8 法国隔离45人"
+    "WHO DON 7/2更新",
+    "美国CDC 6/7报告",
+    "ArcGIS 9/9监测"
   ],
   "_guardrail_warnings": [
-    "brief mentions \"阿根廷\" but it is not in mvHondiusImports or arcgisCases",
-    "shareline_pending_sanitized: no pending confirmed deltas",
-    "brief contains \"45\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]"
+    "shareline_pending_sanitized: no pending confirmed deltas"
   ]
 }

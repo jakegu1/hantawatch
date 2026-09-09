@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-09T18:19:19.844827+00:00",
+  "__generated_at": "2026-09-09T20:21:54.141385+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-09T18:19:19.124957+00:00",
+  "last_fetched": "2026-09-09T20:21:48.758080+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,13 +13,13 @@
       "time": "2026-09-08T17:26:37.000Z",
       "title_en": "What to know about Nebraska's National Quarantine Unit as it prepares to bring in hantavirus cruise ship passengers - abcnews.com",
       "body_en": "What to know about Nebraska's National Quarantine Unit as it prepares to bring in hantavirus cruise ship passengers abcnews.com",
-      "summary_zh": "内布拉斯加国家隔离单位准备接收汉坦病毒邮轮乘客。",
+      "summary_zh": "内布拉斯加国家隔离单元准备接收汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "内布拉斯加",
-        "隔离单位",
-        "邮轮乘客"
+        "隔离单元",
+        "邮轮"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-c6dd84ec1bbefffc",
@@ -39,7 +39,7 @@
       "time": "2026-09-07T21:56:40.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - abcnews.com",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US abcnews.com",
-      "summary_zh": "亚利桑那和佐治亚官员监测部分返回美国的汉坦病毒邮轮乘客。",
+      "summary_zh": "亚利桑那州和佐治亚州监测返回美国的汉坦病毒邮轮乘客。",
       "key_facts_zh": [
         "亚利桑那",
         "佐治亚",
@@ -54,34 +54,46 @@
       "body_en": "UNM researchers track hantavirus-carrying rodents in Taos County Albuquerque Journal",
       "summary_zh": "新墨西哥大学研究人员在陶斯县追踪携带汉坦病毒的啮齿动物。",
       "key_facts_zh": [
-        "新墨西哥大学",
+        "新墨西哥",
         "陶斯县",
-        "啮齿动物"
+        "追踪"
       ],
       "signal_strength": "medium"
     },
     {
       "id": "rt-1b4e1e385c40a971",
       "time": "2026-09-04T05:51:32.000Z",
-      "title_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak - Cruise & Ferry Review",
-      "body_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak Cruise & Ferry Review",
-      "summary_zh": "Oceanwide Expeditions 应对致命汉坦病毒疫情的海上紧急事件。",
+      "title_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak - cruiseandferry.net",
+      "body_en": "Managing a maritime emergency: how Oceanwide Expeditions responded to a deadly hantavirus outbreak cruiseandferry.net",
+      "summary_zh": "Oceanwide Expeditions 应对致命汉坦病毒爆发的海上紧急管理。",
       "key_facts_zh": [
         "邮轮",
-        "疫情应对"
+        "汉坦病毒",
+        "应对"
       ],
       "signal_strength": "medium"
     },
     {
+      "id": "rt-f2eb81fd0ff0f51c",
+      "time": "2026-08-29T00:00:00.000Z",
+      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
+      "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
+      "summary_zh": "美国 CDC 周报：2026年第35周无新增，全年累计1例。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "累计1例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-26T07:00:00.000Z",
-      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - theconversation.com",
-      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia theconversation.com",
-      "summary_zh": "越南野生动物养殖者接触汉坦病毒，警示东南亚。",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "越南野生动物养殖者接触汉坦病毒，专家警告东南亚风险。",
       "key_facts_zh": [
         "越南",
-        "养殖者",
-        "警示"
+        "专家警告"
       ],
       "signal_strength": "medium"
     },
@@ -93,20 +105,7 @@
       "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
       "key_facts_zh": [
         "智利",
-        "死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-f2eb81fd0ff0f51c",
-      "time": "2026-08-22T00:00:00.000Z",
-      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
-      "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周新增0例，2026年累计1例。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "死亡1例"
       ],
       "signal_strength": "high"
     },
@@ -115,13 +114,12 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促预防。",
+      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
       "key_facts_zh": [
         "美国",
-        "松岭保留地",
-        "检出"
+        "检出病毒"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     }
   ]
 }
