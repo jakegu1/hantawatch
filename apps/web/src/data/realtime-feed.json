@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-09T14:57:14.169988+00:00",
+  "__generated_at": "2026-09-09T15:52:49.836978+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-09T14:57:13.382219+00:00",
+  "last_fetched": "2026-09-09T15:52:46.076893+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-08T16:42:55.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑似爆发汉坦病毒致3人死亡，引发关注。",
+      "summary_zh": "邮轮疑似汉坦病毒爆发致3人死亡，详情待公布。",
       "key_facts_zh": [
         "邮轮",
         "3人死亡",
@@ -26,7 +26,7 @@
       "time": "2026-09-08T07:38:11.000Z",
       "title_en": "45 quarantined in France after teenager diagnosed with hantavirus - Türkiye Today",
       "body_en": "45 quarantined in France after teenager diagnosed with hantavirus Türkiye Today",
-      "summary_zh": "法国一名青少年确诊汉坦病毒，45人被隔离。",
+      "summary_zh": "法国45人因青少年确诊汉坦病毒被隔离。",
       "key_facts_zh": [
         "法国",
         "45人隔离",
@@ -39,24 +39,37 @@
       "time": "2026-09-07T21:56:40.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那和佐治亚州监测返回的邮轮乘客汉坦病毒情况。",
+      "summary_zh": "亚利桑那和佐治亚官员监测返美邮轮乘客。",
       "key_facts_zh": [
         "美国",
-        "亚利桑那",
-        "佐治亚"
+        "监测",
+        "邮轮乘客"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-f537398f3d5680bc",
+      "time": "2026-09-06T21:54:14.000Z",
+      "title_en": "UNM researchers track hantavirus-carrying rodents in Taos County - Albuquerque Journal",
+      "body_en": "UNM researchers track hantavirus-carrying rodents in Taos County Albuquerque Journal",
+      "summary_zh": "新墨西哥大学研究人员在陶斯县追踪携带汉坦病毒的啮齿动物。",
+      "key_facts_zh": [
+        "新墨西哥",
+        "研究",
+        "啮齿动物"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-26T07:00:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者接触汉坦病毒，警示东南亚。",
+      "summary_zh": "越南野生动物养殖者接触汉坦病毒，专家警告东南亚风险。",
       "key_facts_zh": [
         "越南",
-        "野生动物养殖者",
-        "警示"
+        "野生动物养殖",
+        "专家警告"
       ],
       "signal_strength": "medium"
     },
@@ -65,10 +78,10 @@
       "time": "2026-08-22T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 34): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：汉坦病毒本周新增 0 例，2026 年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周无新增汉坦病毒病例，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
+        "本周 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
@@ -78,11 +91,11 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促防范。",
+      "summary_zh": "美国松岭保留地检出汉坦病毒，官方敦促居民防范。",
       "key_facts_zh": [
         "美国",
         "松岭保留地",
-        "检出汉坦病毒"
+        "检出病毒"
       ],
       "signal_strength": "medium"
     }
