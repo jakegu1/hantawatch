@@ -1,49 +1,62 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-10T02:57:13.797364+00:00",
+  "__generated_at": "2026-09-10T07:43:22.402452+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-10T02:57:10.628809+00:00",
+  "last_fetched": "2026-09-10T07:43:21.688902+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-593ba1e04b9108ca",
+      "time": "2026-09-09T15:40:59.000Z",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的邮轮乘客。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮乘客",
+        "监测中"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-cabdb05f17ad5bff",
+      "time": "2026-09-09T15:40:13.000Z",
+      "title_en": "3 people waiting to be medically evacuated from cruise ship at center of suspected hantavirus outbreak - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 people waiting to be medically evacuated from cruise ship at center of suspected hantavirus outbreak ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "疑似汉坦病毒邮轮上3人等待医疗撤离。",
+      "key_facts_zh": [
+        "邮轮",
+        "3人",
+        "医疗撤离"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-63602073f5c63778",
       "time": "2026-09-08T17:26:37.000Z",
       "title_en": "What to know about Nebraska's National Quarantine Unit as it prepares to bring in hantavirus cruise ship passengers - ABC News - Breaking News, Latest News and Videos",
       "body_en": "What to know about Nebraska's National Quarantine Unit as it prepares to bring in hantavirus cruise ship passengers ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国内布拉斯加隔离单位准备接收汉坦病毒邮轮乘客。",
+      "summary_zh": "美国内布拉斯加国家隔离中心准备接收汉坦病毒邮轮乘客。",
       "key_facts_zh": [
-        "美国",
         "内布拉斯加",
+        "隔离中心",
         "邮轮乘客"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-c6dd84ec1bbefffc",
       "time": "2026-09-08T16:42:55.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致3人死亡。",
+      "summary_zh": "邮轮疑似汉坦病毒疫情已致3人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "死亡3例",
-        "疑似暴发"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-593ba1e04b9108ca",
-      "time": "2026-09-07T21:56:40.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的汉坦病毒邮轮乘客。",
-      "key_facts_zh": [
-        "美国",
-        "亚利桑那",
-        "佐治亚"
+        "3人死亡",
+        "疑似疫情"
       ],
       "signal_strength": "high"
     },
@@ -55,7 +68,7 @@
       "summary_zh": "美国新墨西哥大学研究人员在陶斯县追踪携带汉坦病毒的啮齿动物。",
       "key_facts_zh": [
         "美国",
-        "新墨西哥",
+        "陶斯县",
         "啮齿动物"
       ],
       "signal_strength": "medium"
@@ -65,11 +78,11 @@
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报2026年第35周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 35 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增0例",
-        "年内1例"
+        "新增 0 例",
+        "年内 1 例"
       ],
       "signal_strength": "high"
     },
@@ -78,7 +91,7 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松脊保留地检出汉坦病毒，官员呼吁加强防范。",
+      "summary_zh": "美国南达科他州松脊保留地检出汉坦病毒，官员呼吁加强防护。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
