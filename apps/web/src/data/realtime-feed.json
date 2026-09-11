@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-11T00:44:06.848476+00:00",
+  "__generated_at": "2026-09-11T02:52:15.813312+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-11T00:44:06.199877+00:00",
+  "last_fetched": "2026-09-11T02:52:12.258185+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报第 35 周汉坦病毒 0 新增，年内 1 例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 35 周汉坦病毒 0 新增，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "0 新增",
@@ -39,11 +39,11 @@
       "time": "2026-08-26T07:00:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究发布。",
+      "summary_zh": "越南野生动物养殖者发现汉坦病毒暴露，专家警告东南亚。",
       "key_facts_zh": [
         "越南",
         "野生动物养殖",
-        "暴露研究"
+        "暴露"
       ],
       "signal_strength": "medium"
     },
@@ -52,23 +52,23 @@
       "time": "2026-08-23T07:00:00.000Z",
       "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
       "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
-      "summary_zh": "智利记者塞古拉因汉坦病毒去世，享年 54 岁。",
+      "summary_zh": "智利巴塔哥尼亚记者 Patricio Segura 因汉坦病毒去世，享年 54 岁。",
       "key_facts_zh": [
         "智利",
         "记者去世",
-        "54 岁"
+        "巴塔哥尼亚"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松岭保留地检出汉坦病毒，官方呼吁防范。",
+      "summary_zh": "美国松脊原住民保留地检出汉坦病毒，官员呼吁防范。",
       "key_facts_zh": [
         "美国",
-        "松岭保留地",
+        "松脊保留地",
         "检出病毒"
       ],
       "signal_strength": "high"
