@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-11T21:28:59.422553+00:00",
+  "__generated_at": "2026-09-11T23:45:11.918044+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-11T21:28:58.764895+00:00",
+  "last_fetched": "2026-09-11T23:45:10.941729+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -30,9 +30,22 @@
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-4bd8a09f72ef9770",
+      "time": "2026-08-28T07:00:00.000Z",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - doherty.edu.au",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus doherty.edu.au",
+      "summary_zh": "澳大利亚 Cumming 全球大流行治疗中心宣布加速埃博拉和汉坦病毒治疗项目。",
+      "key_facts_zh": [
+        "澳大利亚",
+        "治疗研究",
+        "埃博拉"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-02d30df1d0169e50",
@@ -42,8 +55,8 @@
       "summary_zh": "越南野生动物养殖者中发现汉坦病毒暴露，专家警告东南亚风险。",
       "key_facts_zh": [
         "越南",
-        "暴露",
-        "东南亚"
+        "野生动物",
+        "暴露风险"
       ],
       "signal_strength": "medium"
     },
@@ -52,36 +65,36 @@
       "time": "2026-08-23T07:00:00.000Z",
       "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
       "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
-      "summary_zh": "巴塔哥尼亚记者 Patricio Segura 因汉坦病毒去世，享年 54 岁。",
+      "summary_zh": "智利记者 Patricio Segura 因汉坦病毒去世，享年 54 岁。",
       "key_facts_zh": [
-        "巴塔哥尼亚",
-        "死亡",
+        "智利",
+        "死亡病例",
         "记者"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松脊原住民保留地检出汉坦病毒，官员呼吁采取预防措施。",
+      "summary_zh": "美国南达科他州松脊保留地检测到汉坦病毒，官员呼吁采取预防措施。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
-        "检出"
+        "检测到病毒"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-bc95af14e1ee9dec",
-      "time": "2026-08-20T18:27:19.000Z",
-      "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
-      "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
-      "summary_zh": "巴斯德研究所介绍 MV Hondius 邮轮上的安第斯病毒。",
+      "id": "rt-dccd0e67c7b873c1",
+      "time": "2026-08-20T07:00:00.000Z",
+      "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
+      "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
+      "summary_zh": "欧洲因阿根廷来源的罕见安第斯汉坦病毒病例提高警惕。",
       "key_facts_zh": [
-        "巴斯德研究所",
-        "邮轮",
+        "欧洲",
+        "阿根廷",
         "安第斯病毒"
       ],
       "signal_strength": "medium"
