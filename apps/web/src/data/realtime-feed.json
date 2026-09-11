@@ -1,19 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-11T05:29:29.909614+00:00",
+  "__generated_at": "2026-09-11T10:21:16.130286+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-11T05:29:29.074095+00:00",
+  "last_fetched": "2026-09-11T10:21:15.153533+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-49383c025e8a2641",
+      "time": "2026-09-06T01:50:57.000Z",
+      "title_en": "WHO declares cruise ship hantavirus outbreak over - TRT World",
+      "body_en": "WHO declares cruise ship hantavirus outbreak over TRT World",
+      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报 2026 年第 35 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报第35周汉坦病毒感染新增0例，年内累计1例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -22,15 +35,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-02d30df1d0169e50",
+      "time": "2026-08-26T07:00:00.000Z",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "越南野生动物养殖者检出汉坦病毒暴露，专家警示东南亚风险。",
+      "key_facts_zh": [
+        "越南",
+        "暴露",
+        "东南亚"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国南达科他州松脊保留地检出汉坦病毒，官员呼吁加强防范。",
+      "summary_zh": "美国松脊原住民保留地检出汉坦病毒，官员呼吁加强防护。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
-        "检出病毒"
+        "检出"
       ],
       "signal_strength": "high"
     }
