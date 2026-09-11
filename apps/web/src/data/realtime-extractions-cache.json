@@ -12655,6 +12655,20 @@
         "source_url": "",
         "time": "2026-09-09T15:40:13.000Z"
       }
+    ],
+    "rt-bc95af14e1ee9dec": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-08-20",
+        "confidence": "low",
+        "reasoning_zh": "巴斯德研究所介绍MV Hondius邮轮安第斯病毒，未提及新增病例或死亡数字，无法确定国家。",
+        "update_id": "rt-bc95af14e1ee9dec",
+        "source_url": "",
+        "time": "2026-08-20T18:27:19.000Z"
+      }
     ]
   }
 }
