@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-12T20:09:30.141569+00:00",
+  "__generated_at": "2026-09-12T21:56:43.027940+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-12T20:09:26.995552+00:00",
+  "last_fetched": "2026-09-12T21:56:42.221738+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-09-08T07:38:11.000Z",
       "title_en": "45 quarantined in France after teenager diagnosed with hantavirus - Türkiye Today",
       "body_en": "45 quarantined in France after teenager diagnosed with hantavirus Türkiye Today",
-      "summary_zh": "法国一名青少年确诊汉坦病毒，45人被隔离。",
+      "summary_zh": "法国一名青少年确诊汉坦病毒，45 人被隔离。",
       "key_facts_zh": [
         "法国",
         "确诊",
-        "45人隔离"
+        "45 人隔离"
       ],
       "signal_strength": "high"
     },
@@ -26,19 +26,19 @@
       "time": "2026-09-07T06:48:22.000Z",
       "title_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces - Nomad Lawyer",
       "body_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces Nomad Lawyer",
-      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，触发卫生警报和旅行警告。",
+      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，发布卫生警报和旅行警告。",
       "key_facts_zh": [
         "阿根廷",
         "病例激增",
         "旅行警告"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-49383c025e8a2641",
       "time": "2026-09-06T01:50:57.000Z",
-      "title_en": "WHO declares cruise ship hantavirus outbreak over - TRT World",
-      "body_en": "WHO declares cruise ship hantavirus outbreak over TRT World",
+      "title_en": "WHO declares cruise ship hantavirus outbreak over - trtworld.com",
+      "body_en": "WHO declares cruise ship hantavirus outbreak over trtworld.com",
       "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
       "key_facts_zh": [
         "WHO",
@@ -52,11 +52,11 @@
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第35周无新增汉坦病毒病例，年初至今累计1例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 35 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "无新增",
-        "累计1例"
+        "新增 0 例",
+        "年内 1 例"
       ],
       "signal_strength": "high"
     },
@@ -67,9 +67,9 @@
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
       "summary_zh": "澳大利亚 Doherty 研究所宣布加速埃博拉和汉坦病毒治疗研究项目。",
       "key_facts_zh": [
-        "Doherty研究所",
+        "澳大利亚",
         "治疗研究",
-        "埃博拉"
+        "Doherty 研究所"
       ],
       "signal_strength": "medium"
     },
@@ -81,21 +81,8 @@
       "summary_zh": "越南野生动物养殖者中发现汉坦病毒暴露，专家警告东南亚风险。",
       "key_facts_zh": [
         "越南",
-        "野生动物",
-        "暴露"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-49e9852a52ecb13b",
-      "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
-      "summary_zh": "智利记者 Patricio Segura 因汉坦病毒去世，享年54岁。",
-      "key_facts_zh": [
-        "智利",
-        "记者",
-        "死亡"
+        "病毒暴露",
+        "东南亚警告"
       ],
       "signal_strength": "medium"
     },
@@ -117,11 +104,11 @@
       "time": "2026-08-20T07:00:00.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长肯尼迪访问内布拉斯加，赞扬当地汉坦病毒应对。",
+      "summary_zh": "美国卫生部长肯尼迪访问内布拉斯加州，赞扬医学中心汉坦病毒应对。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加医学中心",
-        "卫生部长"
+        "卫生部长",
+        "内布拉斯加医学中心"
       ],
       "signal_strength": "medium"
     },
