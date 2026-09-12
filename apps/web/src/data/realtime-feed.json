@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-12T10:01:59.851901+00:00",
+  "__generated_at": "2026-09-12T11:51:23.320574+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-12T10:01:55.536178+00:00",
+  "last_fetched": "2026-09-12T11:51:22.585356+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-09-07T06:48:22.000Z",
       "title_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces - Nomad Lawyer",
       "body_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces Nomad Lawyer",
-      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，引发卫生警报和旅行警告。",
+      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，发布健康警报和旅行警告。",
       "key_facts_zh": [
         "阿根廷",
-        "病例激增",
+        "健康警报",
         "旅行警告"
       ],
       "signal_strength": "medium"
@@ -39,24 +39,24 @@
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 35 周新增 0 例汉坦病毒感染，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 35 周新增 0 例，年初至今 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "年初至今 1 例"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-4bd8a09f72ef9770",
       "time": "2026-08-28T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚 Doherty 研究所宣布加速埃博拉和汉坦病毒治疗研发项目。",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - doherty.edu.au",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus doherty.edu.au",
+      "summary_zh": "Cumming 全球大流行病治疗中心宣布加速埃博拉和汉坦病毒治疗项目。",
       "key_facts_zh": [
-        "Doherty 研究所",
-        "治疗研发",
-        "埃博拉"
+        "治疗项目",
+        "埃博拉",
+        "汉坦病毒"
       ],
       "signal_strength": "medium"
     },
@@ -68,7 +68,7 @@
       "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究，对东南亚发出警告。",
       "key_facts_zh": [
         "越南",
-        "野生动物养殖",
+        "野生动物",
         "东南亚警告"
       ],
       "signal_strength": "medium"
@@ -91,23 +91,36 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国南达科他州松脊保留地检出汉坦病毒，官员呼吁采取预防措施。",
+      "summary_zh": "美国松脊原住民保留地检测到汉坦病毒，官员敦促采取预防措施。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
-        "检出病毒"
+        "检测到病毒"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-bc95af14e1ee9dec",
+      "time": "2026-08-20T18:27:19.000Z",
+      "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
+      "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
+      "summary_zh": "巴斯德研究所介绍 MV Hondius 邮轮上的安第斯病毒。",
+      "key_facts_zh": [
+        "巴斯德研究所",
+        "MV Hondius",
+        "安第斯病毒"
+      ],
+      "signal_strength": "medium"
     },
     {
       "id": "rt-0ae1fe6b077906e4",
       "time": "2026-08-20T07:00:00.000Z",
       "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
       "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
-      "summary_zh": "美国卫生部长肯尼迪访问内布拉斯加州，赞扬医学中心防控工作。",
+      "summary_zh": "美国卫生部长肯尼迪访问内布拉斯加，赞扬该州医学中心汉坦病毒应对工作。",
       "key_facts_zh": [
         "美国",
-        "内布拉斯加",
+        "内布拉斯加医学中心",
         "卫生部长"
       ],
       "signal_strength": "medium"
@@ -117,13 +130,13 @@
       "time": "2026-08-20T07:00:00.000Z",
       "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
       "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲因阿根廷输入的罕见安第斯病毒病例提高警惕。",
+      "summary_zh": "欧洲因阿根廷输入的罕见安第斯型汉坦病毒病例提高警惕。",
       "key_facts_zh": [
         "欧洲",
         "阿根廷",
-        "输入病例"
+        "安第斯型"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
