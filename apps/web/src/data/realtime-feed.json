@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-12T02:59:30.258688+00:00",
+  "__generated_at": "2026-09-12T07:31:50.939340+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-12T02:59:25.827935+00:00",
+  "last_fetched": "2026-09-12T07:31:50.129050+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-07T06:48:22.000Z",
       "title_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces - Nomad Lawyer",
       "body_en": "Argentina Hantavirus Surge Triggers Health Alerts and Travel Warnings Across Rural Provinces Nomad Lawyer",
-      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，触发卫生警报与旅行警告。",
+      "summary_zh": "阿根廷农村省份汉坦病毒病例激增，发布卫生警报与旅行警告。",
       "key_facts_zh": [
         "阿根廷",
         "病例激增",
@@ -39,7 +39,7 @@
       "time": "2026-08-29T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 35 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 35 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -52,10 +52,10 @@
       "time": "2026-08-28T07:00:00.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚 Doherty 研究所宣布加速埃博拉与汉坦病毒治疗研发项目。",
+      "summary_zh": "澳大利亚 Doherty 研究所宣布加速埃博拉与汉坦病毒疗法项目。",
       "key_facts_zh": [
         "澳大利亚",
-        "治疗研发",
+        "疗法研究",
         "Doherty 研究所"
       ],
       "signal_strength": "medium"
@@ -65,11 +65,11 @@
       "time": "2026-08-26T07:00:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者中发现汉坦病毒暴露，专家警告东南亚风险。",
+      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究，警示东南亚。",
       "key_facts_zh": [
         "越南",
         "养殖者暴露",
-        "东南亚警告"
+        "东南亚警示"
       ],
       "signal_strength": "medium"
     },
@@ -91,7 +91,7 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国南达科他州松脊保留地检出汉坦病毒，官员呼吁加强防范。",
+      "summary_zh": "美国南达科他州松脊保留地检出汉坦病毒，官员呼吁防范。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
@@ -100,15 +100,28 @@
       "signal_strength": "high"
     },
     {
+      "id": "rt-0ae1fe6b077906e4",
+      "time": "2026-08-20T07:00:00.000Z",
+      "title_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC - Nebraska Examiner",
+      "body_en": "HHS Secretary RFK Jr. visits Nebraska to praise hantavirus operation at UNMC Nebraska Examiner",
+      "summary_zh": "美国卫生部长肯尼迪访问内布拉斯加州，赞扬医学中心汉坦病毒应对。",
+      "key_facts_zh": [
+        "美国",
+        "卫生部长",
+        "内布拉斯加医学中心"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-dccd0e67c7b873c1",
       "time": "2026-08-20T07:00:00.000Z",
       "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
       "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
-      "summary_zh": "欧洲因阿根廷来源的罕见安第斯病毒病例提高警惕。",
+      "summary_zh": "比利时媒体报道阿根廷来源的罕见安第斯病毒病例引发欧洲警惕。",
       "key_facts_zh": [
+        "比利时",
         "欧洲",
-        "阿根廷",
-        "安第斯病毒"
+        "阿根廷"
       ],
       "signal_strength": "medium"
     }
