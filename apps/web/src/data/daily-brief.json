@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-11T20:24:28.430402+00:00",
+  "__generated_at": "2026-09-12T02:59:30.257487+00:00",
   "date": "2026-09-12",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 72,
   "whoDaysSinceOfficialUpdate": 72,
   "cluesLast24h": 7,
-  "headline24h": "阿根廷农村省份汉坦病毒病例激增，触发卫生警报与旅行警告。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "9月6日WHO宣布MV Hondius邮轮相关聚集疫情结束；9月11日至12日无新增确诊或初筛阳性报告。",
-  "situation": "WHO数据更新间隔较长，期间由各国卫生部公告与ArcGIS监测补足；邮轮相关随访仍在收尾，多国维持监测，国内HFRS基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内HFRS属常态基线，无需特别防护调整。",
+  "situation": "WHO数据更新间隔较长，期间由各国卫生部公告与ArcGIS监测补足；西班牙、法国、荷兰、美国等维持随访，邮轮相关接触者监测仍在进行，待WHO复核。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；普通公众风险低，无需特别防护。",
   "newCases": "9月11日至12日无新增确诊或初筛阳性；最近官方更新为9月6日WHO宣布疫情结束。",
-  "sourceSummary": "依据WHO DON、各国卫生部公告及ArcGIS专业监测。",
+  "sourceSummary": "主要依据WHO通报、各国卫生部公告及ArcGIS专业监测。",
   "shareLine": "WHO 7/2公布累计13例（72天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "邮轮随访收尾",
-    "欧洲输入监测",
-    "国内HFRS基线"
+    "邮轮接触者随访",
+    "阿根廷病例激增",
+    "WHO复核进展"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "西班牙/法国卫生部公告",
-    "ArcGIS ANDV Dashboard"
+    "西班牙卫生部6/5公告",
+    "法国卫生部6/6公告"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas",
