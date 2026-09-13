@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-13T15:34:10.032664+00:00",
-  "date": "2026-09-13",
+  "__generated_at": "2026-09-13T20:16:35.738601+00:00",
+  "date": "2026-09-14",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-09-13T15:34:01.674532+00:00"
+    "updatedAt": "2026-09-13T20:16:28.438547+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-09-13T15:34:01.674532+00:00"
+    "updatedAt": "2026-09-13T20:16:28.438547+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,28 +101,28 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-09-13",
+    "date": "2026-09-14",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 11,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 73,
-    "whoDaysSinceOfficialUpdate": 73,
-    "cluesLast24h": 8,
+    "daysSinceLastIntlAlert": 74,
+    "whoDaysSinceOfficialUpdate": 74,
+    "cluesLast24h": 7,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "latestChange": "9月8日法国通报1例青少年确诊、45人隔离，属新闻线索待官方复核；9月11日至12日无新增官方确认。",
-    "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；法国、阿根廷相关线索待官方复核，多国维持随访，中国大陆无相关病例。",
-    "riskJudgment": "中国大陆无相关病例，国内 HFRS 处于基线正常范围；普通公众风险低，无需特别防护。",
-    "newCases": "9月11日至12日无新增确诊或初筛阳性；最近为9月8日法国1例确诊，待官方复核。",
-    "sourceSummary": "WHO 疾病暴发新闻、各国卫生部公告及 ArcGIS 专业监测。",
-    "shareLine": "WHO 7/2公布累计13例（73天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+    "latestChange": "9月6日WHO宣布MV Hondius邮轮相关聚集疫情结束；9月11日至13日无新增官方确认。",
+    "situation": "WHO数据更新间隔较长，期间由各国卫生部公告与ArcGIS监测补足；法国、西班牙输入病例随访仍在进行，美国、英国等多国维持监测，待WHO复核事项暂无。",
+    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；普通公众风险低，无需特别防护。",
+    "newCases": "9月11日至13日无新增确诊或初筛阳性；最近为9月8日法国1例确诊，待官方复核。",
+    "sourceSummary": "WHO DON、各国卫生部公告、ArcGIS监测及新闻线索。",
+    "shareLine": "WHO 7/2公布累计13例（74天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "法国线索复核",
-      "阿根廷农村疫情",
-      "邮轮随访收尾"
+      "WHO复核进展",
+      "法国输入随访",
+      "国内HFRS基线"
     ],
     "evidence": [
       "WHO DON 2026-DON611",
@@ -130,11 +130,7 @@
       "ArcGIS ANDV Dashboard"
     ],
     "_guardrail_warnings": [
-      "brief mentions \"阿根廷\" but it is not in mvHondiusImports or arcgisCases",
-      "shareline_pending_sanitized: no pending confirmed deltas",
-      "brief contains \"45\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]",
-      "brief contains \"12\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]",
-      "brief contains \"12\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]"
+      "shareline_pending_sanitized: no pending confirmed deltas"
     ]
   }
 }
