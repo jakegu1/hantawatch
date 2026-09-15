@@ -1,36 +1,101 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-14T21:30:31.380657+00:00",
+  "__generated_at": "2026-09-15T00:07:03.804430+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-14T21:30:28.813267+00:00",
+  "last_fetched": "2026-09-15T00:07:02.834968+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-f2eb81fd0ff0f51c",
-      "time": "2026-08-29T00:00:00.000Z",
-      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
-      "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 35 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "id": "rt-1a4052977523347a",
+      "time": "2026-09-11T21:48:28.000Z",
+      "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News - News On AIR",
+      "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News News On AIR",
+      "summary_zh": "WHO 确认邮轮疫情相关 5 例汉坦病毒病例。",
       "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "年内 1 例"
+        "WHO",
+        "邮轮",
+        "确诊 5 例"
       ],
       "signal_strength": "high"
     },
     {
+      "id": "rt-49383c025e8a2641",
+      "time": "2026-09-06T01:50:57.000Z",
+      "title_en": "WHO declares cruise ship hantavirus outbreak over - TRT World",
+      "body_en": "WHO declares cruise ship hantavirus outbreak over TRT World",
+      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-f2eb81fd0ff0f51c",
+      "time": "2026-08-29T00:00:00.000Z",
+      "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 35): 0 new, 1 YTD",
+      "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
+      "summary_zh": "美国 CDC 周报：本周新增 0 例，2026 年累计 1 例。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "新增 0 例",
+        "累计 1 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-4bd8a09f72ef9770",
+      "time": "2026-08-28T07:00:00.000Z",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
+      "summary_zh": "澳大利亚机构宣布加速埃博拉与汉坦病毒疗法项目。",
+      "key_facts_zh": [
+        "澳大利亚",
+        "疗法研究",
+        "埃博拉"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-02d30df1d0169e50",
+      "time": "2026-08-26T07:00:00.000Z",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "越南野生动物养殖者检出汉坦病毒暴露，专家警示东南亚。",
+      "key_facts_zh": [
+        "越南",
+        "暴露",
+        "东南亚"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-49e9852a52ecb13b",
+      "time": "2026-08-23T07:00:00.000Z",
+      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
+      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
+      "summary_zh": "智利记者塞古拉因汉坦病毒去世，享年 54 岁。",
+      "key_facts_zh": [
+        "智利",
+        "死亡",
+        "记者"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-2ef09f204d5b39ad",
       "time": "2026-08-21T07:00:00.000Z",
-      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - kotatv.com",
-      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions kotatv.com",
-      "summary_zh": "美国松脊原住民保留地检出汉坦病毒，官员呼吁采取防护措施。",
+      "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
+      "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
+      "summary_zh": "美国松脊保留地检出汉坦病毒，官员呼吁防范。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
-        "防护呼吁"
+        "检出"
       ],
       "signal_strength": "high"
     },
@@ -39,11 +104,24 @@
       "time": "2026-08-20T18:27:19.000Z",
       "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
       "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
-      "summary_zh": "巴斯德研究所介绍 MV Hondius 邮轮上的安第斯病毒及汉坦病毒风险。",
+      "summary_zh": "巴斯德研究所解析邮轮上安第斯型汉坦病毒。",
       "key_facts_zh": [
         "巴斯德研究所",
         "邮轮",
         "安第斯病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-dccd0e67c7b873c1",
+      "time": "2026-08-20T07:00:00.000Z",
+      "title_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin - The Brussels Times",
+      "body_en": "Rare Andes hantavirus case raises alert in Europe after Argentine origin The Brussels Times",
+      "summary_zh": "欧洲出现源自阿根廷的罕见安第斯型汉坦病毒病例，引发警惕。",
+      "key_facts_zh": [
+        "欧洲",
+        "阿根廷",
+        "安第斯型"
       ],
       "signal_strength": "medium"
     }
