@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-16T05:34:25.066829+00:00",
+  "__generated_at": "2026-09-16T10:35:38.236843+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-16T05:34:24.107386+00:00",
+  "last_fetched": "2026-09-16T10:35:37.416771+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -18,6 +18,19 @@
         "WHO",
         "邮轮",
         "确诊 5 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-49383c025e8a2641",
+      "time": "2026-09-06T01:50:57.000Z",
+      "title_en": "WHO declares cruise ship hantavirus outbreak over - TRT World",
+      "body_en": "WHO declares cruise ship hantavirus outbreak over TRT World",
+      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
+      "key_facts_zh": [
+        "WHO",
+        "邮轮",
+        "疫情结束"
       ],
       "signal_strength": "high"
     },
@@ -39,7 +52,7 @@
       "time": "2026-08-28T07:00:00.000Z",
       "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
       "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚机构宣布加速埃博拉与汉坦病毒疗法项目。",
+      "summary_zh": "澳大利亚机构宣布加速埃博拉和汉坦病毒疗法项目。",
       "key_facts_zh": [
         "澳大利亚",
         "疗法研究",
@@ -50,9 +63,9 @@
     {
       "id": "rt-49e9852a52ecb13b",
       "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news.mongabay.com",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news.mongabay.com",
-      "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年 54 岁。",
+      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
+      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
+      "summary_zh": "智利记者 Patricio Segura 因汉坦病毒去世，享年 54 岁。",
       "key_facts_zh": [
         "智利",
         "死亡",
@@ -72,19 +85,6 @@
         "检出病毒"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-bc95af14e1ee9dec",
-      "time": "2026-08-20T18:27:19.000Z",
-      "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
-      "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
-      "summary_zh": "巴斯德研究所介绍 MV Hondius 邮轮安第斯病毒情况。",
-      "key_facts_zh": [
-        "巴斯德研究所",
-        "邮轮",
-        "安第斯病毒"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
