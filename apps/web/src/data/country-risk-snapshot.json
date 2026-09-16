@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-16T16:04:16.593577+00:00",
+  "__generated_at": "2026-09-16T20:50:41.128297+00:00",
   "date": "2026-09-17",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -218,11 +218,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 6 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 5 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 5 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 6,
-      "signalCount7d": 6,
+      "signalCount30d": 5,
+      "signalCount7d": 5,
       "lastSignalAt": "2026-09-15T08:21:23+00:00"
     },
     "ES": {
@@ -274,7 +274,7 @@
       "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 3,
-      "signalCount7d": 1,
+      "signalCount7d": 0,
       "lastSignalAt": "2026-09-09T16:46:36+00:00"
     },
     "BR": {
@@ -312,7 +312,7 @@
       "stale": false,
       "signalCount30d": 1,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-08-29T00:00:00+00:00",
+      "lastSignalAt": "2026-09-05T00:00:00+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
