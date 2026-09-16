@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-16T10:35:38.236843+00:00",
+  "__generated_at": "2026-09-16T10:48:01.562587+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-16T10:35:37.416771+00:00",
+  "last_fetched": "2026-09-16T10:47:58.670441+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-11T21:48:28.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News News On AIR",
-      "summary_zh": "WHO 确认邮轮疫情相关 5 例汉坦病毒病例。",
+      "summary_zh": "WHO 确认邮轮疫情相关汉坦病毒病例 5 例。",
       "key_facts_zh": [
         "WHO",
         "邮轮",
@@ -61,6 +61,19 @@
       "signal_strength": "medium"
     },
     {
+      "id": "rt-02d30df1d0169e50",
+      "time": "2026-08-26T07:00:00.000Z",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究发出东南亚警告。",
+      "key_facts_zh": [
+        "越南",
+        "养殖者",
+        "暴露研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-49e9852a52ecb13b",
       "time": "2026-08-23T07:00:00.000Z",
       "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
@@ -78,13 +91,26 @@
       "time": "2026-08-21T07:00:00.000Z",
       "title_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions - KOTA Territory News",
       "body_en": "Hantavirus detected on Pine Ridge Reservation as officials urge precautions KOTA Territory News",
-      "summary_zh": "美国松脊保留地检出汉坦病毒，官员呼吁防范。",
+      "summary_zh": "美国松脊原住民保留地检出汉坦病毒，官方呼吁防范。",
       "key_facts_zh": [
         "美国",
         "松脊保留地",
         "检出病毒"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-bc95af14e1ee9dec",
+      "time": "2026-08-20T18:27:19.000Z",
+      "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
+      "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
+      "summary_zh": "巴斯德研究所解析 MV Hondius 邮轮安第斯病毒。",
+      "key_facts_zh": [
+        "巴斯德研究所",
+        "邮轮",
+        "安第斯病毒"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
