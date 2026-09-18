@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-18T20:21:52.812198+00:00",
+  "__generated_at": "2026-09-18T20:37:19.870039+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-18T20:21:49.638530+00:00",
+  "last_fetched": "2026-09-18T20:37:18.941209+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -24,9 +24,9 @@
     {
       "id": "rt-c6dd84ec1bbefffc",
       "time": "2026-09-17T11:43:35.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - abcnews.com",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know abcnews.com",
-      "summary_zh": "邮轮疑暴发汉坦病毒疫情，3 人死亡。",
+      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "邮轮疑暴发汉坦病毒疫情，已致 3 人死亡。",
       "key_facts_zh": [
         "邮轮",
         "3 人死亡",
@@ -37,13 +37,13 @@
     {
       "id": "rt-593ba1e04b9108ca",
       "time": "2026-09-17T08:23:39.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - abcnews.com",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US abcnews.com",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
       "summary_zh": "美国亚利桑那、佐治亚州监测返美邮轮乘客。",
       "key_facts_zh": [
         "美国",
         "亚利桑那",
-        "监测中"
+        "佐治亚"
       ],
       "signal_strength": "high"
     },
@@ -55,8 +55,8 @@
       "summary_zh": "WHO 确认邮轮疫情相关 5 例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
-        "5 例确诊",
-        "邮轮"
+        "邮轮",
+        "确诊 5 例"
       ],
       "signal_strength": "high"
     },
@@ -65,7 +65,7 @@
       "time": "2026-09-05T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 36): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周 0 例新增，2026 年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周新增 0 例，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -97,7 +97,7 @@
         "松脊保留地",
         "检出病毒"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
