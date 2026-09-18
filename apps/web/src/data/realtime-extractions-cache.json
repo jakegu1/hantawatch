@@ -12697,6 +12697,20 @@
         "source_url": "",
         "time": "2026-08-20T07:00:00.000Z"
       }
+    ],
+    "rt-9d409f196150d5c9": [
+      {
+        "iso2": "AR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-17",
+        "confidence": "low",
+        "reasoning_zh": "阿根廷卡塔马卡省发现携带汉坦病毒野鼠，加强环境监测；未报人间新增病例，故各delta为0",
+        "update_id": "rt-9d409f196150d5c9",
+        "source_url": "",
+        "time": "2026-09-17T15:07:13.000Z"
+      }
     ]
   }
 }
