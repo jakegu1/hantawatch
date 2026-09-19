@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-19T00:54:37.899871+00:00",
+  "__generated_at": "2026-09-19T03:00:19.995342+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-19T00:54:36.937989+00:00",
+  "last_fetched": "2026-09-19T03:00:16.996749+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -22,24 +22,11 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-593ba1e04b9108ca",
-      "time": "2026-09-17T08:23:39.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那、佐治亚监测返美邮轮乘客。",
-      "key_facts_zh": [
-        "美国",
-        "亚利桑那",
-        "佐治亚"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-1a4052977523347a",
       "time": "2026-09-11T21:48:28.000Z",
       "title_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News - News On AIR",
       "body_en": "WHO confirms five hantavirus cases linked to cruise ship outbreak | Akashvani News News On AIR",
-      "summary_zh": "WHO 确认邮轮疫情相关 5 例病例。",
+      "summary_zh": "WHO 确认邮轮相关 5 例汉坦病毒病例。",
       "key_facts_zh": [
         "WHO",
         "5 例确诊",
@@ -65,7 +52,7 @@
       "time": "2026-08-26T07:00:00.000Z",
       "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
       "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
-      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究。",
+      "summary_zh": "越南野生动物养殖者汉坦病毒暴露警示。",
       "key_facts_zh": [
         "越南",
         "养殖者",
@@ -85,6 +72,19 @@
         "检出"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-bc95af14e1ee9dec",
+      "time": "2026-08-20T18:27:19.000Z",
+      "title_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus - Institut Pasteur",
+      "body_en": "Andes virus on the MV Hondius cruise ship: what we know about this rare and potentially fatal hantavirus Institut Pasteur",
+      "summary_zh": "巴斯德研究所解析邮轮安第斯病毒。",
+      "key_facts_zh": [
+        "巴斯德研究所",
+        "安第斯病毒",
+        "邮轮"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
