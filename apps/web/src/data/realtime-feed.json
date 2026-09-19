@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-19T15:18:19.933791+00:00",
+  "__generated_at": "2026-09-19T17:38:23.696144+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-19T15:18:16.628955+00:00",
+  "last_fetched": "2026-09-19T17:38:23.040003+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,7 +26,7 @@
       "time": "2026-09-05T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 36): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报第36周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 通报第 36 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -37,8 +37,8 @@
     {
       "id": "rt-4bd8a09f72ef9770",
       "time": "2026-08-28T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - doherty.edu.au",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus doherty.edu.au",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
       "summary_zh": "澳大利亚机构宣布加速埃博拉与汉坦病毒疗法项目。",
       "key_facts_zh": [
         "澳大利亚",
@@ -50,8 +50,8 @@
     {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-26T07:00:00.000Z",
-      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
-      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - theconversation.com",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia theconversation.com",
       "summary_zh": "越南野生动物养殖者检出汉坦病毒暴露，警示东南亚。",
       "key_facts_zh": [
         "越南",
@@ -63,15 +63,15 @@
     {
       "id": "rt-49e9852a52ecb13b",
       "time": "2026-08-23T07:00:00.000Z",
-      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - Mongabay",
-      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 Mongabay",
-      "summary_zh": "智利记者帕特里西奥·塞古拉因汉坦病毒去世，享年54岁。",
+      "title_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 - news - Mongabay",
+      "body_en": "Patricio Segura, journalist who defended Patagonia’s rivers, died of hantavirus, aged 54 news - Mongabay",
+      "summary_zh": "智利记者塞古拉因汉坦病毒去世，享年 54 岁。",
       "key_facts_zh": [
         "智利",
-        "死亡",
-        "记者"
+        "记者",
+        "死亡"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-2ef09f204d5b39ad",
