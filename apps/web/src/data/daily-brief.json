@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-19T19:59:43.421040+00:00",
+  "__generated_at": "2026-09-20T03:14:50.131950+00:00",
   "date": "2026-09-20",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -10,24 +10,24 @@
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "daysSinceLastIntlAlert": 80,
   "whoDaysSinceOfficialUpdate": 80,
-  "cluesLast24h": 0,
-  "headline24h": "WHO 确认邮轮疫情相关 5 例汉坦病毒病例。",
+  "cluesLast24h": 3,
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "9月6日WHO宣布邮轮汉坦病毒疫情结束；9月5日美国CDC周报本周0例新增，2026年累计1例；法国1例确诊输入仍在随访。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国输入病例随访仍在进行，美国联邦监测期内无确诊，多国维持监测，国内 HFRS 基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 属基线水平，日常防鼠、避免接触鼠类排泄物即可。",
+  "situation": "WHO数据更新间隔较长，期间由各国卫生部公告与ArcGIS监测补足；西班牙、法国输入病例随访仍在进行，美国联邦监测期内人员待完成随访，WHO宣布结束后相关复核事项已收尾。",
+  "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；普通公众风险低，无需特别防护。",
   "newCases": "9月5日美国CDC周报本周0例新增；9月6日WHO宣布疫情结束，无新增确诊或初筛阳性。",
-  "sourceSummary": "WHO DON、美国CDC、西班牙/法国卫生部及ArcGIS监测",
+  "sourceSummary": "WHO DON、美国CDC、各国卫生部及ArcGIS监测",
   "shareLine": "WHO 7/2公布累计13例（80天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "WHO疫情结束声明",
-    "法国输入随访",
+    "WHO后续复核",
+    "各国随访收尾",
     "国内HFRS基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "美国CDC周报9/5",
-    "法国卫生部6/6通报"
+    "美国CDC周报第36周",
+    "法国卫生部随访通报"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"

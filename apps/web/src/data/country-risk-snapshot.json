@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-19T19:59:43.421542+00:00",
+  "__generated_at": "2026-09-20T03:14:50.132652+00:00",
   "date": "2026-09-20",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -218,11 +218,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 3 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 2,
+      "signalCount30d": 3,
+      "signalCount7d": 3,
       "lastSignalAt": "2026-09-14T15:22:03+00:00"
     },
     "ES": {
@@ -262,7 +262,7 @@
       "stale": false,
       "signalCount30d": 5,
       "signalCount7d": 2,
-      "lastSignalAt": "2026-09-14T09:00:30+00:00"
+      "lastSignalAt": "2026-09-14T13:13:33+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -270,10 +270,10 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 3 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 2 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 3,
+      "signalCount30d": 2,
       "signalCount7d": 0,
       "lastSignalAt": "2026-08-25T07:00:00+00:00"
     },
@@ -342,15 +342,16 @@
     },
     "KR": {
       "iso2": "KR",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "韩国为 Hantaan 病毒最早分离地（1976 汉滩江）；秋季野外训练、农作业为典型暴露场景。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-09-09T09:20:31+00:00"
     },
     "JP": {
       "iso2": "JP",
