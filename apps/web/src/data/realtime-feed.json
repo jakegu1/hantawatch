@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-20T17:12:19.893057+00:00",
+  "__generated_at": "2026-09-20T20:05:02.282967+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-20T17:12:18.892095+00:00",
+  "last_fetched": "2026-09-20T20:05:01.651646+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-09-20T09:30:46.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑发汉坦病毒疫情，3 人死亡。",
+      "summary_zh": "某邮轮疑暴发汉坦病毒疫情，3 人死亡。",
       "key_facts_zh": [
         "邮轮",
         "3 人死亡",
-        "疑似疫情"
+        "疑似暴发"
       ],
       "signal_strength": "high"
     },
@@ -29,17 +29,17 @@
       "summary_zh": "美国亚利桑那、佐治亚州监测返美邮轮乘客。",
       "key_facts_zh": [
         "美国",
-        "亚利桑那",
-        "佐治亚"
+        "监测中",
+        "邮轮乘客"
       ],
       "signal_strength": "high"
     },
     {
       "id": "rt-ae6dbd7faf8ee31b",
       "time": "2026-09-19T03:15:40.000Z",
-      "title_en": "Virginia Tech researchers studying Hantavirus impacts in the Commonwealth - wfxrtv.com",
-      "body_en": "Virginia Tech researchers studying Hantavirus impacts in the Commonwealth wfxrtv.com",
-      "summary_zh": "美国弗吉尼亚理工研究汉坦病毒影响。",
+      "title_en": "Virginia Tech researchers studying Hantavirus impacts in the Commonwealth - WFXRtv",
+      "body_en": "Virginia Tech researchers studying Hantavirus impacts in the Commonwealth WFXRtv",
+      "summary_zh": "美国弗吉尼亚理工研究该州汉坦病毒影响。",
       "key_facts_zh": [
         "美国",
         "弗吉尼亚理工",
@@ -48,54 +48,28 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-49383c025e8a2641",
-      "time": "2026-09-06T01:50:57.000Z",
-      "title_en": "WHO declares cruise ship hantavirus outbreak over - TRT World",
-      "body_en": "WHO declares cruise ship hantavirus outbreak over TRT World",
-      "summary_zh": "WHO 宣布邮轮汉坦病毒疫情结束。",
-      "key_facts_zh": [
-        "WHO",
-        "邮轮",
-        "疫情结束"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-09-05T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 36): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：本周 0 例，年内 1 例。",
+      "summary_zh": "美国 CDC 周报：本周 0 例，2026 年累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "本周 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-4bd8a09f72ef9770",
-      "time": "2026-08-28T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚机构资助埃博拉与汉坦病毒疗法。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "疗法研究",
-        "资助"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-26T07:00:00.000Z",
-      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - theconversation.com",
-      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia theconversation.com",
-      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究。",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究警示。",
       "key_facts_zh": [
         "越南",
         "养殖者",
-        "暴露研究"
+        "暴露"
       ],
       "signal_strength": "medium"
     }
