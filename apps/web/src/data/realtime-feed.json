@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-22T10:42:28.947482+00:00",
+  "__generated_at": "2026-09-22T10:55:31.381323+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-22T10:42:28.198339+00:00",
+  "last_fetched": "2026-09-22T10:55:28.143012+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-21T10:05:53.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑暴发汉坦病毒疫情，已致 3 人死亡。",
+      "summary_zh": "邮轮疑暴发汉坦病毒，3 人死亡，详情待查。",
       "key_facts_zh": [
         "邮轮",
         "死亡 3 例",
@@ -43,7 +43,7 @@
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
@@ -63,8 +63,8 @@
     {
       "id": "rt-02d30df1d0169e50",
       "time": "2026-08-26T07:00:00.000Z",
-      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - theconversation.com",
-      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia theconversation.com",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
       "summary_zh": "越南野生动物养殖者汉坦病毒暴露研究，警示东南亚。",
       "key_facts_zh": [
         "越南",
