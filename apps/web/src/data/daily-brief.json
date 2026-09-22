@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-22T16:13:04.509850+00:00",
+  "__generated_at": "2026-09-22T20:51:16.132974+00:00",
   "date": "2026-09-23",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,25 +11,27 @@
   "daysSinceLastIntlAlert": 83,
   "whoDaysSinceOfficialUpdate": 83,
   "cluesLast24h": 4,
-  "headline24h": "美国亚利桑那、佐治亚州监测返美邮轮乘客。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "9月19日美国亚利桑那、佐治亚两州对返美邮轮乘客开展监测随访；9月21日邮轮相关报道为旧聚集事件回顾，非新增。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国确诊输入仍在随访，美国多州维持监测，待 WHO 复核。",
-  "riskJudgment": "中国大陆无相关病例，国内 HFRS 处于基线正常范围；普通公众风险低，无需特别防护。",
-  "newCases": "9月19日美国两州为监测随访，非新增病例；9月21日无新增确诊。",
-  "sourceSummary": "WHO DON、各国卫生部公告、ArcGIS 监测及新闻线索。",
+  "latestChange": "9月22日美国CDC通报甲肝疫情（37例），非汉坦病毒；同日阿根廷安第斯型重症研究发布；无新增汉坦确诊。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；美国多州、英国等维持邮轮接触者随访，西班牙、法国输入病例待 WHO 复核，国内 HFRS 基线未变。",
+  "riskJudgment": "中国大陆无相关病例，普通公众风险低；赴南美旅行或接触野生啮齿动物者注意防护，国内 HFRS 处于常态水平。",
+  "newCases": "9月22日无新增汉坦确诊或初筛阳性；美国CDC当日通报为甲肝疫情。",
+  "sourceSummary": "WHO DON、各国卫生部公告、ArcGIS 监测及专业监测源。",
   "shareLine": "WHO 7/2公布累计13例（83天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
     "邮轮接触者随访",
-    "欧美监测进展",
-    "国内 HFRS 基线"
+    "安第斯型重症研究",
+    "国内HFRS基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "西班牙卫生部 6/5 通报",
-    "法国卫生部 6/6 通报"
+    "美国CDC汉坦病毒通报",
+    "ArcGIS ANDV 监测面板"
   ],
   "_guardrail_warnings": [
-    "shareline_pending_sanitized: no pending confirmed deltas"
+    "brief mentions \"阿根廷\" but it is not in mvHondiusImports or arcgisCases",
+    "shareline_pending_sanitized: no pending confirmed deltas",
+    "brief contains \"37\" which is not in allowed set [0, 1, 2, 3, 4, 6, 7, 11, 13, 28, 31, 8400, 16500]"
   ]
 }

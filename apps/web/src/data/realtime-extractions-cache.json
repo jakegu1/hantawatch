@@ -12725,6 +12725,34 @@
         "source_url": "",
         "time": "2026-09-19T03:15:40.000Z"
       }
+    ],
+    "rt-62bc5c0683836914": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-22",
+        "confidence": "high",
+        "reasoning_zh": "CDC确认美国多州甲肝疫情37例，与冷冻蛤蜊相关；非汉坦病毒，无新增变化量",
+        "update_id": "rt-62bc5c0683836914",
+        "source_url": "",
+        "time": "2026-09-22T19:44:00.000Z"
+      }
+    ],
+    "rt-602db1846a08b83e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-22",
+        "confidence": "low",
+        "reasoning_zh": "研究称重症安第斯汉坦病毒患者呼吸支持需求高，未提具体国家及新增病例数",
+        "update_id": "rt-602db1846a08b83e",
+        "source_url": "",
+        "time": "2026-09-22T19:38:00.000Z"
+      }
     ]
   }
 }
