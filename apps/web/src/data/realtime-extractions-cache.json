@@ -12753,6 +12753,34 @@
         "source_url": "",
         "time": "2026-09-22T19:38:00.000Z"
       }
+    ],
+    "rt-8f230cc8ddf4f565": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-23",
+        "confidence": "high",
+        "reasoning_zh": "美国IHS称松脊地区调查未确诊汉坦病毒病例，无新增数字",
+        "update_id": "rt-8f230cc8ddf4f565",
+        "source_url": "",
+        "time": "2026-09-23T19:55:43.000Z"
+      }
+    ],
+    "rt-baf7b2464a5e2ec7": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-23",
+        "confidence": "high",
+        "reasoning_zh": "美国CDC检测未确诊松脊地区汉坦病毒感染，无新增数字",
+        "update_id": "rt-baf7b2464a5e2ec7",
+        "source_url": "",
+        "time": "2026-09-23T17:37:00.000Z"
+      }
     ]
   }
 }
