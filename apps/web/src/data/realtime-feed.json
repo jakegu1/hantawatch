@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-24T05:42:57.069223+00:00",
+  "__generated_at": "2026-09-24T10:52:15.128383+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-24T05:42:56.436082+00:00",
+  "last_fetched": "2026-09-24T10:52:14.213670+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,8 +16,8 @@
       "summary_zh": "美国印第安人卫生局称松脊地卫生调查未确诊汉坦病毒病例。",
       "key_facts_zh": [
         "美国",
-        "松脊地",
-        "无确诊病例"
+        "无确诊病例",
+        "松脊地"
       ],
       "signal_strength": "high"
     },
@@ -26,33 +26,33 @@
       "time": "2026-09-23T17:37:00.000Z",
       "title_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge - KOTA Territory News",
       "body_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge KOTA Territory News",
-      "summary_zh": "美国 CDC 检测显示松脊地无确诊汉坦病毒感染。",
+      "summary_zh": "美国 CDC 检测显示松脊地未发现确诊汉坦病毒感染。",
       "key_facts_zh": [
         "美国 CDC",
-        "松脊地",
-        "无确诊"
+        "无确诊病例",
+        "松脊地"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-602db1846a08b83e",
-      "time": "2026-09-22T19:38:00.000Z",
-      "title_en": "Study shows high need for respiratory support in patients with severe Andes hantavirus infections - CIDRAP",
-      "body_en": "Study shows high need for respiratory support in patients with severe Andes hantavirus infections CIDRAP",
-      "summary_zh": "研究显示阿根廷等安第斯型汉坦病毒重症患者呼吸支持需求高。",
+      "id": "rt-62bc5c0683836914",
+      "time": "2026-09-22T19:44:00.000Z",
+      "title_en": "CDC confirms 37-case multistate hepatitis A outbreak linked to frozen clams - CIDRAP",
+      "body_en": "CDC confirms 37-case multistate hepatitis A outbreak linked to frozen clams CIDRAP",
+      "summary_zh": "美国 CDC 确认与冷冻蛤蜊相关的跨州甲肝疫情共 37 例。",
       "key_facts_zh": [
-        "安第斯型",
-        "重症",
-        "呼吸支持"
+        "美国 CDC",
+        "甲肝 37 例",
+        "冷冻蛤蜊"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-09-12T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 37): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 37 周新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 37 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -61,15 +61,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-4bd8a09f72ef9770",
-      "time": "2026-08-28T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚多尔蒂研究所宣布加速埃博拉与汉坦病毒疗法项目。",
+      "id": "rt-02d30df1d0169e50",
+      "time": "2026-08-26T07:00:00.000Z",
+      "title_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia - The Conversation",
+      "body_en": "Hantavirus exposure among wildlife farmers in Vietnam: A warning for Southeast Asia The Conversation",
+      "summary_zh": "研究称越南野生动物养殖者存在汉坦病毒暴露，警示东南亚。",
       "key_facts_zh": [
-        "澳大利亚",
-        "疗法研究",
-        "多尔蒂研究所"
+        "越南",
+        "暴露风险",
+        "东南亚"
       ],
       "signal_strength": "medium"
     }
