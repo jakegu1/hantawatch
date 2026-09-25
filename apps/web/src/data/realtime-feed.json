@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-25T20:56:29.708457+00:00",
+  "__generated_at": "2026-09-25T21:04:03.179613+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-25T20:56:28.885530+00:00",
+  "last_fetched": "2026-09-25T21:03:58.193338+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-09-25T04:57:11.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑暴发汉坦病毒疫情，3 人死亡。",
+      "summary_zh": "邮轮疑暴发汉坦病毒，3 人死亡。",
       "key_facts_zh": [
         "邮轮",
         "3 人死亡",
@@ -26,7 +26,7 @@
       "time": "2026-09-23T17:18:00.000Z",
       "title_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge - KOTA Territory News",
       "body_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge KOTA Territory News",
-      "summary_zh": "美国 CDC 检测显示松脊地未确诊汉坦病毒感染。",
+      "summary_zh": "美国 CDC 检测显示松脊地无确诊汉坦病毒感染。",
       "key_facts_zh": [
         "美国 CDC",
         "松脊地",
@@ -52,13 +52,26 @@
       "time": "2026-09-12T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 37): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 37 周汉坦病毒新增 0 例，年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周汉坦病毒新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年累计 1 例"
+        "年内 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-4bd8a09f72ef9770",
+      "time": "2026-08-28T07:00:00.000Z",
+      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
+      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
+      "summary_zh": "澳大利亚 Doherty 研究所获资助加速埃博拉与汉坦病毒疗法研发。",
+      "key_facts_zh": [
+        "澳大利亚",
+        "疗法研发",
+        "Doherty 研究所"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
