@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-25T23:45:42.583688+00:00",
+  "__generated_at": "2026-09-26T02:52:20.621951+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-09-25T23:45:41.917386+00:00",
+  "last_fetched": "2026-09-26T02:52:19.628985+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,11 @@
       "time": "2026-09-25T04:57:11.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑现汉坦病毒疫情，3 人死亡。",
+      "summary_zh": "邮轮疑暴发汉坦病毒，3 人死亡。",
       "key_facts_zh": [
         "邮轮",
         "3 人死亡",
-        "疑似疫情"
+        "疑似暴发"
       ],
       "signal_strength": "high"
     },
@@ -39,7 +39,7 @@
       "time": "2026-09-22T19:44:00.000Z",
       "title_en": "CDC confirms 37-case multistate hepatitis A outbreak linked to frozen clams - CIDRAP",
       "body_en": "CDC confirms 37-case multistate hepatitis A outbreak linked to frozen clams CIDRAP",
-      "summary_zh": "美国 CDC 确认 37 例甲肝疫情，与冷冻蛤蜊相关。",
+      "summary_zh": "美国 CDC 确认 37 例甲肝疫情，与冷冻蛤蜊有关。",
       "key_facts_zh": [
         "美国 CDC",
         "甲肝 37 例",
@@ -59,19 +59,6 @@
         "年内 1 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-4bd8a09f72ef9770",
-      "time": "2026-08-28T07:00:00.000Z",
-      "title_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus - Doherty Institute",
-      "body_en": "Cumming Global Centre for Pandemic Therapeutics announces projects to accelerate therapeutics for Ebola and hantavirus Doherty Institute",
-      "summary_zh": "澳大利亚 Doherty 研究所宣布加速埃博拉与汉坦病毒疗法项目。",
-      "key_facts_zh": [
-        "澳大利亚",
-        "Doherty 研究所",
-        "疗法项目"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
