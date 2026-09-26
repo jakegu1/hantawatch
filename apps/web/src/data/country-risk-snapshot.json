@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-26T03:22:24.070883+00:00",
+  "__generated_at": "2026-09-26T10:45:55.040911+00:00",
   "date": "2026-09-26",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -261,8 +261,8 @@
       "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-09-25T10:00:54+00:00"
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-09-04T07:00:00+00:00"
     },
     "CL": {
       "iso2": "CL",
