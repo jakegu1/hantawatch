@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector",
-  "__generated_at": "2026-09-28T12:49:47.862101+00:00",
+  "__generated_at": "2026-09-28T22:54:51.699496+00:00",
   "outbreaks": [
     {
       "id": "mv-hondius-2026",
@@ -69,7 +69,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935364+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900656+00:00"
             }
           ]
         },
@@ -123,7 +123,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935380+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900670+00:00"
             }
           ]
         },
@@ -142,7 +142,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935387+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900677+00:00"
             }
           ]
         },
@@ -221,7 +221,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935318+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900582+00:00"
             }
           ]
         },
@@ -240,7 +240,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935334+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900602+00:00"
             }
           ]
         },
@@ -259,7 +259,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935343+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900615+00:00"
             }
           ]
         },
@@ -278,7 +278,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935350+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900629+00:00"
             }
           ]
         },
@@ -297,7 +297,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935357+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900644+00:00"
             }
           ]
         },
@@ -316,7 +316,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935372+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900664+00:00"
             }
           ]
         },
@@ -335,7 +335,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935393+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900684+00:00"
             }
           ]
         },
@@ -354,7 +354,7 @@
               "tier": "arcgis",
               "url": "",
               "sourceName": "ArcGIS ANDV Dashboard",
-              "retrievedAt": "2026-09-28T12:49:45.935400+00:00"
+              "retrievedAt": "2026-09-28T22:54:49.900691+00:00"
             }
           ]
         }
@@ -364,13 +364,13 @@
         "source": {
           "name": "WHO 疾病暴发新闻（DON）",
           "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON611",
-          "retrievedAt": "2026-09-28T12:49:42.734665+00:00",
+          "retrievedAt": "2026-09-28T22:54:46.572294+00:00",
           "confidence": "official"
         },
         "headlineZh": ""
       },
       "provenance": {
-        "generatedAt": "2026-09-28T12:49:45.935417+00:00",
+        "generatedAt": "2026-09-28T22:54:49.900706+00:00",
         "contributors": [
           "who_don",
           "arcgis",
