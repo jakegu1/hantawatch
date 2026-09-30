@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-09-30T17:33:36.769780+00:00",
+  "__generated_at": "2026-09-30T21:50:21.544935+00:00",
   "date": "2026-10-01",
   "currentHpi": {
     "total": 31,
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-09-30T17:33:31.689408+00:00"
+    "updatedAt": "2026-09-30T21:50:17.084160+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-09-30T17:33:31.689408+00:00"
+    "updatedAt": "2026-09-30T21:50:17.084160+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -114,20 +114,20 @@
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
     "latestChange": "9月30日无新增官方确认；9月23日美国CDC检测显示松脊地未确诊汉坦病毒感染。",
-    "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国确诊患者随访仍在进行，多国接触者监测未结束，待 WHO 复核。",
-    "riskJudgment": "中国大陆无相关病例，国内 HFRS 处于基线正常范围；普通公众风险低，无需特别防护。",
+    "situation": "WHO数据更新间隔较长，期间由各国卫生部公告与ArcGIS监测补足；西班牙、法国、荷兰、南非、瑞士等国维持随访，美国CDC持续监测，待WHO复核事项暂无新增。",
+    "riskJudgment": "中国大陆无相关病例，国内HFRS处于基线正常范围；普通公众风险低，无需特殊防护。",
     "newCases": "9月30日无新增官方确认；9月23日美国CDC检测未确诊。",
-    "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测。",
+    "sourceSummary": "WHO DON、各国卫生部公告、ArcGIS监测及CDC周报。",
     "shareLine": "WHO 7/2公布累计13例（91天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "WHO 复核进展",
-      "接触者随访",
-      "国内 HFRS 基线"
+      "WHO复核进展",
+      "邮轮接触者随访",
+      "国内HFRS基线"
     ],
     "evidence": [
       "WHO DON 2026-DON611",
       "西班牙卫生部/Xinhua",
-      "法国卫生部/TF1 Info"
+      "美国CDC周报"
     ],
     "_guardrail_warnings": [
       "shareline_pending_sanitized: no pending confirmed deltas"
