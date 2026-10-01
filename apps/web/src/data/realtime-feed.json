@@ -1,25 +1,39 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-01T14:04:51.336045+00:00",
+  "__generated_at": "2026-10-01T20:05:37.399877+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-01T14:04:50.356213+00:00",
+  "last_fetched": "2026-10-01T20:05:36.527667+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-99c088de29fce21e",
+      "time": "2026-09-24T20:50:19.000Z",
+      "title_en": "Of mice and men: Examining how hantavirus leaps from rodent to human - news.vt.edu",
+      "body_en": "Of mice and men: Examining how hantavirus leaps from rodent to human news.vt.edu",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-4dfa4db9e90ad261",
+      "time": "2026-09-21T07:00:00.000Z",
+      "title_en": "Hantavirus explained: from hamsters to human trials - Understanding Animal Research",
+      "body_en": "Hantavirus explained: from hamsters to human trials Understanding Animal Research",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-09-19T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 38): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第38周汉坦病毒感染新增0例，年内累计1例。",
-      "key_facts_zh": [
-        "美国 CDC",
-        "新增 0 例",
-        "年内 1 例"
-      ],
-      "signal_strength": "high"
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
     }
   ]
 }
