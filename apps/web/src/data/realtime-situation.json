@@ -4,13 +4,13 @@
     "labelZh": "海外关注",
     "icon": "🟡",
     "since": "2026-05-27",
-    "daysAtState": 126
+    "daysAtState": 127
   },
   "headline": {
     "outbreakName": "MV Hondius 邮轮安第斯型聚集疫情",
     "totalCases": 13,
     "whoLastUpdateZh": "7/2",
-    "whoDaysAgo": 90,
+    "whoDaysAgo": 91,
     "domesticStatus": "safe",
     "nearestSignalKm": 8400,
     "nearestSignalCountry": "法国",
@@ -208,6 +208,46 @@
       "deltaLabel": "较前次：总数 +2 · 确诊 +3 · 疑似 -1（分类重算） · 死亡 0"
     },
     {
+      "at": "2026-05-27T19:30:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 3,
+      "type": "screening",
+      "shortContext": "初筛阳性",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-27T18:30:00Z",
+      "kind": "detection",
+      "countryZh": "西班牙",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-26T18:39:00Z",
+      "kind": "detection",
+      "countryZh": "美国",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
+      "at": "2026-05-23T18:17:56Z",
+      "kind": "detection",
+      "countryZh": "荷兰",
+      "delta": 1,
+      "type": "confirmed",
+      "shortContext": "新增确诊输入",
+      "verdict": "待 WHO 复核",
+      "source": "realtime_news"
+    },
+    {
       "at": "2026-05-13T12:00:00Z",
       "kind": "who_baseline",
       "headline": "WHO 累计 11 例（含 3 死亡）",
@@ -255,7 +295,7 @@
       "source": "who_don"
     }
   ],
-  "daysWithoutNewConfirmed": 90,
+  "daysWithoutNewConfirmed": 91,
   "totals": {
     "confirmed": 11,
     "indeterminate": 2,
@@ -291,7 +331,7 @@
         "count": 2,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-09-30"
+        "asOf": "2026-10-01"
       },
       {
         "zh": "法国",
@@ -305,14 +345,14 @@
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-09-30"
+        "asOf": "2026-10-01"
       },
       {
         "zh": "瑞士",
         "count": 1,
         "kind": "destination",
         "status": "monitoring",
-        "asOf": "2026-09-30"
+        "asOf": "2026-10-01"
       }
     ],
     "confirmedAttributionTotal": 11,
@@ -478,7 +518,7 @@
     },
     {
       "name": "ArcGIS ANDV",
-      "updatedAt": "2026-09-30T21:50:19.798945+00:00"
+      "updatedAt": "2026-10-01T03:59:07.017585+00:00"
     },
     {
       "name": "ECDC Surveillance",
@@ -493,5 +533,5 @@
     "last24hCount": 0,
     "highConfidencePicks": 0
   },
-  "realtimeUpdatedAt": "2026-09-30T21:50:21.543095+00:00"
+  "realtimeUpdatedAt": "2026-10-01T03:59:09.365876+00:00"
 }
