@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-05T03:55:03.343152+00:00",
+  "__generated_at": "2026-10-05T13:31:19.477743+00:00",
   "date": "2026-10-05",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -142,15 +142,16 @@
     },
     "RU": {
       "iso2": "RU",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "欧洲俄罗斯部分以 Puumala 为主；远东（哈巴罗夫斯克、滨海边疆区）以 Hantaan 为主重症率高。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-10-05T04:06:34+00:00"
     },
     "EE": {
       "iso2": "EE",
@@ -269,12 +270,12 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 2 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 2 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 2,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-10-01T05:02:45+00:00"
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-09-21T07:00:00+00:00"
     },
     "BR": {
       "iso2": "BR",
@@ -377,16 +378,15 @@
     },
     "SG": {
       "iso2": "SG",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "城市卫生水平高，整体风险极低。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-10-01T02:19:57+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "MY": {
       "iso2": "MY",
@@ -422,9 +422,8 @@
       "statusZh": "监测中",
       "riskSummaryZh": "ArcGIS ANDV 监测显示 6 名澳大利亚相关乘客仍在随访中，暂无确诊；初期 3 周 hospital 隔离期已结束，转入持续监测。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-10-02T04:04:16+00:00",
+      "signalCount30d": 0,
+      "signalCount7d": 0,
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
