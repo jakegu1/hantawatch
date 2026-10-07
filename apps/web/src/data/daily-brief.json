@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-06T22:17:09.781408+00:00",
+  "__generated_at": "2026-10-07T04:09:18.059041+00:00",
   "date": "2026-10-07",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 97,
   "whoDaysSinceOfficialUpdate": 97,
   "cluesLast24h": 7,
-  "headline24h": "美国亚利桑那、佐治亚州监测返美汉坦病毒邮轮乘客。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "10月6日无新增官方确认；美国亚利桑那州、佐治亚州监测返美邮轮乘客，法国1例确诊仍在巴黎ICU、状态稳定。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；美国多州对返美邮轮乘客维持随访，WHO 官员提及疑似人传人线索尚待复核，国内 HFRS 基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 处于基线正常范围，无需特别防护。",
+  "latestChange": "10月6日无新增官方确认；美国亚利桑那、佐治亚州监测返美邮轮乘客，法国1例确诊仍在巴黎ICU、状态稳定。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；美国多州对返美邮轮乘客维持随访，法国确诊者继续住院观察，相关接触者监测仍在进行，待 WHO 复核。",
+  "riskJudgment": "中国大陆无相关病例，国内 HFRS 处于基线正常范围；普通公众风险低，无需特别防护。",
   "newCases": "10月6日无新增官方确认，无新增初筛阳性报告。",
-  "sourceSummary": "WHO DON、各国卫生部公告、ArcGIS 监测及新闻线索。",
+  "sourceSummary": "依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测。",
   "shareLine": "WHO 7/2公布累计13例（97天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "美国邮轮乘客随访",
-    "WHO 人传人复核",
+    "邮轮接触者随访",
+    "美国多州监测",
     "法国确诊者状态"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "美国 CDC 疫情摘要",
-    "ArcGIS ANDV 监测面板"
+    "法国卫生部/TF1 Info",
+    "ArcGIS ANDV Dashboard"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"

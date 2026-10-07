@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-06T22:17:09.782102+00:00",
+  "__generated_at": "2026-10-07T04:09:18.060019+00:00",
   "date": "2026-10-07",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -254,15 +254,16 @@
     },
     "AR": {
       "iso2": "AR",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "Andes 型本土流行高致命且人传人；避免巴塔哥尼亚荒野独行、不进入弃用木屋。MV Hondius 邮轮始发地。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-09-13T07:00:00+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -288,7 +289,7 @@
       "stale": false,
       "signalCount30d": 1,
       "signalCount7d": 1,
-      "lastSignalAt": "2026-10-06T06:44:34+00:00"
+      "lastSignalAt": "2026-10-05T07:00:00+00:00"
     },
     "UY": {
       "iso2": "UY",
