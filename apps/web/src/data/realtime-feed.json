@@ -1,36 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-08T00:46:29.938614+00:00",
+  "__generated_at": "2026-10-08T04:21:36.168320+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-08T00:46:29.277083+00:00",
+  "last_fetched": "2026-10-08T04:21:33.421075+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-593ba1e04b9108ca",
-      "time": "2026-10-05T01:16:07.000Z",
-      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测返美邮轮乘客。",
-      "key_facts_zh": [
-        "美国",
-        "邮轮",
-        "监测中"
-      ],
-      "signal_strength": "high"
-    },
-    {
       "id": "rt-17840da12bdfae71",
       "time": "2026-10-02T22:50:13.000Z",
       "title_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official - ABC11 News",
       "body_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official ABC11 News",
-      "summary_zh": "WHO 官员称疑似汉坦病毒疫情或存在人传人。",
+      "summary_zh": "WHO 官员称疑似汉坦病毒疫情或存在人际传播。",
       "key_facts_zh": [
         "WHO",
         "疑似疫情",
-        "人传人"
+        "人际传播"
       ],
       "signal_strength": "medium"
     },
@@ -39,11 +26,11 @@
       "time": "2026-09-26T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 39): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报 2026 年第 39 周无新增病例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 39 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "无新增",
-        "2026 年"
+        "新增 0 例",
+        "年内 1 例"
       ],
       "signal_strength": "high"
     }
