@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-12T14:20:59.440616+00:00",
-  "date": "2026-10-12",
+  "__generated_at": "2026-10-13T00:06:24.164100+00:00",
+  "date": "2026-10-13",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -141,16 +141,15 @@
     },
     "RU": {
       "iso2": "RU",
-      "riskLevel": "watch",
-      "riskLevelZh": "关注",
-      "evidenceLevel": "signal",
-      "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 1 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "欧洲俄罗斯部分以 Puumala 为主；远东（哈巴罗夫斯克、滨海边疆区）以 Hantaan 为主重症率高。",
       "stale": false,
-      "signalCount30d": 1,
-      "signalCount7d": 0,
-      "lastSignalAt": "2026-10-05T04:06:34+00:00"
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "EE": {
       "iso2": "EE",
@@ -421,9 +420,8 @@
       "statusZh": "监测中",
       "riskSummaryZh": "ArcGIS ANDV 监测显示 6 名澳大利亚相关乘客仍在随访中，暂无确诊；初期 3 周 hospital 隔离期已结束，转入持续监测。",
       "stale": false,
-      "signalCount30d": 1,
+      "signalCount30d": 0,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-09-27T15:50:27+00:00",
       "importStatus": "monitoring",
       "importDate": "2026-06-07"
     },
