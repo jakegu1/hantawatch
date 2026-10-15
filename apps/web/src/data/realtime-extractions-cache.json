@@ -12823,6 +12823,48 @@
         "source_url": "",
         "time": "2026-10-02T09:26:39.000Z"
       }
+    ],
+    "rt-a5af5d5b4b90eb81": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-08",
+        "confidence": "low",
+        "reasoning_zh": "科普文章，无国家及新增数据",
+        "update_id": "rt-a5af5d5b4b90eb81",
+        "source_url": "",
+        "time": "2026-10-08T01:26:13.000Z"
+      }
+    ],
+    "rt-99c088de29fce21e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-24",
+        "confidence": "low",
+        "reasoning_zh": "科研报道，无国家及新增数据",
+        "update_id": "rt-99c088de29fce21e",
+        "source_url": "",
+        "time": "2026-09-24T07:00:00.000Z"
+      }
+    ],
+    "rt-4dfa4db9e90ad261": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-09-21",
+        "confidence": "low",
+        "reasoning_zh": "科普文章，无国家及新增数据",
+        "update_id": "rt-4dfa4db9e90ad261",
+        "source_url": "",
+        "time": "2026-09-21T07:00:00.000Z"
+      }
     ]
   }
 }
