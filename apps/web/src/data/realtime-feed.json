@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-17T20:03:29.572171+00:00",
+  "__generated_at": "2026-10-17T21:55:18.696635+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-17T20:03:25.916233+00:00",
+  "last_fetched": "2026-10-17T21:55:17.754471+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-10-15T01:58:06.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑发汉坦病毒疫情，3 人死亡。",
+      "summary_zh": "某邮轮疑似汉坦病毒疫情致3人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "3 死",
+        "死亡3例",
         "疑似疫情"
       ],
       "signal_strength": "high"
@@ -29,8 +29,7 @@
       "summary_zh": "研究称汉坦病毒可致罕见严重神经系统并发症。",
       "key_facts_zh": [
         "研究",
-        "神经系统",
-        "并发症"
+        "神经系统并发症"
       ],
       "signal_strength": "medium"
     },
@@ -39,11 +38,11 @@
       "time": "2026-10-03T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 40): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 40 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026年第40周新增0例，累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
-        "累计 1 例"
+        "新增0例",
+        "累计1例"
       ],
       "signal_strength": "high"
     }
