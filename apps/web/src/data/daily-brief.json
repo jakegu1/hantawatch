@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-17T10:06:36.648594+00:00",
+  "__generated_at": "2026-10-17T14:54:19.154439+00:00",
   "date": "2026-10-17",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 107,
   "whoDaysSinceOfficialUpdate": 107,
   "cluesLast24h": 6,
-  "headline24h": "一艘邮轮疑似暴发汉坦病毒疫情，3 人死亡。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "10月15日出现邮轮疑似汉坦病毒疫情致3人死亡的新闻线索，待官方确认；10月3日美国CDC通报第40周新增0例、年内累计1例；无其他官方确认新增。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关乘客、船员及密切接触者仍在监测随访中，多国维持监测，国内 HFRS 基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 属常见地方病，处于基线正常范围，无需特别防护。",
+  "latestChange": "10月15日出现邮轮疑似汉坦病毒暴发致3人死亡的新闻线索，待官方确认；10月3日美国CDC通报第40周新增0例、年内累计1例；无其他官方确认新增。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关乘客、船员及密切接触者仍在随访中，多国维持监测，国内 HFRS 基线未变。",
+  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 属基线水平，无需特别防护，关注后续官方复核即可。",
   "newCases": "10月3日美国CDC通报第40周新增0例；10月15日邮轮疑似暴发为新闻线索，非确诊。",
-  "sourceSummary": "主要依据 WHO DON、美国 CDC 及各国卫生部官方通报，辅以 ArcGIS 专业监测。",
+  "sourceSummary": "主要依据 WHO DON、美国 CDC 及各国卫生部通报，辅以 ArcGIS 监测与新闻线索。",
   "shareLine": "WHO 7/2公布累计13例（107天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "邮轮疑似线索核实",
-    "接触者随访进展",
+    "邮轮疑似线索",
+    "WHO 复核进展",
     "国内 HFRS 基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "美国CDC周报第40周",
-    "法国/西班牙卫生部公告"
+    "美国 CDC 周报第40周",
+    "法国/西班牙卫生部通报"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas",
