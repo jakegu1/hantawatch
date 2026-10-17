@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-17T07:23:32.297452+00:00",
+  "__generated_at": "2026-10-17T10:06:36.650826+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-17T07:23:31.797732+00:00",
+  "last_fetched": "2026-10-17T10:06:32.400596+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-10-15T01:58:06.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑似汉坦病毒疫情致3人死亡。",
+      "summary_zh": "邮轮疑似汉坦病毒疫情致 3 人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "3人死亡",
+        "3 死",
         "疑似疫情"
       ],
       "signal_strength": "high"
@@ -29,8 +29,7 @@
       "summary_zh": "研究称汉坦病毒可致罕见严重神经系统并发症。",
       "key_facts_zh": [
         "研究",
-        "神经系统",
-        "并发症"
+        "神经系统并发症"
       ],
       "signal_strength": "medium"
     },
@@ -39,13 +38,52 @@
       "time": "2026-10-03T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 40): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第40周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 40 周新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增0例",
-        "累计1例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-aa54736603dcc19a",
+      "time": "2026-10-02T09:26:39.000Z",
+      "title_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official - ABC7 Los Angeles",
+      "body_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official ABC7 Los Angeles",
+      "summary_zh": "WHO 官员称疑似疫情可能存在人传人。",
+      "key_facts_zh": [
+        "WHO",
+        "人传人",
+        "疑似疫情"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-baf7b2464a5e2ec7",
+      "time": "2026-09-23T07:00:00.000Z",
+      "title_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge - KOTA Territory News",
+      "body_en": "CDC testing finds no confirmed hantavirus infection in Pine Ridge KOTA Territory News",
+      "summary_zh": "美国 CDC 检测显示松岭地区无确诊病例。",
+      "key_facts_zh": [
+        "美国 CDC",
+        "松岭",
+        "无确诊"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-602db1846a08b83e",
+      "time": "2026-09-22T07:00:00.000Z",
+      "title_en": "Study shows high need for respiratory support in patients with severe Andes hantavirus infections - CIDRAP",
+      "body_en": "Study shows high need for respiratory support in patients with severe Andes hantavirus infections CIDRAP",
+      "summary_zh": "研究显示安第斯汉坦病毒重症患者呼吸支持需求高。",
+      "key_facts_zh": [
+        "安第斯病毒",
+        "呼吸支持",
+        "研究"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
