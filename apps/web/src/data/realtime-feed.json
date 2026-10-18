@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-17T23:41:05.264043+00:00",
+  "__generated_at": "2026-10-18T02:26:25.354783+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-17T23:41:04.591902+00:00",
+  "last_fetched": "2026-10-18T02:26:24.348056+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -29,8 +29,7 @@
       "summary_zh": "研究提示汉坦病毒可致罕见严重神经系统并发症。",
       "key_facts_zh": [
         "研究",
-        "神经系统并发症",
-        "罕见"
+        "神经系统并发症"
       ],
       "signal_strength": "medium"
     },
