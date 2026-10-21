@@ -12907,6 +12907,34 @@
         "source_url": "",
         "time": "2026-10-21T15:00:15.000Z"
       }
+    ],
+    "rt-0a1f241e84747ba1": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-21",
+        "confidence": "low",
+        "reasoning_zh": "美国研究机构关于汉坦病毒感染机制的科研报道，无疫情数字",
+        "update_id": "rt-0a1f241e84747ba1",
+        "source_url": "",
+        "time": "2026-10-21T17:31:00.000Z"
+      }
+    ],
+    "rt-d7644941aa37a546": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-21",
+        "confidence": "low",
+        "reasoning_zh": "Nature发表新世界汉坦病毒受体识别结构研究，无国家疫情数据",
+        "update_id": "rt-d7644941aa37a546",
+        "source_url": "",
+        "time": "2026-10-21T16:37:24.000Z"
+      }
     ]
   }
 }
