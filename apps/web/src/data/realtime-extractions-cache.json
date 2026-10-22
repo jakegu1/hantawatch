@@ -12935,6 +12935,48 @@
         "source_url": "",
         "time": "2026-10-21T16:37:24.000Z"
       }
+    ],
+    "rt-89dfd5e36b2c7987": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-22",
+        "confidence": "low",
+        "reasoning_zh": "汉坦病毒刺突结构基础研究，无疫情数字与国家信息",
+        "update_id": "rt-89dfd5e36b2c7987",
+        "source_url": "",
+        "time": "2026-10-22T04:13:28.000Z"
+      }
+    ],
+    "rt-bb25ddffd485ddbf": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-21",
+        "confidence": "low",
+        "reasoning_zh": "美方机构研究汉坦病毒感染机制，无新增病例数据",
+        "update_id": "rt-bb25ddffd485ddbf",
+        "source_url": "",
+        "time": "2026-10-21T22:39:00.000Z"
+      }
+    ],
+    "rt-23da846338ccfd0e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-21",
+        "confidence": "low",
+        "reasoning_zh": "研究安第斯汉坦病毒入胞机制，无疫情数字",
+        "update_id": "rt-23da846338ccfd0e",
+        "source_url": "",
+        "time": "2026-10-21T20:00:00.000Z"
+      }
     ]
   }
 }
