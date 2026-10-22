@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-21T21:13:08.120437+00:00",
+  "__generated_at": "2026-10-22T03:10:15.801323+00:00",
   "date": "2026-10-22",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 112,
   "whoDaysSinceOfficialUpdate": 112,
   "cluesLast24h": 6,
-  "headline24h": "美国路易斯安那州什里夫波特的研究人员揭示汉坦病毒感染人体细胞的机制。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "10月21日《自然》刊发新世界汉坦病毒识别受体结构研究；10月19日邮轮疑似暴发、3人死亡为新闻线索，待官方确认；无新的官方确认病例。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国输入病例随访仍在进行，美国、澳大利亚等维持监测，邮轮疑似线索待官方复核，国内 HFRS 基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 属常规基线，山区野外活动注意防鼠即可。",
-  "newCases": "无新增官方确认病例；10月19日邮轮疑似暴发为新闻线索，非确诊。",
-  "sourceSummary": "主要依据 WHO 疾病暴发新闻、各国卫生部公告及 ArcGIS 专业监测。",
+  "latestChange": "10月21日美国研究揭示汉坦病毒感染细胞机制；10月10日美国CDC周报新增0例；无新的官方确认病例。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关接触者仍在随访，多国维持监测，国内 HFRS 基线未变。",
+  "riskJudgment": "中国大陆无相关病例，普通公众风险低；国内 HFRS 属常态基线，无需特别防护调整。",
+  "newCases": "无新增官方确认病例；10月10日美国CDC周报新增0例。",
+  "sourceSummary": "主要依据 WHO 通报、各国卫生部公告与专业监测。",
   "shareLine": "WHO 7/2公布累计13例（112天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
-    "邮轮疑似线索",
-    "欧洲输入随访",
+    "邮轮接触者随访",
+    "WHO 数据复核",
     "国内 HFRS 基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "西班牙卫生部 6/5 通报",
-    "法国卫生部 6/6 通报"
+    "美国CDC周报第41周",
+    "法国卫生部/TF1 Info"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"

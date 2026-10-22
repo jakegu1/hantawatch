@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-22T01:09:39.574762+00:00",
+  "__generated_at": "2026-10-22T03:10:15.803743+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-22T01:09:38.731066+00:00",
+  "last_fetched": "2026-10-22T03:10:12.642762+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,11 +13,10 @@
       "time": "2026-10-21T17:31:00.000Z",
       "title_en": "LSU Health Shreveport Researchers Help Unlock How Deadly Hantavirus Infects Human Cells - klax-tv.com",
       "body_en": "LSU Health Shreveport Researchers Help Unlock How Deadly Hantavirus Infects Human Cells klax-tv.com",
-      "summary_zh": "美国路易斯安那州什里夫波特的研究人员揭示汉坦病毒感染人体细胞的机制。",
+      "summary_zh": "美国路易斯安那州什里夫波特研究人员揭示汉坦病毒感染人体细胞的机制。",
       "key_facts_zh": [
         "美国",
-        "研究进展",
-        "细胞感染"
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -26,33 +25,19 @@
       "time": "2026-10-21T15:00:15.000Z",
       "title_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells - Phys.org",
       "body_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells Phys.org",
-      "summary_zh": "科学家揭示致命的安第斯型汉坦病毒附着人体细胞的方式。",
+      "summary_zh": "科学家揭示安第斯汉坦病毒附着人体细胞的机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "研究进展",
-        "细胞附着"
+        "研究进展"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-c6dd84ec1bbefffc",
-      "time": "2026-10-19T05:49:48.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致 3 人死亡。",
-      "key_facts_zh": [
-        "邮轮",
-        "3 人死亡",
-        "疑似暴发"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 41 周新增 0 例汉坦病毒感染，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 41 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -65,11 +50,10 @@
       "time": "2026-10-05T07:00:00.000Z",
       "title_en": "Hantavirus Can Cause Rare but Severe Neurological Complications, Suggests Study - Medical Dialogues",
       "body_en": "Hantavirus Can Cause Rare but Severe Neurological Complications, Suggests Study Medical Dialogues",
-      "summary_zh": "一项研究提示，汉坦病毒可引发罕见但严重的神经系统并发症。",
+      "summary_zh": "研究提示汉坦病毒可致罕见但严重的神经系统并发症。",
       "key_facts_zh": [
-        "研究",
-        "神经系统并发症",
-        "罕见"
+        "研究进展",
+        "神经系统并发症"
       ],
       "signal_strength": "medium"
     }
