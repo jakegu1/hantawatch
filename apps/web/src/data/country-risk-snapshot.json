@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-22T11:06:33.721467+00:00",
-  "date": "2026-10-22",
+  "__generated_at": "2026-10-22T16:35:01.645244+00:00",
+  "date": "2026-10-23",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -62,8 +62,9 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "法国 1 例确诊仍在巴黎 ICU、状态稳定；22 名航班接触者已于 6 月 6 日解除隔离；4 名邮轮直接暴露者隔离至 6 月 21 日。",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0,
+      "signalCount30d": 1,
+      "signalCount7d": 1,
+      "lastSignalAt": "2026-10-22T16:15:43+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-06"
     },
@@ -255,11 +256,11 @@
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
       "evidenceLevelZh": "报道线索",
-      "statusZh": "近 30 天有 7 条相关报道线索",
-      "riskSummaryZh": "近 30 天自动捕捉到 7 条相关报道，代表关注度上升，不等同于新增病例",
+      "statusZh": "近 30 天有 6 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 6 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 7,
-      "signalCount7d": 7,
+      "signalCount30d": 6,
+      "signalCount7d": 6,
       "lastSignalAt": "2026-10-21T09:54:00+00:00"
     },
     "CL": {
