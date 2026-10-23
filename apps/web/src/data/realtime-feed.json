@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-23T03:15:38.949224+00:00",
+  "__generated_at": "2026-10-23T05:37:38.964616+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-23T03:15:34.314840+00:00",
+  "last_fetched": "2026-10-23T05:37:38.302125+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,10 +13,10 @@
       "time": "2026-10-22T23:50:03.000Z",
       "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
       "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
-      "summary_zh": "研究用冷冻电镜与AI支架揭示安第斯汉坦病毒结合细胞机制。",
+      "summary_zh": "研究用冷冻电镜与 AI 支架揭示安第斯汉坦病毒结合细胞机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "结构研究"
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -25,10 +25,10 @@
       "time": "2026-10-22T04:13:28.000Z",
       "title_en": "Hantavirus spike structure reveals recessed protocadherin-1 binding pocket - Bioengineer.org",
       "body_en": "Hantavirus spike structure reveals recessed protocadherin-1 binding pocket Bioengineer.org",
-      "summary_zh": "研究揭示汉坦病毒刺突蛋白与PCDH1结合口袋结构。",
+      "summary_zh": "研究揭示汉坦病毒刺突结构中原钙黏蛋白-1 结合口袋。",
       "key_facts_zh": [
-        "刺突蛋白",
-        "结构研究"
+        "病毒结构",
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -37,10 +37,10 @@
       "time": "2026-10-21T22:46:06.000Z",
       "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
       "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》发表新世界汉坦病毒识别PCDH1的结构基础。",
+      "summary_zh": "《自然》刊文揭示新世界汉坦病毒识别原钙黏蛋白-1 的结构基础。",
       "key_facts_zh": [
         "自然期刊",
-        "结构研究"
+        "病毒结构"
       ],
       "signal_strength": "medium"
     },
@@ -49,22 +49,10 @@
       "time": "2026-10-21T22:39:00.000Z",
       "title_en": "LSU Health Shreveport researchers unlock how hantavirus infects humans - KTBS 3",
       "body_en": "LSU Health Shreveport researchers unlock how hantavirus infects humans KTBS 3",
-      "summary_zh": "美国路易斯安那州立大学研究人员揭示汉坦病毒感染机制。",
+      "summary_zh": "美国路易斯安那州立大学研究人员揭示汉坦病毒感染人类机制。",
       "key_facts_zh": [
         "美国",
-        "感染机制"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-23da846338ccfd0e",
-      "time": "2026-10-21T20:00:00.000Z",
-      "title_en": "Albert Einstein College of Medicine maps Andes hantavirus entry to guide new drugs - DongA Science",
-      "body_en": "Albert Einstein College of Medicine maps Andes hantavirus entry to guide new drugs DongA Science",
-      "summary_zh": "美国爱因斯坦医学院绘制安第斯汉坦病毒入侵路径以指导新药。",
-      "key_facts_zh": [
-        "美国",
-        "药物研发"
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -73,10 +61,10 @@
       "time": "2026-10-21T16:06:03.000Z",
       "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
       "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致3人死亡。",
+      "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致 3 人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "死亡3例"
+        "死亡 3 例"
       ],
       "signal_strength": "high"
     },
@@ -88,7 +76,7 @@
       "summary_zh": "科学家揭示致命安第斯汉坦病毒附着人体细胞的机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "细胞附着"
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -97,11 +85,11 @@
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报2026年第41周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 41 周汉坦病毒感染新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增0例",
-        "累计1例"
+        "新增 0 例",
+        "累计 1 例"
       ],
       "signal_strength": "high"
     }
