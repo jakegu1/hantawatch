@@ -1,33 +1,33 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-23T10:58:24.338556+00:00",
-  "date": "2026-10-23",
+  "__generated_at": "2026-10-23T16:24:24.480823+00:00",
+  "date": "2026-10-24",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 11,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 113,
-  "whoDaysSinceOfficialUpdate": 113,
+  "daysSinceLastIntlAlert": 114,
+  "whoDaysSinceOfficialUpdate": 114,
   "cluesLast24h": 6,
-  "headline24h": "法国卫生部门称牲畜常见的沙蒙达病毒首次在人类中检出。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "10月22日美国CDC周报汉坦病毒新增0例、年内累计1例；10月21日研究揭示安第斯病毒入侵细胞机制；无新增官方确认病例。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；多国接触者仍在随访，邮轮相关监测未宣布结案；国内 HFRS 基线未变。",
-  "riskJudgment": "中国大陆无相关病例，普通公众暴露风险低；安第斯型人际传播仅见于密切接触场景，日常无需特别防护。",
+  "latestChange": "10月23日法国报告沙蒙达病毒首次人感染，与汉坦病毒无关；10月22日美国CDC周报汉坦病毒新增0例；无新增官方确认病例。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国输入病例随访仍在进行，多国接触者监测未撤，待 WHO 复核。",
+  "riskJudgment": "中国大陆无相关病例，普通公众暴露风险低；国内 HFRS 处于基线正常范围，无需特别防护调整。",
   "newCases": "无新增官方确认病例；10月22日美国CDC周报新增0例，未见初筛阳性。",
-  "sourceSummary": "主要依据 WHO DON、美国 CDC 周报及 ArcGIS 专业监测。",
-  "shareLine": "WHO 7/2公布累计13例（113天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+  "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测。",
+  "shareLine": "WHO 7/2公布累计13例（114天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
     "邮轮接触者随访",
-    "安第斯型研究进展",
+    "欧洲输入病例",
     "国内HFRS基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "美国CDC第41周周报",
-    "ArcGIS ANDV 监测面板"
+    "西班牙卫生部 6/5 通报",
+    "法国卫生部 6/6 通报"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"

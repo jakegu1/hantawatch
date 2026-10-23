@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-23T15:34:22.910393+00:00",
+  "__generated_at": "2026-10-23T16:24:24.483332+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-23T15:34:22.272558+00:00",
+  "last_fetched": "2026-10-23T16:24:20.011291+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-10-23T13:03:04.000Z",
       "title_en": "French health authorities said that the Shamonda virus, which usually affects livestock, was detected in a human for the first time. Link to the full story in the comments section. | via ANC 24/7 - Facebook",
       "body_en": "French health authorities said that the Shamonda virus, which usually affects livestock, was detected in a human for the first time. Link to the full story in the comments section. | via ANC 24/7 Facebook",
-      "summary_zh": "法国卫生部门称牲畜常见的沙蒙达病毒首次在人类中检出。",
+      "summary_zh": "法国卫生部门称沙蒙达病毒首次在人类中检出。",
       "key_facts_zh": [
         "法国",
         "沙蒙达病毒",
@@ -26,11 +26,11 @@
       "time": "2026-10-22T23:50:03.000Z",
       "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
       "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
-      "summary_zh": "研究用冷冻电镜与 AI 支架揭示安第斯病毒结合细胞机制。",
+      "summary_zh": "研究用冷冻电镜与 AI 揭示安第斯汉坦病毒结合细胞机制。",
       "key_facts_zh": [
         "安第斯病毒",
         "冷冻电镜",
-        "结合机制"
+        "AI 设计"
       ],
       "signal_strength": "medium"
     },
@@ -56,7 +56,7 @@
       "key_facts_zh": [
         "自然期刊",
         "新世界汉坦病毒",
-        "结构基础"
+        "结构研究"
       ],
       "signal_strength": "medium"
     },
@@ -74,28 +74,15 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-23da846338ccfd0e",
-      "time": "2026-10-21T20:00:00.000Z",
-      "title_en": "Albert Einstein College of Medicine maps Andes hantavirus entry to guide new drugs - DongA Science",
-      "body_en": "Albert Einstein College of Medicine maps Andes hantavirus entry to guide new drugs DongA Science",
-      "summary_zh": "美国爱因斯坦医学院绘制安第斯病毒入侵路径以指导新药。",
-      "key_facts_zh": [
-        "美国",
-        "安第斯病毒",
-        "新药研发"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-bae5178ec70e1a52",
       "time": "2026-10-21T15:00:15.000Z",
       "title_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells - Phys.org",
       "body_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells Phys.org",
-      "summary_zh": "科学家揭示致命安第斯病毒附着人体细胞的机制。",
+      "summary_zh": "科学家揭示安第斯汉坦病毒附着人体细胞的机制。",
       "key_facts_zh": [
         "安第斯病毒",
         "细胞附着",
-        "研究"
+        "机制研究"
       ],
       "signal_strength": "medium"
     },
@@ -104,11 +91,11 @@
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 41 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 41 周汉坦病毒新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     }

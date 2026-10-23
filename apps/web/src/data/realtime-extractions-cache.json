@@ -12991,6 +12991,20 @@
         "source_url": "",
         "time": "2026-10-22T23:50:03.000Z"
       }
+    ],
+    "rt-030c95324a79168e": [
+      {
+        "iso2": "FR",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-23",
+        "confidence": "low",
+        "reasoning_zh": "法国卫生部门称沙蒙达病毒首次在人类中检出，未给出具体病例数，无新增数据",
+        "update_id": "rt-030c95324a79168e",
+        "source_url": "",
+        "time": "2026-10-23T13:03:04.000Z"
+      }
     ]
   }
 }
