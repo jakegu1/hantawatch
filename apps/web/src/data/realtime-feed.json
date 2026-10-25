@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-25T07:58:45.583277+00:00",
+  "__generated_at": "2026-10-25T10:39:32.675071+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-25T07:58:44.764239+00:00",
+  "last_fetched": "2026-10-25T10:39:28.292647+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -26,37 +26,11 @@
       "time": "2026-10-21T22:46:06.000Z",
       "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
       "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》刊文揭示新世界汉坦病毒识别受体机制。",
+      "summary_zh": "《自然》刊文揭示新世界汉坦病毒识别原钙黏蛋白-1 的结构基础。",
       "key_facts_zh": [
         "《自然》",
-        "受体机制",
-        "新世界汉坦病毒"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-0a1f241e84747ba1",
-      "time": "2026-10-21T17:31:00.000Z",
-      "title_en": "LSU Health Shreveport Researchers Help Unlock How Deadly Hantavirus Infects Human Cells - klax-tv.com",
-      "body_en": "LSU Health Shreveport Researchers Help Unlock How Deadly Hantavirus Infects Human Cells klax-tv.com",
-      "summary_zh": "美国路易斯安那州研究人员揭示汉坦病毒感染机制。",
-      "key_facts_zh": [
-        "美国",
-        "路易斯安那",
-        "感染机制"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-bae5178ec70e1a52",
-      "time": "2026-10-21T15:00:15.000Z",
-      "title_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells - Phys.org",
-      "body_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells Phys.org",
-      "summary_zh": "科学家揭示安第斯汉坦病毒附着人体细胞机制。",
-      "key_facts_zh": [
-        "安第斯病毒",
-        "细胞附着",
-        "研究进展"
+        "病毒受体",
+        "结构研究"
       ],
       "signal_strength": "medium"
     },
@@ -65,11 +39,10 @@
       "time": "2026-10-21T07:00:00.000Z",
       "title_en": "Andes hantavirus has a secret pocket - C&EN",
       "body_en": "Andes hantavirus has a secret pocket C&EN",
-      "summary_zh": "研究称安第斯汉坦病毒存在特殊结合口袋。",
+      "summary_zh": "研究报道安第斯汉坦病毒存在一个隐秘口袋结构。",
       "key_facts_zh": [
         "安第斯病毒",
-        "结合口袋",
-        "结构研究"
+        "结构发现"
       ],
       "signal_strength": "medium"
     },
@@ -78,7 +51,7 @@
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报第 41 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 41 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
