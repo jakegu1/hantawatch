@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-27T03:36:48.138443+00:00",
+  "__generated_at": "2026-10-27T07:08:43.827710+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-27T03:36:44.241709+00:00",
+  "last_fetched": "2026-10-27T07:08:42.899241+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-c6dd84ec1bbefffc",
+      "time": "2026-10-27T00:07:03.000Z",
+      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "某邮轮疑似暴发汉坦病毒疫情，已有 3 人死亡。",
+      "key_facts_zh": [
+        "邮轮",
+        "3 人死亡",
+        "疑似暴发"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-7dc1717fac8bc972",
       "time": "2026-10-23T21:03:20.000Z",
@@ -16,7 +29,8 @@
       "summary_zh": "ReliefWeb 发布汉坦病毒肺综合征实验室诊断临时建议。",
       "key_facts_zh": [
         "实验室诊断",
-        "临时建议"
+        "临时建议",
+        "肺综合征"
       ],
       "signal_strength": "medium"
     },
@@ -25,11 +39,11 @@
       "time": "2026-10-22T23:50:03.000Z",
       "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
       "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
-      "summary_zh": "研究用冷冻电镜与AI支架揭示安第斯汉坦病毒结合细胞机制。",
+      "summary_zh": "研究借助冷冻电镜与 AI 设计支架，揭示安第斯汉坦病毒如何结合细胞。",
       "key_facts_zh": [
         "安第斯病毒",
         "冷冻电镜",
-        "AI设计"
+        "细胞结合"
       ],
       "signal_strength": "medium"
     },
@@ -38,23 +52,11 @@
       "time": "2026-10-22T16:57:00.000Z",
       "title_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries - Red River Radio",
       "body_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries Red River Radio",
-      "summary_zh": "美国路易斯安那州立大学什里夫波特分校科学家参与破解汉坦病毒谜团。",
+      "summary_zh": "美国路易斯安那州立大学什里夫波特分校科学家参与破解汉坦病毒致病机制。",
       "key_facts_zh": [
         "美国",
-        "汉坦病毒",
+        "路易斯安那州",
         "研究进展"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-89dfd5e36b2c7987",
-      "time": "2026-10-22T04:13:28.000Z",
-      "title_en": "Hantavirus spike structure reveals recessed protocadherin-1 binding pocket - Bioengineer.org",
-      "body_en": "Hantavirus spike structure reveals recessed protocadherin-1 binding pocket Bioengineer.org",
-      "summary_zh": "汉坦病毒刺突结构揭示原钙黏蛋白-1凹陷结合口袋。",
-      "key_facts_zh": [
-        "刺突结构",
-        "结合口袋"
       ],
       "signal_strength": "medium"
     },
@@ -66,20 +68,8 @@
       "summary_zh": "美国路易斯安那州立大学什里夫波特分校研究人员揭示汉坦病毒感染人类机制。",
       "key_facts_zh": [
         "美国",
-        "感染机制",
-        "研究进展"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-5631549c73fd2043",
-      "time": "2026-10-21T17:08:00.000Z",
-      "title_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells - PR Newswire",
-      "body_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells PR Newswire",
-      "summary_zh": "科学家揭示致命安第斯汉坦病毒附着人体细胞的机制。",
-      "key_facts_zh": [
-        "安第斯病毒",
-        "细胞附着"
+        "路易斯安那州",
+        "感染机制"
       ],
       "signal_strength": "medium"
     },
@@ -88,11 +78,23 @@
       "time": "2026-10-21T16:37:24.000Z",
       "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
       "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》刊发新世界汉坦病毒识别原钙黏蛋白-1的结构基础研究。",
+      "summary_zh": "《自然》刊文揭示新世界汉坦病毒识别原钙黏蛋白-1 的结构基础。",
       "key_facts_zh": [
+        "《自然》",
         "新世界汉坦病毒",
-        "结构研究",
-        "《自然》"
+        "结构基础"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-bae5178ec70e1a52",
+      "time": "2026-10-21T15:00:15.000Z",
+      "title_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells - Phys.org",
+      "body_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells Phys.org",
+      "summary_zh": "科学家揭示致命安第斯汉坦病毒附着人体细胞的机制。",
+      "key_facts_zh": [
+        "安第斯病毒",
+        "研究进展"
       ],
       "signal_strength": "medium"
     },
@@ -101,7 +103,7 @@
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第41周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 41 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
@@ -114,13 +116,13 @@
       "time": "2026-10-02T09:26:39.000Z",
       "title_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official - ABC7 Los Angeles",
       "body_en": "Suspected hantavirus outbreak may have 'human-to-human transmission': WHO official ABC7 Los Angeles",
-      "summary_zh": "WHO 官员称疑似汉坦病毒疫情或存在人际传播。",
+      "summary_zh": "WHO 官员称疑似汉坦病毒疫情可能存在人际传播。",
       "key_facts_zh": [
         "WHO",
         "疑似疫情",
         "人际传播"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     }
   ]
 }
