@@ -13075,6 +13075,34 @@
         "source_url": "",
         "time": "2026-10-23T21:03:20.000Z"
       }
+    ],
+    "rt-3400b6fc8cd907d2": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-28",
+        "confidence": "low",
+        "reasoning_zh": "科研报道，无疫情数字与国家信息",
+        "update_id": "rt-3400b6fc8cd907d2",
+        "source_url": "",
+        "time": "2026-10-28T11:55:59.000Z"
+      }
+    ],
+    "rt-c6831896bfc61959": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-26",
+        "confidence": "low",
+        "reasoning_zh": "科研报道，无疫情数字与国家信息",
+        "update_id": "rt-c6831896bfc61959",
+        "source_url": "",
+        "time": "2026-10-26T10:58:15.000Z"
+      }
     ]
   }
 }

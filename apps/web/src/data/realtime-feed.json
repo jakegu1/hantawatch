@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-28T21:30:16.155531+00:00",
+  "__generated_at": "2026-10-28T22:08:43.574753+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-28T21:30:15.142808+00:00",
+  "last_fetched": "2026-10-28T22:08:38.709888+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,7 +16,6 @@
       "summary_zh": "研究用冷冻电镜揭示安第斯汉坦病毒如何结合人类细胞受体。",
       "key_facts_zh": [
         "安第斯病毒",
-        "冷冻电镜",
         "受体研究"
       ],
       "signal_strength": "medium"
@@ -39,11 +38,11 @@
       "time": "2026-10-26T10:58:15.000Z",
       "title_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs - Institut Pasteur",
       "body_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs Institut Pasteur",
-      "summary_zh": "巴斯德研究所揭示安第斯汉坦病毒附着人体细胞机制，助力抗病毒药物研发。",
+      "summary_zh": "法国巴斯德研究所揭示安第斯汉坦病毒附着人体细胞机制。",
       "key_facts_zh": [
+        "法国",
         "巴斯德研究所",
-        "抗病毒研究",
-        "安第斯病毒"
+        "抗病毒研究"
       ],
       "signal_strength": "medium"
     },
@@ -52,11 +51,22 @@
       "time": "2026-10-22T23:50:03.000Z",
       "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
       "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
-      "summary_zh": "研究结合冷冻电镜与 AI 设计支架揭示安第斯汉坦病毒结合细胞机制。",
+      "summary_zh": "研究结合冷冻电镜与 AI 支架揭示安第斯汉坦病毒结合细胞机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "AI 设计",
-        "细胞结合"
+        "AI 研究"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-b8361d2865228774",
+      "time": "2026-10-22T16:57:00.000Z",
+      "title_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries - Red River Radio",
+      "body_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries Red River Radio",
+      "summary_zh": "美国路易斯安那州立大学什里夫波特分校科学家破解汉坦病毒谜团。",
+      "key_facts_zh": [
+        "美国",
+        "科研进展"
       ],
       "signal_strength": "medium"
     },
