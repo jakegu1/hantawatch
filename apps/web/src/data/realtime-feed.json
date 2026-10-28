@@ -1,23 +1,98 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-28T12:03:38.308477+00:00",
+  "__generated_at": "2026-10-28T16:56:07.672842+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-28T12:03:35.053145+00:00",
+  "last_fetched": "2026-10-28T16:56:06.656217+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-4a0b28a9cce5c6f4",
+      "time": "2026-10-28T12:41:55.000Z",
+      "title_en": "Antibody therapies target Andes virus through neutralization and Fc-mediated protection - Bioengineer.org",
+      "body_en": "Antibody therapies target Andes virus through neutralization and Fc-mediated protection Bioengineer.org",
+      "summary_zh": "研究显示抗体疗法通过中和与 Fc 介导保护靶向安第斯病毒。",
+      "key_facts_zh": [
+        "抗体疗法",
+        "安第斯病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-3400b6fc8cd907d2",
+      "time": "2026-10-28T11:55:59.000Z",
+      "title_en": "Cryo-EM reveals how Andes hantavirus grips its human cell receptor - Bioengineer.org",
+      "body_en": "Cryo-EM reveals how Andes hantavirus grips its human cell receptor Bioengineer.org",
+      "summary_zh": "冷冻电镜揭示安第斯汉坦病毒如何结合人类细胞受体。",
+      "key_facts_zh": [
+        "冷冻电镜",
+        "安第斯病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-593ba1e04b9108ca",
+      "time": "2026-10-27T11:12:36.000Z",
+      "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的汉坦病毒邮轮乘客。",
+      "key_facts_zh": [
+        "美国",
+        "邮轮乘客",
+        "监测中"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-9cacbbe52a7c8b91",
+      "time": "2026-10-22T23:50:03.000Z",
+      "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
+      "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
+      "summary_zh": "冷冻电镜与 AI 设计支架揭示安第斯汉坦病毒结合细胞机制。",
+      "key_facts_zh": [
+        "冷冻电镜",
+        "AI 设计",
+        "安第斯病毒"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-b8361d2865228774",
+      "time": "2026-10-22T16:57:00.000Z",
+      "title_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries - Red River Radio",
+      "body_en": "LSU Health Shreveport Scientists Help Unlock Deadly Hantavirus Mysteries Red River Radio",
+      "summary_zh": "美国路易斯安那州立大学健康科学中心科学家参与破解汉坦病毒谜团。",
+      "key_facts_zh": [
+        "美国",
+        "汉坦病毒",
+        "研究进展"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-bae5178ec70e1a52",
+      "time": "2026-10-21T15:00:15.000Z",
+      "title_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells - Phys.org",
+      "body_en": "Scientists reveal how deadly Andes hantavirus attaches to human cells Phys.org",
+      "summary_zh": "科学家揭示致命安第斯汉坦病毒附着人类细胞的机制。",
+      "key_facts_zh": [
+        "安第斯病毒",
+        "细胞附着"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-10-10T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 41): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第 41 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 41 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     }
