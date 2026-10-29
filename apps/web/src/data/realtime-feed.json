@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-29T12:14:42.455394+00:00",
+  "__generated_at": "2026-10-29T14:51:55.872067+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-29T12:14:38.832865+00:00",
+  "last_fetched": "2026-10-29T14:51:54.812389+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -16,8 +16,8 @@
       "summary_zh": "研究用冷冻电镜揭示安第斯汉坦病毒结合人类细胞受体机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "冷冻电镜",
-        "受体研究"
+        "受体研究",
+        "冷冻电镜"
       ],
       "signal_strength": "medium"
     },
@@ -26,7 +26,7 @@
       "time": "2026-10-27T11:12:36.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的汉坦病毒邮轮乘客。",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的邮轮汉坦病毒乘客。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -35,27 +35,15 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-80d298f4ed76d036",
-      "time": "2026-10-23T18:34:45.000Z",
-      "title_en": "Andes hantavirus has a secret pocket - Chemical & Engineering News",
-      "body_en": "Andes hantavirus has a secret pocket Chemical & Engineering News",
-      "summary_zh": "研究报道安第斯汉坦病毒存在一个隐秘口袋结构。",
+      "id": "rt-c6831896bfc61959",
+      "time": "2026-10-26T10:58:15.000Z",
+      "title_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs - Institut Pasteur",
+      "body_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs Institut Pasteur",
+      "summary_zh": "巴斯德研究所揭示安第斯汉坦病毒附着人体细胞机制，或助抗病毒药研发。",
       "key_facts_zh": [
-        "安第斯病毒",
-        "结构研究"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-9cacbbe52a7c8b91",
-      "time": "2026-10-22T23:50:03.000Z",
-      "title_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells - Genetic Engineering and Biotechnology News",
-      "body_en": "Cryo-EM and AI-Designed Scaffold Reveal How Andes Hantavirus Binds Cells Genetic Engineering and Biotechnology News",
-      "summary_zh": "研究结合冷冻电镜与AI支架揭示安第斯汉坦病毒结合细胞机制。",
-      "key_facts_zh": [
-        "安第斯病毒",
-        "冷冻电镜",
-        "AI"
+        "巴斯德研究所",
+        "抗病毒药",
+        "机制研究"
       ],
       "signal_strength": "medium"
     },
@@ -64,11 +52,11 @@
       "time": "2026-10-21T16:37:24.000Z",
       "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
       "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》发表新世界汉坦病毒识别原钙黏蛋白-1的结构基础研究。",
+      "summary_zh": "《自然》刊文揭示新世界汉坦病毒识别 PCDH1 受体的结构基础。",
       "key_facts_zh": [
-        "新世界汉坦病毒",
-        "结构研究",
-        "《自然》"
+        "自然期刊",
+        "受体结构",
+        "新世界病毒"
       ],
       "signal_strength": "medium"
     },
@@ -77,11 +65,11 @@
       "time": "2026-10-17T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 42): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报2026年第42周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 42 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "累计 1 例"
+        "年内 1 例"
       ],
       "signal_strength": "high"
     }
