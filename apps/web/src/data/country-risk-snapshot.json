@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-30T12:05:06.416325+00:00",
-  "date": "2026-10-30",
+  "__generated_at": "2026-10-30T21:55:02.510944+00:00",
+  "date": "2026-10-31",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -261,19 +261,20 @@
       "stale": false,
       "signalCount30d": 1,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-10-20T15:24:14+00:00"
+      "lastSignalAt": "2026-10-21T02:58:27+00:00"
     },
     "CL": {
       "iso2": "CL",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "Andes 型本土流行；南部国家公园、露营、自助木屋为高风险场景。",
+      "riskLevel": "watch",
+      "riskLevelZh": "关注",
+      "evidenceLevel": "signal",
+      "evidenceLevelZh": "报道线索",
+      "statusZh": "近 30 天有 1 条相关报道线索",
+      "riskSummaryZh": "近 30 天自动捕捉到 1 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
+      "signalCount30d": 1,
+      "signalCount7d": 0,
+      "lastSignalAt": "2026-10-13T16:29:28+00:00"
     },
     "BR": {
       "iso2": "BR",
