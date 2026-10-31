@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-10-31T11:39:01.319741+00:00",
+  "__generated_at": "2026-10-31T14:08:06.824889+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-10-31T11:38:58.126014+00:00",
+  "last_fetched": "2026-10-31T14:08:06.161198+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-10-27T11:12:36.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那、佐治亚州监测返美邮轮乘客。",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测返美的邮轮乘客。",
       "key_facts_zh": [
         "美国",
         "邮轮",
@@ -26,11 +26,11 @@
       "time": "2026-10-26T10:58:15.000Z",
       "title_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs - Institut Pasteur",
       "body_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs Institut Pasteur",
-      "summary_zh": "法国巴斯德研究所揭示安第斯汉坦病毒附着人体细胞机制。",
+      "summary_zh": "法国巴斯德研究所揭示安第斯汉坦病毒附着人体细胞的机制。",
       "key_facts_zh": [
         "法国",
         "巴斯德研究所",
-        "抗病毒研究"
+        "抗病毒"
       ],
       "signal_strength": "medium"
     },
@@ -39,10 +39,10 @@
       "time": "2026-10-21T07:00:00.000Z",
       "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
       "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》发表新世界汉坦病毒识别受体结构基础研究。",
+      "summary_zh": "《自然》发表新世界汉坦病毒识别 PCDH1 的结构基础研究。",
       "key_facts_zh": [
-        "自然期刊",
-        "新世界病毒",
+        "自然",
+        "汉坦病毒",
         "结构研究"
       ],
       "signal_strength": "medium"
@@ -52,11 +52,11 @@
       "time": "2026-10-17T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 42): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第 42 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 42 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "累计 1 例"
+        "年内 1 例"
       ],
       "signal_strength": "high"
     }
