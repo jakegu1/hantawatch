@@ -13117,6 +13117,20 @@
         "source_url": "",
         "time": "2026-10-28T20:16:24.000Z"
       }
+    ],
+    "rt-314a72a3edfffc1c": [
+      {
+        "iso2": "US",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-10-31",
+        "confidence": "low",
+        "reasoning_zh": "报道仅提及美国加州开展汉坦病毒测序追踪，未给出任何新增或累计病例数字",
+        "update_id": "rt-314a72a3edfffc1c",
+        "source_url": "",
+        "time": "2026-10-31T04:01:11.000Z"
+      }
     ]
   }
 }
