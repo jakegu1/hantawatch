@@ -13173,6 +13173,20 @@
         "source_url": "",
         "time": "2026-11-03T02:05:10.000Z"
       }
+    ],
+    "rt-921edcfe87ebae41": [
+      {
+        "iso2": "RU",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-03",
+        "confidence": "low",
+        "reasoning_zh": "仅称俄罗斯出现汉坦病毒疫情，未给出具体数字，无法计算新增",
+        "update_id": "rt-921edcfe87ebae41",
+        "source_url": "",
+        "time": "2026-11-03T14:57:55.000Z"
+      }
     ]
   }
 }
