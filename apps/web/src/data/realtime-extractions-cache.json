@@ -13131,6 +13131,34 @@
         "source_url": "",
         "time": "2026-10-31T04:01:11.000Z"
       }
+    ],
+    "rt-6446969dca84b2de": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-02",
+        "confidence": "low",
+        "reasoning_zh": "WHO总干事呼吁完成大流行条约，未涉及具体国家或新增病例数字",
+        "update_id": "rt-6446969dca84b2de",
+        "source_url": "",
+        "time": "2026-11-02T17:24:45.000Z"
+      }
+    ],
+    "rt-109a7523098d7a3b": [
+      {
+        "iso2": "BR",
+        "delta_confirmed": 4,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-02",
+        "confidence": "medium",
+        "reasoning_zh": "巴西圣保罗州今年累计报告4例汉坦病毒感染，报道未明确为新增，按累计处理",
+        "update_id": "rt-109a7523098d7a3b",
+        "source_url": "",
+        "time": "2026-11-02T16:48:37.000Z"
+      }
     ]
   }
 }
