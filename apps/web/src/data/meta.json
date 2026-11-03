@@ -18,11 +18,11 @@
         {
           "query": "汉坦病毒",
           "hl": "zh-CN",
-          "fetched": 100,
-          "blocked": 0,
-          "no_signal": 16,
+          "fetched": 36,
+          "blocked": 1,
+          "no_signal": 12,
           "duplicate": 0,
-          "non_authoritative": 5,
+          "non_authoritative": 8,
           "kept": 4,
           "ok": true
         }
@@ -35,8 +35,8 @@
       "checkedAt": "2026-11-03T13:34:05.955602+00:00"
     },
     "surveillance_leads": {
-      "entries": 0,
-      "ok": false
+      "entries": 1,
+      "ok": true
     },
     "feeds_light_run": {
       "ok": true,
