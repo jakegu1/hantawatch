@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-04T08:23:01.754537+00:00",
+  "__generated_at": "2026-11-04T13:44:02.246991+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-04T08:23:00.851875+00:00",
+  "last_fetched": "2026-11-04T13:43:58.430175+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-c6dd84ec1bbefffc",
+      "time": "2026-11-04T05:12:25.000Z",
+      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致 3 人死亡。",
+      "key_facts_zh": [
+        "邮轮",
+        "3 人死亡",
+        "疑似暴发"
+      ],
+      "signal_strength": "high"
+    },
     {
       "id": "rt-921edcfe87ebae41",
       "time": "2026-11-03T14:57:55.000Z",
@@ -16,30 +29,17 @@
       "summary_zh": "俄罗斯当地媒体报道该国出现汉坦病毒疫情。",
       "key_facts_zh": [
         "俄罗斯",
-        "疫情暴发",
+        "疫情",
         "当地媒体"
       ],
       "signal_strength": "medium"
-    },
-    {
-      "id": "rt-75d79d6c1fc6394e",
-      "time": "2026-11-03T02:05:10.000Z",
-      "title_en": "An outbreak of \"mouse fever\" has been recorded in Russia; more than 1,500 people have fallen ill in five regions - Українські Національні Новини (УНН)",
-      "body_en": "An outbreak of \"mouse fever\" has been recorded in Russia; more than 1,500 people have fallen ill in five regions Українські Національні Новини (УНН)",
-      "summary_zh": "俄罗斯五地区逾1500人感染「鼠热」。",
-      "key_facts_zh": [
-        "俄罗斯",
-        "超1500例",
-        "五地区"
-      ],
-      "signal_strength": "high"
     },
     {
       "id": "rt-593ba1e04b9108ca",
       "time": "2026-11-02T18:45:14.000Z",
       "title_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US - ABC News - Breaking News, Latest News and Videos",
       "body_en": "Officials in Arizona, Georgia monitoring some hantavirus cruise ship passengers who have returned to US ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "美国亚利桑那、佐治亚州监测返美邮轮乘客。",
+      "summary_zh": "美国亚利桑那州和佐治亚州监测已返美的邮轮乘客。",
       "key_facts_zh": [
         "美国",
         "邮轮乘客",
@@ -52,7 +52,7 @@
       "time": "2026-11-02T16:48:37.000Z",
       "title_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year - Outbreak News Today",
       "body_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year Outbreak News Today",
-      "summary_zh": "巴西圣保罗州今年报告4例汉坦病毒感染。",
+      "summary_zh": "巴西圣保罗州今年报告 4 例汉坦病毒感染病例。",
       "key_facts_zh": [
         "巴西",
         "圣保罗",
@@ -61,41 +61,40 @@
       "signal_strength": "high"
     },
     {
-      "id": "rt-c6dd84ec1bbefffc",
-      "time": "2026-11-02T16:48:28.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "一邮轮疑暴发汉坦病毒，3人死亡。",
+      "id": "rt-314a72a3edfffc1c",
+      "time": "2026-10-31T04:01:11.000Z",
+      "title_en": "Tracking Hantavirus Through Sequencing - Infectious Disease Special Edition",
+      "body_en": "Tracking Hantavirus Through Sequencing Infectious Disease Special Edition",
+      "summary_zh": "报道介绍通过基因测序追踪汉坦病毒的技术路径。",
       "key_facts_zh": [
-        "邮轮",
-        "3 例死亡",
-        "疑似暴发"
+        "基因测序",
+        "汉坦病毒",
+        "追踪"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-3400b6fc8cd907d2",
       "time": "2026-10-28T11:55:59.000Z",
       "title_en": "Cryo-EM reveals how Andes hantavirus grips its human cell receptor - Bioengineer.org",
       "body_en": "Cryo-EM reveals how Andes hantavirus grips its human cell receptor Bioengineer.org",
-      "summary_zh": "研究用冷冻电镜揭示安第斯汉坦病毒结合受体机制。",
+      "summary_zh": "研究用冷冻电镜揭示安第斯汉坦病毒结合人类受体的机制。",
       "key_facts_zh": [
         "安第斯病毒",
-        "受体研究",
-        "冷冻电镜"
+        "冷冻电镜",
+        "受体"
       ],
       "signal_strength": "medium"
     },
     {
-      "id": "rt-d7644941aa37a546",
-      "time": "2026-10-21T07:00:00.000Z",
-      "title_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses - Nature",
-      "body_en": "Structural basis for protocadherin-1 recognition by New World hantaviruses Nature",
-      "summary_zh": "《自然》刊发新世界汉坦病毒识别原钙黏蛋白-1的结构基础研究。",
+      "id": "rt-80d298f4ed76d036",
+      "time": "2026-10-23T07:00:00.000Z",
+      "title_en": "Andes hantavirus has a secret pocket - Chemical & Engineering News",
+      "body_en": "Andes hantavirus has a secret pocket Chemical & Engineering News",
+      "summary_zh": "研究报道安第斯汉坦病毒存在一个隐秘结构口袋。",
       "key_facts_zh": [
-        "新世界汉坦病毒",
-        "结构研究",
-        "自然期刊"
+        "安第斯病毒",
+        "结构研究"
       ],
       "signal_strength": "medium"
     },
@@ -104,7 +103,7 @@
       "time": "2026-10-17T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 42): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 42 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 42 周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
