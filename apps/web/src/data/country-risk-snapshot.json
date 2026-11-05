@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-04T23:10:14.033173+00:00",
+  "__generated_at": "2026-11-05T04:58:26.378756+00:00",
   "date": "2026-11-05",
   "windowDays": 90,
   "freshnessWarningHours": 72,
@@ -251,18 +251,6 @@
     },
     "AR": {
       "iso2": "AR",
-      "riskLevel": "baseline",
-      "riskLevelZh": "基线",
-      "evidenceLevel": "baseline",
-      "evidenceLevelZh": "流行基线",
-      "statusZh": "仅有流行病学基线",
-      "riskSummaryZh": "Andes 型本土流行高致命且人传人；避免巴塔哥尼亚荒野独行、不进入弃用木屋。MV Hondius 邮轮始发地。",
-      "stale": false,
-      "signalCount30d": 0,
-      "signalCount7d": 0
-    },
-    "CL": {
-      "iso2": "CL",
       "riskLevel": "watch",
       "riskLevelZh": "关注",
       "evidenceLevel": "signal",
@@ -272,7 +260,19 @@
       "stale": false,
       "signalCount30d": 1,
       "signalCount7d": 1,
-      "lastSignalAt": "2026-11-02T15:23:00+00:00"
+      "lastSignalAt": "2026-10-30T17:52:39+00:00"
+    },
+    "CL": {
+      "iso2": "CL",
+      "riskLevel": "baseline",
+      "riskLevelZh": "基线",
+      "evidenceLevel": "baseline",
+      "evidenceLevelZh": "流行基线",
+      "statusZh": "仅有流行病学基线",
+      "riskSummaryZh": "Andes 型本土流行；南部国家公园、露营、自助木屋为高风险场景。",
+      "stale": false,
+      "signalCount30d": 0,
+      "signalCount7d": 0
     },
     "BR": {
       "iso2": "BR",
