@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-06T13:42:05.815739+00:00",
+  "__generated_at": "2026-11-06T19:47:02.411603+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-06T13:42:00.221345+00:00",
+  "last_fetched": "2026-11-06T19:47:01.595838+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,22 +13,10 @@
       "time": "2026-11-06T10:56:31.000Z",
       "title_en": "EU labs bolster rare virus detection amid soaring epidemic risks - The Brussels Times",
       "body_en": "EU labs bolster rare virus detection amid soaring epidemic risks The Brussels Times",
-      "summary_zh": "欧盟实验室加强罕见病毒检测能力，以应对疫情风险上升。",
+      "summary_zh": "欧盟实验室加强罕见病毒检测能力。",
       "key_facts_zh": [
         "欧盟",
         "检测能力"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-88fd615a2ef10a57",
-      "time": "2026-11-05T12:02:04.000Z",
-      "title_en": "Study Identifies How Antibodies Block Hantavirus Entry - EMJ",
-      "body_en": "Study Identifies How Antibodies Block Hantavirus Entry EMJ",
-      "summary_zh": "研究揭示抗体如何阻断汉坦病毒进入细胞。",
-      "key_facts_zh": [
-        "抗体研究",
-        "病毒入侵"
       ],
       "signal_strength": "medium"
     },
@@ -37,7 +25,7 @@
       "time": "2026-11-03T14:57:55.000Z",
       "title_en": "Russia records hantavirus outbreak: Local media - Outbreak News Today",
       "body_en": "Russia records hantavirus outbreak: Local media Outbreak News Today",
-      "summary_zh": "俄罗斯当地媒体报道该国出现汉坦病毒疫情。",
+      "summary_zh": "俄罗斯当地媒体报告汉坦病毒疫情。",
       "key_facts_zh": [
         "俄罗斯",
         "疫情"
@@ -49,7 +37,7 @@
       "time": "2026-11-02T16:48:37.000Z",
       "title_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year - Outbreak News Today",
       "body_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year Outbreak News Today",
-      "summary_zh": "巴西圣保罗州今年累计报告 4 例汉坦病毒感染。",
+      "summary_zh": "巴西圣保罗州今年报告 4 例汉坦病毒感染。",
       "key_facts_zh": [
         "巴西",
         "圣保罗",
@@ -62,7 +50,7 @@
       "time": "2026-10-24T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 43): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 第 43 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：本周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
