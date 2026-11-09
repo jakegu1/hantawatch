@@ -13243,6 +13243,34 @@
         "source_url": "",
         "time": "2026-11-06T23:30:00.000Z"
       }
+    ],
+    "rt-487fc814a9699b13": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-09",
+        "confidence": "low",
+        "reasoning_zh": "邮轮汉坦病毒疫情报道称未发现传播、接触者风险低，无具体国家及新增数字",
+        "update_id": "rt-487fc814a9699b13",
+        "source_url": "",
+        "time": "2026-11-09T07:54:00.000Z"
+      }
+    ],
+    "rt-2e3d16f6be5164c1": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-06",
+        "confidence": "low",
+        "reasoning_zh": "安第斯病毒蛋白氨基酸变异的基础研究报道，无疫情数字与国家信息",
+        "update_id": "rt-2e3d16f6be5164c1",
+        "source_url": "",
+        "time": "2026-11-06T21:30:00.000Z"
+      }
     ]
   }
 }
