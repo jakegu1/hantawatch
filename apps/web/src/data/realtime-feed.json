@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-09T15:04:03.037341+00:00",
+  "__generated_at": "2026-11-09T21:14:07.240082+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-09T15:03:56.904530+00:00",
+  "last_fetched": "2026-11-09T21:14:06.553833+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -19,7 +19,7 @@
         "未扩散",
         "低风险"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-c6dd84ec1bbefffc",
@@ -29,7 +29,7 @@
       "summary_zh": "一艘邮轮疑似暴发汉坦病毒疫情，已致 3 人死亡。",
       "key_facts_zh": [
         "邮轮",
-        "死亡 3 例",
+        "3 人死亡",
         "疑似暴发"
       ],
       "signal_strength": "high"
@@ -47,27 +47,14 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-201a5b4643c76dee",
-      "time": "2026-11-06T10:56:31.000Z",
-      "title_en": "EU labs bolster rare virus detection amid soaring epidemic risks - The Brussels Times",
-      "body_en": "EU labs bolster rare virus detection amid soaring epidemic risks The Brussels Times",
-      "summary_zh": "欧盟实验室加强罕见病毒检测，以应对上升的疫情风险。",
-      "key_facts_zh": [
-        "欧盟",
-        "检测能力",
-        "疫情风险"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-88fd615a2ef10a57",
       "time": "2026-11-05T12:02:04.000Z",
       "title_en": "Study Identifies How Antibodies Block Hantavirus Entry - EMJ",
       "body_en": "Study Identifies How Antibodies Block Hantavirus Entry EMJ",
-      "summary_zh": "研究揭示抗体如何阻断汉坦病毒进入细胞。",
+      "summary_zh": "研究揭示抗体如何阻断汉坦病毒入侵细胞。",
       "key_facts_zh": [
         "抗体研究",
-        "汉坦病毒"
+        "病毒入侵"
       ],
       "signal_strength": "medium"
     },
@@ -76,10 +63,10 @@
       "time": "2026-11-03T02:05:10.000Z",
       "title_en": "An outbreak of \"mouse fever\" has been recorded in Russia; more than 1,500 people have fallen ill in five regions - Українські Національні Новини (УНН)",
       "body_en": "An outbreak of \"mouse fever\" has been recorded in Russia; more than 1,500 people have fallen ill in five regions Українські Національні Новини (УНН)",
-      "summary_zh": "俄罗斯五个地区暴发“鼠热”，逾 1500 人患病。",
+      "summary_zh": "俄罗斯五个地区暴发「鼠热」，逾 1500 人患病。",
       "key_facts_zh": [
         "俄罗斯",
-        "超 1500 例",
+        "1500 人患病",
         "鼠热"
       ],
       "signal_strength": "high"
@@ -89,25 +76,13 @@
       "time": "2026-10-24T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 43): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 43 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 43 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
         "年内 1 例"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-80d298f4ed76d036",
-      "time": "2026-10-23T07:00:00.000Z",
-      "title_en": "Andes hantavirus has a secret pocket - Chemical & Engineering News",
-      "body_en": "Andes hantavirus has a secret pocket Chemical & Engineering News",
-      "summary_zh": "研究揭示安第斯汉坦病毒存在一个“秘密口袋”结构。",
-      "key_facts_zh": [
-        "安第斯病毒",
-        "结构研究"
-      ],
-      "signal_strength": "medium"
     }
   ]
 }
