@@ -1,33 +1,33 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-09T15:04:03.035424+00:00",
-  "date": "2026-11-09",
+  "__generated_at": "2026-11-10T01:08:36.062768+00:00",
+  "date": "2026-11-10",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "globalNewCases": 0,
   "globalCasesTotal": 11,
   "domesticBaselineStatus": "normal",
   "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "daysSinceLastIntlAlert": 130,
-  "whoDaysSinceOfficialUpdate": 130,
+  "daysSinceLastIntlAlert": 131,
+  "whoDaysSinceOfficialUpdate": 131,
   "cluesLast24h": 6,
-  "headline24h": "福布斯报道邮轮汉坦病毒疫情未发现扩散，接触者风险低。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-  "latestChange": "11月9日福布斯报道邮轮疫情未发现扩散、接触者风险低；11月8日有报道称疑似暴发致3人死亡，属早期线索；中国大陆无相关病例。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关接触者仍在随访，美国 CDC 通报的安第斯病毒线索待官方复核，国内 HFRS 基线未变。",
-  "riskJudgment": "普通公众风险低；安第斯型人际传播仅见于密切接触场景，国内无相关病例，无需特别防护。",
-  "newCases": "无新增官方确认病例；11月8日邮轮疑似暴发报道为待官方确认的监测线索。",
+  "latestChange": "11月9日福布斯报道邮轮疫情未发现扩散、接触者风险低；11月8日另有报道称疑似暴发致3人死亡，属待官方确认的监测线索；中国大陆无相关病例。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；西班牙、法国确诊输入仍在随访，美国、英国等多国接触者监测持续，邮轮相关报道待 WHO 复核，国内 HFRS 基线未变。",
+  "riskJudgment": "中国大陆无相关病例，普通公众暴露风险低；安第斯型人际传播有限，无需特别防护，关注后续官方复核即可。",
+  "newCases": "无新增官方确认病例；11月8日邮轮疑似暴发致3人死亡报道为待官方确认的监测线索。",
   "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测，新闻线索仅作参考。",
-  "shareLine": "WHO 7/2公布累计13例（130天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+  "shareLine": "WHO 7/2公布累计13例（131天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
+    "WHO 复核进展",
     "邮轮接触者随访",
-    "美国CDC线索复核",
-    "国内HFRS基线"
+    "国内 HFRS 基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
-    "法国卫生部/TF1 Info",
-    "ArcGIS ANDV Dashboard"
+    "西班牙卫生部/新华 6/5",
+    "法国卫生部/TF1 6/6"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"
