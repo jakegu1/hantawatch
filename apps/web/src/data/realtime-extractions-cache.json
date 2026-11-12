@@ -13299,6 +13299,48 @@
         "source_url": "",
         "time": "2026-11-11T19:07:49.000Z"
       }
+    ],
+    "rt-9c0569355dc27c9a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-12",
+        "confidence": "low",
+        "reasoning_zh": "仅报道科学家通过基因组研究安第斯汉坦病毒疫情，未提及具体国家或新增病例数字",
+        "update_id": "rt-9c0569355dc27c9a",
+        "source_url": "",
+        "time": "2026-11-12T19:03:12.000Z"
+      }
+    ],
+    "rt-ca6844f6d01ff898": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-12",
+        "confidence": "low",
+        "reasoning_zh": "仅报道邮轮上汉坦病毒研究新见解，未提及具体国家或新增病例数字",
+        "update_id": "rt-ca6844f6d01ff898",
+        "source_url": "",
+        "time": "2026-11-12T19:01:50.000Z"
+      }
+    ],
+    "rt-416e3dba8632b8e7": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-10",
+        "confidence": "low",
+        "reasoning_zh": "仅泛论汉坦病毒病例凸显气候驱动的人畜共患溢出风险，无具体国家或新增数字",
+        "update_id": "rt-416e3dba8632b8e7",
+        "source_url": "",
+        "time": "2026-11-10T22:35:17.000Z"
+      }
     ]
   }
 }
