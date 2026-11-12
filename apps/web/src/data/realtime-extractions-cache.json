@@ -13271,6 +13271,20 @@
         "source_url": "",
         "time": "2026-11-06T21:30:00.000Z"
       }
+    ],
+    "rt-fe7f1295e424f993": [
+      {
+        "iso2": "CN",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-11",
+        "confidence": "low",
+        "reasoning_zh": "研究报道中国大陆历史疫苗与流行株中和抗体差异，无新增病例数据",
+        "update_id": "rt-fe7f1295e424f993",
+        "source_url": "",
+        "time": "2026-11-11T22:52:54.000Z"
+      }
     ]
   }
 }
