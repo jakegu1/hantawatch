@@ -1,6 +1,6 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-13T04:55:58.618031+00:00",
+  "__generated_at": "2026-11-13T13:52:47.536054+00:00",
   "date": "2026-11-13",
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
@@ -11,23 +11,23 @@
   "daysSinceLastIntlAlert": 134,
   "whoDaysSinceOfficialUpdate": 134,
   "cluesLast24h": 5,
-  "headline24h": "荷兰籍邮轮 M/V Hondius 上安第斯型汉坦病毒确认人传人。",
+  "headline24h": "",
   "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
   "latestChange": "11月12日两项基因组研究分析邮轮安第斯病毒；11月11日研究比较疫苗与中国流行株中和抗体；中国大陆无相关病例。",
-  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关接触者仍在随访，多国维持监测，待 WHO 复核。国内 HFRS 基线未变。",
-  "riskJudgment": "普通公众风险低；安第斯型人际传播仅见于邮轮等密闭环境，中国大陆无相关病例，无需特别防护。",
+  "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关接触者仍在随访，基因组研究结论待 WHO 复核，国内 HFRS 基线未变。",
+  "riskJudgment": "普通公众风险低；安第斯型人传人仅见于邮轮密闭环境，中国大陆无相关病例，无需特别防护。",
   "newCases": "无新增官方确认病例；11月12日仅有基因组研究线索，非病例报告。",
-  "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测。",
+  "sourceSummary": "主要依据 WHO DON、各国卫生部公告与 ArcGIS 专业监测",
   "shareLine": "WHO 7/2公布累计13例（134天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
   "watchFocus": [
     "邮轮接触者随访",
-    "WHO 数据复核",
+    "基因组研究结论",
     "国内 HFRS 基线"
   ],
   "evidence": [
     "WHO DON 2026-DON611",
     "法国卫生部/TF1 Info",
-    "ArcGIS ANDV 监测"
+    "ArcGIS ANDV Dashboard"
   ],
   "_guardrail_warnings": [
     "shareline_pending_sanitized: no pending confirmed deltas"
