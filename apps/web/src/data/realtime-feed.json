@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-13T16:56:24.314781+00:00",
+  "__generated_at": "2026-11-13T22:20:52.316352+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-13T16:56:23.474850+00:00",
+  "last_fetched": "2026-11-13T22:20:51.188670+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,7 +13,7 @@
       "time": "2026-11-13T15:20:04.000Z",
       "title_en": "Human-to-human hantavirus spread confirmed on cruise ship - Medical Xpress",
       "body_en": "Human-to-human hantavirus spread confirmed on cruise ship Medical Xpress",
-      "summary_zh": "邮轮上确认汉坦病毒人际传播。",
+      "summary_zh": "研究确认邮轮上出现汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
         "人际传播"
@@ -23,12 +23,12 @@
     {
       "id": "rt-22e5683c670f4a20",
       "time": "2026-11-13T12:38:09.000Z",
-      "title_en": "Genome Studies Examine 2026 Andes Hantavirus Cruise Outbreak - Nature World News",
-      "body_en": "Genome Studies Examine 2026 Andes Hantavirus Cruise Outbreak Nature World News",
-      "summary_zh": "基因组研究分析2026年安第斯汉坦病毒邮轮疫情。",
+      "title_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
+      "body_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship Nature World News",
+      "summary_zh": "新基因组研究追溯邮轮上安第斯汉坦病毒传播。",
       "key_facts_zh": [
         "基因组研究",
-        "邮轮疫情"
+        "安第斯病毒"
       ],
       "signal_strength": "medium"
     },
@@ -49,10 +49,10 @@
       "time": "2026-11-12T19:03:12.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "科学家通过基因组研究安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
       "key_facts_zh": [
-        "基因组",
-        "安第斯病毒"
+        "安第斯病毒",
+        "基因组"
       ],
       "signal_strength": "medium"
     },
@@ -61,22 +61,10 @@
       "time": "2026-11-12T19:01:50.000Z",
       "title_en": "Hantavirus on a Cruise Ship: Study Provides New Insights - blue News",
       "body_en": "Hantavirus on a Cruise Ship: Study Provides New Insights blue News",
-      "summary_zh": "研究就邮轮汉坦病毒疫情提供新见解。",
+      "summary_zh": "新研究揭示邮轮汉坦病毒疫情细节。",
       "key_facts_zh": [
         "邮轮",
         "研究"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-487fc814a9699b13",
-      "time": "2026-11-09T07:54:00.000Z",
-      "title_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts - Forbes",
-      "body_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts Forbes",
-      "summary_zh": "邮轮汉坦疫情未检出传播，接触者风险低。",
-      "key_facts_zh": [
-        "邮轮",
-        "低风险"
       ],
       "signal_strength": "medium"
     },
@@ -85,11 +73,11 @@
       "time": "2026-10-31T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 44): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报第44周汉坦病毒感染新增0例，年内累计1例。",
+      "summary_zh": "美国 CDC 周报：本周新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     }

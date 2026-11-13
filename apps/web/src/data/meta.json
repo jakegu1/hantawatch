@@ -12,18 +12,18 @@
       "ok": false
     },
     "news_leads": {
-      "entries": 4,
+      "entries": 5,
       "ok": true,
       "perQuery": [
         {
           "query": "汉坦病毒",
           "hl": "zh-CN",
-          "fetched": 34,
+          "fetched": 31,
           "blocked": 1,
-          "no_signal": 11,
+          "no_signal": 10,
           "duplicate": 0,
           "non_authoritative": 9,
-          "kept": 4,
+          "kept": 5,
           "ok": true
         }
       ]
