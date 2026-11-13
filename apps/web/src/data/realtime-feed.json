@@ -1,22 +1,23 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-13T04:55:58.620355+00:00",
+  "__generated_at": "2026-11-13T08:57:10.174214+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-13T04:55:53.942815+00:00",
+  "last_fetched": "2026-11-13T08:57:09.190122+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-6ba38801a579030f",
-      "time": "2026-11-12T19:56:00.000Z",
-      "title_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius - Mirage News",
-      "body_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius Mirage News",
-      "summary_zh": "邮轮 M/V Hondius 上确认汉坦病毒人际传播。",
+      "id": "rt-969d9bfbc3acc12e",
+      "time": "2026-11-13T08:05:00.000Z",
+      "title_en": "Hantavirus on Board the M/V Hondius: Human-to-Human Transmission Confirmed | Newswise - Newswise",
+      "body_en": "Hantavirus on Board the M/V Hondius: Human-to-Human Transmission Confirmed | Newswise Newswise",
+      "summary_zh": "荷兰籍邮轮 M/V Hondius 上安第斯型汉坦病毒确认人传人。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播"
+        "人传人",
+        "安第斯型"
       ],
       "signal_strength": "high"
     },
@@ -25,10 +26,11 @@
       "time": "2026-11-12T19:03:12.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组分析安第斯型汉坦病毒疫情。",
       "key_facts_zh": [
-        "安第斯病毒",
-        "基因组分析"
+        "基因组分析",
+        "安第斯型",
+        "疫情"
       ],
       "signal_strength": "medium"
     },
@@ -37,35 +39,11 @@
       "time": "2026-11-12T19:01:50.000Z",
       "title_en": "Hantavirus on a Cruise Ship: Study Provides New Insights - blue News",
       "body_en": "Hantavirus on a Cruise Ship: Study Provides New Insights blue News",
-      "summary_zh": "研究就邮轮上的汉坦病毒提供新见解。",
+      "summary_zh": "研究就邮轮上汉坦病毒传播提供新见解。",
       "key_facts_zh": [
         "邮轮",
-        "研究"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-fe7f1295e424f993",
-      "time": "2026-11-11T22:52:54.000Z",
-      "title_en": "Hantavirus Neutralizing Antibodies Differ Between Historical Vaccine and Circulating Chinese Strains - Bioengineer.org",
-      "body_en": "Hantavirus Neutralizing Antibodies Differ Between Historical Vaccine and Circulating Chinese Strains Bioengineer.org",
-      "summary_zh": "历史疫苗与流行中国株的中和抗体存在差异。",
-      "key_facts_zh": [
-        "中国",
-        "中和抗体",
-        "疫苗"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-416e3dba8632b8e7",
-      "time": "2026-11-10T22:35:17.000Z",
-      "title_en": "Hantavirus Cases Highlight Climate-Driven Zoonotic Spillover Risks - Bioengineer.org",
-      "body_en": "Hantavirus Cases Highlight Climate-Driven Zoonotic Spillover Risks Bioengineer.org",
-      "summary_zh": "汉坦病毒病例凸显气候驱动的动物源溢出风险。",
-      "key_facts_zh": [
-        "气候因素",
-        "溢出风险"
+        "研究",
+        "传播"
       ],
       "signal_strength": "medium"
     },
@@ -74,20 +52,20 @@
       "time": "2026-11-09T07:54:00.000Z",
       "title_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts - Forbes",
       "body_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts Forbes",
-      "summary_zh": "邮轮汉坦病毒疫情未检出传播，接触者风险低。",
+      "summary_zh": "福布斯称邮轮汉坦病毒疫情未检出扩散，接触者风险低。",
       "key_facts_zh": [
         "邮轮",
-        "未检出传播",
+        "未扩散",
         "低风险"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-10-31T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 44): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报 2026 年第 44 周汉坦病毒感染新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 44 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
