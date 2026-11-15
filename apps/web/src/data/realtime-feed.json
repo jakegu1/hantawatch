@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-15T08:41:01.326298+00:00",
+  "__generated_at": "2026-11-15T13:24:12.085738+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-15T08:41:00.632133+00:00",
+  "last_fetched": "2026-11-15T13:24:07.303960+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -13,13 +13,13 @@
       "time": "2026-11-13T20:37:02.000Z",
       "title_en": "Cruise Ship Outbreak Provides Further Evidence of Andes Virus Human Transmission - Bioengineer.org",
       "body_en": "Cruise Ship Outbreak Provides Further Evidence of Andes Virus Human Transmission Bioengineer.org",
-      "summary_zh": "邮轮疫情为安第斯病毒人际传播提供进一步证据。",
+      "summary_zh": "邮轮疫情为安第斯病毒人际传播提供新证据。",
       "key_facts_zh": [
         "邮轮",
         "安第斯病毒",
         "人际传播"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-d25a9c9fe32543c2",
@@ -39,7 +39,7 @@
       "time": "2026-11-13T12:38:09.000Z",
       "title_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
       "body_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship Nature World News",
-      "summary_zh": "新基因组研究重探邮轮上安第斯汉坦病毒传播。",
+      "summary_zh": "基因组研究重探邮轮上安第斯汉坦病毒传播。",
       "key_facts_zh": [
         "基因组研究",
         "邮轮",
@@ -55,8 +55,8 @@
       "summary_zh": "M/V Hondius 号邮轮确认汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播",
-        "Hondius"
+        "Hondius",
+        "人际传播"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +78,24 @@
       "time": "2026-11-12T19:00:00.000Z",
       "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
       "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
-      "summary_zh": "两项研究详述 Hondius 号邮轮疫情传播并溯源巴塔哥尼亚。",
+      "summary_zh": "两项研究详述 Hondius 号疫情传播并溯源巴塔哥尼亚。",
       "key_facts_zh": [
         "Hondius",
         "巴塔哥尼亚",
-        "基因谱系"
+        "基因溯源"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-fe7f1295e424f993",
+      "time": "2026-11-11T22:52:54.000Z",
+      "title_en": "Hantavirus Neutralizing Antibodies Differ Between Historical Vaccine and Circulating Chinese Strains - Bioengineer.org",
+      "body_en": "Hantavirus Neutralizing Antibodies Differ Between Historical Vaccine and Circulating Chinese Strains Bioengineer.org",
+      "summary_zh": "历史疫苗与流行中国株的中和抗体存在差异。",
+      "key_facts_zh": [
+        "中和抗体",
+        "疫苗",
+        "中国"
       ],
       "signal_strength": "medium"
     },
