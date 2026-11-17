@@ -1,13 +1,22 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-16T17:44:09.702435+00:00",
+  "__generated_at": "2026-11-17T01:22:40.603250+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-16T17:44:09.077233+00:00",
+  "last_fetched": "2026-11-17T01:22:39.945653+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-e8c5b1d1fb2b1905",
+      "time": "2026-11-16T22:38:15.000Z",
+      "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - respiratory-therapy.com",
+      "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship respiratory-therapy.com",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-d25a9c9fe32543c2",
       "time": "2026-11-13T15:20:04.000Z",
@@ -27,10 +36,28 @@
       "signal_strength": "medium"
     },
     {
+      "id": "rt-6ba38801a579030f",
+      "time": "2026-11-12T19:56:00.000Z",
+      "title_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius - Mirage News",
+      "body_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius Mirage News",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-9c0569355dc27c9a",
       "time": "2026-11-12T19:03:12.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
+      "summary_zh": "[翻译失败 · 请参考英文原文]",
+      "key_facts_zh": [],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-aead7d1ebdaf40f0",
+      "time": "2026-11-12T19:00:00.000Z",
+      "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
+      "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
       "summary_zh": "[翻译失败 · 请参考英文原文]",
       "key_facts_zh": [],
       "signal_strength": "medium"
