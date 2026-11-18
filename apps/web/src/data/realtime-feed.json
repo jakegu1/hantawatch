@@ -1,13 +1,39 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-18T01:29:06.167063+00:00",
+  "__generated_at": "2026-11-18T09:33:40.712937+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-18T01:29:05.567215+00:00",
+  "last_fetched": "2026-11-18T09:33:39.523072+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-3423ed7730857d4b",
+      "time": "2026-11-18T05:06:39.000Z",
+      "title_en": "GC MS wins Korean export approval for 2 hantavirus test kits - Korea Biomedical Review",
+      "body_en": "GC MS wins Korean export approval for 2 hantavirus test kits Korea Biomedical Review",
+      "summary_zh": "韩国 GC MS 两款汉坦病毒检测试剂盒获出口批准。",
+      "key_facts_zh": [
+        "韩国",
+        "检测试剂盒",
+        "出口批准"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-1661b0381bb889e4",
+      "time": "2026-11-18T01:27:06.000Z",
+      "title_en": "GC Green Cross M&S obtains export approval for hantavirus rapid and molecular diagnostic kits - 머니투데이",
+      "body_en": "GC Green Cross M&S obtains export approval for hantavirus rapid and molecular diagnostic kits 머니투데이",
+      "summary_zh": "韩国 GC Green Cross M&S 汉坦病毒快检与分子诊断试剂盒获出口批准。",
+      "key_facts_zh": [
+        "韩国",
+        "诊断试剂盒",
+        "出口批准"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-e8c5b1d1fb2b1905",
       "time": "2026-11-16T22:55:54.000Z",
@@ -16,43 +42,21 @@
       "summary_zh": "邮轮上确认汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播"
+        "人际传播",
+        "确诊"
       ],
       "signal_strength": "high"
-    },
-    {
-      "id": "rt-c6dd84ec1bbefffc",
-      "time": "2026-11-16T15:26:29.000Z",
-      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
-      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
-      "summary_zh": "邮轮疑似汉坦病毒暴发致 3 人死亡。",
-      "key_facts_zh": [
-        "邮轮",
-        "3 人死亡"
-      ],
-      "signal_strength": "high"
-    },
-    {
-      "id": "rt-4d95501c78ac9143",
-      "time": "2026-11-13T20:37:02.000Z",
-      "title_en": "Cruise Ship Outbreak Provides Further Evidence of Andes Virus Human Transmission - Bioengineer.org",
-      "body_en": "Cruise Ship Outbreak Provides Further Evidence of Andes Virus Human Transmission Bioengineer.org",
-      "summary_zh": "邮轮暴发为安第斯病毒人际传播再添证据。",
-      "key_facts_zh": [
-        "邮轮",
-        "安第斯病毒"
-      ],
-      "signal_strength": "medium"
     },
     {
       "id": "rt-d25a9c9fe32543c2",
       "time": "2026-11-13T15:20:04.000Z",
       "title_en": "Human-to-human hantavirus spread confirmed on cruise ship - Medical Xpress",
       "body_en": "Human-to-human hantavirus spread confirmed on cruise ship Medical Xpress",
-      "summary_zh": "邮轮上确认汉坦病毒人际传播。",
+      "summary_zh": "邮轮上确认汉坦病毒人传人。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播"
+        "人传人",
+        "确诊"
       ],
       "signal_strength": "high"
     },
@@ -61,25 +65,13 @@
       "time": "2026-11-13T12:38:09.000Z",
       "title_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
       "body_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship Nature World News",
-      "summary_zh": "新基因组研究重探邮轮安第斯病毒传播。",
-      "key_facts_zh": [
-        "基因组研究",
-        "邮轮"
-      ],
-      "signal_strength": "medium"
-    },
-    {
-      "id": "rt-6ba38801a579030f",
-      "time": "2026-11-12T19:56:00.000Z",
-      "title_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius - Mirage News",
-      "body_en": "Human-to-Human Hantavirus Spread Confirmed on M/V Hondius Mirage News",
-      "summary_zh": "邮轮洪迪厄斯号确认出现汉坦病毒人际传播。",
+      "summary_zh": "新基因组研究重探安第斯汉坦病毒在邮轮上的传播。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播",
-        "汉坦病毒"
+        "安第斯病毒",
+        "基因组研究"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9c0569355dc27c9a",
@@ -89,7 +81,8 @@
       "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
       "key_facts_zh": [
         "安第斯病毒",
-        "基因组分析"
+        "疫情",
+        "基因组"
       ],
       "signal_strength": "medium"
     },
@@ -98,11 +91,11 @@
       "time": "2026-11-12T19:00:00.000Z",
       "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
       "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
-      "summary_zh": "两项研究详述洪迪厄斯号疫情传播并溯源至巴塔哥尼亚。",
+      "summary_zh": "西班牙媒体报道两项研究解析洪迪厄斯号邮轮汉坦病毒传播及基因谱系。",
       "key_facts_zh": [
-        "洪迪厄斯号",
-        "巴塔哥尼亚",
-        "基因溯源"
+        "西班牙",
+        "邮轮",
+        "研究分析"
       ],
       "signal_strength": "medium"
     },
@@ -111,7 +104,7 @@
       "time": "2026-10-31T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 44): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 44 周汉坦病毒新增 0 例，累计 1 例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 44 周汉坦病毒感染新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
