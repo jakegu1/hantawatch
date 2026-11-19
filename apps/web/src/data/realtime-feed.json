@@ -1,19 +1,32 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-18T23:51:33.429618+00:00",
+  "__generated_at": "2026-11-19T00:52:44.721030+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-18T23:51:28.657104+00:00",
+  "last_fetched": "2026-11-19T00:52:43.955398+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-324c3e7a88a13615",
+      "time": "2026-11-18T20:28:39.000Z",
+      "title_en": "Analysis finds no definitive link between hantavirus that caused cruise ship outbreak and outbreak strain in Argentina - CIDRAP",
+      "body_en": "Analysis finds no definitive link between hantavirus that caused cruise ship outbreak and outbreak strain in Argentina CIDRAP",
+      "summary_zh": "分析称邮轮疫情汉坦病毒与阿根廷毒株无明确关联。",
+      "key_facts_zh": [
+        "阿根廷",
+        "邮轮",
+        "分析"
+      ],
+      "signal_strength": "medium"
+    },
+    {
       "id": "rt-3423ed7730857d4b",
       "time": "2026-11-18T05:06:39.000Z",
       "title_en": "GC MS wins Korean export approval for 2 hantavirus test kits - Korea Biomedical Review",
       "body_en": "GC MS wins Korean export approval for 2 hantavirus test kits Korea Biomedical Review",
-      "summary_zh": "韩国 GC MS 两款汉坦病毒检测试剂盒获出口批准。",
+      "summary_zh": "韩国 GC MS 两款汉坦病毒检测试剂获出口批准。",
       "key_facts_zh": [
         "韩国",
         "检测试剂",
@@ -26,10 +39,10 @@
       "time": "2026-11-16T22:55:54.000Z",
       "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - Respiratory Therapy",
       "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship Respiratory Therapy",
-      "summary_zh": "邮轮上确认出现汉坦病毒人传人。",
+      "summary_zh": "邮轮上确认汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
-        "人传人",
+        "人际传播",
         "确诊"
       ],
       "signal_strength": "high"
@@ -39,7 +52,7 @@
       "time": "2026-11-13T15:20:04.000Z",
       "title_en": "Human-to-human hantavirus spread confirmed on cruise ship - Medical Xpress",
       "body_en": "Human-to-human hantavirus spread confirmed on cruise ship Medical Xpress",
-      "summary_zh": "邮轮上确认汉坦病毒人传人传播。",
+      "summary_zh": "邮轮上确认汉坦病毒人传人。",
       "key_facts_zh": [
         "邮轮",
         "人传人",
@@ -52,11 +65,11 @@
       "time": "2026-11-13T12:38:09.000Z",
       "title_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
       "body_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship Nature World News",
-      "summary_zh": "新基因组研究重探邮轮上安第斯汉坦病毒传播。",
+      "summary_zh": "基因组研究重探邮轮上安第斯汉坦病毒传播。",
       "key_facts_zh": [
         "邮轮",
         "基因组",
-        "研究"
+        "安第斯"
       ],
       "signal_strength": "medium"
     },
@@ -65,9 +78,9 @@
       "time": "2026-11-12T19:03:12.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "科学家通过基因组分析邮轮安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组研究安第斯汉坦病毒疫情。",
       "key_facts_zh": [
-        "邮轮",
+        "安第斯",
         "基因组",
         "疫情"
       ],
@@ -91,11 +104,11 @@
       "time": "2026-11-07T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 45): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：第 45 周新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报第 45 周汉坦病毒感染新增 0 例，年内 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "累计 1 例"
+        "年内 1 例"
       ],
       "signal_strength": "high"
     }
