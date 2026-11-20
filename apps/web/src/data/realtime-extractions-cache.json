@@ -13495,6 +13495,62 @@
         "source_url": "",
         "time": "2026-11-19T21:35:43.000Z"
       }
+    ],
+    "rt-0b6e5e0bbcaaf4a2": [
+      {
+        "iso2": "SO",
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-20",
+        "confidence": "low",
+        "reasoning_zh": "索马里汉坦病毒监测与诊断缺口简报，无新增病例数字",
+        "update_id": "rt-0b6e5e0bbcaaf4a2",
+        "source_url": "",
+        "time": "2026-11-20T15:58:55.000Z"
+      }
+    ],
+    "rt-194d58edd52a3b8a": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-20",
+        "confidence": "low",
+        "reasoning_zh": "MV Hondius 船上汉坦病毒传播研究，无国家归属及新增数字",
+        "update_id": "rt-194d58edd52a3b8a",
+        "source_url": "",
+        "time": "2026-11-20T15:42:02.000Z"
+      }
+    ],
+    "rt-7c2ae3129162c272": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-20",
+        "confidence": "low",
+        "reasoning_zh": "病毒传播综述报道，无具体国家与新增病例数字",
+        "update_id": "rt-7c2ae3129162c272",
+        "source_url": "",
+        "time": "2026-11-20T09:57:17.000Z"
+      }
+    ],
+    "rt-ee220c05015bbc4e": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-17",
+        "confidence": "low",
+        "reasoning_zh": "安第斯病毒人际传播综述，未指明国家及新增数字",
+        "update_id": "rt-ee220c05015bbc4e",
+        "source_url": "",
+        "time": "2026-11-17T18:20:17.000Z"
+      }
     ]
   }
 }
