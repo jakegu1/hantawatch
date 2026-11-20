@@ -1,13 +1,25 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-20T07:56:42.038594+00:00",
+  "__generated_at": "2026-11-20T14:51:23.097157+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-20T07:56:41.269221+00:00",
+  "last_fetched": "2026-11-20T14:51:18.442137+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-c37d77f5cb5b0132",
+      "time": "2026-11-19T21:35:43.000Z",
+      "title_en": "German Pest Control Workers Show Low Antibody Levels Against Four Zoonotic Pathogens - Bioengineer.org",
+      "body_en": "German Pest Control Workers Show Low Antibody Levels Against Four Zoonotic Pathogens Bioengineer.org",
+      "summary_zh": "德国害虫防治人员四种人畜共患病抗体水平偏低。",
+      "key_facts_zh": [
+        "德国",
+        "抗体研究"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-324c3e7a88a13615",
       "time": "2026-11-18T20:28:39.000Z",
@@ -22,27 +34,28 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-22e5683c670f4a20",
-      "time": "2026-11-13T12:38:09.000Z",
-      "title_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
-      "body_en": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship Nature World News",
-      "summary_zh": "新基因组研究重探安第斯汉坦病毒邮轮传播。",
+      "id": "rt-e8c5b1d1fb2b1905",
+      "time": "2026-11-16T22:55:54.000Z",
+      "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - Respiratory Therapy",
+      "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship Respiratory Therapy",
+      "summary_zh": "一艘邮轮上确认出现汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
-        "基因组研究"
+        "人际传播",
+        "确诊"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-11-07T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 45): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报第 45 周汉坦病毒新增 0 例，年累计 1 例。",
+      "summary_zh": "美国 CDC 周报：2026 年第 45 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年累计 1 例"
+        "年内 1 例"
       ],
       "signal_strength": "high"
     }
