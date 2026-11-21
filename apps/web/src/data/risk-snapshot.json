@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-21T14:09:42.683306+00:00",
-  "date": "2026-11-21",
+  "__generated_at": "2026-11-21T22:44:43.642478+00:00",
+  "date": "2026-11-22",
   "currentHpi": {
     "total": 31,
     "grade": "moderate",
@@ -40,7 +40,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-11-21T14:09:32.451155+00:00"
+    "updatedAt": "2026-11-21T22:44:33.810637+00:00"
   },
   "baseHpi": {
     "total": 24,
@@ -80,7 +80,7 @@
       "distanceFromChinaKm": 16500,
       "serotypeId": "andes"
     },
-    "updatedAt": "2026-11-21T14:09:32.451155+00:00"
+    "updatedAt": "2026-11-21T22:44:33.810637+00:00"
   },
   "nearestImport": {
     "iso2": "FR",
@@ -101,33 +101,33 @@
   "distanceDeltaKm": 0,
   "hpiDelta": 0,
   "dailyBrief": {
-    "date": "2026-11-21",
+    "date": "2026-11-22",
     "distanceDeltaKm": 0,
     "hpiDelta": 0,
     "globalNewCases": 0,
     "globalCasesTotal": 11,
     "domesticBaselineStatus": "normal",
     "oneLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "daysSinceLastIntlAlert": 142,
-    "whoDaysSinceOfficialUpdate": 142,
-    "cluesLast24h": 4,
+    "daysSinceLastIntlAlert": 143,
+    "whoDaysSinceOfficialUpdate": 143,
+    "cluesLast24h": 5,
     "headline24h": "",
     "structuralLine": "最近相关输入监测在法国（确诊输入），距中国大陆约 8,400 km；源头仍为MV Hondius 邮轮安第斯型聚集疫情，距中国约 16,500 km，HPI 指数持平（当前 31，一般关注），国内 HFRS 处于基线正常范围。",
-    "latestChange": "11月20日索马里监测与诊断缺口在简报会提出，属待官方确认的监测线索；11月20日邮轮传播研究刊出；中国大陆无相关病例。",
-    "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；欧洲多国及美、澳、加等维持接触者随访，邮轮溯源研究仍在进行，相关结论待 WHO 复核。",
-    "riskJudgment": "普通公众风险低；国内 HFRS 处于基线正常范围，无需针对该邮轮事件采取额外防护。",
-    "newCases": "11月20日无新增官方确认病例；索马里监测缺口为待官方确认的监测线索。",
-    "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测",
-    "shareLine": "WHO 7/2公布累计13例（142天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
+    "latestChange": "11月21日南非协助追溯邮轮病毒至巴塔哥尼亚；11月20日索马里监测与诊断缺口为待官方确认的监测线索；中国大陆无相关病例。",
+    "situation": "WHO 数据更新间隔较长，期间由各国卫生部公告与 ArcGIS 监测补足；邮轮相关接触者仍在随访，溯源与传播途径研究待复核，国内 HFRS 基线未变。",
+    "riskJudgment": "普通公众风险低；安第斯型人际传播限于密切长时间接触，中国大陆无相关病例，无需特别防护。",
+    "newCases": "11月21日无新增官方确认病例；索马里监测缺口为待官方确认的监测线索。",
+    "sourceSummary": "主要依据 WHO DON、各国卫生部公告及 ArcGIS 专业监测。",
+    "shareLine": "WHO 7/2公布累计13例（143天前）；其后暂无新增待复核确诊，荷兰、南非、瑞士为随访更新；中国大陆无相关病例，国内HFRS基线正常。",
     "watchFocus": [
-      "邮轮溯源研究",
-      "接触者随访",
-      "索马里监测缺口"
+      "邮轮接触者随访",
+      "索马里监测缺口",
+      "病毒溯源进展"
     ],
     "evidence": [
       "WHO DON 2026-DON611",
-      "法国卫生部/TF1 Info",
-      "ArcGIS ANDV Dashboard"
+      "南非 NICD 溯源通报",
+      "索马里监测缺口简报"
     ],
     "_guardrail_warnings": [
       "shareline_pending_sanitized: no pending confirmed deltas"
