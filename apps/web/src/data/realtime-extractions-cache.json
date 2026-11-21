@@ -13551,6 +13551,34 @@
         "source_url": "",
         "time": "2026-11-17T18:20:17.000Z"
       }
+    ],
+    "rt-d73d6cd1248b9843": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-13",
+        "confidence": "low",
+        "reasoning_zh": "报道仅称M/V Hondius号上确认人传人，未给出具体国家或新增病例数字",
+        "update_id": "rt-d73d6cd1248b9843",
+        "source_url": "",
+        "time": "2026-11-13T07:48:16.000Z"
+      }
+    ],
+    "rt-62e09a1efe81d8e3": [
+      {
+        "iso2": null,
+        "delta_confirmed": 0,
+        "delta_monitoring": 0,
+        "delta_deaths": 0,
+        "as_of": "2026-11-12",
+        "confidence": "low",
+        "reasoning_zh": "两项研究描述Hondius号疫情传播及与巴塔哥尼亚的基因关联，无新增病例数字",
+        "update_id": "rt-62e09a1efe81d8e3",
+        "source_url": "",
+        "time": "2026-11-12T19:00:00.000Z"
+      }
     ]
   }
 }
