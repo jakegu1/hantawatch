@@ -1,7 +1,7 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-22T13:59:45.076604+00:00",
-  "date": "2026-11-22",
+  "__generated_at": "2026-11-22T23:11:19.247265+00:00",
+  "date": "2026-11-23",
   "windowDays": 90,
   "freshnessWarningHours": 72,
   "countries": {
@@ -232,9 +232,8 @@
       "statusZh": "确诊输入",
       "riskSummaryZh": "西班牙累计 2 例确诊：首例 6 月 4 日自戈麦斯·乌利亚医院出院（连续两次阴性）；第 2 例 5 月 25 日阳性、症状轻微仍在院；另有 12 名乘客隔离监测中、持续阴性。",
       "stale": false,
-      "signalCount30d": 2,
+      "signalCount30d": 0,
       "signalCount7d": 0,
-      "lastSignalAt": "2026-11-12T19:00:00+00:00",
       "importStatus": "imports_confirmed",
       "importDate": "2026-06-05"
     },
@@ -260,8 +259,8 @@
       "riskSummaryZh": "近 30 天自动捕捉到 3 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 3,
-      "signalCount7d": 1,
-      "lastSignalAt": "2026-11-18T20:28:39+00:00"
+      "signalCount7d": 2,
+      "lastSignalAt": "2026-11-20T01:31:13+00:00"
     },
     "CL": {
       "iso2": "CL",
@@ -273,7 +272,7 @@
       "riskSummaryZh": "近 30 天自动捕捉到 4 条相关报道，代表关注度上升，不等同于新增病例",
       "stale": false,
       "signalCount30d": 4,
-      "signalCount7d": 2,
+      "signalCount7d": 3,
       "lastSignalAt": "2026-11-20T17:49:00+00:00"
     },
     "BR": {
