@@ -1,35 +1,35 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-23T17:17:34.979542+00:00",
+  "__generated_at": "2026-11-23T22:21:04.301923+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-23T17:17:31.008073+00:00",
+  "last_fetched": "2026-11-23T22:21:03.547395+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
-      "id": "rt-e3ee743a12dcdbec",
-      "time": "2026-11-23T06:05:04.000Z",
-      "title_en": "What Genomic Analysis Reveals About the MV Hondius Hantavirus - Medscape",
-      "body_en": "What Genomic Analysis Reveals About the MV Hondius Hantavirus Medscape",
-      "summary_zh": "医学媒体分析 MV Hondius 邮轮汉坦病毒基因组特征。",
-      "key_facts_zh": [
-        "MV Hondius",
-        "基因组分析"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-194d58edd52a3b8a",
       "time": "2026-11-20T15:42:02.000Z",
       "title_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius - Gavi, the Vaccine Alliance",
       "body_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius Gavi, the Vaccine Alliance",
-      "summary_zh": "疫苗联盟梳理 MV Hondius 邮轮汉坦病毒传播过程。",
+      "summary_zh": "疫苗联盟梳理 MV Hondius 号邮轮汉坦病毒传播过程。",
       "key_facts_zh": [
         "MV Hondius",
         "邮轮",
         "传播链"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-7c2ae3129162c272",
+      "time": "2026-11-20T09:57:17.000Z",
+      "title_en": "A voyage of viral transmission - Nature",
+      "body_en": "A voyage of viral transmission Nature",
+      "summary_zh": "《自然》刊文分析邮轮上的病毒传播链。",
+      "key_facts_zh": [
+        "自然期刊",
+        "病毒传播"
       ],
       "signal_strength": "medium"
     },
@@ -41,8 +41,20 @@
       "summary_zh": "分析称邮轮疫情毒株与阿根廷疫情毒株无明确关联。",
       "key_facts_zh": [
         "阿根廷",
+        "毒株比对",
+        "无关联"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-e8c5b1d1fb2b1905",
+      "time": "2026-11-16T22:55:54.000Z",
+      "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - Respiratory Therapy",
+      "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship Respiratory Therapy",
+      "summary_zh": "报道确认邮轮上出现汉坦病毒人际传播。",
+      "key_facts_zh": [
         "邮轮",
-        "毒株比对"
+        "人际传播"
       ],
       "signal_strength": "medium"
     },
@@ -51,11 +63,10 @@
       "time": "2026-11-13T08:05:00.000Z",
       "title_en": "Hantavirus on Board the M/V Hondius: Human-to-Human Transmission Confirmed | Newswise - Newswise",
       "body_en": "Hantavirus on Board the M/V Hondius: Human-to-Human Transmission Confirmed | Newswise Newswise",
-      "summary_zh": "研究确认 MV Hondius 邮轮上汉坦病毒可人传人。",
+      "summary_zh": "M/V Hondius 号邮轮确认汉坦病毒人传人。",
       "key_facts_zh": [
-        "MV Hondius",
-        "人传人",
-        "研究"
+        "M/V Hondius",
+        "人传人"
       ],
       "signal_strength": "medium"
     },
@@ -64,11 +75,11 @@
       "time": "2026-11-12T19:00:00.000Z",
       "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
       "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
-      "summary_zh": "两项研究揭示邮轮疫情传播并溯源至巴塔哥尼亚。",
+      "summary_zh": "两项研究详述 Hondius 号邮轮疫情传播并溯源至巴塔哥尼亚。",
       "key_facts_zh": [
+        "Hondius",
         "巴塔哥尼亚",
-        "邮轮",
-        "基因溯源"
+        "溯源"
       ],
       "signal_strength": "medium"
     },
@@ -77,11 +88,10 @@
       "time": "2026-11-12T08:00:00.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组分析研究安第斯型汉坦病毒疫情。",
       "key_facts_zh": [
-        "安第斯病毒",
-        "基因组",
-        "疫情"
+        "安第斯型",
+        "基因组分析"
       ],
       "signal_strength": "medium"
     },
@@ -96,18 +106,18 @@
         "未扩散",
         "低风险"
       ],
-      "signal_strength": "medium"
+      "signal_strength": "high"
     },
     {
       "id": "rt-f2eb81fd0ff0f51c",
       "time": "2026-11-07T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 45): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 45 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 第45周汉坦病毒感染新增0例，年内累计1例。",
       "key_facts_zh": [
         "美国 CDC",
-        "新增 0 例",
-        "年内 1 例"
+        "新增0例",
+        "年内1例"
       ],
       "signal_strength": "high"
     }
