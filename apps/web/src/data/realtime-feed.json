@@ -1,13 +1,26 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-25T01:53:17.110695+00:00",
+  "__generated_at": "2026-11-25T02:53:05.839917+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-25T01:53:13.171515+00:00",
+  "last_fetched": "2026-11-25T02:53:04.627986+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
+    {
+      "id": "rt-9e208942d5ba4503",
+      "time": "2026-11-23T01:14:15.000Z",
+      "title_en": "Orthohantaviruses Circulate Continuously in Argentine Wild Rodents Beyond Outbreak Periods - Bioengineer.org",
+      "body_en": "Orthohantaviruses Circulate Continuously in Argentine Wild Rodents Beyond Outbreak Periods Bioengineer.org",
+      "summary_zh": "研究称阿根廷野鼠持续携带汉坦病毒，超出疫情期。",
+      "key_facts_zh": [
+        "阿根廷",
+        "野鼠",
+        "研究"
+      ],
+      "signal_strength": "medium"
+    },
     {
       "id": "rt-08a531768b879154",
       "time": "2026-11-21T04:15:00.000Z",
@@ -28,9 +41,9 @@
       "body_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius Gavi, the Vaccine Alliance",
       "summary_zh": "Gavi 报道科学家解析 MV Hondius 邮轮上汉坦病毒传播。",
       "key_facts_zh": [
-        "Gavi",
         "MV Hondius",
-        "邮轮"
+        "邮轮",
+        "传播"
       ],
       "signal_strength": "medium"
     },
@@ -43,7 +56,7 @@
       "key_facts_zh": [
         "自然",
         "邮轮",
-        "病毒传播"
+        "传播"
       ],
       "signal_strength": "medium"
     },
@@ -52,10 +65,10 @@
       "time": "2026-11-18T20:28:39.000Z",
       "title_en": "Analysis finds no definitive link between hantavirus that caused cruise ship outbreak and outbreak strain in Argentina - CIDRAP",
       "body_en": "Analysis finds no definitive link between hantavirus that caused cruise ship outbreak and outbreak strain in Argentina CIDRAP",
-      "summary_zh": "分析称邮轮疫情毒株与阿根廷毒株无明确关联。",
+      "summary_zh": "分析称邮轮疫情毒株与阿根廷疫情毒株无明确关联。",
       "key_facts_zh": [
         "阿根廷",
-        "CIDRAP",
+        "邮轮",
         "毒株"
       ],
       "signal_strength": "medium"
@@ -68,8 +81,20 @@
       "summary_zh": "邮轮上确认汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播",
-        "确诊"
+        "人际传播"
+      ],
+      "signal_strength": "high"
+    },
+    {
+      "id": "rt-d73d6cd1248b9843",
+      "time": "2026-11-13T07:48:16.000Z",
+      "title_en": "Hantavirus on board the M/V Hondius: human-to-human transmission confirmed - HUG - Hôpitaux universitaires de Genève",
+      "body_en": "Hantavirus on board the M/V Hondius: human-to-human transmission confirmed HUG - Hôpitaux universitaires de Genève",
+      "summary_zh": "日内瓦大学医院确认 M/V Hondius 号邮轮上汉坦病毒人际传播。",
+      "key_facts_zh": [
+        "瑞士",
+        "邮轮",
+        "人际传播"
       ],
       "signal_strength": "high"
     },
@@ -78,11 +103,11 @@
       "time": "2026-11-12T19:00:00.000Z",
       "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
       "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
-      "summary_zh": "西班牙媒体：两项研究解析洪迪厄斯号邮轮汉坦病毒传播及基因谱系。",
+      "summary_zh": "两项研究详述 Hondius 号邮轮疫情传播，基因谱系关联巴塔哥尼亚。",
       "key_facts_zh": [
         "西班牙",
         "邮轮",
-        "研究分析"
+        "基因溯源"
       ],
       "signal_strength": "medium"
     },
@@ -91,7 +116,7 @@
       "time": "2026-11-12T08:00:00.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "法国媒体报道科学家通过基因组研究安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
       "key_facts_zh": [
         "法国",
         "安第斯病毒",
@@ -104,11 +129,11 @@
       "time": "2026-11-09T08:00:00.000Z",
       "title_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts - Forbes",
       "body_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts Forbes",
-      "summary_zh": "美国媒体报道邮轮汉坦病毒疫情未发现扩散，接触者风险低。",
+      "summary_zh": "邮轮汉坦疫情未检出扩散，接触者风险低。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
-        "未扩散"
+        "未扩散",
+        "低风险"
       ],
       "signal_strength": "medium"
     },
@@ -117,13 +142,39 @@
       "time": "2026-11-07T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 45): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 周报：2026 年第 45 周汉坦病毒感染新增 0 例，累计 1 例。",
+      "summary_zh": "美国 CDC 通报第 45 周汉坦病毒感染新增 0 例，年内累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
         "累计 1 例"
       ],
       "signal_strength": "high"
+    },
+    {
+      "id": "rt-109a7523098d7a3b",
+      "time": "2026-11-02T08:00:00.000Z",
+      "title_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year - Outbreak News Today",
+      "body_en": "Brazil: São Paulo reports four cases of hantavirus infection so far this year Outbreak News Today",
+      "summary_zh": "巴西圣保罗今年报告 4 例汉坦病毒感染。",
+      "key_facts_zh": [
+        "巴西",
+        "圣保罗",
+        "4 例"
+      ],
+      "signal_strength": "medium"
+    },
+    {
+      "id": "rt-c6831896bfc61959",
+      "time": "2026-10-26T07:00:00.000Z",
+      "title_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs - Institut Pasteur",
+      "body_en": "Scientists Reveal How Deadly Andes Hantavirus Attaches to Human Cells, Offering a Pathway for Future Antiviral Drugs Institut Pasteur",
+      "summary_zh": "法国巴斯德研究所揭示安第斯汉坦病毒附着人体细胞的机制，为抗病毒药物研发提供路径。",
+      "key_facts_zh": [
+        "法国",
+        "巴斯德研究所",
+        "抗病毒研究"
+      ],
+      "signal_strength": "medium"
     }
   ]
 }
