@@ -1,9 +1,9 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-26T01:30:29.737657+00:00",
+  "__generated_at": "2026-11-26T03:26:19.032523+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-26T01:30:24.389788+00:00",
+  "last_fetched": "2026-11-26T03:26:17.915368+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
@@ -15,8 +15,8 @@
       "body_en": "Studies Trace Cruise Ship Hantavirus to Patagonia Respiratory Therapy",
       "summary_zh": "研究追溯邮轮汉坦病毒至巴塔哥尼亚。",
       "key_facts_zh": [
-        "巴塔哥尼亚",
         "邮轮",
+        "巴塔哥尼亚",
         "研究"
       ],
       "signal_strength": "medium"
@@ -28,9 +28,9 @@
       "body_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius Gavi, the Vaccine Alliance",
       "summary_zh": "科学家解析 MV Hondius 号邮轮汉坦病毒传播。",
       "key_facts_zh": [
-        "MV Hondius",
         "邮轮",
-        "死亡"
+        "汉坦病毒",
+        "传播"
       ],
       "signal_strength": "medium"
     },
@@ -52,10 +52,10 @@
       "time": "2026-11-16T22:55:54.000Z",
       "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - Respiratory Therapy",
       "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship Respiratory Therapy",
-      "summary_zh": "邮轮上确认汉坦病毒人际传播。",
+      "summary_zh": "邮轮上确认汉坦病毒人传人。",
       "key_facts_zh": [
         "邮轮",
-        "人际传播",
+        "人传人",
         "确诊"
       ],
       "signal_strength": "high"
@@ -78,11 +78,11 @@
       "time": "2026-11-12T19:00:00.000Z",
       "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
       "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
-      "summary_zh": "西班牙媒体：两项研究详述洪迪厄斯号邮轮汉坦病毒传播及与巴塔哥尼亚的基因关联。",
+      "summary_zh": "两项研究详述 Hondius 号疫情传播并溯源巴塔哥尼亚。",
       "key_facts_zh": [
-        "西班牙",
         "邮轮",
-        "基因溯源"
+        "巴塔哥尼亚",
+        "研究"
       ],
       "signal_strength": "medium"
     },
@@ -91,11 +91,10 @@
       "time": "2026-11-12T08:00:00.000Z",
       "title_en": "Andes hantavirus outbreak examined by scientists through its genome - Le Monde.fr",
       "body_en": "Andes hantavirus outbreak examined by scientists through its genome Le Monde.fr",
-      "summary_zh": "法国媒体报道科学家通过基因组研究安第斯汉坦病毒疫情。",
+      "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
       "key_facts_zh": [
-        "法国",
         "安第斯病毒",
-        "基因组"
+        "基因组分析"
       ],
       "signal_strength": "medium"
     },
@@ -104,11 +103,11 @@
       "time": "2026-11-09T08:00:00.000Z",
       "title_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts - Forbes",
       "body_en": "Hantavirus Cruise Outbreak: No Detected Spread, Low Risk to Contacts Forbes",
-      "summary_zh": "美国媒体：邮轮汉坦病毒疫情未发现扩散，接触者风险低。",
+      "summary_zh": "邮轮汉坦病毒疫情未发现扩散，接触者风险低。",
       "key_facts_zh": [
-        "美国",
         "邮轮",
-        "未扩散"
+        "未扩散",
+        "低风险"
       ],
       "signal_strength": "high"
     }
