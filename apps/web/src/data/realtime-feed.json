@@ -1,23 +1,34 @@
 {
   "__generated_by": "hantawatch-collector@0.1.0",
-  "__generated_at": "2026-11-26T22:43:48.447469+00:00",
+  "__generated_at": "2026-11-27T01:28:02.679353+00:00",
   "source_name": "Realtime Feed",
   "source_url": "https://hantaflow.com/api/languages/en.json",
-  "last_fetched": "2026-11-26T22:43:47.236492+00:00",
+  "last_fetched": "2026-11-27T01:27:58.806887+00:00",
   "machine_translated": true,
   "translator_model": "deepseek-v4-flash",
   "disclaimer_zh": "本区块汇聚实时动态，经 AI 翻译为中文摘要。AI 翻译可能存在偏差，关键判断请以蓝色「官方通报」为准。",
   "updates": [
     {
+      "id": "rt-c6dd84ec1bbefffc",
+      "time": "2026-11-25T22:28:16.000Z",
+      "title_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know - ABC News - Breaking News, Latest News and Videos",
+      "body_en": "3 dead in suspected hantavirus outbreak aboard a cruise ship: What to know ABC News - Breaking News, Latest News and Videos",
+      "summary_zh": "邮轮疑似汉坦病毒疫情致3人死亡。",
+      "key_facts_zh": [
+        "邮轮",
+        "死亡 3 例"
+      ],
+      "signal_strength": "high"
+    },
+    {
       "id": "rt-64d195b59225d979",
       "time": "2026-11-25T17:04:38.000Z",
       "title_en": "Studies Trace Cruise Ship Hantavirus to Patagonia - Respiratory Therapy",
       "body_en": "Studies Trace Cruise Ship Hantavirus to Patagonia Respiratory Therapy",
-      "summary_zh": "研究追溯邮轮汉坦病毒至阿根廷巴塔哥尼亚。",
+      "summary_zh": "研究将邮轮汉坦病毒溯源至巴塔哥尼亚地区。",
       "key_facts_zh": [
-        "阿根廷",
         "巴塔哥尼亚",
-        "邮轮"
+        "溯源研究"
       ],
       "signal_strength": "medium"
     },
@@ -35,28 +46,15 @@
       "signal_strength": "medium"
     },
     {
-      "id": "rt-08a531768b879154",
-      "time": "2026-11-21T04:15:00.000Z",
-      "title_en": "NICD helps trace deadly virus on MV Hondius back to Patagonia - https://novanews.co.za/",
-      "body_en": "NICD helps trace deadly virus on MV Hondius back to Patagonia https://novanews.co.za/",
-      "summary_zh": "南非机构协助追溯 MV Hondius 病毒至巴塔哥尼亚。",
-      "key_facts_zh": [
-        "南非",
-        "MV Hondius",
-        "巴塔哥尼亚"
-      ],
-      "signal_strength": "medium"
-    },
-    {
       "id": "rt-194d58edd52a3b8a",
       "time": "2026-11-20T15:42:02.000Z",
       "title_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius - Gavi, the Vaccine Alliance",
       "body_en": "Death on the high seas: scientists unravel how hantavirus spread aboard the MV Hondius Gavi, the Vaccine Alliance",
-      "summary_zh": "科学家解析 MV Hondius 邮轮汉坦病毒传播。",
+      "summary_zh": "科学家解析 MV Hondius 号邮轮汉坦病毒传播。",
       "key_facts_zh": [
         "MV Hondius",
         "邮轮",
-        "死亡"
+        "传播机制"
       ],
       "signal_strength": "medium"
     },
@@ -68,8 +66,8 @@
       "summary_zh": "分析称邮轮疫情毒株与阿根廷毒株无明确关联。",
       "key_facts_zh": [
         "阿根廷",
-        "邮轮",
-        "毒株比对"
+        "毒株比对",
+        "CIDRAP"
       ],
       "signal_strength": "medium"
     },
@@ -78,7 +76,7 @@
       "time": "2026-11-16T22:55:54.000Z",
       "title_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship - Respiratory Therapy",
       "body_en": "Person-to-Person Hantavirus Transmission Confirmed on Cruise Ship Respiratory Therapy",
-      "summary_zh": "邮轮上确认出现汉坦病毒人际传播。",
+      "summary_zh": "邮轮上确认汉坦病毒人际传播。",
       "key_facts_zh": [
         "邮轮",
         "人际传播",
@@ -91,26 +89,26 @@
       "time": "2026-11-14T00:00:00.000Z",
       "title_en": "CDC NNDSS — Hantavirus infection (US, 2026 week 46): 0 new, 1 YTD",
       "body_en": "Weekly aggregate from CDC NNDSS table for \"Hantavirus infection, non-hantavirus pulmonary syndrome\". Current week: 0. YTD 2026: 1.",
-      "summary_zh": "美国 CDC 通报 2026 年第 46 周汉坦病毒新增 0 例，年内累计 1 例。",
+      "summary_zh": "美国 CDC 通报 2026 年第 46 周汉坦病毒新增 0 例，累计 1 例。",
       "key_facts_zh": [
         "美国 CDC",
         "新增 0 例",
-        "年内 1 例"
+        "累计 1 例"
       ],
       "signal_strength": "high"
     },
     {
-      "id": "rt-d73d6cd1248b9843",
-      "time": "2026-11-13T07:48:16.000Z",
-      "title_en": "Hantavirus on board the M/V Hondius: human-to-human transmission confirmed - HUG - Hôpitaux universitaires de Genève",
-      "body_en": "Hantavirus on board the M/V Hondius: human-to-human transmission confirmed HUG - Hôpitaux universitaires de Genève",
-      "summary_zh": "瑞士日内瓦大学医院确认 M/V Hondius 号邮轮上出现人际传播。",
+      "id": "rt-62e09a1efe81d8e3",
+      "time": "2026-11-12T19:00:00.000Z",
+      "title_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia - Science Media Centre España",
+      "body_en": "Two studies detail how the hantavirus outbreak spread on board the Hondius and link its genetic lineage to Patagonia Science Media Centre España",
+      "summary_zh": "两项研究详述洪都拉斯号邮轮汉坦病毒疫情传播，基因谱系关联巴塔哥尼亚。",
       "key_facts_zh": [
-        "瑞士",
         "邮轮",
-        "人际传播"
+        "基因谱系",
+        "巴塔哥尼亚"
       ],
-      "signal_strength": "high"
+      "signal_strength": "medium"
     },
     {
       "id": "rt-9c0569355dc27c9a",
@@ -120,7 +118,8 @@
       "summary_zh": "科学家通过基因组分析安第斯汉坦病毒疫情。",
       "key_facts_zh": [
         "安第斯病毒",
-        "基因组分析"
+        "基因组",
+        "疫情分析"
       ],
       "signal_strength": "medium"
     }
